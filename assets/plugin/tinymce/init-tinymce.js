@@ -21,8 +21,12 @@ tinymce.init({
 	],
 
 	/* toolbar */
-	toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons",
+	toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons | fontsizeselect | fontselect",
 	
+	fontsize_formats: "8px 10px 12px 14px 18px 24px 36px",
+
+	font_formats: 'Arial=arial,helvetica,sans-serif;Courier New=courier new,courier,monospace;',
+
 	/* style */
 	style_formats: [
 		{title: "Headers", items: [
@@ -55,4 +59,6 @@ tinymce.init({
 			{title: "Justify", icon: "alignjustify", format: "alignjustify"}
 		]}
 	]
+
+	
 });
