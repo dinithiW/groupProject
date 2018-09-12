@@ -8,7 +8,7 @@ class UsersLogin extends CI_Controller{
     }
     
 	public function index(){
-		$this->load->view('loginPanel');
+		$this->load->view('users/loginPanelUsers');
 	}
 
     public function process(){
@@ -25,10 +25,10 @@ class UsersLogin extends CI_Controller{
         $this->loginPanelValidation->register();  
     }
 
-    public function applicant(){
-    	$this->load->view('applicant/header');
-    	$this->load->view('applicant/personalDetails');
-    	$this->load->view('applicant/footer');
+    public function ad(){
+    	$this->load->view('users/operator/header');
+    	$this->load->view('users/operator/createAd');
+    	$this->load->view('users/operator/footer');
     }
 
 }

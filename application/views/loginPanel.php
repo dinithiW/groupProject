@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 
-<head>    
+<head>
+
     <title>UCSC</title>
+    
     <link rel="stylesheet" href="<?=base_url('assets/css/loginPanel.css')?>" type="text/css"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width= device-width ,initial-scale = 1">

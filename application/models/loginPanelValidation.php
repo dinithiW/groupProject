@@ -14,16 +14,16 @@ class loginPanelValidation extends CI_Model{
 	}
 
 	public function validate(){
-		$username = $this->testInput($_POST['username']);
+		$email = $this->testInput($_POST['email']);
 		$password = $this->testInput($_POST['password']);
 
-		if($username!= null && $password != null){
+		if($email!= null && $password != null){
 			$this->load->database();
 			$this->db->select("PASSWORD");
 			$this->db->select("USER_TYPE");
 			$this->db->select("EMAIL");
 			$this->db->from("users");
-			$this->db->where("USERNAME", $username);
+			$this->db->where("EMAIL", $email);
 			$query = $this->db->get();
 
 			//$numberOfRows = $query->num_rows();
@@ -34,7 +34,6 @@ class loginPanelValidation extends CI_Model{
 				$this->load->library('session');
 				
 				$data = array(
-			        'username'  => $username,
 			        'email'     => $row->EMAIL,
 			        'usertype' => $row->USER_TYPE,
 			        'logged_in' => TRUE
@@ -43,6 +42,8 @@ class loginPanelValidation extends CI_Model{
 				$this->session->set_userdata($data);
 				
 				$usertype = $this->session->userdata('usertype');
+
+				redirect(base_url()."ApplicantLogin/applicant");
 
 				if($usertype=='applicant'){
 					redirect(base_url()."LoginPanelController/applicant");

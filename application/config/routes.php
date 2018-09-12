@@ -53,9 +53,13 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['login'] = 'LoginPanelController/index';
-$route['login/process'] = 'LoginPanelController/process';
-$route['register'] = 'LoginPanelController/register';
-$route['addUser'] = 'LoginPanelController/addUser';
+$route['login'] = 'ApplicantLogin/index';
+$route['login/process'] = 'ApplicantLogin/process';
+$route['login/contact'] = 'ApplicantLogin/contact';
+$route['register'] = 'ApplicantLogin/register';
+$route['addUser'] = 'ApplicantLogin/addUser';
+
+$route['adIndex'] = 'UsersLogin/index';
+$route['adIndex/createAd'] = 'UsersLogin/ad';
 
 
