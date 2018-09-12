@@ -38,7 +38,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <i class="fa fa-remove"></i>
   </a>
   <h4 class="w3-bar-item"><b>Menu</b></h4>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Create Ad</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="<?= base_url('adIndex/createAd') ?>">Create Ad</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="#">Categorize Applications</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="#">Set Interview Date</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="#">Send Emails to Applicants</a>
