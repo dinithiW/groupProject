@@ -14,6 +14,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
+    <link href="http://fonts.googleapis.com/css?family=Droid+Serif|Tangerine|Lobster:regular" rel="stylesheet" type="text/css">
+    
 	</head>
 	<body>
 		<div class="w3-main" style="margin-left:250px">
