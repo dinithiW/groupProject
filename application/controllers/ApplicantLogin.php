@@ -21,12 +21,20 @@ class ApplicantLogin extends CI_Controller{
     }
 
     public function register(){
-    	$this->load->view('registerPanel');
+    	$this->load->view('applicant/registerPanel');
     }
 
     public function addUser(){
+        echo "1";
     	$this->load->model('registerUser');
-        $this->loginPanelValidation->register();  
+        echo "1";
+        $this->registerUser->checkValidity();  
+        echo "1";
+    }
+
+    public function errorUsername(){
+        echo "hellopoo";
+        $this->load->view('messages/errors');
     }
 
     public function applicant(){
