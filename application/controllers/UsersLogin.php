@@ -22,7 +22,7 @@ class UsersLogin extends CI_Controller{
 
     public function addUser(){
     	$this->load->model('registerUser');
-        $this->loginPanelValidation->register();  
+        $this->loginPanelValidation->checkValidity();  
     }
 
     public function ad(){
