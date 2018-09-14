@@ -13,14 +13,13 @@ class loginPanelValidation extends CI_Model{
   		return $data;
 	}
 
-	public function validate(){
+	public function validateApplicant(){
 		$email = $this->testInput($_POST['email']);
 		$password = $this->testInput($_POST['password']);
 
 		if($email!= null && $password != null){
 			$this->load->database();
 			$this->db->select("PASSWORD");
-			$this->db->select("USER_TYPE");
 			$this->db->select("EMAIL");
 			$this->db->from("users");
 			$this->db->where("EMAIL", $email);
@@ -63,6 +62,87 @@ class loginPanelValidation extends CI_Model{
 		}
 	}
 
+		public function checkValidity(){
+
+		$email = $this->testInput($_POST['email']);
+		$password = $this->testInput($_POST['psw']);
+		$repeat = $this->testInput($_POST['psw-repeat']);
+
+		if($email!= null && $password != null && $repeat!= null){
+
+			$this->load->database();
+			$this->db->select("EMAIL");
+			$this->db->from("applicants");
+			$this->db->where("EMAIL", $email);
+			$query = $this->db->get();
+			
+			if($rowcount==0){
+				/*register();*/
+			}else{
+				redirect(base_url()."ApplicantLogin/errorUsername");
+
+				echo "in herer";
+				
+			}	
+	}
+}
+
+	public function verifyUser(){
+
+		$username = $this->testInput($_POST['username']);
+		$password = $this->testInput($_POST['password']);
+
+		if($username!= null && $password != null){
+			$this->load->database();
+			$this->db->select("PASSWORD");
+			$this->db->select("EMAIL");
+			$this->db->from("users");
+			$this->db->where("USERNAME", $username);
+			$query = $this->db->get();
+
+			$rowcount = $query->num_rows();
+			
+			if($rowcount ==0){
+				redirect(base_url()."UsersLogin/errorUsername");
+			}else{
+
+					foreach($query->result() as $row){
+			if($row->PASSWORD == md5($password)){
+				
+				$this->load->library('session');
+				
+				$data = array(
+			        'email'     => $row->EMAIL,
+			        'usertype' => $row->USER_TYPE,
+			        'logged_in' => TRUE
+				);
+
+				$this->session->set_userdata($data);
+				
+				$usertype = $this->session->userdata('usertype');
+
+				redirect(base_url()."ApplicantLogin/applicant");
+
+				if($usertype=='applicant'){
+					redirect(base_url()."LoginPanelController/applicant");
+					echo "ohh yeeeeeeeeahhhhhhh";
+				}else if($usertype =='operator'){
+					//yet to implement
+				}
+				
+			}
+			break;
+		}
+		//redirect(base_url()."?login=false", 'location');
+			}
+			
+		
+		
+	}else{
+			//redirect or show appropriate message
+			echo 'oopsieee';
+		}
+	}
 	public function logout(){
 		$this->load->library('session');
 		$this->session->sess_destroy();
