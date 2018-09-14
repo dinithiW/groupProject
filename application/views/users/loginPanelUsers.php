@@ -22,7 +22,7 @@
         <img src="<?php echo base_url('assets/images/loginMan.png');?>" alt="Avatar" class="avatar" >
     </div>
     <br />  
-     <form action= "" method = "post" >
+     <form action= "<?= base_url("loginUser/process")?>" method = "post" >
         <div class="text-center">          
             <label for='username'>Username</label>
             <input type='text' name='username' id='username' required size='25'placeholder=" Enter your username"/>
