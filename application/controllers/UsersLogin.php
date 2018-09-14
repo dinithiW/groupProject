@@ -7,15 +7,25 @@ class UsersLogin extends CI_Controller{
 		$this->load->helper('url');
     }
     
+    //completed
 	public function index(){
 		$this->load->view('users/loginPanelUsers');
 	}
 
+    //completed
     public function process(){
+        echo "hahahhaha";
         $this->load->model('loginPanelValidation');
-        $this->loginPanelValidation->validate();  
+        $this->loginPanelValidation->verifyUser();  
     }
 
+    public function errorUsername(){
+        $this->load->view('messages/invalidUsername');
+    }
+
+    public function errorPassword(){
+        $this->load->view('messages/incorrectPassword');
+    }
     public function register(){
     	$this->load->view('registerPanel');
     }
