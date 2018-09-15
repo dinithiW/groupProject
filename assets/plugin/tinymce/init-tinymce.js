@@ -10,6 +10,10 @@ tinymce.init({
 	width: "100%",
 	height: 300,
 	
+	relative_urls : true,
+
+	document_base_url : "http://localhost/ucsc/",
+
 	/* display statusbar */
 	statubar: true,
 	
@@ -20,8 +24,45 @@ tinymce.init({
 		"save table contextmenu directionality emoticons template paste textcolor"
 	],
 
+	theme_advanced_buttons3_add : "template",
+
+	/*menubar: "insert",*/
+  
+  	template_cdate_classes: "cdate creationdate",
+
+  	template_mdate_classes: "mdate modifieddate",
+
+  	template_selected_content_classes: "selcontent",
+
+  	template_cdate_format: "%m/%d/%Y : %H:%M:%S",
+
+  	template_mdate_format: "%m/%d/%Y : %H:%M:%S",
+
+  	template_replace_values: {
+    	username : "Jack Black",
+    	staffid : "991234"
+  	},
+
+  	template_popup_height: "1000",
+
+  	template_popup_width: "500",
+
+  	templates : [
+    {
+      title: "Create Ad",
+      url : "http://localhost/ucsc/assets/templates/createAd.html",
+      description : "Edit the fields shown in red"
+    },
+      {
+        title: "Timestamp",
+        content: '<div class="bms-owi-rte-warning"><span>lollllll</span></div>'
+      }
+  ],
+	
+  	
+
 	/* toolbar */
-	toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons | fontsizeselect | fontselect",
+	toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons | fontsizeselect | fontselect | templates",
 	
 	fontsize_formats: "8px 10px 12px 14px 18px 24px 36px",
 
