@@ -17,9 +17,10 @@ class ApplicantLogin extends CI_Controller{
     //done
     public function process(){
         $this->load->model('loginPanelValidation');
-        $this->loginPanelValidation->validate();  
+        $this->loginPanelValidation->validateApplicant();  
     }
 
+    
     public function register(){
     	$this->load->view('applicant/registerPanel');
     }
