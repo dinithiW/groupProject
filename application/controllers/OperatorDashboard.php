@@ -7,10 +7,9 @@ class OperatorDashboard extends CI_Controller{
 		$this->load->helper('url');
     }
     
-    //completed
 	public function index(){
         $this->load->view('users/operator/header');
-        $this->load->view('users/operator/createAd');
+        $this->load->view('home');
         $this->load->view('users/operator/footer');
 	}
 
