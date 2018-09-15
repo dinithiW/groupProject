@@ -36,7 +36,7 @@ class registerUser extends CI_Model{
 
 				}
 			}else{
-				//
+				//show user already exists
 			}
 			
 			
