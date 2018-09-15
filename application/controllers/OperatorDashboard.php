@@ -20,5 +20,10 @@ class OperatorDashboard extends CI_Controller{
     	$this->load->view('users/operator/footer');
     }
 
+    public function showEmails(){
+        $this->load->view('users/operator/header');
+        $this->load->view('users/showEmails');
+        $this->load->view('users/operator/footer');
+    }
 }
 ?>
