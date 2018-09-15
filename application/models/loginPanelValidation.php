@@ -12,7 +12,8 @@ class loginPanelValidation extends CI_Model{
   		$data = htmlspecialchars($data);
   		return $data;
 	}
-
+	
+	//checking login credentials for applicants
 	public function validateApplicant(){
 		$email = $this->testInput($_POST['email']);
 		$password = $this->testInput($_POST['password']);
@@ -62,7 +63,8 @@ class loginPanelValidation extends CI_Model{
 		}
 	}
 
-		public function checkValidity(){
+	//method to check whether an account exists already from that email. used in registration
+	public function checkValidity(){
 
 		$email = $this->testInput($_POST['email']);
 		$password = $this->testInput($_POST['psw']);
@@ -80,8 +82,7 @@ class loginPanelValidation extends CI_Model{
 				/*register();*/
 			}else{
 				redirect(base_url()."ApplicantLogin/errorUsername");
-
-				echo "in herer";
+				//echo "in herer";
 				
 			}	
 	}
@@ -106,42 +107,40 @@ class loginPanelValidation extends CI_Model{
 				redirect(base_url()."UsersLogin/errorUsername");
 			}else{
 
-					foreach($query->result() as $row){
+			foreach($query->result() as $row){
 			if($row->PASSWORD == md5($password)){
 				
 				$this->load->library('session');
 				
 				$data = array(
 			        'email'     => $row->EMAIL,
-			        'usertype' => $row->USER_TYPE,
+			        'username' => $row->USERNAME,
 			        'logged_in' => TRUE
 				);
 
 				$this->session->set_userdata($data);
-				
-				$usertype = $this->session->userdata('usertype');
 
-				redirect(base_url()."ApplicantLogin/applicant");
+				//redirect(base_url()."ApplicantLogin/applicant");
 
-				if($usertype=='applicant'){
-					redirect(base_url()."LoginPanelController/applicant");
-					echo "ohh yeeeeeeeeahhhhhhh";
-				}else if($usertype =='operator'){
+				if($username=='operator'){
+					redirect(base_url()."OperatorDashboard");
+					
+				}else if($username =='SAR'){
 					//yet to implement
+				}else{
+
 				}
 				
+			}else{
+				//show error message
+				redirect(base_url()."UsersLogin/errorPassword");
 			}
+
 			break;
 		}
 		//redirect(base_url()."?login=false", 'location');
 			}
-			
-		
-		
-	}else{
-			//redirect or show appropriate message
-			echo 'oopsieee';
-		}
+	}
 	}
 	public function logout(){
 		$this->load->library('session');
