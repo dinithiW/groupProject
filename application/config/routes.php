@@ -61,7 +61,9 @@ $route['addUser'] = 'ApplicantLogin/addUser';
 
 $route['loginUser'] = 'UsersLogin/index';
 $route['loginUser/process'] = 'UsersLogin/process';
-$route['adIndex'] = 'UsersLogin/index';
-$route['adIndex/createAd'] = 'UsersLogin/ad';
+
+$route['OperatorIndex'] = 'OperatorDashboard/index';
+$route['OperatorIndex/createAd'] = 'OperatorDashboard/ad';
+$route['OperatorIndex/emails'] = 'OperatorDashboard/showEmails';
 
 
