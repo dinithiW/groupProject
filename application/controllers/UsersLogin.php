@@ -35,11 +35,5 @@ class UsersLogin extends CI_Controller{
         $this->loginPanelValidation->checkValidity();  
     }
 
-    public function ad(){
-    	$this->load->view('users/operator/header');
-    	$this->load->view('users/operator/createAd');
-    	$this->load->view('users/operator/footer');
-    }
-
 }
 ?>
