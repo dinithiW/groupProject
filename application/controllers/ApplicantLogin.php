@@ -34,7 +34,6 @@ class ApplicantLogin extends CI_Controller{
     }
 
     public function errorUsername(){
-        echo "hellopoo";
         $this->load->view('messages/errors');
     }
 
