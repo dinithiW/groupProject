@@ -15,6 +15,7 @@ class loginPanelValidation extends CI_Model{
 	
 	//checking login credentials for applicants
 	public function validateApplicant(){
+		echo "hahahhaha";
 		$email = $this->testInput($_POST['email']);
 		$password = $this->testInput($_POST['password']);
 
@@ -22,14 +23,19 @@ class loginPanelValidation extends CI_Model{
 			$this->load->database();
 			$this->db->select("PASSWORD");
 			$this->db->select("EMAIL");
-			$this->db->from("users");
+			$this->db->from("applicants");
 			$this->db->where("EMAIL", $email);
 			$query = $this->db->get();
 
-			//$numberOfRows = $query->num_rows();
-			//if()
-			foreach($query->result() as $row){
-			if($row->PASSWORD == md5($password)){
+			$rowcount = $query->num_rows();
+			
+			if($rowcount==0){
+				echo "we are her now";
+				redirect(base_url()."ApplicantLogin/errorUsername");
+			}else{
+
+				foreach($query->result() as $row){
+				if($row->PASSWORD == md5($password)){
 				
 				$this->load->library('session');
 				
@@ -44,16 +50,13 @@ class loginPanelValidation extends CI_Model{
 				$usertype = $this->session->userdata('usertype');
 
 				redirect(base_url()."ApplicantLogin/applicant");
-
-				if($usertype=='applicant'){
-					redirect(base_url()."LoginPanelController/applicant");
-					echo "ohh yeeeeeeeeahhhhhhh";
-				}else if($usertype =='operator'){
-					//yet to implement
-				}
 				
+			}else{
+				redirect(base_url()."ApplicantLogin/wrongPassword");
 			}
 			break;
+			}
+			
 		}
 		//redirect(base_url()."?login=false", 'location');
 		
@@ -96,7 +99,7 @@ class loginPanelValidation extends CI_Model{
 		if($username!= null && $password != null){
 			$this->load->database();
 			$this->db->select("PASSWORD");
-			$this->db->select("EMAIL");
+			$this->db->select("USERNAME");
 			$this->db->from("users");
 			$this->db->where("USERNAME", $username);
 			$query = $this->db->get();
