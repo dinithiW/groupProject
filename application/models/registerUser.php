@@ -33,37 +33,21 @@ class registerUser extends CI_Model{
 				if(md5($password)!= md5($repeat)){
 					redirect(base_url()."ApplicantLogin/errorPassword");
 				}else{
-
+   
+        			 $data = array(
+            			'email' => $email,
+            			'password' => md5($password),
+        			);
+       			$this->db->insert('applicants', $data);
+    			redirect(base_url()."ApplicantLogin/success");
 				}
 			}else{
 				redirect(base_url()."ApplicantLogin/errorUsername");
 			}
 			
-			
-
-			foreach($query->result() as $row){
-			if($row->PASSWORD == md5($password)){
-				
-				$this->load->library('session');
-				
-				$data = array(
-			        'username'  => $username,
-			        'email'     => $row->EMAIL,// MAY NOT NEED WE'LL SEE
-			        'logged_in' => TRUE
-				);
-
-				$this->session->set_userdata($data);
-				
-				//
-				redirect(base_url()."LoginPanelController/toAdmin");
-				echo "ohh yeeeeeeeeahhhhhhh";
-			}
-			break;
-		}
 		//redirect(base_url()."?login=false", 'location');
 		
 	}else{
-			//redirect or show appropriate message
 			echo 'oopsieee';
 		}
 	}
