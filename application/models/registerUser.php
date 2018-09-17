@@ -22,6 +22,7 @@ class registerUser extends CI_Model{
 
 			$this->load->database();
 			$this->db->select("EMAIL");
+			$this->db->select("PASSWORD");
 			$this->db->from("applicants");
 			$this->db->where("EMAIL", $email);
 			$query = $this->db->get();
@@ -30,13 +31,12 @@ class registerUser extends CI_Model{
 			if($rowcount==0){
 
 				if(md5($password)!= md5($repeat)){
-				//show an error message
-				//passwords do not match
+					redirect(base_url()."ApplicantLogin/errorPassword");
 				}else{
 
 				}
 			}else{
-				//show user already exists
+				redirect(base_url()."ApplicantLogin/errorUsername");
 			}
 			
 			
@@ -54,6 +54,7 @@ class registerUser extends CI_Model{
 
 				$this->session->set_userdata($data);
 				
+				//
 				redirect(base_url()."LoginPanelController/toAdmin");
 				echo "ohh yeeeeeeeeahhhhhhh";
 			}
