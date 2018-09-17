@@ -19,8 +19,8 @@
 
 setTimeout(function () { 
 swal({
-  title: 'An account does not exist from this email address',
-  text: 'Please enter another email address',
+  title:'An account does not exist from this email address',
+  text: 'Please enter the email address again',
   type: 'warning',
   confirmButtonText: 'OK'
 },
