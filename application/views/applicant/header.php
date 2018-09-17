@@ -26,7 +26,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <img src="<?php echo base_url('assets/images/logo.png');?>" style="float:right;">
     <!-- <a href="#" class="w3-bar-item w3-button w3-theme-l1">Logo</a> -->
     <a href="<?=base_url('ApplicantLogin/applicant')?>" class="w3-bar-item w3-button w3-hide-small w3-hover-white" >Home</a>
-    <a href= "<?=base_url('ApplicantLogin/contact')?>" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+    <a href= "<?=base_url('ApplicantDashboard/contact')?>" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
     
   </div>
 </div>
@@ -37,7 +37,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <i class="fa fa-remove"></i>
   </a>
   <h4 class="w3-bar-item"><b>Menu</b></h4>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Fill Application</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="<?=base_url('ApplicantDashboard/fillApplication')?>">Fill Application</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="#">Edit Application</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="#">Upload Documents</a>
 </nav>
