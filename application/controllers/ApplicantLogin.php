@@ -16,6 +16,7 @@ class ApplicantLogin extends CI_Controller{
 
     //done
     public function process(){
+        echo "yeahhh";
         $this->load->model('loginPanelValidation');
         $this->loginPanelValidation->validateApplicant();  
     }
@@ -29,17 +30,23 @@ class ApplicantLogin extends CI_Controller{
         echo "1";
     	$this->load->model('registerUser');
         echo "1";
-        $this->registerUser->checkValidity();  
+        $this->registerUser->register();  
         echo "1";
     }
 
     public function errorUsername(){
-        $this->load->view('messages/errors');
+        echo "ksjdfkjshdkfhskjfkhsh";
+        $this->load->view('messages/noUsername');
+    }
+
+    public function wrongPassword(){
+        //echo "ksjdfkjshdkfhskjfkhsh";
+        $this->load->view('messages/wrongPassword');
     }
 
     public function applicant(){
     	$this->load->view('applicant/header');
-    	$this->load->view('applicant/home');
+    	$this->load->view('home');
     	$this->load->view('applicant/footer');
     }
 
@@ -47,6 +54,10 @@ class ApplicantLogin extends CI_Controller{
         $this->load->view('applicant/header');
         $this->load->view('applicant/contact');
         $this->load->view('applicant/footer');
+    }
+
+    public function errorPassword(){
+        $this->load->view('messages/incorrectPassword');
     }
 }
 ?>
