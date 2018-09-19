@@ -65,5 +65,7 @@ $route['loginUser/process'] = 'UsersLogin/process';
 $route['OperatorIndex'] = 'OperatorDashboard/index';
 $route['OperatorIndex/createAd'] = 'OperatorDashboard/ad';
 $route['OperatorIndex/emails'] = 'OperatorDashboard/showEmails';
+$route['OperatorIndex/sendEmail'] = 'OperatorDashboard/sendAdToSAR';
+$route['OperatorIndex/process'] = 'OperatorDashboard/sendEmail';
 
 
