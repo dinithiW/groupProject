@@ -30,7 +30,7 @@ class loginPanelValidation extends CI_Model{
 			$rowcount = $query->num_rows();
 			
 			if($rowcount==0){
-				echo "we are her now";
+				//echo "we are her now";
 				redirect(base_url()."ApplicantLogin/errorUsername");
 			}else{
 

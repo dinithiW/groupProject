@@ -42,7 +42,7 @@ class registerUser extends CI_Model{
     			redirect(base_url()."ApplicantLogin/success");
 				}
 			}else{
-				redirect(base_url()."ApplicantLogin/errorUsername");
+				redirect(base_url()."ApplicantLogin/existsUsername");
 			}
 			
 		//redirect(base_url()."?login=false", 'location');
