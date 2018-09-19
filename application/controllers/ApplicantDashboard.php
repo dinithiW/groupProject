@@ -31,5 +31,9 @@ class ApplicantDashboard extends CI_Controller{
         $this->load->view('applicant/contact');
         $this->load->view('applicant/footer');
     }
+
+    public function logout(){
+        $this->load->view('applicant/loginPanelApplicant');
+    }
 }
 ?>

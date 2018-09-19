@@ -24,7 +24,7 @@ class UsersLogin extends CI_Controller{
     }
 
     public function errorPassword(){
-        $this->load->view('messages/incorrectPassword');
+        $this->load->view('messages/wrongPassword');
     }
     public function register(){
     	$this->load->view('registerPanel');
