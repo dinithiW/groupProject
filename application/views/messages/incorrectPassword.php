@@ -27,7 +27,6 @@ function(isConfirm){
 
 </script>";
 
-echo"anybodyyy???";
 ?>
 
 </body>
