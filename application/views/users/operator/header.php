@@ -28,6 +28,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Progress</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Reports</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contacts</a>
+    <a href="<?= base_url('OperatorDashboard/logout') ?>" style="float:right;" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Logout</a>
     
   </div>
 </div>
