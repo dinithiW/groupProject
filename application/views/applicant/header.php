@@ -23,10 +23,11 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 <div class="w3-top">
   <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-    <img src="<?php echo base_url('assets/images/logo.png');?>" style="float:right;">
+    <!-- <img src="<?php echo base_url('assets/images/logo.png');?>" style="float:right;"> -->
     <!-- <a href="#" class="w3-bar-item w3-button w3-theme-l1">Logo</a> -->
     <a href="<?=base_url('ApplicantLogin/applicant')?>" class="w3-bar-item w3-button w3-hide-small w3-hover-white" >Home</a>
     <a href= "<?=base_url('ApplicantDashboard/contact')?>" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+    <a href= "<?=base_url('ApplicantDashboard/logout')?>"  style="float:right;" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Logout</a>
     
   </div>
 </div>
@@ -38,7 +39,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   </a>
   <h4 class="w3-bar-item"><b>Menu</b></h4>
   <a class="w3-bar-item w3-button w3-hover-black" href="<?=base_url('ApplicantDashboard/fillApplication')?>">Fill Application</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Edit Application</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="<?=base_url('ApplicantDashboard/fillApplication')?>">Edit Application</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="#">Upload Documents</a>
 </nav>
 
