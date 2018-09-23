@@ -16,10 +16,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 </head> 
 
-<body>
-    
+<body background="<?php echo base_url('assets/images/ucsc.jpg');?>">
+    <div class = "boxed">
     <div class="imgcontainer">
-        <img src="<?php echo base_url('assets/images/loginMan.png');?>" alt="Avatar" class="avatar" >
+        <img src="<?php echo base_url('assets/images/loginMan.png');?>" width = "150" height = "150"alt="Avatar" class="avatar" >
     </div>
     <br />  
      <form action= "<?= base_url("loginUser/process")?>" method = "post" >
@@ -32,22 +32,20 @@
             <input type='password' name='password' id='password' size='25' placeholder=" Enter your password" required /><br />
 
             <div class = "container" width = "800px">
-                <input type='Submit' value='Login' class="btn btn-primary btn-md"/>   
-                <label>
+                <input type='Submit' value='Login' class="btn btn-primary btn-md" />   
+                
                 <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label> 
+                
             </div>
         </div>
         <div class="text-center" style="background-color:#f1f1f1">
-            <span class="psw">Forgot <a href="#">password?</a></span>
+            <div class="psw">Forgot <a href="#">password?</a></div>
         </div>
     </form> 
-          
+    </div>      
 </body>
 
 </html>
 
-<!--  <?= base_url("login/process")?>   -->
-<!--onClick="this.form.reset()"-->
 
 
