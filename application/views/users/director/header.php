@@ -47,7 +47,7 @@ a:hover {
   </a>
   <h4 class="w3-bar-item"><b>Menu</b></h4>
   
-  <a class="w3-bar-item w3-button w3-hover-green" href="#">Make Ad Request</a>
+  <a class="w3-bar-item w3-button w3-hover-green" href="<?= base_url('Director/adRequest') ?>">Make Ad Request</a>
   <a class="w3-bar-item w3-button w3-hover-green" href="#">Approve Ad</a>
   <a class="w3-bar-item w3-button w3-hover-green" href="#">View Applicants</a>
   <a class="w3-bar-item w3-button w3-hover-green" href="#">Approve Selected Applicants</a>
