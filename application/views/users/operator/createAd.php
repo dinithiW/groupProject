@@ -28,6 +28,12 @@
 		<script type="text/javascript" src="<?=base_url('assets/js/jquery.min.js')?>"></script>
 		<script type="text/javascript" src="<?=base_url('assets/plugin/tinymce/tinymce.min.js')?>"></script>
 		<script type="text/javascript" src="<?=base_url('assets/plugin/tinymce/init-tinymce.js')?>"></script>
+
+		<form action = <?= base_url("OperatorIndex/sendEmail")?> method = "post">
+			<br>
+			<input type="submit" name="haha" value = "Send to SAR for approval" class="btn btn-primary btn-md" style="float: right">
+		</form>
+		
 	</div>
 	</div>
 	</body>
