@@ -11,6 +11,12 @@ class DirectorDashboard extends CI_Controller{
         $this->load->view('home');
         $this->load->view('users/director/footer');
 	}
+
+	public function adRequest(){
+		$this->load->view('users/director/header');
+        $this->load->view('users/director/adRequest');
+        $this->load->view('users/director/footer');
+	}
 }
 
 ?>
