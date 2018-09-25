@@ -16,7 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 </head> 
 
-<body background="<?php echo base_url('assets/images/ucsc.jpg');?>">
+<body background="<?php echo base_url('assets/images/ucsc.jpg');?>" >
     <div class = "boxed">
     <div class="imgcontainer">
         <img src="<?php echo base_url('assets/images/loginMan.png');?>" width = "150" height = "150"alt="Avatar" class="avatar" >
