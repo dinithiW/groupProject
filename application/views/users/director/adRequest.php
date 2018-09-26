@@ -51,7 +51,8 @@
             <input type="date" data-date-inline-picker="true" required size='25'/>
             <!-- <input type='text' name='description' id='email' required size='25'placeholder=" Enter the description"/> -->
             <br />
-
+            <label for='email' margin = "5px">Deadline</label>
+            <input type='text' name='subject' id='email' required size='18'placeholder=" Enter subject of the email"/>
             <br />
 
             
@@ -67,11 +68,33 @@
         </div> -->
     </form>
 
+<form name="frmNotification" id="frmNotification" action="" method="post" >
+    <div id="form-header" class="form-row">Add New Message</div>
+    <div class="form-row">
+        <div class="form-label">Subject:</div><div class="error" id="subject"></div>
+        <div class="form-element">
+            <input type="text"  name="subject" id="subject" required>
+            
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-label">Comment:</div><div class="error" id="comment"></div>
+        <div class="form-element">
+            <textarea rows="4" cols="30" name="comment" id="comment"></textarea>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-element">
+            <input type="submit" name="add" id="btn-send" value="Submit">
+        </div>
+    </div>
+</form>  
 </div>
 </div>
 
-</div>
-</div>          
+
+
+
 </body>
 
 </html>
