@@ -70,5 +70,5 @@ $route['OperatorIndex/process'] = 'OperatorDashboard/sendEmail';
 
 $route['Director'] = 'DirectorDashboard/index';
 $route['Director/adRequest'] = 'DirectorDashboard/adRequest';
-
-
+$route['Director/addMessage'] = 'DirectorDashboard/addNotification';
+$route['Director/viewMessage'] = 'DirectorDashboard/viewNotification';
