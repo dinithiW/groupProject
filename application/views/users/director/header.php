@@ -40,19 +40,23 @@ a:hover {
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Reports</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contacts</a>
 
-    <ul class="nav navbar-nav navbar-right w3-hover-white" > 
+   <ul class="nav navbar-nav navbar-right">
       <li class="dropdown">
-       <a href="#" class="dropdown-toggle" data-toggle="dropdown" ><span class="label label-pill label-danger count" style="border-radius:10px; font-size:10px;"></span> <span class="glyphicon glyphicon-envelope" style="font-size:18px;"></span></a>
+       <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;"></span> <span class="glyphicon glyphicon-envelope" style="font-size:18px;"></span></a>
        <ul class="dropdown-menu"></ul>
       </li>
      </ul>
-    <a href="<?= base_url('OperatorDashboard/logout') ?>" style="float:right;" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Logout</a>
+
+     
+    <a href="<?= base_url('OperatorDashboard/logout') ?>" style="float:right;" class="w3-bar-item w3-button w3-hide-small w3-hover-white dropbtn">Logout</a>
+    
+    
     
   </div>
 </div>
 
 <!-- Sidebar -->
-<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar" >
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
     <i class="fa fa-remove"></i>
   </a>
@@ -98,5 +102,61 @@ function w3_close() {
 }
 </script>
 
+<script>
+$(document).ready(function(){
+ 
+ function load_unseen_notification(view = '')
+ {
+  $.ajax({
+   url:"fetch.php",
+   method:"POST",
+   data:{view:view},
+   dataType:"json",
+   success:function(data)
+   {
+    $('.dropdown-menu').html(data.notification);
+    if(data.unseen_notification > 0)
+    {
+     $('.count').html(data.unseen_notification);
+    }
+   }
+  });
+ }
+ 
+ load_unseen_notification();
+ 
+ $('#comment_form').on('submit', function(event){
+  event.preventDefault();
+  if($('#subject').val() != '' && $('#comment').val() != '')
+  {
+   var form_data = $(this).serialize();
+   $.ajax({
+    url:"insert.php",
+    method:"POST",
+    data:form_data,
+    success:function(data)
+    {
+     $('#comment_form')[0].reset();
+     load_unseen_notification();
+    }
+   });
+  }
+  else
+  {
+   alert("Both Fields are Required");
+  }
+ });
+ 
+ $(document).on('click', '.dropdown-toggle', function(){
+  $('.count').html('');
+  load_unseen_notification('yes');
+ });
+ 
+ setInterval(function(){ 
+  load_unseen_notification();; 
+ }, 5000);
+ 
+});
+</script>
 </body>
 </html>
