@@ -54,10 +54,16 @@ class Notification extends CI_Model{
  			
  			$subject =  $this->$_POST["subject"];
 			 $comment = $this->$_POST["comment"];
-			 $query = "
-			 INSERT INTO comments(comment_subject, comment_text)
-			 VALUES ('$subject', '$comment')";
-			 mysqli_query($connect, $query);
+
+			 $data = array(
+            			'comment_to' => "SAR",
+            			'comment_from' => "Director",
+            			'comment_subject' => $subject,
+            			'comment_content' => $comment,
+        	);
+
+			$this->db->insert('comments', $data);
+			 
 		}	
 	}
 
