@@ -14,7 +14,7 @@ class ApplicantDashboard extends CI_Controller{
 	}
 
 
-    public function fillApplication(){
+    public function applicationFirstPage(){
         $this->load->view('applicant/header');
         $this->load->view('applicant/applicationForm/ApplicationFormNavigationBar');
         $this->load->view('applicant/applicationForm/ApplicationFormPartOne');
@@ -24,8 +24,9 @@ class ApplicantDashboard extends CI_Controller{
 
     public function applicationSecond(){
         $this->load->view('applicant/header');
+        $this->load->view('applicant/applicationForm/ApplicationFormNavigationBar');
         $this->load->view('applicant/applicationForm/ApplicationFormPartTwo');
-        $this->load->view('applicant/footer');
+       
     }
 
     public function contact(){
