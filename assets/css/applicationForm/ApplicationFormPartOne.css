@@ -3,9 +3,84 @@ body{
 }
 
 .outerClass{
-    background-color: blueviolet;
+    
     height: 600px;
     width: 1097px;
     margin-left: 251px;
     margin-top: -37px;
 }
+
+.innerClass{
+    background-color: rgb(226, 43, 83);
+    height: 400px;
+    width: 897px;
+    margin-left: 251px;
+    margin-top: -37px;
+}
+
+.head{
+    width: 1100px;
+    height: 700px;
+    margin-left: 0px;
+    
+}
+
+.header{
+    width: 580px;
+    margin-left: 240px;
+    background-color: rgb(215, 219, 212);
+}
+
+.outerForm{
+    width: 580px;
+    margin-left: 240px;
+    background-color: rgb(255, 196, 0);
+}
+
+.form-group{
+    margin-left: 300px;
+    width: 400px;
+}
+
+.select-gender{
+    margin-left: 100px;
+    margin-top: -10px;
+    width: 400px;
+}
+.select-status{
+    margin-left: 400px;
+    margin-top: -90px;
+    width: 300px;
+}
+.select-citizen{
+    margin-left: 700px;
+    margin-top: -130px;
+    width: 300px;
+}
+
+.calender{
+    margin-left: 300px;
+    margin-top: -20px;
+    width: 300px;
+}
+.age{
+    margin-left: 600px;
+    margin-top: -70px;
+    width: 400px;
+}
+#years{
+    margin-left: -300px;
+    margin-top: 20px;
+    width: 100px;
+}
+#months{
+    margin-left: -200px;
+    margin-top: -45px;
+    width: 100px;
+}
+#days{
+    margin-left: -100px;
+    margin-top: -45px;
+    width: 90px;
+}
+
