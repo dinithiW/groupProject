@@ -1,25 +1,25 @@
-body{
-    
-}
-
-.container{
-   
-    width:1100px;
-    height: 700px;
-    margin-top: -40px;
-    margin-left: 250px;
-}
-
-.header{
-    background-color:transparent;
-    width:600px;
-    height: 30px;
-    margin-top: 10px;
-    margin-left: -50px;
-}
-
 #header1{
-    margin-top: -20px;
-    margin-left: 5px;
+    margin-left: 30px;
+    width: 500px;
 }
+
+
+
+.lec{
+    margin-left: 200px;
+    margin-top: 20px;
+    width: 300px;
+}
+
+.selection{
+    color: blue;
+    margin-left: 30px;
+}
+
+.name1{
+    color: rgb(125, 226, 43);
+}
+
+.name2{
+    color: rgb(125, 226, 43);
 }
