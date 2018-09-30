@@ -15,12 +15,11 @@
 <body>
     <div class="navbar">
         
-        <a href="<?=base_url('ApplicantDashboard/applicationFirstPage')?>"    class="active w3-bar-item w3-button w3-hide-small w3-hover-white butt w3-bar-item w3-button active" >FIRST PAGE</a>
-        <a href="<?=base_url('ApplicantDashboard/applicationSecondPage')?>" class="w3-bar-item w3-button w3-hide-small w3-hover-white butt">SECOND PAGE</a>
-        <a href="<?=base_url('ApplicantDashboard/applicationThirdPage')?>" class="w3-bar-item w3-button w3-hide-small w3-hover-white butt">THIRD PAGE</a>
-        <a href="<?=base_url('ApplicantDashboard/applicationFourthPage')?>" class="w3-bar-item w3-button w3-hide-small w3-hover-white butt">FOURTH PAGE</a>
-        <a href="<?=base_url('ApplicantDashboard/applicationFifththPage')?>"    class="w3-bar-item w3-button w3-hide-small w3-hover-white butt" >FIFTH PAGE</a>
-    
+        <a href="<?=base_url('ApplicantDashboard/applicationFirstPage')?>"    class="active w3-bar-item w3-button w3-hide-small w3-hover-white butt w3-bar-item w3-button active" >BASIC DETAILS</a>
+        <a href="<?=base_url('ApplicantDashboard/applicationSecondPage')?>" class="w3-bar-item w3-button w3-hide-small w3-hover-white butt">EDUCATIONAL DETAILS</a>
+        <a href="<?=base_url('ApplicantDashboard/applicationThirdPage')?>" class="w3-bar-item w3-button w3-hide-small w3-hover-white butt">PROFESSIONAL DETAILS</a>
+        <a href="<?=base_url('ApplicantDashboard/applicationFourthPage')?>" class="w3-bar-item w3-button w3-hide-small w3-hover-white butt">REFEREES DETAILS</a>
+        
     </div>
 
 </body>

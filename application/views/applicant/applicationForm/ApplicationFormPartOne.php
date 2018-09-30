@@ -17,7 +17,7 @@
     <div class="outerClass" >
             <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4 row centered-form head">
                 <div class="panel panel-default header">
-                    <h3 class="panel-title" id="header">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>APPLICANT REGISTRATION FORM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Basic Personal Details</b></h3>
+                    <h3 class="panel-title" id="header">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>APPLICANT REGISTRATION FORM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;BASIC PERSONAL DETAILS</b></h3>
                 </div>
 
                 <form role="form">

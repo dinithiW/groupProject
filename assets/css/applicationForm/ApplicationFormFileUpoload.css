@@ -13,7 +13,7 @@
     margin-left: -300px;
     margin-top: 30px;
     width: 280px;
-    color: rgb(15, 11, 241);
+    color: rgb(152, 14, 243);
 }
 
 .inputClass1{
@@ -28,6 +28,8 @@
     margin-top: -30px;
     width: 100px;
     height: 40px;
+    background-color: rgb(152, 14, 243);
+
 }
 /*first file uploaading link*/
 
@@ -41,7 +43,7 @@
     margin-left: -300px;
     margin-top: 30px;
     width: 280px;
-    color: rgb(15, 11, 241);
+    color: rgb(152, 14, 243);
 }
 
 .inputClass2{
@@ -56,7 +58,9 @@
     margin-top: -30px;
     width: 100px;
     height: 40px;
+    background-color: rgb(152, 14, 243);
 }
+
 /*second file uploaading link*/
 
 /*third file uploaading link*/
@@ -69,7 +73,7 @@
     margin-left: -300px;
     margin-top: 30px;
     width: 280px;
-    color: rgb(15, 11, 241);
+    color: rgb(152, 14, 243);
 }
 
 .inputClass3{
@@ -98,7 +102,7 @@
     margin-left: -300px;
     margin-top: 30px;
     width: 280px;
-    color: rgb(15, 11, 241);
+    color: rgb(152, 14, 243);
 }
 
 .inputClass4{
@@ -113,7 +117,9 @@
     margin-top: -30px;
     width: 100px;
     height: 40px;
+    background-color: rgb(152, 14, 243);
 }
+
 /*forth file uploaading link*/
 
 /*five file uploaading link*/
@@ -126,7 +132,7 @@
     margin-left: -300px;
     margin-top: 30px;
     width: 280px;
-    color: rgb(15, 11, 241);
+    color: rgb(152, 14, 243);
 }
 
 .inputClass5{
@@ -141,5 +147,7 @@
     margin-top: -30px;
     width: 100px;
     height: 40px;
+    background-color: rgb(152, 14, 243);
 }
+
 /*five file uploaading link*/

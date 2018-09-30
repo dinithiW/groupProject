@@ -17,7 +17,7 @@
     <div class="container"><!-- start of the container-->
         <!-- start of the head-->
         <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4 row centered-form head">
-            <h3 class="panel-title" id="header1">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>APPLICANT REGISTRATION FORM  Basic Personal Details</b></h3>
+            <h3 class="panel-title" id="header1">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>APPLICANT REGISTRATION FORM  PROFESSIONAL QUALIFICATIONS</b></h3>
                 
             <form role="form"><!-- start of the form-->
 

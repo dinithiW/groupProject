@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="container"><!-- start of the container-->
-        <h3 class="panel-title" id="header1">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>APPLICANT REGISTRATION FORM  Basic Personal Details</b></h3>
+        <h3 class="panel-title" id="header1">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>APPLICANT REGISTRATION FORM  REFEREES DETAILS</b></h3>
             
         <!-- start referee table-->        
             <h4 id="title1">Referees </h4>

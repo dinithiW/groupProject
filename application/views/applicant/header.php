@@ -40,7 +40,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   <h4 class="w3-bar-item"><b>Menu</b></h4>
   <a class="w3-bar-item w3-button w3-hover-black" href="<?=base_url('ApplicantDashboard/applicationFirstPage')?>">Fill Application</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="<?=base_url('ApplicantDashboard/applicationFirstPage')?>">Edit Application</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Upload Documents</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="<?=base_url('ApplicantDashboard/applicationFifththPage')?>">Upload Documents</a>
 </nav>
 
 <!-- Overlay effect when opening sidebar on small screens -->
