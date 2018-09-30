@@ -104,6 +104,18 @@
                         </ul>
                     </div><!-- end of the dropdown for sinhala2-->
 
+                    <div class="dropdown drop tamil2" ><!-- start of the dropdown for tamil2-->
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">TAMIL
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Very Good</a></li>
+                            <li><a href="#">Good</a></li>
+                            <li><a href="#">Fair</a></li>
+                            <li><a href="#">No Knowledge</a></li>
+                        </ul>
+                    </div><!-- end of the dropdown for tamil2-->
+
 
             </form><!-- end of the form-->
         </div><!-- end of the head-->
