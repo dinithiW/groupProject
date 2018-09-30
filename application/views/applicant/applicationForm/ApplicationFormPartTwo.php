@@ -55,9 +55,9 @@
                 </ul>
             </div><!-- end of the dropdown-->
             
-            <h4 id="secondry">Secondry Educational Details</h4>
+            <h4 id="title1">Secondry Educational Details</h4>
 
-                    <div class="content1">
+                    <div class="table1"><!-- start of the Secondry Educational Details table-->
                         <table id="Table">
                             <tr class="tr">
                                 <td><input type="text" class="Text1" placeholder="School name" required size='55'/></td>
@@ -90,7 +90,58 @@
                             
                             </tr>
                         </table>
-                    </div>
+                    </div><!-- end of the Secondry Educational Details table-->
+
+                    <h4 id="title2">Higher Educational Details</h4>
+                    <div class="table2"><!-- start of the Higher Educational Details table-->
+                        <table id="Table">
+                            <tr class="tr">
+                                <td><input type="text" class="Text1" placeholder="Name of the university / Institution" required size='35'/></td>
+                                <td><input type="text" class="Text2" placeholder="From" required size='3'/></td>
+                                <td><input type="text" class="Text3" placeholder="To" required size='3'/></td>
+                                <td><input type="text" class="Text2" placeholder="Degree Obtained" required size='25'/></td>
+                                <td><input type="text" class="Text3" placeholder="Duration of the course" required size='17'/></td>
+                                <td><input type="text" class="Text3" placeholder="Class" required size='12'/></td>
+                                <td><input type="text" class="Text2" placeholder="Awarding Year" required size='9'/></td>
+                                <td><input type="text" class="Text3" placeholder="Index No" required size='7'/></td>
+                            <td><span class="lblStatus"></span></td>
+                            
+                            <tr class="tr">
+                                <td><input type="text" class="Text1" placeholder="Name of the university / Institution" required size='35'/></td>
+                                <td><input type="text" class="Text2" placeholder="From" required size='3'/></td>
+                                <td><input type="text" class="Text3" placeholder="To" required size='3'/></td>
+                                <td><input type="text" class="Text2" placeholder="Degree Obtained" required size='25'/></td>
+                                <td><input type="text" class="Text3" placeholder="Duration of the course" required size='17'/></td>
+                                <td><input type="text" class="Text3" placeholder="Class" required size='12'/></td>
+                                <td><input type="text" class="Text2" placeholder="Awarding Year" required size='9'/></td>
+                                <td><input type="text" class="Text3" placeholder="Index No" required size='7'/></td>
+                            <td><span class="lblStatus"></span></td>
+
+                            <tr class="tr">
+                                <td><input type="text" class="Text1" placeholder="Name of the university / Institution" required size='35'/></td>
+                                <td><input type="text" class="Text2" placeholder="From" required size='3'/></td>
+                                <td><input type="text" class="Text3" placeholder="To" required size='3'/></td>
+                                <td><input type="text" class="Text2" placeholder="Degree Obtained" required size='25'/></td>
+                                <td><input type="text" class="Text3" placeholder="Duration of the course" required size='17'/></td>
+                                <td><input type="text" class="Text3" placeholder="Class" required size='12'/></td>
+                                <td><input type="text" class="Text2" placeholder="Awarding Year" required size='9'/></td>
+                                <td><input type="text" class="Text3" placeholder="Index No" required size='7'/></td>
+                            <td><span class="lblStatus"></span></td>
+
+                            <tr class="tr">
+                                <td><input type="text" class="Text1" placeholder="Name of the university / Institution" required size='35'/></td>
+                                <td><input type="text" class="Text2" placeholder="From" required size='3'/></td>
+                                <td><input type="text" class="Text3" placeholder="To" required size='3'/></td>
+                                <td><input type="text" class="Text2" placeholder="Degree Obtained" required size='25'/></td>
+                                <td><input type="text" class="Text3" placeholder="Duration of the course" required size='17'/></td>
+                                <td><input type="text" class="Text3" placeholder="Class" required size='12'/></td>
+                                <td><input type="text" class="Text2" placeholder="Awarding Year" required size='9'/></td>
+                                <td><input type="text" class="Text3" placeholder="Index No" required size='7'/></td>
+                            <td><span class="lblStatus"></span></td>
+
+                            </tr>
+                        </table>
+                    </div><!-- end of the Higher Educational Details table-->
 
         </div><!--end of the head-->
         

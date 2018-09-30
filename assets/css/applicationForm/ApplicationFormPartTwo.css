@@ -29,15 +29,27 @@
     margin-top: -50px;
 }
 
-.content1{/*Secondry Educational Details table*/
-    margin-left: -220px;
-    margin-top: 0px;
-}
 
-#secondry{/*Secondry Educational Details*/
+#title1{/*Secondry Educational Details title*/
     margin-left: 140px;
     margin-top: 20px;
     color: rgb(87, 87, 92);
     width: 400px;
+}
+.table1{/*Secondry Educational Details table*/
+    margin-left: -220px;
+    margin-top: 0px;
+}
+
+
+#title2{/*Higher Educational Details title*/
+    margin-left: 140px;
+    margin-top: 20px;
+    color: rgb(87, 87, 92);
+    width: 400px;
+}
+.table2{/*Higher Educational Details table*/
+    margin-left: -220px;
+    margin-top: 0px;
 }
 
