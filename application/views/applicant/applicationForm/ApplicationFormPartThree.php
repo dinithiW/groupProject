@@ -60,6 +60,8 @@
                     <h4 id="title2">Proficiency in Sinhala/Tamil/English</h4>
                     <h5 id="title3">**********************************Ability to Work*******************************  | ********************************* Ability To Teach********************************</h5>
                     
+<!-- start of the dropdown buttons-->
+
                     <div class="dropdown drop sinhala1" ><!-- start of the dropdown for sinhala-->
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">SINHALA
                             <span class="caret"></span>
@@ -131,6 +133,73 @@
                             <li><a href="#">No Knowledge</a></li>
                         </ul>
                     </div><!-- end of the dropdown for english2-->
+<!-- end of the dropdown series-->
+
+                    <h5 id="note1">Note:Indicate your level based on self-evaluation of your ability</h5>
+
+                <!--start of the Professional Qualifications table -->
+                      
+                
+                <h4 id="title4">Professional Qualifications </h4>
+
+                    <div class="table2">
+                        <table id="Table">
+                            <tr class="tr">
+                                <td><input type="text" class="Text2" placeholder="        1" required size='5'/></td>
+                                <td><input type="text" class="Text1" placeholder="Post" required size='13'/></td>
+                                <td><input type="text" class="Text2" placeholder="Institution/Company" required size='40'/></td>
+                                <td><input type="text" class="Text2" placeholder="Duration" required size='8'/></td>
+                                <td><input type="text" class="Text3" placeholder="From(dd/mm/yy)" required size='15'/></td>
+                                <td><input type="text" class="Text2" placeholder="To(dd/mm/yy)" required size='15'/></td>
+                                <td><input type="text" class="Text2" placeholder="last drawn monthly salary" required size='20'/></td>
+                            <td><span class="lblStatus"></span></td>
+
+                            <tr class="tr">
+                                <td><input type="text" class="Text2" placeholder="        2" required size='5'/></td>
+                                <td><input type="text" class="Text1" placeholder="Post" required size='13'/></td>
+                                <td><input type="text" class="Text2" placeholder="Institution/Company" required size='40'/></td>
+                                <td><input type="text" class="Text2" placeholder="Duration" required size='8'/></td>
+                                <td><input type="text" class="Text3" placeholder="From(dd/mm/yy)" required size='15'/></td>
+                                <td><input type="text" class="Text2" placeholder="To(dd/mm/yy)" required size='15'/></td>
+                                <td><input type="text" class="Text2" placeholder="last drawn monthly salary" required size='20'/></td>
+                            <td><span class="lblStatus"></span></td>
+
+                            <tr class="tr">
+                                <td><input type="text" class="Text2" placeholder="        3" required size='5'/></td>
+                                <td><input type="text" class="Text1" placeholder="Post" required size='13'/></td>
+                                <td><input type="text" class="Text2" placeholder="Institution/Company" required size='40'/></td>
+                                <td><input type="text" class="Text2" placeholder="Duration" required size='8'/></td>
+                                <td><input type="text" class="Text3" placeholder="From(dd/mm/yy)" required size='15'/></td>
+                                <td><input type="text" class="Text2" placeholder="To(dd/mm/yy)" required size='15'/></td>
+                                <td><input type="text" class="Text2" placeholder="last drawn monthly salary" required size='20'/></td>
+                            <td><span class="lblStatus"></span></td>
+
+                            <tr class="tr">
+                                <td><input type="text" class="Text2" placeholder="        4" required size='5'/></td>
+                                <td><input type="text" class="Text1" placeholder="Post" required size='13'/></td>
+                                <td><input type="text" class="Text2" placeholder="Institution/Company" required size='40'/></td>
+                                <td><input type="text" class="Text2" placeholder="Duration" required size='8'/></td>
+                                <td><input type="text" class="Text3" placeholder="From(dd/mm/yy)" required size='15'/></td>
+                                <td><input type="text" class="Text2" placeholder="To(dd/mm/yy)" required size='15'/></td>
+                                <td><input type="text" class="Text2" placeholder="last drawn monthly salary" required size='20'/></td>
+                            <td><span class="lblStatus"></span></td>
+
+                            <tr class="tr">
+                                <td><input type="text" class="Text2" placeholder="        5" required size='5'/></td>
+                                <td><input type="text" class="Text1" placeholder="Post" required size='13'/></td>
+                                <td><input type="text" class="Text2" placeholder="Institution/Company" required size='40'/></td>
+                                <td><input type="text" class="Text2" placeholder="Duration" required size='8'/></td>
+                                <td><input type="text" class="Text3" placeholder="From(dd/mm/yy)" required size='15'/></td>
+                                <td><input type="text" class="Text2" placeholder="To(dd/mm/yy)" required size='15'/></td>
+                                <td><input type="text" class="Text2" placeholder="last drawn monthly salary" required size='20'/></td>
+                            <td><span class="lblStatus"></span></td>
+                            
+                            </tr>
+                        </table>
+                    </div>
+                <!-- end of the Professional Qualifications table-->
+
+
 
             </form><!-- end of the form-->
         </div><!-- end of the head-->
