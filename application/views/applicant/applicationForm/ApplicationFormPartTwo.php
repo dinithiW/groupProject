@@ -143,6 +143,37 @@
                         </table>
                     </div><!-- end of the Higher Educational Details table-->
 
+                    <h4 id="title3">Any Other Qualifications </h4>
+                    <div class="table3">
+                        <table id="Table">
+                            <tr class="tr">
+                                <td><input type="text" class="Text2" placeholder="        1" required size='5'/></td>
+                                <td><input type="text" class="Text1" placeholder="Institution" required size='50'/></td>
+                                <td><input type="text" class="Text2" placeholder="Deploma etc" required size='40'/></td>
+                                <td><input type="text" class="Text3" placeholder="Duration" required size='17'/></td>
+                                <td><input type="text" class="Text2" placeholder="Year" required size='13'/></td>
+                            <td><span class="lblStatus"></span></td>
+
+                            <tr class="tr">
+                                <td><input type="text" class="Text2" placeholder="        2" required size='5'/></td>
+                                <td><input type="text" class="Text1" placeholder="Institution" required size='50'/></td>
+                                <td><input type="text" class="Text2" placeholder="Deploma etc" required size='40'/></td>
+                                <td><input type="text" class="Text3" placeholder="Duration" required size='17'/></td>
+                                <td><input type="text" class="Text2" placeholder="Year" required size='13'/></td>
+                            <td><span class="lblStatus"></span></td>
+
+                            <tr class="tr">
+                                <td><input type="text" class="Text2" placeholder="        3" required size='5'/></td>
+                                <td><input type="text" class="Text1" placeholder="Institution" required size='50'/></td>
+                                <td><input type="text" class="Text2" placeholder="Deploma etc" required size='40'/></td>
+                                <td><input type="text" class="Text3" placeholder="Duration" required size='17'/></td>
+                                <td><input type="text" class="Text2" placeholder="Year" required size='13'/></td>
+                            <td><span class="lblStatus"></span></td>
+
+                            </tr>
+                        </table>
+                    </div>
+
         </div><!--end of the head-->
         
     </div><!-- end of the container-->
