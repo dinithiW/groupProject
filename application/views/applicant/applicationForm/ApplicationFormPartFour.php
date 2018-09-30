@@ -71,7 +71,11 @@
                     </div>
 
                     <div class="agreement">
-                        <input type="submit" value="I agree"  id ="gg"class ="btn btn-info btn-block acce">
+                        <input type="submit" value="I agree"  id ="Agree"class ="btn btn-info btn-block acce">
+                    </div>
+
+                    <div class="submission">
+                        <input type="submit" value="SUBMIT"  id ="Submission"class ="btn btn-info btn-block acce">
                     </div>
             
     </div><!-- end of the container-->

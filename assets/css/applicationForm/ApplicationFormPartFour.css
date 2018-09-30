@@ -35,12 +35,19 @@
 
 .calender{
     margin-left: 500px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
-#gg{
+#Agree{
     width: 200px;
     margin-left: 700px;
     margin-top: -30px;
     background-color: rgb(42, 245, 16);
+}
+
+#Submission{
+    width: 200px;
+    margin-left: 560px;
+    margin-top: 10px;
+    background-color: rgb(245, 16, 188);
 }
