@@ -67,47 +67,58 @@
                                 <input type="tel" name="office-phone" id="office-phone" class="form-control input-sm" placeholder="enter your Office-phone number in here ">
                             </div>
 
-                            
+                    <!-- start of the drop downbutton -->        
+                            <div class="dropDown">
+                                <div class="gender"><!-- start of the radio button for gneder-->
+                                    <h5 class="selection1"><b>GENDER</b></h5>
+                                    <div class="custom-control custom-radio ">
+                                        <input type="radio" class="custom-control-input button1" id="selectGender" name="GENDER" >
+                                        <label class="custom-control-label name1" for="checkGender">MALE</label>
+                                    </div>
 
-                            <div class="btn-group select-gender" data-toggle="buttons">
-                                <h4 class="civil-status-form12">GENDER</h4> 
-                                <label class="btn btn-primary">
-                                    <input type="radio" name="gender" id="male" autocomplete="off"> &nbsp;&nbsp;&nbsp;&nbsp; MALE
-                                </label>
+                                    <div class="custom-control custom-radio ">
+                                        <input type="radio" class="custom-control-input button2" id="selectGende" name="GENDER" checked >
+                                        <label class="custom-control-label name2" for="checkGender">FEMALE</label>
+                                    </div>
+                                </div><!-- end of the radio button for gneder-->
 
-                                <label class="btn btn-primary">
-                                    <input type="radio" name="gender" id="female" autocomplete="off">FEMALE
-                                </label>
+                                <div class="civilStatus"><!-- start of the radio button for civil status-->
+                                    <h5 class="selection2"><b>CIVIL STATUS</b></h5>
+                                    <div class="custom-control custom-radio1 ">
+                                        <input type="radio" class="custom-control-input button3" id="civil" name="CIVIL" >
+                                        <label class="custom-control-label name3" for="checkcivil">MARRIED</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio1 ">
+                                        <input type="radio" class="custom-control-input button4" id="civil" name="CIVIL" checked >
+                                        <label class="custom-control-label name4" for="checkcivil">UNMARRIED</label>
+                                    </div>
+                                </div><!-- end of the radio button for civil status-->
+
+
+                                <div class="citizenship"><!-- start of the radio button for citizenship-->
+                                    <h5 class="selection3"><b>IF A CITIZEN OF SRI LANKA HOW OBTAINED</b></h5>
+                                    <div class="custom-control customRadio3 ">
+                                        <input type="radio" class="custom-control-input button5" id="citizenShip" name="CITY" >
+                                        <label class="custom-control-label name5" for="checkcitizenship">BY DESCENT</label>
+                                    </div>
+
+                                    <div class="custom-control customRadio3">
+                                        <input type="radio" class="custom-control-input button6" id="citizenShip" name="CITY" checked >
+                                        <label class="custom-control-label name6" for="checkcitizenship">BY REGISTRATION</label>
+                                    </div>
+                                </div><!-- end of the radio button for citizenship-->
                             </div>
+                    <!-- end of the dropdown button-->
 
-                            <div class="btn-group select-status" data-toggle="buttons">
-                                    <h4 class="civil-status-form12">CIVIL STATUS</h4> 
-                                    <label class="btn btn-primary bb1">
-                                        <input type="radio" name="civil-status" id="married" autocomplete="off"> &nbsp;&nbsp;&nbsp;&nbsp; MARRIED
-                                    </label>
-
-                                    <label class="btn btn-primary bb2">
-                                        <input type="radio" name="civil-status" id="unmarried" autocomplete="off">UNMARRIED
-                                    </label>
-                            </div>
-
-
-                            <div class="btn-group select-citizen" data-toggle="buttons">
-                                    <h4 class="civil-status-form12">CITIZENSHIP</h4> 
-                                    <label class="btn btn-primary bb1">
-                                        <input type="radio" name="citizenship" id="by-descent" autocomplete="off"> &nbsp;&nbsp;&nbsp;&nbsp; BY DESCENT
-                                    </label>
-
-                                    <label class="btn btn-primary bb2">
-                                        <input type="radio" name="citizenship" id="by-registration" autocomplete="off">BY REGISTRATION
-                                    </label>
-                            </div>
-
+                            <!-- start the calender-->
                             <div class="calender">
                                 <h4 id="birth-date"> Date of Birth</h4>
                                 <input type="date" data-date-inline-picker="true" />
                             </div>
+                            <!-- end the calender-->
 
+                            <!-- start the age-->
                             <div class="col-xs-6 col-sm-6 col-md-6 age ">
                                 <h4 id="currect-age"> Age as at closing date of application</h4> 
                                     <div class="years form-group">
@@ -120,6 +131,7 @@
                                         <input type="text" name="days" id="days" class="form-control input-sm" placeholder="days">
                                     </div>
                             </div>
+                            <!--end the age-->
                         
                         </div>
                     </div>

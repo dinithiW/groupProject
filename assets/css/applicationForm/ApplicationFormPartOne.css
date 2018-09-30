@@ -8,7 +8,7 @@ body{
     width: 1100px;
     margin-left: 251px;
     margin-top: -37px;
-    background-color: blue;
+    
 }
 
 .innerClass{
@@ -61,7 +61,7 @@ body{
 
 .calender{
     margin-left: 300px;
-    margin-top: -20px;
+    margin-top: 20px;
     width: 300px;
 }
 .age{
@@ -89,3 +89,70 @@ body{
     margin-left: -100px;
     margin-top: 0px;
 }
+
+
+
+/*start of radio button series*/
+.dropDown{
+    background-color: rgb(153, 151, 155);
+    width: 750px;
+    margin-left: 170px;
+    margin-right: -10px;
+}
+
+.gender{
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.civilStatus{
+    margin-left: 240px;
+    margin-top: -85px;
+}
+
+.citizenship{
+    margin-left: 450px;
+    margin-top: -85px;
+}
+
+.selection1{
+    color:rgb(253, 253, 253);
+}
+
+.selection2{
+    color:rgb(253, 253, 253);
+}
+
+.selection3{
+    width: 400px;
+    color:rgb(253, 253, 253);
+}
+
+.customRadio3{
+    width: 400px;
+}
+
+.name1{
+    color:rgb(14, 238, 51);
+}
+
+.name2{
+    color:rgb(0, 195, 255);
+}
+
+.name3{
+    color:rgb(14, 238, 51);
+}
+
+.name4{
+    color:rgb(0, 195, 255);
+}
+.name5{
+    color:rgb(14, 238, 51);
+
+}
+
+.name6{
+    color:rgb(0, 195, 255);
+}
+/*end   of radio button series*/
