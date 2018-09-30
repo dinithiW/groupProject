@@ -80,18 +80,32 @@ width: 400px;
 
 /*=========================================end the dropdown button series================================*/
 
-#note1{
+#note1{/*Note:Indicate your level based on self-evaluation of your ability*/
     width: 500px;
     margin-left: 100px;
     color: red;
 }
 
-#title4{
+#title4{/*Professional Qualifications*/
     margin-left: 200px;
     margin-top: 10px;
     width: 1000px;
     color: rgb(133, 130, 130);
 }
-.table2{
+.table2{/*Professional Qualifications table*/
     margin-left: -220px;
+}
+
+#experience{/*expireance cage*/
+    margin-left: -200px;
+    margin-top: 10px;
+    width: 1000px;
+    height: 100px;
+}
+
+#research{/*research cage*/
+    margin-left: -200px;
+    margin-top: 10px;
+    width: 1000px;
+    height: 100px;
 }

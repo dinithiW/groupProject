@@ -199,6 +199,17 @@
                     </div>
                 <!-- end of the Professional Qualifications table-->
 
+                <!-- start the text box one-->
+                    <div form-group>
+                        <input type="text" name="experience" id="experience" class="form-control input-sm" placeholder="                                        Experience relevant to the post applied for (Please indicate the tasks handled with the duration) ">
+                    </div>
+                <!-- end the text box one-->
+
+                <!-- start the text box two-->
+                    <div form-group>
+                        <input type="text" name="research" id="research" class="form-control input-sm" placeholder="                                        Details of research and publications, If any (if space is insufficient, please append it with appends) ">
+                    </div>
+                <!-- end the text box two-->
 
 
             </form><!-- end of the form-->
