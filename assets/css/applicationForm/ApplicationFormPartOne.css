@@ -5,9 +5,10 @@ body{
 .outerClass{
     
     height: 600px;
-    width: 1097px;
+    width: 1100px;
     margin-left: 251px;
     margin-top: -37px;
+    background-color: blue;
 }
 
 .innerClass{

@@ -142,6 +142,8 @@
                             </tr>
                         </table>
                     </div><!-- end of the Higher Educational Details table-->
+                    <h5 id="note1">Note:Certified copies of the certificates and transcripts should be attached</h5>
+                
 
                     <h4 id="title3">Any Other Qualifications </h4>
                     <div class="table3">
@@ -173,7 +175,8 @@
                             </tr>
                         </table>
                     </div>
-
+                    <h5 id="note2">Note:Certified copies of the certificates and transcripts should be attached</h5>
+                
         </div><!--end of the head-->
         
     </div><!-- end of the container-->

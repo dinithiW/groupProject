@@ -22,10 +22,17 @@ class ApplicantDashboard extends CI_Controller{
     	//$this->load->view('applicant/footer');
     }
 
-    public function applicationSecond(){
+    public function applicationSecondPage(){
         $this->load->view('applicant/header');
         $this->load->view('applicant/applicationForm/ApplicationFormNavigationBar');
         $this->load->view('applicant/applicationForm/ApplicationFormPartTwo');
+       
+    }
+    
+    public function applicationThirdPage(){
+        $this->load->view('applicant/header');
+        $this->load->view('applicant/applicationForm/ApplicationFormNavigationBar');
+        $this->load->view('applicant/applicationForm/ApplicationFormPartThree');
        
     }
 
