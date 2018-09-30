@@ -66,7 +66,31 @@
                             <li><a href="#">Fair</a></li>
                             <li><a href="#">No Knowledge</a></li>
                         </ul>
-                    </div><!-- end of the dropdown for sinhala-->
+                    </div><!-- end of the dropdown for sinhala1-->
+
+                    <div class="dropdown drop tamil1" ><!-- start of the dropdown for tamil1-->
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">TAMIL
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Very Good</a></li>
+                            <li><a href="#">Good</a></li>
+                            <li><a href="#">Fair</a></li>
+                            <li><a href="#">No Knowledge</a></li>
+                        </ul>
+                    </div><!-- end of the dropdown for tamil1-->
+
+                    <div class="dropdown drop english1" ><!-- start of the dropdown for english1-->
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">ENGLISH
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Very Good</a></li>
+                            <li><a href="#">Good</a></li>
+                            <li><a href="#">Fair</a></li>
+                            <li><a href="#">No Knowledge</a></li>
+                        </ul>
+                    </div><!-- end of the dropdown for english1-->
 
 
             </form><!-- end of the form-->
