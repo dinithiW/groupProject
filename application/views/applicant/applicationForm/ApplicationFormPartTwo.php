@@ -55,6 +55,43 @@
                 </ul>
             </div><!-- end of the dropdown-->
             
+            <h4 id="secondry">Secondry Educational Details</h4>
+
+                    <div class="content1">
+                        <table id="Table">
+                            <tr class="tr">
+                                <td><input type="text" class="Text1" placeholder="School name" required size='55'/></td>
+                                <td><input type="text" class="Text2" placeholder="From" required size='5'/></td>
+                                <td><input type="text" class="Text3" placeholder="To" required size='5'/></td>
+                                <td><input type="text" class="Text2" placeholder="Exmination Passed" required size='55'/></td>
+                                <td><input type="text" class="Text3" placeholder="Year" required size='5'/></td>
+                            <td><span class="lblStatus"></span></td>
+                            <tr class="tr">
+                                <td><input type="text" class="Text1" placeholder="School name" required size='55'/></td>
+                                <td><input type="text" class="Text2" placeholder="From" required size='5'/></td>
+                                <td><input type="text" class="Text3" placeholder="To" required size='5'/></td>
+                                <td><input type="text" class="Text2" placeholder="Exmination Passed" required size='55'/></td>
+                                <td><input type="text" class="Text3" placeholder="Year" required size='5'/></td>
+                            <td><span class="lblStatus"></span></td>
+                            <tr class="tr">
+                                <td><input type="text" class="Text1" placeholder="School name" required size='55'/></td>
+                                <td><input type="text" class="Text2" placeholder="From" required size='5'/></td>
+                                <td><input type="text" class="Text3" placeholder="To" required size='5'/></td>
+                                <td><input type="text" class="Text2" placeholder="Exmination Passed" required size='55'/></td>
+                                <td><input type="text" class="Text3" placeholder="Year" required size='5'/></td>
+                            <td><span class="lblStatus"></span></td>
+                            <tr class="tr">
+                                <td><input type="text" class="Text1" placeholder="School name" required size='55'/></td>
+                                <td><input type="text" class="Text2" placeholder="From" required size='5'/></td>
+                                <td><input type="text" class="Text3" placeholder="To" required size='5'/></td>
+                                <td><input type="text" class="Text2" placeholder="Exmination Passed" required size='55'/></td>
+                                <td><input type="text" class="Text3" placeholder="Year" required size='5'/></td>
+                            <td><span class="lblStatus"></span></td>
+                            
+                            </tr>
+                        </table>
+                    </div>
+
         </div><!--end of the head-->
         
     </div><!-- end of the container-->
