@@ -42,6 +42,13 @@ class ApplicantDashboard extends CI_Controller{
         $this->load->view('applicant/applicationForm/ApplicationFormPartFour');
        
     }
+
+    public function applicationFifththPage(){
+        $this->load->view('applicant/header');
+        $this->load->view('applicant/applicationForm/ApplicationFormNavigationBar');
+        $this->load->view('applicant/applicationForm/ApplicationFormFileUpoload');
+       
+    }
     
 
     public function contact(){
