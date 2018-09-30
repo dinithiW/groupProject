@@ -1,5 +1,5 @@
 body{
-    
+    background-color: blueviolet;
 }
 
 .container{
@@ -22,4 +22,9 @@ color: rgb(116, 118, 121);
 
 .table1{/*Professional Qualifications table*/
     margin-left: -350px;
+}
+
+.sinhala1{/*language profecency for sinhala*/
+    margin-left: 100px;
+    margin-top: 100px;
 }

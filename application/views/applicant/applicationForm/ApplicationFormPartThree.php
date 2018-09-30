@@ -3,14 +3,15 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>registration form</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="<?=base_url('assets/css/applicationForm/bootstrap.min.css')?>" type="text/css"/>
+    <link rel="stylesheet" href="<?=base_url('assets/css/applicationForm/ApplicationFormPartThree.css')?>" type="text/css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>/assets/js/bootstrap.js" ></script>
     <script type="text/javascript" src="<?php echo base_url();?>/assets/js/bootstrap.min.js" ></script>
-    <link rel="stylesheet" href="<?=base_url('assets/css/bootstrap.min.css')?>" type="text/css"/>
-    <link rel="stylesheet" href="<?=base_url('assets/css/applicationForm/ApplicationFormPartThree.css')?>" type="text/css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
 </head>
 <body>
     <div class="container"><!-- start of the container-->
@@ -55,7 +56,18 @@
                         </table>
                     </div><!-- end of the table1-->
 
-                    
+                    <div class="dropdown drop sinhala1" ><!-- start of the dropdown for sinhala-->
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">SINHALA
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Very Good</a></li>
+                            <li><a href="#">Good</a></li>
+                            <li><a href="#">Fair</a></li>
+                            <li><a href="#">No Knowledge</a></li>
+                        </ul>
+                    </div><!-- end of the dropdown for sinhala-->
+
 
             </form><!-- end of the form-->
         </div><!-- end of the head-->
