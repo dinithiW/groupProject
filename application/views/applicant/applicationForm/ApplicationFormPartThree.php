@@ -56,6 +56,10 @@
                         </table>
                     </div><!-- end of the table1-->
 
+
+                    <h4 id="title2">Proficiency in Sinhala/Tamil/English</h4>
+                    <h5 id="title3">**********************************Ability to Work*******************************  | ********************************* Ability To Teach********************************</h5>
+                    
                     <div class="dropdown drop sinhala1" ><!-- start of the dropdown for sinhala-->
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">SINHALA
                             <span class="caret"></span>
