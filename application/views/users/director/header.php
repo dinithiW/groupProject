@@ -1,33 +1,43 @@
 <!DOCTYPE html>
 <html>
 <title>UCSC</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-light-green.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-light-green.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
   
-<style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+  <style>
+    html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 
-.w3-sidebar {
-  z-index: 3;
-  width: 250px;
-  top: 43px;
-  bottom: 0;
-  height: inherit;
-}
+    .w3-sidebar {
+      z-index: 3;
+      width: 250px;
+      top: 43px;
+      bottom: 0;
+      height: inherit;
+    }
 
-a:hover {
-    text-decoration: none;
-    color: #FF00FF;
-}
+    a:hover {
+        text-decoration: none;
+        color: #FF00FF;
+    }
 
-</style>
+    li{
+      margin:0;
+    }
+
+  </style>
+
+</head>
+
 <body>
 
 <!-- Navbar -->
@@ -39,14 +49,14 @@ a:hover {
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Progress</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Reports</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contacts</a>
-
-   <ul class="nav navbar-nav navbar-right">
+    
+    <ul class="nav navbar-nav navbar-right">
       <li class="dropdown">
        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;"></span> <span class="glyphicon glyphicon-envelope" style="font-size:18px;"></span></a>
        <ul class="dropdown-menu"></ul>
       </li>
-     </ul>
-
+     </ul> 
+    
      
     <a href="<?= base_url('OperatorDashboard/logout') ?>" style="float:right;" class="w3-bar-item w3-button w3-hide-small w3-hover-white dropbtn">Logout</a>
     
@@ -108,7 +118,7 @@ $(document).ready(function(){
  function load_unseen_notification(view = '')
  {
   $.ajax({
-   url:"fetch.php",
+   url:"<?= base_url("Director/viewMessage")?>",
    method:"POST",
    data:{view:view},
    dataType:"json",
@@ -131,7 +141,7 @@ $(document).ready(function(){
   {
    var form_data = $(this).serialize();
    $.ajax({
-    url:"insert.php",
+    url:"<?= base_url("Director/addMessage")?>",
     method:"POST",
     data:form_data,
     success:function(data)
