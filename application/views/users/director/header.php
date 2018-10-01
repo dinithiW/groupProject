@@ -30,9 +30,7 @@
         color: #FF00FF;
     }
 
-    li{
-      margin:0;
-    }
+    
 
   </style>
 
@@ -54,8 +52,9 @@
       <li class="dropdown">
        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;"></span> <span class="glyphicon glyphicon-envelope" style="font-size:18px;"></span></a>
        <ul class="dropdown-menu"></ul>
+
       </li>
-     </ul> 
+     </ul>
     
      
     <a href="<?= base_url('OperatorDashboard/logout') ?>" style="float:right;" class="w3-bar-item w3-button w3-hide-small w3-hover-white dropbtn">Logout</a>
