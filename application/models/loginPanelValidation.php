@@ -15,7 +15,7 @@ class loginPanelValidation extends CI_Model{
 	
 	//checking login credentials for applicants
 	public function validateApplicant(){
-		echo "hahahhaha";
+		
 		$email = $this->testInput($_POST['email']);
 		$password = $this->testInput($_POST['password']);
 
