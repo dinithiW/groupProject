@@ -15,18 +15,14 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
-    <style>
-
-    body{
-        background: linear-gradient(to bottom right, #ffff66 0%, #cc00ff 100%);
-    }
-    </style>
+    
 </head> 
 
-<body>
+<body background="<?php echo base_url('assets/images/ucsc.jpg');?>" >
     
+     <div class = "boxed">
     <div class="imgcontainer">
-        <img src="<?php echo base_url('assets/images/loginMan.png');?>" alt="Avatar" class="avatar" >
+        <img src="<?php echo base_url('assets/images/loginMan.png');?>" alt="Avatar" class="avatar" width = "150" height = "150">
     </div>
     <br />  
     <form action= <?= base_url("login/process")?> method = "post" >
