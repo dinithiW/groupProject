@@ -6,7 +6,7 @@ class ApplicantDashboard extends CI_Controller{
 		parent::__construct();
 		$this->load->helper('url');
     }
-    
+
 	public function index(){
         $this->load->view('users/operator/header');
         $this->load->view('home');
@@ -51,10 +51,17 @@ class ApplicantDashboard extends CI_Controller{
     }
 
     public function applicationSelectAreas(){
-        $this->load->view('applicant/header');
+        //$this->load->view('applicant/header');
         $this->load->view('applicant/applicationForm/ApplicationFormNavigationBar');
         $this->load->view('applicant/applicationForm/ApplicationFormSelectAreas');
        
+    }
+    
+
+    public function insertDataForDatabase(){
+        
+        $this->load->model('ApplicationFormSelectAreasModel');
+        $this->ApplicationFormSelectAreasModel->insertData();
     }
     
 
