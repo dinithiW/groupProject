@@ -13,4 +13,5 @@ class applicant extends CI_Model{
   		return $data;
 	}
 
+	
 }
