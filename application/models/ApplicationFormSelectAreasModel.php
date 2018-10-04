@@ -14,40 +14,33 @@ class ApplicationFormSelectAreasModel extends CI_Controller{
     }
     
     public function insertData(){
-        $user = $this->checkdate($this->input->post('username'));
-        
+       $user = $this->input->post('username');
+      // $pass = checkdate($this->input->post('password'));
 
-        if(($user!=null)&&($pass=!null)){
+       if($user!=null){
             $this->load->database();
             $this->db->select('username');
             $this->db->select('password');
             $this->db->select('email');
             $this->db->from('ruwan');
             $this->db->where('username',$user);
+
             $query = $this->db->get();
-            
-            
-           
-           $rows = $query->num_rows();
-           if($rows>0){
-               foreach($query->result() as $r){
-                    echo"*****$r->username<br>";
-                    echo"*****$r->password<br>";
-                    echo"*****$r->email<br>";
-               }
-                echo"ok datae  have";
-           }
-           else{
-            echo"sorry cant apply";
-           }
-            
-           
-        }
-        else{
-            echo"fieds are empty";
-        }
+
+            if($query->num_rows()>0){
+                foreach($query->result() as $r){
+                    echo"+++++++++++$r->username</br>";
+                    echo"+++++++++++$r->password</br>";
+                    echo"+++++++++++$r->email</br>";
+                    echo"---------------------------------------------------<br>";
+                }
+                
+            }
+       }
+       else{
+           echo"WARNING! check your fields!";
+       }
     }
-    
 }
 
 ?>
