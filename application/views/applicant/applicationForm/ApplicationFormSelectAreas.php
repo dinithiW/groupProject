@@ -16,8 +16,7 @@
     
     <form action= <?= base_url("ApplicantDashboard/insertDataForDatabase")?> method="post">
         <input type="text"  placeholder="enter your name" id="Username"  name="username" required>
-        <input type="password" placeholder="enter your password" id="Password" name="password" required>
-        <input type="email" placeholder="enter your email" id="Password" name="email" required>
+        
         <button>submit</button>
     </form>
     
