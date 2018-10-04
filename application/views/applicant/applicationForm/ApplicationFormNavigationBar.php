@@ -15,11 +15,12 @@
 <body>
     <div class="navbar">
         
+        <a href="<?=base_url('ApplicantDashboard/applicationSelectAreas')?> " class="w3-bar-item w3-button w3-hide-small w3-hover butt">Specialization Areas</a>
         <a href="<?=base_url('ApplicantDashboard/applicationFirstPage')?>"    class="active w3-bar-item w3-button w3-hide-small w3-hover-white butt w3-bar-item w3-button active" >Basic Details</a>
         <a href="<?=base_url('ApplicantDashboard/applicationSecondPage')?>" class="w3-bar-item w3-button w3-hide-small w3-hover-white butt">Educational details</a>
         <a href="<?=base_url('ApplicantDashboard/applicationThirdPage')?>" class="w3-bar-item w3-button w3-hide-small w3-hover-white butt">Professional details</a>
-        <a href="<?=base_url('ApplicantDashboard/applicationFourthPage')?>" class="w3-bar-item w3-button w3-hide-small w3-hover-white butt">Refferences details</a>
-        <a href="<?=base_url('ApplicantDashboard/applicationSelectAreas')?> " class="w3-bar-item w3-button w3-hide-small w3-hover butt">Areas</a>
+        <a href="<?=base_url('ApplicantDashboard/applicationFourthPage')?>" class="w3-bar-item w3-button w3-hide-small w3-hover-white butt">References details</a>
+        
     </div>
 
 </body>
