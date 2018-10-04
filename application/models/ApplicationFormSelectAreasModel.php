@@ -14,17 +14,28 @@ class ApplicationFormSelectAreasModel extends CI_Controller{
     }
     
     public function insertData(){
-        $user = $this->checkdate($_POST['username']);
-        $pass = $this->checkdate($_POST['password']);
+        $user = $this->checkdate($this->input->post('username'));
+        $pass = md5($this->input->post('password'));
+        $email= $this->checkdate($this->input->post('email'));
+        echo"before  filterinf === $user<br>";
+        echo"before filterinf ===$pass <br>";
 
         if(($user!=null)&&($pass=!null)){
+         
+            echo"after filterinf  ====$user<br>";
+            echo"after filterinf =====$pass<br>";
             $this->load->database();
-            $data = array(
-                'username' => $user,
-                'password' => $pass
-            );
-
-           $this->db->insert('ruwan',$data);
+            
+           $query="INSERT INTO `ruwan` VALUES ('$user','$pass','$email')";
+           $result = $this->db->query($query);
+           
+           if($result){
+                echo"ok data inserted";
+           }
+           else{
+            echo"sorry cant apply";
+           }
+            
            
         }
         else{
