@@ -24,18 +24,23 @@
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
+                                <br/>
+                                <label>First Name</label>
                                 <input type="text" name="first-name" id="first-name" class="form-control input-sm" placeholder="enter your full name in capital blocks in here">
                             </div>
 
                             <div class="form-group">
+                                <label>Surname</label>
                                 <input type="text" name="last-name" id="last-name" class="form-control input-sm" placeholder="enter your surname in capital blocks in here">
                             </div>
 
                             <div class="form-group">
+                                <label>Postal Address</label>
                                 <input type="text" name="postal-address" id="postal-address" class="form-control input-sm" placeholder="enter your postal address in here">
                             </div>
 
                             <div class="form-group">
+                                <label>Permanent Address</label>
                                 <input type="text" name="permanent-address" id="permanent-address" class="form-control input-sm" placeholder="enter your permanent address in here">
                             </div>
 
