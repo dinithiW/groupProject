@@ -59,7 +59,7 @@ class ApplicantDashboard extends CI_Controller{
     
 
     public function insertDataForDatabase(){
-        
+        echo("thisisiiisi");
         $this->load->model('ApplicationFormSelectAreasModel');
         $this->ApplicationFormSelectAreasModel->insertData();
     }
