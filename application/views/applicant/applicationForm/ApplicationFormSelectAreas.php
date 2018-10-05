@@ -14,7 +14,7 @@
 </head>
 <body>
     
-    <form action= <?= base_url("ApplicantDashboard/applicationSelectAreas")?> method="post">
+    <form action= <?= base_url("ApplicantDashboard/applicationSelect")?> method="post">
         <input type="text"  placeholder="enter your name" id="Username"  name="username" required>
             
        
