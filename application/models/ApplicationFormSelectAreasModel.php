@@ -13,34 +13,17 @@ class ApplicationFormSelectAreasModel extends CI_Controller{
         return $data;
     }
     
-    public function insertData(){
-       $user = $this->input->post('username');
-      // $pass = checkdate($this->input->post('password'));
+    function fetch_datas(){
+        $this->load->database();
+        $this->db->select("*");
+        $this->db->from("ruwan");
 
-       if($user!=null){
-            $this->load->database();
-            $this->db->select('username');
-            $this->db->select('password');
-            $this->db->select('email');
-            $this->db->from('ruwan');
-            $this->db->where('username',$user);
-
-            $query = $this->db->get();
-
-            if($query->num_rows()>0){
-                foreach($query->result() as $r){
-                    echo"+++++++++++$r->username</br>";
-                    echo"+++++++++++$r->password</br>";
-                    echo"+++++++++++$r->email</br>";
-                    echo"---------------------------------------------------<br>";
-                }
-                
-            }
-       }
-       else{
-           echo"WARNING! check your fields!";
-       }
+        $query = $this->db->get();
+        echo"this is the model";
+        return $query;
     }
+
+
 }
 
 ?>

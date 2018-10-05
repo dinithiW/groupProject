@@ -14,16 +14,31 @@
 </head>
 <body>
     
-    <form action= <?= base_url("ApplicantDashboard/insertDataForDatabase")?> method="post">
+    <form action= <?= base_url("ApplicantDashboard/applicationSelectAreas")?> method="post">
         <input type="text"  placeholder="enter your name" id="Username"  name="username" required>
-        
-
-
-        
-        <button>submit</button>
+            
+       
+        <button name="sub">submit</button>
     </form>
-
-    
+    <?php echo"this is the RUWANA"; ?>
+     <?php
+            
+            if($this->input->post('sub')){
+                echo"this is the main view";
+                if($fetch_data->num_rows() > 0){  
+                    foreach($fetch_data->result() as $row){  
+            ?>  
+                    
+                    <?php echo $row->id; ?> 
+                    <?php echo $row->first_name; ?>  
+                    <?php echo $row->last_name; ?>  
+                        
+            <?php       
+                    }  
+                }  
+            }
+        
+    ?> 
 
     
 </body>
