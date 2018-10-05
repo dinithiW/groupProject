@@ -59,9 +59,16 @@
             
             
             <h4 id="title1">Secondry Educational Details</h4>
-
+            <br/>
                     <div class="table1"><!-- start of the Secondry Educational Details table-->
                         <table id="Table">
+                            <tr class="tr">
+                                <th>School Name</th>
+                                <th>From</th>
+                                <th>To</th>
+                                <th>Examination Passed</th>
+                                <th>Year</th>
+                            </tr>
                             <tr class="tr">
                                 <td><input type="text" class="Text1" placeholder="School name" required size='55'/></td>
                                 <td><input type="text" class="Text2" placeholder="From" required size='5'/></td>

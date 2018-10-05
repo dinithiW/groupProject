@@ -20,7 +20,9 @@
                     <div class="content3">
                         <table id="table1">
                             <tr class="tr">
+
                                 <td><input type="text" class="Text2" placeholder="        1" required size='5'/></td>
+                                
                                 <td><input type="text" class="Text1" placeholder="Name" required size='30'/></td>
                                 <td><input type="text" class="Text2" placeholder="Designation" required size='15'/></td>
                                 <td><input type="text" class="Text2" placeholder="Address" required size='35'/></td>
