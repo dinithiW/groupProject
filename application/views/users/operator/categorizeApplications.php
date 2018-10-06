@@ -46,7 +46,7 @@
 
                 <div class="insert"><!-- start of the delete-->
                     <form method="post" action="<?=base_url('OperatorDashboard/deleteDataFromDatabase')?>">
-                        <input type="text" name="deleteArea" class="form-control input-sm" id="input4" class="form-control input-sm input4"  placeholder="enter the area field you want to delete">
+                        <input type="text" name="deleteFileUploadLink" class="form-control input-sm" id="input4" class="form-control input-sm input4"  placeholder="enter the area field you want to delete">
                         <button type="submit" name="sub" class="btn btn-info btn-block button4">DELETE</button>
                     </form>
                 </div><!-- end of the delete-->

@@ -55,7 +55,12 @@ class OperatorDashboard extends CI_Controller{
         redirect(base_url()."OperatorDashboard/reDirect");
     }
 
-    
+    //for delete fileupload data from database
+    public function deleteFileUploadLinkFromDatabase(){
+        $this->load->model('operator/categorizeApplilcationsModel');
+        $this->categorizeApplilcationsModel->deleteFileUploadLinkFromDatabase($this->input->post('deleteFileUploadLink'));
+        redirect(base_url()."OperatorDashboard/reDirect");
+    }
 
 
     public function ad(){
