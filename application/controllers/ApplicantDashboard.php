@@ -51,7 +51,7 @@ class ApplicantDashboard extends CI_Controller{
     }
 
     public function applicationSelectAreas(){
-        //$this->load->view('applicant/header');
+        $this->load->view('applicant/header');
         $this->load->view('applicant/applicationForm/ApplicationFormNavigationBar');
         $this->load->model('operator/categorizeApplilcationsModel');
         $data['fetch_data'] = $this->categorizeApplilcationsModel->fetch_datas();
@@ -65,10 +65,6 @@ class ApplicantDashboard extends CI_Controller{
        
     }
     
-
-
-    
-
     public function contact(){
         $this->load->view('applicant/header');
         $this->load->view('applicant/contact');
