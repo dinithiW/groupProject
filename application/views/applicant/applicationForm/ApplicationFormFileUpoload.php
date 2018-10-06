@@ -22,16 +22,26 @@
             <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4 row centered-form head">
             <h4 id="headline">ATTACH RELEVANT DOCUMENTS</h4>
 
-            <!-- start of first upload link-->
-                <div class="form-group one">
-                    <h6 id="label1"><b>FOR BIRTH CERTIFICATE SCANNED COPY</b></h6>
-                    <input type="file" class="inputClass1" id="inputId1" name="sentfile">
-                    <button type="submit" class="btn btn-lg btn-block btn-primary"  id="button1">upload</button>
-                </div>
-            <!-- end of first upload link-->
+            
 
-           
-           
+           <?php
+                if($fetch_data->num_rows()>0){
+                    foreach($fetch_data->result() as $row){
+            ?>
+            
+                        <!-- start of first upload link-->
+                        <div class="form-group one">
+                                <h6 id="label1"><b><?php echo $row->LINK_NAME?></b></h6>
+                                <input type="file" class="inputClass1" id="inputId1" name="sentfile">
+                                <button type="submit" class="btn btn-lg btn-block btn-primary"  id="button1">upload</button>
+                            </div>
+                        <!-- end of first upload link-->
+
+            <?php
+                    }
+                }
+           ?>
+
             
             </div><!-- end of the head-->    
     </div><!-- end of the container-->        

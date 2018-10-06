@@ -46,7 +46,9 @@ class ApplicantDashboard extends CI_Controller{
     public function applicationFifththPage(){
         $this->load->view('applicant/header');
         $this->load->view('applicant/applicationForm/ApplicationFormNavigationBar');
-        $this->load->view('applicant/applicationForm/ApplicationFormFileUpoload');
+        $this->load->model('operator/categorizeApplilcationsModel');
+        $data['fetch_data'] = $this->categorizeApplilcationsModel->fetchFileUploadLinks();
+        $this->load->view('applicant/applicationForm/ApplicationFormFileUpoload',$data);
        
     }
 
@@ -59,10 +61,8 @@ class ApplicantDashboard extends CI_Controller{
     }
 
     public function applicationSelect(){
-        
         $this->load->view('applicant/applicationForm/ApplicationFormSelectAreas');
         echo"ok submitted ruwan";
-       
     }
     
     public function contact(){

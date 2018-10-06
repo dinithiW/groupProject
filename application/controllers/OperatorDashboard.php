@@ -55,11 +55,7 @@ class OperatorDashboard extends CI_Controller{
         redirect(base_url()."OperatorDashboard/reDirect");
     }
 
-    public function selectFileUploadingLinkFromDatabase(){
-        $this->load->model('operator/categorizeApplilcationsModel');
-        $data['fetch_data'] = $this->categorizeApplilcationsModel->fetchFileUploadLinks();
-        $this->load->view('applicant/applicationForm/ApplicationFormFileUpoload',$data);
-    }
+    
 
 
     public function ad(){
