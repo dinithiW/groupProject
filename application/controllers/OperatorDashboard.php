@@ -19,10 +19,12 @@ class OperatorDashboard extends CI_Controller{
         $this->load->view('users/operator/categorizeApplications');
         $this->load->view('users/operator/footer');
     }
-
-    public function ruwan(){
+    //for select data from database
+    public function selectDataFromDatabase(){
+        
         $this->load->model('operator/categorizeApplilcationsModel');
-        $this->categorizeApplilcationsModel->in();
+        /*$data['fetch_data'] = */$this->categorizeApplilcationsModel->fetch_datas();
+        //$this->load->view('applicant/applicationForm/ApplicationFormSelectAreas',$data);
     }
 
 
@@ -39,7 +41,7 @@ class OperatorDashboard extends CI_Controller{
     }*/
 
     public function sendAdToSAR(){
-        //echo 'hahahah';
+       
         $this->load->view('users/operator/header');
         $this->load->view('users/operator/sendEmail');
         $this->load->view('users/operator/footer');

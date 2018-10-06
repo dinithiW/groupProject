@@ -17,7 +17,7 @@
             <!-- start of the head-->
             <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4 row centered-form head inner">
                 <h4 id="headline">FOR SELECT APPLICANTS SPECIFICATION AREAS</h4>
-                <a class="w3-bar-item w3-button w3-hover-black button1" href="<?=base_url('OperatorDashboard/ruwan')?>">ENTER</a>
+                <a class="w3-bar-item w3-button w3-hover-black button1" href="<?=base_url('OperatorDashboard/selectDataFromDatabase')?>">ENTER</a>
             </div><!-- end of the head-->
     </div><!-- end of the container-->
 </body>
