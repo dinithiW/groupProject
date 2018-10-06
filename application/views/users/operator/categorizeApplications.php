@@ -19,14 +19,20 @@
                 <h4 id="headline">FOR SELECT APPLICANTS SPECIFICATION AREAS</h4>
                 <a class="w3-bar-item w3-button w3-hover-black button1" href="<?=base_url('OperatorDashboard/selectDataFromDatabase')?>">ENTER</a>
 
-                <div class="insert">
+                <div class="insert"><!-- start of the insert-->
                     <form method="post" action="<?=base_url('OperatorDashboard/insesrtDataForDatabase')?>">
                         <input type="text" name="insertArea" placeholder="enter the area field">
                         <button type="submit" name="sub">INSERT</button>
-                    </form>
-                    
-
+                    </form><!-- end of the head-->
                 </div>
+
+                <div><!-- end of the delete-->
+                    <form method="post" action="<?=base_url('OperatorDashboard/deleteDataFromDatabase')?>">
+                        <input type="text" name="insertArea" placeholder="enter the area field you want to delete">
+                        <button type="submit" name="sub">DELETE</button>
+                    </form>
+                </div><!-- end of the delete-->
+
             </div><!-- end of the head-->
 
 

@@ -19,6 +19,12 @@ class OperatorDashboard extends CI_Controller{
         $this->load->view('users/operator/categorizeApplications');
         $this->load->view('users/operator/footer');
     }
+
+    //redirect to this file after execute thr sql query
+    public function reDirect(){  
+        $this->categorizeApplications();  
+    }
+
     //for select data from database
     public function selectDataFromDatabase(){
         $this->load->model('operator/categorizeApplilcationsModel');
@@ -26,11 +32,21 @@ class OperatorDashboard extends CI_Controller{
         $this->load->view('applicant/applicationForm/ApplicationFormSelectAreas',$data);
     }
 
+    
     //for insert data into database
     public function insesrtDataForDatabase(){
         $this->load->model('operator/categorizeApplilcationsModel');
         $data = array("AREA_NAME"=> $this->input->post('insertArea'));
         $this->categorizeApplilcationsModel->insertAreas($data);
+        redirect(base_url() . "OperatorDashboard/inserted");
+    }
+
+    //for insert data into database
+    public function deleteDataFromDatabase(){
+        $this->load->model('operator/categorizeApplilcationsModel');
+        $data = array("AREA_NAME"=> $this->input->post('insertArea'));
+        $this->categorizeApplilcationsModel->insertAreas($data);
+        redirect(base_url() . "OperatorDashboard/inserted");
     }
 
 

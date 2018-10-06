@@ -18,7 +18,9 @@
         //for insert data into database
         function insertAreas($data){
             $this->load->database();
-            $this->db->insert("specializationarea",$data);
+            $inserted = $this->db->insert("specializationarea",$data);
         }
+
+
     }
 ?>
