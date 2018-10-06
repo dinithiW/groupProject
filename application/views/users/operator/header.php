@@ -49,6 +49,7 @@ a:hover {
   <a class="w3-bar-item w3-button w3-hover-green" href="<?= base_url('OperatorIndex/createAd') ?>">Create Ad</a>
   <a class="w3-bar-item w3-button w3-hover-green" href="<?= base_url('OperatorDashboard/categorizeApplications') ?>">Categorize Applications</a>
   <a class="w3-bar-item w3-button w3-hover-green" href="#">Set Interview Date</a>
+  <a class="w3-bar-item w3-button w3-hover-green" href="#">Add Panel Members</a>
   <a class="w3-bar-item w3-button w3-hover-green" href="#">Send Emails to Applicants</a>
 </nav>
 
