@@ -49,3 +49,33 @@ ALTER TABLE `users`
 ('director', 'abc', 'director@gmail.com'),
 ('operator', 'abc', 'operator@gmail.com'),
 ('SAR', 'abc', 'sar@gmail.com');
+
+CREATE TABLE `specializationarea` (
+  `AREA_ID` int(10) NOT NULL,
+  `AREA_NAME` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+ALTER TABLE `specializationarea`
+  ADD PRIMARY KEY (`AREA_ID`);
+
+ALTER TABLE `specializationarea`
+  MODIFY `AREA_ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+COMMIT;
+
+
+INSERT INTO `specializationarea` (`AREA_ID`, `AREA_NAME`) VALUES
+(1, 'Software Engineering'),
+(2, 'Information Systems Security,'),
+(3, 'Computer Networks'),
+(4, 'Grid Computing'),
+(5, 'Artificial Neural Networks'),
+(6, 'Human-Computer Interaction'),
+(7, 'Data Science'),
+(8, 'Embedded Systems'),
+(9, 'Operating systems'),
+(10, 'Software Verification and Quality Assurance'),
+(11, 'Enterprise application\r\ndevelopment'),
+(12, 'IT Project management'),
+(13, 'Computer Graphics and Vision'),
+(19, 'Computer Architecture & Engineering'),
+(20, 'optional 5');
