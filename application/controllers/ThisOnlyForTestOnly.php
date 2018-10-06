@@ -12,10 +12,12 @@
        }
 
        function index(){
+           
            $this->load->model('ThisOnlyForTestOnlyModel');
-           $data["fetch_data"] = $this->ThisOnlyForTestOnly->fetch_data();
+           $data["fetch_data"] = $this->ThisOnlyForTestOnlyModel->fetch_datas();
            $this->load->view('applicant/applicationForm/ApplicationFormSelectAreas',$data);
-       }
+           
+        }
    }
 
 ?>

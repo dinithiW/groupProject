@@ -9,9 +9,9 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <form action= <?= base_url("ThisOnlyForTestOnly")?> method="post">
-        <input type="text" name="usesrname">
-        <button type="submit">enter</button>
+    <form action= <?= base_url("ThisOnlyForTestOnly/index")?> method="post">
+        <input type="text" name="username">
+        <button type="submit" name="subb">enter</button>
     </form>
 </body>
 </html>
