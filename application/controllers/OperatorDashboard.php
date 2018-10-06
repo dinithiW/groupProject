@@ -20,9 +20,31 @@ class OperatorDashboard extends CI_Controller{
         $this->load->view('users/operator/footer');
     }
 
-    public function ruwan(){
+    //redirect to this file after execute thr sql query
+    public function reDirect(){  
+        $this->categorizeApplications();  
+    }
+
+    //for select data from database
+    public function selectDataFromDatabase(){
         $this->load->model('operator/categorizeApplilcationsModel');
-        $this->categorizeApplilcationsModel->in();
+        $data['fetch_data'] = $this->categorizeApplilcationsModel->fetch_datas();
+        $this->load->view('applicant/applicationForm/ApplicationFormSelectAreas',$data);
+    }
+
+    //for insert data into database
+    public function insesrtDataForDatabase(){
+        $this->load->model('operator/categorizeApplilcationsModel');
+        $data = array("AREA_NAME"=> $this->input->post('insertArea'));
+        $this->categorizeApplilcationsModel->insertAreas($data);
+        redirect(base_url()."OperatorDashboard/reDirect");
+    }
+
+    //for delete data from database
+    public function deleteDataFromDatabase(){
+        $this->load->model('operator/categorizeApplilcationsModel');
+        $this->categorizeApplilcationsModel->deleteAreas($this->input->post('deleteArea'));
+        redirect(base_url() . "OperatorDashboard/reDirect");
     }
 
 
@@ -39,7 +61,7 @@ class OperatorDashboard extends CI_Controller{
     }*/
 
     public function sendAdToSAR(){
-        //echo 'hahahah';
+       
         $this->load->view('users/operator/header');
         $this->load->view('users/operator/sendEmail');
         $this->load->view('users/operator/footer');
