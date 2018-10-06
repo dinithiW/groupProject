@@ -11,7 +11,19 @@ class OperatorDashboard extends CI_Controller{
         $this->load->view('users/operator/header');
         $this->load->view('home');
         $this->load->view('users/operator/footer');
-	}
+    }
+    
+    //this function for select areas of applicants 
+    public function categorizeApplications(){
+        $this->load->view('users/operator/header');
+        $this->load->view('users/operator/categorizeApplications');
+        $this->load->view('users/operator/footer');
+    }
+
+    public function ruwan(){
+        $this->load->model('operator/categorizeApplilcationsModel');
+        $this->categorizeApplilcationsModel->in();
+    }
 
 
     public function ad(){

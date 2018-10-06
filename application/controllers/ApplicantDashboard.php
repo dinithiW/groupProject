@@ -52,17 +52,24 @@ class ApplicantDashboard extends CI_Controller{
 
     public function applicationSelectAreas(){
         //$this->load->view('applicant/header');
-        $this->load->view('applicant/applicationForm/ApplicationFormNavigationBar');
+        //$this->load->view('applicant/applicationForm/ApplicationFormNavigationBar');
+        $this->load->model('ApplicationFormSelectAreasModel');
+        echo"this is the controller";
+        $data['fetch_data'] = $this->ApplicationFormSelectAreasModel->fetch_datas();
+        $this->load->view('applicant/applicationForm/ApplicationFormSelectAreas',$data);
+        
+       
+    }
+
+    public function applicationSelect(){
+        
         $this->load->view('applicant/applicationForm/ApplicationFormSelectAreas');
+        echo"ok submitted ruwan";
        
     }
     
 
-    public function insertDataForDatabase(){
-        echo("thisisiiisi");
-        $this->load->model('ApplicationFormSelectAreasModel');
-        $this->ApplicationFormSelectAreasModel->insertData();
-    }
+
     
 
     public function contact(){

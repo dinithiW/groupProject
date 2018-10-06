@@ -3,22 +3,43 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>nav bar</title>
+    <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script type="text/javascript" src="<?php echo base_url();?>/assets/js/bootstrap.js" ></script>
-    <script type="text/javascript" src="<?php echo base_url();?>/assets/js/bootstrap.min.js" ></script>
-    <link rel="stylesheet" href="<?=base_url('assets/css/applicationForm/bootstrap.min.css')?>" type="text/css"/>
-    <link rel="stylesheet" href="<?=base_url('assets/css/applicationForm/ApplicationFormSelectAreasModel.css')?>" type="text/css"/>
     <script src="main.js"></script>
 </head>
 <body>
-    
-    <form action= <?= base_url("ApplicantDashboard/insertDataForDatabase")?> method="post">
-        <input type="text"  placeholder="enter your name" id="Username"  name="username" required>
-        
-        <button>submit</button>
-    </form>
-    
+
+
+    <table>
+        <tr>
+            <th>username</th>
+            <th>password</th>
+            <th>mail</th>
+        </tr>
+
+        <?php
+            if($fetch_data->num_rows() > 0){  
+                foreach($fetch_data->result() as $row){  
+        ?>
+                
+
+            <tr>
+                <td><?php echo $row->username;?></td>   
+                <td><?php echo $row->password;?></td>   
+                <td><?php echo $row->email;   ?></td>
+                <td><input type="checkbox" name="vehicle" value="Bike"></td> 
+            </tr>
+                
+                    
+        <?php
+                }  
+            }  
+        ?>
+
+    </table>    
 </body>
 </html>
+
+
+

@@ -1,0 +1,40 @@
+body{
+    background-color: blue;
+}
+
+.container{
+    background-color: rgb(201, 193, 193);
+    margin-left: 250px;
+    margin-top: -10px;
+    width: 1150px;
+    height: 800px;
+}
+
+.inner{
+    background-color: rgb(250, 252, 252);
+    margin-top: -10px;
+    margin-left: -20px;
+    height: 800px;
+    width: 1150px;
+}
+
+#tableClass{
+    background-color: chartreuse;
+    margin-left: 500px;
+    margin-top: 350px;
+}
+
+#headline{/*for headline*/
+    margin-left: 400px;
+    margin-top: 80px;
+    width: 500px;
+    color: blueviolet;
+}
+
+.button1{/*first button*/
+    margin-left: 500px;
+    margin-top: 50px;
+    width: 70px;
+    height: 30px;
+    color: rgb(38, 7, 150);
+}
