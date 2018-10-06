@@ -18,7 +18,16 @@
         //for insert data into database
         function insertAreas($data){
             $this->load->database();
-            $inserted = $this->db->insert("specializationarea",$data);
+            $this->db->insert('specializationarea',$data);
+            
+        }
+
+        //for delete data from database
+        function deleteAreas($id){
+            $this->load->database();
+            $this->db->where('AREA_ID',$id);
+            $this->db->delete("specializationarea");
+           
         }
 
 

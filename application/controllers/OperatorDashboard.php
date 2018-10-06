@@ -32,21 +32,19 @@ class OperatorDashboard extends CI_Controller{
         $this->load->view('applicant/applicationForm/ApplicationFormSelectAreas',$data);
     }
 
-    
     //for insert data into database
     public function insesrtDataForDatabase(){
         $this->load->model('operator/categorizeApplilcationsModel');
         $data = array("AREA_NAME"=> $this->input->post('insertArea'));
         $this->categorizeApplilcationsModel->insertAreas($data);
-        redirect(base_url() . "OperatorDashboard/inserted");
+        redirect(base_url()."OperatorDashboard/reDirect");
     }
 
-    //for insert data into database
+    //for delete data from database
     public function deleteDataFromDatabase(){
         $this->load->model('operator/categorizeApplilcationsModel');
-        $data = array("AREA_NAME"=> $this->input->post('insertArea'));
-        $this->categorizeApplilcationsModel->insertAreas($data);
-        redirect(base_url() . "OperatorDashboard/inserted");
+        $this->categorizeApplilcationsModel->deleteAreas($this->input->post('deleteArea'));
+        redirect(base_url() . "OperatorDashboard/reDirect");
     }
 
 
