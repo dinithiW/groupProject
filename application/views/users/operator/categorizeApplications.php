@@ -18,9 +18,20 @@
             <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4 row centered-form head inner">
                 <h4 id="headline">FOR SELECT APPLICANTS SPECIFICATION AREAS</h4>
                 <a class="w3-bar-item w3-button w3-hover-black button1" href="<?=base_url('OperatorDashboard/selectDataFromDatabase')?>">ENTER</a>
+
+                <div class="insert">
+                    <form method="post" action="<?=base_url('OperatorDashboard/insesrtDataForDatabase')?>">
+                        <input type="text" name="insertArea" placeholder="enter the area field">
+                        <button type="submit" name="sub">INSERT</button>
+                    </form>
+                    
+
+                </div>
             </div><!-- end of the head-->
+
+
     </div><!-- end of the container-->
 
-    
+
 </body>
 </html>

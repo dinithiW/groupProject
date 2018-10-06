@@ -21,10 +21,16 @@ class OperatorDashboard extends CI_Controller{
     }
     //for select data from database
     public function selectDataFromDatabase(){
-        
         $this->load->model('operator/categorizeApplilcationsModel');
         $data['fetch_data'] = $this->categorizeApplilcationsModel->fetch_datas();
         $this->load->view('applicant/applicationForm/ApplicationFormSelectAreas',$data);
+    }
+
+    //for insert data into database
+    public function insesrtDataForDatabase(){
+        $this->load->model('operator/categorizeApplilcationsModel');
+        $data = array("AREA_NAME"=> $this->input->post('insertArea'));
+        $this->categorizeApplilcationsModel->insertAreas($data);
     }
 
 

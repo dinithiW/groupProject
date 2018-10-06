@@ -13,36 +13,44 @@
     <div class="container"><!-- start of the container-->
             <!-- start of the head-->
             <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4 row centered-form head inner">
-                <h4 id="headline">FOR SELECTed  SPECIFICATION AREAS</h4>
+                
                 
             </div><!-- end of the head-->
 
-            <?php /*
-                if($fetch_data->num_rows>0){
-                    echo"thisthis";
-                    foreach($fetch_data->result() as $row){
-                        echo $row->AREA_ID;
-                        echo $row->AREA_NAME;
-                    }
-                }
-            */
-            ?>
+            <div class="tableClass">
+
+                <fieldset><!-- start of the fieldset-->
+                    <legend>
+                        FOR SELECTED  SPECIFICATION AREAS
+                    </legend>
+                    
+                    <table><!-- start of the fieldset-->
+                        <tr>
+                            <th>AREA NAME</th>
+                        </tr>
+
+                        <?php /*add for loop for make the match with the relevent numbers*/ 
+                            if($fetch_data->num_rows() > 0){  
+                                foreach($fetch_data->result() as $row){  
+                        ?>             
+                                    <tr>
+                                        <td><?php echo $row->AREA_NAME;?></td>
+                                        <td><input type="checkbox" name="vehicle" value="Bike"></td>
+                                    </tr>
+                        <?PHP
+                                }  
+                            }  
+                        ?> 
+
+
+                    </table><!-- end of the table-->
+
+                </fieldset><!-- end of the fieldset-->
 
                 
-           <?php  
-           if($fetch_data->num_rows() > 0)  
-           {  
-                foreach($fetch_data->result() as $row)  
-                {  
-             
-                echo $row->AREA_ID;
-                echo $row->AREA_NAME; 
-                 
-                }  
-           }  
-            
-          
-           ?> 
+            </div>
+                
+           
 
 
     </div><!-- end of the container-->

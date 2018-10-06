@@ -6,15 +6,19 @@
 
         }
 
+        //for select areas from database
         function fetch_datas(){
-        
-                $this->load->database();
-                $this->db->select('*');
-                $this->db->from('specializationarea');
-                $query = $this->db->get();
+            $this->load->database();
+            $this->db->select('*');
+            $this->db->from('specializationarea');
+            $query = $this->db->get();
+            return $query;
+        }
 
-                return $query;
-            
+        //for insert data into database
+        function insertAreas($data){
+            $this->load->database();
+            $this->db->insert("specializationarea",$data);
         }
     }
 ?>
