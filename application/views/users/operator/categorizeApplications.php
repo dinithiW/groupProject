@@ -16,20 +16,38 @@
     <div class="container"><!-- start of the container-->
             <!-- start of the head-->
             <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4 row centered-form head inner">
-                <h4 id="headline">FOR SELECT APPLICANTS SPECIFICATION AREAS</h4>
-                <a class="w3-bar-item w3-button w3-hover-black button1" href="<?=base_url('OperatorDashboard/selectDataFromDatabase')?>">ENTER</a>
+                <h4 id="headline1">MANAGE AREA SPECIFICATION</h4>
+                
 
                 <div class="insert"><!-- start of the insert-->
                     <form method="post" action="<?=base_url('OperatorDashboard/insesrtDataForDatabase')?>">
-                        <input type="text" name="insertArea" placeholder="enter the area field">
-                        <button type="submit" name="sub">INSERT</button>
+                        <input type="text" name="insertArea" class="form-control input-sm input1"  placeholder="enter the area field">
+                        <button type="submit" name="sub" class="btn btn-info btn-block button1">INSERT</button>
                     </form><!-- end of the head-->
                 </div>
 
-                <div><!-- end of the delete-->
+                <div class="insert"><!-- start of the delete-->
                     <form method="post" action="<?=base_url('OperatorDashboard/deleteDataFromDatabase')?>">
-                        <input type="text" name="deleteArea" placeholder="enter the area field you want to delete">
-                        <button type="submit" name="sub">DELETE</button>
+                        <input type="text" name="deleteArea" class="form-control input-sm input2"  placeholder="enter the area field you want to delete">
+                        <button type="submit" name="sub" class="btn btn-info btn-block button2">DELETE</button>
+                    </form>
+                </div><!-- end of the delete-->
+
+
+                <h4 id="headline2">MANAGE FILE UPLOADING</h4>
+                
+
+                <div class="insert"><!-- start of the insert-->
+                    <form method="post" action="<?=base_url('OperatorDashboard/insesrtDataForDatabase')?>">
+                        <input type="text" name="insertArea" class="form-control input-sm input3"  placeholder="enter the area field">
+                        <button type="submit" name="sub" class="btn btn-info btn-block button3">INSERT</button>
+                    </form><!-- end of the head-->
+                </div>
+
+                <div class="insert"><!-- start of the delete-->
+                    <form method="post" action="<?=base_url('OperatorDashboard/deleteDataFromDatabase')?>">
+                        <input type="text" name="deleteArea" class="form-control input-sm" id="input4" class="form-control input-sm input4"  placeholder="enter the area field you want to delete">
+                        <button type="submit" name="sub" class="btn btn-info btn-block button4">DELETE</button>
                     </form>
                 </div><!-- end of the delete-->
 
