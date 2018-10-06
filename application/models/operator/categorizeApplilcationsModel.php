@@ -46,6 +46,13 @@
             return $query;
         }
 
+        //delete file uploading link from database
+
+        function deleteFileUploadLinkFromDatabase($id){
+            $this->load->database();
+            $this->db->where('LINK_ID',$id);
+            $this->db->delete('file_upload_links');
+        }
 
     }
 ?>
