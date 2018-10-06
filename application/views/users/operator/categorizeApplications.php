@@ -20,5 +20,7 @@
                 <a class="w3-bar-item w3-button w3-hover-black button1" href="<?=base_url('OperatorDashboard/selectDataFromDatabase')?>">ENTER</a>
             </div><!-- end of the head-->
     </div><!-- end of the container-->
+
+    
 </body>
 </html>

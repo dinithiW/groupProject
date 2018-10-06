@@ -10,7 +10,7 @@
         
                 $this->load->database();
                 $this->db->select('*');
-                $this->db->from('ruwan');
+                $this->db->from('specializationarea');
                 $query = $this->db->get();
 
                 return $query;

@@ -23,8 +23,8 @@ class OperatorDashboard extends CI_Controller{
     public function selectDataFromDatabase(){
         
         $this->load->model('operator/categorizeApplilcationsModel');
-        /*$data['fetch_data'] = */$this->categorizeApplilcationsModel->fetch_datas();
-        //$this->load->view('applicant/applicationForm/ApplicationFormSelectAreas',$data);
+        $data['fetch_data'] = $this->categorizeApplilcationsModel->fetch_datas();
+        $this->load->view('applicant/applicationForm/ApplicationFormSelectAreas',$data);
     }
 
 
