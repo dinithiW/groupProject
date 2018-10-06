@@ -1,13 +1,18 @@
 <?php  
- class ThisOnlyForTestOnly extends CI_Model  
- {  
+ class ThisOnlyForTestOnlyModel extends CI_Model{  
+      function __construct(){
+            parent::__construct();
+            $this->load->database();
+      }
+
+
       function test_main()  
       {  
            echo "This is model function";  
       }  
       function insert_data($data)  
       {  
-           $this->db->insert("tbl_user", $data);  
+           $this->db->insert("ruwan", $data);  
       }  
       function fetch_data()  
       {  
@@ -15,7 +20,7 @@
            //select * from tbl_user  
            //$query = $this->db->query("SELECT * FROM tbl_user ORDER BY id DESC");  
            $this->db->select("*");  
-           $this->db->from("tbl_user");  
+           $this->db->from("ruwan");  
            $query = $this->db->get();  
            return $query;  
       }  
