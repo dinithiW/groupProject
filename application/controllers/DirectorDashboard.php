@@ -17,6 +17,16 @@ class DirectorDashboard extends CI_Controller{
         $this->load->view('users/director/adRequest');
         $this->load->view('users/director/footer');
 	}
+
+	public function addNotification(){
+		$this->load->model('Notification');
+        $this->Notification->add();
+	}
+
+	public function viewNotification(){
+		$this->load->model('Notification');
+        $this->Notification->view();
+	}
 }
 
 ?>
