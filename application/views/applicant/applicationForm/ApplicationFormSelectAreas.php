@@ -28,7 +28,7 @@
                 <td><?php echo $row->username;?></td>   
                 <td><?php echo $row->password;?></td>   
                 <td><?php echo $row->email;   ?></td>
-                <td><input type="button" value="ENTER"></td> 
+                <td><input type="checkbox" name="vehicle" value="Bike"></td> 
             </tr>
                 
                     
