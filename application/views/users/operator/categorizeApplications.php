@@ -39,7 +39,7 @@
 
                 <div class="insert"><!-- start of the insert-->
                     <form method="post" action="<?=base_url('OperatorDashboard/insesrtFileUploadingLinkForDatabase')?>">
-                        <input type="text" name="insertArea" class="form-control input-sm input3"  placeholder="enter the area field">
+                        <input type="text" name="insertFileUploadLink" class="form-control input-sm input3"  placeholder="enter the area field">
                         <button type="submit" name="sub" class="btn btn-info btn-block button3">INSERT</button>
                     </form><!-- end of the head-->
                 </div>

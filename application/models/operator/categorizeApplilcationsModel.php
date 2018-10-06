@@ -33,8 +33,17 @@
         //for insert file uploding links into database
         function insertFileUploadLink($data){
             $this->load->database();
-            $this->db->insert('fileUploadLinks',$data);
+            $this->db->insert('file_upload_links',$data);
             
+        }
+
+        //for get data from database
+        function fetchFileUploadLinks(){
+            $this->load->database();
+            $this->db->select('*');
+            $this->db->from('file_upload_links');
+            $query = $this->db->get();
+            return $query;
         }
 
 
