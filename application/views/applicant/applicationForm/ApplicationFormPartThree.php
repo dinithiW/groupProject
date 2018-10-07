@@ -24,31 +24,41 @@
                 <h4 id="title1">Professional Qualifications </h4>
                     <div class="table1"><!-- start of the table1-->
                         <table id="Table">
+
+                            <tr>
+                                <th></th>
+                                <th>Institution</th>
+                                <th>From</th>
+                                <th>To</th>
+                                <th>Duration</th>
+                                <th>Type of Qualifications</th>
+                            </tr>
+
                             <tr class="tr">
-                                <td><input type="text" class="Text2" placeholder="        1" required size='5'/></td>
-                                <td><input type="text" class="Text1" placeholder="Institution" required size='50'/></td>
-                                <td><input type="text" class="Text2" placeholder="From" required size='6'/></td>
-                                <td><input type="text" class="Text2" placeholder="To" required size='6'/></td>
-                                <td><input type="text" class="Text3" placeholder="Duration" required size='17'/></td>
-                                <td><input type="text" class="Text2" placeholder="Type of Qualifications" required size='36'/></td>
+                                <td><input type="text" class="Text2"  required size='5' placeholder="        1"/></td>
+                                <td><input type="text" class="Text1"  required size='30'/></td>
+                                <td><input type="text" class="Text2"  required size='6'/></td>
+                                <td><input type="text" class="Text2"  required size='6'/></td>
+                                <td><input type="text" class="Text3"  required size='17'/></td>
+                                <td><input type="text" class="Text2"  required size='36'/></td>
+                            <td><span class="lblStatus"></span></td>
+
+                           <tr class="tr">
+                                <td><input type="text" class="Text2"  required size='5' placeholder="        2"/></td>
+                                <td><input type="text" class="Text1"  required size='30'/></td>
+                                <td><input type="text" class="Text2"  required size='6'/></td>
+                                <td><input type="text" class="Text2"  required size='6'/></td>
+                                <td><input type="text" class="Text3"  required size='17'/></td>
+                                <td><input type="text" class="Text2"  required size='36'/></td>
                             <td><span class="lblStatus"></span></td>
 
                             <tr class="tr">
-                                <td><input type="text" class="Text2" placeholder="        2" required size='5'/></td>
-                                <td><input type="text" class="Text1" placeholder="Institution" required size='50'/></td>
-                                <td><input type="text" class="Text2" placeholder="From" required size='6'/></td>
-                                <td><input type="text" class="Text2" placeholder="To" required size='6'/></td>
-                                <td><input type="text" class="Text3" placeholder="Duration" required size='17'/></td>
-                                <td><input type="text" class="Text2" placeholder="Type of Qualifications" required size='36'/></td>
-                            <td><span class="lblStatus"></span></td>
-
-                            <tr class="tr">
-                                <td><input type="text" class="Text2" placeholder="        3" required size='5'/></td>
-                                <td><input type="text" class="Text1" placeholder="Institution" required size='50'/></td>
-                                <td><input type="text" class="Text2" placeholder="From" required size='6'/></td>
-                                <td><input type="text" class="Text2" placeholder="To" required size='6'/></td>
-                                <td><input type="text" class="Text3" placeholder="Duration" required size='17'/></td>
-                                <td><input type="text" class="Text2" placeholder="Type of Qualifications" required size='36'/></td>
+                                <td><input type="text" class="Text2"  required size='5' placeholder="        3"/></td>
+                                <td><input type="text" class="Text1"  required size='30'/></td>
+                                <td><input type="text" class="Text2"  required size='6'/></td>
+                                <td><input type="text" class="Text2"  required size='6'/></td>
+                                <td><input type="text" class="Text3"  required size='17'/></td>
+                                <td><input type="text" class="Text2"  required size='36'/></td>
                             <td><span class="lblStatus"></span></td>
 
 
@@ -58,7 +68,7 @@
 
 
                     <h4 id="title2">Proficiency in Sinhala/Tamil/English</h4>
-                    <h5 id="title3">**********************************Ability to Work*******************************  | ********************************* Ability To Teach********************************</h5>
+                    <h5 id="title3">**********************************Ability to Work*******************************  | ********************************* Ability To Teach*****************</h5>
                     
 <!-- start of the dropdown buttons-->
 
@@ -144,55 +154,67 @@
 
                     <div class="table2">
                         <table id="Table">
+                            <tr>
+                                <th></th>
+                                <th>Post</th>
+                                <th>Institution/Company</th>
+                                <th>Duration</th>
+                                <th>From(d/m/y)</th>
+                                <th>To(d/m/y)</th>
+                                <th>last drawn monthly salary</th>
+                            </tr>
+
                             <tr class="tr">
                                 <td><input type="text" class="Text2" placeholder="        1" required size='5'/></td>
-                                <td><input type="text" class="Text1" placeholder="Post" required size='13'/></td>
-                                <td><input type="text" class="Text2" placeholder="Institution/Company" required size='40'/></td>
-                                <td><input type="text" class="Text2" placeholder="Duration" required size='8'/></td>
-                                <td><input type="text" class="Text3" placeholder="From(dd/mm/yy)" required size='15'/></td>
-                                <td><input type="text" class="Text2" placeholder="To(dd/mm/yy)" required size='15'/></td>
-                                <td><input type="text" class="Text2" placeholder="last drawn monthly salary" required size='20'/></td>
+                                <td><input type="text" class="Text1" placeholder="" required size='13'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='30'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='8'/></td>
+                                <td><input type="text" class="Text3" placeholder="" required size='10'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='10'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='20'/></td>
                             <td><span class="lblStatus"></span></td>
 
                             <tr class="tr">
                                 <td><input type="text" class="Text2" placeholder="        2" required size='5'/></td>
-                                <td><input type="text" class="Text1" placeholder="Post" required size='13'/></td>
-                                <td><input type="text" class="Text2" placeholder="Institution/Company" required size='40'/></td>
-                                <td><input type="text" class="Text2" placeholder="Duration" required size='8'/></td>
-                                <td><input type="text" class="Text3" placeholder="From(dd/mm/yy)" required size='15'/></td>
-                                <td><input type="text" class="Text2" placeholder="To(dd/mm/yy)" required size='15'/></td>
-                                <td><input type="text" class="Text2" placeholder="last drawn monthly salary" required size='20'/></td>
+                                <td><input type="text" class="Text1" placeholder="" required size='13'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='30'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='8'/></td>
+                                <td><input type="text" class="Text3" placeholder="" required size='10'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='10'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='20'/></td>
                             <td><span class="lblStatus"></span></td>
 
                             <tr class="tr">
                                 <td><input type="text" class="Text2" placeholder="        3" required size='5'/></td>
-                                <td><input type="text" class="Text1" placeholder="Post" required size='13'/></td>
-                                <td><input type="text" class="Text2" placeholder="Institution/Company" required size='40'/></td>
-                                <td><input type="text" class="Text2" placeholder="Duration" required size='8'/></td>
-                                <td><input type="text" class="Text3" placeholder="From(dd/mm/yy)" required size='15'/></td>
-                                <td><input type="text" class="Text2" placeholder="To(dd/mm/yy)" required size='15'/></td>
-                                <td><input type="text" class="Text2" placeholder="last drawn monthly salary" required size='20'/></td>
+                                <td><input type="text" class="Text1" placeholder="" required size='13'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='30'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='8'/></td>
+                                <td><input type="text" class="Text3" placeholder="" required size='10'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='10'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='20'/></td>
                             <td><span class="lblStatus"></span></td>
 
                             <tr class="tr">
                                 <td><input type="text" class="Text2" placeholder="        4" required size='5'/></td>
-                                <td><input type="text" class="Text1" placeholder="Post" required size='13'/></td>
-                                <td><input type="text" class="Text2" placeholder="Institution/Company" required size='40'/></td>
-                                <td><input type="text" class="Text2" placeholder="Duration" required size='8'/></td>
-                                <td><input type="text" class="Text3" placeholder="From(dd/mm/yy)" required size='15'/></td>
-                                <td><input type="text" class="Text2" placeholder="To(dd/mm/yy)" required size='15'/></td>
-                                <td><input type="text" class="Text2" placeholder="last drawn monthly salary" required size='20'/></td>
+                                <td><input type="text" class="Text1" placeholder="" required size='13'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='30'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='8'/></td>
+                                <td><input type="text" class="Text3" placeholder="" required size='10'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='10'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='20'/></td>
                             <td><span class="lblStatus"></span></td>
 
                             <tr class="tr">
                                 <td><input type="text" class="Text2" placeholder="        5" required size='5'/></td>
-                                <td><input type="text" class="Text1" placeholder="Post" required size='13'/></td>
-                                <td><input type="text" class="Text2" placeholder="Institution/Company" required size='40'/></td>
-                                <td><input type="text" class="Text2" placeholder="Duration" required size='8'/></td>
-                                <td><input type="text" class="Text3" placeholder="From(dd/mm/yy)" required size='15'/></td>
-                                <td><input type="text" class="Text2" placeholder="To(dd/mm/yy)" required size='15'/></td>
-                                <td><input type="text" class="Text2" placeholder="last drawn monthly salary" required size='20'/></td>
+                                <td><input type="text" class="Text1" placeholder="" required size='13'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='30'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='8'/></td>
+                                <td><input type="text" class="Text3" placeholder="" required size='10'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='10'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='20'/></td>
                             <td><span class="lblStatus"></span></td>
+
+                            
                             
                             </tr>
                         </table>

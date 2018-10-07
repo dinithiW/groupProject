@@ -23,7 +23,7 @@ width: 400px;
 }
 
 .table1{/*Professional Qualifications table*/
-    margin-left: -220px;
+    margin-left: -160px;
 }
 
 .sinhala1{/*language profecency for sinhala*/
@@ -49,32 +49,32 @@ width: 400px;
 /*===========================start the dropdown button series=============================*/
 
 .sinhala1{/*sinhala for the working ability*/
-    margin-left: -100px;
+    margin-left: -150px;
     margin-top: 10px;
 }
 
 .tamil1{/*tamil for the working ability*/
-    margin-left: 60px;
+    margin-left: 10px;
     margin-top: -30px;
 }
 
 .english1{/*english for the working ability*/
-    margin-left:190px;
+    margin-left:170px;
     margin-top: -35px;
 }
 
 .sinhala2{/*sinhala for the teaching ability*/
-    margin-left: 390px;
+    margin-left: 350px;
     margin-top: -32px;
 }
 
 .tamil2{/*tamil for the teaching ability*/
-    margin-left: 540px;
+    margin-left: 500px;
     margin-top: -30px;
 }
 
 .english2{/*english for the teaching ability*/
-    margin-left: 680px;
+    margin-left: 630px;
     margin-top: -35px;    
 }
 
@@ -93,19 +93,19 @@ width: 400px;
     color: rgb(133, 130, 130);
 }
 .table2{/*Professional Qualifications table*/
-    margin-left: -220px;
+    margin-left: -160px;
 }
 
 #experience{/*expireance cage*/
-    margin-left: -200px;
+    margin-left: -160px;
     margin-top: 10px;
-    width: 1000px;
+    width: 910px;
     height: 100px;
 }
 
 #research{/*research cage*/
-    margin-left: -200px;
+    margin-left: -160px;
     margin-top: 10px;
-    width: 1000px;
+    width: 910px;
     height: 100px;
 }
