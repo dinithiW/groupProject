@@ -63,8 +63,8 @@
                         </tr>
 
                         <?php
-                            if($fetch_data->num_rows()>0){
-                                foreach($fetch_data->result() as $row){
+                            if($fetch_data1->num_rows()>0){
+                                foreach($fetch_data1->result() as $row){
                         ?>
 
                             <tr>
@@ -91,8 +91,24 @@
                     <table boarder="2"><!--start of the table2-->
                         <tr>
                             <th>LINK ID</th>
-                            <th>LINK NAME</th>
+                            <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LINK NAME</th>
                         </tr>
+
+                        <?php
+                            if($fetch_data2->num_rows()>0){
+                                foreach($fetch_data2->result() as $row){
+                        ?>
+
+                            <tr>
+                                <td><?php echo$row->LINK_ID?></td>
+                                <td><?php echo$row->LINK_NAME?></td>
+                            </tr>
+
+                        <?php
+                                }
+                            }
+                        ?>
+
                     </table><!--end of the table2-->
                 </fieldset>
             </div><!--snd of the table2class-->

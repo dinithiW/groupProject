@@ -17,7 +17,8 @@ class OperatorDashboard extends CI_Controller{
     public function categorizeApplications(){
         $this->load->view('users/operator/header');
         $this->load->model('operator/categorizeApplilcationsModel');
-        $data['fetch_data'] = $this->categorizeApplilcationsModel->fetch_datas();
+        $data['fetch_data1'] = $this->categorizeApplilcationsModel->fetch_datas();
+        $data['fetch_data2'] = $this->categorizeApplilcationsModel->fetchFileUploadLinks();
         $this->load->view('users/operator/categorizeApplications',$data);
         $this->load->view('users/operator/footer');
     }
