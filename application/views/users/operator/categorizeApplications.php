@@ -16,26 +16,108 @@
     <div class="container"><!-- start of the container-->
             <!-- start of the head-->
             <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4 row centered-form head inner">
-                <h4 id="headline">FOR SELECT APPLICANTS SPECIFICATION AREAS</h4>
-                <a class="w3-bar-item w3-button w3-hover-black button1" href="<?=base_url('OperatorDashboard/selectDataFromDatabase')?>">ENTER</a>
+                <h4 id="headline1">MANAGE AREA SPECIFICATION</h4>
+                
 
                 <div class="insert"><!-- start of the insert-->
                     <form method="post" action="<?=base_url('OperatorDashboard/insesrtDataForDatabase')?>">
-                        <input type="text" name="insertArea" placeholder="enter the area field">
-                        <button type="submit" name="sub">INSERT</button>
+                        <input type="text" name="insertArea" class="form-control input-sm input1"  placeholder="Enter the area field in here">
+                        <button type="submit" name="sub" class="btn btn-info btn-block button1">INSERT</button>
                     </form><!-- end of the head-->
                 </div>
 
-                <div><!-- end of the delete-->
+                <div class="insert"><!-- start of the delete-->
                     <form method="post" action="<?=base_url('OperatorDashboard/deleteDataFromDatabase')?>">
-                        <input type="text" name="deleteArea" placeholder="enter the area field you want to delete">
-                        <button type="submit" name="sub">DELETE</button>
+                        <input type="text" name="deleteArea" class="form-control input-sm input2"  placeholder="Enter id number of area you want to delete">
+                        <button type="submit" name="sub" class="btn btn-info btn-block button2">DELETE</button>
                     </form>
                 </div><!-- end of the delete-->
 
+
+                <h4 id="headline2">MANAGE FILE UPLOADING</h4>
+                
+
+                <div class="insert"><!-- start of the insert-->
+                    <form method="post" action="<?=base_url('OperatorDashboard/insesrtFileUploadingLinkForDatabase')?>">
+                        <input type="text" name="insertFileUploadLink" class="form-control input-sm input3"  placeholder="Enter the link in here">
+                        <button type="submit" name="sub" class="btn btn-info btn-block button3">INSERT</button>
+                    </form><!-- end of the head-->
+                </div>
+
+                <div class="insert"><!-- start of the delete-->
+                    <form method="post" action="<?=base_url('OperatorDashboard/deleteFileUploadLinkFromDatabase')?>">
+                        <input type="text" name="deleteFileUploadLink" class="form-control input-sm" id="input4" class="form-control input-sm input4"  placeholder="Enter id number of link you want to delete">
+                        <button type="submit" name="sub" class="btn btn-info btn-block button4">DELETE</button>
+                    </form>
+                </div><!-- end of the delete-->
+
+                <div class="resultTable1"><!--start of the table1classs-->
+                <fieldset style="width: 550px">
+                    <legend>
+                        SPECIALIZATIONAL AREAS
+                    </legend>
+                    <table><!--start of the table1-->
+                        <tr>
+                            <th>AREA ID</th>
+                            <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AREA NAME</th>
+                        </tr>
+
+                        <?php
+                            if($fetch_data1->num_rows()>0){
+                                foreach($fetch_data1->result() as $row){
+                        ?>
+
+                            <tr>
+                                <td><?php echo$row->AREA_ID?></td>
+                                <td><?php echo$row->AREA_NAME?></td>
+                            </tr>
+
+                        <?php
+                                }
+                            }
+                        ?>
+
+
+                    </table><!--end of the table1-->
+                </fieldset>
+            </div><!--snd of the table1class-->
+
+
+            <div class="resultTable2"><!--start of the table2classs-->
+                <fieldset style="width: 530px">
+                    <legend>
+                        SPECIALIZATIONALS
+                    </legend>
+                    <table boarder="2"><!--start of the table2-->
+                        <tr>
+                            <th>LINK ID</th>
+                            <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LINK NAME</th>
+                        </tr>
+
+                        <?php
+                            if($fetch_data2->num_rows()>0){
+                                foreach($fetch_data2->result() as $row){
+                        ?>
+
+                            <tr>
+                                <td><?php echo$row->LINK_ID?></td>
+                                <td><?php echo$row->LINK_NAME?></td>
+                            </tr>
+
+                        <?php
+                                }
+                            }
+                        ?>
+
+                    </table><!--end of the table2-->
+                </fieldset>
+            </div><!--snd of the table2class-->
+
+
+
             </div><!-- end of the head-->
 
-
+            
     </div><!-- end of the container-->
 
 

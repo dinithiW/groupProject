@@ -16,7 +16,10 @@ class OperatorDashboard extends CI_Controller{
     //this function for select areas of applicants 
     public function categorizeApplications(){
         $this->load->view('users/operator/header');
-        $this->load->view('users/operator/categorizeApplications');
+        $this->load->model('operator/categorizeApplilcationsModel');
+        $data['fetch_data1'] = $this->categorizeApplilcationsModel->fetch_datas();
+        $data['fetch_data2'] = $this->categorizeApplilcationsModel->fetchFileUploadLinks();
+        $this->load->view('users/operator/categorizeApplications',$data);
         $this->load->view('users/operator/footer');
     }
 
@@ -45,6 +48,22 @@ class OperatorDashboard extends CI_Controller{
         $this->load->model('operator/categorizeApplilcationsModel');
         $this->categorizeApplilcationsModel->deleteAreas($this->input->post('deleteArea'));
         redirect(base_url() . "OperatorDashboard/reDirect");
+    }
+
+    
+    public function insesrtFileUploadingLinkForDatabase(){
+        $this->load->model('operator/categorizeApplilcationsModel');
+        $data = array("LINK_NAME"=> $this->input->post('insertFileUploadLink'));
+        $this->categorizeApplilcationsModel->insertFileUploadLink($data);
+        redirect(base_url()."OperatorDashboard/reDirect");
+    }
+
+    //for delete fileupload data from database
+    public function deleteFileUploadLinkFromDatabase(){
+        $this->load->model('operator/categorizeApplilcationsModel');
+        $this->categorizeApplilcationsModel->deleteFileUploadLinkFromDatabase($this->input->post('deleteFileUploadLink'));
+        echo $this->input->post('deleteFileUploadLink');
+        redirect(base_url()."OperatorDashboard/reDirect");
     }
 
 

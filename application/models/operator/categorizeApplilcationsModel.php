@@ -15,14 +15,14 @@
             return $query;
         }
 
-        //for insert data into database
+        //for insert areas into database
         function insertAreas($data){
             $this->load->database();
             $this->db->insert('specializationarea',$data);
             
         }
 
-        //for delete data from database
+        //for delete areas from database
         function deleteAreas($id){
             $this->load->database();
             $this->db->where('AREA_ID',$id);
@@ -30,6 +30,29 @@
            
         }
 
+        //for insert file uploding links into database
+        function insertFileUploadLink($data){
+            $this->load->database();
+            $this->db->insert('file_upload_links',$data);
+            
+        }
+
+        //for get data from database
+        function fetchFileUploadLinks(){
+            $this->load->database();
+            $this->db->select('*');
+            $this->db->from('file_upload_links');
+            $query = $this->db->get();
+            return $query;
+        }
+
+        //delete file uploading link from database
+
+        function deleteFileUploadLinkFromDatabase($id){
+            $this->load->database();
+            $this->db->where('LINK_ID',$id);
+            $this->db->delete('file_upload_links');
+        }
 
     }
 ?>
