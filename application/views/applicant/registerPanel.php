@@ -4,6 +4,7 @@
 <head>    
     <title>UCSC</title>
     <link rel="stylesheet" href="<?=base_url('assets/css/registerPanel.css')?>" type="text/css"/>
+    <link rel="stylesheet" href="<?=base_url('assets/css/loginPanel.css')?>" type="text/css"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width= device-width ,initial-scale = 1">
 
@@ -18,12 +19,14 @@
 
 <body>
 
+<body background="<?php echo base_url('assets/images/ucsc.jpg');?>" >
+    <div class = "boxed">
 <form action="addUser"method = "POST">
   <div class="text-center" id = "mainDiv">
     <h1>Register</h1>
     <p>Please fill in this form to create an account.</p>
-    <hr>
-
+    <br>
+    
     <label for="email"><b>Email</b></label>
     <input type="email" placeholder="Enter Email" name="email" required></br>
 
@@ -41,7 +44,7 @@
     <p>Already have an account? <a href="#">Sign in</a>.</p>
   </div>-->
 </form>
-
+</div>
 </body>
 </html>
 
