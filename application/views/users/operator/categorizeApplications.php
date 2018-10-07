@@ -21,14 +21,14 @@
 
                 <div class="insert"><!-- start of the insert-->
                     <form method="post" action="<?=base_url('OperatorDashboard/insesrtDataForDatabase')?>">
-                        <input type="text" name="insertArea" class="form-control input-sm input1"  placeholder="Enter the area field in here">
+                        <input type="text" name="insertArea" class="form-control input-sm input1"  placeholder="Enter the area field in here" required>
                         <button type="submit" name="sub" class="btn btn-info btn-block button1">INSERT</button>
                     </form><!-- end of the head-->
                 </div>
 
                 <div class="insert"><!-- start of the delete-->
                     <form method="post" action="<?=base_url('OperatorDashboard/deleteDataFromDatabase')?>">
-                        <input type="text" name="deleteArea" class="form-control input-sm input2"  placeholder="Enter id number of area you want to delete">
+                        <input type="text" name="deleteArea" class="form-control input-sm input2"  placeholder="Enter id number of area you want to delete" required>
                         <button type="submit" name="sub" class="btn btn-info btn-block button2">DELETE</button>
                     </form>
                 </div><!-- end of the delete-->
@@ -39,14 +39,14 @@
 
                 <div class="insert"><!-- start of the insert-->
                     <form method="post" action="<?=base_url('OperatorDashboard/insesrtFileUploadingLinkForDatabase')?>">
-                        <input type="text" name="insertFileUploadLink" class="form-control input-sm input3"  placeholder="Enter the link in here">
+                        <input type="text" name="insertFileUploadLink" class="form-control input-sm input3"  placeholder="Enter the link in here" required>
                         <button type="submit" name="sub" class="btn btn-info btn-block button3">INSERT</button>
                     </form><!-- end of the head-->
                 </div>
 
                 <div class="insert"><!-- start of the delete-->
                     <form method="post" action="<?=base_url('OperatorDashboard/deleteFileUploadLinkFromDatabase')?>">
-                        <input type="text" name="deleteFileUploadLink" class="form-control input-sm" id="input4" class="form-control input-sm input4"  placeholder="Enter id number of link you want to delete">
+                        <input type="text" name="deleteFileUploadLink" class="form-control input-sm" id="input4" class="form-control input-sm input4"  placeholder="Enter id number of link you want to delete" required>
                         <button type="submit" name="sub" class="btn btn-info btn-block button4">DELETE</button>
                     </form>
                 </div><!-- end of the delete-->
