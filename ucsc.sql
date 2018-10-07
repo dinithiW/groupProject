@@ -79,3 +79,80 @@ INSERT INTO `specializationarea` (`AREA_ID`, `AREA_NAME`) VALUES
 (13, 'Computer Graphics and Vision'),
 (19, 'Computer Architecture & Engineering'),
 (20, 'optional 5');
+
+
+
+
+
+
+-- phpMyAdmin SQL Dump
+-- version 4.7.9
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Oct 07, 2018 at 03:43 AM
+-- Server version: 10.1.31-MariaDB
+-- PHP Version: 7.2.3
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `ucsc`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `file_upload_links`
+--
+
+CREATE TABLE `file_upload_links` (
+  `LINK_ID` int(10) NOT NULL,
+  `LINK_NAME` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `file_upload_links`
+--
+
+INSERT INTO `file_upload_links` (`LINK_ID`, `LINK_NAME`) VALUES
+(9, 'scanned document 1'),
+(10, 'scanned document 2'),
+(11, 'scanned document 3'),
+(12, 'scanned document 4'),
+(13, 'scanned document 5'),
+(14, 'scanned document 6');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `file_upload_links`
+--
+ALTER TABLE `file_upload_links`
+  ADD PRIMARY KEY (`LINK_ID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `file_upload_links`
+--
+ALTER TABLE `file_upload_links`
+  MODIFY `LINK_ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
