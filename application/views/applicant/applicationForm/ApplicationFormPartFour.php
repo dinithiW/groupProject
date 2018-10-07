@@ -19,34 +19,44 @@
             <h4 id="title1">Referees </h4>
                     <div class="content3">
                         <table id="table1">
-                            <tr class="tr">
 
+                            <tr>
+                                <th></th>
+                                <th>Name</th>
+                                <th>Designation</th>
+                                <th>Address</th>
+                                <th>Email Address</th>
+                                <th>Contact No</th>
+                            </tr>
+
+                            <tr class="tr">
                                 <td><input type="text" class="Text2" placeholder="        1" required size='5'/></td>
-                                
-                                <td><input type="text" class="Text1" placeholder="Name" required size='30'/></td>
-                                <td><input type="text" class="Text2" placeholder="Designation" required size='15'/></td>
-                                <td><input type="text" class="Text2" placeholder="Address" required size='35'/></td>
-                                <td><input type="text" class="Text3" placeholder="Email Address" required size='25'/></td>
-                                <td><input type="text" class="Text2" placeholder="Contact No" required size='10'/></td>
+                                <td><input type="text" class="Text1" placeholder="" required size='30'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='10'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='30'/></td>
+                                <td><input type="text" class="Text3" placeholder="" required size='20'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='10'/></td>
                             <td><span class="lblStatus"></span></td>
 
                             <tr class="tr">
                                 <td><input type="text" class="Text2" placeholder="        2" required size='5'/></td>
-                                <td><input type="text" class="Text1" placeholder="Name" required size='30'/></td>
-                                <td><input type="text" class="Text2" placeholder="Designation" required size='15'/></td>
-                                <td><input type="text" class="Text2" placeholder="Address" required size='35'/></td>
-                                <td><input type="text" class="Text3" placeholder="Email Address" required size='25'/></td>
-                                <td><input type="text" class="Text2" placeholder="Contact No" required size='10'/></td>
+                                <td><input type="text" class="Text1" placeholder="" required size='30'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='10'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='30'/></td>
+                                <td><input type="text" class="Text3" placeholder="" required size='20'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='10'/></td>
                             <td><span class="lblStatus"></span></td>
 
                             <tr class="tr">
                                 <td><input type="text" class="Text2" placeholder="        3" required size='5'/></td>
-                                <td><input type="text" class="Text1" placeholder="Name" required size='30'/></td>
-                                <td><input type="text" class="Text2" placeholder="Designation" required size='15'/></td>
-                                <td><input type="text" class="Text2" placeholder="Address" required size='35'/></td>
-                                <td><input type="text" class="Text3" placeholder="Email Address" required size='25'/></td>
-                                <td><input type="text" class="Text2" placeholder="Contact No" required size='10'/></td>
+                                <td><input type="text" class="Text1" placeholder="" required size='30'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='10'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='30'/></td>
+                                <td><input type="text" class="Text3" placeholder="" required size='20'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='10'/></td>
                             <td><span class="lblStatus"></span></td>
+
+                            
 
                             </tr>
                         </table>
