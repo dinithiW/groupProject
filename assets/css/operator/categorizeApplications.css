@@ -33,21 +33,21 @@ body{
 }
 
 #headline1{/*for headline*/
-    margin-left: 400px;
+    margin-left: 200px;
     margin-top: 80px;
     width: 500px;
     color: blueviolet;
 }
 
 #headline2{/*for headline*/
-    margin-left: 430px;
-    margin-top: 80px;
+    margin-left: 650px;
+    margin-top: -117px;
     width: 500px;
     color: blueviolet;
 }
 
 .button1{/*first enter button*/
-    margin-left: 255px;
+    margin-left: 5px;
     margin-top: -30px;
     width: 70px;
     height: 30px;
@@ -56,7 +56,7 @@ body{
 }
 
 .button2{/*first delete button*/
-    margin-left: 255px;
+    margin-left: 5px;
     margin-top: -30px;
     width: 70px;
     height: 30px;
@@ -65,7 +65,7 @@ body{
 }
 
 .button3{ /*second enter button*/
-    margin-left: 255px;
+    margin-left: 445px;
     margin-top: -30px;
     width: 70px;
     height: 30px;
@@ -74,7 +74,7 @@ body{
 }
 
 .button4{ /*second delete button*/
-    margin-left: 255px;
+    margin-left: 445px;
     margin-top: -30px;
     width: 70px;
     height: 30px;
@@ -83,7 +83,7 @@ body{
 }
 
 .input1{/*first enter input*/
-    margin-left: -5px;
+    margin-left: -255px;
     margin-top: 30px;
     width: 250px;
     height: 30px;
@@ -92,7 +92,7 @@ body{
 }
 
 .input2{/*first delete input*/
-    margin-left: -5px;
+    margin-left: -255px;
     margin-top: 30px;
     width: 250px;
     height: 30px;
@@ -100,26 +100,37 @@ body{
 }
 
 .input3{ /*second enter input*/
-    margin-left: -5px;
+    margin-left: 185px;
     margin-top: 30px;
     width: 250px;
     height: 30px;
     color: rgb(38, 7, 150);
 }
 
-.input4{ /*second delete input*/
-    margin-left: -15px;
-    margin-top: 400px;
-    width: 250px;
-    height: 30px;
-    color: rgb(45, 24, 121);
-}
+
 
 
 #input4{ /*second delete input*/
-    margin-left: -5px;
+    margin-left: 185px;
     margin-top: 25px;
     width: 250px;
     height: 30px;
+    
+}
+
+.resultTable1{
+    margin-left: 205px;
+    margin-top: 55px;
+    width: 350px;
+    height: 400px;
+    
+}
+
+
+.resultTable2{
+    margin-left: 565px;
+    margin-top: -400px;
+    width: 530px;
+    height: 400px;
     
 }

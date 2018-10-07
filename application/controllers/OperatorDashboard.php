@@ -16,7 +16,9 @@ class OperatorDashboard extends CI_Controller{
     //this function for select areas of applicants 
     public function categorizeApplications(){
         $this->load->view('users/operator/header');
-        $this->load->view('users/operator/categorizeApplications');
+        $this->load->model('operator/categorizeApplilcationsModel');
+        $data['fetch_data'] = $this->categorizeApplilcationsModel->fetch_datas();
+        $this->load->view('users/operator/categorizeApplications',$data);
         $this->load->view('users/operator/footer');
     }
 
@@ -59,6 +61,7 @@ class OperatorDashboard extends CI_Controller{
     public function deleteFileUploadLinkFromDatabase(){
         $this->load->model('operator/categorizeApplilcationsModel');
         $this->categorizeApplilcationsModel->deleteFileUploadLinkFromDatabase($this->input->post('deleteFileUploadLink'));
+        echo $this->input->post('deleteFileUploadLink');
         redirect(base_url()."OperatorDashboard/reDirect");
     }
 
