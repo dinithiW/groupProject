@@ -75,7 +75,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label>enter your Office-phone number in here</label>
+                                <label>Enter your Office-phone number in here</label>
                                 <input type="tel" name="office-phone" id="office-phone" class="form-control input-sm" placeholder="enter your Office-phone number in here ">
                             </div>
 
