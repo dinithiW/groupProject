@@ -50,18 +50,48 @@ ALTER TABLE `users`
 ('operator', 'abc', 'operator@gmail.com'),
 ('SAR', 'abc', 'sar@gmail.com');
 
+
+
+
+-- phpMyAdmin SQL Dump
+-- version 4.7.9
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Oct 07, 2018 at 03:46 AM
+-- Server version: 10.1.31-MariaDB
+-- PHP Version: 7.2.3
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `ucsc`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `specializationarea`
+--
+
 CREATE TABLE `specializationarea` (
   `AREA_ID` int(10) NOT NULL,
   `AREA_NAME` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-ALTER TABLE `specializationarea`
-  ADD PRIMARY KEY (`AREA_ID`);
-
-ALTER TABLE `specializationarea`
-  MODIFY `AREA_ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
-COMMIT;
-
+--
+-- Dumping data for table `specializationarea`
+--
 
 INSERT INTO `specializationarea` (`AREA_ID`, `AREA_NAME`) VALUES
 (1, 'Software Engineering'),
@@ -78,8 +108,33 @@ INSERT INTO `specializationarea` (`AREA_ID`, `AREA_NAME`) VALUES
 (12, 'IT Project management'),
 (13, 'Computer Graphics and Vision'),
 (19, 'Computer Architecture & Engineering'),
-(20, 'optional 5');
+(20, 'optional 5'),
+(21, 'optional 7');
 
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `specializationarea`
+--
+ALTER TABLE `specializationarea`
+  ADD PRIMARY KEY (`AREA_ID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `specializationarea`
+--
+ALTER TABLE `specializationarea`
+  MODIFY `AREA_ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
 
 
