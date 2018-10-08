@@ -70,32 +70,32 @@
                                 <th>Year</th>
                             </tr>
                             <tr class="tr">
-                                <td><input type="text" class="Text1" placeholder="School name" required size='55'/></td>
-                                <td><input type="text" class="Text2" placeholder="From" required size='5'/></td>
-                                <td><input type="text" class="Text3" placeholder="To" required size='5'/></td>
-                                <td><input type="text" class="Text2" placeholder="Exmination Passed" required size='55'/></td>
-                                <td><input type="text" class="Text3" placeholder="Year" required size='5'/></td>
+                                <td><input type="text" class="Text1"  required size='45'/></td>
+                                <td><input type="text" class="Text2"  required size='5'/></td>
+                                <td><input type="text" class="Text3"  required size='5'/></td>
+                                <td><input type="text" class="Text2"  required size='45'/></td>
+                                <td><input type="text" class="Text3"  required size='5'/></td>
                             <td><span class="lblStatus"></span></td>
                             <tr class="tr">
-                                <td><input type="text" class="Text1" placeholder="School name" required size='55'/></td>
-                                <td><input type="text" class="Text2" placeholder="From" required size='5'/></td>
-                                <td><input type="text" class="Text3" placeholder="To" required size='5'/></td>
-                                <td><input type="text" class="Text2" placeholder="Exmination Passed" required size='55'/></td>
-                                <td><input type="text" class="Text3" placeholder="Year" required size='5'/></td>
+                                <td><input type="text" class="Text1"  required size='45'/></td>
+                                <td><input type="text" class="Text2"  required size='5'/></td>
+                                <td><input type="text" class="Text3"  required size='5'/></td>
+                                <td><input type="text" class="Text2"  required size='45'/></td>
+                                <td><input type="text" class="Text3"  required size='5'/></td>
                             <td><span class="lblStatus"></span></td>
                             <tr class="tr">
-                                <td><input type="text" class="Text1" placeholder="School name" required size='55'/></td>
-                                <td><input type="text" class="Text2" placeholder="From" required size='5'/></td>
-                                <td><input type="text" class="Text3" placeholder="To" required size='5'/></td>
-                                <td><input type="text" class="Text2" placeholder="Exmination Passed" required size='55'/></td>
-                                <td><input type="text" class="Text3" placeholder="Year" required size='5'/></td>
+                                <td><input type="text" class="Text1"  required size='45'/></td>
+                                <td><input type="text" class="Text2"  required size='5'/></td>
+                                <td><input type="text" class="Text3"  required size='5'/></td>
+                                <td><input type="text" class="Text2"  required size='45'/></td>
+                                <td><input type="text" class="Text3"  required size='5'/></td>
                             <td><span class="lblStatus"></span></td>
                             <tr class="tr">
-                                <td><input type="text" class="Text1" placeholder="School name" required size='55'/></td>
-                                <td><input type="text" class="Text2" placeholder="From" required size='5'/></td>
-                                <td><input type="text" class="Text3" placeholder="To" required size='5'/></td>
-                                <td><input type="text" class="Text2" placeholder="Exmination Passed" required size='55'/></td>
-                                <td><input type="text" class="Text3" placeholder="Year" required size='5'/></td>
+                                <td><input type="text" class="Text1"  required size='45'/></td>
+                                <td><input type="text" class="Text2"  required size='5'/></td>
+                                <td><input type="text" class="Text3"  required size='5'/></td>
+                                <td><input type="text" class="Text2"  required size='45'/></td>
+                                <td><input type="text" class="Text3"  required size='5'/></td>
                             <td><span class="lblStatus"></span></td>
                             
                             </tr>
@@ -105,48 +105,59 @@
                     <h4 id="title2">Higher Educational Details</h4>
                     <div class="table2"><!-- start of the Higher Educational Details table-->
                         <table id="Table">
+                            <tr>
+                                <th>University / Institution</th>
+                                <th>From</th>
+                                <th>To</th>
+                                <th>Degree Obtained</th>
+                                <th>Duration</th>
+                                <th>Class</th>
+                                <th>Year</th>
+                                <th>Index No</th>
+                            </tr>
+
                             <tr class="tr">
-                                <td><input type="text" class="Text1" placeholder="Name of the university / Institution" required size='35'/></td>
-                                <td><input type="text" class="Text2" placeholder="From" required size='3'/></td>
-                                <td><input type="text" class="Text3" placeholder="To" required size='3'/></td>
-                                <td><input type="text" class="Text2" placeholder="Degree Obtained" required size='25'/></td>
-                                <td><input type="text" class="Text3" placeholder="Duration of the course" required size='17'/></td>
-                                <td><input type="text" class="Text3" placeholder="Class" required size='12'/></td>
-                                <td><input type="text" class="Text2" placeholder="Awarding Year" required size='9'/></td>
-                                <td><input type="text" class="Text3" placeholder="Index No" required size='7'/></td>
+                                <td><input type="text" class="Text1"  required size='25'/></td>
+                                <td><input type="text" class="Text2"  required size='3'/></td>
+                                <td><input type="text" class="Text3"  required size='3'/></td>
+                                <td><input type="text" class="Text2"  required size='25'/></td>
+                                <td><input type="text" class="Text3"  required size='11'/></td>
+                                <td><input type="text" class="Text3"  required size='13'/></td>
+                                <td><input type="text" class="Text2"  required size='4'/></td>
+                                <td><input type="text" class="Text3"  required size='7'/></td>
                             <td><span class="lblStatus"></span></td>
                             
                             <tr class="tr">
-                                <td><input type="text" class="Text1" placeholder="Name of the university / Institution" required size='35'/></td>
-                                <td><input type="text" class="Text2" placeholder="From" required size='3'/></td>
-                                <td><input type="text" class="Text3" placeholder="To" required size='3'/></td>
-                                <td><input type="text" class="Text2" placeholder="Degree Obtained" required size='25'/></td>
-                                <td><input type="text" class="Text3" placeholder="Duration of the course" required size='17'/></td>
-                                <td><input type="text" class="Text3" placeholder="Class" required size='12'/></td>
-                                <td><input type="text" class="Text2" placeholder="Awarding Year" required size='9'/></td>
-                                <td><input type="text" class="Text3" placeholder="Index No" required size='7'/></td>
+                                <td><input type="text" class="Text1"  required size='25'/></td>
+                                <td><input type="text" class="Text2"  required size='3'/></td>
+                                <td><input type="text" class="Text3"  required size='3'/></td>
+                                <td><input type="text" class="Text2"  required size='25'/></td>
+                                <td><input type="text" class="Text3"  required size='11'/></td>
+                                <td><input type="text" class="Text3"  required size='13'/></td>
+                                <td><input type="text" class="Text2"  required size='4'/></td>
+                                <td><input type="text" class="Text3"  required size='7'/></td>
                             <td><span class="lblStatus"></span></td>
 
                             <tr class="tr">
-                                <td><input type="text" class="Text1" placeholder="Name of the university / Institution" required size='35'/></td>
-                                <td><input type="text" class="Text2" placeholder="From" required size='3'/></td>
-                                <td><input type="text" class="Text3" placeholder="To" required size='3'/></td>
-                                <td><input type="text" class="Text2" placeholder="Degree Obtained" required size='25'/></td>
-                                <td><input type="text" class="Text3" placeholder="Duration of the course" required size='17'/></td>
-                                <td><input type="text" class="Text3" placeholder="Class" required size='12'/></td>
-                                <td><input type="text" class="Text2" placeholder="Awarding Year" required size='9'/></td>
-                                <td><input type="text" class="Text3" placeholder="Index No" required size='7'/></td>
+                                <td><input type="text" class="Text1"  required size='25'/></td>
+                                <td><input type="text" class="Text2"  required size='3'/></td>
+                                <td><input type="text" class="Text3"  required size='3'/></td>
+                                <td><input type="text" class="Text2"  required size='25'/></td>
+                                <td><input type="text" class="Text3"  required size='11'/></td>
+                                <td><input type="text" class="Text3"  required size='13'/></td>
+                                <td><input type="text" class="Text2"  required size='4'/></td>
+                                <td><input type="text" class="Text3"  required size='7'/></td>
                             <td><span class="lblStatus"></span></td>
 
                             <tr class="tr">
-                                <td><input type="text" class="Text1" placeholder="Name of the university / Institution" required size='35'/></td>
-                                <td><input type="text" class="Text2" placeholder="From" required size='3'/></td>
-                                <td><input type="text" class="Text3" placeholder="To" required size='3'/></td>
-                                <td><input type="text" class="Text2" placeholder="Degree Obtained" required size='25'/></td>
-                                <td><input type="text" class="Text3" placeholder="Duration of the course" required size='17'/></td>
-                                <td><input type="text" class="Text3" placeholder="Class" required size='12'/></td>
-                                <td><input type="text" class="Text2" placeholder="Awarding Year" required size='9'/></td>
-                                <td><input type="text" class="Text3" placeholder="Index No" required size='7'/></td>
+                                <td><input type="text" class="Text1"  required size='25'/></td>
+                                <td><input type="text" class="Text2"  required size='3'/></td>
+                                <td><input type="text" class="Text3"  required size='3'/></td>
+                                <td><input type="text" class="Text2"  required size='25'/></td>
+                                <td><input type="text" class="Text3"  required size='11'/></td>
+                                <td><input type="text" class="Text3"  required size='13'/></td>
+                                <td><input type="text" class="Text2"  required size='4'/></td>
+                                <td><input type="text" class="Text3"  required size='7'/></td>
                             <td><span class="lblStatus"></span></td>
 
                             </tr>
@@ -158,29 +169,39 @@
                     <h4 id="title3">Any Other Qualifications </h4>
                     <div class="table3">
                         <table id="Table">
+                            <tr>
+                                <th></th>
+                                <th>Institution</th>
+                                <th>Deploma etc</th>
+                                <th>Duration</th>
+                                <th>Year</th>
+                            </tr>
+
                             <tr class="tr">
-                                <td><input type="text" class="Text2" placeholder="        1" required size='5'/></td>
-                                <td><input type="text" class="Text1" placeholder="Institution" required size='50'/></td>
-                                <td><input type="text" class="Text2" placeholder="Deploma etc" required size='40'/></td>
-                                <td><input type="text" class="Text3" placeholder="Duration" required size='17'/></td>
-                                <td><input type="text" class="Text2" placeholder="Year" required size='13'/></td>
+                                <td><input type="text" class="Text2"  required size='5' placeholder="        1"/></td>
+                                <td><input type="text" class="Text1"  required size='40'/></td>
+                                <td><input type="text" class="Text2"  required size='30'/></td>
+                                <td><input type="text" class="Text3"  required size='17'/></td>
+                                <td><input type="text" class="Text2"  required size='13'/></td>
                             <td><span class="lblStatus"></span></td>
 
                             <tr class="tr">
-                                <td><input type="text" class="Text2" placeholder="        2" required size='5'/></td>
-                                <td><input type="text" class="Text1" placeholder="Institution" required size='50'/></td>
-                                <td><input type="text" class="Text2" placeholder="Deploma etc" required size='40'/></td>
-                                <td><input type="text" class="Text3" placeholder="Duration" required size='17'/></td>
-                                <td><input type="text" class="Text2" placeholder="Year" required size='13'/></td>
+                                <td><input type="text" class="Text2"  required size='5' placeholder="        2"/></td>
+                                <td><input type="text" class="Text1"  required size='40'/></td>
+                                <td><input type="text" class="Text2"  required size='30'/></td>
+                                <td><input type="text" class="Text3"  required size='17'/></td>
+                                <td><input type="text" class="Text2"  required size='13'/></td>
                             <td><span class="lblStatus"></span></td>
 
                             <tr class="tr">
-                                <td><input type="text" class="Text2" placeholder="        3" required size='5'/></td>
-                                <td><input type="text" class="Text1" placeholder="Institution" required size='50'/></td>
-                                <td><input type="text" class="Text2" placeholder="Deploma etc" required size='40'/></td>
-                                <td><input type="text" class="Text3" placeholder="Duration" required size='17'/></td>
-                                <td><input type="text" class="Text2" placeholder="Year" required size='13'/></td>
+                                <td><input type="text" class="Text2"  required size='5' placeholder="        3"/></td>
+                                <td><input type="text" class="Text1"  required size='40'/></td>
+                                <td><input type="text" class="Text2"  required size='30'/></td>
+                                <td><input type="text" class="Text3"  required size='17'/></td>
+                                <td><input type="text" class="Text2"  required size='13'/></td>
                             <td><span class="lblStatus"></span></td>
+
+                            
 
                             </tr>
                         </table>

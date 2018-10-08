@@ -37,8 +37,9 @@
     width: 400px;
 }
 .table1{/*Secondry Educational Details table*/
-    margin-left: -220px;
+    margin-left: -160px;
     margin-top: -10px;
+
 }
 
 
@@ -49,7 +50,7 @@
     width: 400px;
 }
 .table2{/*Higher Educational Details table*/
-    margin-left: -220px;
+    margin-left: -160px;
     margin-top: -10px;
 }
 
@@ -61,7 +62,7 @@
     width: 400px;
 }
 .table3{/*Any Other Qualifications table*/
-    margin-left: -220px;
+    margin-left: -160px;
     margin-top: -10px;
 }
 

@@ -1,0 +1,136 @@
+body{
+    background-color: blue;
+}
+
+.container{
+    background-color: rgb(201, 193, 193);
+    margin-left: 250px;
+    margin-top: -10px;
+    width: 1150px;
+    height: 800px;
+}
+
+.insert{
+   
+    margin-top: 10px;
+    margin-left: 420px;
+    height: 20px;
+    width: 250px;
+}
+
+.inner{
+    background-color: rgb(250, 252, 252);
+    margin-top: -10px;
+    margin-left: -20px;
+    height: 800px;
+    width: 1150px;
+}
+
+#tableClass{
+    background-color: chartreuse;
+    margin-left: 500px;
+    margin-top: 350px;
+}
+
+#headline1{/*for headline*/
+    margin-left: 200px;
+    margin-top: 80px;
+    width: 500px;
+    color: blueviolet;
+}
+
+#headline2{/*for headline*/
+    margin-left: 650px;
+    margin-top: -117px;
+    width: 500px;
+    color: blueviolet;
+}
+
+.button1{/*first enter button*/
+    margin-left: 5px;
+    margin-top: -30px;
+    width: 70px;
+    height: 30px;
+    color: rgb(251, 250, 252);
+    background-color: rgb(153, 0, 255);
+}
+
+.button2{/*first delete button*/
+    margin-left: 5px;
+    margin-top: -30px;
+    width: 70px;
+    height: 30px;
+    color: rgb(251, 250, 252);
+    background-color: rgb(153, 0, 255);
+}
+
+.button3{ /*second enter button*/
+    margin-left: 445px;
+    margin-top: -30px;
+    width: 70px;
+    height: 30px;
+    color: rgb(251, 250, 252);
+    background-color: rgb(153, 0, 255);
+}
+
+.button4{ /*second delete button*/
+    margin-left: 445px;
+    margin-top: -30px;
+    width: 70px;
+    height: 30px;
+    color: rgb(251, 250, 252);
+    background-color: rgb(153, 0, 255);
+}
+
+.input1{/*first enter input*/
+    margin-left: -255px;
+    margin-top: 30px;
+    width: 250px;
+    height: 30px;
+    color: rgb(38, 7, 150);
+    
+}
+
+.input2{/*first delete input*/
+    margin-left: -255px;
+    margin-top: 30px;
+    width: 250px;
+    height: 30px;
+    color: rgb(38, 7, 150);
+}
+
+.input3{ /*second enter input*/
+    margin-left: 185px;
+    margin-top: 30px;
+    width: 250px;
+    height: 30px;
+    color: rgb(38, 7, 150);
+}
+
+
+
+
+#input4{ /*second delete input*/
+    margin-left: 185px;
+    margin-top: 25px;
+    width: 250px;
+    height: 30px;
+    
+}
+
+.resultTable1{
+    margin-left: 205px;
+    margin-top: 55px;
+    width: 350px;
+    height: 400px;
+    
+}
+
+
+.resultTable2{
+    margin-left: 665px;
+    margin-top: -400px;
+    width: 430px;
+    height: 400px;
+    
+}

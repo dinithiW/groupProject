@@ -25,50 +25,57 @@
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
                                 <br/>
-                                <label>First Name</label>
-                                <input type="text" name="first-name" id="first-name" class="form-control input-sm" placeholder="enter your full name in capital blocks in here">
+                                <label>Enter your full name in capital blocks in here</label>
+                                <input type="text" name="first-name" id="first-name" class="form-control input-sm" placeholder="Enter your full name in capital blocks in here">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Enter your surname in capital blocks in here</label>
+                                <input type="text" name="last-name" id="last-name" class="form-control input-sm" placeholder="Enter your surname in capital blocks in here">
                             </div>
 
                             <div class="form-group">
-                                <label>Surname</label>
-                                <input type="text" name="last-name" id="last-name" class="form-control input-sm" placeholder="enter your surname in capital blocks in here">
+                                <label>Enter your postal address in here</label>
+                                <input type="text" name="postal-address" id="postal-address" class="form-control input-sm" placeholder="Enter your postal address in here">
                             </div>
 
                             <div class="form-group">
-                                <label>Postal Address</label>
-                                <input type="text" name="postal-address" id="postal-address" class="form-control input-sm" placeholder="enter your postal address in here">
+                                <label>Enter your permanent address in here</label>
+                                <input type="text" name="permanent-address" id="permanent-address" class="form-control input-sm" placeholder="Enter your permanent address in here">
                             </div>
 
                             <div class="form-group">
-                                <label>Permanent Address</label>
-                                <input type="text" name="permanent-address" id="permanent-address" class="form-control input-sm" placeholder="enter your permanent address in here">
-                            </div>
-
-                            <div class="form-group">
+                                <label>Enter your NIC/Driving Licence/Passport No</label>
                                 <input type="text" name="driving-licence" id="driving-licence"   class="form-control input-sm " placeholder="enter your NIC No/ Driving Licence No/Passposrt No ">
                             </div>
 
                             <div class="form-group">
-                                <input type="text" name="applicant-citizenship" id="applicant-citizenship"   class="form-control input-sm " placeholder="enter your citizenship in here">
+                                <label>Enter your citizenship in here</label>
+                                <input type="text" name="applicant-citizenship" id="applicant-citizenship"   class="form-control input-sm " placeholder="Enter your citizenship in here">
                             </div>
 
                             <div class="form-group">
-                                <input type="email" name="personal-email" id="personal-email" class="form-control input-sm" placeholder="enter your personal-email address in here">
+                                <label>Enter your personal-email address in here</label>
+                                <input type="email" name="personal-email" id="personal-email" class="form-control input-sm" placeholder="Enter your personal-email address in here">
                             </div>
 
                              <div class="form-group">
-                                <input type="email" name="office-email" id="office-email" class="form-control input-sm" placeholder="enter your office-email address in here">
+                                <label>Enter your office-email address in here</label>
+                                <input type="email" name="office-email" id="office-email" class="form-control input-sm" placeholder="Enter your office-email address in here">
                             </div>
 
                             <div class="form-group">
-                                <input type="tel" name="mobile-phone" id="mobile-phone" class="form-control input-sm" placeholder="enter your mobile-phone in here ">
+                                <label>Enter your mobile-phone in here</label>
+                                <input type="tel" name="mobile-phone" id="mobile-phone" class="form-control input-sm" placeholder="Enter your mobile-phone in here ">
                             </div>
 
                             <div class="form-group">
-                                <input type="tel" name="home-phone" id="home-phone" class="form-control input-sm" placeholder="enter your Home-phone number in here ">
+                                <label>Enter your Home-phone number in here</label>
+                                <input type="tel" name="home-phone" id="home-phone" class="form-control input-sm" placeholder="Enter your Home-phone number in here ">
                             </div>
 
                             <div class="form-group">
+                                <label>Enter your Office-phone number in here</label>
                                 <input type="tel" name="office-phone" id="office-phone" class="form-control input-sm" placeholder="enter your Office-phone number in here ">
                             </div>
 

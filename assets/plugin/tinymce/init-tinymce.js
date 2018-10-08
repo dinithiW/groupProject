@@ -53,6 +53,13 @@ tinymce.init({
       url : "http://localhost/ucsc/assets/templates/createAd.html",
       description : "Edit the fields shown in red"
     },
+
+    {
+      title: "Post Ad",
+      url : "http://localhost/ucsc/assets/templates/PostAddd.html",
+      description : "Edit the fields shown in red"
+    },
+
       {
         title: "Timestamp",
         content: '<div class="bms-owi-rte-warning"><span>lollllll</span></div>'
