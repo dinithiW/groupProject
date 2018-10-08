@@ -4,6 +4,7 @@ CREATE TABLE `applicants` (
   `PASSWORD` varchar(255) NOT NULL,
   `EMAIL` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 CREATE TABLE `comments` (
   `COMMENT_ID` int(11) NOT NULL,
   `COMMENT_SUBJECT` varchar(250) NOT NULL,
@@ -73,6 +74,10 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `ucsc`
+--
 
 --
 -- Database: `ucsc`
