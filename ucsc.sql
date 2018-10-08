@@ -197,6 +197,10 @@ INSERT INTO `file_upload_links` (`LINK_ID`, `LINK_NAME`) VALUES
 --
 
 --
+-- MAKE CHANGES FOR JUST TEST
+--
+
+--
 -- Indexes for table `file_upload_links`
 --
 ALTER TABLE `file_upload_links`
