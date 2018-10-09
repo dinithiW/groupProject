@@ -116,7 +116,7 @@ class loginPanelValidation extends CI_Model{
 				$this->load->library('session');
 				
 				$data = array(
-			        'email'     => $row->EMAIL,
+			        //'email'     => $row->EMAIL,
 			        'username' => $row->USERNAME,
 			        'logged_in' => TRUE
 				);
