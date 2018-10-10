@@ -49,7 +49,7 @@ include "login-screen-header.php";
 
                                         <div class="form-group label-floating">
                                             <label class="control-label">Email address</label>
-                                            <input type="email" class="form-control">
+                                            <input type="email" class="form-control"  style="color: white">
                                         </div>
                                     </div>
 
@@ -59,7 +59,7 @@ include "login-screen-header.php";
                                         </span>
                                         <div class="form-group label-floating">
                                             <label class="control-label">Password</label>
-                                            <input type="password" class="form-control">
+                                            <input type="password" class="form-control"  style="color: white">
                                         </div>
                                     </div>
 
@@ -69,7 +69,7 @@ include "login-screen-header.php";
                                         </span>
                                         <div class="form-group label-floating">
                                             <label class="control-label">Confirm Password</label>
-                                            <input type="password" class="form-control">
+                                            <input type="password" class="form-control"  style="color: white">
                                         </div>
                                     </div>
                                 </div>
