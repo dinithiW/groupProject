@@ -46,6 +46,8 @@
             return $query;
         }
 
+
+
         //delete file uploading link from database
 
         function deleteFileUploadLinkFromDatabase($id){
