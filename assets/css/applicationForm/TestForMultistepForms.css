@@ -1,102 +1,114 @@
-#msform{
-    width:700px;
-    margin:50px auto;
-    text-align:center;
+$wizard-color-neutral: #ccc !default;
+$wizard-color-active: #4183D7 !default;
+$wizard-color-complete: #87D37C !default;
+$wizard-step-width-height: 64px !default;
+$wizard-step-font-size: 24px !default;
+
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
 }
 
-body{
+.step-wrapper {
+    padding: 20px 0;
+    display: none;
     
+    &.active {
+        display: block;
+    }
 }
 
-#msform fieldset{
-    background: white;
-    border: 0 none;
-    border-radius: 3px;
-    box-shadow:green;
-    padding: 20px 30px;
-}
 
-#msform fieldset:not(:first-of-type){
-   display:none;
-}
 
-#msform input, #msform textarea{
-    padding: 15px;
-    border: 1px solid greenyellow;
-    border-radius: 3px;
-    margin-bottom: 10px;
-    font-family: monospace;
-    color: blueviolet;
-}
-
-#progressbar{
-    margin-bottom:20px;
-    overflow:hidden;
-    counter-reset:step;
-}
-
-#progressbar li{
-    list-style-type:none;
-    margin-bottom:20px;
-    overflow:hidden;
-    color:green;
-    text-transform: uppercase;
-    font-size:20px;
-    width:200px;
-    float:left;
+.step-indicator {
+    border-collapse: separate;
+    display: table;
+    margin-left: 0px;
+    position: relative;
+    table-layout: fixed;
+    text-align: center;
+    vertical-align: middle;
+    padding-left: 0;
+    padding-top: 20px;
     
+    li {
+        display: table-cell;
+        position: relative;
+        float: none;
+        padding: 0;
+        width: 1%;
+        
+        &:after {
+            background-color: $wizard-color-neutral;
+            content: "";
+            display: block;
+            height: 1px;
+            position: absolute;
+            width: 100%;
+            top: $wizard-step-width-height/2;
+        }
+        
+        &:after {
+            left: 50%;
+        }
+        
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+        
+        &.active {
+            .step {
+                border-color: $wizard-color-active;
+                color: $wizard-color-active;
+            }
+            
+            .caption {
+                color: $wizard-color-active;
+            }
+        }
+        
+        &.complete {
+            &:after {
+                background-color: $wizard-color-complete;
+            }
+            
+            .step {
+                border-color: $wizard-color-complete;
+                color: $wizard-color-complete;
+            }
+            
+            .caption {
+                color: $wizard-color-complete;
+            }
+        }
+    }
+    
+    .step {
+        background-color: #fff;
+        border-radius: 50%;
+        border: 1px solid $wizard-color-neutral;
+        color: $wizard-color-neutral;
+        font-size: $wizard-step-font-size;
+        height: $wizard-step-width-height;
+        line-height: $wizard-step-width-height;
+        margin: 0 auto;
+        position: relative;
+        width: $wizard-step-width-height;
+        z-index: 1;
+        
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    
+    .caption {
+        color: $wizard-color-neutral;
+        padding: 11px 16px;
+    }
 }
-
-#progressbar li:before{
-    content:counter(step);
-    counter-increment:step;
-    width: 20px;
-    display: block;
-    font-size: 30px;
-    color: blue;
-    background: red;
-    border-radius: 5px;
-    margin: 0 auto 5px auto;
-}
-
-#progressbar li:after{
-    content:'';
-    width: 200px;
-    height: 3px;
-    background: rgb(175, 247, 9);
-    position:absolute;
-    margin-left: -250px;
-    top:70px;
-    z-index: -1;
-}
-
-#progressbar li:first-child:after{
-    content: none;
-}
-
-#progressbar li.active:before, #progressbar li.active:after{
-    background: green;
-    color: blue;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
