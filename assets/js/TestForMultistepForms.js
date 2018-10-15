@@ -1,59 +1,88 @@
-var current_fs, next_fs, previous_fs;
-var left,opacity,scale;
+Vue.component("step-navigation-step", {
+    template: "#step-navigation-step-template",
 
-$(".next").click(
-    function(){
-        current_fs = $(this).parent();
-        next_fs    = $(this).parent().next();
+    props: ["step", "currentstep"],
 
-        $("#progressbar li").eq($("#msform fieldset").index(next_fs)).addClass("active");
+    computed: {
+        indicatorclass() {
+            return {
+                active: this.step.id == this.currentstep,
+                complete: this.currentstep > this.step.id
+            };
+        }
+    }
+});
 
-        next_fs.show();
-        current_fs.animate(
-            {opacity:0},
+Vue.component("step-navigation", {
+    template: "#step-navigation-template",
+
+    props: ["steps", "currentstep"]
+});
+
+Vue.component("step", {
+    template: "#step-template",
+
+    props: ["step", "stepcount", "currentstep"],
+
+    computed: {
+        active() {
+            return this.step.id == this.currentstep;
+        },
+
+        firststep() {
+            return this.currentstep == 1;
+        },
+
+        laststep() {
+            return this.currentstep == this.stepcount;
+        },
+
+        stepWrapperClass() {
+            return {
+                active: this.active
+            };
+        }
+    },
+
+    methods: {
+        nextStep() {
+            this.$emit("step-change", this.currentstep + 1);
+        },
+
+        lastStep() {
+            this.$emit("step-change", this.currentstep - 1);
+        }
+    }
+});
+
+new Vue({
+    el: "#app",
+
+    data: {
+        currentstep: 1,
+
+        steps: [
             {
-            step:function(now, mx){
-                scale = 1-(1-now)*0.2;
-                left  =(now*50)+"%";
-                opacity = 1-now;
-                current_fs.css({'transform':'scale('+scale+')'});
-                next_fs.css({'left':left,'opacity':opacity});
+                id: 1,
+                title: "Personal",
+                icon_class: "fa fa-user-circle-o"
             },
-            duration:800,
-            complete:function(){
-                current_fs.hide();
+            {
+                id: 2,
+                title: "Details",
+                icon_class: "fa fa-th-list"
             },
-            easing:'easeInOutBack'
-        });
+            {
+                id: 3,
+                title: "Send",
+                icon_class: "fa fa-paper-plane"
+            }
+        ]
+    },
 
-        
+    methods: {
+        stepChanged(step) {
+            this.currentstep = step;
+        }
     }
-);
-
-
-$(".previous").click(
-    function(){
-        current_fs = $(this).parent();
-        next_fs    = $(this).parent().prev();
-
-        $("#progressbar li").eq($("#msform fieldset").index(next_fs)).addClass("active");
-
-        next_fs.show();
-        current_fs.animate({opacity:0},{
-            step:function(now, mx){
-                scale = 1-(1-now)*0.2;
-                left  =(now*50)+"%";
-                opacity = 1-now;
-                current_fs.css({'transform':'scale('+scale+')'});
-                next_fs.css({'left':left,'opacity':opacity});
-            },
-            duration:800,
-            complete:function(){
-                current_fs.hide();
-            },
-            easing:'easeInOutBack'
-        });
-
-        
-    }
-);
+});

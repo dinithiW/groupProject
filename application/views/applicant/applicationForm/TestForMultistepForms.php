@@ -3,6 +3,7 @@
         <title>thie for welocme</title>
         <script type="text/javascript" src="<?php echo base_url();?>/assets/js/TestForMultistepForms.js" ></script>
         <link rel="stylesheet" href="<?=base_url('assets/css/applicationForm/TestForMultistepForms.css')?>" type="text/css"/>
+        <link rel="stylesheet" href="<?=base_url('assets/css/applicationForm/TestForMultistepForms.css')?>" type="text/css"/>
    </head>
 
     <body>
