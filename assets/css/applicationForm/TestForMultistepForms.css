@@ -1,86 +1,146 @@
-@import "https://fonts.googleapis.com/css?family=Roboto";
-body {
-  padding: 0;
-  margin: 0;
-  background-color: #fff;
-  font-family: 'Roboto', sans-serif;
+/* SUBSCRIBE Youtube Channel
+https://www.youtube.com/channel/UCQM5ye1xR4vJgtga0ryud2Q/
+*/
+
+body{background-color:yellow; }
+
+.wizard {
+    margin: 20px auto;
+    background: yellow;
 }
 
-.step-wrapper {
-  padding: 20px 0;
-  display: none;
-}
-.step-wrapper.active {
-  display: block;
+    .wizard .nav-tabs {
+        position: relative;
+        margin: 40px auto;
+        margin-bottom: 0;
+        border-bottom-color: #ff00ff;
+    }
+
+    .wizard > div.wizard-inner {
+        position: relative;
+    }
+
+.connecting-line {
+    height: 2px;
+    background: #ff00ff;
+    position: absolute;
+    width: 80%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    z-index: 1;
 }
 
-.step-indicator {
-  border-collapse: separate;
-  display: table;
-  margin-left: 0px;
-  position: relative;
-  table-layout: fixed;
-  text-align: center;
-  vertical-align: middle;
-  padding-left: 0;
-  padding-top: 20px;
+.wizard .nav-tabs > li.active > a, .wizard .nav-tabs > li.active > a:hover, .wizard .nav-tabs > li.active > a:focus {
+    color: #555555;
+    cursor: default;
+    border: 0;
+    border-bottom-color: transparent;
 }
-.step-indicator li {
-  display: table-cell;
-  position: relative;
-  float: none;
-  padding: 0;
-  width: 1%;
+
+span.round-tab {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    display: inline-block;
+    border-radius: 100px;
+    background: #fff;
+    border: 2px solid #ff00ff;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    font-size: 25px;
 }
-.step-indicator li:after {
-  background-color: #ccc;
-  content: "";
-  display: block;
-  height: 1px;
-  position: absolute;
-  width: 100%;
-  top: 32px;
+span.round-tab i{
+    color:##00ffff;
 }
-.step-indicator li:after {
-  left: 50%;
+.wizard li.active span.round-tab {
+    background: #fff;
+    border: 2px solid #ff00ff;
+    
 }
-.step-indicator li:last-child:after {
-  display: none;
+.wizard li.active span.round-tab i{
+    color: #5bc0de;
 }
-.step-indicator li.active .step {
-  border-color: #4183D7;
-  color: #4183D7;
+
+span.round-tab:hover {
+    color: #333;
+    border: 2px solid #ff00ff;
 }
-.step-indicator li.active .caption {
-  color: #4183D7;
+
+.wizard .nav-tabs > li {
+    width: 25%;
 }
-.step-indicator li.complete:after {
-  background-color: #87D37C;
+
+.wizard li:after {
+    content: " ";
+    position: absolute;
+    left: 46%;
+    opacity: 0;
+    margin: 0 auto;
+    bottom: 0px;
+    border: 5px solid transparent;
+    border-bottom-color: #5bc0de;
+    transition: 0.1s ease-in-out;
 }
-.step-indicator li.complete .step {
-  border-color: #87D37C;
-  color: #87D37C;
+
+.wizard li.active:after {
+    content: " ";
+    position: absolute;
+    left: 46%;
+    opacity: 1;
+    margin: 0 auto;
+    bottom: 0px;
+    border: 10px solid transparent;
+    border-bottom-color: #ff00ff;
 }
-.step-indicator li.complete .caption {
-  color: #87D37C;
+
+.wizard .nav-tabs > li a {
+    width: 70px;
+    height: 70px;
+    margin: 20px auto;
+    border-radius: 100%;
+    padding: 0;
 }
-.step-indicator .step {
-  background-color: #fff;
-  border-radius: 50%;
-  border: 1px solid #ccc;
-  color: #ccc;
-  font-size: 24px;
-  height: 64px;
-  line-height: 64px;
-  margin: 0 auto;
-  position: relative;
-  width: 64px;
-  z-index: 1;
+
+    .wizard .nav-tabs > li a:hover {
+        background: transparent;
+    }
+
+.wizard .tab-pane {
+    position: relative;
+    padding-top: 50px;
 }
-.step-indicator .step:hover {
-  cursor: pointer;
+
+.wizard h3 {
+    margin-top: 0;
 }
-.step-indicator .caption {
-  color: #ccc;
-  padding: 11px 16px;
+
+@media( max-width : 585px ) {
+
+    .wizard {
+        width: 90%;
+        height: auto !important;
+    }
+
+    span.round-tab {
+        font-size: 16px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .wizard .nav-tabs > li a {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .wizard li.active:after {
+        content: " ";
+        position: absolute;
+        left: 35%;
+    }
 }
