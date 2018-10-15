@@ -1,53 +1,89 @@
 <html>
     <head>
         <title>thie for welocme</title>
-        
+        <script type="text/javascript" src="<?php echo base_url();?>/assets/js/TestForMultistepForms.js" ></script>
         <link rel="stylesheet" href="<?=base_url('assets/css/applicationForm/TestForMultistepForms.css')?>" type="text/css"/>
    </head>
 
     <body>
-        <form id="msform">
-            <ul id="progressbar">
-                <li class="active">account1</li>
-                <li>account2</li>
-                <li>account3</li>
-            </ul>
+    <form method="POST" action="">
+<div class="container">
+    <div id="app">
+        <step-navigation :steps="steps" :currentstep="currentstep">
+        </step-navigation>
+        
+        <div v-show="currentstep == 1">
+            <h3>Step 1</h3>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" name="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" class="form-control" placeholder="Password">
+            </div>
+        </div>
 
-            <fieldset>
+        <div v-show="currentstep == 2">
+            <h3>Step 2</h3>
+            <div class="form-group">
+                <label for="select">Example select</label>
+                <select class="form-control" name="select">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+        </div>
 
-                <h2 class="fs-title">personal </h2>
-                <h2 class="fs-dubtitle">create your acconut</h2>
-                <input type="text" placeholder="email" name="email"/>
-                <input type="password" placeholder="password" name="pass"/>
-                <input type="password" placeholder="re enter password" name="cpass"/>
-                <input type="button" value="next" class="next action-button"/>
+        <div v-show="currentstep == 3">
+            <h3>Step 3</h3>
+            <div class="form-group">
+                <label for="textarea">Example textarea</label>
+                <textarea class="form-control" name="textarea" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="file">File input</label>
+                <input type="file" class="form-control-file" name="file" aria-describedby="fileHelp">
+                <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+            </div>
+        </div>
 
-            </fieldset>
+        <step v-for="step in steps" :currentstep="currentstep" :key="step.id" :step="step" :stepcount="steps.length" @step-change="stepChanged">
+        </step>
 
-            <fieldset>
+        <script type="x-template" id="step-navigation-template">
+            <ol class="step-indicator">
+                <li v-for="step in steps" is="step-navigation-step" :key="step.id" :step="step" :currentstep="currentstep">
+                </li>
+            </ol>
+        </script>
 
-                <h2 class="fs-title"></h2>
-                <h2 class="fs-dubtitle">educational</h2>
-                <input type="text" placeholder="email" name="email"/>
-                <input type="password" placeholder="password" name="pass"/>
-                <input type="password" placeholder="re enter password" name="cpass"/>
-                <input type="button" value="enter" class="next action-button"/>
+        <script type="x-template" id="step-navigation-step-template">
+            <li :class="indicatorclass">
+                <div class="step"><i :class="step.icon_class"></i></div>
+                <div class="caption hidden-xs hidden-sm">Step <span v-text="step.id"></span>: <span v-text="step.title"></span></div>
+            </li>
+        </script>
 
-            </fieldset>
-
-            <fieldset>
-                <h2 class="fs-title"></h2>
-                <h2 class="fs-dubtitle">professional </h2>
-                <input type="text" placeholder="email" name="email"/>
-                <input type="password" placeholder="password" name="pass"/>
-                <input type="password" placeholder="re enter password" name="cpass"/>
-                
-                <input type="button" value="enter" class="next action-button"/>
-            </fieldset>
-
-        </form>
-
-        <script src="http://thecodeplayer.com/uploads/js/jquery-1.9.1.min.js" type="text/javascript"></script>
-        <script src="http://thecodeplayer.com/uploads/js/jquery.easing.min.js" type="text/javascript"></script>
+        <script type="x-template" id="step-template">
+            <div class="step-wrapper" :class="stepWrapperClass">
+                <button type="button" class="btn btn-primary" @click="lastStep" :disabled="firststep">
+                    Back
+                </button>
+                <button type="button" class="btn btn-primary" @click="nextStep" :disabled="laststep">
+                    Next
+                </button>
+                <button type="submit" class="btn btn-primary" v-if="laststep">
+                    Submit
+                </button>
+            </div>
+        </script>
+    </div>
+</div>
+</form>
     </body>
 </html>
