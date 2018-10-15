@@ -1,88 +1,38 @@
-Vue.component("step-navigation-step", {
-    template: "#step-navigation-step-template",
+// SUBSCRIBE Youtube Channel
+// https://www.youtube.com/channel/UCQM5ye1xR4vJgtga0ryud2Q/
 
-    props: ["step", "currentstep"],
+$(document).ready(function () {
+    //Initialize tooltips
+    $('.nav-tabs > li a[title]').tooltip();
+    
+    //Wizard
+    $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
 
-    computed: {
-        indicatorclass() {
-            return {
-                active: this.step.id == this.currentstep,
-                complete: this.currentstep > this.step.id
-            };
+        var $target = $(e.target);
+    
+        if ($target.parent().hasClass('disabled')) {
+            return false;
         }
-    }
+    });
+
+    $(".next-step").click(function (e) {
+
+        var $active = $('.wizard .nav-tabs li.active');
+        $active.next().removeClass('disabled');
+        nextTab($active);
+
+    });
+    $(".prev-step").click(function (e) {
+
+        var $active = $('.wizard .nav-tabs li.active');
+        prevTab($active);
+
+    });
 });
 
-Vue.component("step-navigation", {
-    template: "#step-navigation-template",
-
-    props: ["steps", "currentstep"]
-});
-
-Vue.component("step", {
-    template: "#step-template",
-
-    props: ["step", "stepcount", "currentstep"],
-
-    computed: {
-        active() {
-            return this.step.id == this.currentstep;
-        },
-
-        firststep() {
-            return this.currentstep == 1;
-        },
-
-        laststep() {
-            return this.currentstep == this.stepcount;
-        },
-
-        stepWrapperClass() {
-            return {
-                active: this.active
-            };
-        }
-    },
-
-    methods: {
-        nextStep() {
-            this.$emit("step-change", this.currentstep + 1);
-        },
-
-        lastStep() {
-            this.$emit("step-change", this.currentstep - 1);
-        }
-    }
-});
-
-new Vue({
-    el: "#app",
-
-    data: {
-        currentstep: 1,
-
-        steps: [
-            {
-                id: 1,
-                title: "Personal",
-                icon_class: "fa fa-user-circle-o"
-            },
-            {
-                id: 2,
-                title: "Details",
-                icon_class: "fa fa-th-list"
-            },
-            {
-                id: 3,
-                title: "Send",
-                icon_class: "fa fa-paper-plane"
-            }
-        ]
-    },
-
-    methods: {
-        stepChanged(step) {
-            this.currentstep = step;
-        }
-    }
-});
+function nextTab(elem) {
+    $(elem).next().find('a[data-toggle="tab"]').click();
+}
+function prevTab(elem) {
+    $(elem).prev().find('a[data-toggle="tab"]').click();
+}
