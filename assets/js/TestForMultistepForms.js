@@ -1,6 +1,6 @@
 // SUBSCRIBE Youtube Channel
 // https://www.youtube.com/channel/UCQM5ye1xR4vJgtga0ryud2Q/
-
+document.write("this ish java script");
 $(document).ready(function () {
     //Initialize tooltips
     $('.nav-tabs > li a[title]').tooltip();
