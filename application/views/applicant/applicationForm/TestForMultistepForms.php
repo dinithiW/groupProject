@@ -1,140 +1,92 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>thie for welocme</title>
+<head>
+<meta charset="utf-8">
+<title>jQuery Multi Step Form Demo</title>
+<style>
+* {
+margin: 0;
+padding: 0;
+}
+html {
+height: 100%;
+background: url('bg.png');
+background: linear-gradient(rgba(196, 102, 0, 0.2), rgba(155, 89, 182, 0.2)),  url(bg.png);
+}
+body {
+font-family: arial, verdana;
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://thecodeplayer.com/uploads/js/jquery.easing.min.js" type="text/javascript"></script>
+<script src="script.js" type="text/javascript"></script>
+<script type="text/javascript" src="<?= base_url();?>/assets/js/TestForMultistepForms.js" ></script>
+<link rel="stylesheet" href="<?=base_url('assets/css/applicationForm/TestForMultistepForms.css')?>" type="text/css"/>
+</head>
+<body>
+<h1 style="margin:150px auto 50px auto"  align="center">jQuery Multi Step Form Demo</h1>
+<div id="multistepform-example-container">
+<ul id="multistepform-progressbar">
+<li class="active">Account Setup</li>
+<li>Social Profiles</li>
+<li>Personal Details</li>
+</ul>
+<div class="form">
+<form action="">
+<h2 class="fs-title">Create your account</h2>
+<h3 class="fs-subtitle">This is step 1</h3>
+<input type="text" name="email" placeholder="Email">
+<input type="password" name="pass" placeholder="Password">
+<input type="password" name="cpass" placeholder="Confirm Password">
+<input type="button" name="next" class="next button" value="Next">
+</form>
+</div>
+<div class="form">
+<form action="">
+<h2 class="fs-title">Social Profiles</h2>
+<h3 class="fs-subtitle">Your presence on the social network</h3>
+<input type="text" name="twitter" placeholder="Twitter">
+<input type="text" name="facebook" placeholder="Facebook">
+<input type="text" name="gplus" placeholder="Google Plus">
+<input type="button" name="previous" class="previous button" value="Previous">
+<input type="button" name="next" class="next button" value="Next">
+</form>
+</div>
+<div class="form">
+<form action="">
+<h2 class="fs-title">Personal Details</h2>
+<h3 class="fs-subtitle">We will never sell it</h3>
+<input type="text" name="fname" placeholder="First Name">
+<input type="text" name="lname" placeholder="Last Name">
+<input type="text" name="phone" placeholder="Phone">
+<textarea name="address" placeholder="Address"></textarea>
+<input type="button" name="previous" class="previous button" value="Previous">
+<input type="button" name="submit" class="next button" value="Finish">
+</form>
+</div>
+</div>
+<script>
+$(document).ready(function(){
+    $.multistepform({
+        container:'multistepform-example-container',
+        form_method:'GET',
+    })
+});
+</script>
 
-        <link rel="stylesheet" href="<?=base_url('assets/css/applicationForm/TestForMultistepForms.css')?>" type="text/css"/>
-        <link rel="stylesheet" href="<?=base_url('assets/css/applicationForm/font-awesome.min.css')?>" type="text/css"/>
-        <link rel="stylesheet" href="<?=base_url('assets/css/applicationForm/bootstrap.min.css')?>" type="text/css"/>
-        <script type="text/javascript" src="<?= base_url('assets/js/bootstrap.js')?>" ></script>
-        <script type="text/javascript" src="<?= base_url('assets/js/TestForMultistepForms.js')?>" ></script>
-        <script type="text/javascript" src="<?= base_url('assets/js/jquery.min.js.js')?>" ></script>
-        <script type="text/javascript" src="<?= base_url('assets/js/bootstrap.min.js')?>" ></script>
-        <script type="text/javascript" src="<?= base_url('assets/js/script.js')?>" ></script>
-        <script type="text/javascript" src="<?= base_url('assets/js/popper.min.js')?>" ></script>
+<script type="text/javascript">
 
-    </head>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
 
-    <body>
-       
-    <div class="container">
-        <form action="save.php" method="post">
-            <div class="wizards">
-                <div class="progressbar">
-                    <div class="progress-line" data-now-value="12.11" data-number-of-steps="5" style="width: 12.11%;"></div> <!-- 19.66% -->
-                </div>
-                <div class="form-wizard active">
-                    <div class="wizard-icon"><i class="fa fa-file-text-o"></i></div>
-                    <p>ruwan</p>
-                </div>
-                <div class="form-wizard">
-                    <div class="wizard-icon"><i class="fa fa-user"></i></div>
-                    <p>About</p>
-                </div>
-                <div class="form-wizard">
-                    <div class="wizard-icon"><i class="fa fa-key"></i></div>
-                    <p>Account</p>
-                </div>
-                <div class="form-wizard">
-                    <div class="wizard-icon"><i class="fa fa-globe"></i></div>
-                    <p>Website</p>
-                </div>
-                <div class="form-wizard">
-                    <div class="wizard-icon"><i class="fa fa-check-circle"></i></div>
-                    <p>Finish</p>
-                </div>
-            </div>
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
 
-
-            <fieldset>
-                <iframe src="license.txt"></iframe>
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" value="yes"> I agree 
-                </label>
-                <div class="wizard-buttons">
-                    <button type="button" class="btn btn-next">Next</button>
-                </div>
-            </fieldset>
-
-
-            <fieldset>
-                <h4>Input personal data</h4>
-                <div class="form-group">
-                    <label>Name</label>
-                    <input type="text" name="name" class="form-control" placeholder="Nama anda"/>
-                </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" name="email" class="form-control" placeholder="Surel anda"/>
-                </div>
-                <div class="form-group">
-                    <label>Phone Number</label>
-                    <input type="tel" name="phone" class="form-control" placeholder="Nomor telpon anda"/>
-                </div>
-                <div class="form-group">
-                    <label>Address</label>
-                    <textarea name="address" class="form-control" placeholder="Alamat anda"></textarea>
-                </div>
-                <div class="wizard-buttons">
-                    <button type="button" class="btn btn-previous">Previous</button>
-                    <button type="button" class="btn btn-next">Next</button>
-                </div>
-            </fieldset>
-
-
-            <fieldset>
-                <h4>Input account info</h4>
-                <div class="form-group">
-                    <label>Username</label>
-                    <input type="text" name="username" class="form-control" placeholder="Nama pengguna"/>
-                </div>
-                <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" name="password" class="form-control" placeholder="Kata sandi"/>
-                </div>
-                <div class="wizard-buttons">
-                    <button type="button" class="btn btn-previous">Previous</button>
-                    <button type="button" class="btn btn-next">Next</button>
-                </div>
-            </fieldset>
-
-
-            <fieldset>
-                    <h4>Input website info</h4>
-                    <div class="form-group">
-                        <label>Title</label>
-                        <input type="text" name="title" class="form-control" placeholder="Judul website"/>
-                    </div>
-                    <div class="form-group">
-                        <label>Description</label>
-                        <textarea name="description" class="form-control" placeholder="Deskripsi website"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label>Website URL</label>
-                        <input type="text" name="sites" class="form-control" placeholder="Alamat website"/>
-                    </div>
-                    <div class="form-group">
-                        <label>Category</label>
-                        <input type="text" name="category" class="form-control" placeholder="Category website"/>
-                    </div>
-                <div class="wizard-buttons">
-                    <button type="button" class="btn btn-previous">Previous</button>
-                    <button type="button" class="btn btn-next">Next</button>
-                </div>
-            </fieldset>
-
-
-            <fieldset>
-                <div class="jumbotron text-center">
-                <h1>Please click submit button to save your data</h1>
-                </div>
-                <div class="wizard-buttons">
-                    <button type="button" class="btn btn-previous">Previous</button>
-                    <button type="submit" name="save" class="btn btn-primary btn-submit">Submit</button>
-                </div>
-            </fieldset>
-        </form>
-    </div>
-    
-
-    </body>
+</script>
+</body>
 </html>
