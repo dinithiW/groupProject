@@ -18,14 +18,17 @@
     </head>
 
     <body>
-        
+    
         <div id="multistepform-example-container">
+
 
             <ul id="multistepform-progressbar">
                 <li class="active"><b>Account Setup</b></li>
                 <li><b>Social Profiles</b></li>
                 <li><b>Personal Details</b></li>
             </ul>
+
+            
 
             <div class="form">
                 <form action="">
@@ -65,12 +68,77 @@
                     <h6 class="lables">Office Number (in capital blocks)</h6>
                     <input type="text"   class="input-fields" name="applicant-citizenship" placeholder="Office Number">
 
+                    
+
+                     
+                    <!-- start of the drop downbutton -->  
+
+                    <div class="dropDown">
+                                <div class="gender"><!-- start of the radio button for gneder-->
+                                    <h6 id="selection1"><b>GENDER</b></h6>
+
+                                    <div class="custom-control custom-radio ">
+                                        <input type="radio" class="input-fields" id="selectGender1" name="GENDER" >
+                                        <label class="labels-for-radio-button" id="name1" for="checkGender">MALE</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio ">
+                                        <input type="radio" class="input-fields" id="selectGender2" name="GENDER" checked >
+                                        <label class="labels-for-radio-button" id="name2" for="checkGende">FEMALE</label>
+                                    </div>
+                                </div><!-- end of the radio button for gneder-->
+
+                                <div class="civilStatus"><!-- start of the radio button for civil status-->
+                                    <h6 id="selection2"><b>CIVIL STATUS</b></h6>
+                                    <div class="custom-control custom-radio1 ">
+                                        <input type="radio" class="input-fields" id="civil" name="CIVIL" >
+                                        <label class="labels-for-radio-button" id="name3" for="checkcivil">MARRIED</label>
+                                    </div>
+
+                                    <div class="custom-control custom-radio1 ">
+                                        <input type="radio" class="input-fields" id="civil" name="CIVIL" checked >
+                                        <label class="labels-for-radio-button" id="name4" for="checkcivil">UNMARRIED</label>
+                                    </div>
+                                </div><!-- end of the radio button for civil status-->
 
 
-                   
-                    
-                    
-                    
+                                <div class="citizenship"><!-- start of the radio button for citizenship-->
+                                    <h6 id="selection3"><b>IF A CITIZEN OF SRI LANKA <br> HOW OBTAINED</b></h6>
+                                    <div class="custom-control customRadio3 ">
+                                        <input type="radio" class="input-fields" id="citizenShip" name="CITY" >
+                                        <label class="labels-for-radio-button" id="name5" for="checkcitizenship">BY DESCENT</label>
+                                    </div>
+
+                                    <div class="custom-control customRadio3">
+                                        <input type="radio" class="input-fields" id="citizenShip" name="CITY" checked >
+                                        <label class="labels-for-radio-button" id="name6" for="checkcitizenship">BY REGISTRATION</label>
+                                    </div>
+                                </div><!-- end of the radio button for citizenship-->
+                    </div>
+
+                    <!-- end of the dropdown button-->
+
+                    <!-- start the calender-->
+                    <div class="calender">
+                                <h4 id="birth-date"> Date of Birth</h4>
+                                <input type="date" data-date-inline-picker="true" />
+                            </div>
+                            <!-- end the calender-->
+
+                            <!-- start the age-->
+                            <div class="col-xs-6 col-sm-6 col-md-6 age ">
+                                <h4 id="currect-age"> Age as at closing date of application</h4> 
+                                    <div class="years form-group">
+                                        <input type="text" name="years" id="years" class="form-control input-sm" placeholder="years">
+                                    </div>
+                                    <div class="months form-group">
+                                        <input type="text" name="months" id="months" class="form-control input-sm" placeholder="months">
+                                    </div>
+                                    <div class="days form-group">
+                                        <input type="text" name="days" id="days" class="form-control input-sm" placeholder="days">
+                                    </div>
+                            </div>
+                            <!--end the age-->
 
                    
                     <input type="button"    name="next"  class="next button" value="Next">

@@ -95,7 +95,7 @@
                                 </div><!-- end of the radio button for gneder-->
 
                                 <div class="civilStatus"><!-- start of the radio button for civil status-->
-                                    <h5 class="selection2"><b>CIVIL STATUS</b></h5>
+                                    <h5 id="selection2"><b>CIVIL STATUS</b></h5>
                                     <div class="custom-control custom-radio1 ">
                                         <input type="radio" class="custom-control-input button3" id="civil" name="CIVIL" >
                                         <label class="custom-control-label name3" for="checkcivil">MARRIED</label>
@@ -123,7 +123,7 @@
                             </div>
                     <!-- end of the dropdown button-->
 
-                    
+
 
                             <!-- start the calender-->
                             <div class="calender">
