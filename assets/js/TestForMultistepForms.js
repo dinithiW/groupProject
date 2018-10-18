@@ -2,8 +2,7 @@
 
 (function($) {
 
-    document.write("hello world hello world hello world hello worldhelloruw ruwan ruwan world hello world hello world");
-
+    
     var FORM = $.multistepform = function() {
         FORM.init.apply( this, arguments );
     };
