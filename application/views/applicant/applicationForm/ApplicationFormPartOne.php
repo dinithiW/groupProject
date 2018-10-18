@@ -25,57 +25,57 @@
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
                                 <br/>
-                                <label>Full Name (In Capital Blocks) </label>
-                                <input type="text" name="first-name" id="first-name" class="form-control input-sm" placeholder="Full Name">
+                                <label> </label>
+                                
                             </div>
                             
                             <div class="form-group">
-                                <label>Surname (In Capital Blocks) </label>
+                                <label> </label>
                                 <input type="text" name="last-name" id="last-name" class="form-control input-sm" placeholder="Surname">
                             </div>
 
                             <div class="form-group">
-                                <label>Postal Address </label>
+                                <label> </label>
                                 <input type="text" name="postal-address" id="postal-address" class="form-control input-sm" placeholder="Postal Address">
                             </div>
 
                             <div class="form-group">
-                                <label>Permanent Address </label>
+                                <label></label>
                                 <input type="text" name="permanent-address" id="permanent-address" class="form-control input-sm" placeholder="Permanent Address">
                             </div>
 
                             <div class="form-group">
-                                <label>NIC/Driving Licence/Passport No</label>
+                                <label></label>
                                 <input type="text" name="driving-licence" id="driving-licence"   class="form-control input-sm " placeholder="NIC/Driving Licence/Passport No">
                             </div>
 
                             <div class="form-group">
-                                <label>Citizenship </label>
+                                <label> </label>
                                 <input type="text" name="applicant-citizenship" id="applicant-citizenship"   class="form-control input-sm " placeholder="Citizenship ">
                             </div>
 
                             <div class="form-group">
-                                <label>Personal-Email </label>
+                                <label> </label>
                                 <input type="email" name="personal-email" id="personal-email" class="form-control input-sm" placeholder="Personal-Email ">
                             </div>
 
                              <div class="form-group">
-                                <label>Office-Email</label>
+                                <label></label>
                                 <input type="email" name="office-email" id="office-email" class="form-control input-sm" placeholder="Office-Email">
                             </div>
 
                             <div class="form-group">
-                                <label>Mobile Number</label>
+                                <label></label>
                                 <input type="tel" name="mobile-phone" id="mobile-phone" class="form-control input-sm" placeholder="Mobile Number">
                             </div>
 
                             <div class="form-group">
-                                <label>Home Number </label>
+                                <label> </label>
                                 <input type="tel" name="home-phone" id="home-phone" class="form-control input-sm" placeholder="Home Number">
                             </div>
 
                             <div class="form-group">
-                                <label>Office Number </label>
+                                <label> </label>
                                 <input type="tel" name="office-phone" id="office-phone" class="form-control input-sm" placeholder="Office Number  ">
                             </div>
 
@@ -122,6 +122,8 @@
                                 </div><!-- end of the radio button for citizenship-->
                             </div>
                     <!-- end of the dropdown button-->
+
+                    
 
                             <!-- start the calender-->
                             <div class="calender">
