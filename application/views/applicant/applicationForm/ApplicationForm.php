@@ -4,11 +4,16 @@
         <meta charset="utf-8">
         <title>jQuery Multi Step Form Demo</title>
         
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="http://thecodeplayer.com/uploads/js/jquery.easing.min.js" type="text/javascript"></script>
-        <script src="script.js" type="text/javascript"></script>
-        <script type="text/javascript" src="<?= base_url();?>/assets/js/TestForMultistepForms.js" ></script>
-        <link rel="stylesheet" href="<?=base_url('assets/css/applicationForm/TestForMultistepForms.css')?>" type="text/css"/>
+
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/applicationForm/TestForMultistepForms.css" type="text/css" >
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/applicationForm/bootstrap.min.css" type="text/css"/>
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/applicationForm/ApplicationFormPartOne.css" type="text/css"/>
+        <script type='text/javascript' src="<?php echo base_url(); ?>/assets/js/TestForMultistepForms.js"></script>
+        <script type="text/javascript" src="<?php echo base_url();?>/assets/js/bootstrap.js" ></script>
+        <script type="text/javascript" src="<?php echo base_url();?>/assets/js/bootstrap.min.js" ></script>
+        
         
     
     </head>
@@ -159,11 +164,9 @@
 
           <div class="form">
               <form action="">
-                  <h2 class="fs-title">Social Profiles</h2>
-                  <h3 class="fs-subtitle">Your presence on the social network</h3>
-                  <input type="text" name="twitter" placeholder="Twitter">
-                  <input type="text" name="facebook" placeholder="Facebook">
-                  <input type="text" name="gplus" placeholder="Google Plus">
+                  
+
+              
                   <input type="button" name="previous" class="previous button" value="Previous">
                   <input type="button" name="next" class="next button" value="Next">
               </form>
