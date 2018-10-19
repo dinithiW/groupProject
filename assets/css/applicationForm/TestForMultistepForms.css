@@ -47,31 +47,16 @@
 	width: 300px;
 }
 
-#selectGender{
-	margin-top: -45px;
-	margin-left: -320px;
-	width: 300px;
-}
-
-#selectGende{
-	margin-top: -15px;
-	margin-left: -520px;
-	width: 300px;
-}
-
-
-
-
 #name1{/*male*/
 	margin-top: 0px;
-	margin-left: -980px;
+	margin-left: -370px;
 	width: 100px;
 	height: 30px;
 }
 
 #name2{/*female*/
 	margin-top: 0px;
-	margin-left: -390px;
+	margin-left: -400px;
 	width: 100px;
 	height: 30px;
 }
@@ -101,19 +86,81 @@
 	height: 30px;
 }
 
+.gender{
+	margin-left: 250px;
+	margin-top: 150px;
+	width: 20px;
+	height:20px;
+	background-color: chartreuse;
+}
 
+.gender .customRadio1
 
 #citizenShip{
 	margin-left: 50px;
 	margin-top: 150px;
-	
+	width: 20px;
+	height:20px;
 }
 
-#selectGender{
-	margin-left: 50px;
-	margin-top: 250px;
-	
+#selectGender1{/*gender selection button1*/
+	margin-left: -760px;
+	margin-top: -100px;
+	width: 20px;
+	height:20px;
 }
+
+#selectGender2{/*gender selection button2*/
+	margin-left: -550px;
+	margin-top: 550px;
+	width: 10px;
+	height:10px;
+}
+
+#selectCivil1{/*gender selection button1*/
+	margin-left: -200px;
+	margin-top: 100px;
+	width: 20px;
+	height:20px;
+
+}
+.customRadio1{
+	margin-left: -200px;
+	margin-top: 10px;
+}
+
+.customRadio2{
+	margin-left: 00px;
+	margin-top: 10px;
+}
+
+.customRadio3{
+	margin-left: 200px;
+	margin-top: 10px;
+}
+
+#selectCivil2{/*gender selection button2*/
+	margin-left: -300px;
+	margin-top: 1000px;
+	width: 20px;
+	height:20px;
+}
+
+#selectCitizenship1{/*gender selection button1*/
+	margin-left: -560px;
+	margin-top: 200px;
+	width: 20px;
+	height:20px;
+}
+
+#selectCitizenship2{/*gender selection button2*/
+	margin-left: -550px;
+	margin-top: 200px;
+	width: 20px;
+	height:20px;
+}
+
+
 
 /*end of lables for radio buttons*/
 

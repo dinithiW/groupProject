@@ -77,41 +77,43 @@
                                 <div class="gender"><!-- start of the radio button for gneder-->
                                     <h6 id="selection1"><b>GENDER</b></h6>
 
-                                    <div class="custom-control custom-radio ">
+                                    <div class="customRadio1">
                                         <input type="radio" class="input-fields" id="selectGender1" name="GENDER" >
-                                        <label class="labels-for-radio-button" id="name1" for="checkGender">MALE</label>
+                                        <label class="radio-lables" id="name1" for="checkGender">MALE</label>
                                     </div>
 
-                                    <div class="custom-control custom-radio ">
+                                    <div class="customRadio1">
                                         <input type="radio" class="input-fields" id="selectGender2" name="GENDER" checked >
-                                        <label class="labels-for-radio-button" id="name2" for="checkGende">FEMALE</label>
+                                        <label class="radio-lables" id="name2" for="checkGende">FEMALE</label>
                                     </div>
                                 </div><!-- end of the radio button for gneder-->
 
                                 <div class="civilStatus"><!-- start of the radio button for civil status-->
                                     <h6 id="selection2"><b>CIVIL STATUS</b></h6>
-                                    <div class="custom-control custom-radio1 ">
-                                        <input type="radio" class="input-fields" id="civil" name="CIVIL" >
-                                        <label class="labels-for-radio-button" id="name3" for="checkcivil">MARRIED</label>
+
+                                    <div class="customRadio2">
+                                        <input type="radio" class="input-fields" id="selectCivil1" name="CIVIL" >
+                                        <label class="radio-lables" id="name3" for="checkcivil">MARRIED</label>
                                     </div>
 
-                                    <div class="custom-control custom-radio1 ">
-                                        <input type="radio" class="input-fields" id="civil" name="CIVIL" checked >
-                                        <label class="labels-for-radio-button" id="name4" for="checkcivil">UNMARRIED</label>
+                                    <div class="customRadio2 ">
+                                        <input type="radio" class="input-fields" id="selectCivil2" name="CIVIL" checked >
+                                        <label class="radio-lables" id="name4" for="checkcivil">UNMARRIED</label>
                                     </div>
                                 </div><!-- end of the radio button for civil status-->
 
 
                                 <div class="citizenship"><!-- start of the radio button for citizenship-->
                                     <h6 id="selection3"><b>IF A CITIZEN OF SRI LANKA <br> HOW OBTAINED</b></h6>
-                                    <div class="custom-control customRadio3 ">
-                                        <input type="radio" class="input-fields" id="citizenShip" name="CITY" >
-                                        <label class="labels-for-radio-button" id="name5" for="checkcitizenship">BY DESCENT</label>
+
+                                    <div class="customRadio3 ">
+                                        <input type="radio" class="input-fields" id="selectCitizenship1" name="CITY" >
+                                        <label class="radio-lables" id="name5" for="checkcitizenship">BY DESCENT</label>
                                     </div>
 
-                                    <div class="custom-control customRadio3">
-                                        <input type="radio" class="input-fields" id="citizenShip" name="CITY" checked >
-                                        <label class="labels-for-radio-button" id="name6" for="checkcitizenship">BY REGISTRATION</label>
+                                    <div class="customRadio3">
+                                        <input type="radio" class="input-fields" id="selectCitizenship2" name="CITY" checked >
+                                        <label class="radio-lables" id="name6" for="checkcitizenship">BY REGISTRATION</label>
                                     </div>
                                 </div><!-- end of the radio button for citizenship-->
                     </div>
