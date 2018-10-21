@@ -148,8 +148,6 @@
                     <h5 id="note1">Note:Indicate your level based on self-evaluation of your ability</h5>
 
                 <!--start of the Professional Qualifications table -->
-                      
-                
                 <h4 id="title4">Professional Qualifications </h4>
 
                     <div class="table2">

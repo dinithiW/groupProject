@@ -106,18 +106,15 @@
                     <input type="button"    name="next"  class="next button" value="Next">
                 </form>
             </div>
+<!-- *********************************************************** end the first page************************************************--> 
+
+
+<!-- *********************************************************** start the second page************************************************--> 
 
             <div class="form">
-
                 <form action="">
-                    <h2 class="fs-title">Social Profiles</h2>
-                    <h3 class="fs-subtitle">Your presence on the social network</h3>
-                    <input type="text" name="twitter" placeholder="Twitter">
-                    <input type="text" name="facebook" placeholder="Facebook">
-                    <input type="text" name="gplus" placeholder="Google Plus">
-
-
-                    <h4 id="title1">Secondry Educational Details</h4> <br/>
+                    
+                <h4 id="title1">Secondry Educational Details</h4><br/>
                     <div class="table1"><!-- start of the Secondry Educational Details table-->
                         <table id="Table">
                             <tr class="tr">
@@ -223,9 +220,9 @@
                         </table>
                     </div><!-- end of the Higher Educational Details table-->
                     <h5 id="note1">Note:Certified copies of the certificates and transcripts should be attached</h5>
+                
 
-
-                    <h4 id="title3">Any Other Qualifications </h4>
+                   <h4 id="title3">Any Other Qualifications </h4>
                     <div class="table3">
                         <table id="Table">
                             <tr>
@@ -266,24 +263,19 @@
                         </table>
                     </div>
                     <h5 id="note2">Note:Certified copies of the certificates and transcripts should be attached</h5>
-                
-        </div><!--end of the head-->
-                
 
 
                     <input type="button" name="previous" class="previous button" value="Previous">
                     <input type="button" name="next" class="next button" value="Next">
                 </form>
             </div>
+<!-- *********************************************************** end the second page************************************************--> 
 
+
+
+<!-- *********************************************************** start the third page************************************************--> 
             <div class="form">
                 <form action="">
-                    <h2 class="fs-title">Personal Details</h2>
-                    <h3 class="fs-subtitle">We will never sell it</h3>
-                    <input type="text" name="fname" placeholder="First Name">
-                    <input type="text" name="lname" placeholder="Last Name">
-                    <input type="text" name="phone" placeholder="Phone">
-                    <textarea name="address" placeholder="Address"></textarea>
 
                     <h4 id="title1">Professional Qualifications </h4>
                     <div class="table1"><!-- start of the table1-->
@@ -330,11 +322,120 @@
                         </table>
                     </div><!-- end of the table1-->
 
+
+                    <h4 id="title2">Proficiency in Sinhala/Tamil/English</h4>
+                    <h5 id="title3">**********************************Ability to Work*******************************  | ********************************* Ability To Teach*****************</h5>
+                    
+<!-- start of the dropdown buttons-->
+
+                    <div class="dropdown drop sinhala1" ><!-- start of the dropdown for sinhala-->
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">SINHALA
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Very Good</a></li>
+                            <li><a href="#">Good</a></li>
+                            <li><a href="#">Fair</a></li>
+                            <li><a href="#">No Knowledge</a></li>
+                        </ul>
+                    </div><!-- end of the dropdown for sinhala1-->
+
+                    <div class="dropdown drop tamil1" ><!-- start of the dropdown for tamil1-->
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">TAMIL
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Very Good</a></li>
+                            <li><a href="#">Good</a></li>
+                            <li><a href="#">Fair</a></li>
+                            <li><a href="#">No Knowledge</a></li>
+                        </ul>
+                    </div><!-- end of the dropdown for tamil1-->
+
+                    <div class="dropdown drop english1" ><!-- start of the dropdown for english1-->
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">ENGLISH
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Very Good</a></li>
+                            <li><a href="#">Good</a></li>
+                            <li><a href="#">Fair</a></li>
+                            <li><a href="#">No Knowledge</a></li>
+                        </ul>
+                    </div><!-- end of the dropdown for english1-->
+
+                    <div class="dropdown drop sinhala2" ><!-- start of the dropdown for sinhala2-->
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">SINHALA
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Very Good</a></li>
+                            <li><a href="#">Good</a></li>
+                            <li><a href="#">Fair</a></li>
+                            <li><a href="#">No Knowledge</a></li>
+                        </ul>
+                    </div><!-- end of the dropdown for sinhala2-->
+
+                    <div class="dropdown drop tamil2" ><!-- start of the dropdown for tamil2-->
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">TAMIL
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Very Good</a></li>
+                            <li><a href="#">Good</a></li>
+                            <li><a href="#">Fair</a></li>
+                            <li><a href="#">No Knowledge</a></li>
+                        </ul>
+                    </div><!-- end of the dropdown for tamil2-->
+
+                    <div class="dropdown drop english2" ><!-- start of the dropdown for english2-->
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">ENGLISH
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Very Good</a></li>
+                            <li><a href="#">Good</a></li>
+                            <li><a href="#">Fair</a></li>
+                            <li><a href="#">No Knowledge</a></li>
+                        </ul>
+                    </div><!-- end of the dropdown for english2-->
+<!-- end of the dropdown series-->
+
+                    <h5 id="note1">Note:Indicate your level based on self-evaluation of your ability</h5>
+
+                    <!-- start the text box one-->
+                    <div form-group>
+                        <input type="text" name="experience" id="experience" class="form-control input-sm" placeholder="                                        Experience relevant to the post applied for (Please indicate the tasks handled with the duration) ">
+                    </div>
+                    <!-- end the text box one-->
+
+                     <!-- start the text box two-->
+                    <div form-group>
+                        <input type="text" name="research" id="research" class="form-control input-sm" placeholder="                                        Details of research and publications, If any (if space is insufficient, please append it with appends) ">
+                    </div>
+                    <!-- end the text box two-->
+
+
+                    <input type="button" name="previous" class="previous button" value="Previous">
+                    <input type="button" name="submit" class="next button" value="Next">
+                </form>
+            </div>
+
+
+<!-- *********************************************************** end the third page************************************************--> 
+
+
+<!-- *********************************************************** start the fourth page************************************************--> 
+            <div class="form">
+                <form action="">
+
                     <input type="button" name="previous" class="previous button" value="Previous">
                     <input type="button" name="submit" class="next button" value="Finish">
                 </form>
             </div>
-            
+
+<!-- *********************************************************** end the fourth page************************************************--> 
+
         </div>
     </body>
 </html>
