@@ -117,8 +117,7 @@
                     <input type="text" name="gplus" placeholder="Google Plus">
 
 
-                    <h4 id="title1">Secondry Educational Details</h4>
-            <br/>
+                    <h4 id="title1">Secondry Educational Details</h4> <br/>
                     <div class="table1"><!-- start of the Secondry Educational Details table-->
                         <table id="Table">
                             <tr class="tr">
@@ -160,6 +159,71 @@
                             </tr>
                         </table>
                     </div><!-- end of the Secondry Educational Details table-->
+
+
+                    <h4 id="title2">Higher Educational Details</h4>
+                    <div class="table2"><!-- start of the Higher Educational Details table-->
+                        <table id="Table">
+                            <tr>
+                                <th>University / Institution</th>
+                                <th>From</th>
+                                <th>To</th>
+                                <th>Degree Obtained</th>
+                                <th>Duration</th>
+                                <th>Class</th>
+                                <th>Year</th>
+                                <th>Index No</th>
+                            </tr>
+
+                            <tr class="tr">
+                                <td><input type="text" class="Text1"  required size='25'/></td>
+                                <td><input type="text" class="Text2"  required size='3'/></td>
+                                <td><input type="text" class="Text3"  required size='3'/></td>
+                                <td><input type="text" class="Text2"  required size='25'/></td>
+                                <td><input type="text" class="Text3"  required size='11'/></td>
+                                <td><input type="text" class="Text3"  required size='13'/></td>
+                                <td><input type="text" class="Text2"  required size='4'/></td>
+                                <td><input type="text" class="Text3"  required size='7'/></td>
+                            <td><span class="lblStatus"></span></td>
+                            
+                            <tr class="tr">
+                                <td><input type="text" class="Text1"  required size='25'/></td>
+                                <td><input type="text" class="Text2"  required size='3'/></td>
+                                <td><input type="text" class="Text3"  required size='3'/></td>
+                                <td><input type="text" class="Text2"  required size='25'/></td>
+                                <td><input type="text" class="Text3"  required size='11'/></td>
+                                <td><input type="text" class="Text3"  required size='13'/></td>
+                                <td><input type="text" class="Text2"  required size='4'/></td>
+                                <td><input type="text" class="Text3"  required size='7'/></td>
+                            <td><span class="lblStatus"></span></td>
+
+                            <tr class="tr">
+                                <td><input type="text" class="Text1"  required size='25'/></td>
+                                <td><input type="text" class="Text2"  required size='3'/></td>
+                                <td><input type="text" class="Text3"  required size='3'/></td>
+                                <td><input type="text" class="Text2"  required size='25'/></td>
+                                <td><input type="text" class="Text3"  required size='11'/></td>
+                                <td><input type="text" class="Text3"  required size='13'/></td>
+                                <td><input type="text" class="Text2"  required size='4'/></td>
+                                <td><input type="text" class="Text3"  required size='7'/></td>
+                            <td><span class="lblStatus"></span></td>
+
+                            <tr class="tr">
+                                <td><input type="text" class="Text1"  required size='25'/></td>
+                                <td><input type="text" class="Text2"  required size='3'/></td>
+                                <td><input type="text" class="Text3"  required size='3'/></td>
+                                <td><input type="text" class="Text2"  required size='25'/></td>
+                                <td><input type="text" class="Text3"  required size='11'/></td>
+                                <td><input type="text" class="Text3"  required size='13'/></td>
+                                <td><input type="text" class="Text2"  required size='4'/></td>
+                                <td><input type="text" class="Text3"  required size='7'/></td>
+                            <td><span class="lblStatus"></span></td>
+
+                            </tr>
+                        </table>
+                    </div><!-- end of the Higher Educational Details table-->
+                    <h5 id="note1">Note:Certified copies of the certificates and transcripts should be attached</h5>
+                
 
 
                     <input type="button" name="previous" class="previous button" value="Previous">
