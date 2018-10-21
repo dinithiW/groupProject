@@ -108,6 +108,15 @@
             </div>
 <!-- *********************************************************** end the first page************************************************--> 
 
+            <div class="form">
+                <form action="">
+
+                    
+
+                    <input type="button" name="previous" class="previous button" value="Previous">
+                    <input type="button" name="next" class="next button" value="Next">
+                </form>
+            </div>
 
 <!-- *********************************************************** start the second page************************************************--> 
 
