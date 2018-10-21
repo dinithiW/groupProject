@@ -20,9 +20,36 @@
 	<div class="w3-main" style="margin-left:250px">
         <div class="w3-row w3-padding-64">
         	<form action = "" method = "POST">
-        		<label for='email'>Subject of email</label>
-            	<input type='text' name='subject' id='email' required size='25'placeholder=" Enter subject of the email"/>
+        		<label for='email'>First Name</label>
+            	<input type='text' name='fname' id='email' required size='25'placeholder=" Enter the First Name"/>
             	<br/>
+
+                <label for='email'>Last Name</label>
+                <input type='text' name='subject' required size='25'placeholder=" Enter the Last Name"/>
+                <br/>
+
+                <label for='email'>Email Address</label>
+                <input type='text' name='subject' id='email' required size='25'placeholder=" Enter the email address"/>
+                <br/>
+
+                <label for='email'>Gender</label>
+                <input type='radio' name='subject' id='email' required />Male
+                <input type='radio' name='subject' id='email' required style="margin-left: : 20px;"/>Female
+                <br/>
+
+                <label for='email'>Contact Number</label>
+                <input type='text' name='subject' id='email' required size='25'placeholder=" Enter the contact number"/>
+                <br/>
+
+                <label for='email'>Designation</label>
+                <input type='text' name='subject' id='email' required size='25'placeholder=" Enter the designation"/>
+                <br/>
+
+                <label for='email'>Address</label>
+                <input type='text' name='subject' id='email' required size='25'placeholder=" Enter the mailing address"/>
+
+
+                <br/>
         	</form>
     
 

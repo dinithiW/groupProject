@@ -86,6 +86,13 @@ class OperatorDashboard extends CI_Controller{
         $this->load->view('users/operator/footer');
     }
 
+    public function addPanelMember(){
+       
+        $this->load->view('users/operator/header');
+        $this->load->view('users/operator/addPanelMember');
+        $this->load->view('users/operator/footer');
+    }
+
     public function sendEmail(){
         //echo 'hahahah';
         $this->load->view('users/operator/header');

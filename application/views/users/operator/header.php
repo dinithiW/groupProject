@@ -31,7 +31,7 @@ a:hover {
   <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-dark" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
     <a href="" class="w3-bar-item w3-button w3-theme-l1 w3-hover-white">Home</a>
-    <a href="<?= base_url('OperatorIndex/emails') ?>" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Emails</a>
+    <a href="<?= base_url('Operator/emails') ?>" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Emails</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Progress</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Reports</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contacts</a>
@@ -49,7 +49,7 @@ a:hover {
   <a class="w3-bar-item w3-button w3-hover-green" href="<?= base_url('OperatorIndex/createAd') ?>">Create Ad</a>
   <a class="w3-bar-item w3-button w3-hover-green" href="<?= base_url('OperatorDashboard/categorizeApplications') ?>">Edit Application Form</a>
   <a class="w3-bar-item w3-button w3-hover-green" href="#">Set Interview Date</a>
-  <a class="w3-bar-item w3-button w3-hover-green" href="#">Add Panel Members</a>
+  <a class="w3-bar-item w3-button w3-hover-green" href="<?= base_url('OperatorIndex/addPanelMember') ?>">Add Panel Members</a>
   <a class="w3-bar-item w3-button w3-hover-green" href="#">Send Emails to Applicants</a>
 </nav>
 
