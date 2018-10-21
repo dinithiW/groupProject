@@ -223,6 +223,51 @@
                         </table>
                     </div><!-- end of the Higher Educational Details table-->
                     <h5 id="note1">Note:Certified copies of the certificates and transcripts should be attached</h5>
+
+
+                    <h4 id="title3">Any Other Qualifications </h4>
+                    <div class="table3">
+                        <table id="Table">
+                            <tr>
+                                <th></th>
+                                <th>Institution</th>
+                                <th>Deploma etc</th>
+                                <th>Duration</th>
+                                <th>Year</th>
+                            </tr>
+
+                            <tr class="tr">
+                                <td><input type="text" class="Text2"  required size='5' placeholder="        1"/></td>
+                                <td><input type="text" class="Text1"  required size='40'/></td>
+                                <td><input type="text" class="Text2"  required size='30'/></td>
+                                <td><input type="text" class="Text3"  required size='17'/></td>
+                                <td><input type="text" class="Text2"  required size='13'/></td>
+                            <td><span class="lblStatus"></span></td>
+
+                            <tr class="tr">
+                                <td><input type="text" class="Text2"  required size='5' placeholder="        2"/></td>
+                                <td><input type="text" class="Text1"  required size='40'/></td>
+                                <td><input type="text" class="Text2"  required size='30'/></td>
+                                <td><input type="text" class="Text3"  required size='17'/></td>
+                                <td><input type="text" class="Text2"  required size='13'/></td>
+                            <td><span class="lblStatus"></span></td>
+
+                            <tr class="tr">
+                                <td><input type="text" class="Text2"  required size='5' placeholder="        3"/></td>
+                                <td><input type="text" class="Text1"  required size='40'/></td>
+                                <td><input type="text" class="Text2"  required size='30'/></td>
+                                <td><input type="text" class="Text3"  required size='17'/></td>
+                                <td><input type="text" class="Text2"  required size='13'/></td>
+                            <td><span class="lblStatus"></span></td>
+
+                            
+
+                            </tr>
+                        </table>
+                    </div>
+                    <h5 id="note2">Note:Certified copies of the certificates and transcripts should be attached</h5>
+                
+        </div><!--end of the head-->
                 
 
 
