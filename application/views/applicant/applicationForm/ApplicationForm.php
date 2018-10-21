@@ -429,6 +429,56 @@
             <div class="form">
                 <form action="">
 
+
+                <!-- start referee table-->        
+            <h4 id="title1">Referees </h4>
+                    <div class="content3">
+                        <table id="table1">
+
+                            <tr>
+                                <th></th>
+                                <th>Name</th>
+                                <th>Designation</th>
+                                <th>Address</th>
+                                <th>Email Address</th>
+                                <th>Contact No</th>
+                            </tr>
+
+                            <tr class="tr">
+                                <td><input type="text" class="Text2" placeholder="        1" required size='5'/></td>
+                                <td><input type="text" class="Text1" placeholder="" required size='30'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='10'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='30'/></td>
+                                <td><input type="text" class="Text3" placeholder="" required size='20'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='10'/></td>
+                            <td><span class="lblStatus"></span></td>
+
+                            <tr class="tr">
+                                <td><input type="text" class="Text2" placeholder="        2" required size='5'/></td>
+                                <td><input type="text" class="Text1" placeholder="" required size='30'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='10'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='30'/></td>
+                                <td><input type="text" class="Text3" placeholder="" required size='20'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='10'/></td>
+                            <td><span class="lblStatus"></span></td>
+
+                            <tr class="tr">
+                                <td><input type="text" class="Text2" placeholder="        3" required size='5'/></td>
+                                <td><input type="text" class="Text1" placeholder="" required size='30'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='10'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='30'/></td>
+                                <td><input type="text" class="Text3" placeholder="" required size='20'/></td>
+                                <td><input type="text" class="Text2" placeholder="" required size='10'/></td>
+                            <td><span class="lblStatus"></span></td>
+
+                            
+
+                            </tr>
+                        </table>
+                    </div>
+    
+            <!-- end referee table-->   
+
                     <input type="button" name="previous" class="previous button" value="Previous">
                     <input type="button" name="submit" class="next button" value="Finish">
                 </form>
