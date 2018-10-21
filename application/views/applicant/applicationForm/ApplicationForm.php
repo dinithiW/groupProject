@@ -109,8 +109,8 @@
 <!-- *********************************************************** end the first page************************************************--> 
         <div class="form">
             <form action="">
+                <input type="button"    name="previous"  class="next button" value="Previous">
                 <input type="button"    name="next"  class="next button" value="Next">
-                <input type="button"    name="next"  class="next button" value="Previous">
             </form>
         </div>
 <!-- *********************************************************** start the second page************************************************--> 
@@ -238,27 +238,27 @@
                             </tr>
 
                             <tr class="tr">
-                                <td><input type="text" class="Text2"  required size='5' placeholder="        1"/></td>
-                                <td><input type="text" class="Text1"  required size='40'/></td>
-                                <td><input type="text" class="Text2"  required size='30'/></td>
-                                <td><input type="text" class="Text3"  required size='17'/></td>
-                                <td><input type="text" class="Text2"  required size='13'/></td>
+                                <td><input type="text" class="Text"  required size='5' placeholder="        1"/></td>
+                                <td><input type="text" class="Text"  required size='40'/></td>
+                                <td><input type="text" class="Text"  required size='30'/></td>
+                                <td><input type="text" class="Text"  required size='17'/></td>
+                                <td><input type="text" class="Text"  required size='13'/></td>
                             <td><span class="lblStatus"></span></td>
 
                             <tr class="tr">
-                                <td><input type="text" class="Text2"  required size='5' placeholder="        2"/></td>
-                                <td><input type="text" class="Text1"  required size='40'/></td>
-                                <td><input type="text" class="Text2"  required size='30'/></td>
-                                <td><input type="text" class="Text3"  required size='17'/></td>
-                                <td><input type="text" class="Text2"  required size='13'/></td>
+                                <td><input type="text" class="Text"  required size='5' placeholder="        2"/></td>
+                                <td><input type="text" class="Text"  required size='40'/></td>
+                                <td><input type="text" class="Text"  required size='30'/></td>
+                                <td><input type="text" class="Text"  required size='17'/></td>
+                                <td><input type="text" class="Text"  required size='13'/></td>
                             <td><span class="lblStatus"></span></td>
 
                             <tr class="tr">
-                                <td><input type="text" class="Text2"  required size='5' placeholder="        3"/></td>
-                                <td><input type="text" class="Text1"  required size='40'/></td>
-                                <td><input type="text" class="Text2"  required size='30'/></td>
-                                <td><input type="text" class="Text3"  required size='17'/></td>
-                                <td><input type="text" class="Text2"  required size='13'/></td>
+                                <td><input type="text" class="Text"  required size='5' placeholder="        3"/></td>
+                                <td><input type="text" class="Text"  required size='40'/></td>
+                                <td><input type="text" class="Text"  required size='30'/></td>
+                                <td><input type="text" class="Text"  required size='17'/></td>
+                                <td><input type="text" class="Text"  required size='13'/></td>
                             <td><span class="lblStatus"></span></td>
 
                             
@@ -295,30 +295,30 @@
                             </tr>
 
                             <tr class="tr">
-                                <td><input type="text" class="Text2"  required size='5' placeholder="        1"/></td>
-                                <td><input type="text" class="Text1"  required size='30'/></td>
-                                <td><input type="text" class="Text2"  required size='6'/></td>
-                                <td><input type="text" class="Text2"  required size='6'/></td>
-                                <td><input type="text" class="Text3"  required size='17'/></td>
-                                <td><input type="text" class="Text2"  required size='36'/></td>
+                                <td><input type="text" class="Text"  required size='5' placeholder="        1"/></td>
+                                <td><input type="text" class="Text"  required size='30'/></td>
+                                <td><input type="text" class="Text"  required size='6'/></td>
+                                <td><input type="text" class="Text"  required size='6'/></td>
+                                <td><input type="text" class="Text"  required size='17'/></td>
+                                <td><input type="text" class="Text"  required size='36'/></td>
                             <td><span class="lblStatus"></span></td>
 
                            <tr class="tr">
-                                <td><input type="text" class="Text2"  required size='5' placeholder="        2"/></td>
-                                <td><input type="text" class="Text1"  required size='30'/></td>
-                                <td><input type="text" class="Text2"  required size='6'/></td>
-                                <td><input type="text" class="Text2"  required size='6'/></td>
-                                <td><input type="text" class="Text3"  required size='17'/></td>
-                                <td><input type="text" class="Text2"  required size='36'/></td>
+                                <td><input type="text" class="Text"  required size='5' placeholder="        2"/></td>
+                                <td><input type="text" class="Text"  required size='30'/></td>
+                                <td><input type="text" class="Text"  required size='6'/></td>
+                                <td><input type="text" class="Text"  required size='6'/></td>
+                                <td><input type="text" class="Text"  required size='17'/></td>
+                                <td><input type="text" class="Text"  required size='36'/></td>
                             <td><span class="lblStatus"></span></td>
 
                             <tr class="tr">
-                                <td><input type="text" class="Text2"  required size='5' placeholder="        3"/></td>
-                                <td><input type="text" class="Text1"  required size='30'/></td>
-                                <td><input type="text" class="Text2"  required size='6'/></td>
-                                <td><input type="text" class="Text2"  required size='6'/></td>
-                                <td><input type="text" class="Text3"  required size='17'/></td>
-                                <td><input type="text" class="Text2"  required size='36'/></td>
+                                <td><input type="text" class="Text"  required size='5' placeholder="        3"/></td>
+                                <td><input type="text" class="Text"  required size='30'/></td>
+                                <td><input type="text" class="Text"  required size='6'/></td>
+                                <td><input type="text" class="Text"  required size='6'/></td>
+                                <td><input type="text" class="Text"  required size='17'/></td>
+                                <td><input type="text" class="Text"  required size='36'/></td>
                             <td><span class="lblStatus"></span></td>
 
 
@@ -328,7 +328,7 @@
 
 
                     <h4 id="title2">Proficiency in Sinhala/Tamil/English</h4>
-                    <h5 id="title3">**********************************Ability to Work*******************************  | ********************************* Ability To Teach*****************</h5>
+                    <h5 id="title3">*******Ability to Work******** | ********* Ability To Teach********</h5>
                     
 <!-- start of the dropdown buttons-->
 
@@ -449,30 +449,30 @@
                             </tr>
 
                             <tr class="tr">
-                                <td><input type="text" class="Text2" placeholder="        1" required size='5'/></td>
-                                <td><input type="text" class="Text1" placeholder="" required size='30'/></td>
-                                <td><input type="text" class="Text2" placeholder="" required size='10'/></td>
-                                <td><input type="text" class="Text2" placeholder="" required size='30'/></td>
-                                <td><input type="text" class="Text3" placeholder="" required size='20'/></td>
-                                <td><input type="text" class="Text2" placeholder="" required size='10'/></td>
+                                <td><input type="text" class="Text" placeholder="        1" required size='5'/></td>
+                                <td><input type="text" class="Text" placeholder="" required size='30'/></td>
+                                <td><input type="text" class="Text" placeholder="" required size='10'/></td>
+                                <td><input type="text" class="Text" placeholder="" required size='30'/></td>
+                                <td><input type="text" class="Text" placeholder="" required size='20'/></td>
+                                <td><input type="text" class="Text" placeholder="" required size='10'/></td>
                             <td><span class="lblStatus"></span></td>
 
                             <tr class="tr">
-                                <td><input type="text" class="Text2" placeholder="        2" required size='5'/></td>
-                                <td><input type="text" class="Text1" placeholder="" required size='30'/></td>
-                                <td><input type="text" class="Text2" placeholder="" required size='10'/></td>
-                                <td><input type="text" class="Text2" placeholder="" required size='30'/></td>
-                                <td><input type="text" class="Text3" placeholder="" required size='20'/></td>
-                                <td><input type="text" class="Text2" placeholder="" required size='10'/></td>
+                                <td><input type="text" class="Text" placeholder="        2" required size='5'/></td>
+                                <td><input type="text" class="Text" placeholder="" required size='30'/></td>
+                                <td><input type="text" class="Text" placeholder="" required size='10'/></td>
+                                <td><input type="text" class="Text" placeholder="" required size='30'/></td>
+                                <td><input type="text" class="Text" placeholder="" required size='20'/></td>
+                                <td><input type="text" class="Text" placeholder="" required size='10'/></td>
                             <td><span class="lblStatus"></span></td>
 
                             <tr class="tr">
-                                <td><input type="text" class="Text2" placeholder="        3" required size='5'/></td>
-                                <td><input type="text" class="Text1" placeholder="" required size='30'/></td>
-                                <td><input type="text" class="Text2" placeholder="" required size='10'/></td>
-                                <td><input type="text" class="Text2" placeholder="" required size='30'/></td>
-                                <td><input type="text" class="Text3" placeholder="" required size='20'/></td>
-                                <td><input type="text" class="Text2" placeholder="" required size='10'/></td>
+                                <td><input type="text" class="Text" placeholder="        3" required size='5'/></td>
+                                <td><input type="text" class="Text" placeholder="" required size='30'/></td>
+                                <td><input type="text" class="Text" placeholder="" required size='10'/></td>
+                                <td><input type="text" class="Text" placeholder="" required size='30'/></td>
+                                <td><input type="text" class="Text" placeholder="" required size='20'/></td>
+                                <td><input type="text" class="Text" placeholder="" required size='10'/></td>
                             <td><span class="lblStatus"></span></td>
 
                             
@@ -494,7 +494,7 @@
                     <!-- other--> 
 
                     <h4 id="oath">
-                        <b>I here by declare that the particulars furnished by me in the application are true and accurate. I am also aware that if any<br> partuculars contains herein are found to be false or incorrect I am liable to disqualification if the inaccuracy is discovered<br> before the selection and dimissal without any compensation if th inaccuracy is discovered after the appointment</b>
+                        <b>I here by declare that the particulars furnished by me in the application are true and accurate.<br> I am also aware that if any partuculars contains herein are found to be false or incorrect I am<br> liable to disqualification if the inaccuracy is discovered before the selection and dimissal without any compensation if th inaccuracy is discovered after the appointment</b>
                     </h4> 
 
                      <div class="calender">
