@@ -70,77 +70,37 @@
 
                     
 
-                     
-                    <!-- start of the drop downbutton -->  
+                    <!-- start of the radio buttons-->
 
-                    <div class="dropDown">
-                                <div class="gender"><!-- start of the radio button for gneder-->
-                                    <h6 id="selection1"><b>GENDER</b></h6>
-
-                                    <div class="customRadio1">
-                                        <input type="radio" class="input-fields" id="selectGender1" name="GENDER" >
-                                        <label class="radio-lables" id="name1" for="checkGender">MALE</label>
-                                    </div>
-
-                                    <div class="customRadio1">
-                                        <input type="radio" class="input-fields" id="selectGender2" name="GENDER" checked >
-                                        <label class="radio-lables" id="name2" for="checkGende">FEMALE</label>
-                                    </div>
-                                </div><!-- end of the radio button for gneder-->
-
-                                <div class="civilStatus"><!-- start of the radio button for civil status-->
-                                    <h6 id="selection2"><b>CIVIL STATUS</b></h6>
-
-                                    <div class="customRadio2">
-                                        <input type="radio" class="input-fields" id="selectCivil1" name="CIVIL" >
-                                        <label class="radio-lables" id="name3" for="checkcivil">MARRIED</label>
-                                    </div>
-
-                                    <div class="customRadio2 ">
-                                        <input type="radio" class="input-fields" id="selectCivil2" name="CIVIL" checked >
-                                        <label class="radio-lables" id="name4" for="checkcivil">UNMARRIED</label>
-                                    </div>
-                                </div><!-- end of the radio button for civil status-->
-
-
-                                <div class="citizenship"><!-- start of the radio button for citizenship-->
-                                    <h6 id="selection3"><b>IF A CITIZEN OF SRI LANKA <br> HOW OBTAINED</b></h6>
-
-                                    <div class="customRadio3 ">
-                                        <input type="radio" class="input-fields" id="selectCitizenship1" name="CITY" >
-                                        <label class="radio-lables" id="name5" for="checkcitizenship">BY DESCENT</label>
-                                    </div>
-
-                                    <div class="customRadio3">
-                                        <input type="radio" class="input-fields" id="selectCitizenship2" name="CITY" checked >
-                                        <label class="radio-lables" id="name6" for="checkcitizenship">BY REGISTRATION</label>
-                                    </div>
-                                </div><!-- end of the radio button for citizenship-->
+                    <div class="radioButtons">
+                        
                     </div>
 
-                    <!-- end of the dropdown button-->
+                    <!-- end of the radio buttons-->
 
+                     
+                    
                     <!-- start the calender-->
                     <div class="calender">
                                 <h4 id="birth-date"> Date of Birth</h4>
                                 <input type="date" data-date-inline-picker="true" />
-                            </div>
-                            <!-- end the calender-->
+                    </div>
+                    <!-- end the calender-->
 
-                            <!-- start the age-->
-                            <div class="col-xs-6 col-sm-6 col-md-6 age ">
-                                <h4 id="currect-age"> Age as at closing date of application</h4> 
-                                    <div class="years form-group">
-                                        <input type="text" name="years" id="years" class="form-control input-sm" placeholder="years">
-                                    </div>
-                                    <div class="months form-group">
-                                        <input type="text" name="months" id="months" class="form-control input-sm" placeholder="months">
-                                    </div>
-                                    <div class="days form-group">
-                                        <input type="text" name="days" id="days" class="form-control input-sm" placeholder="days">
-                                    </div>
+                    <!-- start the age-->
+                    <div class="col-xs-6 col-sm-6 col-md-6 age ">
+                        <h4 id="currect-age"> Age as at closing date of application</h4> 
+                            <div class="years form-group">
+                                <input type="text" name="years" id="years" class="form-control input-sm" placeholder="years">
                             </div>
-                            <!--end the age-->
+                            <div class="months form-group">
+                                <input type="text" name="months" id="months" class="form-control input-sm" placeholder="months">
+                            </div>
+                            <div class="days form-group">
+                                <input type="text" name="days" id="days" class="form-control input-sm" placeholder="days">
+                            </div>
+                    </div>
+                    <!--end the age-->
 
                    
                     <input type="button"    name="next"  class="next button" value="Next">
@@ -155,6 +115,53 @@
                     <input type="text" name="twitter" placeholder="Twitter">
                     <input type="text" name="facebook" placeholder="Facebook">
                     <input type="text" name="gplus" placeholder="Google Plus">
+
+
+                    <h4 id="title1">Secondry Educational Details</h4>
+            <br/>
+                    <div class="table1"><!-- start of the Secondry Educational Details table-->
+                        <table id="Table">
+                            <tr class="tr">
+                                <th>School Name</th>
+                                <th>From</th>
+                                <th>To</th>
+                                <th>Examination Passed</th>
+                                <th>Year</th>
+                            </tr>
+                            <tr class="tr">
+                                <td><input type="text" class="Text1"  required size='45'/></td>
+                                <td><input type="text" class="Text2"  required size='5'/></td>
+                                <td><input type="text" class="Text3"  required size='5'/></td>
+                                <td><input type="text" class="Text2"  required size='45'/></td>
+                                <td><input type="text" class="Text3"  required size='5'/></td>
+                            <td><span class="lblStatus"></span></td>
+                            <tr class="tr">
+                                <td><input type="text" class="Text1"  required size='45'/></td>
+                                <td><input type="text" class="Text2"  required size='5'/></td>
+                                <td><input type="text" class="Text3"  required size='5'/></td>
+                                <td><input type="text" class="Text2"  required size='45'/></td>
+                                <td><input type="text" class="Text3"  required size='5'/></td>
+                            <td><span class="lblStatus"></span></td>
+                            <tr class="tr">
+                                <td><input type="text" class="Text1"  required size='45'/></td>
+                                <td><input type="text" class="Text2"  required size='5'/></td>
+                                <td><input type="text" class="Text3"  required size='5'/></td>
+                                <td><input type="text" class="Text2"  required size='45'/></td>
+                                <td><input type="text" class="Text3"  required size='5'/></td>
+                            <td><span class="lblStatus"></span></td>
+                            <tr class="tr">
+                                <td><input type="text" class="Text1"  required size='45'/></td>
+                                <td><input type="text" class="Text2"  required size='5'/></td>
+                                <td><input type="text" class="Text3"  required size='5'/></td>
+                                <td><input type="text" class="Text2"  required size='45'/></td>
+                                <td><input type="text" class="Text3"  required size='5'/></td>
+                            <td><span class="lblStatus"></span></td>
+                            
+                            </tr>
+                        </table>
+                    </div><!-- end of the Secondry Educational Details table-->
+
+
                     <input type="button" name="previous" class="previous button" value="Previous">
                     <input type="button" name="next" class="next button" value="Next">
                 </form>

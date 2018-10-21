@@ -104,14 +104,15 @@
 }
 
 #selectGender1{/*gender selection button1*/
-	margin-left: -760px;
+	margin-left: -260px;
 	margin-top: -100px;
 	width: 20px;
 	height:20px;
 }
 
+
 #selectGender2{/*gender selection button2*/
-	margin-left: -550px;
+	margin-left: -350px;
 	margin-top: 550px;
 	width: 10px;
 	height:10px;
@@ -164,6 +165,19 @@
 
 /*end of lables for radio buttons*/
 
+
+
+/*start of the radoi buttons*/
+
+.radioButtons{
+	background-color: rgb(72, 255, 0);
+	width: 600px;
+	height: 100px;
+	margin-left: 100px;
+}
+
+/*end of the radio buttons*/
+
 #multistepform .input-fields{
 	background-color: rgb(207, 218, 230); 
 	width: 600px;
@@ -175,6 +189,7 @@
 #multistepform .lables{
 	color: chartreuse;
 	margin-top: -7px;
+	
 }
 
 #multistepform .close {
