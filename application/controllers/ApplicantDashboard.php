@@ -15,7 +15,7 @@ class ApplicantDashboard extends CI_Controller{
 
 
     public function applicationFirstPage(){
-        //$this->load->view('applicant/header');
+        $this->load->view('applicant/header');
         //$this->load->view('applicant/applicationForm/ApplicationFormNavigationBar');
         //$this->load->view('applicant/applicationForm/ApplicationFormPartOne');
         $this->load->view('applicant/applicationForm/ApplicationForm');
@@ -58,7 +58,7 @@ class ApplicantDashboard extends CI_Controller{
         $this->load->view('applicant/applicationForm/ApplicationFormNavigationBar');
         $this->load->model('operator/categorizeApplilcationsModel');
         $data['fetch_data'] = $this->categorizeApplilcationsModel->fetch_datas();
-        $this->load->view('applicant/applicationForm/ApplicationFormSelectAreas',$data);
+        $this->load->view('applicant/applicationForm/ApplicationForm',$data);
     }
 
     public function applicationSelect(){

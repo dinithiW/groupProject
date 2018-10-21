@@ -58,8 +58,7 @@
             
             
             
-            <h4 id="title1">Secondry Educational Details</h4>
-            <br/>
+            <h4 id="title1">Secondry Educational Details</h4><br/>
                     <div class="table1"><!-- start of the Secondry Educational Details table-->
                         <table id="Table">
                             <tr class="tr">
