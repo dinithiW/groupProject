@@ -284,6 +284,52 @@
                     <input type="text" name="lname" placeholder="Last Name">
                     <input type="text" name="phone" placeholder="Phone">
                     <textarea name="address" placeholder="Address"></textarea>
+
+                    <h4 id="title1">Professional Qualifications </h4>
+                    <div class="table1"><!-- start of the table1-->
+                        <table id="Table">
+
+                            <tr>
+                                <th></th>
+                                <th>Institution</th>
+                                <th>From</th>
+                                <th>To</th>
+                                <th>Duration</th>
+                                <th>Type of Qualifications</th>
+                            </tr>
+
+                            <tr class="tr">
+                                <td><input type="text" class="Text2"  required size='5' placeholder="        1"/></td>
+                                <td><input type="text" class="Text1"  required size='30'/></td>
+                                <td><input type="text" class="Text2"  required size='6'/></td>
+                                <td><input type="text" class="Text2"  required size='6'/></td>
+                                <td><input type="text" class="Text3"  required size='17'/></td>
+                                <td><input type="text" class="Text2"  required size='36'/></td>
+                            <td><span class="lblStatus"></span></td>
+
+                           <tr class="tr">
+                                <td><input type="text" class="Text2"  required size='5' placeholder="        2"/></td>
+                                <td><input type="text" class="Text1"  required size='30'/></td>
+                                <td><input type="text" class="Text2"  required size='6'/></td>
+                                <td><input type="text" class="Text2"  required size='6'/></td>
+                                <td><input type="text" class="Text3"  required size='17'/></td>
+                                <td><input type="text" class="Text2"  required size='36'/></td>
+                            <td><span class="lblStatus"></span></td>
+
+                            <tr class="tr">
+                                <td><input type="text" class="Text2"  required size='5' placeholder="        3"/></td>
+                                <td><input type="text" class="Text1"  required size='30'/></td>
+                                <td><input type="text" class="Text2"  required size='6'/></td>
+                                <td><input type="text" class="Text2"  required size='6'/></td>
+                                <td><input type="text" class="Text3"  required size='17'/></td>
+                                <td><input type="text" class="Text2"  required size='36'/></td>
+                            <td><span class="lblStatus"></span></td>
+
+
+                            </tr>
+                        </table>
+                    </div><!-- end of the table1-->
+
                     <input type="button" name="previous" class="previous button" value="Previous">
                     <input type="button" name="submit" class="next button" value="Finish">
                 </form>
