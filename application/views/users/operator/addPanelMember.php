@@ -14,12 +14,19 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+    <style type="text/css">
+        label{
+            width: 170px;
+            font-size: 16px;
+        }
+    </style>
 </head> 
 
 <body>
 	<div class="w3-main" style="margin-left:250px">
         <div class="w3-row w3-padding-64">
-            <div style="background-color: #54d368;width: 700px; border-color: black; margin-right: 500px;display: inline-block;">
+            <div style="background-color: #548795;width: auto; border-color: black; padding-right: 10px;display: inline-block; margin-left: 10px;">
         	<form action = "" method = "POST" >
         		<label for='email'>First Name</label>
             	<input type='text' name='fname' id='email' required size='25'placeholder=" Enter the First Name"/>
