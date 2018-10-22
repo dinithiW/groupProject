@@ -19,7 +19,8 @@
 <body>
 	<div class="w3-main" style="margin-left:250px">
         <div class="w3-row w3-padding-64">
-        	<form action = "" method = "POST">
+            <div style="background-color: #54d368;width: 700px; border-color: black; margin-right: 500px;display: inline-block;">
+        	<form action = "" method = "POST" >
         		<label for='email'>First Name</label>
             	<input type='text' name='fname' id='email' required size='25'placeholder=" Enter the First Name"/>
             	<br/>
@@ -52,7 +53,7 @@
                 <br/>
         	</form>
     
-
+            </div>
         </div>
     </div>
 </body>
