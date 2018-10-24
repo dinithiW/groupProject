@@ -72,55 +72,18 @@
                     <input type="text"   class="input-fields" name="applicant-citizenship" placeholder="Office Number">
 
                     
+                    <!-- start -->
 
-                    <!-- start of the radio buttons-->
+                    <input type="radio"  id="radioGender1" name="GENDER" >
+                    <label for="checkGender">MALE</label>
+                    <input type="radio"  id="radioGender2" name="GENDER" checked >
+                    <label for="checkGender">FEMALE</label>
 
-                    <div class="radioButtons">
-                            <div class="gender"><!-- start of the radio button for gneder-->
-                                    <h5 class="selection1"><b>GENDER</b></h5>
-                                    <div class="custom-control custom-radio ">
-                                        <input type="radio" class="custom-control-input button1" id="selectGender1" name="GENDER" >
-                                        <label class="custom-control-label name1" for="checkGender">MALE</label>
-                                    </div>
+                    
+                    <!-- end -->
 
-                                    <div class="custom-control custom-radio ">
-                                        <input type="radio" class="custom-control-input button2" id="selectGender2" name="GENDER" checked >
-                                        <label class="custom-control-label name2" for="checkGender">FEMALE</label>
-                                    </div>
-                                </div><!-- end of the radio button for gneder-->
-
-                                <div class="civilStatus"><!-- start of the radio button for civil status-->
-                                    <h5 id="selection2"><b>CIVIL STATUS</b></h5>
-                                    <div class="custom-control custom-radio1 ">
-                                        <input type="radio" class="custom-control-input button3" id="civil" name="CIVIL" >
-                                        <label class="custom-control-label name3" for="checkcivil">MARRIED</label>
-                                    </div>
-
-                                    <div class="custom-control custom-radio1 ">
-                                        <input type="radio" class="custom-control-input button4" id="civil" name="CIVIL" checked >
-                                        <label class="custom-control-label name4" for="checkcivil">UNMARRIED</label>
-                                    </div>
-                                </div><!-- end of the radio button for civil status-->
-
-
-                                <div class="citizenship"><!-- start of the radio button for citizenship-->
-                                    <h5 class="selection3"><b>IF A CITIZEN OF SRI LANKA HOW OBTAINED</b></h5>
-                                    <div class="custom-control customRadio3 ">
-                                        <input type="radio" class="custom-control-input button5" id="citizenShip" name="CITY" >
-                                        <label class="custom-control-label name5" for="checkcitizenship">BY DESCENT</label>
-                                    </div>
-
-                                    <div class="custom-control customRadio3">
-                                        <input type="radio" class="custom-control-input button6" id="citizenShip" name="CITY" checked >
-                                        <label class="custom-control-label name6" for="checkcitizenship">BY REGISTRATION</label>
-                                    </div>
-                                </div><!-- end of the radio button for citizenship-->
-
-                    </div>
-
-                    <!-- end of the radio buttons-->
-
-                     
+                    
+                
                     
                     <!-- start the calender-->
                     <div class="calender1">
@@ -155,7 +118,7 @@
         <div class="form">
             <form action="">
 
-            <><>
+            
 
             <input type="button" name="previous" class="previous button" value="Previous">
             <input type="button" name="next" class="next button" value="Next">
