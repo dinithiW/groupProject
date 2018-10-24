@@ -1,10 +1,10 @@
 #multistepform {
-	background-color: rgb(255, 16, 16);
+	background-color: rgb(255, 255, 255);
     overflow:auto;
-	width:900px;
-	margin-left: 100px;
-	margin-top: 100px;
-    height:600px;
+	width:1400px;
+	position: absolute;
+	margin-top: 43px;
+    height:700px;
 }
 #multistepform .bg {
     width:100%;
@@ -32,138 +32,11 @@
 	margin-left: 30px;
 }
 
-/*start of lables for radio buttons*/
-#selection1{
-	margin-top: 55px;
-	margin-left: -10px;
-	width: 100px;
-}
-
-#selection2{
-	margin-top: -120px;
-	margin-left: -90px;
-	width: 200px;
-}
-
-#selection3{
-	margin-top: -115px;
-	margin-left: -120px;
-	width: 300px;
-}
-
-#name1{/*male*/
-	margin-top: 0px;
-	margin-left: -370px;
-	width: 100px;
-	height: 30px;
-}
-
-#name2{/*female*/
-	margin-top: 0px;
-	margin-left: -400px;
-	width: 100px;
-	height: 30px;
-}
-#name3{/*married*/
-	margin-top:40px;
-	margin-left: -860px;
-	width: 100px;
-	height: 30px;
-}
-#name4{/*unmarried*/
-	margin-top: 40px;
-	margin-left: -810px;
-	width: 100px;
-	height: 30px;
-}
-
-#name5{/*by decent*/
-	margin-top: 20px;
-	margin-left: -770px;
-	width: 100px;
-	height: 30px;
-}
-#name6{/*by registration*/
-	margin-top: -53px;
-	margin-left: -660px;
-	width: 130px;
-	height: 30px;
-}
-
-.gender{
-	margin-left: 250px;
-	margin-top: 150px;
-	width: 20px;
-	height:20px;
-	background-color: chartreuse;
-}
 
 
 
-#citizenShip{
-	margin-left: 50px;
-	margin-top: 150px;
-	width: 20px;
-	height:20px;
-}
-
-#selectGender1{/*gender selection button1*/
-	margin-left: -260px;
-	margin-top: -100px;
-	width: 20px;
-	height:20px;
-}
 
 
-#selectGender2{/*gender selection button2*/
-	margin-left: -350px;
-	margin-top: 550px;
-	width: 10px;
-	height:10px;
-}
-
-#selectCivil1{/*gender selection button1*/
-	margin-left: -200px;
-	margin-top: 100px;
-	width: 20px;
-	height:20px;
-
-}
-.customRadio1{
-	margin-left: -200px;
-	margin-top: 10px;
-}
-
-.customRadio2{
-	margin-left: 00px;
-	margin-top: 10px;
-}
-
-.customRadio3{
-	margin-left: 200px;
-	margin-top: 10px;
-}
-
-#selectCivil2{/*gender selection button2*/
-	margin-left: -300px;
-	margin-top: 1000px;
-	width: 20px;
-	height:20px;
-}
-
-#selectCitizenship1{/*gender selection button1*/
-	margin-left: -560px;
-	margin-top: 200px;
-	width: 20px;
-	height:20px;
-}
-
-#selectCitizenship2{/*gender selection button2*/
-	margin-left: -550px;
-	margin-top: 200px;
-	width: 20px;
-	height:20px;
-}
 
 
 .calender1{
@@ -209,17 +82,71 @@
 
 /*start of the radoi buttons*/
 
-.radioButtons{
-	background-color: rgb(255, 0, 0);
-	width: 600px;
-	height: 100px;
-	margin-left: 100px;
+#radioGender1{/*radio button for gender*/
+	
+	height: 20px;
+	width: 20px;
+	margin-left: -300px;
+	margin-top: 50px;
 }
 
-.selectGender1{
-	margin-left: -500px;
-	margin-top: 150px;
-	background-color:blueviolet;
+#radioGenderlabel1{/*label for male*/
+	
+	height: 20px;
+	width: 20px;
+	margin-left: -350px;
+	margin-top: 50px;
+}
+
+#radioGender2{/*radio button for gender*/
+	height: 20px;
+	width: 20px;
+	margin-left: -290px;
+	margin-top: 10px;
+	
+}
+
+#radioGenderlabel2{/*label for male*/
+	
+	height: 20px;
+	width: 20px;
+	margin-left: -300px;
+	margin-top: 50px;
+}
+
+#radioCivil1{/*radio button for civil*/
+	
+	
+	height: 20px;
+	width: 20px;
+	margin-left: 50px;
+	margin-top: 10px;
+}
+
+#radioCivil2{/*radio button for civil*/
+	
+	height: 20px;
+	width: 20px;
+	margin-left: 50px;
+	margin-top: 10px;
+	
+}
+
+#radioCitizenship1{/*radio button for ctizenship*/
+	
+	
+	height: 20px;
+	width: 20px;
+	margin-left: 50px;
+	margin-top: 10px;
+}
+
+#radioCitizenship2{/*radio button for citizenship*/
+	
+	height: 20px;
+	width: 20px;
+	margin-left: 50px;
+	margin-top: 10px;
 }
 
 /*end of the radio buttons*/
@@ -229,6 +156,7 @@
 	width: 600px;
 	height: 15px;
 	margin-top: -12px;
+	
 }
 
 

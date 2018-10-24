@@ -75,19 +75,19 @@
                     <!-- start -->
 
                     <input type="radio"  id="radioGender1" name="GENDER" >
-                    <label for="checkGender">MALE</label>
+                    <label for="checkGender" id="radioGenderlabel1">MALE</label>
                     <input type="radio"  id="radioGender2" name="GENDER" checked >
-                    <label for="checkGender">FEMALE</label>
+                    <label for="checkGender" id="radioGenderlabel2">FEMALE</label>
 
                     <input type="radio"  id="radioCivil1" name="CIVIL" >
-                    <label for="checkGender">MARRIED</label>
+                    <label for="checkCivil" id="radioCivillabel1">MARRIED</label>
                     <input type="radio"  id="radioCivil2" name="CIVIL" checked >
-                    <label for="checkGender">UNMARRIED</label>
+                    <label for="checkCivil" id="radioCivillabel2">UNMARRIED</label>
 
                     <input type="radio"  id="radioCitizenship1" name="CITIZENSHIP" >
-                    <label for="checkGender">BY DECENT</label>
+                    <label for="checkCitizenship" id="radioCitizenshiplabel1">BY DECENT</label>
                     <input type="radio"  id="radioCitizenship2" name="CITIZENSHIP" checked >
-                    <label for="checkGender">BY REGISTRATION</label>
+                    <label for="checkCitizenship" id="radioCitizenshiplabel2">BY REGISTRATION</label>
 
 
                     
