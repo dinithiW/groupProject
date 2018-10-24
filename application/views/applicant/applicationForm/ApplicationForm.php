@@ -128,22 +128,11 @@
                     <!-- end the calender-->
 
                     <!-- start the age-->
-                    <div class="col-xs-6 col-sm-6 col-md-6 age ">
-                        <h4 id="currect-age"> Age as at closing date of application</h4> 
-                            <div class="years form-group">
-                                <input type="text" name="years" id="years" class="form-control input-sm" placeholder="years">
-                            </div>
-                            <div class="months form-group">
-                                <input type="text" name="months" id="months" class="form-control input-sm" placeholder="months">
-                            </div>
-                            <div class="days form-group">
-                                <input type="text" name="days" id="days" class="form-control input-sm" placeholder="days">
-                            </div>
-                    </div>
-                    <!--end the age-->
+                    
+                    
 
                    
-                    <input type="button"    name="next"  class="next button " id="firstButton" value="Next">
+                    <input type="button" name="next"  class="next button " id="firstButton" value="Next">
 
                 </form>
 
