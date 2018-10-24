@@ -79,6 +79,17 @@
                     <input type="radio"  id="radioGender2" name="GENDER" checked >
                     <label for="checkGender">FEMALE</label>
 
+                    <input type="radio"  id="radioCivil1" name="CIVIL" >
+                    <label for="checkGender">MARRIED</label>
+                    <input type="radio"  id="radioCivil2" name="CIVIL" checked >
+                    <label for="checkGender">UNMARRIED</label>
+
+                    <input type="radio"  id="radioCitizenship1" name="CITIZENSHIP" >
+                    <label for="checkGender">BY DECENT</label>
+                    <input type="radio"  id="radioCitizenship2" name="CITIZENSHIP" checked >
+                    <label for="checkGender">BY REGISTRATION</label>
+
+
                     
                     <!-- end -->
 
