@@ -88,10 +88,18 @@
 
                 <!-- end gender -->
 
-                
-
                 <!-- start civil status -->
-                   
+                    <div class="lables4">
+                        <h5 id="lab2">CIVIL STATUS</h5>
+                        <h5 class="lables4" id="lables4id1">MARRIED</h5>
+                        <h5 class="lables4" id="lables4id2">UN MARRIED</h5>
+                        
+                    </div>
+
+                    <div class ="rad2">
+                        <input type="radio"   id="radioCivil1" name="CIVIL" >
+                        <input type="radio"   id="radioCivil2" name="CIVIL" >
+                    </div>
                 <!-- end civil status -->
 
 

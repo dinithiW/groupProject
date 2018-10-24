@@ -33,12 +33,6 @@
 }
 
 
-
-
-
-
-
-
 .calender1{
 	margin-left: 20px;
 	margin-top: 50px;
@@ -82,8 +76,19 @@
 
 /*start of the radoi buttons*/
 
+/*start radio buttons for gender*/
+
 #lab1{
 	margin-left: 270px;
+}
+
+.lables3{
+	width: 100px;
+	font-size: 12px;
+	margin-top: 10px;
+	
+	margin-left: 20px;
+	font-weight: bold;
 }
 
 
@@ -112,6 +117,48 @@
 	margin-top: -20px;
 	width: 80px;
 }
+/*end radio buttons for gender*/
+
+/*start radio buttons for civil status*/
+#lab2{
+	margin-left: 200px;
+	width: 200px;
+}
+
+.rad2 #radioCivil1{
+	margin-top: -270px;
+	margin-left: -20px;
+	height: 20px;
+	width: 20px;
+}
+
+.lables4 #lables4id1{
+	margin-left: 210px;
+	margin-top: 20px;
+	width: 80px;
+}
+
+.rad2 #radioCivil2{
+	margin-top: -250px;
+	margin-left: 60px;
+	height: 20px;
+	width: 20px;
+}
+
+.lables4 #lables4id2{
+	margin-left: 310px;
+	margin-top: -20px;
+	width: 80px;
+}
+
+.lables4{
+	width: 300px;
+	font-size: 12px;
+	margin-top: 10px;
+	margin-left: 20px;
+	font-weight: bold;
+}
+/*end radio buttons for civil status*/
 
 
 .lable1{
@@ -126,14 +173,9 @@
 	font-weight: bold;
 }
 
-.lables3{
-	width: 100px;
-	font-size: 12px;
-	margin-top: 10px;
-	
-	margin-left: 20px;
-	font-weight: bold;
-}
+
+
+
 
 
 
