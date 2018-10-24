@@ -18,9 +18,11 @@ class ApplicantDashboard extends CI_Controller{
         $this->load->view('applicant/applicationForm/headerForApplicationForm');
         //$this->load->view('applicant/applicationForm/ApplicationFormNavigationBar');
         //$this->load->view('applicant/applicationForm/ApplicationFormPartOne');
-        $this->load->view('applicant/applicationForm/ApplicationForm');
-       
-    	//$this->load->view('applicant/footer');
+        //$this->load->view('applicant/applicationForm/ApplicationForm');
+        $this->load->model('operator/categorizeApplilcationsModel');
+        $data['fetch_data'] = $this->categorizeApplilcationsModel->fetch_datas();
+        $this->load->view('applicant/applicationForm/ApplicationForm',$data);
+    	
     }
 
     public function applicationSecondPage(){
