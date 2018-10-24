@@ -76,18 +76,15 @@
                     <!-- start of the radio buttons-->
 
                     <div class="radioButtons">
-                        
-                        <!-- start of the drop downbutton -->        
-                        <div class="dropDown">
-                                <div class="gender"><!-- start of the radio button for gneder-->
+                            <div class="gender"><!-- start of the radio button for gneder-->
                                     <h5 class="selection1"><b>GENDER</b></h5>
                                     <div class="custom-control custom-radio ">
-                                        <input type="radio" class="custom-control-input button1" id="selectGender" name="GENDER" >
+                                        <input type="radio" class="custom-control-input button1" id="selectGender1" name="GENDER" >
                                         <label class="custom-control-label name1" for="checkGender">MALE</label>
                                     </div>
 
                                     <div class="custom-control custom-radio ">
-                                        <input type="radio" class="custom-control-input button2" id="selectGende" name="GENDER" checked >
+                                        <input type="radio" class="custom-control-input button2" id="selectGender2" name="GENDER" checked >
                                         <label class="custom-control-label name2" for="checkGender">FEMALE</label>
                                     </div>
                                 </div><!-- end of the radio button for gneder-->
@@ -118,10 +115,6 @@
                                         <label class="custom-control-label name6" for="checkcitizenship">BY REGISTRATION</label>
                                     </div>
                                 </div><!-- end of the radio button for citizenship-->
-                            </div>
-                    <!-- end of the dropdown button-->
-
-
 
                     </div>
 
@@ -130,9 +123,9 @@
                      
                     
                     <!-- start the calender-->
-                    <div class="calender">
-                                <h4 id="birth-date"> Date of Birth</h4>
-                                <input type="date" data-date-inline-picker="true" />
+                    <div class="calender1">
+                        <h4 id="birth-date"> Date of Birth</h4>
+                        <input type="date" data-date-inline-picker="true" />
                     </div>
                     <!-- end the calender-->
 
@@ -152,8 +145,11 @@
                     <!--end the age-->
 
                    
-                    <input type="button"    name="next"  class="next button" value="Next">
+                    <input type="button"    name="next"  class="next button " id="firstButton" value="Next">
+
                 </form>
+
+               
             </div>
 <!-- *********************************************************** end the first page************************************************--> 
         <div class="form">
