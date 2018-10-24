@@ -160,6 +160,47 @@
 }
 /*end radio buttons for civil status*/
 
+/*start radio buttons for citizenship*/
+#lab3{
+	margin-left: 100px;
+	width: 400px;
+}
+
+.rad3 #radioCitizen1{
+	margin-top: -270px;
+	margin-left: -20px;
+	height: 20px;
+	width: 20px;
+}
+
+.lables5 #lables5id1{
+	margin-left: 210px;
+	margin-top: 20px;
+	width: 80px;
+}
+
+.rad3 #radioCitizen2{
+	margin-top: -250px;
+	margin-left: 60px;
+	height: 20px;
+	width: 20px;
+}
+
+.lables5 #lables5id2{
+	margin-left: 270px;
+	margin-top: -20px;
+	width: 180px;
+}
+
+.lables5{
+	width: 300px;
+	font-size: 12px;
+	margin-top: 10px;
+	margin-left: 20px;
+	font-weight: bold;
+}
+/*end radio buttons for citizenship*/
+
 
 .lable1{
 	font-size: 12px;

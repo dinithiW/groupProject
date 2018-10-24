@@ -105,7 +105,17 @@
 
                 <!-- start citizenship -->
 
-                   
+                   <div class="lables5">
+                        <h5 id="lab3">IF A CITIZEN OF SRI LANKA HOW OBTAINED</h5>
+                        <h5 class="lables5" id="lables5id1">BY DESCENT</h5>
+                        <h5 class="lables5" id="lables5id2">BY REGISTRATION</h5>
+                        
+                    </div>
+
+                    <div class ="rad3">
+                        <input type="radio"   id="radioCitizen1" name="CIVIL" >
+                        <input type="radio"   id="radioCitizen2" name="CIVIL" >
+                    </div>
                     
                 <!-- end citizenship -->    
                 
