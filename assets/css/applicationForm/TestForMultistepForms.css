@@ -82,20 +82,98 @@
 
 /*start of the radoi buttons*/
 
+#lab1{
+	margin-left: 270px;
+}
+
+
+.rad1 #radioGender1{
+	margin-top: -270px;
+	margin-left: -20px;
+	height: 20px;
+	width: 20px;
+}
+
+.lables3 #lables3id1{
+	margin-left: 210px;
+	margin-top: 20px;
+	width: 80px;
+}
+
+.rad1 #radioGender2{
+	margin-top: -250px;
+	margin-left: 60px;
+	height: 20px;
+	width: 20px;
+}
+
+.lables3 #lables3id2{
+	margin-left: 310px;
+	margin-top: -20px;
+	width: 80px;
+}
+
+
+.lable1{
+	font-size: 12px;
+	margin-top: 50px;
+	font-weight: bold;
+}
+
+.lable2{
+	font-size: 12px;
+	margin-top: 50px;
+	font-weight: bold;
+}
+
+.lables3{
+	width: 100px;
+	font-size: 12px;
+	margin-top: 10px;
+	
+	margin-left: 20px;
+	font-weight: bold;
+}
+
+
+
+#selectionlabel1{
+	
+	width: 100px;
+	margin-left: -150px;
+	margin-top: -350px;
+}
+
+#selectionlabel2{
+	
+	width: 100px;
+	margin-left: 300px;
+	margin-top: -300px;
+}
+
+#selectionlabel3{
+	
+	width: 300px;
+	margin-left: -400px;
+	margin-top: -350px;
+}
+
+
 #radioGender1{/*radio button for gender*/
 	
 	height: 20px;
 	width: 20px;
 	margin-left: -300px;
-	margin-top: 50px;
+	margin-top: 150px;
 }
 
 #radioGenderlabel1{/*label for male*/
 	
-	height: 20px;
-	width: 20px;
-	margin-left: -350px;
-	margin-top: 50px;
+	width: 50px;
+	
+	margin-left: -470px;
+	margin-top: 15px;
+	position: absolute;
 }
 
 #radioGender2{/*radio button for gender*/
@@ -106,21 +184,21 @@
 	
 }
 
-#radioGenderlabel2{/*label for male*/
+#radioGenderlabel2{/*label for female*/
 	
-	height: 20px;
-	width: 20px;
-	margin-left: -300px;
-	margin-top: 50px;
+	width: 50px;
+	
+	margin-left: -475px;
+	margin-top: -30px;
+	position: absolute;
 }
 
 #radioCivil1{/*radio button for civil*/
 	
-	
 	height: 20px;
 	width: 20px;
 	margin-left: 50px;
-	margin-top: 10px;
+	margin-top: -310px;
 }
 
 #radioCivil2{/*radio button for civil*/

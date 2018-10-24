@@ -71,29 +71,35 @@
                     <h6 class="lables">Office Number (in capital blocks)</h6>
                     <input type="text"   class="input-fields" name="applicant-citizenship" placeholder="Office Number">
 
+                <!-- start gender -->
+                
+                    <div class="lables3">
+                        <h5 id="lab1">GENDER</h5>
+                        <h5 class="lables3" id="lables3id1">MALE</h5>
+                        <h5 class="lables3" id="lables3id2">FEMALE</h5>
+                        
+                    </div>
+
+                    <div class ="rad1">
+                        <input type="radio"   id="radioGender1" name="GENDER" >
+                        <input type="radio"   id="radioGender2" name="GENDER" >
+                    </div>
+                
+
+                <!-- end gender -->
+
+                
+
+                <!-- start civil status -->
+                   
+                <!-- end civil status -->
+
+
+                <!-- start citizenship -->
+
+                   
                     
-                    <!-- start -->
-
-                    <input type="radio"  id="radioGender1" name="GENDER" >
-                    <label for="checkGender" id="radioGenderlabel1">MALE</label>
-                    <input type="radio"  id="radioGender2" name="GENDER" checked >
-                    <label for="checkGender" id="radioGenderlabel2">FEMALE</label>
-
-                    <input type="radio"  id="radioCivil1" name="CIVIL" >
-                    <label for="checkCivil" id="radioCivillabel1">MARRIED</label>
-                    <input type="radio"  id="radioCivil2" name="CIVIL" checked >
-                    <label for="checkCivil" id="radioCivillabel2">UNMARRIED</label>
-
-                    <input type="radio"  id="radioCitizenship1" name="CITIZENSHIP" >
-                    <label for="checkCitizenship" id="radioCitizenshiplabel1">BY DECENT</label>
-                    <input type="radio"  id="radioCitizenship2" name="CITIZENSHIP" checked >
-                    <label for="checkCitizenship" id="radioCitizenshiplabel2">BY REGISTRATION</label>
-
-
-                    
-                    <!-- end -->
-
-                    
+                <!-- end citizenship -->    
                 
                     
                     <!-- start the calender-->
