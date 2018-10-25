@@ -142,28 +142,39 @@
         <div class="form">
             <form action="">
 
+
+
             <div class="tableClass">
                 <fieldset style="width: 600px"><!-- start of the fieldset-->
                     <legend id="header1">
                         FOR SELECTED  SPECIFICATION AREAS
                     </legend>
-                    <table id="table1"><!-- start of the fieldset-->
+                    
+                    <table ><!-- start of the fieldset-->
                         <tr>
-                            <th>AREA NAME</th>
+                            <div class="tableLable">AREA NAME<div>
                         </tr>
+
+                        
                         <?php /*add for loop for make the match with the relevent numbers*/ 
                             if($fetch_data->num_rows() > 0){  
                                 foreach($fetch_data->result() as $row){  
                         ?>             
                                     <tr>
-                                        <td><?php echo $row->AREA_NAME;?></td>
-                                        <td><input type="checkbox" name="vehicle" id="checkBox" value=""></td>
+                                        
+                                        <td><input class="areas" type="checkbox" name="vehicle" id="checkBox" value=""></td>
+                                        <td >
+                                            <div class="areasForSelection" align="left"><?php echo $row->AREA_NAME;?></div>
+                                        </td>
                                     </tr>
                         <?PHP
                                 }  
                             }  
                         ?> 
                     </table><!-- end of the table-->
+
+                   
+
                 </fieldset><!-- end of the fieldset-->
             </div>
 

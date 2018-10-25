@@ -551,3 +551,26 @@
 	margin-left: -10px;
 }
 /*first page next buttton*/
+
+
+/*start the selected areas*/
+.areas{
+	background-color: blue;
+}
+/*end the selected areas*/
+
+
+/*start of checkboxs in second grouup*/
+.areas{
+	margin-left: 150px;
+}
+
+.areasForSelection{
+	
+	margin-left: 100px;
+}
+
+.tableLable{
+	margin-left: -18px;
+}
+/*ends of checkboxs in second grouup*/
