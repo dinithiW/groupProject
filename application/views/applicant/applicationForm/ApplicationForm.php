@@ -187,38 +187,33 @@
             <div class="form">
                 <form action="">
 
+                    <div class="checkBoxForPostSelectionLables">
+                        <h5 id="lab3">POSTS APPLIED FOR</h5>
+                        <h5 class="checkBoxForPostSelection" id="checkBoxForPostSelectionLablesid1">LECTURER(PROBATIONARY)</h5>
+                        <h5 class="checkBoxForPostSelection" id="checkBoxForPostSelectionLablesid2">SENIOR LECTURE GR. II</h5>
+                        
+                    </div>
 
-                <form role="form"><!-- start of the form-->
-                <div class ="inner"><!-- start of the inner-->
+                    <div class ="checkBoxForPostSelectionCheckbox">
+                        <input  type="checkbox" name="vehicle" id="checkBoxForPostSelectionid1" value="">
+                        <input  type="checkbox" name="vehicle" id="checkBoxForPostSelectionid2" value="">
+                    </div>
+                
 
-                    <div class="lec"><!-- start of the radio button-->
-                        <h5 class="selection"><b>POSTS APPLIED FOR</b></h5>
-                        <div class="custom-control custom-radio ">
-                            <input type="radio" class="custom-control-input" id="probationaryLecture" name="lecture" >
-                            <label class="custom-control-label name1" for="checkLecture">LECTURER(PROBATIONARY)</label>
-                        </div>
-
-                        <div class="custom-control custom-radio ">
-                            <input type="radio" class="custom-control-input" id="defaultCheckedDisabled2" name="lecture" checked >
-                            <label class="custom-control-label name2" for="checkLecture">SENIOR LECTURE GR. II</label>
-                        </div>
-                    </div><!-- end of the radio button-->
-                    
-                    <div class="dropdown drop" ><!-- start of the dropdown-->
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">SELECT YOUR DEGREE
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Bachelor Of science</a></li>
-                            <li><a href="#">Bachelor Of science</a></li>
-                            <li><a href="#">Bachelor Of science</a></li>
-                        </ul>
-                    </div><!-- end of the dropdown-->
-                </div><!-- end of the inner-->
-            </form> <!-- end of the form-->
+                
+                <div class="dropdown drop" ><!-- start of the dropdown-->
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">SELECT YOUR DEGREE
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Bachelor Of science</a></li>
+                        <li><a href="#">Bachelor Of science</a></li>
+                        <li><a href="#">Bachelor Of science</a></li>
+                    </ul>
+                </div><!-- end of the dropdown-->
+               
 
 
-            
                     
                 <h4 id="title1">Secondry Educational Details</h4><br/>
                     <div class="table1"><!-- start of the Secondry Educational Details table-->
