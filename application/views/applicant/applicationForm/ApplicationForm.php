@@ -34,8 +34,8 @@
             
 
             <div class="form">
-                <form action="">
-
+        
+                <form action= "<?= base_url("loginUser/process")?>" method = "post" >
                     <h2 class="fs-title">BASIC PERSONAL DETAILS</h2>
 
                     <h6 class="lables1">Full Name (in capital blocks)</h6>
@@ -535,7 +535,7 @@
 
 
                 <!-- start referee table-->        
-            <h4 id="title1">Referees </h4>
+                <h4 id="title1">Referees </h4>
                     <div class="content3">
                         <table id="table1">
 
