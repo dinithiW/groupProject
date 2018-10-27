@@ -601,8 +601,14 @@
                         <input id = "calender1"type="date" data-date-inline-picker="true" />
                     </div>
 
-                    <div class="agreement">
-                        <input type="submit" value="I agree"  id ="Agree"class ="btn btn-info btn-block acce">
+                    
+
+                    <div class="iAgreeLable">
+                        <h5>I agree</h5>
+                    </div> 
+
+                    <div class="iAgreeButton">
+                        <input id="" type="checkbox" name="vehicle"  value="">
                     </div> 
 
                     <input type="button" name="previous" class="previous button" value="Previous">

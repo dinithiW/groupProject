@@ -333,8 +333,6 @@
 }
 
 #radioCitizenship1{/*radio button for ctizenship*/
-	
-	
 	height: 20px;
 	width: 20px;
 	margin-left: 50px;
@@ -492,6 +490,7 @@
 #note1{
 	color: red;
 	font-size: 13px;
+	margin-top: 100px;
 }
 
 #note2{
@@ -681,4 +680,25 @@
 
 .dropDownForSelectDegreeOuter{
 	margin-top: 30px;
+}
+
+.agreement{
+	margin-left: 100px;
+	margin-top: -60px;
+
+	width: 100px;
+}
+
+.iAgreeLable{
+	margin-left: 60px;
+	margin-top: -50px;
+	width: 100px;
+}
+
+.iAgreeButton{
+	margin-left: 30px;
+	margin-top: -25px;
+	width: 30px;
+	height: 30px;;
+;
 }
