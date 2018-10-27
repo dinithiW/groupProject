@@ -203,7 +203,7 @@
                         <input  type="checkbox" name="vehicle" id="checkBoxForPostSelectionid2" value="">
                     </div>
                 
-                <div class="dropdown drop">
+                <div class="dropdown drop dropDownForSelectDegreeOuter">
                     <button class="btn btn-primary dropdown-toggle dropDownForSelectDegree" type="button" data-toggle="dropdown">SELECT YOUR DEGREE
                         <span class="caret"></span>
                     </button>
@@ -214,19 +214,7 @@
                     </div>
                 </div>
 
-                <div class="dropdown drop sinhala1" ><!-- start of the dropdown for sinhala-->
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-content">
-                            <li><a href="#">Very Good</a></li>
-                            <li><a href="#">Good</a></li>
-                            <li><a href="#">Fair</a></li>
-                            <li><a href="#">No Knowledge</a></li>
-                        </ul>
-                    </div><!-- end of the dropdown for sinhala1-->
-
-                    
+                
                 <h4 id="secondryEducationalTitle">Secondry Educational Details</h4><br/>
                     <div class="table1"><!-- start of the Secondry Educational Details table-->
                         <table id="Table">
@@ -440,12 +428,15 @@
                     <h5 id="title3">*******Ability to Work******** | ********* Ability To Teach********</h5>
                     
 <!-- start of the dropdown buttons-->
+                    
+
+
 
                     <div class="dropdown drop sinhala1" ><!-- start of the dropdown for sinhala-->
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">SINHALA
                             <span class="caret"></span>
                         </button>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-content">
                             <li><a href="#">Very Good</a></li>
                             <li><a href="#">Good</a></li>
                             <li><a href="#">Fair</a></li>
@@ -457,7 +448,7 @@
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">TAMIL
                             <span class="caret"></span>
                         </button>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-content">
                             <li><a href="#">Very Good</a></li>
                             <li><a href="#">Good</a></li>
                             <li><a href="#">Fair</a></li>
@@ -469,7 +460,7 @@
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">ENGLISH
                             <span class="caret"></span>
                         </button>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-content">
                             <li><a href="#">Very Good</a></li>
                             <li><a href="#">Good</a></li>
                             <li><a href="#">Fair</a></li>
@@ -481,7 +472,7 @@
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">SINHALA
                             <span class="caret"></span>
                         </button>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-content">
                             <li><a href="#">Very Good</a></li>
                             <li><a href="#">Good</a></li>
                             <li><a href="#">Fair</a></li>
@@ -493,7 +484,7 @@
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">TAMIL
                             <span class="caret"></span>
                         </button>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-content">
                             <li><a href="#">Very Good</a></li>
                             <li><a href="#">Good</a></li>
                             <li><a href="#">Fair</a></li>
@@ -505,7 +496,7 @@
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">ENGLISH
                             <span class="caret"></span>
                         </button>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-content">
                             <li><a href="#">Very Good</a></li>
                             <li><a href="#">Good</a></li>
                             <li><a href="#">Fair</a></li>

@@ -509,34 +509,34 @@
 	/*start of the dropdown buttons*/
 .sinhala1{
 	margin-top: 10px;
-	margin-left: -600px;
+	margin-left: 0px;
 }
 
 .tamil1{
-	margin-top: -34px;
-	margin-left: -400px;
+	margin-top: -534px;
+	margin-left: 5px;
 }
 
 .enlgish1{
 	margin-top: -200px;
-	margin-left: -500px;
+	margin-left: 30px;
 }
-/*
+
 .sinhala2{
 	margin-top: 10px;
-	margin-left: -600px;
+	margin-left: 10px;
 }
 
 .tamil2{
 	margin-top: 10px;
-	margin-left: -600px;
+	margin-left: 5px;
 }
 
 .enlgish2{
 	margin-top: 10px;
-	margin-left: -600px;
+	margin-left: 10px;
 }
-*/
+
 
 	/*ends of the dropdown buttons*/
 
@@ -677,4 +677,8 @@
 
 .dropDownForSelectDegree{
 	width: 200px;
+}
+
+.dropDownForSelectDegreeOuter{
+	margin-top: 30px;
 }
