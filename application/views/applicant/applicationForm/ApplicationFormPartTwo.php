@@ -46,9 +46,9 @@
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Bachelor Of science</a></li>
-                            <li><a href="#">Bachelor Of science</a></li>
-                            <li><a href="#">Bachelor Of science</a></li>
+                            <li><a href="#"><b>Bachelor Of science<b></a></li>
+                            <li><a href="#"><b>Bachelor Of science<b></a></li>
+                            <li><a href="#"><b>Bachelor Of science<b></a></li>
                         </ul>
                     </div><!-- end of the dropdown-->
                 </div><!-- end of the inner-->

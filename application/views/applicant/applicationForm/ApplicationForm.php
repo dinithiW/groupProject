@@ -203,14 +203,28 @@
                         <input  type="checkbox" name="vehicle" id="checkBoxForPostSelectionid2" value="">
                     </div>
                 
-                <div class="dropdown">
-                    <button class="dropbtn">Dropdown</button>
+                <div class="dropdown drop">
+                    <button class="btn btn-primary dropdown-toggle dropDownForSelectDegree" type="button" data-toggle="dropdown">SELECT YOUR DEGREE
+                        <span class="caret"></span>
+                    </button>
                     <div class="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
+                        <a href="#">Bachelor Of science</a>
+                        <a href="#">Bachelor Of science</a>
+                        <a href="#">Bachelor Of science</a>
                     </div>
                 </div>
+
+                <div class="dropdown drop sinhala1" ><!-- start of the dropdown for sinhala-->
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-content">
+                            <li><a href="#">Very Good</a></li>
+                            <li><a href="#">Good</a></li>
+                            <li><a href="#">Fair</a></li>
+                            <li><a href="#">No Knowledge</a></li>
+                        </ul>
+                    </div><!-- end of the dropdown for sinhala1-->
 
                     
                 <h4 id="secondryEducationalTitle">Secondry Educational Details</h4><br/>
