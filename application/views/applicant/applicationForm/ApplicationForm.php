@@ -187,8 +187,12 @@
             <div class="form">
                 <form action="">
 
+                    <div class="checkBoxForPostSelectionHeader"> 
+                        <h5 id="lab3" >POSTS APPLIED FOR</h5>
+                    </div>
+
                     <div class="checkBoxForPostSelectionLables">
-                        <h5 id="lab3">POSTS APPLIED FOR</h5>
+                        
                         <h5 class="checkBoxForPostSelection" id="checkBoxForPostSelectionLablesid1">LECTURER(PROBATIONARY)</h5>
                         <h5 class="checkBoxForPostSelection" id="checkBoxForPostSelectionLablesid2">SENIOR LECTURE GR. II</h5>
                         
@@ -201,8 +205,8 @@
                 
 
                 
-                <div class="dropdown drop" ><!-- start of the dropdown-->
-                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">SELECT YOUR DEGREE
+                <div class="dropDownForPostSelect" ><!-- start of the dropdown-->
+                    <button class="btn btn-primary dropdown-toggle dropDownForPostSelectButton" type="button" data-toggle="dropdown">SELECT YOUR DEGREE
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
@@ -213,6 +217,14 @@
                 </div><!-- end of the dropdown-->
                
 
+                <div class="dropdown">
+                <button class="dropbtn">Dropdown</button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+                </div>
 
                     
                 <h4 id="title1">Secondry Educational Details</h4><br/>

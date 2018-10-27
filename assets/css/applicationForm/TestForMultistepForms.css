@@ -597,8 +597,13 @@
 }
 
 .checkBoxForPostSelectionLables{
-	margin-left: 10px;
-	margin-top: 35px;
+	margin-left:-60px;
+	margin-top: 20px;
+}
+
+.checkBoxForPostSelectionHeader{
+	margin-left:10px;
+	margin-top: 10px;
 }
 
 .checkBoxForPostSelectionCheckbox{
