@@ -203,31 +203,17 @@
                         <input  type="checkbox" name="vehicle" id="checkBoxForPostSelectionid2" value="">
                     </div>
                 
-
-                
-                <div class="dropDownForPostSelect" ><!-- start of the dropdown-->
-                    <button class="btn btn-primary dropdown-toggle dropDownForPostSelectButton" type="button" data-toggle="dropdown">SELECT YOUR DEGREE
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Bachelor Of science</a></li>
-                        <li><a href="#">Bachelor Of science</a></li>
-                        <li><a href="#">Bachelor Of science</a></li>
-                    </ul>
-                </div><!-- end of the dropdown-->
-               
-
                 <div class="dropdown">
-                <button class="dropbtn">Dropdown</button>
-                <div class="dropdown-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
-                </div>
+                    <button class="dropbtn">Dropdown</button>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
                 </div>
 
                     
-                <h4 id="title1">Secondry Educational Details</h4><br/>
+                <h4 id="secondryEducationalTitle">Secondry Educational Details</h4><br/>
                     <div class="table1"><!-- start of the Secondry Educational Details table-->
                         <table id="Table">
                             <tr class="tr">
