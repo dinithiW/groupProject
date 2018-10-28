@@ -7,8 +7,10 @@
         }
 
         public function insertBasicPersonalDetailsController(){
-            $this->load->model('ApplicantApplicationFormModel');
-            $this->ApplicantApplicationFormModel->insertBasicPersonalDetailsModel();
+            if($this->input->post('Submit')){
+                $this->load->model('ApplicantApplicationFormModel');
+                $this->ApplicantApplicationFormModel->insertBasicPersonalDetailsModel();
+            }
         }
     }
 ?>
