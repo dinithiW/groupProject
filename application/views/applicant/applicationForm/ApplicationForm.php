@@ -1,6 +1,10 @@
+<!-- edited 
+db_query_builder->1684  
+DB_driver ->691
+-->
 <!DOCTYPE html>
 <html>
-
+    
     <head>
 
         <meta charset="utf-8">
@@ -32,7 +36,7 @@
                 <div class="form">    
                     <h2 class="fs-title">BASIC PERSONAL DETAILS</h2>
 
-                    <h6 class="lables1">Full Name (in capital blocks)</h6>
+                    <h6 class="lables">Full Name (in capital blocks)</h6>
                     <input type="text"   class="input-fields" name="first-name" placeholder="Full Name">
 
                     <h6 class="lables">Surname (in capital blocks)</h6>
@@ -122,8 +126,8 @@
                     <!-- end the calender-->
 
                     <!-- start the age-->
-                  <input type="button" name="next"  class="next button " id="firstButton" value="Next">
-            </div>
+                   <input type="button" name="next"  class="next button " id="firstButton" value="Next">
+                </div>
 <!-- *********************************************************** end the first page************************************************--> 
             <div class="form">
                 <div class="tableClass">

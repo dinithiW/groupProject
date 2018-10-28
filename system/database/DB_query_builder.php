@@ -1681,7 +1681,7 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 	{
 		if (count($this->qb_set) === 0)
 		{
-			return ($this->db_debug) ? $this->display_error('db_must_use_set') : FALSE;
+			return ($this->db_debug) ? $this->display_error('db_must_use_set') : TRUE;
 		}
 
 		if ($table !== '')
