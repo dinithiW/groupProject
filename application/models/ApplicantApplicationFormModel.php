@@ -247,13 +247,39 @@ class ApplicantApplicationFormModel extends CI_Model{
 
             'APPLICANT_ID'          =>"10",//////////////////////ad id number
             'INSTITUTION'           =>$this->input->post('any_other_qualifications_institution1'),
-            'FROM'                  =>$this->input->post('any_other_qualifications_deploma1'),
-            'TO'                    =>$this->input->post('any_other_qualifications_duration1'),
+            'FROM'                  =>$this->input->post('any_other_qualifications_from1'),
+            'TO'                    =>$this->input->post('any_other_qualifications_to1'),
             'DURAION'               =>$this->input->post('any_other_qualifications_duration1'),
-            'TYPE_OF_QUALIFICATION' =>$this->input->post('any_other_qualifications_year1')
+            'TYPE_OF_QUALIFICATION' =>$this->input->post('any_other_qualifications_type_of_qualification1')
         );
 
         $this->db->set($professional_qualifications_table_first_row);
+        $this->db->insert($this->db->dbprefix.'professional_qualifications');
+
+        $professional_qualifications_table_second_row = array(
+
+            'APPLICANT_ID'          =>"10",//////////////////////ad id number
+            'INSTITUTION'           =>$this->input->post('any_other_qualifications_institution2'),
+            'FROM'                  =>$this->input->post('any_other_qualifications_from2'),
+            'TO'                    =>$this->input->post('any_other_qualifications_to2'),
+            'DURAION'               =>$this->input->post('any_other_qualifications_duration2'),
+            'TYPE_OF_QUALIFICATION' =>$this->input->post('any_other_qualifications_type_of_qualification2')
+        );
+
+        $this->db->set($professional_qualifications_table_second_row);
+        $this->db->insert($this->db->dbprefix.'professional_qualifications');
+
+        $professional_qualifications_table_third_row = array(
+
+            'APPLICANT_ID'          =>"10",//////////////////////ad id number
+            'INSTITUTION'           =>$this->input->post('any_other_qualifications_institution3'),
+            'FROM'                  =>$this->input->post('any_other_qualifications_from3'),
+            'TO'                    =>$this->input->post('any_other_qualifications_to3'),
+            'DURAION'               =>$this->input->post('any_other_qualifications_duration3'),
+            'TYPE_OF_QUALIFICATION' =>$this->input->post('any_other_qualifications_type_of_qualification3')
+        );
+
+        $this->db->set($professional_qualifications_table_third_row);
         $this->db->insert($this->db->dbprefix.'professional_qualifications');
 
     }
