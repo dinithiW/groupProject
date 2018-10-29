@@ -550,7 +550,7 @@ DB_driver ->691
                         <table id="table1">
 
                             <tr>
-                                <th></th>
+                                
                                 <th>Name</th>
                                 <th>Designation</th>
                                 <th>Address</th>
@@ -558,32 +558,39 @@ DB_driver ->691
                                 <th>Contact No</th>
                             </tr>
 
+                            
                             <tr class="tr">
-                                <td><input type="text" class="Text" placeholder="        1"  size='5'/></td>
-                                <td><input type="text" class="Text" placeholder=""  size='30'/></td>
-                                <td><input type="text" class="Text" placeholder=""  size='10'/></td>
-                                <td><input type="text" class="Text" placeholder=""  size='30'/></td>
-                                <td><input type="text" class="Text" placeholder=""  size='20'/></td>
-                                <td><input type="text" class="Text" placeholder=""  size='10'/></td>
-                            <td><span class="lblStatus"></span></td>
+                                
+                                <td><input type="text" class="Text" placeholder="" name="referees_name1" size='30'/></td>
+                                <td><input type="text" class="Text" placeholder="" name="referees_designation1" size='10'/></td>
+                                <td><input type="text" class="Text" placeholder="" name="referees_address1" size='30'/></td>
+                                <td><input type="text" class="Text" placeholder="" name="referees_email1" size='20'/></td>
+                                <td><input type="text" class="Text" placeholder="" name="referees_contact1" size='10'/></td>
+                                <td><span class="lblStatus"></span></td>
+
+                            </tr>
 
                             <tr class="tr">
-                                <td><input type="text" class="Text" placeholder="        1"  size='5'/></td>
-                                <td><input type="text" class="Text" placeholder=""  size='30'/></td>
-                                <td><input type="text" class="Text" placeholder=""  size='10'/></td>
-                                <td><input type="text" class="Text" placeholder=""  size='30'/></td>
-                                <td><input type="text" class="Text" placeholder=""  size='20'/></td>
-                                <td><input type="text" class="Text" placeholder=""  size='10'/></td>
-                            <td><span class="lblStatus"></span></td>
+                                
+                                <td><input type="text" class="Text" placeholder="" name="referees_name2" size='30'/></td>
+                                <td><input type="text" class="Text" placeholder="" name="referees_designation2" size='10'/></td>
+                                <td><input type="text" class="Text" placeholder="" name="referees_address2" size='30'/></td>
+                                <td><input type="text" class="Text" placeholder="" name="referees_email2" size='20'/></td>
+                                <td><input type="text" class="Text" placeholder="" name="referees_contact2" size='10'/></td>
+                                <td><span class="lblStatus"></span></td>
+
+                            </tr>
 
                             <tr class="tr">
-                            <td><input type="text" class="Text" placeholder="        1"  size='5'/></td>
-                                <td><input type="text" class="Text" placeholder=""  size='30'/></td>
-                                <td><input type="text" class="Text" placeholder=""  size='10'/></td>
-                                <td><input type="text" class="Text" placeholder=""  size='30'/></td>
-                                <td><input type="text" class="Text" placeholder=""  size='20'/></td>
-                                <td><input type="text" class="Text" placeholder=""  size='10'/></td>
-                            <td><span class="lblStatus"></span></td>
+
+                                <td><input type="text" class="Text" placeholder="" name="referees_name3" size='30'/></td>
+                                <td><input type="text" class="Text" placeholder="" name="referees_designation3" size='10'/></td>
+                                <td><input type="text" class="Text" placeholder="" name="referees_address3" size='30'/></td>
+                                <td><input type="text" class="Text" placeholder="" name="referees_email3" size='20'/></td>
+                                <td><input type="text" class="Text" placeholder="" name="referees_contact3" size='10'/></td>
+                                <td><span class="lblStatus"></span></td>
+
+                            </tr>
 
                             
 
