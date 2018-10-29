@@ -83,8 +83,8 @@ class ApplicantApplicationFormModel extends CI_Model{
         $this->load->database();
 
         $name1 = $this->input->post('secondary_educational_school_name1');
-        $name2 =$this->input->post('secondary_educational_school_from1');
-        $name3 =$this->input->post('secondary_educational_school_to1');
+        $name2 =$this->input->post('secondary_educational_from1');
+        $name3 =$this->input->post('secondary_educational_to1');
         $name4 =$this->input->post('secondary_educational_examination1');
         $name5 =$this->input->post('secondary_educational_year1');
         
@@ -96,28 +96,25 @@ class ApplicantApplicationFormModel extends CI_Model{
         
 
         $name11 = $this->input->post('secondary_educational_school_name2');
-        $name12 =$this->input->post('secondary_educational_school_from2');
-        $name13 =$this->input->post('secondary_educational_school_to2');
-        $name14 =$this->input->post('secondary_educational_examination2');
-        $name15 =$this->input->post('secondary_educational_year2');
+        $name12 = $this->input->post('secondary_educational_from2');
+        $name13 = $this->input->post('secondary_educational_to2');
+        $name14 = $this->input->post('secondary_educational_examination2');
+        $name15 = $this->input->post('secondary_educational_year2');
         
-        echo "school-- $name11"."<br>";
+        echo "<br>"."school-- $name11"."<br>";
         echo "from--$name12"."<br>";
         echo "to--$name13"."<br>";
         echo "examination--$name14"."<br>";
         echo "year--$name15"."<br>";
-        
-        
-
-       
+    
 
         $data = array(
-            'APPLICANT_ID'=>"10",
-            'SCHOOL_NAME'=>$this->input->post('secondary_educational_school_name1'),
-            'FROM'=>$this->input->post('secondary_educational_school_from1'),
-            'TO'=>$this->input->post('secondary_educational_school_to1'),
+            'APPLICANT_ID'       =>"10",
+            'SCHOOL_NAME'        =>$this->input->post('secondary_educational_school_name1'),
+            'FROM'               =>$this->input->post('secondary_educational_from1'),
+            'TO'                 =>$this->input->post('secondary_educational_to1'),
             'EXAMINATION_PASSED' =>$this->input->post('secondary_educational_examination1'),
-            'YEAR'=>$this->input->post('secondary_educational_year1')
+            'YEAR'               =>$this->input->post('secondary_educational_year1')
         );
 
         $this->db->set($data);
