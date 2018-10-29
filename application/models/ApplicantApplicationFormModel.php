@@ -238,6 +238,27 @@ class ApplicantApplicationFormModel extends CI_Model{
 
     }
 
+    (`APPLICANT_ID`, `INSTITUTION`, ``, ``, `DURATION`, ``)
+
+    public function insertProfessionalQualificationsModel(){
+        
+        $this->load->database();
+        $professional_qualifications_table_first_row = array(
+
+            'APPLICANT_ID'          =>"10",//////////////////////ad id number
+            'INSTITUTION'           =>$this->input->post('any_other_qualifications_institution1'),
+            'FROM'                  =>$this->input->post('any_other_qualifications_deploma1'),
+            'TO'                    =>$this->input->post('any_other_qualifications_duration1'),
+            'DURAION'               =>$this->input->post('any_other_qualifications_duration1'),
+            'TYPE_OF_QUALIFICATION' =>$this->input->post('any_other_qualifications_year1')
+        );
+
+        $this->db->set($professional_qualifications_table_first_row);
+        $this->db->insert($this->db->dbprefix.'professional_qualifications');
+
+    }
+
+
 
     
 }

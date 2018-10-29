@@ -13,7 +13,8 @@
                 //$this->ApplicantApplicationFormModel->insertBasicPersonalDetailsModel();
                 //$this->ApplicantApplicationFormModel->insertSecondaryEducationalDetailsModel();
                 //$this->ApplicantApplicationFormModel->insertHigherEducationalDetailsModel();
-                $this->ApplicantApplicationFormModel->insertAnyOtherQualificationsModel();
+                //$this->ApplicantApplicationFormModel->insertAnyOtherQualificationsModel();
+                $this->ApplicantApplicationFormModel->insertProfessionalQualificationsModel();
             }
             else{
                 echo"not entered";
