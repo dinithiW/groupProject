@@ -10,7 +10,7 @@
             if($this->input->post('Submit')){
                 echo"this is the controller";
                 $this->load->model('ApplicantApplicationFormModel');
-                $this->ApplicantApplicationFormModel->insertBasicPersonalDetailsModel();
+                //$this->ApplicantApplicationFormModel->insertBasicPersonalDetailsModel();
                 $this->ApplicantApplicationFormModel->insertSecondaryEducationalDetailsModel();
             }
             else{
