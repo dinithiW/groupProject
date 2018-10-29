@@ -37,22 +37,22 @@ DB_driver ->691
                     <h2 class="fs-title">BASIC PERSONAL DETAILS</h2>
 
                     <h6 class="lables">Full Name (in capital blocks)</h6>
-                    <input type="text"   class="input-fields" name="first-name" placeholder="Full Name">
+                    <input type="text"   class="input-fields" name="first_name" placeholder="Full Name">
 
                     <h6 class="lables">Surname (in capital blocks)</h6>
-                    <input type="text"   class="input-fields" name="last-name" placeholder="Sur Name">
+                    <input type="text"   class="input-fields" name="last_name" placeholder="Sur Name">
 
                     <h6 class="lables">Postal Address (in capital blocks)</h6>
-                    <input type="text"   class="input-fields" name="postal-address" placeholder="Postal Address">
+                    <input type="text"   class="input-fields" name="postal_address" placeholder="Postal Address">
 
                     <h6 class="lables">Permanent Address  (in capital blocks)</h6>
-                    <input type="text"   class="input-fields" name="permanent-address" placeholder="Permanent Address">
+                    <input type="text"   class="input-fields" name="permanent_address" placeholder="Permanent Address">
                     
                     <h6 class="lables">NIC/Driving Licence/Passport No (in capital blocks)</h6>
-                    <input type="text"   class="input-fields" name="driving-licence" placeholder="NIC/Driving Licence/Passport No">
+                    <input type="text"   class="input-fields" name="driving_licence" placeholder="NIC/Driving Licence/Passport No">
 
                     <h6 class="lables">Citizenship (in capital blocks)</h6>
-                    <input type="text"   class="input-fields" name="applicant-citizenship" placeholder="Citizenship">
+                    <input type="text"   class="input-fields" name="applicant_citizenship" placeholder="Citizenship">
 
                     <h6 class="lables">Personal-Email  (in capital blocks)</h6>
                     <input type="text"   class="input-fields" name="personalEmail" placeholder="Personal-Email">
@@ -61,13 +61,13 @@ DB_driver ->691
                     <input type="text"   class="input-fields" name="officeEmail" placeholder="Office-Email">
 
                     <h6 class="lables">Mobile Number (in capital blocks)</h6>
-                    <input type="text"   class="input-fields" name="mobile-number" placeholder="Mobile Number">
+                    <input type="text"   class="input-fields" name="mobile_number" placeholder="Mobile Number">
 
                     <h6 class="lables">Home Number (in capital blocks)</h6>
-                    <input type="text"   class="input-fields" name="home-number" placeholder="Home Number">
+                    <input type="text"   class="input-fields" name="home_number" placeholder="Home Number">
 
                     <h6 class="lables">Office Number (in capital blocks)</h6>
-                    <input type="text"   class="input-fields" name="office-number" placeholder="Office Number">
+                    <input type="text"   class="input-fields" name="office_number" placeholder="Office Number">
 
                 <!-- start gender -->
                 
@@ -78,9 +78,16 @@ DB_driver ->691
                         
                     </div>
 
+<!--
+                    <input type="radio" name="credit_card" value="MasterCard" checked="checked">MasterCard<br>
+                    <input type="radio" name="credit_card" value="Visa">Visa<br>
+                    <input type="radio" name="credit_card" value="American Express">American Express<br>
+-->
+
+
                     <div class ="rad1">
-                        <input type="radio"   id="radioGender1" name="gender" >
-                        <input type="radio"   id="radioGender2" name="gender" >
+                        <input type="radio"   id="radioGender1" name="gender" valule="men" >
+                        <input type="radio"   id="radioGender2" name="gender" valule="woman">
                     </div>
                 
 
@@ -95,8 +102,8 @@ DB_driver ->691
                     </div>
 
                     <div class ="rad2">
-                        <input type="radio"   id="radioCivil1" name="civil-status" >
-                        <input type="radio"   id="radioCivil2" name="civil-status" >
+                        <input type="radio"   id="radioCivil1" name="civil_status" >
+                        <input type="radio"   id="radioCivil2" name="civil_status" >
                     </div>
                 <!-- end civil status -->
 
@@ -173,21 +180,21 @@ DB_driver ->691
             <div class="form">
                 
 
-                    <div class="checkBoxForPostSelectionHeader"> 
-                        <h5 id="lab3" >POSTS APPLIED FOR</h5>
-                    </div>
+                <div class="checkBoxForPostSelectionHeader"> 
+                    <h5 id="lab3" >POSTS APPLIED FOR</h5>
+                </div>
 
-                    <div class="checkBoxForPostSelectionLables">
-                        
-                        <h5 class="checkBoxForPostSelection" id="checkBoxForPostSelectionLablesid1" >LECTURER(PROBATIONARY)</h5>
-                        <h5 class="checkBoxForPostSelection" id="checkBoxForPostSelectionLablesid2" >SENIOR LECTURE GR. II</h5>
-                        
-                    </div>
+                <div class="checkBoxForPostSelectionLables">
+                    
+                    <h5 class="checkBoxForPostSelection" id="checkBoxForPostSelectionLablesid1" >LECTURER(PROBATIONARY)</h5>
+                    <h5 class="checkBoxForPostSelection" id="checkBoxForPostSelectionLablesid2" >SENIOR LECTURE GR. II</h5>
+                    
+                </div>
 
-                    <div class ="checkBoxForPostSelectionCheckbox">
-                        <input  type="radio" name="vehicle" id="checkBoxForPostSelectionid1"  name="post-for">
-                        <input  type="radio" name="vehicle" id="checkBoxForPostSelectionid2"  name="post-for">
-                    </div>
+                <div class ="checkBoxForPostSelectionCheckbox">
+                    <input  type="radio"  id="checkBoxForPostSelectionid1"  name="post-for" checked>
+                    <input  type="radio"  id="checkBoxForPostSelectionid2"  name="post-for">
+                </div>
                 
                 <div class="dropdown drop dropDownForSelectDegreeOuter">
                     <button class="btn btn-primary dropdown-toggle dropDownForSelectDegree" type="button" data-toggle="dropdown">SELECT YOUR DEGREE
