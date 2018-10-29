@@ -11,8 +11,9 @@
                 
                 $this->load->model('ApplicantApplicationFormModel');
                 //$this->ApplicantApplicationFormModel->insertBasicPersonalDetailsModel();
-                $this->ApplicantApplicationFormModel->insertSecondaryEducationalDetailsModel();
-                $this->ApplicantApplicationFormModel->insertHigherEducationalDetailsModel();
+                //$this->ApplicantApplicationFormModel->insertSecondaryEducationalDetailsModel();
+                //$this->ApplicantApplicationFormModel->insertHigherEducationalDetailsModel();
+                $this->ApplicantApplicationFormModel->insertAnyOtherQualificationsModel();
             }
             else{
                 echo"not entered";
