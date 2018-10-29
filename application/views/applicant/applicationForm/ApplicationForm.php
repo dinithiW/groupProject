@@ -55,10 +55,10 @@ DB_driver ->691
                     <input type="text"   class="input-fields" name="applicant-citizenship" placeholder="Citizenship">
 
                     <h6 class="lables">Personal-Email  (in capital blocks)</h6>
-                    <input type="text"   class="input-fields" name="personal-email" placeholder="Personal-Email">
+                    <input type="text"   class="input-fields" name="personalEmail" placeholder="Personal-Email">
                     
                     <h6 class="lables">Office-Email (in capital blocks)</h6>
-                    <input type="text"   class="input-fields" name="office-email" placeholder="Office-Email">
+                    <input type="text"   class="input-fields" name="officeEmail" placeholder="Office-Email">
 
                     <h6 class="lables">Mobile Number (in capital blocks)</h6>
                     <input type="text"   class="input-fields" name="mobile-number" placeholder="Mobile Number">
@@ -185,8 +185,8 @@ DB_driver ->691
                     </div>
 
                     <div class ="checkBoxForPostSelectionCheckbox">
-                        <input  type="checkbox" name="vehicle" id="checkBoxForPostSelectionid1" value="" name="post-for">
-                        <input  type="checkbox" name="vehicle" id="checkBoxForPostSelectionid2" value="" name="post-for">
+                        <input  type="radio" name="vehicle" id="checkBoxForPostSelectionid1"  name="post-for">
+                        <input  type="radio" name="vehicle" id="checkBoxForPostSelectionid2"  name="post-for">
                     </div>
                 
                 <div class="dropdown drop dropDownForSelectDegreeOuter">
