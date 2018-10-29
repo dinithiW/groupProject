@@ -14,7 +14,8 @@
                 //$this->ApplicantApplicationFormModel->insertSecondaryEducationalDetailsModel();
                 //$this->ApplicantApplicationFormModel->insertHigherEducationalDetailsModel();
                 //$this->ApplicantApplicationFormModel->insertAnyOtherQualificationsModel();
-                $this->ApplicantApplicationFormModel->insertProfessionalQualificationsModel();
+                //$this->ApplicantApplicationFormModel->insertProfessionalQualificationsModel();
+                $this->ApplicantApplicationFormModel->insertRefereeModel();
             }
             else{
                 echo"not entered";

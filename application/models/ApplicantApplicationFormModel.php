@@ -282,6 +282,23 @@ class ApplicantApplicationFormModel extends CI_Model{
 
     }
 
+    
+
+    public function insertRefereeModel(){
+        
+        $this->load->database();
+        $referee_table_first_row = array(
+
+            'APPLICANT_ID'          =>"10",//////////////////////ad id number
+            'NAME'                  =>$this->input->post('referees_name1'),
+            'DESIGNATION'           =>$this->input->post('referees_designation1'),
+            'ADDRESS'               =>$this->input->post('referees_address1'),
+            'EMAIL'                 =>$this->input->post('referees_email1'),
+            'CONTACT_NO'            =>$this->input->post('referees_contact1')
+        );
+
+        $this->db->set($referee_table_first_row);
+        $this->db->insert($this->db->dbprefix.'referees');
 
 
     
