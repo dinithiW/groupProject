@@ -244,11 +244,11 @@ DB_driver ->691
                             <td><span class="lblStatus"></span></td>
 
                             <tr class="tr">
-                                <td><input type="text" class="Text"   size='45'/></td>
-                                <td><input type="text" class="Text"   size='5'/></td>
-                                <td><input type="text" class="Text"   size='5'/></td>
-                                <td><input type="text" class="Text"   size='45'/></td>
-                                <td><input type="text" class="Text"   size='5'/></td>
+                                <td><input type="text" class="Text"  name="secondary_educational_school_name4" size='42'/></td>
+                                <td><input type="text" class="Text"  name="secondary_educational_from4" size='8'/></td>
+                                <td><input type="text" class="Text"  name="secondary_educational_to4" size='8'/></td>
+                                <td><input type="text" class="Text"  name="secondary_educational_examination4" size='42'/></td>
+                                <td><input type="text" class="Text"  name="secondary_educational_year4" size='5'/></td>
                             <td><span class="lblStatus"></span></td>
                             
                             </tr>

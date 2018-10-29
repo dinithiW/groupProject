@@ -104,13 +104,31 @@ class ApplicantApplicationFormModel extends CI_Model{
 
         $this->db->set($secondary_educational_table_second_row);
         $this->db->insert($this->db->dbprefix.'secondary_educational_details');
-    
 
+        $secondary_educational_table_third_row = array(
+            'APPLICANT_ID'       =>"10",//////////////////////ad id number
+            'SCHOOL_NAME'        =>$this->input->post('secondary_educational_school_name3'),
+            'FROM'               =>$this->input->post('secondary_educational_from3'),
+            'TO'                 =>$this->input->post('secondary_educational_to3'),
+            'EXAMINATION_PASSED' =>$this->input->post('secondary_educational_examination3'),
+            'YEAR'               =>$this->input->post('secondary_educational_year3')
+        );
+
+        $this->db->set($secondary_educational_table_third_row);
+        $this->db->insert($this->db->dbprefix.'secondary_educational_details');
         
+        $secondary_educational_table_fourth_row = array(
+            'APPLICANT_ID'       =>"10",//////////////////////ad id number
+            'SCHOOL_NAME'        =>$this->input->post('secondary_educational_school_name4'),
+            'FROM'               =>$this->input->post('secondary_educational_from4'),
+            'TO'                 =>$this->input->post('secondary_educational_to4'),
+            'EXAMINATION_PASSED' =>$this->input->post('secondary_educational_examination4'),
+            'YEAR'               =>$this->input->post('secondary_educational_year4')
+        );
 
-       // $sql = "INSERT INTO basic_personal_details(, , , ,, , , , , , , , , , , , , ) VALUES ('onwfdfdf','two','three','onw','two','three','onw','two','three','onw','two','three','onw','two','three','onw','two','three')";
-       //$sql = "INSERT INTO `just_for_test`(`name`, `age`) VALUES ('ruwan','24');";
-       
+        $this->db->set($secondary_educational_table_fourth_row);
+        $this->db->insert($this->db->dbprefix.'secondary_educational_details');
+    
         
     }
 
