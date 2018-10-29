@@ -201,14 +201,39 @@ class ApplicantApplicationFormModel extends CI_Model{
         
         $this->load->database();
         $any_other_qualifications_table_first_row = array(
+
             'APPLICANT_ID'       =>"10",//////////////////////ad id number
             'INSTITUTION'        =>$this->input->post('any_other_qualifications_university1'),
             'DEPLOMA'            =>$this->input->post('any_other_qualifications_deploma1'),
-            'DURAION'           =>$this->input->post('any_other_qualifications_duration1'),
+            'DURAION'            =>$this->input->post('any_other_qualifications_duration1'),
             'YEAR'               =>$this->input->post('any_other_qualifications_year1')
         );
 
         $this->db->set($any_other_qualifications_table_first_row);
+        $this->db->insert($this->db->dbprefix.'any_other_qualifications');
+
+        $any_other_qualifications_table_second_row = array(
+
+            'APPLICANT_ID'       =>"10",//////////////////////ad id number
+            'INSTITUTION'        =>$this->input->post('any_other_qualifications_university2'),
+            'DEPLOMA'            =>$this->input->post('any_other_qualifications_deploma2'),
+            'DURAION'            =>$this->input->post('any_other_qualifications_duration2'),
+            'YEAR'               =>$this->input->post('any_other_qualifications_year2')
+        );
+
+        $this->db->set($any_other_qualifications_table_second_row);
+        $this->db->insert($this->db->dbprefix.'any_other_qualifications');
+
+        $any_other_qualifications_table_third_row = array(
+
+            'APPLICANT_ID'       =>"10",//////////////////////ad id number
+            'INSTITUTION'        =>$this->input->post('any_other_qualifications_university3'),
+            'DEPLOMA'            =>$this->input->post('any_other_qualifications_deploma3'),
+            'DURAION'            =>$this->input->post('any_other_qualifications_duration3'),
+            'YEAR'               =>$this->input->post('any_other_qualifications_year3')
+        );
+
+        $this->db->set($any_other_qualifications_table_third_row);
         $this->db->insert($this->db->dbprefix.'any_other_qualifications');
 
     }
