@@ -198,16 +198,7 @@ DB_driver ->691
                     <input  type="radio"  id="checkBoxForPostSelectionid2"  name="post-for">
                 </div>
                 
-                <div class="dropdown drop dropDownForSelectDegreeOuter">
-                    <button class="btn btn-primary dropdown-toggle dropDownForSelectDegree" type="button" data-toggle="dropdown">SELECT YOUR DEGREE
-                        <span class="caret"></span>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="#">Bachelor Of science</a>
-                        <a href="#">Bachelor Of science</a>
-                        <a href="#">Bachelor Of science</a>
-                    </div>
-                </div>
+                
 
 
                 <style>
