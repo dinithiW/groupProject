@@ -192,7 +192,7 @@ DB_driver ->691
                 </div>
 
                 <div class ="checkBoxForPostSelectionCheckbox">
-                    <input  type="radio"  id="checkBoxForPostSelectionid1"  name="post-for" checked>
+                    <input  type="radio"  id="checkBoxForPostSelectionid1"  name="post-for" >
                     <input  type="radio"  id="checkBoxForPostSelectionid2"  name="post-for">
                 </div>
                 
