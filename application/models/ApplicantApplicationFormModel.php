@@ -195,7 +195,6 @@ class ApplicantApplicationFormModel extends CI_Model{
         $this->db->set($higher_educational_table_fourth_row);
         $this->db->insert($this->db->dbprefix.'higher_educational_details');
         
-       
     }
 
     public function insertAnyOtherQualificationsModel(){

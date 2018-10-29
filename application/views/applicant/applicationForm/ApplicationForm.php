@@ -335,7 +335,7 @@ DB_driver ->691
                     <div class="table3">
                         <table id="Table">
                             <tr>
-                                <th></th>
+                                
                                 <th>Institution</th>
                                 <th>Deploma etc</th>
                                 <th>Duration</th>
@@ -344,31 +344,30 @@ DB_driver ->691
 
                             <tr class="tr">
                                 
-                                <td><input type="text" class="Text" name="any_other_qualifications_university1"  size='43'/></td>
+                                <td><input type="text" class="Text" name="any_other_qualifications_university1"  size='50'/></td>
                                 <td><input type="text" class="Text" name="any_other_qualifications_deploma1"  size='32'/></td>
                                 <td><input type="text" class="Text" name="any_other_qualifications_duration1"  size='17'/></td>
                                 <td><input type="text" class="Text" name="any_other_qualifications_year1"  size='13'/></td>
-                            <td><span class="lblStatus"></span></td>
+                                <td><span class="lblStatus"></span></td>
 
                             <tr class="tr">
-                                <td><input type="text" class="Text"   size='5' placeholder="        1"/></td>
-                                <td><input type="text" class="Text"   size='40'/></td>
-                                <td><input type="text" class="Text"   size='30'/></td>
-                                <td><input type="text" class="Text"   size='17'/></td>
-                                <td><input type="text" class="Text"   size='13'/></td>
-                            <td><span class="lblStatus"></span></td>
+                                
+                                <td><input type="text" class="Text" name="any_other_qualifications_university2"  size='50'/></td>
+                                <td><input type="text" class="Text" name="any_other_qualifications_deploma2"  size='32'/></td>
+                                <td><input type="text" class="Text" name="any_other_qualifications_duration2"  size='17'/></td>
+                                <td><input type="text" class="Text" name="any_other_qualifications_year2"  size='13'/></td>
+                                <td><span class="lblStatus"></span></td>
 
                             <tr class="tr">
-                                <td><input type="text" class="Text"   size='5' placeholder="        1"/></td>
-                                <td><input type="text" class="Text"   size='40'/></td>
-                                <td><input type="text" class="Text"   size='30'/></td>
-                                <td><input type="text" class="Text"   size='17'/></td>
-                                <td><input type="text" class="Text"   size='13'/></td>
-                            <td><span class="lblStatus"></span></td>
-
-                            
+                               
+                                <td><input type="text" class="Text" name="any_other_qualifications_university2"  size='50'/></td>
+                                <td><input type="text" class="Text" name="any_other_qualifications_deploma2"  size='32'/></td>
+                                <td><input type="text" class="Text" name="any_other_qualifications_duration2"  size='17'/></td>
+                                <td><input type="text" class="Text" name="any_other_qualifications_year2"  size='13'/></td>
+                                <td><span class="lblStatus"></span></td>
 
                             </tr>
+
                         </table>
                     </div>
                     <h5 id="note2">Note:Certified copies of the certificates and transcripts should be attached</h5>
