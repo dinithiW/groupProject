@@ -21,18 +21,9 @@ class ApplicantDashboard extends CI_Controller{
         //$this->load->view('applicant/applicationForm/ApplicationForm');
         $this->load->model('operator/categorizeApplilcationsModel');
         $data['fetch_data'] = $this->categorizeApplilcationsModel->fetch_datas();
-        //$this->load->view('applicant/applicationForm/ApplicationForm',$data);
+        $this->load->view('applicant/applicationForm/ApplicationForm',$data);
     	
     }
-
-    public function ApplicationSecondPage(){
-       
-        $this->load->model('ApplicantApplicationFormModel');
-        $this->ApplicantApplicationFormModel->insertBasicPersonalDetailsModel();
-       
-    }
-
-    
     
     public function applicationThirdPage(){
         $this->load->view('applicant/header');
