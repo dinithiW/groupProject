@@ -270,48 +270,59 @@ DB_driver ->691
                                 <th>Index No</th>
                             </tr>
 
+
+
+
                             <tr class="tr">
-                                <td><input type="text" class="Text"   size='25'/></td>
-                                <td><input type="text" class="Text"   size='3'/></td>
-                                <td><input type="text" class="Text"   size='3'/></td>
-                                <td><input type="text" class="Text"   size='25'/></td>
-                                <td><input type="text" class="Text"   size='11'/></td>
-                                <td><input type="text" class="Text"   size='13'/></td>
-                                <td><input type="text" class="Text"   size='4'/></td>
-                                <td><input type="text" class="Text"   size='7'/></td>
+
+                                <td><input type="text" class="Text" name="heigher_educational_university1"  size='25'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_from1"  size='3'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_to1"  size='3'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_degree_obtained1"  size='25'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_duration1"  size='11'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_year1"  size='4'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_year_no1"  size='7'/></td>
+                            
                             <td><span class="lblStatus"></span></td>
                             
                             <tr class="tr">
-                                <td><input type="text" class="Text"   size='25'/></td>
-                                <td><input type="text" class="Text"   size='3'/></td>
-                                <td><input type="text" class="Text"   size='3'/></td>
-                                <td><input type="text" class="Text"   size='25'/></td>
-                                <td><input type="text" class="Text"   size='11'/></td>
-                                <td><input type="text" class="Text"   size='13'/></td>
-                                <td><input type="text" class="Text"   size='4'/></td>
-                                <td><input type="text" class="Text"   size='7'/></td>
+
+                                <td><input type="text" class="Text" name="heigher_educational_university2"  size='25'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_from2"  size='3'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_to2"  size='3'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_degree_obtained2"  size='25'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_duration2"  size='11'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_class2" size='13'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_year2"  size='4'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_year_no2"  size='7'/></td>
+
                             <td><span class="lblStatus"></span></td>
 
                             <tr class="tr">
-                                <td><input type="text" class="Text"   size='25'/></td>
-                                <td><input type="text" class="Text"   size='3'/></td>
-                                <td><input type="text" class="Text"   size='3'/></td>
-                                <td><input type="text" class="Text"   size='25'/></td>
-                                <td><input type="text" class="Text"   size='11'/></td>
-                                <td><input type="text" class="Text"   size='13'/></td>
-                                <td><input type="text" class="Text"   size='4'/></td>
-                                <td><input type="text" class="Text"   size='7'/></td>
+
+                                <td><input type="text" class="Text" name="heigher_educational_university3"  size='25'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_from3"  size='3'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_to3"  size='3'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_degree_obtained3"  size='25'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_duration3"  size='11'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_class3" size='13'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_year3"  size='4'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_year_no3"  size='7'/></td>
+
                             <td><span class="lblStatus"></span></td>
 
                             <tr class="tr">
-                                <td><input type="text" class="Text"   size='25'/></td>
-                                <td><input type="text" class="Text"   size='3'/></td>
-                                <td><input type="text" class="Text"   size='3'/></td>
-                                <td><input type="text" class="Text"   size='25'/></td>
-                                <td><input type="text" class="Text"   size='11'/></td>
-                                <td><input type="text" class="Text"   size='13'/></td>
-                                <td><input type="text" class="Text"   size='4'/></td>
-                                <td><input type="text" class="Text"   size='7'/></td>
+
+                                <td><input type="text" class="Text" name="heigher_educational_university4"  size='25'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_from4"  size='3'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_to4"  size='3'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_degree_obtained4"  size='25'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_duration4"  size='11'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_class4" size='13'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_year4"  size='4'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_year_no4"  size='7'/></td>
+
                             <td><span class="lblStatus"></span></td>
 
                             </tr>
