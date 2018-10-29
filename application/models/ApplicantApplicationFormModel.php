@@ -92,25 +92,30 @@ class ApplicantApplicationFormModel extends CI_Model{
         
        
 
-        echo "name-- $name1"."<br>";
-        echo "name--$name2"."<br>";
-        echo "name--$name3"."<br>";
-        echo "name--$name4"."<br>";
-        echo "name--$name5"."<br>";
+        echo "school-- $name1"."<br>";
+        echo "from--$name2"."<br>";
+        echo "to--$name3"."<br>";
+        echo "examination--$name4"."<br>";
+        echo "year--$name5"."<br>";
         
         
 
        
 
         $data = array(
-            
+            'APPLICANT_ID'=>"10",
+            'SCHOOL_NAME'=>$this->input->post('secondary_educational_school_name1'),
+            'FROM'=>$this->input->post('secondary_educational_school_from1'),
+            'TO'=>$this->input->post('secondary_educational_school_to1'),
+            'EXAMINATION_PASSED' =>$this->input->post('secondary_educational_examination1'),
+            'YEAR'=>$this->input->post('secondary_educational_year1')
         );
 
         $this->db->set($data);
 
        // $sql = "INSERT INTO basic_personal_details(, , , ,, , , , , , , , , , , , , ) VALUES ('onwfdfdf','two','three','onw','two','three','onw','two','three','onw','two','three','onw','two','three','onw','two','three')";
        //$sql = "INSERT INTO `just_for_test`(`name`, `age`) VALUES ('ruwan','24');";
-       $this->db->insert($this->db->dbprefix.'basic_personal_details');
+       $this->db->insert($this->db->dbprefix.'secondary_educational_details');
         
     }
 

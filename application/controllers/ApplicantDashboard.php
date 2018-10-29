@@ -17,7 +17,7 @@ class ApplicantDashboard extends CI_Controller{
     public function applicationFirstPage(){
         $this->load->view('applicant/applicationForm/headerForApplicationForm');
         //$this->load->view('applicant/applicationForm/ApplicationFormNavigationBar');
-        $this->load->view('applicant/applicationForm/ApplicationFormPartOne');
+        //$this->load->view('applicant/applicationForm/ApplicationFormPartOne');
         //$this->load->view('applicant/applicationForm/ApplicationForm');
         $this->load->model('operator/categorizeApplilcationsModel');
         $data['fetch_data'] = $this->categorizeApplilcationsModel->fetch_datas();
