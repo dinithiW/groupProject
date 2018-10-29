@@ -165,19 +165,34 @@ class ApplicantApplicationFormModel extends CI_Model{
         $this->db->set($higher_educational_table_second_row);
         $this->db->insert($this->db->dbprefix.'higher_educational_details');
 
-        $higher_educational_table_second_row = array(
+        $higher_educational_table_third_row = array(
             'APPLICANT_ID'       =>"10",//////////////////////ad id number
-            'UNIVERSITY'         =>$this->input->post('heigher_educational_university2'),
-            'FROM'               =>$this->input->post('heigher_educational_from2'),
-            'TO'                 =>$this->input->post('heigher_educational_to2'),
-            'DEGREE_OBTAINED'    =>$this->input->post('heigher_educational_degree_obtained2'),
-            'DURATION'           =>$this->input->post('heigher_educational_duration2'),
-            'CLASS'              =>$this->input->post('heigher_educational_class2'),
-            'YEAR'               =>$this->input->post('heigher_educational_year2'),
-            'INDEX_NO'           =>$this->input->post('heigher_educational_year_no2'),
+            'UNIVERSITY'         =>$this->input->post('heigher_educational_university3'),
+            'FROM'               =>$this->input->post('heigher_educational_from3'),
+            'TO'                 =>$this->input->post('heigher_educational_to3'),
+            'DEGREE_OBTAINED'    =>$this->input->post('heigher_educational_degree_obtained3'),
+            'DURATION'           =>$this->input->post('heigher_educational_duration3'),
+            'CLASS'              =>$this->input->post('heigher_educational_class3'),
+            'YEAR'               =>$this->input->post('heigher_educational_year3'),
+            'INDEX_NO'           =>$this->input->post('heigher_educational_year_no3'),
         );
 
-        $this->db->set($higher_educational_table_second_row);
+        $this->db->set($higher_educational_table_third_row);
+        $this->db->insert($this->db->dbprefix.'higher_educational_details');
+
+        $higher_educational_table_fourth_row = array(
+            'APPLICANT_ID'       =>"10",//////////////////////ad id number
+            'UNIVERSITY'         =>$this->input->post('heigher_educational_university4'),
+            'FROM'               =>$this->input->post('heigher_educational_from4'),
+            'TO'                 =>$this->input->post('heigher_educational_to4'),
+            'DEGREE_OBTAINED'    =>$this->input->post('heigher_educational_degree_obtained4'),
+            'DURATION'           =>$this->input->post('heigher_educational_duration4'),
+            'CLASS'              =>$this->input->post('heigher_educational_class4'),
+            'YEAR'               =>$this->input->post('heigher_educational_year4'),
+            'INDEX_NO'           =>$this->input->post('heigher_educational_year_no4'),
+        );
+
+        $this->db->set($higher_educational_table_fourth_row);
         $this->db->insert($this->db->dbprefix.'higher_educational_details');
         
        
