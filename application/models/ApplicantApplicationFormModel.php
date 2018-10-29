@@ -298,10 +298,10 @@ class ApplicantApplicationFormModel extends CI_Model{
             'CONTACT_NO'            =>$this->input->post('referees_contact1')
         );
 
-        $this->db->set($referee_table_second_row);
+        $this->db->set($referee_table_first_row);
         $this->db->insert($this->db->dbprefix.'referees');
         
-        $referee_table_first_row = array(
+        $referee_table_second_row = array(
 
             'APPLICANT_ID'          =>"10",//////////////////////ad id number
             'NAME'                  =>$this->input->post('referees_name2'),
