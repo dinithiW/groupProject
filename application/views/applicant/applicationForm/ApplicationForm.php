@@ -226,11 +226,11 @@ DB_driver ->691
                                 <td><input type="text" class="Text"  name="secondary_educational_year1" size='5'/></td>
                             <td><span class="lblStatus"></span></td>
                             <tr class="tr">
-                            <td><input type="text" class="Text"  name="secondary_educational_school_name1" size='42'/></td>
-                                <td><input type="text" class="Text"  name="secondary_educational_from1" size='8'/></td>
-                                <td><input type="text" class="Text"  name="secondary_educational_to1" size='8'/></td>
-                                <td><input type="text" class="Text"  name="secondary_educational_examination1" size='42'/></td>
-                                <td><input type="text" class="Text"  name="secondary_educational_year1" size='5'/></td>
+                                <td><input type="text" class="Text"  name="secondary_educational_school_name2" size='42'/></td>
+                                <td><input type="text" class="Text"  name="secondary_educational_from2" size='8'/></td>
+                                <td><input type="text" class="Text"  name="secondary_educational_to2" size='8'/></td>
+                                <td><input type="text" class="Text"  name="secondary_educational_examination2" size='42'/></td>
+                                <td><input type="text" class="Text"  name="secondary_educational_year2" size='5'/></td>
                             <td><span class="lblStatus"></span></td>
                             <tr class="tr">
                                 <td><input type="text" class="Text"   size='45'/></td>

@@ -88,15 +88,24 @@ class ApplicantApplicationFormModel extends CI_Model{
         $name4 =$this->input->post('secondary_educational_examination1');
         $name5 =$this->input->post('secondary_educational_year1');
         
-
-        
-       
-
         echo "school-- $name1"."<br>";
         echo "from--$name2"."<br>";
         echo "to--$name3"."<br>";
         echo "examination--$name4"."<br>";
         echo "year--$name5"."<br>";
+        
+
+        $name11 = $this->input->post('secondary_educational_school_name2');
+        $name12 =$this->input->post('secondary_educational_school_from2');
+        $name13 =$this->input->post('secondary_educational_school_to2');
+        $name14 =$this->input->post('secondary_educational_examination2');
+        $name15 =$this->input->post('secondary_educational_year2');
+        
+        echo "school-- $name11"."<br>";
+        echo "from--$name12"."<br>";
+        echo "to--$name13"."<br>";
+        echo "examination--$name14"."<br>";
+        echo "year--$name15"."<br>";
         
         
 
