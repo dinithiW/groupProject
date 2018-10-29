@@ -346,7 +346,7 @@ DB_driver ->691
 <!--end of the javascript file for the drop down -->
 
 
-                <div class="custom-select" style="width:300px; height:50px;">
+                <div class="custom-select " style="width:300px; height:50px;">
                     <select>
 
                         <option value="0">Select Degree Category:</option>
@@ -590,77 +590,77 @@ DB_driver ->691
 <!-- start of the dropdown buttons-->
                     
                 
-                    <div class="dropdown drop sinhala1" ><!-- start of the dropdown for sinhala-->
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">SINHALA
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown_content_sinhala1">
-                            <a href="#">Very Good</a>
-                            <a href="#">Good</a>
-                            <a href="#">Fair</a>
-                            <a href="#">No Knowledge</a>
-                        </ul>
-                    </div><!-- end of the dropdown for sinhala1-->
+                    <!-- start of the dropdown for sinhala-->
+                    <div class="custom-select" style="width:300px; height:50px;">
+                        <select>
+                            <option value="0">Sinhala:</option>
+                            <option value="1">Very Good</option>
+                            <option value="2">Good</option>
+                            <option value="3">Fair</option>
+                            <option value="4">No Knowledge</option>
+                        </select>
+                    </div>
+                    <!-- end of the dropdown for sinhala1-->
 
-                    <div class="dropdown drop tamil1" ><!-- start of the dropdown for tamil1-->
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">TAMIL
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown_content_tamil1">
-                            <a href="#">Very Good</a>
-                            <a href="#">Good</a>
-                            <a href="#">Fair</a>
-                            <a href="#">No Knowledge</a>
-                        </ul>
-                    </div><!-- end of the dropdown for tamil1-->
+                   <!-- start of the dropdown for tamil1-->
+                    <div class="custom-select" style="width:300px; height:50px;">
+                        <select>
+                            <option value="0">English:</option>
+                            <option value="1">Very Good</option>
+                            <option value="2">Good</option>
+                            <option value="3">Fair</option>
+                            <option value="4">No Knowledge</option>
+                        </select>
+                    </div>
+                    <!-- end of the dropdown for tamil1-->
 
-                    <div class="dropdown drop english1" ><!-- start of the dropdown for english1-->
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">ENGLISH
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown_content_english1">
-                            <a href="#">Very Good</a>
-                            <a href="#">Good</a>
-                            <a href="#">Fair</a>
-                            <a href="#">No Knowledge</a>
-                        </ul>
-                    </div><!-- end of the dropdown for english1-->
+                    <!-- start of the dropdown for english1-->
+                    <div class="custom-select" style="width:300px; height:50px;">
+                        <select>
+                            <option value="0">Tamil:</option>
+                            <option value="1">Very Good</option>
+                            <option value="2">Good</option>
+                            <option value="3">Fair</option>
+                            <option value="4">No Knowledge</option>
+                        </select>
+                    </div>
+                    <!-- end of the dropdown for english1-->
 
-                    <div class="dropdown drop sinhala2" ><!-- start of the dropdown for sinhala2-->
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">SINHALA
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown_content_sinhala2">
-                            <a href="#">Very Good</a>
-                            <a href="#">Good</a>
-                            <a href="#">Fair</a>
-                            <a href="#">No Knowledge</a>
-                        </ul>
-                    </div><!-- end of the dropdown for sinhala2-->
+                    <!-- start of the dropdown for sinhala2-->
+                    <div class="custom-select" style="width:300px; height:50px;">
+                        <select>
+                            <option value="0">Sinhala:</option>
+                            <option value="1">Very Good</option>
+                            <option value="2">Good</option>
+                            <option value="3">Fair</option>
+                            <option value="4">No Knowledge</option>
+                        </select>
+                    </div>
+                   <!-- end of the dropdown for sinhala2-->
 
-                    <div class="dropdown drop tamil2" ><!-- start of the dropdown for tamil2-->
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">TAMIL
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown_content_tamil2">
-                            <a href="#">Very Good</a>
-                            <a href="#">Good</a>
-                            <a href="#">Fair</a>
-                            <a href="#">No Knowledge</a>
-                        </ul>
-                    </div><!-- end of the dropdown for tamil2-->
+                    <!-- start of the dropdown for tamil2-->
+                    <div class="custom-select" style="width:300px; height:50px;">
+                        <select>
+                            <option value="0">English:</option>
+                            <option value="1">Very Good</option>
+                            <option value="2">Good</option>
+                            <option value="3">Fair</option>
+                            <option value="4">No Knowledge</option>
+                        </select>
+                    </div>
+                    <!-- end of the dropdown for tamil2-->
 
-                    <div class="dropdown drop english2" ><!-- start of the dropdown for english2-->
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">ENGLISH
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown_content_english2">
-                            <a href="#">Very Good</a>
-                            <a href="#">Good</a>
-                            <a href="#">Fair</a>
-                            <a href="#">No Knowledge</a>
-                        </ul>
-                    </div><!-- end of the dropdown for english2-->
+                    <!-- start of the dropdown for english2-->
+                    <div class="custom-select" style="width:300px; height:50px;">
+                        <select>
+                            <option value="0">Tamil:</option>
+                            <option value="1">Very Good</option>
+                            <option value="2">Good</option>
+                            <option value="3">Fair</option>
+                            <option value="4">No Knowledge</option>
+                        </select>
+                    </div>
+                    <!-- end of the dropdown for english2-->
 <!-- end of the dropdown series-->
 
                     <h5 id="note1">Note:Indicate your level based on self-evaluation of your ability</h5>
