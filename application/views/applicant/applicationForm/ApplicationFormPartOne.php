@@ -16,11 +16,9 @@
 
     <div class="outerClass" >
             <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4 row centered-form head">
-                <div class="panel panel-default header">
-                    <h3 class="panel-title" id="header">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>APPLICANT REGISTRATION FORM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;BASIC PERSONAL DETAILS</b></h3>
-                </div>
+                
 
-                <form role="form">
+                <form action= "<?= base_url("ApplicantDashboard/ApplicationSecondPage")?>" method = "post" >
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
@@ -44,111 +42,12 @@
                                 <input type="text" name="permanent-address" id="permanent-address" class="form-control input-sm" placeholder="Permanent Address">
                             </div>
 
-                            <div class="form-group">
-                                <label></label>
-                                <input type="text" name="driving-licence" id="driving-licence"   class="form-control input-sm " placeholder="NIC/Driving Licence/Passport No">
-                            </div>
-
-                            <div class="form-group">
-                                <label> </label>
-                                <input type="text" name="applicant-citizenship" id="applicant-citizenship"   class="form-control input-sm " placeholder="Citizenship ">
-                            </div>
-
-                            <div class="form-group">
-                                <label> </label>
-                                <input type="email" name="personal-email" id="personal-email" class="form-control input-sm" placeholder="Personal-Email ">
-                            </div>
-
-                             <div class="form-group">
-                                <label></label>
-                                <input type="email" name="office-email" id="office-email" class="form-control input-sm" placeholder="Office-Email">
-                            </div>
-
-                            <div class="form-group">
-                                <label></label>
-                                <input type="tel" name="mobile-phone" id="mobile-phone" class="form-control input-sm" placeholder="Mobile Number">
-                            </div>
-
-                            <div class="form-group">
-                                <label> </label>
-                                <input type="tel" name="home-phone" id="home-phone" class="form-control input-sm" placeholder="Home Number">
-                            </div>
-
-                            <div class="form-group">
-                                <label> </label>
-                                <input type="tel" name="office-phone" id="office-phone" class="form-control input-sm" placeholder="Office Number  ">
-                            </div>
-
-                    <!-- start of the drop downbutton -->        
-                            <div class="dropDown">
-                                <div class="gender"><!-- start of the radio button for gneder-->
-                                    <h5 class="selection1"><b>GENDER</b></h5>
-                                    <div class="custom-control custom-radio ">
-                                        <input type="radio" class="custom-control-input button1" id="selectGender" name="GENDER" >
-                                        <label class="custom-control-label name1" for="checkGender">MALE</label>
-                                    </div>
-
-                                    <div class="custom-control custom-radio ">
-                                        <input type="radio" class="custom-control-input button2" id="selectGende" name="GENDER" checked >
-                                        <label class="custom-control-label name2" for="checkGender">FEMALE</label>
-                                    </div>
-                                </div><!-- end of the radio button for gneder-->
-
-                                <div class="civilStatus"><!-- start of the radio button for civil status-->
-                                    <h5 id="selection2"><b>CIVIL STATUS</b></h5>
-                                    <div class="custom-control custom-radio1 ">
-                                        <input type="radio" class="custom-control-input button3" id="civil" name="CIVIL" >
-                                        <label class="custom-control-label name3" for="checkcivil">MARRIED</label>
-                                    </div>
-
-                                    <div class="custom-control custom-radio1 ">
-                                        <input type="radio" class="custom-control-input button4" id="civil" name="CIVIL" checked >
-                                        <label class="custom-control-label name4" for="checkcivil">UNMARRIED</label>
-                                    </div>
-                                </div><!-- end of the radio button for civil status-->
-
-
-                                <div class="citizenship"><!-- start of the radio button for citizenship-->
-                                    <h5 class="selection3"><b>IF A CITIZEN OF SRI LANKA HOW OBTAINED</b></h5>
-                                    <div class="custom-control customRadio3 ">
-                                        <input type="radio" class="custom-control-input button5" id="citizenShip" name="CITY" >
-                                        <label class="custom-control-label name5" for="checkcitizenship">BY DESCENT</label>
-                                    </div>
-
-                                    <div class="custom-control customRadio3">
-                                        <input type="radio" class="custom-control-input button6" id="citizenShip" name="CITY" checked >
-                                        <label class="custom-control-label name6" for="checkcitizenship">BY REGISTRATION</label>
-                                    </div>
-                                </div><!-- end of the radio button for citizenship-->
-                            </div>
-                    <!-- end of the dropdown button-->
-
-
-
-                            <!-- start the calender-->
-                            <div class="calender">
-                                <h4 id="birth-date"> Date of Birth</h4>
-                                <input type="date" data-date-inline-picker="true" />
-                            </div>
-                            <!-- end the calender-->
-
-                            <!-- start the age-->
-                            <div class="col-xs-6 col-sm-6 col-md-6 age ">
-                                <h4 id="currect-age"> Age as at closing date of application</h4> 
-                                    <div class="years form-group">
-                                        <input type="text" name="years" id="years" class="form-control input-sm" placeholder="years">
-                                    </div>
-                                    <div class="months form-group">
-                                        <input type="text" name="months" id="months" class="form-control input-sm" placeholder="months">
-                                    </div>
-                                    <div class="days form-group">
-                                        <input type="text" name="days" id="days" class="form-control input-sm" placeholder="days">
-                                    </div>
-                            </div>
-                            <!--end the age-->
+                            
+                   
                         
                         </div>
                     </div>
+                    <input type="submit" name="Submit" class="next button" value="sub">
                 </form>
             </div>
         
