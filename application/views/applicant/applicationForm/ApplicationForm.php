@@ -400,31 +400,34 @@ DB_driver ->691
 
                             <tr class="tr">
                                 
-                                <td><input type="text" class="Text"   size='30'/></td>
-                                <td><input type="text" class="Text"   size='6'/></td>
-                                <td><input type="text" class="Text"   size='6'/></td>
-                                <td><input type="text" class="Text"   size='17'/></td>
-                                <td><input type="text" class="Text"   size='36'/></td>
-                            <td><span class="lblStatus"></span></td>
+                                <td><input type="text" class="Text" name="any_other_qualifications_institution1"  size='30'/></td>
+                                <td><input type="text" class="Text" name="any_other_qualifications_from1"  size='6'/></td>
+                                <td><input type="text" class="Text" name="any_other_qualifications_to1"  size='6'/></td>
+                                <td><input type="text" class="Text" name="any_other_qualifications_duration1"  size='17'/></td>
+                                <td><input type="text" class="Text" name="any_other_qualifications_type_of_qualification1"  size='36'/></td>
+                                <td><span class="lblStatus"></span></td>
 
-                           <tr class="tr">
-                                
-                                <td><input type="text" class="Text"   size='30'/></td>
-                                <td><input type="text" class="Text"   size='6'/></td>
-                                <td><input type="text" class="Text"   size='6'/></td>
-                                <td><input type="text" class="Text"   size='17'/></td>
-                                <td><input type="text" class="Text"   size='36'/></td>
-                            <td><span class="lblStatus"></span></td>
+                            </tr>    
 
                             <tr class="tr">
                                 
-                                <td><input type="text" class="Text"   size='30'/></td>
-                                <td><input type="text" class="Text"   size='6'/></td>
-                                <td><input type="text" class="Text"   size='6'/></td>
-                                <td><input type="text" class="Text"   size='17'/></td>
-                                <td><input type="text" class="Text"   size='36'/></td>
-                            <td><span class="lblStatus"></span></td>
+                                <td><input type="text" class="Text" name="any_other_qualifications_institution2"  size='30'/></td>
+                                <td><input type="text" class="Text" name="any_other_qualifications_from2"  size='6'/></td>
+                                <td><input type="text" class="Text" name="any_other_qualifications_to2"  size='6'/></td>
+                                <td><input type="text" class="Text" name="any_other_qualifications_duration2"  size='17'/></td>
+                                <td><input type="text" class="Text" name="any_other_qualifications_type_of_qualification2"  size='36'/></td>
+                                <td><span class="lblStatus"></span></td>
 
+                            </tr>
+
+                            <tr class="tr">
+                                
+                                <td><input type="text" class="Text" name="any_other_qualifications_institution3"  size='30'/></td>
+                                <td><input type="text" class="Text" name="any_other_qualifications_from3"  size='6'/></td>
+                                <td><input type="text" class="Text" name="any_other_qualifications_to3"  size='6'/></td>
+                                <td><input type="text" class="Text" name="any_other_qualifications_duration3"  size='17'/></td>
+                                <td><input type="text" class="Text" name="any_other_qualifications_type_of_qualification3"  size='36'/></td>
+                                <td><span class="lblStatus"></span></td>
 
                             </tr>
                         </table>
