@@ -219,11 +219,11 @@ DB_driver ->691
                                 <th>Year</th>
                             </tr>
                             <tr class="tr">
-                                <td><input type="text" class="Text"   size='45'/></td>
-                                <td><input type="text" class="Text"   size='5'/></td>
-                                <td><input type="text" class="Text"   size='5'/></td>
-                                <td><input type="text" class="Text"   size='45'/></td>
-                                <td><input type="text" class="Text"   size='5'/></td>
+                                <td><input type="text" class="Text"  name="school_name1" size='45'/></td>
+                                <td><input type="text" class="Text"  name="from1" size='5'/></td>
+                                <td><input type="text" class="Text"  name="to1" size='5'/></td>
+                                <td><input type="text" class="Text"  name="examination1" size='45'/></td>
+                                <td><input type="text" class="Text"  name="year1" size='5'/></td>
                             <td><span class="lblStatus"></span></td>
                             <tr class="tr">
                                 <td><input type="text" class="Text"   size='45'/></td>
