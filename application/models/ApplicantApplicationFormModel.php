@@ -135,20 +135,20 @@ class ApplicantApplicationFormModel extends CI_Model{
     public function insertHigherEducationalDetailsModel(){
         
         $this->load->database();
-        $secondary_educational_table_first_row = array(
+        $higher_educational_table_first_row = array(
             'APPLICANT_ID'       =>"10",//////////////////////ad id number
-            'UNIVERSITY'        =>$this->input->post('secondary_educational_school_name1'),
-            'FROM'               =>$this->input->post('secondary_educational_from1'),
-            'TO'                 =>$this->input->post('secondary_educational_to1'),
-            'DEGREE_OBTAINED' =>$this->input->post('secondary_educational_examination1'),
-            'DURATION'               =>$this->input->post('secondary_educational_year1'),
-            'CLASS'               =>$this->input->post('secondary_educational_year1'),
-            'YEAR'               =>$this->input->post('secondary_educational_year1'),
-            'INDEX_NO'               =>$this->input->post('secondary_educational_year1'),
+            'UNIVERSITY'         =>$this->input->post('heigher_educational_university1'),
+            'FROM'               =>$this->input->post('heigher_educational_from1'),
+            'TO'                 =>$this->input->post('heigher_educational_to1'),
+            'DEGREE_OBTAINED'    =>$this->input->post('heigher_educational_degree_obtained1'),
+            'DURATION'           =>$this->input->post('heigher_educational_duration1'),
+            'CLASS'              =>$this->input->post('heigher_educational_class1'),
+            'YEAR'               =>$this->input->post('heigher_educational_year1'),
+            'INDEX_NO'           =>$this->input->post('heigher_educational_year_no1'),
         );
 
-        $this->db->set($secondary_educational_table_first_row);
-        $this->db->insert($this->db->dbprefix.'secondary_educational_details');
+        $this->db->set($higher_educational_table_first_row);
+        $this->db->insert($this->db->dbprefix.'higher_educational_details');
         
        
     }
