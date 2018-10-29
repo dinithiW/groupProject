@@ -506,36 +506,6 @@
 	font-size: 15px;
 }
 	/*start of the dropdown buttons*/
-.sinhala1{
-	margin-top: 10px;
-	margin-left: 0px;
-}
-
-.tamil1{
-	margin-top: -534px;
-	margin-left: 5px;
-}
-
-.enlgish1{
-	margin-top: -200px;
-	margin-left: 30px;
-}
-
-.sinhala2{
-	margin-top: 10px;
-	margin-left: 10px;
-}
-
-.tamil2{
-	margin-top: 10px;
-	margin-left: 5px;
-}
-
-.enlgish2{
-	margin-top: 10px;
-	margin-left: 10px;
-}
-
 
 	/*ends of the dropdown buttons*/
 
@@ -643,12 +613,13 @@
     display: inline-block;
 }
 
+
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
-	min-width: 200px;
+    background-color: #79e739;
+	width: 100px;
 	height: 10px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -699,6 +670,12 @@
 	margin-left: 30px;
 	margin-top: -25px;
 	width: 30px;
-	height: 30px;;
-;
+	height: 30px;
 }
+
+
+/*start of the deop down menu*/
+
+
+
+/*end of the srop down menu*/

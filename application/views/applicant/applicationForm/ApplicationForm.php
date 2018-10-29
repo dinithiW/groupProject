@@ -17,6 +17,8 @@ DB_driver ->691
         <script type='text/javascript' src="<?php echo base_url(); ?>/assets/js/TestForMultistepForms.js"></script>
         <script type="text/javascript" src="<?php echo base_url();?>/assets/js/bootstrap.js" ></script>
         <script type="text/javascript" src="<?php echo base_url();?>/assets/js/bootstrap.min.js" ></script>
+
+        <!-- --><meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
@@ -205,6 +207,81 @@ DB_driver ->691
                         <a href="#">Bachelor Of science</a>
                         <a href="#">Bachelor Of science</a>
                     </div>
+                </div>
+
+
+                <style>
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+.select-selected {
+  background-color: DodgerBlue;
+}
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+</style>
+
+
+                <div class="custom-select" style="width:200px;">
+                    <select>
+                        <option value="0">Select car:</option>
+                        <option value="1">Audi</option>
+                        <option value="2">BMW</option>
+                        <option value="3">Citroen</option>
+                        <option value="4">Ford</option>
+                        <option value="5">Honda</option>
+                        <option value="6">Jaguar</option>
+                        <option value="7">Land Rover</option>
+                        <option value="8">Mercedes</option>
+                        <option value="9">Mini</option>
+                        <option value="10">Nissan</option>
+                        <option value="11">Toyota</option>
+                        <option value="12">Volvo</option>
+                    </select>
                 </div>
 
                 
@@ -439,18 +516,16 @@ DB_driver ->691
                     
 <!-- start of the dropdown buttons-->
                     
-
-
-
+                
                     <div class="dropdown drop sinhala1" ><!-- start of the dropdown for sinhala-->
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">SINHALA
                             <span class="caret"></span>
                         </button>
-                        <ul class="dropdown-content">
-                            <li><a href="#">Very Good</a></li>
-                            <li><a href="#">Good</a></li>
-                            <li><a href="#">Fair</a></li>
-                            <li><a href="#">No Knowledge</a></li>
+                        <ul class="dropdown_content_sinhala1">
+                            <a href="#">Very Good</a>
+                            <a href="#">Good</a>
+                            <a href="#">Fair</a>
+                            <a href="#">No Knowledge</a>
                         </ul>
                     </div><!-- end of the dropdown for sinhala1-->
 
@@ -458,11 +533,11 @@ DB_driver ->691
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">TAMIL
                             <span class="caret"></span>
                         </button>
-                        <ul class="dropdown-content">
-                            <li><a href="#">Very Good</a></li>
-                            <li><a href="#">Good</a></li>
-                            <li><a href="#">Fair</a></li>
-                            <li><a href="#">No Knowledge</a></li>
+                        <ul class="dropdown_content_tamil1">
+                            <a href="#">Very Good</a>
+                            <a href="#">Good</a>
+                            <a href="#">Fair</a>
+                            <a href="#">No Knowledge</a>
                         </ul>
                     </div><!-- end of the dropdown for tamil1-->
 
@@ -470,11 +545,11 @@ DB_driver ->691
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">ENGLISH
                             <span class="caret"></span>
                         </button>
-                        <ul class="dropdown-content">
-                            <li><a href="#">Very Good</a></li>
-                            <li><a href="#">Good</a></li>
-                            <li><a href="#">Fair</a></li>
-                            <li><a href="#">No Knowledge</a></li>
+                        <ul class="dropdown_content_english1">
+                            <a href="#">Very Good</a>
+                            <a href="#">Good</a>
+                            <a href="#">Fair</a>
+                            <a href="#">No Knowledge</a>
                         </ul>
                     </div><!-- end of the dropdown for english1-->
 
@@ -482,11 +557,11 @@ DB_driver ->691
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">SINHALA
                             <span class="caret"></span>
                         </button>
-                        <ul class="dropdown-content">
-                            <li><a href="#">Very Good</a></li>
-                            <li><a href="#">Good</a></li>
-                            <li><a href="#">Fair</a></li>
-                            <li><a href="#">No Knowledge</a></li>
+                        <ul class="dropdown_content_sinhala2">
+                            <a href="#">Very Good</a>
+                            <a href="#">Good</a>
+                            <a href="#">Fair</a>
+                            <a href="#">No Knowledge</a>
                         </ul>
                     </div><!-- end of the dropdown for sinhala2-->
 
@@ -494,11 +569,11 @@ DB_driver ->691
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">TAMIL
                             <span class="caret"></span>
                         </button>
-                        <ul class="dropdown-content">
-                            <li><a href="#">Very Good</a></li>
-                            <li><a href="#">Good</a></li>
-                            <li><a href="#">Fair</a></li>
-                            <li><a href="#">No Knowledge</a></li>
+                        <ul class="dropdown_content_tamil2">
+                            <a href="#">Very Good</a>
+                            <a href="#">Good</a>
+                            <a href="#">Fair</a>
+                            <a href="#">No Knowledge</a>
                         </ul>
                     </div><!-- end of the dropdown for tamil2-->
 
@@ -506,11 +581,11 @@ DB_driver ->691
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">ENGLISH
                             <span class="caret"></span>
                         </button>
-                        <ul class="dropdown-content">
-                            <li><a href="#">Very Good</a></li>
-                            <li><a href="#">Good</a></li>
-                            <li><a href="#">Fair</a></li>
-                            <li><a href="#">No Knowledge</a></li>
+                        <ul class="dropdown_content_english2">
+                            <a href="#">Very Good</a>
+                            <a href="#">Good</a>
+                            <a href="#">Fair</a>
+                            <a href="#">No Knowledge</a>
                         </ul>
                     </div><!-- end of the dropdown for english2-->
 <!-- end of the dropdown series-->
