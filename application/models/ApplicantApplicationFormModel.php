@@ -49,7 +49,7 @@ class ApplicantApplicationFormModel extends CI_Model{
        
 
         $data = array(
-            'APPLICANT_ID' => "",
+            'APPLICANT_ID' => "",//////////////////////ad id number
             'FIRST_NAME' => $this->input->post('first_name'),
             'LAST_NAME' => $this->input->post('last_name'),
             'POSTAL_ADDRESS' => $this->input->post('postal_address'),
@@ -81,35 +81,8 @@ class ApplicantApplicationFormModel extends CI_Model{
     public function insertSecondaryEducationalDetailsModel(){
         
         $this->load->database();
-
-        $name1 = $this->input->post('secondary_educational_school_name1');
-        $name2 =$this->input->post('secondary_educational_from1');
-        $name3 =$this->input->post('secondary_educational_to1');
-        $name4 =$this->input->post('secondary_educational_examination1');
-        $name5 =$this->input->post('secondary_educational_year1');
-        
-        echo "school-- $name1"."<br>";
-        echo "from--$name2"."<br>";
-        echo "to--$name3"."<br>";
-        echo "examination--$name4"."<br>";
-        echo "year--$name5"."<br>";
-        
-
-        $name11 = $this->input->post('secondary_educational_school_name2');
-        $name12 = $this->input->post('secondary_educational_from2');
-        $name13 = $this->input->post('secondary_educational_to2');
-        $name14 = $this->input->post('secondary_educational_examination2');
-        $name15 = $this->input->post('secondary_educational_year2');
-        
-        echo "<br>"."school-- $name11"."<br>";
-        echo "from--$name12"."<br>";
-        echo "to--$name13"."<br>";
-        echo "examination--$name14"."<br>";
-        echo "year--$name15"."<br>";
-    
-
-        $data = array(
-            'APPLICANT_ID'       =>"10",
+        $secondary_educational_table_first_row = array(
+            'APPLICANT_ID'       =>"10",//////////////////////ad id number
             'SCHOOL_NAME'        =>$this->input->post('secondary_educational_school_name1'),
             'FROM'               =>$this->input->post('secondary_educational_from1'),
             'TO'                 =>$this->input->post('secondary_educational_to1'),
@@ -117,11 +90,27 @@ class ApplicantApplicationFormModel extends CI_Model{
             'YEAR'               =>$this->input->post('secondary_educational_year1')
         );
 
-        $this->db->set($data);
+        $this->db->set($secondary_educational_table_first_row);
+        $this->db->insert($this->db->dbprefix.'secondary_educational_details');
+        
+        $secondary_educational_table_second_row = array(
+            'APPLICANT_ID'       =>"10",//////////////////////ad id number
+            'SCHOOL_NAME'        =>$this->input->post('secondary_educational_school_name2'),
+            'FROM'               =>$this->input->post('secondary_educational_from2'),
+            'TO'                 =>$this->input->post('secondary_educational_to2'),
+            'EXAMINATION_PASSED' =>$this->input->post('secondary_educational_examination2'),
+            'YEAR'               =>$this->input->post('secondary_educational_year2')
+        );
+
+        $this->db->set($secondary_educational_table_second_row);
+        $this->db->insert($this->db->dbprefix.'secondary_educational_details');
+    
+
+        
 
        // $sql = "INSERT INTO basic_personal_details(, , , ,, , , , , , , , , , , , , ) VALUES ('onwfdfdf','two','three','onw','two','three','onw','two','three','onw','two','three','onw','two','three','onw','two','three')";
        //$sql = "INSERT INTO `just_for_test`(`name`, `age`) VALUES ('ruwan','24');";
-       $this->db->insert($this->db->dbprefix.'secondary_educational_details');
+       
         
     }
 
