@@ -329,6 +329,10 @@ class ApplicantApplicationFormModel extends CI_Model{
 
     }
 
+
+    $name = $this->input->post('selectCategoryName');
+                echo "$name";
+
     public function insertLanguageProficiencyModel(){
         
         $this->load->database();
@@ -336,11 +340,12 @@ class ApplicantApplicationFormModel extends CI_Model{
         $language_proficiency = array(
 
             'APPLICANT_ID'          =>"10",//////////////////////ad id number
-            'NAME'                  =>$this->input->post('referees_name1'),
-            'DESIGNATION'           =>$this->input->post('referees_designation1'),
-            'ADDRESS'               =>$this->input->post('referees_address1'),
-            'EMAIL'                 =>$this->input->post('referees_email1'),
-            'CONTACT_NO'            =>$this->input->post('referees_contact1')
+            'WORK_SINHALA'          =>$this->input->post('work_sinhala'),
+            'WORK_ENGLISH'          =>$this->input->post('work_english'),
+            'WORK_TAMIL'            =>$this->input->post('work_tamil'),
+            'TEACH_SINHALA'         =>$this->input->post('teach_sinhala'),
+            'TEACH_ENGLISH'         =>$this->input->post('teach_english'),
+            'TEACH_TAMIL'           =>$this->input->post('teach_tamil')
         );
 
         $this->db->set($language_proficiency);

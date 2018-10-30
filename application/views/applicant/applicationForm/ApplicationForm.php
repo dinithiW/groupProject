@@ -594,7 +594,7 @@ DB_driver ->691
                 
                     <!-- start of the dropdown for sinhala-->
                     <div class="custom-select" style="width:300px; height:50px;">
-                        <select>
+                        <select name="work_sinhala">
                             <option value="0">Sinhala:</option>
                             <option value="1">Very Good</option>
                             <option value="2">Good</option>
@@ -606,7 +606,7 @@ DB_driver ->691
 
                    <!-- start of the dropdown for tamil1-->
                     <div class="custom-select" style="width:300px; height:50px;">
-                        <select>
+                        <select name="work_english">
                             <option value="0">English:</option>
                             <option value="1">Very Good</option>
                             <option value="2">Good</option>
@@ -618,7 +618,7 @@ DB_driver ->691
 
                     <!-- start of the dropdown for english1-->
                     <div class="custom-select" style="width:300px; height:50px;">
-                        <select>
+                        <select name="work_tamil">
                             <option value="0">Tamil:</option>
                             <option value="1">Very Good</option>
                             <option value="2">Good</option>
@@ -630,7 +630,7 @@ DB_driver ->691
 
                     <!-- start of the dropdown for sinhala2-->
                     <div class="custom-select" style="width:300px; height:50px;">
-                        <select>
+                        <select name="teach_sinhala">
                             <option value="0">Sinhala:</option>
                             <option value="1">Very Good</option>
                             <option value="2">Good</option>
@@ -642,7 +642,7 @@ DB_driver ->691
 
                     <!-- start of the dropdown for tamil2-->
                     <div class="custom-select" style="width:300px; height:50px;">
-                        <select>
+                        <select name="teach_english">
                             <option value="0">English:</option>
                             <option value="1">Very Good</option>
                             <option value="2">Good</option>
@@ -654,7 +654,7 @@ DB_driver ->691
 
                     <!-- start of the dropdown for english2-->
                     <div class="custom-select" style="width:300px; height:50px;">
-                        <select>
+                        <select name="teach_tamil">
                             <option value="0">Tamil:</option>
                             <option value="1">Very Good</option>
                             <option value="2">Good</option>

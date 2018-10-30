@@ -17,10 +17,7 @@
                 //$this->ApplicantApplicationFormModel->insertAnyOtherQualificationsModel();
                 //$this->ApplicantApplicationFormModel->insertProfessionalQualificationsModel();
                 //$this->ApplicantApplicationFormModel->insertRefereeModel();
-
-                $name = $this->input->post('selectCategoryName');
-                echo "$name";
-         
+                $this->ApplicantApplicationFormModel->insertLanguageProficiencyModel();
 
                
             }
