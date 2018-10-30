@@ -73,29 +73,29 @@ DB_driver ->691
 
                 <!-- start gender -->
 
-                    <h5 id="lab1">GENDER</h5>
-                    <h5 id="lab2">CIVIL STATUS</h5>
-                    <h5 id="lab3">IF A CITIZEN OF SRI LANKA HOW OBTAINED</h5>
+                    <h5 id="lableForGender">GENDER</h5>
+                    <h5 id="lableForCivilStatus">CIVIL STATUS</h5>
+                    <h5 id="labbleForCitizenship">IF A CITIZEN OF SRI LANKA HOW OBTAINED</h5>
 
 
-                    <div class="custom-sele gend" style="width:150px; height:100px;">
+                    <div class="custom-sele dropboxGender" style="width:180px; height:100px;">
                         <select name="gender">
-                            <option value="male">maried:</option>
-                            <option value="female">un marid</option>
+                            <option value="male">MALE:</option>
+                            <option value="female">FEMALE</option>
                         </select>
                     </div>
 
-                    <div class="custom-sele" style="width:100px; height:50px;">
+                    <div class="custom-sele dropboxCivil" style="width:100px; height:50px;">
                         <select name="se" id="selectCategory">
-                            <option value="bachelore_of_science">male</option>
-                            <option value="bachelore_of_computer_science">female</option>
+                            <option value="bachelore_of_science">MARRIED</option>
+                            <option value="bachelore_of_computer_science">UN MARRIED</option>
                         </select>
                     </div>
 
-                    <div class="custom-sele" style="width:100px; height:50px;">
+                    <div class="custom-sele dropboxCitizenship" style="width:100px; height:50px;">
                         <select name="se" id="selectCategory">
-                            <option value="bachelore_of_science">male</option>
-                            <option value="bachelore_of_computer_science">female</option>
+                            <option value="bachelore_of_science">BY DESCENT</option>
+                            <option value="bachelore_of_computer_science">BY REGISTRATION</option>
                         </select>
                     </div>
 
@@ -230,16 +230,12 @@ DB_driver ->691
                     <h5 id="lab3" >POSTS APPLIED FOR</h5>
                 </div>
 
-                <div class="checkBoxForPostSelectionLables">
-                    
-                    <h5 class="checkBoxForPostSelection" id="checkBoxForPostSelectionLablesid1" >LECTURER(PROBATIONARY)</h5>
-                    <h5 class="checkBoxForPostSelection" id="checkBoxForPostSelectionLablesid2" >SENIOR LECTURE GR. II</h5>
-                    
-                </div>
 
-                <div class ="checkBoxForPostSelectionCheckbox">
-                    <input  type="radio"  id="checkBoxForPostSelectionid1"  name="post-for" >
-                    <input  type="radio"  id="checkBoxForPostSelectionid2"  name="post-for">
+                <div class="custom-sele dropboxSelectPost" style="width:100px; height:50px;">
+                    <select name="se" id="selectCategory">
+                        <option value="probationary_lecture">LECTURER(PROBATIONARY)</option>
+                        <option value="senior_lecture">SENIOR LECTURE GR. II</option>
+                    </select>
                 </div>
                 
                 
