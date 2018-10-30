@@ -20,16 +20,20 @@
             width: 170px;
             font-size: 16px;
         }
+
+        input[type=text]{
+            margin-left: 10px;
+        }
     </style>
 </head> 
 
 <body>
 	<div class="w3-main" style="margin-left:250px">
         <div class="w3-row w3-padding-64">
-            <div style="background-color: #548795;width: auto; border-color: black; padding-right: 10px;display: inline-block; margin-left: 10px;">
+            <div style="background-color: #548795;width: auto; border-color: black; padding-right: 10px;display: inline-block; margin-left: 20px; border-radius: 5px;padding-top: 10px; padding-bottom: 10px;">
         	<form action = "" method = "POST" >
         		<label for='email'>First Name</label>
-            	<input type='text' name='fname' id='email' required size='25'placeholder=" Enter the First Name"/>
+            	<input type='text' name='fname' id='email' required size='25'placeholder=" Enter the First Name" />
             	<br/>
 
                 <label for='email'>Last Name</label>
