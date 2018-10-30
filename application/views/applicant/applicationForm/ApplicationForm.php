@@ -79,23 +79,23 @@ DB_driver ->691
 
 
                     <div class="custom-sele dropboxGender" style="width:180px; height:100px;">
-                        <select name="gender">
+                        <select name="selectGender">
                             <option value="male">MALE:</option>
                             <option value="female">FEMALE</option>
                         </select>
                     </div>
 
                     <div class="custom-sele dropboxCivil" style="width:100px; height:50px;">
-                        <select name="se" id="selectCategory">
-                            <option value="bachelore_of_science">MARRIED</option>
-                            <option value="bachelore_of_computer_science">UN MARRIED</option>
+                        <select name="selectCivilStatus" id="selectCategory">
+                            <option value="married">MARRIED</option>
+                            <option value="un_married">UN MARRIED</option>
                         </select>
                     </div>
 
                     <div class="custom-sele dropboxCitizenship" style="width:100px; height:50px;">
-                        <select name="se" id="selectCategory">
-                            <option value="bachelore_of_science">BY DESCENT</option>
-                            <option value="bachelore_of_computer_science">BY REGISTRATION</option>
+                        <select name="selectCitizenship" id="selectCategory">
+                            <option value="by_decent">BY DESCENT</option>
+                            <option value="by_registration">BY REGISTRATION</option>
                         </select>
                     </div>
 
@@ -232,7 +232,7 @@ DB_driver ->691
 
 
                 <div class="custom-sele dropboxSelectPost" style="width:100px; height:50px;">
-                    <select name="se" id="selectCategory">
+                    <select name="postApplyFor" id="selectCategory">
                         <option value="probationary_lecture">LECTURER(PROBATIONARY)</option>
                         <option value="senior_lecture">SENIOR LECTURE GR. II</option>
                     </select>
@@ -388,7 +388,7 @@ DB_driver ->691
 
                 <div class="custom-select " style="width:300px; height:50px;">
                    
-                    <select name="selectCategoryName" id="selectCategory" onchange="runn();">
+                    <select name="selectDegree" id="selectCategory">
 
                         <option value="0">Select Degree Category:</option>
                         <option value="bachelore_of_science">Bachelore of science</option>

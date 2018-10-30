@@ -19,31 +19,31 @@ class ApplicantApplicationFormModel extends CI_Model{
         $name9 =$this->input->post('mobile_number');
         $name10 =$this->input->post('home_number');
         $name11 =$this->input->post('office_number');
-        $name12 =$this->input->post('gender');
-        $name111 =$this->input->post('civil_status');
-        $name13 =$this->input->post('citizen');
-        $name14 =$this->input->post('birth_date');
-        $name15 =$this->input->post('post_for');
+        $name12 =$this->input->post('selectGender');
+        $name13 =$this->input->post('selectCivilStatus');
+        $name14 =$this->input->post('selectCitizenship');
+        $name15 =$this->input->post('birth_date');
+        $name16 =$this->input->post('selectDegree');
 
         
         
 
-        echo "name-- $name1"."<br>";
-        echo "name--$name2"."<br>";
-        echo "name--$name3"."<br>";
-        echo "name--$name4"."<br>";
-        echo "name--$name5"."<br>";
-        echo "name--$name6"."<br>";
-        echo "name--$name7"."<br>";
-        echo "name--$name8"."<br>";
-        echo "name--$name9"."<br>";
-        echo "name--$name10"."<br>";
-        echo "name--$name11"."<br>";
-        echo "name--$name111"."<br>";
-        echo "name--$name12"."<br>";
-        echo "name--$name13"."<br>";
-        echo "name--$name14"."<br>";
-        echo "name--$name15"."<br>";
+        echo "first_name-- $name1"."<br>";
+        echo "last_name--$name2"."<br>";
+        echo "postal_address--$name3"."<br>";
+        echo "permanent_address--$name4"."<br>";
+        echo "driving_licence--$name5"."<br>";
+        echo "applicant_citizenship--$name6"."<br>";
+        echo "personalEmail--$name7"."<br>";
+        echo "officeEmail--$name8"."<br>";
+        echo "mobile_number--$name9"."<br>";
+        echo "home_number--$name10"."<br>";
+        echo "office_number--$name11"."<br>";
+        echo "selectGender--$name12"."<br>";
+        echo "selectCivilStatus--$name13"."<br>";
+        echo "selectCitizenship--$name14"."<br>";
+        echo "birth_date--$name15"."<br>";
+        echo "selectDegree--$name16"."<br>";
         
 
        
@@ -328,31 +328,6 @@ class ApplicantApplicationFormModel extends CI_Model{
         $this->db->insert($this->db->dbprefix.'referees');
 
     }
-
-
-    /*function for get the relevant name for the number*/ 
-
-
-    public function convertNUmberForValues($number){
-        if($number=="0"){
-            
-        }
-        if($number=="1"){
-            echo"very_good";
-        }
-        if($number=="2"){
-            echo"good";
-        }
-        if($number=="3"){
-            echo"fair";
-        }
-        if($number=="3"){
-            echo"no_knowledge";
-        }
-    }
-
-    /*function for get the relevant name for the number*/ 
-
 
 
     public function insertLanguageProficiencyModel(){
