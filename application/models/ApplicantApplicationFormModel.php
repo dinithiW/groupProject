@@ -328,6 +328,25 @@ class ApplicantApplicationFormModel extends CI_Model{
         $this->db->insert($this->db->dbprefix.'referees');
 
     }
+
+    public function insertLanguageProficiencyModel(){
+        
+        $this->load->database();
+
+        $language_proficiency = array(
+
+            'APPLICANT_ID'          =>"10",//////////////////////ad id number
+            'NAME'                  =>$this->input->post('referees_name1'),
+            'DESIGNATION'           =>$this->input->post('referees_designation1'),
+            'ADDRESS'               =>$this->input->post('referees_address1'),
+            'EMAIL'                 =>$this->input->post('referees_email1'),
+            'CONTACT_NO'            =>$this->input->post('referees_contact1')
+        );
+
+        $this->db->set($language_proficiency);
+        $this->db->insert($this->db->dbprefix.'language_proficiency');
+
+    }    
 }
 
 ?>

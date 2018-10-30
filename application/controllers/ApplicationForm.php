@@ -17,19 +17,12 @@
                 //$this->ApplicantApplicationFormModel->insertAnyOtherQualificationsModel();
                 //$this->ApplicantApplicationFormModel->insertProfessionalQualificationsModel();
                 //$this->ApplicantApplicationFormModel->insertRefereeModel();
-            ?>  
 
-                <script>
-                    function run() {
-                        //var aa =  document.getElementById("selectCategory").value;
-                        alert("jweldonf");
-                        document.write("HELLO RUWANA");
-                    }
-                </script>
-             
+                $name = $this->input->post('selectCategoryName');
+                echo "$name";
+         
 
-            <?php
-
+               
             }
             else{
                 echo"not entered";

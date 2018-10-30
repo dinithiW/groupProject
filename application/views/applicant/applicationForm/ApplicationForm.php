@@ -348,36 +348,16 @@ DB_driver ->691
 
                 <div class="custom-select " style="width:300px; height:50px;">
                    
-                    <select id="selectCategory" onchange="runn();">
+                    <select name="selectCategoryName" id="selectCategory" onchange="runn();">
 
                         <option value="0">Select Degree Category:</option>
-                        <option value="1">Bachelore of science</option>
-                        <option value="2">Bachelore of Computer Science</option>
-                        <option value="3">Bachelore of Arts</option>
+                        <option value="bachelore_of_science">Bachelore of science</option>
+                        <option value="bachelore_of_computer_science">Bachelore of Computer Science</option>
+                        <option value="bachelore_of_arts">Bachelore of Arts</option>
                     
                     </select>
                     
                 </div>
-
-
-
-                <script>
-                    function runn(){
-                        var sel = document.getElementById("selectCategory").value;
-                        console.log(sel);
-                    }
-
-                </script>
-
-                 
-                 <script>
-                    function run() {
-                        //var aa =  document.getElementById("selectCategory").value;
-                        alert("jweldonf");
-                        document.write("HELLO RUWANA");
-                    }
-                </script>
-
 
                 
                 <h4 id="secondryEducationalTitle">Secondry Educational Details</h4><br/>
