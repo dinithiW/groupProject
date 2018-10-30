@@ -330,46 +330,86 @@ class ApplicantApplicationFormModel extends CI_Model{
     }
 
 
-    $name = $this->input->post('selectCategoryName');
-                echo "$name";
+    /*function for get the relevant name for the number*/ 
+
+
+    public function convertNUmberForValues($number){
+        if($number=="0"){
+            
+        }
+        if($number=="1"){
+            echo"very_good";
+        }
+        if($number=="2"){
+            echo"good";
+        }
+        if($number=="3"){
+            echo"fair";
+        }
+        if($number=="3"){
+            echo"no_knowledge";
+        }
+    }
+
+    /*function for get the relevant name for the number*/ 
+
+
 
     public function insertLanguageProficiencyModel(){
         
         $this->load->database();
         
+/*
+         $name1 = convertNUmberForValues($this->input->post('work_sinhala'));
+         $name2 = convertNUmberForValues($this->input->post('work_english'));
+         $name3 = convertNUmberForValues($this->input->post('work_tamil'));
+         $name4 = convertNUmberForValues($this->input->post('teach_sinhala'));
+         $name5 = convertNUmberForValues($this->input->post('teach_english'));
+         $name6 = convertNUmberForValues($this->input->post('teach_tamil'));
+*/
 
-         $name1 = $this->input->post('work_sinhala');
-         $name2 = $this->input->post('work_english');
-         $name3 =$this->input->post('work_tamil');
-         $name4 =$this->input->post('teach_sinhala');
-         $name5 =$this->input->post('teach_english');
-         $name6 =$this->input->post('teach_tamil');
+/*
+         $name1 = convertNUmberForValues("1");
+         $name2 = convertNUmberForValues("1");
+         $name3 = convertNUmberForValues("3");
+         $name4 = convertNUmberForValues("4");
+         $name5 = convertNUmberForValues("1");
+         $name6 = convertNUmberForValues("2");
+*/
+
+        $name1 = $this->input->post('work_sinhala');
+        $name2 = $this->input->post('work_english');
+        $name3 = $this->input->post('work_tamil');
+        $name4 = $this->input->post('teach_sinhala');
+        $name5 = $this->input->post('teach_english');
+        $name6 = $this->input->post('teach_tamil');
 
 
-        
-            echo"$name1"."<br>";
-            echo"$name2"."<br>";
-            echo"$name3"."<br>";
-            echo"$name4"."<br>";
-            echo"$name5"."<br>";
-            echo"$name6"."<br>";
+        echo"$name1"."<br>";
+        echo"$name2"."<br>";
+        echo"$name3"."<br>";
+        echo"$name4"."<br>";
+        echo"$name5"."<br>";
+        echo"$name6"."<br>";
 
 
         $language_proficiency = array(
 
             'APPLICANT_ID'          =>"10",//////////////////////ad id number
-            'WORK_SINHALA'          =>$this->input->post('work_sinhala'),
-            'WORK_ENGLISH'          =>$this->input->post('work_english'),
-            'WORK_TAMIL'            =>$this->input->post('work_tamil'),
-            'TEACH_SINHALA'         =>$this->input->post('teach_sinhala'),
-            'TEACH_ENGLISH'         =>$this->input->post('teach_english'),
-            'TEACH_TAMIL'           =>$this->input->post('teach_tamil')
+            'WORK_SINHALA'          =>$name1,
+            'WORK_ENGLISH'          =>$name2,
+            'WORK_TAMIL'            =>$name3,
+            'TEACH_SINHALA'         =>$name4,
+            'TEACH_ENGLISH'         =>$name5,
+            'TEACH_TAMIL'           =>$name6
         );
 
         $this->db->set($language_proficiency);
         $this->db->insert($this->db->dbprefix.'language_proficiency');
 
     }    
+
+    
 }
 
 ?>
