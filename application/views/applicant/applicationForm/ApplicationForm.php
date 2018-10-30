@@ -347,7 +347,8 @@ DB_driver ->691
 
 
                 <div class="custom-select " style="width:300px; height:50px;">
-                    <select>
+                   
+                    <select id="selectCategory" onchange="runn();">
 
                         <option value="0">Select Degree Category:</option>
                         <option value="1">Bachelore of science</option>
@@ -355,7 +356,28 @@ DB_driver ->691
                         <option value="3">Bachelore of Arts</option>
                     
                     </select>
+                    
                 </div>
+
+
+
+                <script>
+                    function runn(){
+                        var sel = document.getElementById("selectCategory").value;
+                        console.log(sel);
+                    }
+
+                </script>
+
+                 
+                 <script>
+                    function run() {
+                        //var aa =  document.getElementById("selectCategory").value;
+                        alert("jweldonf");
+                        document.write("HELLO RUWANA");
+                    }
+                </script>
+
 
                 
                 <h4 id="secondryEducationalTitle">Secondry Educational Details</h4><br/>
@@ -585,7 +607,7 @@ DB_driver ->691
 
 
                     <h4 id="title2">Proficiency in Sinhala/Tamil/English</h4>
-                    <h5 id="title3">*******Ability to Work******** | ********* Ability To Teach********</h5>
+                    <h5 id="title3">*******Ability to Work************ | ********* Ability To Teach********</h5>
                     
 <!-- start of the dropdown buttons-->
                     
