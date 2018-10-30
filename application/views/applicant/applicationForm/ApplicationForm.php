@@ -72,58 +72,102 @@ DB_driver ->691
                     <input type="text"   class="input-fields" name="office_number" placeholder="Office Number">
 
                 <!-- start gender -->
+
+                    <h5 id="lab1">GENDER</h5>
+                    <h5 id="lab2">CIVIL STATUS</h5>
+                    <h5 id="lab3">IF A CITIZEN OF SRI LANKA HOW OBTAINED</h5>
+
+
+                    <div class="custom-sele gend" style="width:150px; height:100px;">
+                        <select name="gender">
+                            <option value="male">maried:</option>
+                            <option value="female">un marid</option>
+                        </select>
+                    </div>
+
+                    <div class="custom-sele" style="width:100px; height:50px;">
+                        <select name="se" id="selectCategory">
+                            <option value="bachelore_of_science">male</option>
+                            <option value="bachelore_of_computer_science">female</option>
+                        </select>
+                    </div>
+
+                    <div class="custom-sele" style="width:100px; height:50px;">
+                        <select name="se" id="selectCategory">
+                            <option value="bachelore_of_science">male</option>
+                            <option value="bachelore_of_computer_science">female</option>
+                        </select>
+                    </div>
+
                 
-                    <div class="lables3">
+<!--                    <div class="lables3">
                         <h5 id="lab1">GENDER</h5>
                         <h5 class="lables3" id="lables3id1">MALE</h5>
                         <h5 class="lables3" id="lables3id2">FEMALE</h5>
                         
                     </div>
-
-<!--
-                    <input type="radio" name="credit_card" value="MasterCard" checked="checked">MasterCard<br>
-                    <input type="radio" name="credit_card" value="Visa">Visa<br>
-                    <input type="radio" name="credit_card" value="American Express">American Express<br>
 -->
-
-
+<!--
                     <div class ="rad1">
                         <input type="radio"   id="radioGender1" name="gender" valule="men" >
                         <input type="radio"   id="radioGender2" name="gender" valule="woman">
                     </div>
+-->
+
+                    <!-- start of the dropdown for tamil2-->
+                    
+
+                    <!-- end of the dropdown for tamil2-->
+
                 
 
                 <!-- end gender -->
 
                 <!-- start civil status -->
+ <!--               
                     <div class="lables4">
                         <h5 id="lab2">CIVIL STATUS</h5>
                         <h5 class="lables4" id="lables4id1">MARRIED</h5>
                         <h5 class="lables4" id="lables4id2">UN MARRIED</h5>
                         
                     </div>
-
+-->
+<!--
                     <div class ="rad2">
                         <input type="radio"   id="radioCivil1" name="civil_status" >
                         <input type="radio"   id="radioCivil2" name="civil_status" >
                     </div>
+-->
+                    
+
+                        
+
                 <!-- end civil status -->
 
 
                 <!-- start citizenship -->
-
+<!--
                    <div class="lables5">
                         <h5 id="lab3">IF A CITIZEN OF SRI LANKA HOW OBTAINED</h5>
                         <h5 class="lables5" id="lables5id1">BY DESCENT</h5>
                         <h5 class="lables5" id="lables5id2">BY REGISTRATION</h5>
                         
                     </div>
-
+-->
+<!--
+                    <div class="custom-sele gend" style="width:150px; height:100px;">
+                        <select name="gender">
+                            <option value="male">maried:</option>
+                            <option value="female">un marid</option>
+                        </select>
+                    </div>
+-->
+<!--
                     <div class ="rad3">
                         <input type="radio"   id="radioCitizen1" name="citizen" >
                         <input type="radio"   id="radioCitizen2" name="citizen" >
                     </div>
-                    
+-->                    
                 <!-- end citizenship -->    
                 
                     

@@ -358,24 +358,6 @@ class ApplicantApplicationFormModel extends CI_Model{
     public function insertLanguageProficiencyModel(){
         
         $this->load->database();
-        
-/*
-         $name1 = convertNUmberForValues($this->input->post('work_sinhala'));
-         $name2 = convertNUmberForValues($this->input->post('work_english'));
-         $name3 = convertNUmberForValues($this->input->post('work_tamil'));
-         $name4 = convertNUmberForValues($this->input->post('teach_sinhala'));
-         $name5 = convertNUmberForValues($this->input->post('teach_english'));
-         $name6 = convertNUmberForValues($this->input->post('teach_tamil'));
-*/
-
-/*
-         $name1 = convertNUmberForValues("1");
-         $name2 = convertNUmberForValues("1");
-         $name3 = convertNUmberForValues("3");
-         $name4 = convertNUmberForValues("4");
-         $name5 = convertNUmberForValues("1");
-         $name6 = convertNUmberForValues("2");
-*/
 
         $name1 = $this->input->post('work_sinhala');
         $name2 = $this->input->post('work_english');
@@ -383,15 +365,6 @@ class ApplicantApplicationFormModel extends CI_Model{
         $name4 = $this->input->post('teach_sinhala');
         $name5 = $this->input->post('teach_english');
         $name6 = $this->input->post('teach_tamil');
-
-
-        echo"$name1"."<br>";
-        echo"$name2"."<br>";
-        echo"$name3"."<br>";
-        echo"$name4"."<br>";
-        echo"$name5"."<br>";
-        echo"$name6"."<br>";
-
 
         $language_proficiency = array(
 
@@ -403,6 +376,7 @@ class ApplicantApplicationFormModel extends CI_Model{
             'TEACH_ENGLISH'         =>$name5,
             'TEACH_TAMIL'           =>$name6
         );
+        
 
         $this->db->set($language_proficiency);
         $this->db->insert($this->db->dbprefix.'language_proficiency');
