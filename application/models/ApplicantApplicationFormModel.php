@@ -386,11 +386,29 @@ class ApplicantApplicationFormModel extends CI_Model{
     }
 
     public function getIncrementNumberForApplicantId(){
-        
 
+        $conn = new mysqli("localhost", "root", "", "ucsc");
+
+        $sql = "SELECT NUMB FROM count";
+        $result = $conn->query($sql);
+
+        $counting = 0;
+
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                
+                $counting = $row["NUMB"];
+            }
+        } 
+        return $counting;
     }
 
+
+
     public function makeApplicationId(){
+
+        //$str = (string) $int;
+ //$str = "$int";    
 
         $input = $this->input->post('current_date');
         $year  = substr($input, 2,2);
@@ -398,18 +416,21 @@ class ApplicantApplicationFormModel extends CI_Model{
         $input = $this->input->post('postApplyFor');
         $category= substr($input, 0,2);
 
-        $this->load->database();
+        $number = $this->getIncrementNumberForApplicantId();
 
-        $query=$this->db->query("select * from count");
-        $result['data'] = $query->result();
+        //$id = $category +(string) $year + (string) $category;
 
-        foreach($data as $row){
-            echo "<td>".$row->name."</td>";
-        }
+        
+        $one = (string) $year;
+        $one = "$year"; 
+        
+        $three = (string)$number;
+        $three = "$number"; 
 
-       // $applicationId = $year+$category+$incrementNumber;
+        $word = "$one"."$category"."$three";
 
-       //echo $applicationId;
+        
+        echo "$word";
     }
 }
 
