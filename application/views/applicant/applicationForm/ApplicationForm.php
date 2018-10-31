@@ -791,7 +791,7 @@ DB_driver ->691
 
                     <!-- other--> 
                     <div form-group>
-                            <input type="text" name="other" id="other" class="form-control input-sm" placeholder="                                                                              Any other information that you need like to indicate ">
+                            <input type="text" name="other_details" id="other" class="form-control input-sm" placeholder="                                                                              Any other information that you need like to indicate ">
                     </div> 
                     <!-- other--> 
 
@@ -800,7 +800,7 @@ DB_driver ->691
                     </h4> 
 
                      <div class="calender">
-                        <input id = "calender1"type="date" data-date-inline-picker="true" />
+                        <input id = "calender1"  type = "date" name="current_date" data-date-inline-picker="true" />
                     </div>
 
                     

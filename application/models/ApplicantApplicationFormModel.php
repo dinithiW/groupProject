@@ -358,9 +358,24 @@ class ApplicantApplicationFormModel extends CI_Model{
         $this->db->set($language_proficiency);
         $this->db->insert($this->db->dbprefix.'language_proficiency');
 
-    }    
-
+    } 
     
+    
+    public function insertOtherFieldsModel(){
+        
+        $this->load->database();
+        $other_fields_table_first_row = array(
+            'APPLICANT_ID'       =>"10",//////////////////////ad id number
+            'EXPERIENCE'         =>$this->input->post('experience'),
+            'RESEARCH'           =>$this->input->post('research'),
+            'OTHER_INFORMS'      =>$this->input->post('other_details'),
+            'DATE'               =>$this->input->post('current_date')
+        );
+
+        $this->db->set($other_fields_table_first_row);
+        $this->db->insert($this->db->dbprefix.'other_fields');
+
+    }
 }
 
 ?>
