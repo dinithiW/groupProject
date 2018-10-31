@@ -18,7 +18,7 @@
                 //$this->ApplicantApplicationFormModel->insertProfessionalQualificationsModel();
                 //$this->ApplicantApplicationFormModel->insertRefereeModel();
                 //$this->ApplicantApplicationFormModel->insertLanguageProficiencyModel();
-                $this->ApplicantApplicationFormModel->insertSpecializationAreaForApplicantModel();
+                //$this->ApplicantApplicationFormModel->insertSpecializationAreaForApplicantModel();
 
                 
          

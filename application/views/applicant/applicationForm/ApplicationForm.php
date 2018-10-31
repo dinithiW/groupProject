@@ -99,6 +99,8 @@ DB_driver ->691
                         </select>
                     </div>
 
+                    
+
                 
 <!--                    <div class="lables3">
                         <h5 id="lab1">GENDER</h5>
@@ -174,7 +176,7 @@ DB_driver ->691
                     <!-- start the calender-->
                     <div class="calender1">
                         <h4 id="birth-date"> Date of Birth</h4>
-                        <input type="date" data-date-inline-picker="true"  name="birth-date"/>
+                        <input type="date" data-date-inline-picker="true"  name="birth_date"/>
                     </div>
                     <!-- end the calender-->
 
@@ -224,20 +226,6 @@ DB_driver ->691
 <!-- *********************************************************** start the second page************************************************--> 
 
             <div class="form">
-                
-
-                <div class="checkBoxForPostSelectionHeader"> 
-                    <h5 id="lab3" >POSTS APPLIED FOR</h5>
-                </div>
-
-
-                <div class="custom-sele dropboxSelectPost" style="width:100px; height:50px;">
-                    <select name="postApplyFor" id="selectCategory">
-                        <option value="probationary_lecture">LECTURER(PROBATIONARY)</option>
-                        <option value="senior_lecture">SENIOR LECTURE GR. II</option>
-                    </select>
-                </div>
-                
                 
 <!--start of the css file for the drop down -->
 
@@ -385,18 +373,25 @@ DB_driver ->691
 
 <!--end of the javascript file for the drop down -->
 
+                <div class="checkBoxForPostSelectionHeader"> 
+                    <h5 id="lab3" >POSTS APPLIED FOR</h5>
+                </div>
+
+
+                <div class="custom-sele dropboxSelectPost" style="width:100px; height:50px;">
+                    <select name="postApplyFor" id="selectCategory1">
+                        <option value="probationary">LECTURER(PROBATIONARY)</option>
+                        <option value="senior">SENIOR LECTURE GR. II</option>
+                    </select>
+                </div>
 
                 <div class="custom-select " style="width:300px; height:50px;">
-                   
-                    <select name="selectDegree" id="selectCategory">
-
+                   <select name="selectDegree" id="selectCategory">
                         <option value="0">Select Degree Category:</option>
                         <option value="bachelore_of_science">Bachelore of science</option>
                         <option value="bachelore_of_computer_science">Bachelore of Computer Science</option>
                         <option value="bachelore_of_arts">Bachelore of Arts</option>
-                    
                     </select>
-                    
                 </div>
 
                 

@@ -23,7 +23,8 @@ class ApplicantApplicationFormModel extends CI_Model{
         $name13 =$this->input->post('selectCivilStatus');
         $name14 =$this->input->post('selectCitizenship');
         $name15 =$this->input->post('birth_date');
-        $name16 =$this->input->post('selectDegree');
+        $name16 =$this->input->post('postApplyFor');
+        $name17 =$this->input->post('selectDegree');
 
         
         
@@ -43,30 +44,31 @@ class ApplicantApplicationFormModel extends CI_Model{
         echo "selectCivilStatus--$name13"."<br>";
         echo "selectCitizenship--$name14"."<br>";
         echo "birth_date--$name15"."<br>";
-        echo "selectDegree--$name16"."<br>";
+        echo "apply form--$name16"."<br>";
+        echo "selectDegree--$name17"."<br>";
         
 
        
 
         $data = array(
-            'APPLICANT_ID' => "",//////////////////////ad id number
-            'FIRST_NAME' => $this->input->post('first_name'),
-            'LAST_NAME' => $this->input->post('last_name'),
-            'POSTAL_ADDRESS' => $this->input->post('postal_address'),
-            'PERMANENT_ADDRESS' => $this->input->post('permanent_address'),
-            'NIC' => $this->input->post('driving_licence'),
-            'CITIZENSHIP_NAME' => $this->input->post('applicant_citizenship'),
-            'PERSONAL_EMAIL' => $this->input->post('personalEmail'),
-            'OFFICE_EMAIL' => $this->input->post('officeEmail'),
-            'MOBILE_NUMBER' => $this->input->post('mobile_number'),
-            'HOME_NUMBER' => $this->input->post('home_number'),
-            'OFFICE_NUMBER' => $this->input->post('office_number'),
-            'GENDER' => $this->input->post('gender'),
-            'CIVIL_STATUS' => $this->input->post('civil_status'),
-            'CITIZENSHIP' => $this->input->post('citizen'),
-            'DATE_OF_BIRTH' => $this->input->post('birth_date'),
-            'POST_APPLY_FOR' => $this->input->post('post_for'),
-            'DEGREE' => ""
+            'APPLICANT_ID'       => "",//////////////////////ad id number
+            'FIRST_NAME'         => $name1,
+            'LAST_NAME'          => $name2,
+            'POSTAL_ADDRESS'     => $name3,
+            'PERMANENT_ADDRESS'  => $name4,
+            'NIC'                => $name5,
+            'CITIZENSHIP_NAME'   => $name6,
+            'PERSONAL_EMAIL'     => $name7,
+            'OFFICE_EMAIL'       => $name8,
+            'MOBILE_NUMBER'      => $name9,
+            'HOME_NUMBER'        => $name10,
+            'OFFICE_NUMBER'      => $name11,
+            'GENDER'             => $name12,
+            'CIVIL_STATUS'       => $name13,
+            'CITIZENSHIP'        => $name14,
+            'DATE_OF_BIRTH'      => $name15,
+            'POST_APPLY_FOR'     => $name16,
+            'DEGREE'             => $name17
         );
 
         $this->db->set($data);
