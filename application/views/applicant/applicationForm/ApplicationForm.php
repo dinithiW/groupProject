@@ -776,13 +776,10 @@ DB_driver ->691
                                 <td><span class="lblStatus"></span></td>
 
                             </tr>
-
-                            
-
                             </tr>
                         </table>
                     </div>
-    
+
             <!-- end referee table-->  
 
                     <!-- notice-->   
