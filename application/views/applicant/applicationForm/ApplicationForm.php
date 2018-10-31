@@ -800,7 +800,7 @@ DB_driver ->691
                     </h4> 
 
                      <div class="calender">
-                        <input id = "calender1"  type = "date" name="current_date" data-date-inline-picker="true" />
+                        <input id = "calender1"  type ="date" name="current_date" data-date-inline-picker="true" />
                     </div>
 
                     

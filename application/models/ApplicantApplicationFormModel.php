@@ -28,6 +28,7 @@ class ApplicantApplicationFormModel extends CI_Model{
 
         
         
+/* this only used for testin
 
         echo "first_name-- $name1"."<br>";
         echo "last_name--$name2"."<br>";
@@ -46,7 +47,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         echo "birth_date--$name15"."<br>";
         echo "apply form--$name16"."<br>";
         echo "selectDegree--$name17"."<br>";
-        
+*/        
 
        
 
@@ -231,7 +232,7 @@ class ApplicantApplicationFormModel extends CI_Model{
             'APPLICANT_ID'       =>"10",//////////////////////ad id number
             'INSTITUTION'        =>$this->input->post('any_other_qualifications_university3'),
             'DEPLOMA'            =>$this->input->post('any_other_qualifications_deploma3'),
-            'DURATION'            =>$this->input->post('any_other_qualifications_duration3'),
+            'DURAION'            =>$this->input->post('any_other_qualifications_duration3'),
             'YEAR'               =>$this->input->post('any_other_qualifications_year3')
         );
 
