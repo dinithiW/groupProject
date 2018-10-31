@@ -131,10 +131,6 @@ class ApplicantApplicationFormModel extends CI_Model{
     
     }
 
-
-
-
-
     public function insertHigherEducationalDetailsModel(){
         
         $this->load->database();
@@ -377,35 +373,45 @@ class ApplicantApplicationFormModel extends CI_Model{
         $this->db->insert($this->db->dbprefix.'other_fields');
 
     }
-
+/*
     public function getYearForApplicationId(){
-        $input = $this->input->post('current_date');
-        $year= substr($input, 2,2);
+        
         return $year;
     }
+*/
 
     public function getCategoryForApplicantId(){
-        $input = $this->input->post('postApplyFor');
-        $category= substr($input, 0,2);
+        
         return $category;
     }
 
     public function getIncrementNumberForApplicantId(){
-        $this->load->database();
-        $query=$this->db->query("select * from crud");
-        return $query;
+        
 
     }
 
     public function makeApplicationId(){
-        $id_year            = getYearForApplicationId();
-        $id_category        = getCategoryForApplicantId();
-        $id_incrementNumber = getIncrementNumberForApplicantId();
 
-        $applicationId = $year+$category+$incrementNumber;
+        $input = $this->input->post('current_date');
+        $year  = substr($input, 2,2);
 
-        return $applicationId;
+        $input = $this->input->post('postApplyFor');
+        $category= substr($input, 0,2);
+
+        $this->load->database();
+
+        $query=$this->db->query("select * from count");
+        $result['data'] = $query->result();
+
+        foreach($data as $row){
+            echo "<td>".$row->name."</td>";
+        }
+
+       // $applicationId = $year+$category+$incrementNumber;
+
+       //echo $applicationId;
     }
 }
 
 ?>
+
