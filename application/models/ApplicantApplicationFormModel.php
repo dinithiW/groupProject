@@ -451,12 +451,40 @@ class ApplicantApplicationFormModel extends CI_Model{
     }
 
 
+    public function updateIncrementNumberForApplicantId($numb){
+                $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+            // set the PDO error mode to exception
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            $sql = "UPDATE MyGuests SET lastname='Doe' WHERE id=2";
+
+            // Prepare statement
+            $stmt = $conn->prepare($sql);
+
+            // execute the query
+            $stmt->execute();
+
+            // echo a message to say the UPDATE succeeded
+            echo $stmt->rowCount() . " records UPDATED successfully";
+    }
+catch(PDOException $e)
+    {
+    echo $sql . "<br>" . $e->getMessage();
+    }
+
+$conn = null;
+    }
+/*
+    $this->db->set($data); 
+    $this->db->where("count", $num); 
+    $this->db->update("stud", $data); 
+*/    
 
 
     public function makeApplicationId(){
 
         //$str = (string) $int;
- //$str = "$int";    
+        //$str = "$int";    
 
         $input = $this->input->post('current_date');
         $year  = substr($input, 2,2);
@@ -465,6 +493,10 @@ class ApplicantApplicationFormModel extends CI_Model{
         $category= substr($input, 0,2);
 
         $number = $this->getIncrementNumberForApplicantId();
+
+        $number++;
+
+        $this->updateIncrementNumberForApplicantId($number);
 
         //$id = $category +(string) $year + (string) $category;
 
