@@ -11,15 +11,15 @@
                 
                 $this->load->model('ApplicantApplicationFormModel');
                     
-                /*$this->ApplicantApplicationFormModel->insertBasicPersonalDetailsModel();
+                $this->ApplicantApplicationFormModel->insertBasicPersonalDetailsModel();
                 $this->ApplicantApplicationFormModel->insertSecondaryEducationalDetailsModel();
                 $this->ApplicantApplicationFormModel->insertHigherEducationalDetailsModel();
                 $this->ApplicantApplicationFormModel->insertAnyOtherQualificationsModel();
                 $this->ApplicantApplicationFormModel->insertProfessionalQualificationsModel();
                 $this->ApplicantApplicationFormModel->insertRefereeModel();
-                $this->ApplicantApplicationFormModel->insertLanguageProficiencyModel();*/
-                //$this->ApplicantApplicationFormModel->insertSpecializationAreaForApplicantModel();
-                //$this->ApplicantApplicationFormModel->insertOtherFieldsModel();
+                $this->ApplicantApplicationFormModel->insertLanguageProficiencyModel();
+               // $this->ApplicantApplicationFormModel->insertSpecializationAreaForApplicantModel();
+                $this->ApplicantApplicationFormModel->insertOtherFieldsModel();
                 $this->ApplicantApplicationFormModel->makeApplicationId();
 
                 
