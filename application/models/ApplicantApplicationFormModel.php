@@ -3,8 +3,6 @@ class ApplicantApplicationFormModel extends CI_Model{
     public function __construct(){
         parent::__construct();
     }
-
-   // $idNumber = makeApplicationId();
     
     public function insertBasicPersonalDetailsModel($idNumber){
         
@@ -28,35 +26,8 @@ class ApplicantApplicationFormModel extends CI_Model{
         $name16 =$this->input->post('postApplyFor');
         $name17 =$this->input->post('selectDegree');
 
-        
-        
-/* this only used for testin
-
-        echo "first_name-- $name1"."<br>";
-        echo "last_name--$name2"."<br>";
-        echo "postal_address--$name3"."<br>";
-        echo "permanent_address--$name4"."<br>";
-        echo "driving_licence--$name5"."<br>";
-        echo "applicant_citizenship--$name6"."<br>";
-        echo "personalEmail--$name7"."<br>";
-        echo "officeEmail--$name8"."<br>";
-        echo "mobile_number--$name9"."<br>";
-        echo "home_number--$name10"."<br>";
-        echo "office_number--$name11"."<br>";
-        echo "selectGender--$name12"."<br>";
-        echo "selectCivilStatus--$name13"."<br>";
-        echo "selectCitizenship--$name14"."<br>";
-        echo "birth_date--$name15"."<br>";
-        echo "apply form--$name16"."<br>";
-        echo "selectDegree--$name17"."<br>";
-*/        
-
-        //$www = makeApplicationId();
-        echo"this is working"."<br>";
-        
-
         $data = array(
-            'APPLICANT_ID'       => $idNumber,//////////////////////ad id number
+            'APPLICANT_ID'       => $idNumber,
             'FIRST_NAME'         => $name1,
             'LAST_NAME'          => $name2,
             'POSTAL_ADDRESS'     => $name3,
@@ -83,14 +54,10 @@ class ApplicantApplicationFormModel extends CI_Model{
 
 
     public function insertSecondaryEducationalDetailsModel($idNumber){
-        //$www = makeApplicationId();
-        echo"this is working"."<br>";
-       
-
-
+        
         $this->load->database();
         $secondary_educational_table_first_row = array(
-            'APPLICANT_ID'       =>$idNumber,//////////////////////ad id number
+            'APPLICANT_ID'       =>$idNumber,
             'SCHOOL_NAME'        =>$this->input->post('secondary_educational_school_name1'),
             'FROM'               =>$this->input->post('secondary_educational_from1'),
             'TO'                 =>$this->input->post('secondary_educational_to1'),
@@ -103,7 +70,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         
         
         $secondary_educational_table_second_row = array(
-            'APPLICANT_ID'       =>$idNumber,//////////////////////ad id number
+            'APPLICANT_ID'       =>$idNumber,
             'SCHOOL_NAME'        =>$this->input->post('secondary_educational_school_name2'),
             'FROM'               =>$this->input->post('secondary_educational_from2'),
             'TO'                 =>$this->input->post('secondary_educational_to2'),
@@ -116,7 +83,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         
 
         $secondary_educational_table_third_row = array(
-            'APPLICANT_ID'       =>$idNumber,//////////////////////ad id number
+            'APPLICANT_ID'       =>$idNumber,
             'SCHOOL_NAME'        =>$this->input->post('secondary_educational_school_name3'),
             'FROM'               =>$this->input->post('secondary_educational_from3'),
             'TO'                 =>$this->input->post('secondary_educational_to3'),
@@ -129,7 +96,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         
         
         $secondary_educational_table_fourth_row = array(
-            'APPLICANT_ID'       =>$idNumber,//////////////////////ad id number
+            'APPLICANT_ID'       =>$idNumber,
             'SCHOOL_NAME'        =>$this->input->post('secondary_educational_school_name4'),
             'FROM'               =>$this->input->post('secondary_educational_from4'),
             'TO'                 =>$this->input->post('secondary_educational_to4'),
@@ -143,13 +110,10 @@ class ApplicantApplicationFormModel extends CI_Model{
     }
 
     public function insertHigherEducationalDetailsModel($idNumber){
-        //$www = makeApplicationId();
-        echo"this is working"."<br>";
-       
-
+    
         $this->load->database();
         $higher_educational_table_first_row = array(
-            'APPLICANT_ID'       =>$idNumber,//////////////////////ad id number
+            'APPLICANT_ID'       =>$idNumber,
             'UNIVERSITY'         =>$this->input->post('heigher_educational_university1'),
             'FROM'               =>$this->input->post('heigher_educational_from1'),
             'TO'                 =>$this->input->post('heigher_educational_to1'),
@@ -165,7 +129,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         
 
         $higher_educational_table_second_row = array(
-            'APPLICANT_ID'       =>$idNumber,//////////////////////ad id number
+            'APPLICANT_ID'       =>$idNumber,
             'UNIVERSITY'         =>$this->input->post('heigher_educational_university2'),
             'FROM'               =>$this->input->post('heigher_educational_from2'),
             'TO'                 =>$this->input->post('heigher_educational_to2'),
@@ -181,7 +145,7 @@ class ApplicantApplicationFormModel extends CI_Model{
        
 
         $higher_educational_table_third_row = array(
-            'APPLICANT_ID'       =>$idNumber,//////////////////////ad id number
+            'APPLICANT_ID'       =>$idNumber,
             'UNIVERSITY'         =>$this->input->post('heigher_educational_university3'),
             'FROM'               =>$this->input->post('heigher_educational_from3'),
             'TO'                 =>$this->input->post('heigher_educational_to3'),
@@ -197,7 +161,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         
 
         $higher_educational_table_fourth_row = array(
-            'APPLICANT_ID'       =>$idNumber,//////////////////////ad id number
+            'APPLICANT_ID'       =>$idNumber,
             'UNIVERSITY'         =>$this->input->post('heigher_educational_university4'),
             'FROM'               =>$this->input->post('heigher_educational_from4'),
             'TO'                 =>$this->input->post('heigher_educational_to4'),
@@ -216,14 +180,10 @@ class ApplicantApplicationFormModel extends CI_Model{
     public function insertAnyOtherQualificationsModel($idNumber){
         
         $this->load->database();
-        //$www = makeApplicationId();
-
-        echo"this is working"."<br>";
-       
 
         $any_other_qualifications_table_first_row = array(
 
-            'APPLICANT_ID'       =>$idNumber,//////////////////////ad id number
+            'APPLICANT_ID'       =>$idNumber,
             'INSTITUTION'        =>$this->input->post('any_other_qualifications_university1'),
             'DEPLOMA'            =>$this->input->post('any_other_qualifications_deploma1'),
             'DURAION'            =>$this->input->post('any_other_qualifications_duration1'),
@@ -236,7 +196,7 @@ class ApplicantApplicationFormModel extends CI_Model{
 
         $any_other_qualifications_table_second_row = array(
 
-            'APPLICANT_ID'       =>$idNumber,//////////////////////ad id number
+            'APPLICANT_ID'       =>$idNumber,
             'INSTITUTION'        =>$this->input->post('any_other_qualifications_university2'),
             'DEPLOMA'            =>$this->input->post('any_other_qualifications_deploma2'),
             'DURAION'            =>$this->input->post('any_other_qualifications_duration2'),
@@ -249,7 +209,7 @@ class ApplicantApplicationFormModel extends CI_Model{
 
         $any_other_qualifications_table_third_row = array(
 
-            'APPLICANT_ID'       =>$idNumber,//////////////////////ad id number
+            'APPLICANT_ID'       =>$idNumber,
             'INSTITUTION'        =>$this->input->post('any_other_qualifications_university3'),
             'DEPLOMA'            =>$this->input->post('any_other_qualifications_deploma3'),
             'DURAION'            =>$this->input->post('any_other_qualifications_duration3'),
@@ -264,15 +224,9 @@ class ApplicantApplicationFormModel extends CI_Model{
     public function insertProfessionalQualificationsModel($idNumber){
         
         $this->load->database();
-        //$www = makeApplicationId();
-
-        echo"this is working"."<br>";
-        
-
-
         $professional_qualifications_table_first_row = array(
 
-            'APPLICANT_ID'          =>$idNumber,//////////////////////ad id number
+            'APPLICANT_ID'          =>$idNumber,
             'INSTITUTION'           =>$this->input->post('any_other_qualifications_institution1'),
             'FROM'                  =>$this->input->post('any_other_qualifications_from1'),
             'TO'                    =>$this->input->post('any_other_qualifications_to1'),
@@ -286,7 +240,7 @@ class ApplicantApplicationFormModel extends CI_Model{
 
         $professional_qualifications_table_second_row = array(
 
-            'APPLICANT_ID'          =>$idNumber,//////////////////////ad id number
+            'APPLICANT_ID'          =>$idNumber,
             'INSTITUTION'           =>$this->input->post('any_other_qualifications_institution2'),
             'FROM'                  =>$this->input->post('any_other_qualifications_from2'),
             'TO'                    =>$this->input->post('any_other_qualifications_to2'),
@@ -300,7 +254,7 @@ class ApplicantApplicationFormModel extends CI_Model{
 
         $professional_qualifications_table_third_row = array(
 
-            'APPLICANT_ID'          =>$idNumber,//////////////////////ad id number
+            'APPLICANT_ID'          =>$idNumber,
             'INSTITUTION'           =>$this->input->post('any_other_qualifications_institution3'),
             'FROM'                  =>$this->input->post('any_other_qualifications_from3'),
             'TO'                    =>$this->input->post('any_other_qualifications_to3'),
@@ -318,14 +272,10 @@ class ApplicantApplicationFormModel extends CI_Model{
     public function insertRefereeModel($idNumber){
         
         $this->load->database();
-        //$www = makeApplicationId();
-        echo"this is working"."<br>";
-       
-
 
         $referee_table_first_row = array(
 
-            'APPLICANT_ID'          =>$idNumber,//////////////////////ad id number
+            'APPLICANT_ID'          =>$idNumber,
             'NAME'                  =>$this->input->post('referees_name1'),
             'DESIGNATION'           =>$this->input->post('referees_designation1'),
             'ADDRESS'               =>$this->input->post('referees_address1'),
@@ -339,7 +289,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         
         $referee_table_second_row = array(
 
-            'APPLICANT_ID'          =>$idNumber,//////////////////////ad id number
+            'APPLICANT_ID'          =>$idNumber,
             'NAME'                  =>$this->input->post('referees_name2'),
             'DESIGNATION'           =>$this->input->post('referees_designation2'),
             'ADDRESS'               =>$this->input->post('referees_address2'),
@@ -353,7 +303,7 @@ class ApplicantApplicationFormModel extends CI_Model{
 
         $referee_table_third_row = array(
 
-            'APPLICANT_ID'          =>$idNumber,//////////////////////ad id number
+            'APPLICANT_ID'          =>$idNumber,
             'NAME'                  =>$this->input->post('referees_name3'),
             'DESIGNATION'           =>$this->input->post('referees_designation3'),
             'ADDRESS'               =>$this->input->post('referees_address3'),
@@ -378,14 +328,9 @@ class ApplicantApplicationFormModel extends CI_Model{
         $name5 = $this->input->post('teach_english');
         $name6 = $this->input->post('teach_tamil');
 
-        //$www = makeApplicationId();
-        echo"this is working"."<br>";
-     
-
-
         $language_proficiency = array(
 
-            'APPLICANT_ID'          =>$idNumber,//////////////////////ad id number
+            'APPLICANT_ID'          =>$idNumber,
             'WORK_SINHALA'          =>$name1,
             'WORK_ENGLISH'          =>$name2,
             'WORK_TAMIL'            =>$name3,
@@ -404,13 +349,8 @@ class ApplicantApplicationFormModel extends CI_Model{
     public function insertOtherFieldsModel($idNumber){
         
         $this->load->database();
-        //$www = makeApplicationId();
-        echo"this is working"."<br>";
-     
-
-        
         $other_fields_table_first_row = array(
-            'APPLICANT_ID'       =>$idNumber,//////////////////////ad id number
+            'APPLICANT_ID'       =>$idNumber,
             'EXPERIENCE'         =>$this->input->post('experience'),
             'RESEARCH'           =>$this->input->post('research'),
             'OTHER_INFORMS'      =>$this->input->post('other_details'),
@@ -421,12 +361,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         $this->db->insert($this->db->dbprefix.'other_fields');
 
     }
-/*
-    public function getYearForApplicationId(){
-        
-        return $year;
-    }
-*/
+
 
     public function getCategoryForApplicantId(){
         
@@ -436,7 +371,6 @@ class ApplicantApplicationFormModel extends CI_Model{
     public function getIncrementNumberForApplicantId(){
 
         $conn = new mysqli("localhost", "root", "", "ucsc");
-
         $sql = "SELECT NUMB FROM count";
         $result = $conn->query($sql);
         $counting = 0;
@@ -452,33 +386,17 @@ class ApplicantApplicationFormModel extends CI_Model{
 
 
     public function updateIncrementNumberForApplicantId($numb){
-                $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-            // set the PDO error mode to exception
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $sql = "UPDATE MyGuests SET lastname='Doe' WHERE id=2";
+        $conn = new mysqli("localhost", "root", "", "ucsc");
+        $num = $numb-1;
+        $sql = "UPDATE count SET NUMB='$numb' WHERE NUMB=$num";
 
-            // Prepare statement
-            $stmt = $conn->prepare($sql);
-
-            // execute the query
-            $stmt->execute();
-
-            // echo a message to say the UPDATE succeeded
-            echo $stmt->rowCount() . " records UPDATED successfully";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+       
     }
-catch(PDOException $e)
-    {
-    echo $sql . "<br>" . $e->getMessage();
-    }
-
-$conn = null;
-    }
-/*
-    $this->db->set($data); 
-    $this->db->where("count", $num); 
-    $this->db->update("stud", $data); 
-*/    
+   
+   
 
 
     public function makeApplicationId(){
