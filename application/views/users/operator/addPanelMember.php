@@ -21,7 +21,7 @@
             font-size: 16px;
         }
 
-        input[type=text]{
+        input[type=text],input[type=email]{
             margin-left: 10px;
         }
     </style>
@@ -29,7 +29,7 @@
 
 <body>
 	<div class="w3-main" style="margin-left:250px">
-        <div class="w3-row w3-padding-64">
+        <div class="w3-row w3-padding-64" >
             <div style="background-color: #548795;width: auto; border-color: black; padding-right: 10px;display: inline-block; margin-left: 20px; border-radius: 5px;padding-top: 10px; padding-bottom: 10px;">
         	<form action = "" method = "POST" >
         		<label for='email'>First Name</label>
@@ -41,7 +41,7 @@
                 <br/>
 
                 <label for='email'>Email Address</label>
-                <input type='text' name='subject' id='email' required size='25'placeholder=" Enter the email address"/>
+                <input type='email' name='subject' id='email' required size='25'placeholder=" Enter the email address"/>
                 <br/>
 
                 <label for='email'>Gender</label>
@@ -59,8 +59,8 @@
 
                 <label for='email'>Address</label>
                 <input type='text' name='subject' id='email' required size='25'placeholder=" Enter the mailing address"/>
-
-
+                <br>
+                <input type="submit" name="" value = "Add Member" class="btn btn-primary btn-md" style="margin-right: auto;margin-left: 30px; ">
                 <br/>
         	</form>
     
