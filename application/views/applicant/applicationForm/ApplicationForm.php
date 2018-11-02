@@ -39,37 +39,37 @@ DB_driver ->691
                     <h2 class="fs-title">BASIC PERSONAL DETAILS</h2>
 
                     <h6 class="lables">Full Name (in capital blocks)</h6>
-                    <input type="text"   class="input-fields" name="first_name" placeholder="Full Name">
+                    <input type="text"  required class="input-fields" name="first_name" placeholder="Full Name">
 
                     <h6 class="lables">Surname (in capital blocks)</h6>
-                    <input type="text"   class="input-fields" name="last_name" placeholder="Sur Name">
+                    <input type="text"  required class="input-fields" name="last_name" placeholder="Sur Name">
 
                     <h6 class="lables">Postal Address (in capital blocks)</h6>
-                    <input type="text"   class="input-fields" name="postal_address" placeholder="Postal Address">
+                    <input type="text"  required class="input-fields" name="postal_address" placeholder="Postal Address">
 
                     <h6 class="lables">Permanent Address  (in capital blocks)</h6>
-                    <input type="text"   class="input-fields" name="permanent_address" placeholder="Permanent Address">
+                    <input type="text"  required class="input-fields" name="permanent_address" placeholder="Permanent Address">
                     
                     <h6 class="lables">NIC/Driving Licence/Passport No (in capital blocks)</h6>
-                    <input type="text"   class="input-fields" name="driving_licence" placeholder="NIC/Driving Licence/Passport No">
+                    <input type="text" required  class="input-fields" name="driving_licence" placeholder="NIC/Driving Licence/Passport No">
 
                     <h6 class="lables">Citizenship (in capital blocks)</h6>
-                    <input type="text"   class="input-fields" name="applicant_citizenship" placeholder="Citizenship">
+                    <input type="text"  required class="input-fields" name="applicant_citizenship" placeholder="Citizenship">
 
                     <h6 class="lables">Personal-Email  (in capital blocks)</h6>
-                    <input type="text"   class="input-fields" name="personalEmail" placeholder="Personal-Email">
+                    <input type="text"  required class="input-fields" name="personalEmail" placeholder="Personal-Email">
                     
                     <h6 class="lables">Office-Email (in capital blocks)</h6>
-                    <input type="text"   class="input-fields" name="officeEmail" placeholder="Office-Email">
+                    <input type="text"  required class="input-fields" name="officeEmail" placeholder="Office-Email">
 
                     <h6 class="lables">Mobile Number (in capital blocks)</h6>
-                    <input type="text"   class="input-fields" name="mobile_number" placeholder="Mobile Number">
+                    <input type="text"  required class="input-fields" name="mobile_number" placeholder="Mobile Number">
 
                     <h6 class="lables">Home Number (in capital blocks)</h6>
-                    <input type="text"   class="input-fields" name="home_number" placeholder="Home Number">
+                    <input type="text"  required class="input-fields" name="home_number" placeholder="Home Number">
 
                     <h6 class="lables">Office Number (in capital blocks)</h6>
-                    <input type="text"   class="input-fields" name="office_number" placeholder="Office Number">
+                    <input type="text"  required class="input-fields" name="office_number" placeholder="Office Number">
 
                 <!-- start gender -->
 
