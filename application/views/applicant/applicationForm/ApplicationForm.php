@@ -1,14 +1,11 @@
-<!-- edited 
-db_query_builder->1684  
-DB_driver ->691
--->
+
 <!DOCTYPE html>
 <html>
     
     <head>
 
         <meta charset="utf-8">
-     
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="http://thecodeplayer.com/uploads/js/jquery.easing.min.js" type="text/javascript"></script>
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/applicationForm/TestForMultistepForms.css" type="text/css" >
@@ -22,7 +19,16 @@ DB_driver ->691
     </head>
 
     <body>
+        
         <div id="multistepform-example-container">
+
+            <div class="naigationBar">
+                <a href="<?=base_url('ApplicantLogin/applicant')?>" class=""  style="color:yellow; font-size: 30px; margin-left:-50px; ">Home</a>
+                <a href= "<?=base_url('ApplicantDashboard/contact')?>" class="" style="color:yellow; font-size: 30px; margin-left:400px; ">Contact</a>
+                <a href= "<?=base_url('ApplicantDashboard/logout')?>"  style="color:yellow; font-size: 30px; margin-left:550px;" class="">Logout</a>
+               
+            </div>
+
             <ul id="multistepform-progressbar">
                 <li class="active"><b>BASIC PERSONAL DETAILS</b></li>
                 <li><b>SPECIFICATION AREAS</b></li>

@@ -430,7 +430,35 @@ class ApplicantApplicationFormModel extends CI_Model{
         return $word;
         
     }
+
+    public function updateApplicationForm(){
+
+        mysql_connect("localhost","root","");
+
+        mysql_select_db("ucsc");
+
+        $sql    = "SELECT*FROM professional_qualifications WHERE INSTITUTION='ruwanliyanage3'";
+        $result = mysql_query($sql) or die(mysql_error());
+        
+        while ($row = mysql_fetch_array($result)){
+
+            $professional_qualifications_update = array(
+                'institute'  = $row['INSTITUTION'];
+                'from' = $row['FROM'];
+                'to' = $row['TO'];
+                'duration' = $row['DURATION'];
+                'type_of_qualification' = $row['TYPE_OF_QUALIFICATION'];
+            );
+        }
+    }
 }
 
 ?>
 
+$professional_qualifications_update = array(
+                  =>$idNumber,
+                     =>$this->input->post('experience'),
+            'RESEARCH'           =>$this->input->post('research'),
+            'OTHER_INFORMS'      =>$this->input->post('other_details'),
+            'DATE'               =>$this->input->post('current_date')
+        

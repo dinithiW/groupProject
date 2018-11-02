@@ -33,5 +33,12 @@
                 echo"not entered";
             }
         }
+
+        public function updateBasicPersonalDetailsController(){
+        
+            $this->load->model('ApplicantApplicationFormModel');
+            $id_number =  $this->ApplicantApplicationFormModel->updateApplicationForm();
+
+        }
     }
 ?>
