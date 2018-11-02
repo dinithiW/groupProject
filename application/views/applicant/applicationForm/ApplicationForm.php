@@ -23,7 +23,7 @@
         <div id="multistepform-example-container">
 
             <div class="naigationBar">
-                <a href="<?=base_url('ApplicantLogin/applicant')?>" class=""  style="color:yellow; font-size: 30px; margin-left:-50px; ">Home</a>
+                <a href="<?=base_url('ApplicationForm/updateBasicPersonalDetailsController')?>" class=""  style="color:yellow; font-size: 30px; margin-left:-50px; ">Home</a>
                 <a href= "<?=base_url('ApplicantDashboard/contact')?>" class="" style="color:yellow; font-size: 30px; margin-left:400px; ">Contact</a>
                 <a href= "<?=base_url('ApplicantDashboard/logout')?>"  style="color:yellow; font-size: 30px; margin-left:550px;" class="">Logout</a>
                

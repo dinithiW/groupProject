@@ -37,7 +37,8 @@
         public function updateBasicPersonalDetailsController(){
         
             $this->load->model('ApplicantApplicationFormModel');
-            $id_number =  $this->ApplicantApplicationFormModel->updateApplicationForm();
+            //$id_number =  $this->ApplicantApplicationFormModel->updateApplicationForm();
+            $this->load->view('applicant/applicationForm/ApplicationFormEdit');
 
         }
     }
