@@ -35,10 +35,11 @@
         }
 
         public function updateBasicPersonalDetailsController(){
-        
+            $idNumber ="18se7";
             $this->load->model('ApplicantApplicationFormModel');
-            //$id_number =  $this->ApplicantApplicationFormModel->updateApplicationForm();
-            $this->load->view('applicant/applicationForm/ApplicationFormEdit');
+            $product = $this->ApplicantApplicationFormModel->updateApplicationForm($idNumber);
+            var_dump($product);
+            //$this->load->view('applicant/applicationForm/ApplicationFormEdit');
 
         }
     }
