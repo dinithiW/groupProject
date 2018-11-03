@@ -30,6 +30,7 @@
             </div>
 
             <ul id="multistepform-progressbar">
+            
                 <li class="active"><b>BASIC PERSONAL DETAILS</b></li>
                 <li><b>SPECIFICATION AREAS</b></li>
                 <li><b>EDUCATIONAL DETAILS</b></li>
