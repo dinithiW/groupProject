@@ -101,24 +101,23 @@ class OperatorDashboard extends CI_Controller{
     }
 
     public function emailSuccessMessage(){
-        //echo 'hahahah';
-        //$this->load->view('users/operator/header');
         $this->load->view('messages/emailSuccess');
-        //$this->load->view('users/operator/footer');
     }
 
     public function emailErrorMessage(){
-        //echo 'hahahah';
-        //$this->load->view('users/operator/header');
-        $this->load->view('messages/errorEmail');
-        //$this->load->view('users/operator/footer');
+        
+        $this->load->view('messages/errorEmail'); 
     }
 
     public function logout(){
-        //echo 'hahahah';
-        //$this->load->view('users/operator/header');
+
         $this->load->view('users/loginPanelUsers');
-        //$this->load->view('users/operator/footer');
+    }
+
+    public function addMemberModel(){
+        $this->load->model('operator/PanelMembers');
+        $this->PanelMembers->add();
+
     }
 }
 ?>

@@ -31,34 +31,34 @@
 	<div class="w3-main" style="margin-left:250px">
         <div class="w3-row w3-padding-64" >
             <div style="background-color: #548795;width: auto; border-color: black; padding-right: 10px;display: inline-block; margin-left: 20px; border-radius: 5px;padding-top: 10px; padding-bottom: 10px;">
-        	<form action = "" method = "POST" >
+        	<form action = <?= base_url("OperatorIndex/add")?> method = "POST" >
         		<label for='email'>First Name</label>
             	<input type='text' name='fname' id='email' required size='25'placeholder=" Enter the First Name" />
             	<br/>
 
                 <label for='email'>Last Name</label>
-                <input type='text' name='subject' required size='25'placeholder=" Enter the Last Name"/>
+                <input type='text' name='lname' required size='25'placeholder=" Enter the Last Name"/>
                 <br/>
 
                 <label for='email'>Email Address</label>
-                <input type='email' name='subject' id='email' required size='25'placeholder=" Enter the email address"/>
+                <input type='email' name='email' id='email' required size='25'placeholder=" Enter the email address"/>
                 <br/>
 
                 <label for='email'>Gender</label>
-                <input type='radio' name='subject' id='email' required />Male
-                <input type='radio' name='subject' id='email' required style="margin-left: : 20px;"/>Female
+                <input type='radio' name='gender' id='email' value = "Male"required />Male
+                <input type='radio' name='gender' id='email' value = "Female"required style="margin-left: 20px;"/>Female
                 <br/>
 
                 <label for='email'>Contact Number</label>
-                <input type='text' name='subject' id='email' required size='25'placeholder=" Enter the contact number"/>
+                <input type='text' name='contact' id='email' required size='25'placeholder=" Enter the contact number"/>
                 <br/>
 
                 <label for='email'>Designation</label>
-                <input type='text' name='subject' id='email' required size='25'placeholder=" Enter the designation"/>
+                <input type='text' name='designation' id='email' required size='25'placeholder=" Enter the designation"/>
                 <br/>
 
                 <label for='email'>Address</label>
-                <input type='text' name='subject' id='email' required size='25'placeholder=" Enter the mailing address"/>
+                <input type='text' name='address' id='email' required size='25'placeholder=" Enter the mailing address"/>
                 <br>
                 <input type="submit" name="" value = "Add Member" class="btn btn-primary btn-md" style="margin-right: auto;margin-left: 30px; ">
                 <br/>

@@ -69,6 +69,7 @@ $route['OperatorIndex/emails'] = 'OperatorDashboard/showEmails';
 $route['OperatorIndex/sendEmail'] = 'OperatorDashboard/sendAdToSAR';
 $route['OperatorIndex/process'] = 'OperatorDashboard/sendEmail';
 $route['OperatorIndex/addPanelMember'] = 'OperatorDashboard/addPanelMember';
+$route['OperatorIndex/add'] = 'OperatorDashboard/addMemberModel';
 
 //Director routes
 $route['Director'] = 'DirectorDashboard/index';
