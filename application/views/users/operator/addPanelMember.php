@@ -31,7 +31,7 @@
 	<div class="w3-main" style="margin-left:250px">
         <div class="w3-row w3-padding-64" >
             <div style="background-color: #548795;width: auto; border-color: black; padding-right: 10px;display: inline-block; margin-left: 20px; border-radius: 5px;padding-top: 10px; padding-bottom: 10px;">
-        	<form action = "" method = "POST" >
+        	<form action = <?= base_url("OperatorIndex/add")?> method = "POST" >
         		<label for='email'>First Name</label>
             	<input type='text' name='fname' id='email' required size='25'placeholder=" Enter the First Name" />
             	<br/>
@@ -45,8 +45,8 @@
                 <br/>
 
                 <label for='email'>Gender</label>
-                <input type='radio' name='gender' id='email' required />Male
-                <input type='radio' name='gender' id='email' required style="margin-left: 20px;"/>Female
+                <input type='radio' name='gender' id='email' value = "Male"required />Male
+                <input type='radio' name='gender' id='email' value = "Female"required style="margin-left: 20px;"/>Female
                 <br/>
 
                 <label for='email'>Contact Number</label>
