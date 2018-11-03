@@ -61,7 +61,9 @@ class PanelMembers extends CI_Model{
         );
 
         $this->db->insert('interview_panel', $data);
-        echo "yayyy";
+
+       redirect(base_url()."OperatorDashboard/memberSuccess");
+       
 	}
 
 }
