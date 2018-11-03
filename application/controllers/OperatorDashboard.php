@@ -73,12 +73,6 @@ class OperatorDashboard extends CI_Controller{
     	$this->load->view('users/operator/footer');
     }
 
-    /*public function showEmails(){
-        $this->load->view('users/operator/header');
-        $this->load->view('users/showEmails');
-        $this->load->view('users/operator/footer');
-    }*/
-
     public function sendAdToSAR(){
        
         $this->load->view('users/operator/header');
@@ -94,7 +88,6 @@ class OperatorDashboard extends CI_Controller{
     }
 
     public function sendEmail(){
-        //echo 'hahahah';
         $this->load->view('users/operator/header');
         $this->load->view('users/operator/showEmails');
         $this->load->view('users/operator/footer');
@@ -105,12 +98,10 @@ class OperatorDashboard extends CI_Controller{
     }
 
     public function emailErrorMessage(){
-        
         $this->load->view('messages/errorEmail'); 
     }
 
     public function logout(){
-
         $this->load->view('users/loginPanelUsers');
     }
 
@@ -118,6 +109,10 @@ class OperatorDashboard extends CI_Controller{
         $this->load->model('operator/PanelMembers');
         $this->PanelMembers->add();
 
+    }
+
+    public function memberSuccess(){
+        $this->load->view('messages/panelMemberSuccess');
     }
 }
 ?>
