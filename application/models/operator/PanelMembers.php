@@ -23,7 +23,45 @@ class PanelMembers extends CI_Model{
 		$designation = $this->testInput($_POST['designation']);
 		$address = $this->testInput($_POST['address']);
 
-		echo "$fname $gender $address";
+		$namesub = substr($fname,0,3);
+		$nameid = strtolower($namesub);
+		//echo "$nameid";
+
+		$this->load->database();
+		$this->db->select("ID");
+		$this->db->from("interview_panel");
+		$this->db->order_by("ID", "desc");
+		$query = $this->db->get(); 
+		$rowcount = $query->num_rows();
+		
+		$row = $query->row(); 
+    	$ans = $row->ID;
+    	$panelID = "$nameid"."$ans";
+    	echo "$panelID";
+
+    	if($address==" "){
+    		$address = "-";
+        }
+
+		if($rowcount>0){
+			$panelID = "$nameid"."$ans";
+		}else{
+			$panelID = "$nameid"."1";
+		}
+
+		$data = array(
+            			'PANEL_ID' => $panelID,
+            			'FNAME' => $fname,
+            			'LNAME' => $lname,
+            			'EMAIL' => $email,
+            			'GENDER' => $gender,
+            			'CONTACT_NUMBER' => $contact,
+            			'DESIGNATION' => $designation,
+            			'ADDRESS' => $address
+        );
+
+        $this->db->insert('interview_panel', $data);
+        echo "yayyy";
 	}
 
 }
