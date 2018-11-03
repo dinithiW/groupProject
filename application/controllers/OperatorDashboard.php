@@ -106,18 +106,17 @@ class OperatorDashboard extends CI_Controller{
 
     public function emailErrorMessage(){
         
-        $this->load->view('messages/errorEmail');
-        
+        $this->load->view('messages/errorEmail'); 
     }
 
     public function logout(){
-        //echo 'hahahah';
-        //$this->load->view('users/operator/header');
+
         $this->load->view('users/loginPanelUsers');
-        //$this->load->view('users/operator/footer');
     }
 
-    public function addMember(){
+    public function addMemberModel(){
+        $this->load->model('operator/PanelMembers');
+        $this->PanelMembers->add();
 
     }
 }
