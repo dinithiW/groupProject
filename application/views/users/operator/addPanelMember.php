@@ -29,8 +29,9 @@
 
 <body>
 	<div class="w3-main" style="margin-left:250px">
-        <div class="w3-row w3-padding-64" >
-            <div style="background-color: #548795;width: auto; border-color: black; padding-right: 10px;display: inline-block; margin-left: 20px; border-radius: 5px;padding-top: 10px; padding-bottom: 10px;">
+        <div class="w3-row w3-padding-64 center-block" >
+            <div class = "container-fluid" style="background-color: #548795;width: auto; border-color: black; padding-right: 10px;display: inline-block; margin-left: 20px; border-radius: 5px;padding-top: 10px; padding-bottom: 10px;">
+
         	<form action = <?= base_url("OperatorIndex/add")?> method = "POST" >
         		<label for='email'>First Name</label>
             	<input type='text' name='fname' id='email' required size='25'placeholder=" Enter the First Name" />
@@ -64,7 +65,20 @@
                 <br/>
         	</form>
     
-            </div>
+            </div >
+
+            
+         <!--    <div class = "container" style="background-color: #548795;width: auto; border-color: black; padding-right: 10px;display: inline-block; margin-left: 20px; border-radius: 5px;padding-top: 10px; padding-bottom: 10px;">
+
+                <form action = <?= base_url("OperatorIndex/add")?> method = "POST" >
+                <label for='email'>First Name</label>
+                <input type='text' name='fname' id='email' required size='25'placeholder=" Enter the First Name" />
+                <br/>
+
+
+            </form>
+
+            </div> -->
         </div>
     </div>
 </body>
