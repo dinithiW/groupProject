@@ -37,20 +37,12 @@
         public function updateBasicPersonalDetailsController(){
             $idNumber ="18se7";
             $this->load->model('ApplicantApplicationFormModel');
-            $data['category']    =$this->ApplicantApplicationFormModel->deleApplicationForm($idNumber);
+            $data['category']    =$this->ApplicantApplicationFormModel->updateApplicationForm($idNumber);
             $data['mainContest'] ='applicant/applicationForm/ApplicationFormEdit';
             //var_dump($product);
             //$this->load->view('applicant/applicationForm/ApplicationFormEdit',$data);
 
         }
-        public function deleteBasicPersonalDetailsController(){
-            $idNumber ="18se7";
-            $this->load->model('ApplicantApplicationFormModel');
-            $data['category']    =$this->ApplicantApplicationFormModel->dApplicationForm($idNumber);
-            $data['mainContest'] ='applicant/applicationForm/ApplicationFormEdit';
-            //var_dump($product);
-            //$this->load->view('applicant/applicationForm/ApplicationFormEdit',$data);
-
-        }
+        
     }
 ?>

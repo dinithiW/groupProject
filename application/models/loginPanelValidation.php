@@ -41,7 +41,8 @@ class loginPanelValidation extends CI_Model{
 				
 				$data = array(
 			        'email'     => $row->EMAIL,
-			        'usertype' => $row->USER_TYPE,
+					'usertype' => $row->USER_TYPE,
+					'id_number'=> '';
 			        'logged_in' => TRUE
 				);
 
