@@ -4,6 +4,7 @@ class loginPanelValidation extends CI_Model{
 
 	public function __construct() {
 		parent::__construct();
+		
 	}
 
 	private function testInput($data) {
@@ -18,6 +19,8 @@ class loginPanelValidation extends CI_Model{
 		
 		$email = $this->testInput($_POST['email']);
 		$password = $this->testInput($_POST['password']);
+		echo"$email"."<br>";
+		echo"$password"."<br>";
 
 		if($email!= null && $password != null){
 			$this->load->database();
@@ -25,29 +28,46 @@ class loginPanelValidation extends CI_Model{
 			$this->db->select("EMAIL");
 			$this->db->from("applicants");
 			$this->db->where("EMAIL", $email);
-			$query = $this->db->get();
 
+			$query = $this->db->get();
 			$rowcount = $query->num_rows();
 			
 			if($rowcount==0){
 				//echo "we are her now";
 				redirect(base_url()."ApplicantLogin/errorUsername");
-			}else{
+			}
+			else{
 
 				foreach($query->result() as $row){
 				if($row->PASSWORD == md5($password)){
 				
 				$this->load->library('session');
+
+				$this->session->set_userdata('name', 'ruwanliyanage');
 				
 				$data = array(
 			        'email'     => $row->EMAIL,
 					'usertype' => $row->USER_TYPE,
-					'id_number'=> '';
+					'id_number'=> '',
 			        'logged_in' => TRUE
 				);
 
-				$this->session->set_userdata($data);
+				/* start */
+				$sess = array(
+					 'username'     => "ruwan",
+					  'user_agent' => "liyanage",
+					  'ip_address' => "galle",
+				);
 				
+				  $this->session->set_userdata('ruwan', $sess);
+
+				  $_SESSION['name'] = "ruwanliyagayanage";  
+
+
+				/* end */
+
+
+				//$this->session->set_userdata('data_array',$data);
 				$usertype = $this->session->userdata('usertype');
 
 				redirect(base_url()."ApplicantLogin/applicant");

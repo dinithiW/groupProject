@@ -60,7 +60,6 @@ class ApplicantDashboard extends CI_Controller{
 
     public function applicationSelect(){
         $this->load->view('applicant/applicationForm/ApplicationFormSelectAreas');
-        echo"ok submitted ruwan";
     }
     
     public function contact(){
