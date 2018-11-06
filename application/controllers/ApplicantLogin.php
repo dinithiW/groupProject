@@ -17,6 +17,7 @@ class ApplicantLogin extends CI_Controller{
 
     //done
     public function process(){
+        echo"this is the process";
         $this->load->model('loginPanelValidation');
         $this->loginPanelValidation->validateApplicant();  
     }
@@ -43,24 +44,9 @@ class ApplicantLogin extends CI_Controller{
     }
 
     public function applicant(){
-        $name1 = $this->session->userdata['ruwan']['username'];
-        $name2 = $this->session->userdata['ruwan']['username'];
-        $name3 = $this->session->userdata['ruwan']['username'];
-        if($name1=="ruwan"){
-            $this->load->view('applicant/header');
-            $this->load->view('home');
-            $this->load->view('applicant/footer');
-        }
-        else{
-            redirect(base_url()."ApplicantLogin/errorUsername");
-        }
-
-
-        /*
     	$this->load->view('applicant/header');
     	$this->load->view('home');
         $this->load->view('applicant/footer');
-        */
     }
 
     public function errorPassword(){

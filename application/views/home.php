@@ -1,10 +1,9 @@
 <?php 
-    $name1 = $this->session->userdata['ruwan']['username'];
-    $name2 = $this->session->userdata['ruwan']['username'];
-    $name3 = $this->session->userdata['ruwan']['username'];
 
-    if($name1!="ruwan"){
-        redirect(base_url()."ApplicantLogin/errorUsername");
+    $checking = $this->session->userdata['sess_varia']['logged_in'];
+
+    if($checking=="logout"){
+        redirect(base_url()."ApplicantLogin/index");
     }
 
 ?>
