@@ -158,7 +158,7 @@ class loginPanelValidation extends CI_Model{
 				}else if($username =='SAR'){
 					//yet to implement
 				}else{
-
+					redirect(base_url()."Panel");
 				}
 				
 			}else{
