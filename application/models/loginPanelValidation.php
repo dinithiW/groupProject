@@ -49,7 +49,8 @@ class loginPanelValidation extends CI_Model{
 
 				$ss = "ucscucsc";
 				$this->session->set_userdata('user',$ss);
-				echo"<br>";
+				
+				echo"<br>ffdfdfdf<br>";
 				echo $this->session->userdata('user');
 
 				//start of the session for the web pages

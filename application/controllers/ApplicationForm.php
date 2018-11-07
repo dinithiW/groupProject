@@ -77,7 +77,7 @@
             //$now1 = $this->session->userdata['sess_varia']['logged_in'];
 
             
-            
+            $this->load->library('session');
             $rr = $this->session->userdata('age');
 			echo"$rr";
 
