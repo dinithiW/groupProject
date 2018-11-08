@@ -433,11 +433,10 @@ class ApplicantApplicationFormModel extends CI_Model{
 
     public function updateApplicationForm($id){
         
-        $this->db->select('*');
-        $this->db->where('APPLICANT_ID',$id);
+        $this->load->database();
+        $this->db->select('APPLICANT_ID');
         $this->db->from('basic_personal_details');
-        $query = $this->db->get();
-        return $query->row();
+        
     }
 }
 

@@ -4,6 +4,7 @@ class loginPanelValidation extends CI_Model{
 
 	public function __construct() {
 		parent::__construct();
+		
 	}
 
 	private function testInput($data) {
@@ -18,6 +19,7 @@ class loginPanelValidation extends CI_Model{
 		
 		$email = $this->testInput($_POST['email']);
 		$password = $this->testInput($_POST['password']);
+		
 
 		if($email!= null && $password != null){
 			$this->load->database();
@@ -25,31 +27,56 @@ class loginPanelValidation extends CI_Model{
 			$this->db->select("EMAIL");
 			$this->db->from("applicants");
 			$this->db->where("EMAIL", $email);
-			$query = $this->db->get();
 
+			$query = $this->db->get();
 			$rowcount = $query->num_rows();
+
+			$this->load->library('session');
+			$this->session->set_userdata('age','colombo');
+			
+
 			
 			if($rowcount==0){
 				//echo "we are her now";
 				redirect(base_url()."ApplicantLogin/errorUsername");
-			}else{
-
+			}
+			else{
+				
 				foreach($query->result() as $row){
 				if($row->PASSWORD == md5($password)){
-				
 				$this->load->library('session');
+
+
+				$ss = "ucscucsc";
+				$this->session->set_userdata('user',$ss);
 				
-				$data = array(
-			        'email'     => $row->EMAIL,
-			        'usertype' => $row->USER_TYPE,
-			        'logged_in' => TRUE
+				echo"<br>ffdfdfdf<br>";
+				echo $this->session->userdata('user');
+
+				//start of the session for the web pages
+				/*
+				$ruwa = array(
+					'email'     => $row->EMAIL,
+					'usertype' => $row->USER_TYPE,
+					'id_number'=> '',
+			        'logged_in' =>"login"
 				);
+				*/
+				//$nnn = "fdddf";
 
-				$this->session->set_userdata($data);
-				
-				$usertype = $this->session->userdata('usertype');
+				/*$sess_array = array(
+					'id'        =>  $nnn,
+                    'username'  =>  "ucsc2",
+                    'postid'    =>  "ucsc3"
+			    );
+				$CI->session->set_userdata('logged_in', $sess_array);
+*/
+			
 
-				redirect(base_url()."ApplicantLogin/applicant");
+
+
+				/* end  ot the session variable for the web page*/
+				//redirect(base_url()."ApplicantLogin/applicant");
 				
 			}else{
 				redirect(base_url()."ApplicantLogin/wrongPassword");
@@ -131,7 +158,7 @@ class loginPanelValidation extends CI_Model{
 				}else if($username =='director'){
 					redirect(base_url()."DirectorDashboard");
 				}else{
-
+					redirect(base_url()."Panel");
 				}
 				
 			}else{
