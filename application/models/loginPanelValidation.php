@@ -128,8 +128,8 @@ class loginPanelValidation extends CI_Model{
 				if($username=='operator'){
 					redirect(base_url()."OperatorDashboard");
 					
-				}else if($username =='SAR'){
-					//yet to implement
+				}else if($username =='director'){
+					redirect(base_url()."DirectorDashboard");
 				}else{
 
 				}
