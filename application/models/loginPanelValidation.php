@@ -49,7 +49,8 @@ class loginPanelValidation extends CI_Model{
 
 				$ss = "ucscucsc";
 				$this->session->set_userdata('user',$ss);
-				echo"<br>";
+				
+				echo"<br>ffdfdfdf<br>";
 				echo $this->session->userdata('user');
 
 				//start of the session for the web pages
@@ -154,8 +155,8 @@ class loginPanelValidation extends CI_Model{
 				if($username=='operator'){
 					redirect(base_url()."OperatorDashboard");
 					
-				}else if($username =='SAR'){
-					//yet to implement
+				}else if($username =='director'){
+					redirect(base_url()."DirectorDashboard");
 				}else{
 					redirect(base_url()."Panel");
 				}

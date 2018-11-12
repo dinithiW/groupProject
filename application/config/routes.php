@@ -70,6 +70,8 @@ $route['OperatorIndex/sendEmail'] = 'OperatorDashboard/sendAdToSAR';
 $route['OperatorIndex/process'] = 'OperatorDashboard/sendEmail';
 $route['OperatorIndex/addPanelMember'] = 'OperatorDashboard/addPanelMember';
 $route['OperatorIndex/add'] = 'OperatorDashboard/addMemberModel';
+$route['OperatorIndex/success'] = 'OperatorDashboard/memberSuccess';
+$route['OperatorIndex/delete'] = 'OperatorDashboard/deleteMemberModel';
 
 //Director routes
 $route['Director'] = 'DirectorDashboard/index';
@@ -80,5 +82,8 @@ $route['Director/viewMessage'] = 'DirectorDashboard/viewNotification';
 $route['Panel'] = 'InterviewPanelDashboard/index';
 $route['Panel/viewApplicants'] = 'InterviewPanelDashboard/viewApplicants';
 
+$route['dashboard'] = 'User/index';
+$route['loginUsers'] = 'Login/index';
+$route['home'] = 'Home/index';
 
 

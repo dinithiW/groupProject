@@ -16,10 +16,10 @@
     
  <style>
 
- form{
+ /*form{
     border: 3px solid #f1f1f1;
     background: linear-gradient(to left, #9900cc 0%, #ff9900 100%);
- }
+ }*/
  </style>   
 </head> 
 
@@ -30,8 +30,27 @@
     <div class="w3-main" style="margin-left:250px">
             <div class="w3-row w3-padding-64">
 
-    
+                <div class="text-center"> 
+                <form>
+                    <label for='email'>Vacancies Available</label>
+                    <input type='text' name='fname' id='email' required size='25'placeholder=" Enter the First Name" />
+                    <br/>
 
+                    <label for='email'>Specialization Areas Required</label>
+                    <textarea name='fname' id='email' required size='25'placeholder=" Enter the First Name" size='25'>hahahah
+                    </textarea>
+                    <!-- <input type='text' name='fname' id='email' required size='25'placeholder=" Enter the First Name" /> -->
+                    <br/>
+
+                    <label for='email'>Deadline</label>
+                    <input type='date' name='fname' id='email' required size='25'placeholder=" Enter the First Name" />
+                    <br/>
+                    
+                    
+
+                </form>
+    
+                </div>
             </div>
     </div>
 

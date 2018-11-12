@@ -1,12 +1,3 @@
-<?php 
-
-    $checking = $this->session->userdata['sess_varia']['logged_in'];
-
-    if($checking=="logout"){
-        redirect(base_url()."ApplicantLogin/index");
-    }
-
-?>
 
 <html>
     <head>

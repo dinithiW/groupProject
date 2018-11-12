@@ -13,6 +13,7 @@ class PanelMembers extends CI_Model{
   		return $data;
 	}
 
+	//add member to interview panel
 	public function add(){
 
 		$fname = $this->testInput($_POST['fname']);
@@ -64,6 +65,29 @@ class PanelMembers extends CI_Model{
 
        redirect(base_url()."OperatorDashboard/memberSuccess");
        
+	}
+
+	//delete member 
+	public function delete(){
+		$pidDelete = $_POST['pIDDelete'];
+
+		$this->load->database();
+		$this->db->select("PANEL_ID");
+		$this->db->from("interview_panel");
+		$query = $this->db->get(); 
+		$rowcount = $query->num_rows();
+
+		if($rowcount==0){
+			//show error message
+		}else{
+			$this -> db -> where('PANEL_ID', $pidDelete);
+  			$this -> db -> delete('interview_panel');
+		}
+		
+	}
+
+	public function update(){
+
 	}
 
 }
