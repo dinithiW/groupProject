@@ -48,7 +48,7 @@ a:hover {
   </a>
   <h4 class="w3-bar-item"><b>Menu</b></h4>
   <a class="w3-bar-item w3-button w3-hover-green" href="<?= base_url('Panel/viewApplicants') ?>">View Applicants</a>
-  <a class="w3-bar-item w3-button w3-hover-green" href="<?= base_url('OperatorDashboard/categorizeApplications') ?>">Edit Application Form</a>
+  <a class="w3-bar-item w3-button w3-hover-green" href="<?= base_url('OperatorDashboard/categorizeApplications') ?>">View Marks</a>
   <a class="w3-bar-item w3-button w3-hover-green" href="#">Set Interview Date</a>
   <a class="w3-bar-item w3-button w3-hover-green" href="<?= base_url('OperatorIndex/addPanelMember') ?>">Add Panel Members</a>
   <a class="w3-bar-item w3-button w3-hover-green" href="#">Send Emails to Applicants</a>
