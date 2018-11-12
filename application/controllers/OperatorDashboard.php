@@ -111,6 +111,12 @@ class OperatorDashboard extends CI_Controller{
 
     }
 
+    public function deleteMemberModel(){
+        $this->load->model('operator/PanelMembers');
+        $this->PanelMembers->delete();
+
+    }
+
     public function memberSuccess(){
         $this->load->view('messages/panelMemberSuccess');
     }
