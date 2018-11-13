@@ -18,6 +18,12 @@ class InterviewPanelDashboard extends CI_Controller{
         $this->load->view('users/interviewPanel/test');
         $this->load->view('users/interviewPanel/footer');
     }
+     public function viewMarks(){
+         $this->load->view('users/interviewPanel/header');
+        $this->load->view('users/interviewPanel/marks');
+        $this->load->view('users/interviewPanel/footer');
+    }
+
 
 }
 

@@ -81,6 +81,7 @@ $route['Director/viewMessage'] = 'DirectorDashboard/viewNotification';
 
 $route['Panel'] = 'InterviewPanelDashboard/index';
 $route['Panel/viewApplicants'] = 'InterviewPanelDashboard/viewApplicants';
+$route['Panel/viewApplicants'] = 'InterviewPanelDashboard/viewMarks';
 
 $route['dashboard'] = 'User/index';
 $route['loginUsers'] = 'Login/index';
