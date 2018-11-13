@@ -7,7 +7,9 @@ class PanelMembers extends CI_Model{
 		parent::__construct();
 	}
 
+	public function add(){
 
+	}
 
 
 
