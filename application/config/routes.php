@@ -84,7 +84,10 @@ $route['Panel/viewApplicants'] = 'InterviewPanelDashboard/viewApplicants';
 $route['Panel/viewApplicants'] = 'InterviewPanelDashboard/viewMarks';
 
 $route['dashboard'] = 'User/index';
-$route['loginUsers'] = 'Login/index';
 $route['home'] = 'Home/index';
+
+$route['loginUsers'] = 'Login/index';
+$route['loginUsers/process'] = 'Login/process';
+//$route['home/'] = 
 
 

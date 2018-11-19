@@ -1,5 +1,6 @@
 <?php
 
+//this class will load the login Panel
 class UsersLogin extends CI_Controller{
 
 	public function __construct() {
@@ -12,9 +13,8 @@ class UsersLogin extends CI_Controller{
 		$this->load->view('users/loginPanelUsers');
 	}
 
-    //completed
     public function process(){
-        echo "hahahhaha";
+        //echo "hahahhaha";
         $this->load->model('loginPanelValidation');
         $this->loginPanelValidation->verifyUser();  
     }
