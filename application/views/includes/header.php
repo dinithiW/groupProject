@@ -160,14 +160,14 @@
 
             <li class="treeview">
               <a href="#" >
-                <i class="fa fa-upload"></i>
+                <i class="fa fa-pencil-square-o"></i>
                 <span>Edit Application Form</span>
               </a>
             </li>
 
             <li class="treeview">
               <a href="#" >
-                <i class="fa fa-upload"></i>
+                <i class="fa fa-users"></i>
                 <span>Categorize Applicants</span>
               </a>
             </li>
@@ -188,7 +188,7 @@
 
             <li class="treeview">
               <a href="#" >
-                <i class="fa fa-upload"></i>
+                <i class="fa fa-envelope"></i>
                 <span>Send Emails to Applicants</span>
               </a>
             </li>
