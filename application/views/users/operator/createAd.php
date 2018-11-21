@@ -28,8 +28,8 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        <i class="fa fa-users"></i> User Management
-        <small>Add / Edit User</small>
+        Create Advertisement
+        <!-- <small>Add / Edit User</small> -->
       </h1>
     </section>
     
@@ -48,7 +48,9 @@
                     </div><!-- /.box-header -->
                     <!-- form start -->
                     
-                    <textarea class="tinymce"><p><span style="font-size: 18pt; font-family: 'indie flower', cursive;">some text here</span></p></textarea>
+                    <textarea class="tinymce">
+                    	<!-- <p><span style="font-size: 18pt; font-family: 'indie flower', cursive;">some text here</span></p> -->
+                    </textarea>
 
 		<!-- javascript -->
 
