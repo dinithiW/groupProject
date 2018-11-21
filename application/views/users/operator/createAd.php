@@ -6,9 +6,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width= device-width ,initial-scale = 1">
 
-    <<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> --> 
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
@@ -24,9 +24,31 @@
     
 	</head>
 	<body>
-		<div class="w3-main" style="margin-left:250px">
-			<div class="w3-row w3-padding-64">
-		<textarea class="tinymce"><p><span style="font-size: 18pt; font-family: 'indie flower', cursive;">some text here</span></p></textarea>
+		<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        <i class="fa fa-users"></i> User Management
+        <small>Add / Edit User</small>
+      </h1>
+    </section>
+    
+    <section class="content">
+    
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-8">
+              <!-- general form elements -->
+                
+                
+                
+                <div class="box box-primary">
+                    <div class="box-header">
+                        <h3 class="box-title">Enter User Details</h3>
+                    </div><!-- /.box-header -->
+                    <!-- form start -->
+                    
+                    <textarea class="tinymce"><p><span style="font-size: 18pt; font-family: 'indie flower', cursive;">some text here</span></p></textarea>
 
 		<!-- javascript -->
 
@@ -38,8 +60,92 @@
 			<br>
 			<input type="submit" name="haha" value = "Send to SAR for approval" class="btn btn-primary btn-md" style="float: right">
 		</form>
+                    
+                </div>
+            </div>
+            <div class="col-md-4">
+                <?php
+                    $this->load->helper('form');
+                    $error = $this->session->flashdata('error');
+                    if($error)
+                    {
+                ?>
+                <div class="alert alert-danger alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <?php echo $this->session->flashdata('error'); ?>                    
+                </div>
+                <?php } ?>
+                <?php  
+                    $success = $this->session->flashdata('success');
+                    if($success)
+                    {
+                ?>
+                <div class="alert alert-success alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <?php echo $this->session->flashdata('success'); ?>
+                </div>
+                <?php } ?>
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <?php echo validation_errors('<div class="alert alert-danger alert-dismissable">', ' <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button></div>'); ?>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </section>
+    
+</div>
+<script src="<?php echo base_url(); ?>assets/js/addUser.js" type="text/javascript"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		
-	</div>
-	</div>
+		
+		
+	
 	</body>
 </html>

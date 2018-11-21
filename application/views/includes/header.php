@@ -152,14 +152,14 @@
             ?>
 
             <li class="treeview">
-              <a href="#" >
+              <a href="<?= base_url('OperatorIndex/createAd') ?>" >
                 <i class="fa fa-address-card"></i>
                 <span>Create Ad</span>
               </a>
             </li>
 
             <li class="treeview">
-              <a href="#" >
+              <a href="" >
                 <i class="fa fa-pencil-square-o"></i>
                 <span>Edit Application Form</span>
               </a>

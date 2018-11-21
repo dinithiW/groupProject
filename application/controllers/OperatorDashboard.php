@@ -68,9 +68,12 @@ class OperatorDashboard extends CI_Controller{
 
 
     public function ad(){
-    	$this->load->view('users/operator/header');
-    	$this->load->view('users/operator/createAd');
-    	$this->load->view('users/operator/footer');
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/createAd');
+        $this->load->view('includes/footer');
+    	//$this->load->view('users/operator/header');
+    	
+    	//$this->load->view('users/operator/footer');
     }
 
     public function sendAdToSAR(){

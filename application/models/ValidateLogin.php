@@ -35,9 +35,10 @@ class ValidateLogin extends CI_Model{
 			$this->load->library('session');
 			$this->session->set_userdata('age','colombo');
 			
+			//username / email does not exist
 			if($rowcount==0){
 				//////////////////////////////change these
-				redirect(base_url()."ApplicantLogin/errorUsername");
+				redirect(base_url()."Login/errorUsername");
 			}
 			else{
 				
@@ -58,10 +59,11 @@ class ValidateLogin extends CI_Model{
 					$this->load->view('includes/header');
 					$this->load->view('MainDashboard');
 					$this->load->view('includes/footer');
-					//echo $_SESSION['username'];
+					
+				//incorrect password
 				}else{
 					///////////////////////change these
-					redirect(base_url()."ApplicantLogin/wrongPassword");
+					redirect(base_url()."Login/errorPassword");
 				}
 			break;
 			}
