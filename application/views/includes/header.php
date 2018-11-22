@@ -180,7 +180,7 @@
             </li>
 
             <li class="treeview">
-              <a href="#" >
+              <a href="<?= base_url('OperatorIndex/addPanelMember') ?>" >
                 <i class="fa fa-user-plus"></i>
                 <span>Add Panel Members</span>
               </a>

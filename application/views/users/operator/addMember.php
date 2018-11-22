@@ -53,6 +53,8 @@
                                         <label for="gender">Gender</label>
                                         <select class="form-control required" id="role" name="role">
                                             <option value="0">Select Gender</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
                                         </select>
                                     </div>
                                 </div>
