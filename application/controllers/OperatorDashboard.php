@@ -5,6 +5,7 @@ class OperatorDashboard extends CI_Controller{
 	public function __construct() {
 		parent::__construct();
 		$this->load->helper('url');
+        //$this->pagination->initialize($config);
     }
     
 	public function index(){
@@ -66,11 +67,11 @@ class OperatorDashboard extends CI_Controller{
         redirect(base_url()."OperatorDashboard/reDirect");
     }
 
-
+    //loads the view related to creating an advertisement
     public function ad(){
-    	$this->load->view('users/operator/header');
-    	$this->load->view('users/operator/createAd');
-    	$this->load->view('users/operator/footer');
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/createAd');
+        $this->load->view('includes/footer');
     }
 
     public function sendAdToSAR(){
@@ -82,15 +83,26 @@ class OperatorDashboard extends CI_Controller{
 
     public function addPanelMember(){
        
-        $this->load->view('users/operator/header');
-        $this->load->view('users/operator/addPanelMember');
-        $this->load->view('users/operator/footer');
+        $data = [];
+        $this->load->model('operator/PanelMembers');
+        $data['Members'] = $this->PanelMembers->getAllMembers();
+
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/addMemberHome',$data);
+        $this->load->view('includes/footer');
+
+    }
+
+    public function addMember(){
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/addMember');
+        $this->load->view('includes/footer');
     }
 
     public function sendEmail(){
         $this->load->view('users/operator/header');
         $this->load->view('users/operator/showEmails');
-        $this->load->view('users/operator/footer');
+        $this->load->view('includes/footer');
     }
 
     public function emailSuccessMessage(){

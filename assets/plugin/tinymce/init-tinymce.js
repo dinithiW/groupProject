@@ -55,15 +55,33 @@ tinymce.init({
     },
 
     {
-      title: "Post Ad",
-      url : "http://localhost/ucsc/assets/templates/PostAddd.html",
+      title: "Web Ad",
+      url : "http://localhost/ucsc/assets/templates/PostAdNew.html",
       description : "Edit the fields shown in red"
     },
 
       {
         title: "Timestamp",
         content: '<div class="bms-owi-rte-warning"><span>lollllll</span></div>'
-      }
+      },
+	  
+	  {
+		title: "Appointment",
+		url : "http://localhost/ucsc/assets/templates/appoinment.html",
+		description : "Edit the fields shown in red"  
+	  },
+	  
+	  {
+		title: "Interview",
+		url : "http://localhost/ucsc/assets/templates/interview.html",
+		description : "Edit the fields shown in red"  
+	  },
+	  
+	  {
+		title: "Selection Committee",
+		url : "http://localhost/ucsc/assets/templates/selectionCommittee.html",
+		description : "Edit the fields shown in red"  
+	  }
   ],
 	
   	

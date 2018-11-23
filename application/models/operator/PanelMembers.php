@@ -2,9 +2,131 @@
 
 class PanelMembers extends CI_Model{
 
+	private $panelID;
+	private $fname;
+    private $lname;
+    private $email;
+    private $gender;
+    private $contact;
+    private $designation;
+    private $address;
+
+
 	public function __construct() {
 		parent::__construct();
 	}
+
+	 public function getAllMembers(){
+        $Members = [];
+        $this->load->database();
+        $this->db->select("PANEL_ID");
+        $this->db->select("FNAME");
+        $this->db->select("LNAME");
+        $this->db->select("EMAIL");
+        $this->db->select("GENDER");
+        $this->db->select("CONTACT_NUMBER");
+        $this->db->select("DESIGNATION");
+        $this->db->select("ADDRESS");
+        $this->db->from("interview_panel");
+
+        $query = $this->db->get();
+
+        foreach($query->result() as $row){
+            $Member = new PanelMembers();
+            $Member->setPanelID($row->PANEL_ID);
+            $Member->setFname($row->FNAME);
+            $Member->setLname($row->LNAME);
+            $Member->setEmail($row->EMAIL);
+            $Member->setGender($row->GENDER);
+            $Member->setContact($row->CONTACT_NUMBER);
+            $Member->setDesignation($row->DESIGNATION);
+            $Member->setAddress($row->ADDRESS);
+            array_push($Members, $Member);
+        }
+        return $Members;
+    }
+
+    public function setPanelID($id)
+    {
+        $this->panelID = $id;
+    }
+
+    public function setFname($fname)
+    {
+        $this->fname = $fname;
+    }
+
+    public function setLname($lname)
+    {
+        $this->lname = $lname;
+    }
+
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    }
+
+    public function setGender($gender)
+    {
+        $this->gender = $gender;
+    }
+
+    public function setContact($contact)
+    {
+        $this->contact = $contact;
+    }
+
+    public function setDesignation($designation)
+    {
+        $this->designation = $designation;
+    }
+
+    public function setAddress($address)
+    {
+        $this->address = $address;
+    }
+
+
+
+    public function getPanelID()
+    {
+        return $this->panelID;
+    }
+
+    public function getFname()
+    {
+        return $this->fname;
+    }
+
+    public function getLname()
+    {
+        return $this->lname;
+    }
+
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    public function getGender()
+    {
+        return $this->gender;
+    }
+
+    public function getContact()
+    {
+        return $this->contact;
+    }
+
+    public function getDesignation()
+    {
+        return $this->designation;
+    }
+
+    public function getAddress()
+    {
+        return $this->address;
+    }
 
 	private function testInput($data) {
   		$data = trim($data);
@@ -66,6 +188,8 @@ class PanelMembers extends CI_Model{
        redirect(base_url()."OperatorDashboard/memberSuccess");
        
 	}
+
+	
 
 	//delete member 
 	public function delete(){
