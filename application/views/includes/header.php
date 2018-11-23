@@ -211,6 +211,12 @@
                 <span>Reports</span>
               </a>
             </li>
+            <li class="treeview">
+              <a href="<?= base_url('Director/adRequest') ?>" >
+                <i class="fa fa-align-justify"></i>
+                <span>Advertisment Request</span>
+              </a>
+            </li>
 
             <?php
             }
