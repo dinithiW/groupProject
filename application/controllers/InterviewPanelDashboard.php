@@ -8,22 +8,23 @@ class InterviewPanelDashboard extends CI_Controller{
     }
     
 	public function index(){
-        $this->load->view('users/interviewPanel/header');
+        $this->load->view('includes/header');
         $this->load->view('home');
-        $this->load->view('users/interviewPanel/footer');
+        $this->load->view('includes/footer');
     }
 
     public function viewApplicants(){
-    	 $this->load->view('users/interviewPanel/header');
-        $this->load->view('users/interviewPanel/test');
-        $this->load->view('users/interviewPanel/footer');
+    	 $this->load->view('includes/header');
+         echo "hsghajgd";
+        $this->load->view('users/interviewPanel/viewApplicants');
+        $this->load->view('includes/footer');
     }
-     public function viewMarks(){
+     /*public function viewMarks(){
          $this->load->view('users/interviewPanel/header');
         $this->load->view('users/interviewPanel/marks');
         $this->load->view('users/interviewPanel/footer');
     }
-
+*/
 
 }
 
