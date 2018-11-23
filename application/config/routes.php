@@ -82,6 +82,7 @@ $route['Director'] = 'DirectorDashboard/index';
 $route['Director/adRequest'] = 'DirectorDashboard/adRequest';
 $route['Director/addMessage'] = 'DirectorDashboard/addNotification';
 $route['Director/viewMessage'] = 'DirectorDashboard/viewNotification';
+$route['Director/finalize'] = 'DirectorDashboard/finalize';
 
 //panel
 $route['Panel'] = 'InterviewPanelDashboard/index';
