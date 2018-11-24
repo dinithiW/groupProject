@@ -211,6 +211,12 @@
                 <span>Reports</span>
               </a>
             </li>
+            <li class="treeview">
+              <a href="<?= base_url('Director/adRequest') ?>" >
+                <i class="fa fa-align-justify"></i>
+                <span>Advertisment Request</span>
+              </a>
+            </li>
 
             <?php
             }
@@ -235,16 +241,23 @@
             if($role == ROLE_PANEL)
             {
             ?>
+           
             <li class="treeview">
-              <a href="<?php echo base_url(); ?>userListing">
-                <i class="fa fa-users"></i>
-                <span>Users</span>
+              <a href="<?= base_url('Panel/viewApplicants') ?>" >
+                <i class="fa fa-files-o"></i>
+                <span>View Applicants</span>
               </a>
             </li>
-            <li class="treeview">
+             <li class="treeview">
               <a href="#" >
                 <i class="fa fa-files-o"></i>
-                <span>Reports</span>
+                <span>View Marks</span>
+              </a>
+            </li>
+             <li class="treeview">
+              <a href="#" >
+                <i class="fa fa-files-o"></i>
+                <span>Marking Sheet</span>
               </a>
             </li>
 

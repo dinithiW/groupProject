@@ -82,9 +82,29 @@ CREATE TABLE `basic_personal_details` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `comments`
---
 
+--
+CREATE TABLE `selected_applicants` (
+  `APPLICANT_ID` varchar(100) NOT NULL,
+  `FIRST_NAME` varchar(100) NOT NULL,
+  `LAST_NAME` varchar(200) NOT NULL,
+  `POSTAL_ADDRESS` varchar(200) NOT NULL,
+  `PERMANENT_ADDRESS` varchar(300) NOT NULL,
+  `NIC` varchar(200) NOT NULL,
+  `CITIZENSHIP_NAME` varchar(100) NOT NULL,
+  `PERSONAL_EMAIL` varchar(100) NOT NULL,
+  `OFFICE_EMAIL` varchar(200) NOT NULL,
+  `MOBILE_NUMBER` varchar(200) NOT NULL,
+  `HOME_NUMBER` varchar(20) NOT NULL,
+  `OFFICE_NUMBER` varchar(20) NOT NULL,
+  `GENDER` varchar(10) NOT NULL,
+  `CIVIL_STATUS` varchar(10) NOT NULL,
+  `CITIZENSHIP` varchar(10) NOT NULL,
+  `DATE_OF_BIRTH` varchar(10) NOT NULL,
+  `POST_APPLY_FOR` varchar(200) NOT NULL,
+  `DEGREE` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+------------------------------------------------------ Table structure for table `comments`
 CREATE TABLE `comments` (
   `COMMENT_ID` int(11) NOT NULL,
   `COMMENT_SUBJECT` varchar(250) NOT NULL,
@@ -342,6 +362,7 @@ INSERT INTO `users` (`USERNAME`, `PASSWORD`, `USER_TYPE`, `NAME`) VALUES
 ('director@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Director', 'Director Director'),
 ('operator@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'MA', 'Operator Opz'),
 ('sar@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'SAR', 'Sar Sar');
+('panel@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel;', 'Panel Panel');
 
 --
 -- Indexes for dumped tables

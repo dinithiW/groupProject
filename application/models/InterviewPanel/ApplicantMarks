@@ -8,6 +8,7 @@ class PanelMembers extends CI_Model{
 	}
 
 	public function add(){
+		
 
 	}
 
