@@ -16,7 +16,13 @@ class PanelMembers extends CI_Model{
 		parent::__construct();
 	}
 
-	 public function getAllMembers(){
+	/*public function addMember(){
+
+		$this->panelID = $_POST[]
+	}*/
+
+
+	public function getAllMembers(){
         $Members = [];
         $this->load->database();
         $this->db->select("PANEL_ID");
