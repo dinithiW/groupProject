@@ -65,8 +65,8 @@
                   <table class="table table-hover">
                     <tr>
                       <th>Panel_ID</th>
-                      <th>First Name</th>
-                      <th>Last Name</th>
+                      <th>Name</th>
+                      <!-- <th>Last Name</th> -->
                       <th>Email</th>
                       <th>Gender</th>
                       <th>Mobile</th>
@@ -80,8 +80,8 @@
                     
                     <tr>
                       <td><?php echo $row->getPanelID() ?></td>
-                      <td><?php echo $row->getFname() ?></td>
-                      <td><?php echo $row->getLname() ?></td>
+                      <td><?php echo $row->getFname()." ".$row->getLname() ?></td>
+                      <!-- <td><?php echo $row->getLname() ?></td> -->
                       <td><?php echo $row->getEmail() ?></td>
                       <td><?php echo $row->getGender()?></td>
                       <td><?php echo $row->getContact()?></td>
