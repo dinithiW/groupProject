@@ -73,10 +73,12 @@ $route['OperatorIndex/process'] = 'OperatorDashboard/sendEmail';
 $route['OperatorIndex/addPanelMember'] = 'OperatorDashboard/addPanelMember';
 //actual adding
 $route['OperatorIndex/addMember'] = 'OperatorDashboard/addMember';
+$route['OperatorIndex/addMemberprocess'] = 'OperatorDashboard/addingMember';
 $route['OperatorIndex/add'] = 'OperatorDashboard/addMemberModel';
 $route['OperatorIndex/success'] = 'OperatorDashboard/memberSuccess';
 $route['OperatorIndex/delete'] = 'OperatorDashboard/deleteMemberModel';
 
+$route['OperatorIndex/checkEmailExists'] = "OperatorDashboard/checkEmailExists";
 //Director routes
 $route['Director'] = 'DirectorDashboard/index';
 $route['Director/adRequest'] = 'DirectorDashboard/adRequest';
@@ -95,5 +97,7 @@ $route['home'] = 'Home/index';
 $route['loginUsers'] = 'Login/index';
 $route['loginUsers/process'] = 'Login/process';
 //$route['home/'] = 
+//
+
 
 

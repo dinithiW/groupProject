@@ -1,6 +1,6 @@
 <?php
   $name = $_SESSION['name'];
-  $pageTitle = "Dashboard"; 
+  $pageTitle = "UCSC"; 
   $role_text = $_SESSION['usertype'];
   const ROLE_DIRECTOR = "Director";
   const ROLE_MA = "MA";

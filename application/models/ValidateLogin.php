@@ -33,7 +33,7 @@ class ValidateLogin extends CI_Model{
 			$rowcount = $query->num_rows();
 
 			$this->load->library('session');
-			$this->session->set_userdata('age','colombo');
+			//$this->session->set_userdata('age','colombo');
 			
 			//username / email does not exist
 			if($rowcount==0){

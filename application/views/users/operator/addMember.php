@@ -22,7 +22,7 @@
                     </div><!-- /.box-header -->
                     <!-- form start -->
                     
-                    <form role="form" id="addUser" action="<?php echo base_url() ?>addNewUser" method="post" role="form">
+                    <form role="form" id="addUser" action="<?php echo base_url() ?>OperatorIndex/addMemberprocess" method="post" role="form">
                         <div class="box-body">
                             <div class="row">
                                 <div class="col-md-6">                                
@@ -47,11 +47,11 @@
                                     </div>
                                 </div>
 
-                                <!-- have to change this to radio button -->
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="gender">Gender</label>
-                                        <select class="form-control required" id="role" name="role">
+                                        <!-- name and id changed to gender from role -->
+                                        <select class="form-control required" id="gender" name="gender">
                                             <option value="0">Select Gender</option>
                                             <option value="male">Male</option>
                                             <option value="female">Female</option>

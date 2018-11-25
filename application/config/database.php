@@ -81,6 +81,7 @@ $db['default'] = array(
 	'password' => 'ijse',
 	
 
+
 	'database' => 'ucsc',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
