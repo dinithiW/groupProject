@@ -81,6 +81,7 @@ class OperatorDashboard extends CI_Controller{
         $this->load->view('users/operator/footer');
     }
 
+    //displays all the panel members
     public function addPanelMember(){
        
         $data = [];
@@ -93,6 +94,7 @@ class OperatorDashboard extends CI_Controller{
 
     }
 
+    //adds the member: view
     public function addMember(){
         $this->load->view('includes/header');
         $this->load->view('users/operator/addMember');
@@ -132,5 +134,23 @@ class OperatorDashboard extends CI_Controller{
     public function memberSuccess(){
         $this->load->view('messages/panelMemberSuccess');
     }
+
+    function checkEmailExists()
+    {
+        //$userId = $this->input->post("userId");
+        $username = $this->input->post("email");
+        $this->load->model('operator/PanelMembers');
+        $result = $this->PanelMembers->checkEmailExists($username);
+
+        if(empty($result)){ echo("true"); }
+        else { echo("false"); }
+    }
+
+    public function addingMember(){
+        $this->load->model('operator/PanelMembers');
+        $this->PanelMembers->addNewUser();
+    }
+
+
 }
 ?>
