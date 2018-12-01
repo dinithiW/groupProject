@@ -79,6 +79,7 @@ $route['OperatorIndex/success'] = 'OperatorDashboard/memberSuccess';
 $route['OperatorIndex/delete'] = 'OperatorDashboard/deleteMemberModel';
 
 $route['OperatorIndex/checkEmailExists'] = "OperatorDashboard/checkEmailExists";
+$route['OperatorIndex/editMember/(:any)'] = "OperatorDashboard/editMemberView/$1";
 //Director routes
 $route['Director'] = 'DirectorDashboard/index';
 $route['Director/adRequest'] = 'DirectorDashboard/adRequest';
