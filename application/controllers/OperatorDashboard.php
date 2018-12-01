@@ -101,6 +101,17 @@ class OperatorDashboard extends CI_Controller{
         $this->load->view('includes/footer');
     }
 
+    /*public function addMemberModel(){
+        $this->load->model('operator/PanelMembers');
+        $this->PanelMembers->add();
+
+    }*/
+
+    public function addingMember(){
+        $this->load->model('operator/PanelMembers');
+        $this->PanelMembers->addNewUser();
+    }
+
     public function sendEmail(){
         $this->load->view('users/operator/header');
         $this->load->view('users/operator/showEmails');
@@ -119,11 +130,7 @@ class OperatorDashboard extends CI_Controller{
         $this->load->view('users/loginPanelUsers');
     }
 
-    public function addMemberModel(){
-        $this->load->model('operator/PanelMembers');
-        $this->PanelMembers->add();
-
-    }
+    
 
     public function deleteMemberModel(){
         $this->load->model('operator/PanelMembers');
@@ -146,16 +153,12 @@ class OperatorDashboard extends CI_Controller{
         else { echo("false"); }
     }
 
-    public function addingMember(){
-        $this->load->model('operator/PanelMembers');
-        $this->PanelMembers->addNewUser();
-    }
+    
 
     public function editMemberView($panelID){
         $this->load->model('operator/PanelMembers');
         $data['records'] = $this->PanelMembers->getMember($panelID);
         //$this->PanelMembers->edit();
-
         $this->load->view('includes/header');
         $this->load->view('users/operator/editMember',$data);
         $this->load->view('includes/footer');
@@ -166,6 +169,14 @@ class OperatorDashboard extends CI_Controller{
         /*$this->load->view('Doctor/edit_services',$data);
         $this->load->view('doc_navbar');*/
     }
+
+    public function editMember($panelID){
+        echo "$panelID";
+        $this->load->model('operator/PanelMembers');
+        $this->PanelMembers->editMemberDetails($panelID);
+    }
+
+
 
 }
 ?>

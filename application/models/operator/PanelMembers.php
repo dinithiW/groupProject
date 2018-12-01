@@ -62,6 +62,16 @@ class PanelMembers extends CI_Model{
         return $Members;
     }
 
+    //returns the details of a single member
+    public function getMember($panelID){
+
+        $this->db->select('*');
+        $this->db->from('interview_panel');
+        $this->db->where('PANEL_ID',$panelID);
+        $query = $this->db->get();
+        return $query->row();
+    }
+
     public function setPanelID($id)
     {
         $this->panelID = $id;
@@ -277,28 +287,97 @@ class PanelMembers extends CI_Model{
 
     function edit()
     {
-        
-       // $this->load->model('user_model');
-       // $data['roles'] = $this->user_model->getUserRoles();
-            
-       // $this->global['pageTitle'] = 'CodeInsect : Add New User';
-        //redirect('OperatorIndex/addMember');
         $this->load->view("includes/header");
         $this->load->view("users/operator/editMember");
         $this->load->view("includes/footer");
         
     }
 	
-    public function getMember($panelID){
+    function editMemberDetails($panelID){
+        
+        echo"$panelID";
+        $this->load->library('form_validation');
+            
+        $this->form_validation->set_rules('fname','First Name','trim|required|max_length[255]');
+        $this->form_validation->set_rules('lname','Last Name','trim|required|max_length[255]');
+        $this->form_validation->set_rules('mobile','Mobile Number','required|min_length[10]');
+        $this->form_validation->set_rules('gender','Gender','trim|required');
+        $this->form_validation->set_rules('email','Email','trim|required|valid_email|max_length[255]');
+        $this->form_validation->set_rules('designation','Designation','trim|required|max_length[255]');
+        $this->form_validation->set_rules('address','Address','trim|required|max_length[255]');
+        
+            
+            if($this->form_validation->run() == FALSE)
+            {
+                $this->edit();
+            }
+            else
+            {
+                $fname = $this->input->post('fname');
+                $lname = $this->input->post('lname');
+                $email = $this->input->post('email');
+                $gender = $_POST['gender'];
+                $designation = $this->input->post('designation');
+                $address = $this->input->post('address');
+                $mobile = $this->input->post('mobile');
+                
+                $userInfoPanel = array('FNAME'=>$fname,'LNAME'=>$lname,'EMAIL'=>$email,'GENDER'=>$gender ,'CONTACT_NUMBER'=>$mobile,'DESIGNATION'=>$designation,'ADDRESS'=>$address);
 
-        $this->db->select('*');
-        $this->db->from('interview_panel');
-        $this->db->where('PANEL_ID',$panelID);
-        $query = $this->db->get();
-        return $query->row();
+                $name = $fname." ".$lname;
+
+                $userInfoUsers = array('USERNAME'=>$email,'NAME'=> $name);
+                
+                //$this->load->model('user_model');
+                $result = $this->editUsers($userInfoUsers,$panelID);
+                
+                if($result > 0)
+                {
+                    $result1 = $this->editPanelUsers($userInfoPanel,$email);
+                    if($result1>0){
+                        $this->session->set_flashdata('success', 'User details updated successfully');
+                    }else{
+                        $this->session->set_flashdata('error', 'User details update failed');
+                    }
+                    
+                }
+                else
+                {
+                    $this->session->set_flashdata('error', 'User details update failed');
+                }
+                
+                redirect('OperatorIndex/addPanelMember');
+            }
     }
 	
+    public function editPanelUsers($userInfoPanel,$panelID){
 
+        $this->db->trans_start();
+        $this->db->where('PANEL_ID', $panelID);
+        return $this->db->update('interview_panel', $userInfoPanel); //Change effect
+        $rows =  $this->db->affected_rows();
+         $this->db->trans_complete();
+        if($rows>0){
+            return $rows;
+        }else{
+            return FALSE;
+        }
+    }
+
+    //add member to the table users
+    public function editUsers($userInfoUsers,$email){
+
+        $this->db->trans_start();
+        $this->db->where('USERNAME', $email);
+        return $this->db->update('users', $userInfoUsers); //Change effect
+        $rows =  $this->db->affected_rows();
+         $this->db->trans_complete();
+        if($rows>0){
+            return $rows;
+        }else{
+            return FALSE;
+        }
+
+    }
 	//delete member 
 	public function delete(){
 		$pidDelete = $_POST['pIDDelete'];
@@ -318,8 +397,5 @@ class PanelMembers extends CI_Model{
 		
 	}
 
-	public function update(){
-
-	}
 
 }
