@@ -288,7 +288,7 @@ class PanelMembers extends CI_Model{
         
     }
 	
-    function editMemberDetails($panelID,$emailOld){
+    function editMemberDetails($panelID){
         
         //echo"$panelID";
         $this->load->library('form_validation');
@@ -301,7 +301,7 @@ class PanelMembers extends CI_Model{
         $this->form_validation->set_rules('designation','Designation','trim|required|max_length[255]');
         $this->form_validation->set_rules('address','Address','trim|required|max_length[255]');
         
-        $emailOld = testInput($emailOld);
+        //$emailOld = testInput($emailOld);
 
             if($this->form_validation->run() == FALSE)
             {
@@ -324,14 +324,14 @@ class PanelMembers extends CI_Model{
                 $userInfoUsers = array('USERNAME'=>$email,'NAME'=> $name);
                 
                 //email field was edited
-                if($emailOld!=$email){
+                //if($emailOld!=$email){
                     //first delete record from child
                     //update parent
                     //add corresponding child record
 
-                }
+               // }
                 //email field was not edited
-                else{
+                //else{
                     $result = $this->editUsers($userInfoUsers,$email);
                     if($result > 0){
                         $result1 = $this->editPanelUsers($userInfoPanel,$panelID);
@@ -348,7 +348,7 @@ class PanelMembers extends CI_Model{
                 }
                 
                 redirect('OperatorIndex/addPanelMember');
-                }
+                //}
                 
             }
     }

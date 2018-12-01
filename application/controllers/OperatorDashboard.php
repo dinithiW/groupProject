@@ -165,7 +165,7 @@ class OperatorDashboard extends CI_Controller{
     }
 
     public function editMember($panelID){
-        echo $panelID;
+        
         $this->load->model('operator/PanelMembers');
         $this->PanelMembers->editMemberDetails($panelID);
     }
