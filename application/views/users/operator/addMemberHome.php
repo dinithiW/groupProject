@@ -88,7 +88,7 @@
                       <td><?php echo $row->getDesignation()?></td>
                       <td><?php echo $row->getAddress()?></td>
                       <td class="text-center">
-                          <a class="btn btn-sm btn-info" href=""><i class="fa fa-pencil"></i></a>
+                          <a class="btn btn-sm btn-info" href="<?php echo base_url().'OperatorIndex/editMember/'.$row->getPanelID(); ?>"><i class="fa fa-pencil"></i></a>
                           <a class="btn btn-sm btn-danger deleteUser" href="#" data-userid="<?php echo $row->getPanelID(); ?>"><i class="fa fa-trash"></i></a> 
                       </td>
                     </tr>

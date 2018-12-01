@@ -151,6 +151,21 @@ class OperatorDashboard extends CI_Controller{
         $this->PanelMembers->addNewUser();
     }
 
+    public function editMemberView($panelID){
+        $this->load->model('operator/PanelMembers');
+        $data['records'] = $this->PanelMembers->getMember($panelID);
+        //$this->PanelMembers->edit();
+
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/editMember',$data);
+        $this->load->view('includes/footer');
+
+        /*$this->load->model('Doctor_model');
+        $data['records'] = $this->Doctor_model->editService($service_id);*/
+        
+        /*$this->load->view('Doctor/edit_services',$data);
+        $this->load->view('doc_navbar');*/
+    }
 
 }
 ?>
