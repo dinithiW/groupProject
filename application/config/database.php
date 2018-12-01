@@ -77,7 +77,11 @@ $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	'username' => 'root',
-	'password' => '',
+
+	'password' => 'ijse',
+	
+
+
 	'database' => 'ucsc',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
