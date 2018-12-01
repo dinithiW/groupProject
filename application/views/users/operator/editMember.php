@@ -19,8 +19,7 @@
                     </div><!-- /.box-header -->
                     <!-- form start -->
                     
-                    <form role="form" id="addUser" 
-                    action="<?php echo base_url().'OperatorIndex/editMemberprocess/'.$records->PANEL_ID; ?>" method="post" role="form">
+                    <form role="form" id="addUser" action="<?php echo base_url().'OperatorIndex/editMemberprocess/'.$records->PANEL_ID.'/'.md5($records->EMAIL); ?>" method="post" role="form">
                         <div class="box-body">
                             <div class="row">
                                 <div class="col-md-6">                                

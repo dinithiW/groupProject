@@ -32,6 +32,7 @@ class PanelMembers extends CI_Model{
         return $query->result();
     }
 
+    //get details of all members
 	public function getAllMembers(){
         $Members = [];
         $this->load->database();
@@ -163,12 +164,6 @@ class PanelMembers extends CI_Model{
 
     function addNew()
     {
-        
-       // $this->load->model('user_model');
-       // $data['roles'] = $this->user_model->getUserRoles();
-            
-       // $this->global['pageTitle'] = 'CodeInsect : Add New User';
-        //redirect('OperatorIndex/addMember');
         $this->load->view("includes/header");
         $this->load->view("users/operator/addMember");
         $this->load->view("includes/footer");
@@ -293,20 +288,21 @@ class PanelMembers extends CI_Model{
         
     }
 	
-    function editMemberDetails($panelID){
+    function editMemberDetails($panelID,$emailOld){
         
-        echo"$panelID";
+        //echo"$panelID";
         $this->load->library('form_validation');
             
         $this->form_validation->set_rules('fname','First Name','trim|required|max_length[255]');
         $this->form_validation->set_rules('lname','Last Name','trim|required|max_length[255]');
         $this->form_validation->set_rules('mobile','Mobile Number','required|min_length[10]');
         $this->form_validation->set_rules('gender','Gender','trim|required');
-        $this->form_validation->set_rules('email','Email','trim|required|valid_email|max_length[255]');
+        $this->form_validation->set_rules('email','Email','trim|required|max_length[255]');
         $this->form_validation->set_rules('designation','Designation','trim|required|max_length[255]');
         $this->form_validation->set_rules('address','Address','trim|required|max_length[255]');
         
-            
+        $emailOld = testInput($emailOld);
+
             if($this->form_validation->run() == FALSE)
             {
                 $this->edit();
@@ -327,16 +323,22 @@ class PanelMembers extends CI_Model{
 
                 $userInfoUsers = array('USERNAME'=>$email,'NAME'=> $name);
                 
-                //$this->load->model('user_model');
-                $result = $this->editUsers($userInfoUsers,$panelID);
-                
-                if($result > 0)
-                {
-                    $result1 = $this->editPanelUsers($userInfoPanel,$email);
-                    if($result1>0){
-                        $this->session->set_flashdata('success', 'User details updated successfully');
-                    }else{
-                        $this->session->set_flashdata('error', 'User details update failed');
+                //email field was edited
+                if($emailOld!=$email){
+                    //first delete record from child
+                    //update parent
+                    //add corresponding child record
+
+                }
+                //email field was not edited
+                else{
+                    $result = $this->editUsers($userInfoUsers,$email);
+                    if($result > 0){
+                        $result1 = $this->editPanelUsers($userInfoPanel,$panelID);
+                        if($result1>0){
+                            $this->session->set_flashdata('success', 'User details updated successfully');
+                        }else{
+                            $this->session->set_flashdata('error', 'User details update failed');
                     }
                     
                 }
@@ -346,6 +348,8 @@ class PanelMembers extends CI_Model{
                 }
                 
                 redirect('OperatorIndex/addPanelMember');
+                }
+                
             }
     }
 	

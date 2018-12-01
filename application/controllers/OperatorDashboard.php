@@ -162,16 +162,10 @@ class OperatorDashboard extends CI_Controller{
         $this->load->view('includes/header');
         $this->load->view('users/operator/editMember',$data);
         $this->load->view('includes/footer');
-
-        /*$this->load->model('Doctor_model');
-        $data['records'] = $this->Doctor_model->editService($service_id);*/
-        
-        /*$this->load->view('Doctor/edit_services',$data);
-        $this->load->view('doc_navbar');*/
     }
 
     public function editMember($panelID){
-        echo "$panelID";
+        echo $panelID;
         $this->load->model('operator/PanelMembers');
         $this->PanelMembers->editMemberDetails($panelID);
     }
