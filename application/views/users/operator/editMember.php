@@ -13,16 +13,14 @@
             <!-- left column -->
             <div class="col-md-8">
               <!-- general form elements -->
-                
-                
-                
                 <div class="box box-primary">
                     <div class="box-header">
                         <h3 class="box-title">Enter User Details</h3>
                     </div><!-- /.box-header -->
                     <!-- form start -->
                     
-                    <form role="form" id="addUser" action="<?php echo base_url() ?>OperatorIndex/addMemberprocess" method="post" role="form">
+                    <form role="form" id="addUser" 
+                    action="<?php echo base_url().'OperatorIndex/editMemberprocess/'.$records->PANEL_ID; ?>" method="post" role="form">
                         <div class="box-body">
                             <div class="row">
                                 <div class="col-md-6">                                
@@ -53,8 +51,8 @@
                                         <!-- name and id changed to gender from role -->
                                         <select class="form-control required" id="gender" name="gender">
                                             <option value="0">Select Gender</option>
-                                            <option value="male">Male</option>
-                                            <option value="female">Female</option>
+                                            <option value="<?php if(!empty($records))if($records->GENDER=="male")?> male" selected = "selected" >Male</option>
+                                            <option value="<?php if(!empty($records))if($records->GENDER=="female")?> female" selected = "selected">Female</option>
                                         </select>
                                     </div>
                                 </div>
@@ -83,28 +81,6 @@
                                         <input type="text" class="form-control required" id="address" name="address" maxlength="255" value = "<?php if(!empty($records)) echo $records->ADDRESS; ?>">
                                     </div>
                                 </div>
-                            
-
-
-                                <!-- <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="role">Role</label>
-                                        <select class="form-control required" id="role" name="role">
-                                            <option value="0">Select Role</option>
-                                            <?php
-                                            if(!empty($roles))
-                                            {
-                                                foreach ($roles as $rl)
-                                                {
-                                                    ?>
-                                                    <option value="<?php echo $rl->roleId ?>"><?php echo $rl->role ?></option>
-                                                    <?php
-                                                }
-                                            }
-                                            ?>
-                                        </select>
-                                    </div>
-                                </div>  -->   
                             </div>
                         </div><!-- /.box-body -->
     
