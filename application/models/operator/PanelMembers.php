@@ -309,6 +309,8 @@ class PanelMembers extends CI_Model{
             }
             else
             {
+                $data = $this->getMember($panelID);
+                $oldEmail = $data->EMAIL;
                 $fname = $this->input->post('fname');
                 $lname = $this->input->post('lname');
                 $email = $this->input->post('email');
@@ -332,7 +334,8 @@ class PanelMembers extends CI_Model{
                // }
                 //email field was not edited
                 //else{
-                    $result = $this->editUsers($userInfoUsers,$email);
+                    $result = $this->editUsers($userInfoUsers,$oldEmail);
+                    echo $result;
                     if($result > 0){
                         $result1 = $this->editPanelUsers($userInfoPanel,$panelID);
                         if($result1>0){
@@ -353,11 +356,12 @@ class PanelMembers extends CI_Model{
             }
     }
 	
+    //edit panel memeber details 
     public function editPanelUsers($userInfoPanel,$panelID){
 
         $this->db->trans_start();
         $this->db->where('PANEL_ID', $panelID);
-        return $this->db->update('interview_panel', $userInfoPanel); //Change effect
+        $this->db->update('interview_panel', $userInfoPanel); //Change effect
         $rows =  $this->db->affected_rows();
          $this->db->trans_complete();
         if($rows>0){
@@ -372,7 +376,7 @@ class PanelMembers extends CI_Model{
 
         $this->db->trans_start();
         $this->db->where('USERNAME', $email);
-        return $this->db->update('users', $userInfoUsers); //Change effect
+        $this->db->update('users', $userInfoUsers); //Change effect
         $rows =  $this->db->affected_rows();
          $this->db->trans_complete();
         if($rows>0){
