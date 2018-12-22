@@ -78,10 +78,13 @@ $route['OperatorIndex/addMemberprocess'] = 'OperatorDashboard/addingMember';
 $route['OperatorIndex/editMemberprocess/(:any)'] = 'OperatorDashboard/editMember/$1';
 $route['OperatorIndex/add'] = 'OperatorDashboard/addMemberModel';
 $route['OperatorIndex/success'] = 'OperatorDashboard/memberSuccess';
-$route['OperatorIndex/delete'] = 'OperatorDashboard/deleteMemberModel';
+
 
 $route['OperatorIndex/checkEmailExists'] = "OperatorDashboard/checkEmailExists";
 $route['OperatorIndex/editMember/(:any)'] = "OperatorDashboard/editMemberView/$1";
+$route['OperatorIndex/deleteMember/(:any)'] = "OperatorDashboard/deleteMemberMsg/$1";
+$route['OperatorIndex/deleteMemberProcess/(:any)'] = "OperatorDashboard/deleteMemberModel/$1";
+
 //Director routes
 $route['Director'] = 'DirectorDashboard/index';
 $route['Director/adRequest'] = 'DirectorDashboard/adRequest';
