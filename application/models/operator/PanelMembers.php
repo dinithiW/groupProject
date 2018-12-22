@@ -16,17 +16,15 @@ class PanelMembers extends CI_Model{
 		parent::__construct();
 	}
 
-	/*public function addMember(){
-
-		$this->panelID = $_POST[]
-	}*/
-
-    function checkEmailExists($username)
+    function checkEmailExists($username,$flag=0)
     {
         $this->load->database();
         $this->db->select("USERNAME");
         $this->db->from("users");
         $this->db->where("USERNAME", $username); 
+        if($flag != 0){
+            $this->db->where("USERNAME !=", $username);
+        }
         $query = $this->db->get();  
         //$this->db->where("isDeleted", 0);
         return $query->result();
@@ -297,11 +295,9 @@ class PanelMembers extends CI_Model{
         $this->form_validation->set_rules('lname','Last Name','trim|required|max_length[255]');
         $this->form_validation->set_rules('mobile','Mobile Number','required|min_length[10]');
         $this->form_validation->set_rules('gender','Gender','trim|required');
-        $this->form_validation->set_rules('email','Email','trim|required|max_length[255]');
+        $this->form_validation->set_rules('email','Email','trim|required|valid_email|max_length[255]');
         $this->form_validation->set_rules('designation','Designation','trim|required|max_length[255]');
         $this->form_validation->set_rules('address','Address','trim|required|max_length[255]');
-        
-        //$emailOld = testInput($emailOld);
 
             if($this->form_validation->run() == FALSE)
             {
@@ -324,18 +320,8 @@ class PanelMembers extends CI_Model{
                 $name = $fname." ".$lname;
 
                 $userInfoUsers = array('USERNAME'=>$email,'NAME'=> $name);
-                
-                //email field was edited
-                //if($emailOld!=$email){
-                    //first delete record from child
-                    //update parent
-                    //add corresponding child record
 
-               // }
-                //email field was not edited
-                //else{
-                    $result = $this->editUsers($userInfoUsers,$oldEmail);
-                    echo $result;
+                $result = $this->editUsers($userInfoUsers,$oldEmail);
                     if($result > 0){
                         $result1 = $this->editPanelUsers($userInfoPanel,$panelID);
                         if($result1>0){
@@ -386,24 +372,14 @@ class PanelMembers extends CI_Model{
         }
 
     }
-	//delete member 
-	public function delete(){
-		$pidDelete = $_POST['pIDDelete'];
-
-		$this->load->database();
-		$this->db->select("PANEL_ID");
-		$this->db->from("interview_panel");
-		$query = $this->db->get(); 
-		$rowcount = $query->num_rows();
-
-		if($rowcount==0){
-			//show error message
-		}else{
-			$this -> db -> where('PANEL_ID', $pidDelete);
-  			$this -> db -> delete('interview_panel');
-		}
-		
-	}
+	
+    //need to implement this
+    public function deleteMember($panelID){
+        $data = $this->getMember($panelID);
+        $email = $data->EMAIL;
+        $this -> db -> where('USERNAME', $email);
+        $this -> db -> delete('users');
+    }
 
 
 }

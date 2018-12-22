@@ -1,9 +1,15 @@
+<?php
+$userId = 0;
+if(!empty($records)) {
+    $userId = $records->EMAIL;
+}
+?>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
         <i class="fa fa-users"></i> User Management
-        <small>Add / Edit User</small>
+        <small>Edit User</small>
       </h1>
     </section>
     
@@ -19,13 +25,14 @@
                     </div><!-- /.box-header -->
                     <!-- form start -->
                     
-                    <form role="form" id="addUser" action="<?php echo base_url().'OperatorIndex/editMemberprocess/'.$records->PANEL_ID; ?>" method="post" role="form">
+                    <form role="form" id="editUser" action="<?php echo base_url().'OperatorIndex/editMemberprocess/'.$records->PANEL_ID; ?>" method="post" role="form">
                         <div class="box-body">
                             <div class="row">
                                 <div class="col-md-6">                                
                                     <div class="form-group">
                                         <label for="fname">First Name</label>
                                         <input type="text" class="form-control required" id="fname" name="fname" maxlength="128" value = "<?php if(!empty($records)) echo $records->FNAME; ?>">
+                                        <input type="hidden" value="<?php echo $userId; ?>" name="userId" id="userId" />
                                     </div>
                                     
                                 </div>
@@ -40,7 +47,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="email">Email Address</label>
-                                        <input type="email" class="form-control required" id="email"  name="email" maxlength="255" value = "<?php if(!empty($records)) echo $records->EMAIL; ?>">
+                                        <input type="email" class="form-control" id="email"  name="email" maxlength="255" value = "<?php if(!empty($records)) echo $records->EMAIL; ?>">
                                     </div>
                                 </div>
 
@@ -123,4 +130,4 @@
     </section>
     
 </div>
-<script src="<?php echo base_url(); ?>assets/js/addUser.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>assets/js/editUser.js" type="text/javascript"></script>

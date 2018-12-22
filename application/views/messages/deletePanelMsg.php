@@ -13,18 +13,26 @@
 <body>
 <?php echo "<script type=\"text/javascript\">
 
-setTimeout(function () { 
+var sURL = window.document.URL.toString();
+var id = sURL.split('/').pop();
+var part1 = '../deleteMemberProcess/';
+var newURL = part1.concat(id);
+var cancelURL = '../addPanelMember';
 swal({
   title: 'Are you sure?',
   text: 'This user will be deleted permanently',
   type: 'warning',
-  confirmButtonText: 'OK'
+  showCancelButton: true,
+  confirmButtonColor: 'red',
+  confirmButtonText: 'Yes delete it!'
 },
 function(isConfirm){
   if (isConfirm) {
-    window.location.href = 'index';
+    window.location.href = newURL;
+  }else{
+    window.location.href = cancelURL;
   }
-}); }, 1);
+}); 
 
 </script>";
 

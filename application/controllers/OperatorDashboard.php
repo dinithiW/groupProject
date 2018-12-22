@@ -130,30 +130,26 @@ class OperatorDashboard extends CI_Controller{
         $this->load->view('users/loginPanelUsers');
     }
 
-    
-
-    public function deleteMemberModel(){
-        $this->load->model('operator/PanelMembers');
-        $this->PanelMembers->delete();
-
-    }
-
     public function memberSuccess(){
         $this->load->view('messages/panelMemberSuccess');
     }
 
     function checkEmailExists()
     {
-        //$userId = $this->input->post("userId");
+        $userId = $this->input->post("userId");
         $username = $this->input->post("email");
         $this->load->model('operator/PanelMembers');
-        $result = $this->PanelMembers->checkEmailExists($username);
+
+        if(empty($userId)){
+            $result = $this->PanelMembers->checkEmailExists($username);
+        }else{
+            $result = $this->PanelMembers->checkEmailExists($username,$userID);
+        }
+        
 
         if(empty($result)){ echo("true"); }
         else { echo("false"); }
     }
-
-    
 
     public function editMemberView($panelID){
         $this->load->model('operator/PanelMembers');
@@ -170,7 +166,15 @@ class OperatorDashboard extends CI_Controller{
         $this->PanelMembers->editMemberDetails($panelID);
     }
 
+    public function deleteMemberMsg($panelID){
+        $this->load->view('messages/deletePanelMsg');
+    }
 
+    public function deleteMemberModel($panelID){
+        $this->load->model('operator/PanelMembers');
+        $this->PanelMembers->deleteMember($panelID);
+        redirect(base_url().'OperatorIndex/addPanelMember');
+    }
 
 }
 ?>
