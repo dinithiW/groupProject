@@ -1,7 +1,7 @@
 <?php
 $userId = 0;
 if(!empty($records)) {
-    $userId = $records->EMAIL;
+    $userId = $records->PANEL_ID;
 }
 ?>
 <div class="content-wrapper">

@@ -16,14 +16,23 @@ class PanelMembers extends CI_Model{
 		parent::__construct();
 	}
 
-    function checkEmailExists($username,$flag=0)
+    function checkEmailExists($username,$id=0)
     {
+
+        $oldEmail = "";
+        if($id!=0){
+            $data = $this->getMember($id);
+            $oldEmail = $data->EMAIL;
+        }
+
         $this->load->database();
         $this->db->select("USERNAME");
         $this->db->from("users");
-        $this->db->where("USERNAME", $username); 
-        if($flag != 0){
-            $this->db->where("USERNAME !=", $username);
+        
+        if($id != 0){
+            $this->db->where("USERNAME !=", $oldEmail);
+        }else{
+            $this->db->where("USERNAME", $username); 
         }
         $query = $this->db->get();  
         //$this->db->where("isDeleted", 0);

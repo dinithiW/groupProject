@@ -139,10 +139,11 @@ class OperatorDashboard extends CI_Controller{
         $userId = $this->input->post("userId");
         $username = $this->input->post("email");
         $this->load->model('operator/PanelMembers');
-
         if(empty($userId)){
+            echo"1";
             $result = $this->PanelMembers->checkEmailExists($username);
         }else{
+            echo"2";
             $result = $this->PanelMembers->checkEmailExists($username,$userID);
         }
         
@@ -176,5 +177,9 @@ class OperatorDashboard extends CI_Controller{
         redirect(base_url().'OperatorIndex/addPanelMember');
     }
 
+    public function showTaskCount($role){
+        $this->load->model('TasksModel');
+        $this->TaskModel->getTasks($role);
+    }
 }
 ?>

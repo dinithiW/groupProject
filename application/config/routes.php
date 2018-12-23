@@ -73,12 +73,13 @@ $route['OperatorIndex/process'] = 'OperatorDashboard/sendEmail';
 $route['OperatorIndex/addPanelMember'] = 'OperatorDashboard/addPanelMember';
 //actual adding
 $route['OperatorIndex/addMember'] = 'OperatorDashboard/addMember';
+
 $route['OperatorIndex/addMemberprocess'] = 'OperatorDashboard/addingMember';
 //$route['OperatorIndex/editMemberprocess/(:any).*'] = 'OperatorDashboard/editMember/$1/$2';
 $route['OperatorIndex/editMemberprocess/(:any)'] = 'OperatorDashboard/editMember/$1';
 $route['OperatorIndex/add'] = 'OperatorDashboard/addMemberModel';
 $route['OperatorIndex/success'] = 'OperatorDashboard/memberSuccess';
-
+$route['OperatorIndex/showTasks/(:any)'] = 'OperatorDashboard/showTaskCount/$1';
 
 $route['OperatorIndex/checkEmailExists'] = "OperatorDashboard/checkEmailExists";
 $route['OperatorIndex/editMember/(:any)'] = "OperatorDashboard/editMemberView/$1";

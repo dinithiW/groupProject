@@ -143,7 +143,7 @@
             <li class="treeview">
               <a href="#" >
                 <i class="fa fa-ticket"></i>
-                <span>My Tasks</span>
+                <span>My Tasks</span><span class = "badge pull-right" >12</span>
               </a>
             </li>
             <?php
