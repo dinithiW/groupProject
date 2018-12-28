@@ -19,7 +19,7 @@ class ApplicantDashboard extends CI_Controller{
         //$this->load->view('applicant/applicationForm/headerForApplicationForm');
         //$this->load->view('applicant/applicationForm/ApplicationFormNavigationBar');
         //$this->load->view('applicant/applicationForm/ApplicationFormPartOne');
-        //$this->load->view('applicant/applicationForm/ApplicationForm');
+        $this->load->view('applicant/applicationForm/ApplicationForm');
 
         $this->load->model('operator/categorizeApplilcationsModel');
         $data['fetch_data'] = $this->categorizeApplilcationsModel->fetch_datas();
@@ -27,29 +27,7 @@ class ApplicantDashboard extends CI_Controller{
     	
     }
     
-    public function applicationThirdPage(){
-        $this->load->view('applicant/header');
-        $this->load->view('applicant/applicationForm/ApplicationFormNavigationBar');
-        $this->load->view('applicant/applicationForm/ApplicationFormPartThree');
-       
-    }
-
-    public function applicationFourthPage(){
-        $this->load->view('applicant/header');
-        $this->load->view('applicant/applicationForm/ApplicationFormNavigationBar');
-        $this->load->view('applicant/applicationForm/ApplicationFormPartFour');
-       
-    }
-
-    public function applicationFifththPage(){
-        $this->load->view('applicant/header');
-        $this->load->view('applicant/applicationForm/ApplicationFormNavigationBar');
-        $this->load->model('operator/categorizeApplilcationsModel');
-        $data['fetch_data'] = $this->categorizeApplilcationsModel->fetchFileUploadLinks();
-        $this->load->view('applicant/applicationForm/ApplicationFormFileUpoload',$data);
-       
-    }
-
+    
     public function applicationSelectAreas(){
         $this->load->view('applicant/header');
         $this->load->view('applicant/applicationForm/ApplicationFormNavigationBar');
