@@ -13,6 +13,17 @@ class User extends CI_Controller{
         $this->load->view('login');
         //$this->load->view('includes/footer');
 	}
+	public function logout(){
+	
+			
+				session_start();
+				session_unset();
+				session_destroy();
+				redirect(base_url()."home");
+				exit();
+
+	
+	}
 
 
 
