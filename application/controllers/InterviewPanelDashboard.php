@@ -18,10 +18,10 @@ class InterviewPanelDashboard extends CI_Controller{
          echo "hsghajgd";
         $this->load->view('users/interviewPanel/viewApplicants');
         $this->load->view('includes/footer');*/
-        $this-load->model('ApplicantModel');
+        $this-load->model('InterviewPanel/ApplicantModel');
         $data['applicants']=$this->ApplicantModel->getApplicants();
 
-        $this->load->model('MarkingCriteriaModel');
+        $this->load->model('InterviewPanel/MarkingCriteriaModel');
 
         $data['criteria_headings']=$this->MarkingCriteriaModel->getHeadings();
         $data['detailed_criteria_headings']=$this->MarkingCriteriaModel->getDetailedHeadings();
@@ -31,13 +31,13 @@ class InterviewPanelDashboard extends CI_Controller{
     }
 
     public function submitData(){
-        $this->load->model('ApplicantModel');
+        $this->load->model('InterviewPanel/ApplicantModel');
         $this->ApplicantModel->submitApplicantMarks();
         redirect(base_url()."interviewPanel/interview_panel")
     }
 
     public function getComments(){
-        $this->load->model('ApplicantModel');
+        $this->load->model('InterviewPanel/ApplicantModel');
         $comments=$this->ApplicantModel->getComments();
         foreach ($comments as $row) {
            echo $row->title.'.'.$row->name.' = '.$row->description.'~';
