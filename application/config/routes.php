@@ -106,6 +106,11 @@ $route['loginUsers'] = 'Login/index';
 $route['loginUsers/process'] = 'Login/process';
 
 
+//applicant start
+$route['application_form'] = 'ApplicantDashboard/applicationFirstPage';
+
+
+//applicant end
 
 
 
