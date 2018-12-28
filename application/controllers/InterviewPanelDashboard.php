@@ -14,11 +14,23 @@ class InterviewPanelDashboard extends CI_Controller{
     }
 
     public function viewApplicants(){
-    	 $this->load->view('includes/header');
+    	 /*$this->load->view('includes/header');
          echo "hsghajgd";
         $this->load->view('users/interviewPanel/viewApplicants');
-        $this->load->view('includes/footer');
+        $this->load->view('includes/footer');*/
+        $this-load->model('ApplicantModel');
+        $data['applicants']=$this->ApplicantModel->getApplicants();
+
+        $this->load->model('MarkingCriteriaModel');
+
+        $data['criteria_headings']=$this->MarkingCriteriaModel->getHeadings();
+        $data['detailed_criteria_headings']=$this->MarkingCriteriaModel->getDetailedHeadings();
+        $data['detailed_criteria']=$this->MarkingCriteriaModel->getDetailedCriteria();
+
+        $this->load->view('interviewPanel/interview_panel',$data);
     }
+
+
      /*public function viewMarks(){
          $this->load->view('users/interviewPanel/header');
         $this->load->view('users/interviewPanel/marks');
