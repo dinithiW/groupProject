@@ -80,6 +80,7 @@ $route['OperatorIndex/delete'] = 'OperatorDashboard/deleteMemberModel';
 //Director routes
 $route['Director'] = 'DirectorDashboard/index';
 $route['Director/adRequest'] = 'DirectorDashboard/adRequest';
+$route['Director/insertData'] = 'Directordashboard/insertData';
 $route['Director/addMessage'] = 'DirectorDashboard/addNotification';
 $route['Director/viewMessage'] = 'DirectorDashboard/viewNotification';
 $route['Director/finalize'] = 'DirectorDashboard/finalize';
