@@ -14,13 +14,23 @@
 
 </head>
 <body>
-    <div class="container"><!-- start of the container-->
+
+
+<div class="content-wrapper">
+   
+    
+    <section class="content">
+        <div class="row">
+            
+
+
+<div class="container" style="width: 1500px;"><!-- start of the container-->
             
 
 
             <!-- start of the head-->
             <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4 row centered-form head">
-            <h4 id="headline">ATTACH RELEVANT DOCUMENTS</h4>
+            <h4 id="headline1"><span color="red"> ATTACH RELEVANT DOCUMENTS</span></h4>
 
             
 
@@ -44,7 +54,13 @@
 
             
             </div><!-- end of the head-->    
-    </div><!-- end of the container-->        
+    </div><!-- end of the container-->  
+
+
+          </div>
+    </section>
+</div>
+
 </body>
 </html>
 

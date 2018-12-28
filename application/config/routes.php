@@ -107,9 +107,9 @@ $route['loginUsers/process'] = 'Login/process';
 
 
 //applicant start
-$route['application_form'] = 'ApplicantDashboard/applicationFirstPage';
-
-
+$route['application_form_fill'] = 'ApplicantDashboard/applicationFirstPage';
+$route['application_form_edit'] = 'ApplicantDashboard/applicationFirstPage';
+$route['application_form_documents'] = 'ApplicantDashboard/applicationFifththPage';
 //applicant end
 
 

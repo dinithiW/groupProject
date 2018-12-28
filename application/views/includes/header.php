@@ -276,18 +276,13 @@
             </li>
 
             <li class="treeview">
-              <a href="<?php echo base_url(); ?>userListing">
+              <a href="<?php echo base_url(); ?>application_form_documents">
                 <i class="fa fa-files-o"></i>
                 <span>File Upload</span>
               </a>
             </li>
 
-            <li class="treeview">
-              <a href="<?php echo base_url(); ?>userListing">
-                <i class="fa fa-files-o"></i>
-                <span>File Upload</span>
-              </a>
-            </li>
+            
 
             
             
