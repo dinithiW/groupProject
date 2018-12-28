@@ -65,8 +65,8 @@
                   <table class="table table-hover">
                     <tr>
                       <th>Panel_ID</th>
-                      <th>First Name</th>
-                      <th>Last Name</th>
+                      <th>Name</th>
+                      <!-- <th>Last Name</th> -->
                       <th>Email</th>
                       <th>Gender</th>
                       <th>Mobile</th>
@@ -80,16 +80,16 @@
                     
                     <tr>
                       <td><?php echo $row->getPanelID() ?></td>
-                      <td><?php echo $row->getFname() ?></td>
-                      <td><?php echo $row->getLname() ?></td>
+                      <td><?php echo $row->getFname()." ".$row->getLname() ?></td>
+                      <!-- <td><?php echo $row->getLname() ?></td> -->
                       <td><?php echo $row->getEmail() ?></td>
                       <td><?php echo $row->getGender()?></td>
                       <td><?php echo $row->getContact()?></td>
                       <td><?php echo $row->getDesignation()?></td>
                       <td><?php echo $row->getAddress()?></td>
                       <td class="text-center">
-                          <a class="btn btn-sm btn-info" href=""><i class="fa fa-pencil"></i></a>
-                          <a class="btn btn-sm btn-danger deleteUser" href="#" data-userid="<?php echo $row->getPanelID(); ?>"><i class="fa fa-trash"></i></a> 
+                          <a class="btn btn-sm btn-info" href="<?php echo base_url().'OperatorIndex/editMember/'.$row->getPanelID(); ?>"><i class="fa fa-pencil"></i></a>
+                          <a class="btn btn-sm btn-danger " href="<?php echo base_url().'OperatorIndex/deleteMember/'.$row->getPanelID(); ?>" data-userid="<?php echo $row->getPanelID(); ?>"><i class="fa fa-trash"></i></a> 
                       </td>
                     </tr>
                     <?php

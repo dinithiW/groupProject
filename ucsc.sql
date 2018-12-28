@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 20, 2018 at 01:14 PM
+-- Generation Time: Nov 25, 2018 at 03:03 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.23
 
@@ -188,9 +188,10 @@ CREATE TABLE `interview_panel` (
 --
 
 INSERT INTO `interview_panel` (`ID`, `PANEL_ID`, `FNAME`, `LNAME`, `EMAIL`, `GENDER`, `CONTACT_NUMBER`, `DESIGNATION`, `ADDRESS`) VALUES
-(8, 'din1', 'Dinithi', 'Wickramaratne', 'diniwick124@gmail.com', 'Female', '0715464894', '321321', '23/4,Rev.S.Mahinda Mawatha,Ratmalana'),
-(9, 'din8', 'Dinithi', 'Wickramaratne', 'diniwick124@gmail.com', 'Female', '0715464894', '32132132', '23/4,Rev.S.Mahinda Mawatha,Ratmalana'),
-(10, 'din9', 'Dinithi', 'Wickramaratne', 'diniwick124@gmail.com', 'Male', '0715464894', 'ertertet', '23/4,Rev.S.Mahinda Mawatha,Ratmalana');
+(1, 'din0', 'Dinithi', 'Wickramaratne', 'diniwic654654k124@gmail.com', 'female', '7154648940', 'sadasd', '23/4,Rev.S.Mahinda Mawatha,Ratmalana'),
+(2, 'din1', 'Dinithi', 'Wickramaratne', 'dinssd234fsdfdfiwick124@gmail.com', 'male', '7154164894', 'sdfsf', '23/4,Rev.S.Mahinda Mawatha,Ratmalana'),
+(3, 'kan0', 'Kaneel', 'Dias', 'kaneeldias@gmail.com', 'male', '0771952226', '545545dfgdg', 'dfghydhdhdhdhdh,Mount Lavinia'),
+(4, 'saj3', 'Sajila', 'Wickramaratne', 'saji@gmail.com', 'female', '7154648945', 'sdfsdf', '23/4,Rev.S.Mahinda Mawatha,Ratmalana');
 
 -- --------------------------------------------------------
 
@@ -339,8 +340,17 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`USERNAME`, `PASSWORD`, `USER_TYPE`, `NAME`) VALUES
+('diniwic654654k124@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Dinithi Wickramaratne'),
+('diniwick124@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Dinithi Wickramaratne'),
+('diniwicksdfsdfsfssdf124@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Dinithi Wickramaratne'),
+('diniwiwerck124@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Dinithi Wickramaratne'),
+('dinsdfiwick124@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Dinithi Wickramaratne'),
+('dinssd234fsdfdfiwick124@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Dinithi Wickramaratne'),
+('dinssdfsdfdfiwick124@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Dinithi Wickramaratne'),
 ('director@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Director', 'Director Director'),
+('kaneeldias@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Kaneel Dias'),
 ('operator@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'MA', 'Operator Opz'),
+('saji@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Sajila Wickramaratne'),
 ('sar@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'SAR', 'Sar Sar');
 
 --
@@ -369,7 +379,8 @@ ALTER TABLE `file_upload_links`
 -- Indexes for table `interview_panel`
 --
 ALTER TABLE `interview_panel`
-  ADD PRIMARY KEY (`ID`,`PANEL_ID`);
+  ADD PRIMARY KEY (`ID`,`PANEL_ID`,`EMAIL`),
+  ADD KEY `FK_Panel` (`EMAIL`);
 
 --
 -- Indexes for table `specializationarea`
@@ -407,12 +418,22 @@ ALTER TABLE `file_upload_links`
 -- AUTO_INCREMENT for table `interview_panel`
 --
 ALTER TABLE `interview_panel`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `specializationarea`
 --
 ALTER TABLE `specializationarea`
   MODIFY `AREA_ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `interview_panel`
+--
+ALTER TABLE `interview_panel`
+  ADD CONSTRAINT `FK_Panel` FOREIGN KEY (`EMAIL`) REFERENCES `users` (`USERNAME`);
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

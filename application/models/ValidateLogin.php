@@ -33,7 +33,7 @@ class ValidateLogin extends CI_Model{
 			$rowcount = $query->num_rows();
 
 			$this->load->library('session');
-			$this->session->set_userdata('age','colombo');
+			//$this->session->set_userdata('age','colombo');
 			
 			//username / email does not exist
 			if($rowcount==0){
@@ -55,8 +55,9 @@ class ValidateLogin extends CI_Model{
 					);
 				
 					$this->session->set_userdata($userdata);
-
+					
 					$this->load->view('includes/header');
+					
 					$this->load->view('MainDashboard');
 					$this->load->view('includes/footer');
 					

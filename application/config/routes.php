@@ -53,17 +53,18 @@ $route['default_controller'] = 'Home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['login'] = 'ApplicantLogin/index';
-$route['login/process'] = 'ApplicantLogin/process';
+$route['login'] = 'ApplicantLogin/index';//this too
+$route['login/process'] = 'ApplicantLogin/process';//won't be needing prolly
 $route['login/contact'] = 'ApplicantLogin/contact';
 $route['register'] = 'ApplicantLogin/register';
 $route['addUser'] = 'ApplicantLogin/addUser';
+$route['logout']='User/logout';
 
-$route['loginUser'] = 'UsersLogin/index';
-$route['loginUser/process'] = 'UsersLogin/process';
+//$route['loginUser'] = 'UsersLogin/index';
+//$route['loginUser/process'] = 'UsersLogin/process';
 
 
-//MA routes
+//Management Assistant routes
 $route['OperatorIndex'] = 'OperatorDashboard/index';
 $route['OperatorIndex/createAd'] = 'OperatorDashboard/ad';
 $route['OperatorIndex/emails'] = 'OperatorDashboard/showEmails';
@@ -73,9 +74,19 @@ $route['OperatorIndex/process'] = 'OperatorDashboard/sendEmail';
 $route['OperatorIndex/addPanelMember'] = 'OperatorDashboard/addPanelMember';
 //actual adding
 $route['OperatorIndex/addMember'] = 'OperatorDashboard/addMember';
+
+$route['OperatorIndex/addMemberprocess'] = 'OperatorDashboard/addingMember';
+//$route['OperatorIndex/editMemberprocess/(:any).*'] = 'OperatorDashboard/editMember/$1/$2';
+$route['OperatorIndex/editMemberprocess/(:any)'] = 'OperatorDashboard/editMember/$1';
 $route['OperatorIndex/add'] = 'OperatorDashboard/addMemberModel';
 $route['OperatorIndex/success'] = 'OperatorDashboard/memberSuccess';
-$route['OperatorIndex/delete'] = 'OperatorDashboard/deleteMemberModel';
+//this will be temporary
+$route['OperatorIndex/showTasks/(:any)'] = 'OperatorDashboard/showTaskCount/$1';
+
+$route['OperatorIndex/checkEmailExists'] = "OperatorDashboard/checkEmailExists";
+$route['OperatorIndex/editMember/(:any)'] = "OperatorDashboard/editMemberView/$1";
+$route['OperatorIndex/deleteMember/(:any)'] = "OperatorDashboard/deleteMemberMsg/$1";
+$route['OperatorIndex/deleteMemberProcess/(:any)'] = "OperatorDashboard/deleteMemberModel/$1";
 
 //Director routes
 $route['Director'] = 'DirectorDashboard/index';
@@ -85,15 +96,44 @@ $route['Director/addMessage'] = 'DirectorDashboard/addNotification';
 $route['Director/viewMessage'] = 'DirectorDashboard/viewNotification';
 $route['Director/finalize'] = 'DirectorDashboard/finalize';
 
+//panel
 $route['Panel'] = 'InterviewPanelDashboard/index';
 $route['Panel/viewApplicants'] = 'InterviewPanelDashboard/viewApplicants';
-$route['Panel/viewApplicants'] = 'InterviewPanelDashboard/viewMarks';
+//$route['Panel/viewApplicants'] = 'InterviewPanelDashboard/viewMarks';
 
 $route['dashboard'] = 'User/index';
 $route['home'] = 'Home/index';
 
 $route['loginUsers'] = 'Login/index';
 $route['loginUsers/process'] = 'Login/process';
-//$route['home/'] = 
+
+
+//goes to the home page of registration
+$route['registerUsers'] = 'Register/index';
+//directs to the model for registration
+$route['registerUsers/process'] = 'Register/process';
+//username already exists error message
+$route['registerUsers/errorUsername'] = 'Register/errorUsername';
+//passwords do not match message
+$route['registerUsers/errorPassword'] = 'Register/errorPassword';
+//direct to applicant home
+$route['registerUsers/home'] = 'Register/applicantHome';
+//show registration success message
+$route['registerUsers/success'] = 'Register/success';
+
+
+
+
+//applicant start
+$route['application_form_fill'] = 'ApplicantDashboard/applicationFirstPage';
+$route['application_form_edit'] = 'ApplicantDashboard/applicationFirstPage';
+$route['application_form_documents'] = 'ApplicantDashboard/applicationFifththPage';
+//applicant end
+
+
+
+
+
+
 
 

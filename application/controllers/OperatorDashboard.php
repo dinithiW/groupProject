@@ -81,6 +81,7 @@ class OperatorDashboard extends CI_Controller{
         $this->load->view('users/operator/footer');
     }
 
+    //displays all the panel members
     public function addPanelMember(){
        
         $data = [];
@@ -93,10 +94,22 @@ class OperatorDashboard extends CI_Controller{
 
     }
 
+    //adds the member: view
     public function addMember(){
         $this->load->view('includes/header');
         $this->load->view('users/operator/addMember');
         $this->load->view('includes/footer');
+    }
+
+    /*public function addMemberModel(){
+        $this->load->model('operator/PanelMembers');
+        $this->PanelMembers->add();
+
+    }*/
+
+    public function addingMember(){
+        $this->load->model('operator/PanelMembers');
+        $this->PanelMembers->addNewUser();
     }
 
     public function sendEmail(){
@@ -117,20 +130,58 @@ class OperatorDashboard extends CI_Controller{
         $this->load->view('users/loginPanelUsers');
     }
 
-    public function addMemberModel(){
-        $this->load->model('operator/PanelMembers');
-        $this->PanelMembers->add();
-
-    }
-
-    public function deleteMemberModel(){
-        $this->load->model('operator/PanelMembers');
-        $this->PanelMembers->delete();
-
-    }
-
     public function memberSuccess(){
         $this->load->view('messages/panelMemberSuccess');
+    }
+
+    function checkEmailExists()
+    {
+        $userId = $this->input->post("userId");
+        $username = $this->input->post("email");
+        $this->load->model('operator/PanelMembers');
+        $result = $this->PanelMembers->checkEmailExists($username);
+        /*if(empty($userId)){
+            echo"1";
+            
+        }else{
+            echo"2";
+            $result = $this->PanelMembers->checkEmailExists($username,$userID);
+        }*/
+        
+
+        if(empty($result)){ echo("true"); }
+        else { echo("false"); }
+    }
+
+    public function editMemberView($panelID){
+        $this->load->model('operator/PanelMembers');
+        $data['records'] = $this->PanelMembers->getMember($panelID);
+        //$this->PanelMembers->edit();
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/editMember',$data);
+        $this->load->view('includes/footer');
+    }
+
+    public function editMember($panelID){
+        
+        $this->load->model('operator/PanelMembers');
+        $this->PanelMembers->editMemberDetails($panelID);
+    }
+
+    public function deleteMemberMsg($panelID){
+        $this->load->view('messages/deletePanelMsg');
+    }
+
+    public function deleteMemberModel($panelID){
+        $this->load->model('operator/PanelMembers');
+        $this->PanelMembers->deleteMember($panelID);
+        redirect(base_url().'OperatorIndex/addPanelMember');
+    }
+
+    public function showTaskCount($role){
+        $this->load->model('TasksModel');
+        $taskNum = $this->TaskModel->getTasks($role);
+        return $taskNum;
     }
 }
 ?>
