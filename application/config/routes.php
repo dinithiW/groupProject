@@ -63,7 +63,7 @@ $route['addUser'] = 'ApplicantLogin/addUser';
 //$route['loginUser/process'] = 'UsersLogin/process';
 
 
-//MA routes
+//Management Assistant routes
 $route['OperatorIndex'] = 'OperatorDashboard/index';
 $route['OperatorIndex/createAd'] = 'OperatorDashboard/ad';
 $route['OperatorIndex/emails'] = 'OperatorDashboard/showEmails';
@@ -105,6 +105,7 @@ $route['home'] = 'Home/index';
 $route['loginUsers'] = 'Login/index';
 $route['loginUsers/process'] = 'Login/process';
 
+
 //goes to the home page of registration
 $route['registerUsers'] = 'Register/index';
 //directs to the model for registration
@@ -117,7 +118,20 @@ $route['registerUsers/errorPassword'] = 'Register/errorPassword';
 $route['registerUsers/home'] = 'Register/applicantHome';
 //show registration success message
 $route['registerUsers/success'] = 'Register/success';
-//
+
+
+
+
+//applicant start
+$route['application_form'] = 'ApplicantDashboard/applicationFirstPage';
+
+
+//applicant end
+
+
+
+
+
 
 
 
