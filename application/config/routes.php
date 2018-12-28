@@ -119,10 +119,9 @@ $route['registerUsers/home'] = 'Register/applicantHome';
 //show registration success message
 $route['registerUsers/success'] = 'Register/success';
 
-
-
-
 //applicant start
+//directing to applicant home
+$route['applicant'] = 'ApplicantDashboard/index';
 $route['application_form'] = 'ApplicantDashboard/applicationFirstPage';
 
 
