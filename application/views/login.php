@@ -75,7 +75,7 @@
 
             </div><!-- /.col -->
              <div class="col-xs-8">    
-             <button type="button" class="btn btn-success" style="float: right;"  onclick="location.href='register'">Click here to sign up!</button>
+             <button type="button" class="btn btn-success" style="float: right;"  onclick="location.href='registerUsers'">Click here to sign up!</button>
 
           </div>
         </form>

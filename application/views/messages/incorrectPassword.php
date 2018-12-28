@@ -21,7 +21,7 @@ swal({
 },
 function(isConfirm){
   if (isConfirm) {
-    window.location.href = 'register';
+    window.location.href = '../registerUsers';
   }
 }); }, 1);
 
