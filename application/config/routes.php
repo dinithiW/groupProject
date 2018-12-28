@@ -58,6 +58,7 @@ $route['login/process'] = 'ApplicantLogin/process';//won't be needing prolly
 $route['login/contact'] = 'ApplicantLogin/contact';
 $route['register'] = 'ApplicantLogin/register';
 $route['addUser'] = 'ApplicantLogin/addUser';
+$route['logout']='User/logout';
 
 //$route['loginUser'] = 'UsersLogin/index';
 //$route['loginUser/process'] = 'UsersLogin/process';
@@ -90,6 +91,7 @@ $route['OperatorIndex/deleteMemberProcess/(:any)'] = "OperatorDashboard/deleteMe
 //Director routes
 $route['Director'] = 'DirectorDashboard/index';
 $route['Director/adRequest'] = 'DirectorDashboard/adRequest';
+$route['Director/insertData'] = 'Directordashboard/insertData';
 $route['Director/addMessage'] = 'DirectorDashboard/addNotification';
 $route['Director/viewMessage'] = 'DirectorDashboard/viewNotification';
 $route['Director/finalize'] = 'DirectorDashboard/finalize';
@@ -120,10 +122,20 @@ $route['registerUsers/home'] = 'Register/applicantHome';
 $route['registerUsers/success'] = 'Register/success';
 
 //applicant start
+
 //directing to applicant home
 $route['applicant'] = 'ApplicantDashboard/index';
 $route['application_form'] = 'ApplicantDashboard/applicationFirstPage';
 
+
+
+$route['application_form'] = 'ApplicantDashboard/applicationFirstPage';
+
+
+
+$route['application_form_fill'] = 'ApplicantDashboard/applicationFirstPage';
+$route['application_form_edit'] = 'ApplicantDashboard/applicationFirstPage';
+$route['application_form_documents'] = 'ApplicantDashboard/applicationFifththPage';
 
 //applicant end
 
