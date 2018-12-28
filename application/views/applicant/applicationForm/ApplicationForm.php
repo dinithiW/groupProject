@@ -198,6 +198,8 @@
                             FOR SELECTED  SPECIFICATION AREAS
                         </legend>
                         
+
+                        
                         <table ><!-- start of the fieldset-->
                             <tr>
                                 <div class="tableLable">AREA NAME<div>

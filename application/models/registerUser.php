@@ -1,6 +1,6 @@
 <?php 
 
-class registerUser extends CI_Model{
+class RegisterUser extends CI_Model{
 
 	public function __construct() {
 		parent::__construct();
@@ -14,35 +14,55 @@ class registerUser extends CI_Model{
 	}
 
 	public function register(){
+		$name = $this->testInput($_POST['fullname']);
 		$email = $this->testInput($_POST['email']);
 		$password = $this->testInput($_POST['psw']);
-		$repeat = $this->testInput($_POST['psw-repeat']);
+		$repeat = $this->testInput($_POST['pswRepeat']);
 
-		if($email!= null && $password != null && $repeat!= null){
+		if($name != null && $email!= null && $password != null && $repeat!= null){
 
 			$this->load->database();
-			$this->db->select("EMAIL");
-			$this->db->select("PASSWORD");
-			$this->db->from("applicants");
-			$this->db->where("EMAIL", $email);
+			$this->db->select("USERNAME");
+			//$this->db->select("PASSWORD");
+			$this->db->from("users");
+			$this->db->where("USERNAME", $email);
 			$query = $this->db->get();
 			$rowcount = $query->num_rows();
 
 			if($rowcount==0){
 
 				if(md5($password)!= md5($repeat)){
-					redirect(base_url()."ApplicantLogin/errorPassword");
+					redirect(base_url()."registerUsers/errorPassword");
 				}else{
-   
-        			 $data = array(
-            			'email' => $email,
-            			'password' => md5($password),
+   					
+   					$this->load->library('session');
+        			 $insertData = array(
+            			'USERNAME' => $email,
+            			'PASSWORD' => md5($password),
+            			'USER_TYPE' => 'Applicant',
+            			'NAME' => $name
         			);
-       			$this->db->insert('applicants', $data);
-    			redirect(base_url()."ApplicantLogin/success");
+
+        			$this->db->insert('users', $insertData);
+
+        			 $userdata = array(
+	        			'username'  => $email,
+	        			//'email'     => $row->EMAIL,
+	        			'usertype'  => $email,
+	        			'name'      => $name,
+	        			'logged_in' => TRUE
+					);
+
+        			
+        			$this->session->set_userdata($userdata);
+
+					
+
+       			
+    			redirect(base_url()."registerUsers/success");
 				}
 			}else{
-				redirect(base_url()."ApplicantLogin/existsUsername");
+				redirect(base_url()."registerUsers/errorUsername");
 			}
 			
 		//redirect(base_url()."?login=false", 'location');
@@ -52,7 +72,7 @@ class registerUser extends CI_Model{
 		}
 	}
 
-	public function checkValidity(){
+	/*public function checkValidity(){
 
 		echo "checkValidity";
 		$email = $this->testInput($_POST['email']);
@@ -69,7 +89,7 @@ class registerUser extends CI_Model{
 			$rowcount = $query->num_rows();
 			echo "$rowcount";
 			if($rowcount==0){
-				/*register();*/
+				/*register();
 			}else{
 				redirect(base_url()."ApplicantLogin/errorUsername");
 
@@ -77,7 +97,7 @@ class registerUser extends CI_Model{
 				
 			}	
 	}
-}
+}*/
 	
 
 

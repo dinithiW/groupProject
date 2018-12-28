@@ -53,8 +53,8 @@ $route['default_controller'] = 'Home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['login'] = 'ApplicantLogin/index';
-$route['login/process'] = 'ApplicantLogin/process';
+$route['login'] = 'ApplicantLogin/index';//this too
+$route['login/process'] = 'ApplicantLogin/process';//won't be needing prolly
 $route['login/contact'] = 'ApplicantLogin/contact';
 $route['register'] = 'ApplicantLogin/register';
 $route['addUser'] = 'ApplicantLogin/addUser';
@@ -105,8 +105,34 @@ $route['home'] = 'Home/index';
 
 $route['loginUsers'] = 'Login/index';
 $route['loginUsers/process'] = 'Login/process';
-//$route['home/'] = 
-//
+
+
+//goes to the home page of registration
+$route['registerUsers'] = 'Register/index';
+//directs to the model for registration
+$route['registerUsers/process'] = 'Register/process';
+//username already exists error message
+$route['registerUsers/errorUsername'] = 'Register/errorUsername';
+//passwords do not match message
+$route['registerUsers/errorPassword'] = 'Register/errorPassword';
+//direct to applicant home
+$route['registerUsers/home'] = 'Register/applicantHome';
+//show registration success message
+$route['registerUsers/success'] = 'Register/success';
+
+
+
+
+//applicant start
+$route['application_form_fill'] = 'ApplicantDashboard/applicationFirstPage';
+$route['application_form_edit'] = 'ApplicantDashboard/applicationFirstPage';
+$route['application_form_documents'] = 'ApplicantDashboard/applicationFifththPage';
+//applicant end
+
+
+
+
+
 
 
 
