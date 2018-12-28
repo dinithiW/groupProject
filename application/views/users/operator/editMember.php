@@ -1,5 +1,6 @@
 <?php
 $userId = 0;
+
 if(!empty($records)) {
     $userId = $records->PANEL_ID;
 }
@@ -32,7 +33,7 @@ if(!empty($records)) {
                                     <div class="form-group">
                                         <label for="fname">First Name</label>
                                         <input type="text" class="form-control required" id="fname" name="fname" maxlength="128" value = "<?php if(!empty($records)) echo $records->FNAME; ?>">
-                                        <input type="hidden" value="<?php echo $userId; ?>" name="userId" id="userId" />
+                                        <input type="hidden" value="<?php echo $userId; ?>" name="userId" id="userId" />  
                                     </div>
                                     
                                 </div>

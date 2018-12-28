@@ -139,13 +139,14 @@ class OperatorDashboard extends CI_Controller{
         $userId = $this->input->post("userId");
         $username = $this->input->post("email");
         $this->load->model('operator/PanelMembers');
-        if(empty($userId)){
+        $result = $this->PanelMembers->checkEmailExists($username);
+        /*if(empty($userId)){
             echo"1";
-            $result = $this->PanelMembers->checkEmailExists($username);
+            
         }else{
             echo"2";
             $result = $this->PanelMembers->checkEmailExists($username,$userID);
-        }
+        }*/
         
 
         if(empty($result)){ echo("true"); }
@@ -179,7 +180,8 @@ class OperatorDashboard extends CI_Controller{
 
     public function showTaskCount($role){
         $this->load->model('TasksModel');
-        $this->TaskModel->getTasks($role);
+        $taskNum = $this->TaskModel->getTasks($role);
+        return $taskNum;
     }
 }
 ?>
