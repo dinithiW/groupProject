@@ -1,3 +1,6 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +29,7 @@ swal({
 },
 function(isConfirm){
   if (isConfirm) {
-    window.location.href = 'register';
+    window.location.href = '../registerUsers';
   }
 }); }, 1);
 
