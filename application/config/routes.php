@@ -59,8 +59,8 @@ $route['login/contact'] = 'ApplicantLogin/contact';
 $route['register'] = 'ApplicantLogin/register';
 $route['addUser'] = 'ApplicantLogin/addUser';
 
-$route['loginUser'] = 'UsersLogin/index';
-$route['loginUser/process'] = 'UsersLogin/process';
+//$route['loginUser'] = 'UsersLogin/index';
+//$route['loginUser/process'] = 'UsersLogin/process';
 
 
 //Management Assistant routes
@@ -79,6 +79,7 @@ $route['OperatorIndex/addMemberprocess'] = 'OperatorDashboard/addingMember';
 $route['OperatorIndex/editMemberprocess/(:any)'] = 'OperatorDashboard/editMember/$1';
 $route['OperatorIndex/add'] = 'OperatorDashboard/addMemberModel';
 $route['OperatorIndex/success'] = 'OperatorDashboard/memberSuccess';
+//this will be temporary
 $route['OperatorIndex/showTasks/(:any)'] = 'OperatorDashboard/showTaskCount/$1';
 
 $route['OperatorIndex/checkEmailExists'] = "OperatorDashboard/checkEmailExists";

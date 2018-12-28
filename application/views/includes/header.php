@@ -226,10 +226,36 @@
             <li class="treeview">
               <a href="<?php echo base_url(); ?>userListing">
                 <i class="fa fa-users"></i>
-                <span>Users</span>
+                <span>Advertisement</span>
               </a>
             </li>
             <li class="treeview">
+              <a href="#" >
+                <i class="fa fa-files-o"></i>
+                <span>Applicants</span>
+              </a>
+            </li>
+             <li class="treeview">
+              <a href="#" >
+                <i class="fa fa-files-o"></i>
+                <span>Candidates</span>
+              </a>
+            </li>
+            <li class="treeview">
+              <a href="#" >
+                <i class="fa fa-files-o"></i>
+                <span>Interview Dates</span>
+              </a>
+            </li>
+
+            <li class="treeview">
+              <a href="#" >
+                <i class="fa fa-files-o"></i>
+                <span>View Marks</span>
+              </a>
+            </li>
+
+             <li class="treeview">
               <a href="#" >
                 <i class="fa fa-files-o"></i>
                 <span>Reports</span>

@@ -19,21 +19,21 @@ class PanelMembers extends CI_Model{
     function checkEmailExists($username,$id=0)
     {
 
-        $oldEmail = "";
+        /*$oldEmail = "";
         if($id!=0){
             $data = $this->getMember($id);
             $oldEmail = $data->EMAIL;
-        }
+        }*/
 
         $this->load->database();
         $this->db->select("USERNAME");
         $this->db->from("users");
         
-        if($id != 0){
+        /*if($id != 0){
             $this->db->where("USERNAME !=", $oldEmail);
-        }else{
+        }else{*/
             $this->db->where("USERNAME", $username); 
-        }
+       /* }*/
         $query = $this->db->get();  
         //$this->db->where("isDeleted", 0);
         return $query->result();
