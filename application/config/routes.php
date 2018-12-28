@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome';
+$route['default_controller'] = 'Home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
@@ -62,28 +62,49 @@ $route['addUser'] = 'ApplicantLogin/addUser';
 $route['loginUser'] = 'UsersLogin/index';
 $route['loginUser/process'] = 'UsersLogin/process';
 
+
 //MA routes
 $route['OperatorIndex'] = 'OperatorDashboard/index';
 $route['OperatorIndex/createAd'] = 'OperatorDashboard/ad';
 $route['OperatorIndex/emails'] = 'OperatorDashboard/showEmails';
 $route['OperatorIndex/sendEmail'] = 'OperatorDashboard/sendAdToSAR';
 $route['OperatorIndex/process'] = 'OperatorDashboard/sendEmail';
+//this directs to the home of adding a new member
 $route['OperatorIndex/addPanelMember'] = 'OperatorDashboard/addPanelMember';
+//actual adding
+$route['OperatorIndex/addMember'] = 'OperatorDashboard/addMember';
+
+$route['OperatorIndex/addMemberprocess'] = 'OperatorDashboard/addingMember';
+//$route['OperatorIndex/editMemberprocess/(:any).*'] = 'OperatorDashboard/editMember/$1/$2';
+$route['OperatorIndex/editMemberprocess/(:any)'] = 'OperatorDashboard/editMember/$1';
 $route['OperatorIndex/add'] = 'OperatorDashboard/addMemberModel';
 $route['OperatorIndex/success'] = 'OperatorDashboard/memberSuccess';
-$route['OperatorIndex/delete'] = 'OperatorDashboard/deleteMemberModel';
+$route['OperatorIndex/showTasks/(:any)'] = 'OperatorDashboard/showTaskCount/$1';
+
+$route['OperatorIndex/checkEmailExists'] = "OperatorDashboard/checkEmailExists";
+$route['OperatorIndex/editMember/(:any)'] = "OperatorDashboard/editMemberView/$1";
+$route['OperatorIndex/deleteMember/(:any)'] = "OperatorDashboard/deleteMemberMsg/$1";
+$route['OperatorIndex/deleteMemberProcess/(:any)'] = "OperatorDashboard/deleteMemberModel/$1";
 
 //Director routes
 $route['Director'] = 'DirectorDashboard/index';
 $route['Director/adRequest'] = 'DirectorDashboard/adRequest';
 $route['Director/addMessage'] = 'DirectorDashboard/addNotification';
 $route['Director/viewMessage'] = 'DirectorDashboard/viewNotification';
+$route['Director/finalize'] = 'DirectorDashboard/finalize';
 
+//panel
 $route['Panel'] = 'InterviewPanelDashboard/index';
 $route['Panel/viewApplicants'] = 'InterviewPanelDashboard/viewApplicants';
+//$route['Panel/viewApplicants'] = 'InterviewPanelDashboard/viewMarks';
 
 $route['dashboard'] = 'User/index';
-$route['loginUsers'] = 'Login/index';
 $route['home'] = 'Home/index';
+
+$route['loginUsers'] = 'Login/index';
+$route['loginUsers/process'] = 'Login/process';
+//$route['home/'] = 
+//
+
 
 

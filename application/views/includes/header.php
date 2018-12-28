@@ -1,10 +1,13 @@
 <?php
-  $name = "Dinithi";
-  $pageTitle = "Dashboard"; 
-  $role_text = "Applicant";
-  const ROLE_ADMIN = "Admin";
-  const ROLE_MANAGER = "Manager";
-  $role = "Applicant";
+  $name = $_SESSION['name'];
+  $pageTitle = "UCSC"; 
+  $role_text = $_SESSION['usertype'];
+  const ROLE_DIRECTOR = "Director";
+  const ROLE_MA = "MA";
+  const ROLE_SAR = "SAR";
+  const ROLE_PANEL = "Panel";
+  const ROLE_APPLICANT = "Applicant";
+  $role = $_SESSION['usertype'];
 ?>
 
 <!DOCTYPE html>
@@ -14,11 +17,17 @@
     <title><?php echo $pageTitle; ?></title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.4 -->
+
     <link href="<?php echo base_url(); ?>assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />    
     <!-- FontAwesome 4.3.0 -->
-    <link href="<?php echo base_url(); ?>assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="<?php echo base_url(); ?>assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" /> 
+
+
     <!-- Ionicons 2.0.0 -->
     <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- Theme style -->
     <link href="<?php echo base_url(); ?>assets/dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
     <!-- AdminLTE Skins. Choose a skin from the css/skins 
@@ -51,9 +60,9 @@
         <!-- Logo -->
         <a href="<?php echo base_url(); ?>" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini"><b>CI</b>AS</span>
+          <span class="logo-mini"><b>UC</b>SC</span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>CodeInsect</b>AS</span>
+          <span class="logo-lg"><b>Staff Recruitment</b></span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
@@ -134,28 +143,127 @@
             <li class="treeview">
               <a href="#" >
                 <i class="fa fa-ticket"></i>
-                <span>My Tasks</span>
+                <span>My Tasks</span><span class = "badge pull-right" >12</span>
               </a>
             </li>
             <?php
-            if($role == ROLE_ADMIN || $role == ROLE_MANAGER)
+            if($role == ROLE_MA)
+            {
+            ?>
+
+            <li class="treeview">
+              <a href="<?= base_url('OperatorIndex/createAd') ?>" >
+                <i class="fa fa-address-card"></i>
+                <span>Create Ad</span>
+              </a>
+            </li>
+
+            <li class="treeview">
+              <a href="" >
+                <i class="fa fa-pencil-square-o"></i>
+                <span>Edit Application Form</span>
+              </a>
+            </li>
+
+            <li class="treeview">
+              <a href="#" >
+                <i class="fa fa-users"></i>
+                <span>Categorize Applicants</span>
+              </a>
+            </li>
+
+            <li class="treeview">
+              <a href="#" >
+                <i class="fa fa-calendar"></i>
+                <span>Set Interview Date</span>
+              </a>
+            </li>
+
+            <li class="treeview">
+              <a href="<?= base_url('OperatorIndex/addPanelMember') ?>" >
+                <i class="fa fa-user-plus"></i>
+                <span>Add Panel Members</span>
+              </a>
+            </li>
+
+            <li class="treeview">
+              <a href="#" >
+                <i class="fa fa-envelope"></i>
+                <span>Send Emails to Applicants</span>
+              </a>
+            </li>
+
+
+            <?php
+            }
+            if($role == ROLE_DIRECTOR)
             {
             ?>
             <li class="treeview">
-              <a href="#" >
-                <i class="fa fa-thumb-tack"></i>
-                <span>Task Status</span>
+              <a href="<?php echo base_url(); ?>userListing">
+                <i class="fa fa-users"></i>
+                <span>Users</span>
               </a>
             </li>
             <li class="treeview">
               <a href="#" >
-                <i class="fa fa-upload"></i>
-                <span>Task Uploads</span>
+                <i class="fa fa-files-o"></i>
+                <span>Reports</span>
               </a>
             </li>
+            <li class="treeview">
+              <a href="<?= base_url('Director/adRequest') ?>" >
+                <i class="fa fa-align-justify"></i>
+                <span>Advertisment Request</span>
+              </a>
+            </li>
+
             <?php
             }
-            if($role == ROLE_ADMIN)
+            if($role == ROLE_SAR)
+            {
+            ?>
+            <li class="treeview">
+              <a href="<?php echo base_url(); ?>userListing">
+                <i class="fa fa-users"></i>
+                <span>Users</span>
+              </a>
+            </li>
+            <li class="treeview">
+              <a href="#" >
+                <i class="fa fa-files-o"></i>
+                <span>Reports</span>
+              </a>
+            </li>
+
+            <?php
+            }
+            if($role == ROLE_PANEL)
+            {
+            ?>
+           
+            <li class="treeview">
+              <a href="<?= base_url('Panel/viewApplicants') ?>" >
+                <i class="fa fa-files-o"></i>
+                <span>View Applicants</span>
+              </a>
+            </li>
+             <li class="treeview">
+              <a href="#" >
+                <i class="fa fa-files-o"></i>
+                <span>View Marks</span>
+              </a>
+            </li>
+             <li class="treeview">
+              <a href="#" >
+                <i class="fa fa-files-o"></i>
+                <span>Marking Sheet</span>
+              </a>
+            </li>
+
+            <?php
+            }
+            if($role == ROLE_APPLICANT)
             {
             ?>
             <li class="treeview">
