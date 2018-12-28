@@ -63,7 +63,7 @@ $route['addUser'] = 'ApplicantLogin/addUser';
 //$route['loginUser/process'] = 'UsersLogin/process';
 
 
-//MA routes
+//Management Assistant routes
 $route['OperatorIndex'] = 'OperatorDashboard/index';
 $route['OperatorIndex/createAd'] = 'OperatorDashboard/ad';
 $route['OperatorIndex/emails'] = 'OperatorDashboard/showEmails';
