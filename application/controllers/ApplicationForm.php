@@ -89,45 +89,7 @@ echo"<br>"."end of the mainwwwwwwwwww";
 
         }
 
-        public function selectBasicPersonalDetailsController(){
-            
-            $idNumber ="18se7";
-            $this->load->model('ApplicantApplicationFormModel');
-            $data['category']    =$this->ApplicantApplicationFormModel->updateApplicationForm($idNumber);
-            $data['mainContest'] ='applicant/applicationForm/ApplicationFormEdit';*/
-            //var_dump($product);
-
-            
-            $check = $this->session->userdata['sess_varia1']['id_number'];
-            
-            $email      = $this->session->userdata['sess_varia']['email'];
-            $user_type  = $this->session->userdata['sess_varia']['usertype'];
-            $id_number  = $this->session->userdata['sess_varia']['id_number'];
-            $log        = $this->session->userdata['sess_varia']['logged_in'];
-
-            echo"thie is the :"."$email"."<br>";
-            echo"thie is the :"."$user_type"."<br>";
-            echo"thie is the :"."$id_number"."<br>";
-            echo"thie is the :"."$log"."<br>";
-
-
-            //$this->session->set_userdata('name',"ruwanliyanage");
-            echo"this is the main page";
-
-            //$now1 = $this->session->userdata['sess_varia']['logged_in'];
-
-            
-            $this->load->library('session');
-            $rr = $this->session->userdata('age');
-			echo"$rr";
-
-echo"<br>"."end of the mainwwwwwwwwww";
-            //$this->session->set_userdata('name','ruwanliyanage');
-
-
-            //$this->load->view('applicant/applicationForm/ApplicationFormEdit');
-
-        }
+        
         
     }
 ?>
