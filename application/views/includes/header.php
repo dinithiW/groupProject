@@ -1,7 +1,7 @@
 <?php
-  $name = $_SESSION['name'];
-  $pageTitle = "UCSC"; 
-  $role_text = $_SESSION['usertype'];
+  $name = $_SESSION['name'];//for display name in profile
+  $pageTitle = "UCSC"; //for display page title
+  $role_text = $_SESSION['usertype']; 
   const ROLE_DIRECTOR = "Director";
   const ROLE_MA = "MA";
   const ROLE_SAR = "SAR";
