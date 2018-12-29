@@ -27,11 +27,13 @@ class ApplicantDashboard extends CI_Controller{
      * select files from database and show them
      */
     public function applicationFifththPage(){
-        $this->load->view('includes/header');			
+        
+        $this->load->view('includes/header');
+					
         $this->load->model('operator/categorizeApplilcationsModel');
         $data['fetch_data'] = $this->categorizeApplilcationsModel->fetchFileUploadLinks();
         $this->load->view('applicant/applicationForm/ApplicationFormFileUpoload',$data);
-        
+        $this->load->view('includes/footer');
        
     }
 

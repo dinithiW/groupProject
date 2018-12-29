@@ -32,7 +32,7 @@ class ValidateLogin extends CI_Model{
 			$query = $this->db->get();
 			$rowcount = $query->num_rows();
 
-			$this->load->library('session');
+			//$this->load->library('session');
 			//$this->session->set_userdata('age','colombo');
 			
 			//username / email does not exist
@@ -73,7 +73,7 @@ class ValidateLogin extends CI_Model{
 		
 	}else{
 			//redirect or show appropriate message
-			echo 'oopsieee';
+			echo 'WARNING! validate Login line number 76';
 		}
 	}
 
