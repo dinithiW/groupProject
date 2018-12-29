@@ -14,8 +14,13 @@
 /**
  * this is use for redirect to the main menu when user log out
  */
-if($this->session->userdata['logged_in']){
+
+$this->load->library('session');
+$checking = $this->session->userdata('logged_in');
+
+if($checking=='1'){
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -59,13 +64,12 @@ if($this->session->userdata['logged_in']){
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+
+
+
 <!--start of the header files for the file upload file-->
-
-
-
     <link rel="stylesheet" href="<?=base_url('assets/css/applicationForm/ApplicationFormFileUpoload.css')?>" type="text/css"/>
-    
-
+  
 <!--end of the header for the file upload file-->
 
 
@@ -319,6 +323,6 @@ if($this->session->userdata['logged_in']){
 <?php
 }
 else{
-    redirect(base_url()."User/logout");
+  redirect(base_url()."home");
 }
 ?>

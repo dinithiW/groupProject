@@ -16,15 +16,6 @@ class Login extends CI_Controller {
 	//this method will validate the login credentials
 	public function process(){
         
-        /**
-         * this part for redirect from file upload to applicant dashboard
-         * this part for redirect from application form to applicant dashboard
-         */
-        
-        
-        /**
-         * if still haven't log, user can log and after move to this pages
-         */
         $this->load->model('ValidateLogin');
         $this->ValidateLogin->validate();  
         

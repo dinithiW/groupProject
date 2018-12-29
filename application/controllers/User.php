@@ -29,8 +29,13 @@ class User extends CI_Controller{
 	 * this funciton use for testing only
 	 */
 	public function out(){
-		$this->session->unset_userdata('logged_in');
-		redirect(base_url()."home");
+		//$this->session->unset_userdata('logged_in');
+		echo "this out";
+		$this->load->library('session');
+		$this->session->set_userdata('logged_in',-10);
+		$checking = $this->session->userdata('logged_in');
+		echo $checking;
+		//redirect(base_url()."home");
 	}
 
 	
