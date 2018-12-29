@@ -36,6 +36,7 @@ class RegisterUser extends CI_Model{
 				}else{
    					
    					$this->load->library('session');
+   					
         			 $insertData = array(
             			'USERNAME' => $email,
             			'PASSWORD' => md5($password),
@@ -56,9 +57,6 @@ class RegisterUser extends CI_Model{
         			
         			$this->session->set_userdata($userdata);
 
-					
-
-       			
     			redirect(base_url()."registerUsers/success");
 				}
 			}else{
