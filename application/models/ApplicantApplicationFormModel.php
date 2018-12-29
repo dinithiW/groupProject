@@ -52,6 +52,8 @@ class ApplicantApplicationFormModel extends CI_Model{
        //$this->db->set($data);
        //$this->db->insert($this->db->dbprefix.'');
        $this->db->insert('basic_personal_details', $data);
+
+       $this->updateTemporaryIdTable($idNumber);
  
     }
 
@@ -365,7 +367,13 @@ class ApplicantApplicationFormModel extends CI_Model{
 
     }
 
-
+/**
+ * this function use for make applicant's permenent index number
+ * use year 
+ * use applicating category
+ * incremented number
+ * Ex: 18pr005
+ */
 
     public function makeApplicationId(){
         $this->db->select("INDEX_NUMBER");
@@ -379,7 +387,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         $input = $this->input->post('postApplyFor');//inform that post apply for ex:-probationary or senior lecture
         $category= substr($input, 0,2);//ex:-po or se
 
-        $rowcount_1 += $rowcount_1;
+        //$rowcount_1 += $rowcount_1;
         $number_of_index_number = str_pad($rowcount_1, 3, '0', STR_PAD_LEFT);//180001
         $temporary_index_number ="$year_of_index_number"."$category"."$number_of_index_number";
         
@@ -388,13 +396,15 @@ class ApplicantApplicationFormModel extends CI_Model{
 
 
 
-    
-
-    public function updateApplicationForm($id){
+    public function updateTemporaryIdTable($idNumber){
         
         $this->load->database();
-        $this->db->select('APPLICANT_ID');
-        $this->db->from('basic_personal_details');
+
+        $data = array( 
+            'INDEX_NUMBER'	=> $idNumber 
+        );
+        $this->db->where('USERNAME', $this->input->post('personalEmail'));
+        $this->db->update(' temporary_index_number_for_applicants', $data);
         
     }
 }

@@ -11,15 +11,8 @@
             if($this->input->post('Submit')){
                 
                 $this->load->model('ApplicantApplicationFormModel');
- 
-                //$id_number =  $this->ApplicantApplicationFormModel->makeApplicationId();
-
-                
-        
-                
-
-
                 $this->ApplicantApplicationFormModel->insertBasicPersonalDetailsModel();
+                //$this->ApplicantApplicationFormModel->updateTemporaryIdTable();
 /*                $this->ApplicantApplicationFormModel->insertSecondaryEducationalDetailsModel($id_number);
                 $this->ApplicantApplicationFormModel->insertHigherEducationalDetailsModel($id_number);
                 $this->ApplicantApplicationFormModel->insertAnyOtherQualificationsModel($id_number);
