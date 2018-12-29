@@ -51,6 +51,21 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+<!--start of the header files for the file upload file-->
+
+
+
+    <link rel="stylesheet" href="<?=base_url('assets/css/applicationForm/ApplicationFormFileUpoload.css')?>" type="text/css"/>
+    
+
+<!--end of the header for the file upload file-->
+
+
+
+
+
+
   </head>
   <!-- <body class="sidebar-mini skin-black-light"> -->
   <body class="skin-blue sidebar-mini">

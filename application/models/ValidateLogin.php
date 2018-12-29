@@ -57,7 +57,6 @@ class ValidateLogin extends CI_Model{
 					$this->session->set_userdata($userdata);
 					
 					$this->load->view('includes/header');
-					
 					$this->load->view('MainDashboard');
 					$this->load->view('includes/footer');
 					
