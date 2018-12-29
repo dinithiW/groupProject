@@ -4,21 +4,25 @@ class ApplicantApplicationFormModel extends CI_Model{
         parent::__construct();
     }
     
-    public function insertBasicPersonalDetailsModel(){
-        
-        $this->load->database();
 
+    /**
+     * this function is use for 
+     * insert the basic personal details to database
+     * insert secondary educational details to database
+     */
+    public function insertBasicPersonalDetailsModel(){
+        $this->load->database();
         $idNumber = $this->makeApplicationId();
 
         $name1 = $this->input->post('first_name');
-        $name2 =$this->input->post('last_name');
-        $name3 =$this->input->post('postal_address');
-        $name4 =$this->input->post('permanent_address');
-        $name5 =$this->input->post('driving_licence');
-        $name6 =$this->input->post('applicant_citizenship');
-        $name7 =$this->input->post('personalEmail');
-        $name8 =$this->input->post('officeEmail');
-        $name9 =$this->input->post('mobile_number');
+        $name2 = $this->input->post('last_name');
+        $name3 = $this->input->post('postal_address');
+        $name4 = $this->input->post('permanent_address');
+        $name5 = $this->input->post('driving_licence');
+        $name6 = $this->input->post('applicant_citizenship');
+        $name7 = $this->input->post('personalEmail');
+        $name8 = $this->input->post('officeEmail');
+        $name9 = $this->input->post('mobile_number');
         $name10 =$this->input->post('home_number');
         $name11 =$this->input->post('office_number');
         $name12 =$this->input->post('selectGender');
@@ -51,10 +55,14 @@ class ApplicantApplicationFormModel extends CI_Model{
 
        //$this->db->set($data);
        //$this->db->insert($this->db->dbprefix.'');
-       $this->db->insert('basic_personal_details', $data);
+        $this->db->insert('basic_personal_details', $data);
 
-       $this->updateTemporaryIdTable($idNumber);
- 
+        $this->updateTemporaryIdTable($idNumber);
+        $this->insertSecondaryEducationalDetailsModel($idNumber);
+    }
+
+    public function insertSpecificationAreas(){
+        $this->load->database();
     }
 
 
@@ -62,7 +70,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         
         $this->load->database();
         $secondary_educational_table_first_row = array(
-            'APPLICANT_ID'       =>$idNumber,
+            'INDEX_NUMBER'       =>$idNumber,
             'SCHOOL_NAME'        =>$this->input->post('secondary_educational_school_name1'),
             'FROM'               =>$this->input->post('secondary_educational_from1'),
             'TO'                 =>$this->input->post('secondary_educational_to1'),
@@ -75,7 +83,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         
         
         $secondary_educational_table_second_row = array(
-            'APPLICANT_ID'       =>$idNumber,
+            'INDEX_NUMBER'       =>$idNumber,
             'SCHOOL_NAME'        =>$this->input->post('secondary_educational_school_name2'),
             'FROM'               =>$this->input->post('secondary_educational_from2'),
             'TO'                 =>$this->input->post('secondary_educational_to2'),
@@ -83,12 +91,12 @@ class ApplicantApplicationFormModel extends CI_Model{
             'YEAR'               =>$this->input->post('secondary_educational_year2')
         );
 
-        $this->db->set($secondary_educational_table_second_row);
-        $this->db->insert($this->db->dbprefix.'secondary_educational_details');
-        
+    
+        $this->db->insert('secondary_educational_details', $secondary_educational_table_second_row);
+
 
         $secondary_educational_table_third_row = array(
-            'APPLICANT_ID'       =>$idNumber,
+            'INDEX_NUMBER'       =>$idNumber,
             'SCHOOL_NAME'        =>$this->input->post('secondary_educational_school_name3'),
             'FROM'               =>$this->input->post('secondary_educational_from3'),
             'TO'                 =>$this->input->post('secondary_educational_to3'),
@@ -96,12 +104,13 @@ class ApplicantApplicationFormModel extends CI_Model{
             'YEAR'               =>$this->input->post('secondary_educational_year3')
         );
 
-        $this->db->set($secondary_educational_table_third_row);
-        $this->db->insert($this->db->dbprefix.'secondary_educational_details');
+
+        $this->db->insert('secondary_educational_details', $secondary_educational_table_third_row);
+
         
         
         $secondary_educational_table_fourth_row = array(
-            'APPLICANT_ID'       =>$idNumber,
+            'INDEX_NUMBER'       =>$idNumber,
             'SCHOOL_NAME'        =>$this->input->post('secondary_educational_school_name4'),
             'FROM'               =>$this->input->post('secondary_educational_from4'),
             'TO'                 =>$this->input->post('secondary_educational_to4'),
@@ -109,9 +118,8 @@ class ApplicantApplicationFormModel extends CI_Model{
             'YEAR'               =>$this->input->post('secondary_educational_year4')
         );
 
-        $this->db->set($secondary_educational_table_fourth_row);
-        $this->db->insert($this->db->dbprefix.'secondary_educational_details');
-    
+        $this->db->insert('secondary_educational_details', $secondary_educational_table_fourth_row);
+
     }
 
     public function insertHigherEducationalDetailsModel($idNumber){
@@ -395,9 +403,11 @@ class ApplicantApplicationFormModel extends CI_Model{
     }
 
 
-
+/**
+ * this function use for update the temporaty index number 
+ * substitute by for permenent index number 
+ */
     public function updateTemporaryIdTable($idNumber){
-        
         $this->load->database();
 
         $data = array( 
