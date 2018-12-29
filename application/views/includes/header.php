@@ -10,6 +10,13 @@
   $role = $_SESSION['usertype'];
 ?>
 
+<?php
+/**
+ * this is use for redirect to the main menu when user log out
+ */
+if($this->session->userdata['logged_in']){
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -108,7 +115,7 @@
                       <a href="<?php echo base_url(); ?>loadChangePass" class="btn btn-default btn-flat"><i class="fa fa-key"></i> Change Password</a>
                     </div>
                     <div class="pull-right">
-                      <a href="<?php echo base_url(); ?>logout" class="btn btn-default btn-flat"><i class="fa fa-sign-out"></i> Sign out</a>
+                      <a href="<?php echo base_url(); ?>LOGOUT" class="btn btn-default btn-flat"><i class="fa fa-sign-out"></i> Sign out</a>
                     </div>
                   </li>
                 </ul>
@@ -308,3 +315,10 @@
         </section>
         <!-- /.sidebar -->
       </aside>
+
+<?php
+}
+else{
+    redirect(base_url()."User/logout");
+}
+?>

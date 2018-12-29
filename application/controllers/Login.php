@@ -20,17 +20,17 @@ class Login extends CI_Controller {
          * this part for redirect from file upload to applicant dashboard
          * this part for redirect from application form to applicant dashboard
          */
-
-         if($this->session->userdata['logged_in']==1){
-            $this->load->view('includes/header');
-			$this->load->view('MainDashboard');
-			$this->load->view('includes/footer');
-         }
-        else{
+        
+        
+        /**
+         * if still haven't log, user can log and after move to this pages
+         */
         $this->load->model('ValidateLogin');
         $this->ValidateLogin->validate();  
-        }
+        
     }
+
+
 
     //
     public function errorUsername(){

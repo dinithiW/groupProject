@@ -25,6 +25,14 @@ class User extends CI_Controller{
 	
 	}
 
+	/***
+	 * this funciton use for testing only
+	 */
+	public function out(){
+		$this->session->unset_userdata('logged_in');
+		redirect(base_url()."home");
+	}
+
 	
 
 

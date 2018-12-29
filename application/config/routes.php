@@ -125,18 +125,10 @@ $route['registerUsers/success'] = 'Register/success';
 
 //directing to applicant home
 $route['applicant'] = 'ApplicantDashboard/index';
-$route['application_form'] = 'ApplicantDashboard/applicationFirstPage';
-
-
-
-$route['application_form'] = 'ApplicantDashboard/applicationFirstPage';
-
-
-
 $route['application_form_fill'] = 'ApplicantDashboard/applicationFirstPage';
 $route['application_form_edit'] = 'ApplicantDashboard/applicationFirstPage';
 $route['application_form_documents'] = 'ApplicantDashboard/applicationFifththPage';
-
+$route['LOGOUT']='User/out';
 //applicant end
 
 

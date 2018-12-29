@@ -1,3 +1,11 @@
+<?php
+/**
+ * this is use for redirect to the main menu when user log out
+ */
+if(isset($this->session->userdata['logged_in'])){
+?>
+
+
 
 <!DOCTYPE html>
 <html>
@@ -824,3 +832,11 @@
         </div>
     </body>
 </html>
+
+
+<?php
+}
+else{
+    redirect(base_url()."User/logout");
+}
+?>
