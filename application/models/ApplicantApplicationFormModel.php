@@ -4,9 +4,11 @@ class ApplicantApplicationFormModel extends CI_Model{
         parent::__construct();
     }
     
-    public function insertBasicPersonalDetailsModel($idNumber){
+    public function insertBasicPersonalDetailsModel(){
         
         $this->load->database();
+
+        $idNumber = $this->makeApplicationId();
 
         $name1 = $this->input->post('first_name');
         $name2 =$this->input->post('last_name');
@@ -27,7 +29,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         $name17 =$this->input->post('selectDegree');
 
         $data = array(
-            'APPLICANT_ID'       => $idNumber,
+            'INDEX_NUMBER'       => $idNumber,
             'FIRST_NAME'         => $name1,
             'LAST_NAME'          => $name2,
             'POSTAL_ADDRESS'     => $name3,
@@ -47,9 +49,10 @@ class ApplicantApplicationFormModel extends CI_Model{
             'DEGREE'             => $name17
         );
 
-        $this->db->set($data);
-       $this->db->insert($this->db->dbprefix.'basic_personal_details');
-        
+       //$this->db->set($data);
+       //$this->db->insert($this->db->dbprefix.'');
+       $this->db->insert('basic_personal_details', $data);
+ 
     }
 
 
@@ -346,7 +349,7 @@ class ApplicantApplicationFormModel extends CI_Model{
     } 
     
     
-    public function insertOtherFieldsModel($idNumber){
+    public function insertOtherFieldsModel(){
         
         $this->load->database();
         $other_fields_table_first_row = array(
@@ -363,73 +366,29 @@ class ApplicantApplicationFormModel extends CI_Model{
     }
 
 
-    public function getCategoryForApplicantId(){
-        
-        return $category;
-    }
-
-    public function getIncrementNumberForApplicantId(){
-
-        $conn = new mysqli("localhost", "root", "", "ucsc");
-        $sql = "SELECT NUMB FROM count";
-        $result = $conn->query($sql);
-        $counting = 0;
-
-        if ($result->num_rows > 0) {
-            while($row = $result->fetch_assoc()) {
-                
-                $counting = $row["NUMB"];
-            }
-        } 
-        return $counting;
-    }
-
-
-    public function updateIncrementNumberForApplicantId($numb){
-
-        $conn = new mysqli("localhost", "root", "", "ucsc");
-        $num = $numb-1;
-        $sql = "UPDATE count SET NUMB='$numb' WHERE NUMB=$num";
-
-        $stmt = $conn->prepare($sql);
-        $stmt->execute();
-       
-    }
-   
-   
-
 
     public function makeApplicationId(){
+        $this->db->select("INDEX_NUMBER");
+        $this->db->from("basic_personal_details");
 
-        //$str = (string) $int;
-        //$str = "$int";    
+        $query_1 = $this->db->get();
+        $rowcount_1 = $query_1->num_rows();
 
-        $input = $this->input->post('current_date');
-        $year  = substr($input, 2,2);
+        $year = date("Y");//for get current year ex.218
+        $year_of_index_number = substr($year,2);//ex.18
+        $input = $this->input->post('postApplyFor');//inform that post apply for ex:-probationary or senior lecture
+        $category= substr($input, 0,2);//ex:-po or se
 
-        $input = $this->input->post('postApplyFor');
-        $category= substr($input, 0,2);
-
-        $number = $this->getIncrementNumberForApplicantId();
-
-        $number++;
-
-        $this->updateIncrementNumberForApplicantId($number);
-
-        //$id = $category +(string) $year + (string) $category;
-
+        $rowcount_1 += $rowcount_1;
+        $number_of_index_number = str_pad($rowcount_1, 3, '0', STR_PAD_LEFT);//180001
+        $temporary_index_number ="$year_of_index_number"."$category"."$number_of_index_number";
         
-        $one = (string) $year;
-        $one = "$year"; 
-        
-        $three = (string)$number;
-        $three = "$number"; 
-
-        $word = "$one"."$category"."$three";
-        
-        return $word;
-        
+        return $temporary_index_number;
     }
+
+
+
+    
 
     public function updateApplicationForm($id){
         
