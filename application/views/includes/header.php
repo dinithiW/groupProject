@@ -198,7 +198,7 @@
             </li>
             <li class="treeview">
               <a href="<?= base_url('Director/adRequest') ?>" >
-                <i class="fa fa-align-justify"></i>
+                <i class="fa fa-audio-description"></i>
                 <span>Advertisment Request</span>
               </a>
             </li>

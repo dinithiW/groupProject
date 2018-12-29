@@ -14,13 +14,37 @@ class DirectorDashboard extends CI_Controller{
 
 	public function adRequest(){
 	$this->load->view('includes/header');
-        $this->load->view('users/director/addNew');
-        $this->load->view('includes/footer');
+        $this->load->view('users/director/adRequest');
+	$this->load->view('includes/footer');
+	
+	}
+
+	public function insertData(){
+		
+		$data = array(
+			'name' => $this->input->post('vacanciesneeded', TRUE),
+			'dead_line' => $this->input->post('deadline', TRUE)
+		);
+
+		
+		$response = $this->db->insert('vacancies', $data);
+		
+		if($response){
+			$message = "Request sent successfully.";
+			echo "<script type='text/javascript'>alert('$message');</script>";
+			redirect('DirectorDashboard/adRequest');
+		} else{
+			$message = "Error. Something went wrong!";
+			echo "<script type='text/javascript'>alert('$message');</script>";
+		}
+
+		
 	}
 
 	public function finalize(){
 		
 	}
+	
 	public function addNotification(){
 		$this->load->model('Notification');
         $this->Notification->add();

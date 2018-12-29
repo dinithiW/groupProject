@@ -7,6 +7,11 @@ class ApplicantDashboard extends CI_Controller{
 		$this->load->helper('url');
     }
 
+    public function index(){
+        $this->load->view('includes/header');
+        $this->load->view('MainDashboard');
+        $this->load->view('includes/footer');
+    }
 
 
     public function applicationFirstPage(){

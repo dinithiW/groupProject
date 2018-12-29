@@ -48,7 +48,7 @@ class RegisterUser extends CI_Model{
         			 $userdata = array(
 	        			'username'  => $email,
 	        			//'email'     => $row->EMAIL,
-	        			'usertype'  => $email,
+	        			'usertype'  => 'Applicant',
 	        			'name'      => $name,
 	        			'logged_in' => TRUE
 					);
