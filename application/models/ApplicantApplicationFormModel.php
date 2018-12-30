@@ -64,10 +64,24 @@ class ApplicantApplicationFormModel extends CI_Model{
         $this->insertProfessionalQualificationsModel($idNumber);
         $this->insertRefereeModel($idNumber);
         $this->insertLanguageProficiencyModel($idNumber);
+        $this->insertApplicatsMoreDetails($idNumber);
     }
 
     public function insertSpecificationAreas(){
         $this->load->database();
+    }
+
+
+    public function insertApplicatsMoreDetails($idNumber){
+        $this->load->database();
+        $data = array(
+            'INDEX_NUMBER'                       =>$idNumber,
+            'EXPERIENCE_RELEVANT_TO_POST'        =>$this->input->post('experience'),
+            'RESEARCH_AND_PUBLICATION_DETAILS'   =>$this->input->post('research'),
+            'ANY_OTHER_INFORMATION'              =>$this->input->post('other_details'),
+            'SUBMISSION_DATE'                    =>$this->input->post('current_date')
+        );
+        $this->db->insert('applicats_more_details', $data);
     }
 
 
