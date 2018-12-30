@@ -397,12 +397,13 @@ if(isset($this->session->userdata['logged_in'])){
                     </select>
                 </div>
 
-                <div class="custom-select " style="width:300px; height:50px;">
+                <div class="custom-select " style="width:430px; height:50px;">
                    <select name="selectDegree" id="selectCategory">
                         <option value="0">Select Degree Category:</option>
-                        <option value="bachelore_of_science">Bachelore of science</option>
-                        <option value="bachelore_of_computer_science">Bachelore of Computer Science</option>
-                        <option value="bachelore_of_arts">Bachelore of Arts</option>
+                        <option value="first_class">First Class(Bachelore of computer science)</option>
+                        <option value="second_upper">Second Upper(Bachelore of computer science)</option>
+                        <option value="second_lower">Second Lower(Bachelore of computer science)</option>
+                        <option value="general">General(Bachelore of computer science)</option>
                     </select>
                 </div>
 
@@ -732,12 +733,14 @@ if(isset($this->session->userdata['logged_in'])){
 
                     <!-- start the text box one-->
                     <div form-group>
+                        <label >Experience relevant to the post applied for</label>
                         <input type="text" name="experience" id="experience" class="form-control input-sm" placeholder="                                        Experience relevant to the post applied for (Please indicate the tasks handled with the duration) ">
                     </div>
                     <!-- end the text box one-->
 
                      <!-- start the text box two-->
                     <div form-group>
+                        <label >Details of research and publications, If any</label>
                         <input type="text" name="research" id="research" class="form-control input-sm" placeholder="                                        Details of research and publications, If any (if space is insufficient, please append it with appends) ">
                     </div>
                     <!-- end the text box two-->
@@ -816,7 +819,8 @@ if(isset($this->session->userdata['logged_in'])){
 
                     <!-- other--> 
                     <div form-group>
-                            <input type="text" name="other_details" id="other" class="form-control input-sm" placeholder="                                                                              Any other information that you need like to indicate ">
+                        <label>Any other information that you need like to indicate</label>
+                        <input type="text" name="other_details" id="other" class="form-control input-sm" placeholder="                                                                              Any other information that you need like to indicate ">
                     </div> 
                     <!-- other--> 
 
@@ -824,7 +828,7 @@ if(isset($this->session->userdata['logged_in'])){
                         <b>I here by declare that the particulars furnished by me in the application are true and accurate.<br> I am also aware that if any partuculars contains herein are found to be false or incorrect I am<br> liable to disqualification if the inaccuracy is discovered before the selection and dimissal without any compensation if th inaccuracy is discovered after the appointment</b>
                     </h4> 
 
-                     <div class="calender">
+                     <div class="calender" >
                         <input id = "calender1"  type ="date" name="current_date" data-date-inline-picker="true" />
                     </div>
 
