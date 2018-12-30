@@ -59,6 +59,11 @@ class ApplicantApplicationFormModel extends CI_Model{
 
         $this->updateTemporaryIdTable($idNumber);
         $this->insertSecondaryEducationalDetailsModel($idNumber);
+        $this->insertHigherEducationalDetailsModel($idNumber);
+        $this->insertAnyOtherQualificationsModel($idNumber);
+        $this->insertProfessionalQualificationsModel($idNumber);
+        $this->insertRefereeModel($idNumber);
+        $this->insertLanguageProficiencyModel($idNumber);
     }
 
     public function insertSpecificationAreas(){
@@ -66,6 +71,12 @@ class ApplicantApplicationFormModel extends CI_Model{
     }
 
 
+
+    /**
+     * this funciton is use for the 
+     * insert secondary educational details
+     * to the database
+     */
     public function insertSecondaryEducationalDetailsModel($idNumber){
         
         $this->load->database();
@@ -77,10 +88,7 @@ class ApplicantApplicationFormModel extends CI_Model{
             'EXAMINATION_PASSED' =>$this->input->post('secondary_educational_examination1'),
             'YEAR'               =>$this->input->post('secondary_educational_year1')
         );
-
-        $this->db->set($secondary_educational_table_first_row);
-        $this->db->insert($this->db->dbprefix.'secondary_educational_details');
-        
+        $this->db->insert('secondary_educational_details', $secondary_educational_table_first_row);
         
         $secondary_educational_table_second_row = array(
             'INDEX_NUMBER'       =>$idNumber,
@@ -90,10 +98,7 @@ class ApplicantApplicationFormModel extends CI_Model{
             'EXAMINATION_PASSED' =>$this->input->post('secondary_educational_examination2'),
             'YEAR'               =>$this->input->post('secondary_educational_year2')
         );
-
-    
         $this->db->insert('secondary_educational_details', $secondary_educational_table_second_row);
-
 
         $secondary_educational_table_third_row = array(
             'INDEX_NUMBER'       =>$idNumber,
@@ -103,12 +108,8 @@ class ApplicantApplicationFormModel extends CI_Model{
             'EXAMINATION_PASSED' =>$this->input->post('secondary_educational_examination3'),
             'YEAR'               =>$this->input->post('secondary_educational_year3')
         );
-
-
         $this->db->insert('secondary_educational_details', $secondary_educational_table_third_row);
-
-        
-        
+   
         $secondary_educational_table_fourth_row = array(
             'INDEX_NUMBER'       =>$idNumber,
             'SCHOOL_NAME'        =>$this->input->post('secondary_educational_school_name4'),
@@ -117,7 +118,6 @@ class ApplicantApplicationFormModel extends CI_Model{
             'EXAMINATION_PASSED' =>$this->input->post('secondary_educational_examination4'),
             'YEAR'               =>$this->input->post('secondary_educational_year4')
         );
-
         $this->db->insert('secondary_educational_details', $secondary_educational_table_fourth_row);
 
     }
@@ -126,7 +126,7 @@ class ApplicantApplicationFormModel extends CI_Model{
     
         $this->load->database();
         $higher_educational_table_first_row = array(
-            'APPLICANT_ID'       =>$idNumber,
+            'INDEX_NUMBER'       =>$idNumber,
             'UNIVERSITY'         =>$this->input->post('heigher_educational_university1'),
             'FROM'               =>$this->input->post('heigher_educational_from1'),
             'TO'                 =>$this->input->post('heigher_educational_to1'),
@@ -136,13 +136,10 @@ class ApplicantApplicationFormModel extends CI_Model{
             'YEAR'               =>$this->input->post('heigher_educational_year1'),
             'INDEX_NO'           =>$this->input->post('heigher_educational_year_no1'),
         );
-
-        $this->db->set($higher_educational_table_first_row);
-        $this->db->insert($this->db->dbprefix.'higher_educational_details');
-        
+        $this->db->insert('higher_educational_details', $higher_educational_table_first_row);
 
         $higher_educational_table_second_row = array(
-            'APPLICANT_ID'       =>$idNumber,
+            'INDEX_NUMBER'       =>$idNumber,
             'UNIVERSITY'         =>$this->input->post('heigher_educational_university2'),
             'FROM'               =>$this->input->post('heigher_educational_from2'),
             'TO'                 =>$this->input->post('heigher_educational_to2'),
@@ -152,13 +149,10 @@ class ApplicantApplicationFormModel extends CI_Model{
             'YEAR'               =>$this->input->post('heigher_educational_year2'),
             'INDEX_NO'           =>$this->input->post('heigher_educational_year_no2'),
         );
-
-        $this->db->set($higher_educational_table_second_row);
-        $this->db->insert($this->db->dbprefix.'higher_educational_details');
-       
+        $this->db->insert('higher_educational_details', $higher_educational_table_second_row);
 
         $higher_educational_table_third_row = array(
-            'APPLICANT_ID'       =>$idNumber,
+            'INDEX_NUMBER'       =>$idNumber,
             'UNIVERSITY'         =>$this->input->post('heigher_educational_university3'),
             'FROM'               =>$this->input->post('heigher_educational_from3'),
             'TO'                 =>$this->input->post('heigher_educational_to3'),
@@ -168,13 +162,10 @@ class ApplicantApplicationFormModel extends CI_Model{
             'YEAR'               =>$this->input->post('heigher_educational_year3'),
             'INDEX_NO'           =>$this->input->post('heigher_educational_year_no3'),
         );
-
-        $this->db->set($higher_educational_table_third_row);
-        $this->db->insert($this->db->dbprefix.'higher_educational_details');
-        
+        $this->db->insert('higher_educational_details', $higher_educational_table_third_row);
 
         $higher_educational_table_fourth_row = array(
-            'APPLICANT_ID'       =>$idNumber,
+            'INDEX_NUMBER'       =>$idNumber,
             'UNIVERSITY'         =>$this->input->post('heigher_educational_university4'),
             'FROM'               =>$this->input->post('heigher_educational_from4'),
             'TO'                 =>$this->input->post('heigher_educational_to4'),
@@ -184,10 +175,8 @@ class ApplicantApplicationFormModel extends CI_Model{
             'YEAR'               =>$this->input->post('heigher_educational_year4'),
             'INDEX_NO'           =>$this->input->post('heigher_educational_year_no4'),
         );
-
-        $this->db->set($higher_educational_table_fourth_row);
-        $this->db->insert($this->db->dbprefix.'higher_educational_details');
-        
+        $this->db->insert('higher_educational_details', $higher_educational_table_fourth_row);
+     
     }
 
     public function insertAnyOtherQualificationsModel($idNumber){
@@ -196,7 +185,7 @@ class ApplicantApplicationFormModel extends CI_Model{
 
         $any_other_qualifications_table_first_row = array(
 
-            'APPLICANT_ID'       =>$idNumber,
+            'INDEX_NUMBER'       =>$idNumber,
             'INSTITUTION'        =>$this->input->post('any_other_qualifications_university1'),
             'DEPLOMA'            =>$this->input->post('any_other_qualifications_deploma1'),
             'DURAION'            =>$this->input->post('any_other_qualifications_duration1'),
@@ -209,7 +198,7 @@ class ApplicantApplicationFormModel extends CI_Model{
 
         $any_other_qualifications_table_second_row = array(
 
-            'APPLICANT_ID'       =>$idNumber,
+            'INDEX_NUMBER'       =>$idNumber,
             'INSTITUTION'        =>$this->input->post('any_other_qualifications_university2'),
             'DEPLOMA'            =>$this->input->post('any_other_qualifications_deploma2'),
             'DURAION'            =>$this->input->post('any_other_qualifications_duration2'),
@@ -222,7 +211,7 @@ class ApplicantApplicationFormModel extends CI_Model{
 
         $any_other_qualifications_table_third_row = array(
 
-            'APPLICANT_ID'       =>$idNumber,
+            'INDEX_NUMBER'       =>$idNumber,
             'INSTITUTION'        =>$this->input->post('any_other_qualifications_university3'),
             'DEPLOMA'            =>$this->input->post('any_other_qualifications_deploma3'),
             'DURAION'            =>$this->input->post('any_other_qualifications_duration3'),
@@ -239,7 +228,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         $this->load->database();
         $professional_qualifications_table_first_row = array(
 
-            'APPLICANT_ID'          =>$idNumber,
+            'INDEX_NUMBER'       =>$idNumber,
             'INSTITUTION'           =>$this->input->post('any_other_qualifications_institution1'),
             'FROM'                  =>$this->input->post('any_other_qualifications_from1'),
             'TO'                    =>$this->input->post('any_other_qualifications_to1'),
@@ -253,7 +242,7 @@ class ApplicantApplicationFormModel extends CI_Model{
 
         $professional_qualifications_table_second_row = array(
 
-            'APPLICANT_ID'          =>$idNumber,
+            'INDEX_NUMBER'       =>$idNumber,
             'INSTITUTION'           =>$this->input->post('any_other_qualifications_institution2'),
             'FROM'                  =>$this->input->post('any_other_qualifications_from2'),
             'TO'                    =>$this->input->post('any_other_qualifications_to2'),
@@ -267,7 +256,7 @@ class ApplicantApplicationFormModel extends CI_Model{
 
         $professional_qualifications_table_third_row = array(
 
-            'APPLICANT_ID'          =>$idNumber,
+            'INDEX_NUMBER'          =>$idNumber,
             'INSTITUTION'           =>$this->input->post('any_other_qualifications_institution3'),
             'FROM'                  =>$this->input->post('any_other_qualifications_from3'),
             'TO'                    =>$this->input->post('any_other_qualifications_to3'),
@@ -288,7 +277,7 @@ class ApplicantApplicationFormModel extends CI_Model{
 
         $referee_table_first_row = array(
 
-            'APPLICANT_ID'          =>$idNumber,
+            'INDEX_NUMBER'          =>$idNumber,
             'NAME'                  =>$this->input->post('referees_name1'),
             'DESIGNATION'           =>$this->input->post('referees_designation1'),
             'ADDRESS'               =>$this->input->post('referees_address1'),
@@ -302,7 +291,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         
         $referee_table_second_row = array(
 
-            'APPLICANT_ID'          =>$idNumber,
+            'INDEX_NUMBER'          =>$idNumber,
             'NAME'                  =>$this->input->post('referees_name2'),
             'DESIGNATION'           =>$this->input->post('referees_designation2'),
             'ADDRESS'               =>$this->input->post('referees_address2'),
@@ -316,7 +305,7 @@ class ApplicantApplicationFormModel extends CI_Model{
 
         $referee_table_third_row = array(
 
-            'APPLICANT_ID'          =>$idNumber,
+            'INDEX_NUMBER'          =>$idNumber,
             'NAME'                  =>$this->input->post('referees_name3'),
             'DESIGNATION'           =>$this->input->post('referees_designation3'),
             'ADDRESS'               =>$this->input->post('referees_address3'),
@@ -343,7 +332,7 @@ class ApplicantApplicationFormModel extends CI_Model{
 
         $language_proficiency = array(
 
-            'APPLICANT_ID'          =>$idNumber,
+            'INDEX_NUMBER'          =>$idNumber,
             'WORK_SINHALA'          =>$name1,
             'WORK_ENGLISH'          =>$name2,
             'WORK_TAMIL'            =>$name3,

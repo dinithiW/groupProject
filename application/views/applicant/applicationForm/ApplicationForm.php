@@ -640,9 +640,11 @@ if(isset($this->session->userdata['logged_in'])){
                     
                 
                     <!-- start of the dropdown for sinhala-->
-                    <div class="custom-select" style="width:300px; height:50px;">
+                    
+                    <div class="custom-select" style="width:300px; height:80px;">
+                        <label for="sinhala">Ability to Work Sinhala</label>
                         <select name="work_sinhala">
-                            <option value="sinhala">Sinhala:</option>
+                            <option value="0">Mark in here:</option>
                             <option value="verygood">Very Good</option>
                             <option value="good">Good</option>
                             <option value="fair">Fair</option>
@@ -652,21 +654,28 @@ if(isset($this->session->userdata['logged_in'])){
                     <!-- end of the dropdown for sinhala1-->
 
                    <!-- start of the dropdown for tamil1-->
-                    <div class="custom-select" style="width:300px; height:50px;">
-                        <select name="work_english">
-                            <option value="0">English:</option>
+                   
+
+                    <div class="custom-select" style="width:300px; height:80px;">
+                        <label for="sinhala">Ability To Teach Sinhala</label>
+                        <select name="teach_sinhala">
+                            <option value="0">Mark in here:</option>
                             <option value="verygood">Very Good</option>
                             <option value="good">Good</option>
                             <option value="fair">Fair</option>
                             <option value="no_knowledge">No Knowledge</option>
                         </select>
                     </div>
+                    
                     <!-- end of the dropdown for tamil1-->
 
                     <!-- start of the dropdown for english1-->
-                    <div class="custom-select" style="width:300px; height:50px;">
+                    
+
+                    <div class="custom-select" style="width:300px; height:80px;">
+                    <label for="tamil">Ability to Work Tamil</label>
                         <select name="work_tamil">
-                            <option value="0">Tamil:</option>
+                            <option value="0">Mark in here:</option>
                             <option value="verygood">Very Good</option>
                             <option value="good">Good</option>
                             <option value="fair">Fair</option>
@@ -676,9 +685,13 @@ if(isset($this->session->userdata['logged_in'])){
                     <!-- end of the dropdown for english1-->
 
                     <!-- start of the dropdown for sinhala2-->
-                    <div class="custom-select" style="width:300px; height:50px;">
-                        <select name="teach_sinhala">
-                            <option value="0">Sinhala:</option>
+                    
+                    
+                   
+                    <div class="custom-select" style="width:300px; height:80px;">
+                        <label for="tamil">Ability To Teach Tamil</label>
+                        <select name="teach_tamil">
+                            <option value="0">Mark in here:</option>
                             <option value="verygood">Very Good</option>
                             <option value="good">Good</option>
                             <option value="fair">Fair</option>
@@ -688,9 +701,10 @@ if(isset($this->session->userdata['logged_in'])){
                    <!-- end of the dropdown for sinhala2-->
 
                     <!-- start of the dropdown for tamil2-->
-                    <div class="custom-select" style="width:300px; height:50px;">
-                        <select name="teach_english">
-                            <option value="0">English:</option>
+                    <div class="custom-select" style="width:300px; height:80px;">
+                        <label for="english">Ability to Work English</label>
+                        <select name="work_english">
+                            <option value="0">Mark in here:</option>
                             <option value="verygood">Very Good</option>
                             <option value="good">Good</option>
                             <option value="fair">Fair</option>
@@ -700,15 +714,17 @@ if(isset($this->session->userdata['logged_in'])){
                     <!-- end of the dropdown for tamil2-->
 
                     <!-- start of the dropdown for english2-->
-                    <div class="custom-select" style="width:300px; height:50px;">
-                        <select name="teach_tamil">
-                            <option value="0">Tamil:</option>
+                    <div class="custom-select" style="width:300px; height:80px;">
+                        <label for="english">Ability To Teach English</label>
+                        <select name="teach_english">
+                            <option value="0">Mark in here:</option>
                             <option value="verygood">Very Good</option>
                             <option value="good">Good</option>
                             <option value="fair">Fair</option>
                             <option value="no_knowledge">No Knowledge</option>
                         </select>
                     </div>
+                    
                     <!-- end of the dropdown for english2-->
 <!-- end of the dropdown series-->
 
