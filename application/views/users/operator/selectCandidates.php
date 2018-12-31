@@ -28,18 +28,28 @@
       </h1>
     </section>
     <section class="content">
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-xs-12 text-right">
                 <div class="form-group">
                     <a class="btn btn-primary" href="<?= base_url('OperatorIndex/addMember') ?>"><i class="fa fa-plus"></i> Add New</a>
                 </div>
             </div>
-        </div>
+        </div> -->
+      <div class="form-group  col-xs-12">
+        <label for="input-lg" class="input-lg"> Select Vacancy</label>
+        <select class="form-control input-lg" id="sel1">
+          <option>Lecturer Probationary</option>
+          <option>Senior Lecturer</option>
+          <!-- <option>3</option>
+          <option>4</option> -->
+        </select>
+      </div>
+
         <div class="row">
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-                    <h3 class="box-title">Users List</h3>
+                    <h3 class="box-title">Candidates List</h3>
                     <div class="box-tools">
                         <form action="<?php echo base_url() ?>userListing" method="POST" id="searchList">
                             <div class="input-group">
@@ -56,14 +66,31 @@
                     <tr>
                       <th>Applicant ID</th>
                       <th>Name</th>
-                      <!-- <th>Last Name</th> -->
+                      <th>DOB</th>
                       <th>Age</th>
                       <th>Degree</th>
                       <th>Class</th>
-                      <th>Experience</th>
+                      <th>Educational Qualifications</th>
+                      <th>Professional Qualifications</th>
+                      <th>Previous Experiences</th>
+                      <th>Specializations</th>
                       <th>Selected</th>
-                      <th>Actions</th>
                       <th class="text-center">Actions</th>
+                    </tr>
+
+                    <tr>
+                      <td>2016/CS/157</td>
+                      <td>D.N. Wickramaratne</td>
+                      <td>12/01/1996</td>
+                      <td>28</td>
+                      <td>BSc in Engineering</td>
+                      <td>First Class</td>
+                      <td>Assistant lecturer municipal,hahaha kjkjkjhkjh,asasdadj</td>
+                      <td>Assistant lecturer municipal,hahaha kjkjkjhkjh,asasdadj</td>
+                      <td>Assistant lecturer municipal,hahaha kjkjkjhkjh,asasdadj</td>
+                      <td>Assistant lecturer municipal,hahaha kjkjkjhkjh,asasdadj</td>
+                      <td><input type="checkbox" value=""></td>
+                      <td class="text-center"><a>more</a></td>
                     </tr>
 
                     <!-- this was commented -->

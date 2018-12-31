@@ -170,7 +170,7 @@ if($checking=='1'){
             </li>
 
             <li class="treeview">
-              <a href="#" >
+              <a href="<?=base_url('OperatorIndex/interviewDate')?>" >
                 <i class="fa fa-calendar"></i>
                 <span>Set Interview Date</span>
               </a>
