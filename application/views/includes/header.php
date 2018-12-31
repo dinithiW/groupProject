@@ -163,7 +163,7 @@ if($checking=='1'){
             </li>
 
             <li class="treeview">
-              <a href="#" >
+              <a href="<?= base_url('OperatorIndex/select')?>" >
                 <i class="fa fa-users"></i>
                 <span>Categorize Applicants</span>
               </a>

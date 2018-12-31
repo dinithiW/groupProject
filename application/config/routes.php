@@ -87,7 +87,8 @@ $route['OperatorIndex/checkEmailExists'] = "OperatorDashboard/checkEmailExists";
 $route['OperatorIndex/editMember/(:any)'] = "OperatorDashboard/editMemberView/$1";
 $route['OperatorIndex/deleteMember/(:any)'] = "OperatorDashboard/deleteMemberMsg/$1";
 $route['OperatorIndex/deleteMemberProcess/(:any)'] = "OperatorDashboard/deleteMemberModel/$1";
-
+//this is for loading the home page of the candidate selection process
+$route['OperatorIndex/select'] = "OperatorDashboard/selectCandidates";
 //Director routes
 $route['Director'] = 'DirectorDashboard/index';
 $route['Director/adRequest'] = 'DirectorDashboard/adRequest';
