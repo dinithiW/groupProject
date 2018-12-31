@@ -215,7 +215,7 @@ if(isset($this->session->userdata['logged_in'])){
                             ?>             
                                         <tr>
                                             
-                                            <td><input class="areas" type="checkbox" name="vehicle" id="checkBox" value=""></td>
+                                            <td><input class="areas" type="checkbox" name="check_list[]" id="checkBox" value="<?php echo $row->AREA_NAME;?>"></td>
                                             <td >
                                                 <div class="areasForSelection" align="left"><?php echo $row->AREA_NAME;?></div>
                                             </td>

@@ -65,25 +65,21 @@ class ApplicantApplicationFormModel extends CI_Model{
         $this->insertRefereeModel($idNumber);
         $this->insertLanguageProficiencyModel($idNumber);
         $this->insertApplicatsMoreDetails($idNumber);
+        $this->insertSpecificationAreas($idNumber);
     }
 
-    public function insertSpecificationAreas(){
+    public function insertSpecificationAreas($idNumber){        
         $this->load->database();
+        foreach($this->input->post('check_list') as $selected_area){
+            $data = array(
+                'INDEX_NUMBER'            =>$idNumber, 
+                'SPECIFICATION_AREA_NAME' =>$selected_area
+            );
+            $this->db->insert('specialization_area_for_applicant', $data);
+        
+        }
+
     }
-
-
-    public function insertApplicatsMoreDetails($idNumber){
-        $this->load->database();
-        $data = array(
-            'INDEX_NUMBER'                       =>$idNumber,
-            'EXPERIENCE_RELEVANT_TO_POST'        =>$this->input->post('experience'),
-            'RESEARCH_AND_PUBLICATION_DETAILS'   =>$this->input->post('research'),
-            'ANY_OTHER_INFORMATION'              =>$this->input->post('other_details'),
-            'SUBMISSION_DATE'                    =>$this->input->post('current_date')
-        );
-        $this->db->insert('applicats_more_details', $data);
-    }
-
 
 
     /**
@@ -404,6 +400,28 @@ class ApplicantApplicationFormModel extends CI_Model{
         
         return $temporary_index_number;
     }
+
+    /**
+     * this funciton use for add applicants other details to database
+     * such as 
+     * EXPERIENCE_RELEVANT_TO_POST,
+     * RESEARCH_AND_PUBLICATION_DETAILS
+     * ANY_OTHER_INFORMATION
+     * SUBMISSION_DATE
+     */
+    public function insertApplicatsMoreDetails($idNumber){
+        $this->load->database();
+        $data = array(
+            'INDEX_NUMBER'                       =>$idNumber,
+            'EXPERIENCE_RELEVANT_TO_POST'        =>$this->input->post('experience'),
+            'RESEARCH_AND_PUBLICATION_DETAILS'   =>$this->input->post('research'),
+            'ANY_OTHER_INFORMATION'              =>$this->input->post('other_details'),
+            'SUBMISSION_DATE'                    =>$this->input->post('current_date')
+        );
+        $this->db->insert('applicats_more_details', $data);
+    }
+
+
 
 
 /**
