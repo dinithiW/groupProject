@@ -33,7 +33,7 @@
           <li><a href="#feature">About</a></li>
           <li><a href="#staff">Staff</a></li>
           <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#add">Advertisement</a></li>
           <li><a href="<?= base_url("loginUsers")?>" data-target="#login" data-toggle="modal">Sign in</a></li>
 		  <li><a href="#footer">Contact</a></li>
           
@@ -371,7 +371,7 @@
   </section>
   <!--/ Courses-->
   <!--Pricing-->
-  <section id="pricing" class="section-padding">
+  <section id="add" class="section-padding">
     <div class="container">
       <div class="row">
          <div class="col-md-4" style="padding-top: 20px;cursor: pointer">
