@@ -120,7 +120,7 @@ if($checking=='1'){
                       <a href="<?php echo base_url(); ?>loadChangePass" class="btn btn-default btn-flat"><i class="fa fa-key"></i> Change Password</a>
                     </div>
                     <div class="pull-right">
-                      <a href="<?php echo base_url(); ?>LOGOUT" class="btn btn-default btn-flat"><i class="fa fa-sign-out"></i> Sign out</a>
+                      <a href="<?php echo base_url(); ?>logout" class="btn btn-default btn-flat"><i class="fa fa-sign-out"></i> Sign out</a>
                     </div>
                   </li>
                 </ul>
@@ -253,7 +253,7 @@ if($checking=='1'){
             </li>
 
              <li class="treeview">
-              <a href="#" >
+              <a href="<?= base_url('reports') ?>" >
                 <i class="fa fa-files-o"></i>
                 <span>Reports</span>
               </a>

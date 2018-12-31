@@ -59,6 +59,7 @@ $route['login/contact'] = 'ApplicantLogin/contact';
 $route['register'] = 'ApplicantLogin/register';
 $route['addUser'] = 'ApplicantLogin/addUser';
 $route['logout']='User/logout';
+$route['advertisement']='User/add';
 
 //$route['loginUser'] = 'UsersLogin/index';
 //$route['loginUser/process'] = 'UsersLogin/process';
@@ -87,6 +88,13 @@ $route['OperatorIndex/checkEmailExists'] = "OperatorDashboard/checkEmailExists";
 $route['OperatorIndex/editMember/(:any)'] = "OperatorDashboard/editMemberView/$1";
 $route['OperatorIndex/deleteMember/(:any)'] = "OperatorDashboard/deleteMemberMsg/$1";
 $route['OperatorIndex/deleteMemberProcess/(:any)'] = "OperatorDashboard/deleteMemberModel/$1";
+
+//SAR routes
+$route['SAR']='SARDashboard/index';
+$route['reports']='SARDashboard/report';
+
+
+
 
 //Director routes
 $route['Director'] = 'DirectorDashboard/index';
