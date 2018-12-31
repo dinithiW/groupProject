@@ -68,6 +68,8 @@ class ApplicantApplicationFormModel extends CI_Model{
         $this->insertSpecificationAreas($idNumber);
     }
 
+    
+
     public function insertSpecificationAreas($idNumber){        
         $this->load->database();
         foreach($this->input->post('check_list') as $selected_area){
