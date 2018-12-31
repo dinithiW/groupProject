@@ -253,7 +253,7 @@ if($checking=='1'){
             </li>
 
              <li class="treeview">
-              <a href="#" >
+              <a href="<?= base_url('reports') ?>" >
                 <i class="fa fa-files-o"></i>
                 <span>Reports</span>
               </a>

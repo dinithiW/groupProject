@@ -89,6 +89,13 @@ $route['OperatorIndex/editMember/(:any)'] = "OperatorDashboard/editMemberView/$1
 $route['OperatorIndex/deleteMember/(:any)'] = "OperatorDashboard/deleteMemberMsg/$1";
 $route['OperatorIndex/deleteMemberProcess/(:any)'] = "OperatorDashboard/deleteMemberModel/$1";
 
+//SAR routes
+$route['SAR']='SARDashboard/index';
+$route['reports']='SARDashboard/report';
+
+
+
+
 //Director routes
 $route['Director'] = 'DirectorDashboard/index';
 $route['Director/adRequest'] = 'DirectorDashboard/adRequest';
