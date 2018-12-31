@@ -59,6 +59,7 @@ $route['login/contact'] = 'ApplicantLogin/contact';
 $route['register'] = 'ApplicantLogin/register';
 $route['addUser'] = 'ApplicantLogin/addUser';
 $route['logout']='User/logout';
+$route['advertisement']='User/add';
 
 //$route['loginUser'] = 'UsersLogin/index';
 //$route['loginUser/process'] = 'UsersLogin/process';

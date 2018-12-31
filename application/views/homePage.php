@@ -374,7 +374,22 @@
   <section id="pricing" class="section-padding">
     <div class="container">
       <div class="row">
-        <div class="header-section text-center">
+         <div class="col-md-4" style="padding-top: 20px;cursor: pointer">
+                <div>
+                    <a href="<?= base_url() ?>advertisement" style="color: inherit;text-decoration: none;"
+                       target="_blank">
+                    <span class="fa-stack fa-4x">
+                      <i class="fas fa-circle fa-stack-2x" style="color: #cb941e"></i>
+                      <i class="fas fa-book-open fa-stack-1x fa-inverse"></i>
+                    </span>
+                        <h4 class="service-heading">Advertisement</h4>
+                        <p class="text-muted">Click here to view advertisements.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!--  <div class="header-section text-center">
           <h2>Advertisement</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nesciunt vitae,<br> maiores, magni dolorum aliquam.</p>
           <hr class="bottom-line">
@@ -382,13 +397,13 @@
         <div class="col-md-4 col-sm-4">
           <div class="price-table">
             <!-- Plan  -->
-            <div class="pricing-head">
+           <!-- <div class="pricing-head">
               <h4>Monthly Plan</h4>
               <span class="fa fa-usd curency"></span> <span class="amount">200</span>
             </div>
 
             <!-- Plean Detail -->
-            <div class="price-in mart-15">
+            <!--<div class="price-in mart-15">
               <a href="#" class="btn btn-bg green btn-block">PURCHACE</a>
             </div>
           </div>
@@ -396,33 +411,34 @@
         <div class="col-md-4 col-sm-4">
           <div class="price-table">
             <!-- Plan  -->
-            <div class="pricing-head">
+           <!-- <div class="pricing-head">
               <h4>Quarterly Plan</h4>
               <span class="fa fa-usd curency"></span> <span class="amount">800</span>
             </div>
 
             <!-- Plean Detail -->
-            <div class="price-in mart-15">
+            <!--<div class="price-in mart-15">
               <a href="#" class="btn btn-bg yellow btn-block">PURCHACE</a>
-            </div>
+            </div> 
           </div>
         </div>
         <div class="col-md-4 col-sm-4">
           <div class="price-table">
             <!-- Plan  -->
-            <div class="pricing-head">
+           <!-- <div class="pricing-head">
               <h4>Year Plan</h4>
               <span class="fa fa-usd curency"></span> <span class="amount">1200</span>
             </div>
 
             <!-- Plean Detail -->
-            <div class="price-in mart-15">
+           <!-- <div class="price-in mart-15">
               <a href="#" class="btn btn-bg red btn-block">PURCHACE</a>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <!--id -->
   </section>
   <!--/ Pricing-->
   <!--Contact-->
