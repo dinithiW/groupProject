@@ -92,6 +92,7 @@ $route['OperatorIndex/deleteMemberProcess/(:any)'] = "OperatorDashboard/deleteMe
 //SAR routes
 $route['SAR']='SARDashboard/index';
 $route['reports']='SARDashboard/report';
+$route['sendmail']='SARDashboard/sendmail';
 
 
 
