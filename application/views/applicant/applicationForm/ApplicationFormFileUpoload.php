@@ -18,7 +18,7 @@ if($this->session->userdata['logged_in']){
                                 <!-- start of a upload link-->
                                 <div class="form-group one">
                                         <h6 id="label1"><b><?php echo $row->LINK_NAME?></b></h6>
-                                        <input type="file" class="inputClass1" id="inputId1" name="sentfile">
+                                        <input type="file" class="inputClass1" id="inputId1" name="attached_file">
                                         <button type="submit" class="btn btn-lg btn-block btn-primary"  id="button1">upload</button>
                                     </div>
                                 <!-- end of a upload link-->

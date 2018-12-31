@@ -29,6 +29,37 @@
             }
         }
 
+        /**
+         * this funciton is use for call AddCustomerForDatabase() function
+         * it will upload file to database
+         */
+        public function insertfileUpload(){
+       
+            $this->load->helper('form');
+            $this->load->library('form_validation');
+            $data['title'] = 'Create a new Student';
+    
+            $config = array(
+                    'upload_path'    => 'assets/uploaded_file/',
+                    'allowed_types'  => 'jpg|jpeg|png|bmp|txt|pdf',
+                    'max_size'       =>0,
+                    'filename'       =>url_title($this->input->post('file')),
+                    //'encrypt_name' =>true                   
+            );
+    
+    
+            $this->load->library('upload', $config);
+    
+            if (!$this->upload->do_upload('attached_file')){
+                echo $this->upload->display_errors('<p>', '</p>');
+            }
+            else{
+                $this->load->model('ApplicantApplicationFormModel');
+                $this->ApplicantApplicationFormModel->AddCustomerForDatabase($this->upload->data('full_path'),$this->input->post());
+            }
+        }
+    
+
         public function updateBasicPersonalDetailsController(){
             /*
             $idNumber ="18se7";
