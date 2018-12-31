@@ -59,6 +59,7 @@ $route['login/contact'] = 'ApplicantLogin/contact';
 $route['register'] = 'ApplicantLogin/register';
 $route['addUser'] = 'ApplicantLogin/addUser';
 $route['logout']='User/logout';
+$route['advertisement']='User/add';
 
 //$route['loginUser'] = 'UsersLogin/index';
 //$route['loginUser/process'] = 'UsersLogin/process';
@@ -87,8 +88,14 @@ $route['OperatorIndex/checkEmailExists'] = "OperatorDashboard/checkEmailExists";
 $route['OperatorIndex/editMember/(:any)'] = "OperatorDashboard/editMemberView/$1";
 $route['OperatorIndex/deleteMember/(:any)'] = "OperatorDashboard/deleteMemberMsg/$1";
 $route['OperatorIndex/deleteMemberProcess/(:any)'] = "OperatorDashboard/deleteMemberModel/$1";
+
 //this is for loading the home page of the candidate selection process
 $route['OperatorIndex/select'] = "OperatorDashboard/selectCandidates";
+
+//SAR routes
+$route['SAR']='SARDashboard/index';
+$route['reports']='SARDashboard/report';
+
 //Director routes
 $route['Director'] = 'DirectorDashboard/index';
 $route['Director/adRequest'] = 'DirectorDashboard/adRequest';
@@ -100,7 +107,7 @@ $route['Director/finalize'] = 'DirectorDashboard/finalize';
 //panel
 $route['Panel'] = 'InterviewPanelDashboard/index';
 $route['Panel/viewApplicants'] = 'InterviewPanelDashboard/viewApplicants';
-//$route['Panel/viewApplicants'] = 'InterviewPanelDashboard/viewMarks';
+$route['Panel/viewApplicants'] = 'InterviewPanelDashboard/viewMarks';
 
 $route['dashboard'] = 'User/index';
 $route['home'] = 'Home/index';
