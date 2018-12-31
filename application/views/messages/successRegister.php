@@ -21,7 +21,7 @@ swal({
 },
 function(isConfirm){
   if (isConfirm) {
-    window.location.href = '../registerUsers/home';
+    window.location.href = '../applicant';
   }
 }); }, 1);
 

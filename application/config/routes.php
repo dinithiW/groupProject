@@ -92,6 +92,7 @@ $route['OperatorIndex/deleteMemberProcess/(:any)'] = "OperatorDashboard/deleteMe
 //Director routes
 $route['Director'] = 'DirectorDashboard/index';
 $route['Director/adRequest'] = 'DirectorDashboard/adRequest';
+$route['Director/insertData'] = 'Directordashboard/insertData';
 $route['Director/addMessage'] = 'DirectorDashboard/addNotification';
 $route['Director/viewMessage'] = 'DirectorDashboard/viewNotification';
 $route['Director/finalize'] = 'DirectorDashboard/finalize';
@@ -121,13 +122,14 @@ $route['registerUsers/home'] = 'Register/applicantHome';
 //show registration success message
 $route['registerUsers/success'] = 'Register/success';
 
-
-
-
 //applicant start
+
+//directing to applicant home
+$route['applicant'] = 'ApplicantDashboard/index';
 $route['application_form_fill'] = 'ApplicantDashboard/applicationFirstPage';
 $route['application_form_edit'] = 'ApplicantDashboard/applicationFirstPage';
 $route['application_form_documents'] = 'ApplicantDashboard/applicationFifththPage';
+$route['LOGOUT']='User/out';
 //applicant end
 
 

@@ -11,29 +11,9 @@
             if($this->input->post('Submit')){
                 
                 $this->load->model('ApplicantApplicationFormModel');
- 
-                $id_number =  $this->ApplicantApplicationFormModel->makeApplicationId();
-
-                $email      = $this->session->userdata['sess_varia']['email'];
-                $user_type  = $this->session->userdata['sess_varia']['usertype'];
-                $id_number  = $this->session->userdata['sess_varia']['id_number'];
-                $log        = $this->session->userdata['sess_varia']['logged_in'];
-
-                $session_variables1 = array(
-					'email'    => $email,
-					'usertype' => $user_type,
-					'id_number'=> $id_number,
-			        'logged_in'=> $log
-				);
-                
-                
-                $this->session->set_userdata('sess_varia1', $session_variables1);
-
-                
-
-/*
-                $this->ApplicantApplicationFormModel->insertBasicPersonalDetailsModel($id_number);
-                $this->ApplicantApplicationFormModel->insertSecondaryEducationalDetailsModel($id_number);
+                $this->ApplicantApplicationFormModel->insertBasicPersonalDetailsModel();
+                //$this->ApplicantApplicationFormModel->updateTemporaryIdTable();
+/*                $this->ApplicantApplicationFormModel->insertSecondaryEducationalDetailsModel($id_number);
                 $this->ApplicantApplicationFormModel->insertHigherEducationalDetailsModel($id_number);
                 $this->ApplicantApplicationFormModel->insertAnyOtherQualificationsModel($id_number);
                 $this->ApplicantApplicationFormModel->insertProfessionalQualificationsModel($id_number);

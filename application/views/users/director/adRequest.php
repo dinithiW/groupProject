@@ -1,67 +1,92 @@
-<!DOCTYPE html>
-<html>
-
-<head>    
-    <title>UCSC</title>
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        <i class="fa fa-audio-description"></i> Advertisement Request
+        <small>Add / Edit User</small>
+      </h1>
+    </section>
     
-    <meta charset="utf-8">
-    <meta name="viewport" content="width= device-width ,initial-scale = 1">
-
-    <link rel="stylesheet" href="<?=base_url('assets/css/common.css')?>" type="text/css"/>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <section class="content">
     
- <style>
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-8">
+              <!-- general form elements -->
+                
+                
+                
+                <div class="box box-primary">
+                    <div class="box-header">
+                        <h3 class="box-title">Advertisement Request</h3>
+                    </div><!-- /.box-header -->
+                    <!-- form start -->
 
- /*form{
-    border: 3px solid #f1f1f1;
-    background: linear-gradient(to left, #9900cc 0%, #ff9900 100%);
- }*/
- </style>   
-</head> 
-
-<body>
-  
-    <br />  
-
-    <div class="w3-main" style="margin-left:250px">
-            <div class="w3-row w3-padding-64">
-
-                <div class="text-center"> 
-                <form>
-                    <label for='email'>Vacancies Available</label>
-                    <input type='text' name='fname' id='email' required size='25'placeholder=" Enter the First Name" />
-                    <br/>
-
-                    <label for='email'>Specialization Areas Required</label>
-                    <textarea name='fname' id='email' required size='25'placeholder=" Enter the First Name" size='25'>hahahah
-                    </textarea>
-                    <!-- <input type='text' name='fname' id='email' required size='25'placeholder=" Enter the First Name" /> -->
-                    <br/>
-
-                    <label for='email'>Deadline</label>
-                    <input type='date' name='fname' id='email' required size='25'placeholder=" Enter the First Name" />
-                    <br/>
-                    
-                    
-
-                </form>
+                    <?php echo validation_errors(); ?>
+                    <form role="form" id="addUser" action="<?php echo base_url() ?>Director/insertData" method="post" role="form">
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-md-6">                                
+                                    <div class="form-group">
+                                        <label for="vacanciesneeded">Vacancies needed : </label>
+                                        <input type="text" class="form-control required" id="vacanciesneeded" name="vacanciesneeded" maxlength="128">
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="deadline">Deadline : </label>
+                                        <input type="date" class="form-control required" id="deadline"  name="deadline" maxlength="128">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="specializationrequirements">Specialization requirements : </label>
+                                        <input type="text" class="form-control required" id="specializationrequirements"  name="specializationrequirements" maxlength="10">
+                                    </div>
+                            </div>
+                        </div><!-- /.box-body -->
     
+                        <div class="box-footer">
+                            <input type="submit" class="btn btn-primary" value="Submit" />
+                            <input type="reset" class="btn btn-default" value="Reset" />
+                        </div>
+                    </form>
                 </div>
             </div>
-    </div>
-
-
-
-
-</body>
-
-</html>
-
- 
-<!--onClick="this.form.reset()"-->
-
-
+            <div class="col-md-4">
+                <?php
+                    $this->load->helper('form');
+                    $error = $this->session->flashdata('error');
+                    if($error)
+                    {
+                ?>
+                <div class="alert alert-danger alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <?php echo $this->session->flashdata('error'); ?>                    
+                </div>
+                <?php } ?>
+                <?php  
+                    $success = $this->session->flashdata('success');
+                    if($success)
+                    {
+                ?>
+                <div class="alert alert-success alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <?php echo $this->session->flashdata('success'); ?>
+                </div>
+                <?php } ?>
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <?php echo validation_errors('<div class="alert alert-danger alert-dismissable">', ' <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button></div>'); ?>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </section>
+    
+</div>
+<script src="<?php echo base_url(); ?>assets/js/addUser.js" type="text/javascript"></script>
