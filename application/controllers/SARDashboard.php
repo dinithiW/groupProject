@@ -25,9 +25,18 @@ class SARDashboard extends CI_Controller{
 	}
 
 	public function confirmAdvertisement(){
-		$this->load->model('SAR/advertisementModel');
-		$this->load->advertisementModel->confirmadd();
+		$this->load->model('SAR/AdvertisementModel');
+		$this->load->AdvertisementModel->confirmadd();
 		redirect(base_url().'SAR?confirmed=success');
+	}
+	public function viewAdvertisement(){
+		$this->load->model('SAR/AdvertisementModel');
+		$this->load->->setNotifyTo0();
+		$this->load->library('session');
+		$SESSION["notify_count"]=0;
+
+		$data['advertisement']=$this->AdvertisementModel->getAdvertisement();
+		$this->load->view('users/SAR/advertisement',$data);
 	}
 }
 ?>
