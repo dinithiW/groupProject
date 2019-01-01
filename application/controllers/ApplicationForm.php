@@ -45,10 +45,11 @@
             $data['secondary_educational_details'] = $this->ApplicantApplicationFormModel->editFileSecondaryEducationalDetails();//for secondary educational details
             $data['higher_educational_details'] = $this->ApplicantApplicationFormModel->editFileHigherEducationalDetails();//for higher educational details
             $data['any_other_qualifications'] = $this->ApplicantApplicationFormModel->editFileOtherQuallificationalDetails();//for any other qualificational details
-            $data['professional_qualifications'] = $this->ApplicantApplicationFormModel->editFileProfessionalQualifications();//for any other qualificational details
-        
+            $data['professional_qualifications'] = $this->ApplicantApplicationFormModel->editFileProfessionalQualifications();//for any professional qualificational details
+            $data['language_proficiency'] = $this->ApplicantApplicationFormModel->editFileLauguageProficiency();//for any other language proficiency details
+           
             $this->load->view('applicant/applicationForm/ApplicationFormEdit',$data);
-       
+            
         }
 
     

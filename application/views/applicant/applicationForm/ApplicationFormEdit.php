@@ -122,7 +122,7 @@ if(isset($this->session->userdata['logged_in'])){
 
                     <div class="custom-sele dropboxCitizenship" style="width:100px; height:50px;">
                         <select name="selectCitizenship" id="selectCategory">
-                        <option value="<?php  echo $row->CITIZENSHIP;?>"><?php  echo $row->CITIZENSHIP;?></option>
+                            <option value="<?php  echo $row->CITIZENSHIP;?>"><?php  echo $row->CITIZENSHIP;?></option>
                             <option value="BY DESCENT">BY DESCENT</option>
                             <option value="BY REGISTRATION">BY REGISTRATION</option>
                         </select>
@@ -592,19 +592,34 @@ if(isset($this->session->userdata['logged_in'])){
                     <h4 id="title2">Proficiency in Sinhala/Tamil/English</h4>
                     <h5 id="title3">*******Ability to Work************ | ********* Ability To Teach********</h5>
                     
-<!-- start of the dropdown buttons-->
-                    
+                    <!-- start of the dropdown buttons-->
+               
                 
                     <!-- start of the dropdown for sinhala-->
+                    <?php
+
+                    /**
+                     * this part is use for get data from language proficiency details table
+                     * and set to visible the data above mentioned
+                     */
+                    if($language_proficiency->num_rows()){
+                        foreach($language_proficiency->result() as $row_in_language_proficiency){
+
+                        }
+                    }
+                        
+                    ?>
+
                     
                     <div class="custom-select" style="width:300px; height:80px;">
                         <label for="sinhala">Ability to Work Sinhala</label>
                         <select name="work_sinhala">
-                            <option value="0">Mark in here:</option>
-                            <option value="verygood">Very Good</option>
-                            <option value="good">Good</option>
-                            <option value="fair">Fair</option>
-                            <option value="no_knowledge">No Knowledge</option>
+
+                            <option value="0"><?php echo $row_in_language_proficiency->WORK_SINHALA?></option>
+                            <option value="Very Good">Very Good</option>
+                            <option value="Good">Good</option>
+                            <option value="Fair">Fair</option>
+                            <option value="No Knowledge">No Knowledge</option>
                         </select>
                     </div>
                     <!-- end of the dropdown for sinhala1-->
@@ -615,11 +630,11 @@ if(isset($this->session->userdata['logged_in'])){
                     <div class="custom-select" style="width:300px; height:80px;">
                         <label for="sinhala">Ability To Teach Sinhala</label>
                         <select name="teach_sinhala">
-                            <option value="0">Mark in here:</option>
-                            <option value="verygood">Very Good</option>
-                            <option value="good">Good</option>
-                            <option value="fair">Fair</option>
-                            <option value="no_knowledge">No Knowledge</option>
+                        <option value="0"><?php echo $row_in_language_proficiency->TEACH_SINHALA?></option>
+                            <option value="Very Good">Very Good</option>
+                            <option value="Good">Good</option>
+                            <option value="Fair">Fair</option>
+                            <option value="No Knowledge">No Knowledge</option>
                         </select>
                     </div>
                     
@@ -631,11 +646,11 @@ if(isset($this->session->userdata['logged_in'])){
                     <div class="custom-select" style="width:300px; height:80px;">
                     <label for="tamil">Ability to Work Tamil</label>
                         <select name="work_tamil">
-                            <option value="0">Mark in here:</option>
-                            <option value="verygood">Very Good</option>
-                            <option value="good">Good</option>
-                            <option value="fair">Fair</option>
-                            <option value="no_knowledge">No Knowledge</option>
+                            <option value="0"><?php echo $row_in_language_proficiency->WORK_TAMIL?></option>
+                            <option value="Very Good">Very Good</option>
+                            <option value="Good">Good</option>
+                            <option value="Fair">Fair</option>
+                            <option value="No Knowledge">No Knowledge</option>
                         </select>
                     </div>
                     <!-- end of the dropdown for english1-->
@@ -647,11 +662,12 @@ if(isset($this->session->userdata['logged_in'])){
                     <div class="custom-select" style="width:300px; height:80px;">
                         <label for="tamil">Ability To Teach Tamil</label>
                         <select name="teach_tamil">
-                            <option value="0">Mark in here:</option>
-                            <option value="verygood">Very Good</option>
-                            <option value="good">Good</option>
-                            <option value="fair">Fair</option>
-                            <option value="no_knowledge">No Knowledge</option>
+                            <option value="0"><?php echo $row_in_language_proficiency->TEACH_TAMIL?></option>
+                            <option value="Very Good">Very Good</option>
+                            <option value="Good">Good</option>
+                            <option value="Fair">Fair</option>
+                            <option value="No Knowledge">No Knowledge</option>
+                        </select>
                         </select>
                     </div>
                    <!-- end of the dropdown for sinhala2-->
@@ -660,11 +676,11 @@ if(isset($this->session->userdata['logged_in'])){
                     <div class="custom-select" style="width:300px; height:80px;">
                         <label for="english">Ability to Work English</label>
                         <select name="work_english">
-                            <option value="0">Mark in here:</option>
-                            <option value="verygood">Very Good</option>
-                            <option value="good">Good</option>
-                            <option value="fair">Fair</option>
-                            <option value="no_knowledge">No Knowledge</option>
+                            <option value="0"><?php echo $row_in_language_proficiency->WORK_ENGLISH?></option>
+                            <option value="Very Good">Very Good</option>
+                            <option value="Good">Good</option>
+                            <option value="Fair">Fair</option>
+                            <option value="No Knowledge">No Knowledge</option>
                         </select>
                     </div>
                     <!-- end of the dropdown for tamil2-->
@@ -673,11 +689,12 @@ if(isset($this->session->userdata['logged_in'])){
                     <div class="custom-select" style="width:300px; height:80px;">
                         <label for="english">Ability To Teach English</label>
                         <select name="teach_english">
-                            <option value="0">Mark in here:</option>
-                            <option value="verygood">Very Good</option>
-                            <option value="good">Good</option>
-                            <option value="fair">Fair</option>
-                            <option value="no_knowledge">No Knowledge</option>
+                            <option value="0"><?php echo $row_in_language_proficiency->TEACH_ENGLISH?></option>
+                            <option value="Very Good">Very Good</option>
+                            <option value="Good">Good</option>
+                            <option value="Fair">Fair</option>
+                            <option value="No Knowledge">No Knowledge</option>
+                        </select>
                         </select>
                     </div>
                     
