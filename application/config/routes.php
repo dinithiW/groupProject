@@ -101,6 +101,11 @@ $route['sendmail']='SARDashboard/sendmail';
 //Director routes
 $route['Director'] = 'DirectorDashboard/index';
 $route['Director/adRequest'] = 'DirectorDashboard/adRequest';
+$route['Director/approveAd'] = 'DirectorDashboard/approveAd';
+$route['Director/viewApplicants'] = 'DirectorDashboard/viewApplicants';
+$route['Director/approveSelected'] = 'DirectorDashboard/approveSelected';
+$route['Director/approveFinalSet'] = 'DirectorDashboard/approveFinalSet';
+$route['Director/setInterviewDate'] = 'DirectorDashboard/setInterviewDate';
 $route['Director/insertData'] = 'Directordashboard/insertData';
 $route['Director/addMessage'] = 'DirectorDashboard/addNotification';
 $route['Director/viewMessage'] = 'DirectorDashboard/viewNotification';

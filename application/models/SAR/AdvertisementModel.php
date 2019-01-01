@@ -13,6 +13,12 @@ class AdvertisementModel extends CI_model{
 
 	public function getAdvertisement(){
 		$this->load->database();
+		$sql=$this->db->query("SELECT message FROM advertisement where adid=1");
+		return $sql->result();
+	}
+
+	public function getConfirmedAdvertisement(){
+		$this->load->database();
 		$sql=$this->db->query("SELECT message FROM advertisement where adid=1 && confirmed=1");
 		return $sql->result();
 	}
