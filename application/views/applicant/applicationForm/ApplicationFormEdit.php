@@ -153,26 +153,68 @@ if(isset($this->session->userdata['logged_in'])){
                                 <div class="tableLable">AREA NAME<div>
                             </tr>
 
+
+                            
+                            <?php
+
+                            /**
+                             * this part is use for insert data from database for the application form
+                             * data from basic specification ares table
+                             * first i used a foreach loop for put the result set into an array
+                             * it prevented the duplicate the same result
+                             * after i used the in_array() method for check the existence of the selected fields
+                             */
+
+                            $array_for_selected_areas = array();//make empty array for push selected areas
+
+
+                            /**
+                             * push element by element in selected specification area to array
+                             */
+                            if($selected_specification_area->num_rows()){
+                                foreach($selected_specification_area->result() as $row_in_selected_specification_area){
+                                    array_push($array_for_selected_areas,$row_in_selected_specification_area->SPECIFICATION_AREA_NAME);
+                                }
+                            }
+
+                            ?>
+
                             
                             <?php /*add for loop for make the match with the relevent numbers*/ 
-                                if($specification_area->num_rows() > 0){  
-                                    foreach($specification_area->result() as $row1){  
+                                if($specification_area->num_rows()> 0){  
+                                    foreach($specification_area->result() as $row_in_specification_area){  
+                                        if(in_array($row_in_specification_area->AREA_NAME,$array_for_selected_areas)){      
                             ?>             
-                                        <tr>
-                                            
-                                            <td><input class="areas" type="checkbox" name="check_list[]" id="checkBox" value="<?php echo $row1->AREA_NAME;?>"></td>
-                                            <td >
-                                                <div class="areasForSelection" align="left"><?php echo $row1->AREA_NAME;?></div>
+                                        <tr>            
+                                            <td>
+                                                <input class="areas" type="checkbox" name="check_list[]" id="checkBox" value="<?php echo $row_in_specification_area->AREA_NAME;?>"  checked>
                                             </td>
-                                        </tr>
+                                            <td >
+                                                <div class="areasForSelection" align="left"><?php echo $row_in_specification_area->AREA_NAME;?></div>
+                                            </td>
+                                        </tr>  
+
                             <?PHP
+                                        }
+
+                                        else{
+                            ?>
+
+                                    <tr>            
+                                        <td>
+                                            <input class="areas" type="checkbox" name="check_list[]" id="checkBox" value="<?php echo $row_in_specification_area->AREA_NAME;?>"  >
+                                        </td>
+                                        <td >
+                                            <div class="areasForSelection" align="left"><?php echo $row_in_specification_area->AREA_NAME;?></div>
+                                        </td>
+                                    </tr> 
+
+                            <?php
+                                        }
                                     }  
                                 }  
                             ?> 
                         </table><!-- end of the table-->
-
-                    
-
                     </fieldset><!-- end of the fieldset-->
                 </div>
 

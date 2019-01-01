@@ -49,6 +49,7 @@
             $data['language_proficiency'] = $this->ApplicantApplicationFormModel->editFileLauguageProficiency();//for any other language proficiency details
             $data['more_details'] = $this->ApplicantApplicationFormModel->editOtherInformations();//for any other language proficiency details
             $data['referees'] = $this->ApplicantApplicationFormModel->editRefereesInformations();//for any other language proficiency details
+            $data['selected_specification_area'] = $this->ApplicantApplicationFormModel->editSpecificationAreas();//for any other language proficiency details
            
             $this->load->view('applicant/applicationForm/ApplicationFormEdit',$data);
             

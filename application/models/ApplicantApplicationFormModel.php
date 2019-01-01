@@ -582,6 +582,19 @@ class ApplicantApplicationFormModel extends CI_Model{
         $query = $this->db->get();
         return $query;
     }
+
+    
+    /**
+     * this function is use for get other specification area  for edit application form
+     */
+    public function editSpecificationAreas(){
+        $this->load->database();
+        $this->db->select("*");
+        $this->db->from('specialization_area_for_applicant');
+        $this->db->where('INDEX_NUMBER',"19pr000");
+        $query = $this->db->get();
+        return $query;
+    }
 }
 
 ?>
