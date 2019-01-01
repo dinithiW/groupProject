@@ -37,12 +37,17 @@ class ApplicantDashboard extends CI_Controller{
        
     }
 
-    public function applicationFifthth(){
-        
-    
-        $this->load->view('applicant/applicationForm/test');
-        
-       
+
+    /**
+     * this funciton is usefull for edit application 
+     * this will call to function in model 
+     * it will get data from database and will display in the applicatioin form
+     */
+    public function applicationEditPage(){
+        $this->load->model('operator/categorizeApplilcationsModel');
+        $data['fetch_data'] = $this->categorizeApplilcationsModel->getDetailsForEdit();
+        $this->load->view('applicant/applicationForm/ApplicationFormEdit',$data);
+           
     }
 
     public function applicationSelectAreas(){

@@ -480,6 +480,17 @@ class ApplicantApplicationFormModel extends CI_Model{
         $this->db->update(' temporary_index_number_for_applicants', $data);
         
     }
+
+
+
+    getDetailsForEdit(){
+        $this->load->database();
+        $this->db->select(*);
+        $this->db->from('basic_personal_details');
+        $this->db->where('INDEX_NUMBER',"19pr000");
+        $query = $this->db->get();
+        return $query;
+    }
 }
 
 ?>

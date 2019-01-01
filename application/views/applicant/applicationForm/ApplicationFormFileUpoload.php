@@ -40,7 +40,7 @@ if($this->session->userdata['logged_in']){
                             $stat = $dbh->prepare("select * from application_form_documents");
                             $stat->execute();
                         ?>
-                        <table class="responstable">
+                        <table class="responstable" id="tableId">
 
                             <tr>
                                 <th>REQUIRED DOCUMENT</th>
@@ -60,6 +60,14 @@ if($this->session->userdata['logged_in']){
                             
                             ?>
                         </table>
+                        
+                        <style>
+                            #tableId{
+                                margin-left:-130px;
+                            }
+                            
+                        </style>
+
                     </ol>
 
                     
@@ -85,6 +93,34 @@ if($this->session->userdata['logged_in']){
                             <input type="file" class="inputClass1" id="inputId1" name="attached_file" value="<?php echo $row->LINK_NAME;?>">
                             <button name = "submit" type="submit" class="btn btn-lg btn-block btn-primary"  id="button1">upload</button>
                             
+                            <style>
+
+                                #button1{
+                                    width:100px;
+                                    height:30px;
+                                    padding-top:1px;
+                                    background-color:red;
+                                    margin-left:125px;
+                                    margin-top:-25px;
+                                    color: #024457;
+                                }
+                                #inputId1{
+                                    width:200px;
+                                    margin-left:-80px;
+                                    margin-top:-40px;
+                                    color: #024457;
+                                }
+                            
+                                #selectCategory{
+                                    
+                                    margin-left:-270px;
+                                    margin-top:10px;
+                                    color: #024457;
+                                }
+
+
+                            </style>
+
                         </div>
                     </form>
                     <!-- end of a upload link-->
@@ -93,7 +129,7 @@ if($this->session->userdata['logged_in']){
                     <?php echo form_open_multipart('ApplicationForm/editfileUpload');?>
                         <div class="form-group one">
                             <div class="custom-select " style="width:430px; height:50px;">
-                                <select name="selectCategory" id="selectCategory">
+                                <select name="selectCategory" id="selectDocument">
                                     <option value=""> SELECT DOCUMENT </option>
                                     <?php
                                     if($fetch_data->num_rows()>0){
@@ -107,7 +143,39 @@ if($this->session->userdata['logged_in']){
                                     ?>        
                                 </select>
                             </div>
-                            <button name = "edit" type="submit" class="btn btn-lg btn-block btn-primary"  id="button1">Edit</button>            
+                            <button name = "edit" type="submit" class="btn btn-lg btn-block btn-primary"  id="button3">Edit</button>            
+                            <button name = "edit" type="submit" class="btn btn-lg btn-block btn-primary deleteButton"  id="button4">Delete</button>            
+                   
+                            <style>
+
+                                #button3{
+                                    width:120px;
+                                    height:30px;
+                                    padding-top:1px;
+                                    background-color:red;
+                                    margin-left:-55px;
+                                    margin-top:-45px;
+                                    color: #024457;
+                                }
+                                #button4{
+                                    width:120px;
+                                    height:30px;
+                                    color:#FEFEFE;
+                                    padding-top:1px;
+                                    background-color:red;
+                                    margin-left:105px;
+                                    margin-top:-30px;
+                                    color: #024457;
+                                }
+                                #selectDocument{
+                                    
+                                    margin-left:-270px;
+                                    margin-top:10px;
+                                    color: #024457;
+                                }
+
+
+                            </style>
                         </div>
                     </form>
 
@@ -130,19 +198,11 @@ else{
 
 
 <style>
-/*
 
-RESPONSTABLE 2.0 by jordyvanraaij
-  Designed mobile first!
-
-If you like this solution, you might also want to check out the 1.0 version:
-  https://gist.github.com/jordyvanraaij/9069194
-
-*/
 .responstable {
   margin-left:-100px;
 
-  width: 500PX;;
+  width: 500px;
   overflow: hidden;
   background: #E7FAFE;
   color: #024457;
