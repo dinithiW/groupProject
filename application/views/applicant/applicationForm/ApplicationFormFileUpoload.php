@@ -7,91 +7,180 @@ if($this->session->userdata['logged_in']){
             <div class="container" style="width: 1200px;"><!-- start of the container-->
                 <!-- start of the head-->
                 <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4 row centered-form head">
-                <h4 id="headline1"><span color="red"> ATTACH RELEVANT DOCUMENTS</span></h4>
-
------------------
+                <h4 id="headline1"><span color="red"> <b>ATTACH RELEVANT DOCUMENTS</b></span></h4>
 
 
-<b> YOUR SUBMITTED DOCUMENTS </b>
-                            <ol>
-                                <?php
-                                    $dbh = new PDO("mysql:host=localhost;dbname=ucsc","root","");
-                                    $stat = $dbh->prepare("select * from application_form_documents");
-                                    $stat->execute();
-?>
-                                    <table class="responstable">
-  
-                                        <tr>
-                                            <th>REQUIRED DOCUMENT</th>
-                                            <th data-th="Driver details"><span></span> SUBMITTED DOCUMENT</th>
-      
-                                        </tr>
+                    <div class="headline_for_links">
+                        <font color="#821D12"> <b>REQUIRED DOCUMENTS FOR THIS YEAR</font></b>
+                    </div>
+                    <style>
+                    .headline_for_links{
+                        margin-left:-30px;
+                        
+                    }
+                    </style>
 
+                    <ol>
+                        <?php
+                        if($fetch_data->num_rows()>0){
+                            foreach($fetch_data->result() as $row){
+                        ?>
+                        <li><font color="#821D12"> <b><?php echo $row->LINK_NAME?></b></font></li>    
+                        <?php
+                            }
+                        }
+                            
+                        ?>   
+                    </ol>
 
-                                    <?php
-                                    while($row = $stat->fetch()){
-                                    ?>
+                    <ol>
+                        <b> YOUR SUBMITTED DOCUMENTS </b>
+                        <?php
+                            $dbh = new PDO("mysql:host=localhost;dbname=ucsc","root","");
+                            $stat = $dbh->prepare("select * from application_form_documents");
+                            $stat->execute();
+                        ?>
+                        <table class="responstable" id="tableId">
 
-                                        <tr>
-                                        <td><?php echo $row['DOCUMENT_TYPE']?></td>
-                                        <td><?php echo $row['INDEX_NUMBER']?></td>
-                                        
-                                        
-                                      </tr>
-                                   
-                                    <?php  
-                                    }
-                                    
-                                ?>
-                                 </table>
-                            </ol>
-    
-    
-    
+                            <tr>
+                                <th>REQUIRED DOCUMENT</th>
+                                <th data-th="Driver details"><span></span> SUBMITTED DOCUMENT</th>
 
+                            </tr>
+                            <?php
+                            while($row = $stat->fetch()){
+                            ?>
+                            <tr>
+                                <td><?php echo $row['DOCUMENT_TYPE']?></td>
+                                <td><?php echo $row['INDEX_NUMBER']?></td>    
+                            </tr>
+                        
+                            <?php  
+                            }
+                            
+                            ?>
+                        </table>
+                        
+                        <style>
+                            #tableId{
+                                margin-left:-130px;
+                            }
+                            
+                        </style>
 
------------------
-
-               
-
-
+                    </ol>
 
                     
-                                <!-- start of a upload link-->
-                            <?php echo form_open_multipart('ApplicationForm/insertfileUpload');?>
-                                <div class="form-group one">
-                                    <div class="custom-select " style="width:430px; height:50px;">
-                                        <select name="selectDegree" id="selectCategory">
-
-                                        <?php
-                                    
+                    <!-- start of a upload link-->
+                    <?php echo form_open_multipart('ApplicationForm/insertfileUpload');?>
+                        <div class="form-group one">
+                            <div class="custom-select " style="width:430px; height:50px;">
+                                <select name="selectDegree" id="selectCategory">
+                                    <option value=""> SELECT DOCUMENT </option>
+                                    <?php
+                            
                                     if($fetch_data->num_rows()>0){
                                         foreach($fetch_data->result() as $row){
                                     ?>
-                                            <option value="<?php echo $row->LINK_NAME?>"><?php echo $row->LINK_NAME?></option>
-
+                                    <option value="<?php echo $row->LINK_NAME?>"><?php echo $row->LINK_NAME?></option>
                                     <?php
-                                            }
                                         }
+                                    }    
+                                    ?>        
+                                </select>
+                            </div>
+                            
+                            <input type="file" class="inputClass1" id="inputId1" name="attached_file" value="<?php echo $row->LINK_NAME;?>">
+                            <button name = "submit" type="submit" class="btn btn-lg btn-block btn-primary"  id="button1">upload</button>
+                            
+                            <style>
+
+                                #button1{
+                                    width:100px;
+                                    height:30px;
+                                    padding-top:1px;
+                                    background-color:red;
+                                    margin-left:125px;
+                                    margin-top:-25px;
+                                    color: #024457;
+                                }
+                                #inputId1{
+                                    width:200px;
+                                    margin-left:-80px;
+                                    margin-top:-40px;
+                                    color: #024457;
+                                }
+                            
+                                #selectCategory{
+                                    
+                                    margin-left:-270px;
+                                    margin-top:10px;
+                                    color: #024457;
+                                }
+
+
+                            </style>
+
+                        </div>
+                    </form>
+                    <!-- end of a upload link-->
+
+                    <!-- start of a edit link-->
+                    <?php echo form_open_multipart('ApplicationForm/editfileUpload');?>
+                        <div class="form-group one">
+                            <div class="custom-select " style="width:430px; height:50px;">
+                                <select name="selectCategory" id="selectDocument">
+                                    <option value=""> SELECT DOCUMENT </option>
+                                    <?php
+                                    if($fetch_data->num_rows()>0){
+                                        foreach($fetch_data->result() as $row){
+                                    ?>
+                                    <option value="<?php echo $row->LINK_NAME?>"><?php echo $row->LINK_NAME?></option>
+                                    <?php
+                                        }
+                                    }
                                         
                                     ?>        
-                                        </select>
-                                    </div>
+                                </select>
+                            </div>
+                            <button name = "edit" type="submit" class="btn btn-lg btn-block btn-primary"  id="button3">Edit</button>            
+                            <button name = "edit" type="submit" class="btn btn-lg btn-block btn-primary deleteButton"  id="button4">Delete</button>            
+                   
+                            <style>
+
+                                #button3{
+                                    width:120px;
+                                    height:30px;
+                                    padding-top:1px;
+                                    background-color:red;
+                                    margin-left:-55px;
+                                    margin-top:-45px;
+                                    color: #024457;
+                                }
+                                #button4{
+                                    width:120px;
+                                    height:30px;
+                                    color:#FEFEFE;
+                                    padding-top:1px;
+                                    background-color:red;
+                                    margin-left:105px;
+                                    margin-top:-30px;
+                                    color: #024457;
+                                }
+                                #selectDocument{
                                     
-                                    <input type="file" class="inputClass1" id="inputId1" name="attached_file" value="<?php echo $row->LINK_NAME;?>">
-                                    <button name = "submit" type="submit" class="btn btn-lg btn-block btn-primary"  id="button1">upload</button>
-                                
-                                </div>
-                            </form>
+                                    margin-left:-270px;
+                                    margin-top:10px;
+                                    color: #024457;
+                                }
 
-                            
-                                <!-- end of a upload link-->
 
-                    
+                            </style>
+                        </div>
+                    </form>
 
-                           
 
-                                
+                    <!-- end of a edit link-->                            
                 </div><!-- end of the head-->    
             </div><!-- end of the container-->  
         </div>
@@ -109,30 +198,22 @@ else{
 
 
 <style>
-/*
 
-RESPONSTABLE 2.0 by jordyvanraaij
-  Designed mobile first!
-
-If you like this solution, you might also want to check out the 1.0 version:
-  https://gist.github.com/jordyvanraaij/9069194
-
-*/
 .responstable {
   margin-left:-100px;
 
-  width: 500PX;;
+  width: 500px;
   overflow: hidden;
-  background: #fff;
+  background: #E7FAFE;
   color: #024457;
   border-radius: 10px;
   border: 1px solid #167f92;
 }
 .responstable tr {
-  border: 1px solid #d9e4e6;
+  border: 10px green;
 }
 .responstable tr:nth-child(odd) {
-  background-color: #eaf3f3;
+  background-color: #FEFEFE;
 }
 .responstable th {
   display: none;
@@ -165,7 +246,8 @@ If you like this solution, you might also want to check out the 1.0 version:
 .responstable td {
   display: block;
   word-wrap: break-word;
-  max-width: 7em;
+  max-width: 700px;
+  height:5px;
 }
 .responstable td:first-child {
   display: table-cell;

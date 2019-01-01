@@ -91,6 +91,24 @@ class ApplicantApplicationFormModel extends CI_Model{
         }   
     }
 
+    /*
+    * this function is use for adding files for  for the database
+    */
+    public function editFIleForDatabase(){ 
+        if(isset($_POST['edit'])){
+            $dbh = new PDO("mysql:host=localhost;dbname=ucsc","root","");
+            //$id = isset($_GET['id'])? $_GET['id'] : "";
+            $id  = $this->input->post('selectCategory');
+            $stat = $dbh->prepare("select * from application_form_documents where DOCUMENT_TYPE=?");
+            $stat->bindParam(1,$id);
+            $stat->execute();
+            $row = $stat->fetch();
+            header("Content-Type:".$row['DOCUMENT_NAME']);
+            echo $row['DOCUMENT'];
+            //echo '<img src="data:image/jpeg;base64,'.base64_encode($row['data']).'"/>'; 
+        }
+    }
+
 
     public function insertSpecificationAreas($idNumber){        
         $this->load->database();
@@ -461,6 +479,108 @@ class ApplicantApplicationFormModel extends CI_Model{
         $this->db->where('USERNAME', $this->input->post('personalEmail'));
         $this->db->update(' temporary_index_number_for_applicants', $data);
         
+    }
+
+    
+    /**
+     * this function is use for get basic personal details for edit application form
+     */
+    public function editFileBasicPersonalDetails(){
+        $this->load->database();
+        $this->db->select("*");
+        $this->db->from('basic_personal_details');
+        $this->db->where('INDEX_NUMBER',"19pr000");
+        $query = $this->db->get();
+        return $query;
+    }
+
+    /**
+     * this function is use for get basic secondary educational details for edit application form
+     */
+    public function editFileSecondaryEducationalDetails(){
+        $this->load->database();
+        $this->db->select("*");
+        $this->db->from('secondary_educational_details');
+        $this->db->where('INDEX_NUMBER',"19pr000");
+        $query = $this->db->get();
+        return $query;
+    }
+
+    /**
+     * this function is use for get basic higher educational details for edit application form
+     */
+    public function editFileHigherEducationalDetails(){
+        $this->load->database();
+        $this->db->select("*");
+        $this->db->from('higher_educational_details');
+        $this->db->where('INDEX_NUMBER',"19pr000");
+        $query = $this->db->get();
+        return $query;
+    }
+
+    /**
+     * this function is use for get basic any other qualificational details for edit application form
+     */
+    public function editFileOtherQuallificationalDetails(){
+        $this->load->database();
+        $this->db->select("*");
+        $this->db->from('any_other_qualifications');
+        $this->db->where('INDEX_NUMBER',"19pr000");
+        $query = $this->db->get();
+        return $query;
+    }
+
+    
+
+    /**
+     * this function is use for get professional qualificational details for edit application form
+     */
+    public function editFileProfessionalQualifications(){
+        $this->load->database();
+        $this->db->select("*");
+        $this->db->from('professional_qualifications');
+        $this->db->where('INDEX_NUMBER',"19pr000");
+        $query = $this->db->get();
+        return $query;
+    }
+
+    /**
+     * this function is use for get language professioncy details for edit application form
+     */
+    public function editFileLauguageProficiency(){
+        $this->load->database();
+        $this->db->select("*");
+        $this->db->from('language_proficiency');
+        $this->db->where('INDEX_NUMBER',"19pr000");
+        $query = $this->db->get();
+        return $query;
+    }
+
+    
+
+    /**
+     * this function is use for get other applicats_more_details for edit application form
+     */
+    public function editOtherInformations(){
+        $this->load->database();
+        $this->db->select("*");
+        $this->db->from('applicats_more_details');
+        $this->db->where('INDEX_NUMBER',"19pr000");
+        $query = $this->db->get();
+        return $query;
+    }
+
+   
+    /**
+     * this function is use for get other applicats_more_details for edit application form
+     */
+    public function editRefereesInformations(){
+        $this->load->database();
+        $this->db->select("*");
+        $this->db->from('referees');
+        $this->db->where('INDEX_NUMBER',"19pr000");
+        $query = $this->db->get();
+        return $query;
     }
 }
 

@@ -37,13 +37,8 @@ class ApplicantDashboard extends CI_Controller{
        
     }
 
-    public function applicationFifthth(){
-        
+
     
-        $this->load->view('applicant/applicationForm/test');
-        
-       
-    }
 
     public function applicationSelectAreas(){
         
