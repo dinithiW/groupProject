@@ -70,6 +70,28 @@ class ApplicantApplicationFormModel extends CI_Model{
 
     
 
+    /*
+    * this function is use for adding files for  for the database
+    */
+    public function insertFIleForDatabase(){ 
+        
+        $dbh = new PDO("mysql:host=localhost;dbname=ucsc","root","");
+        if(isset($_POST['submit'])){
+            $name = $_FILES['attached_file']['name'];
+            $mime = $_FILES['attached_file']['type'];
+            $category = $this->input->post('selectDegree');
+            $data = file_get_contents($_FILES['attached_file']['tmp_name']);
+            $stmt = $dbh->prepare("insert into application_form_documents values(?,?,?,?)");
+                
+            $stmt->bindParam(1,$name);
+            $stmt->bindParam(2,$mime);
+            $stmt->bindParam(3,$category);
+            $stmt->bindParam(4,$data);
+            $stmt->execute();
+        }   
+    }
+
+
     public function insertSpecificationAreas($idNumber){        
         $this->load->database();
         foreach($this->input->post('check_list') as $selected_area){
