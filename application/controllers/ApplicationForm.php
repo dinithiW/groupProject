@@ -48,6 +48,7 @@
             $data['professional_qualifications'] = $this->ApplicantApplicationFormModel->editFileProfessionalQualifications();//for any professional qualificational details
             $data['language_proficiency'] = $this->ApplicantApplicationFormModel->editFileLauguageProficiency();//for any other language proficiency details
             $data['more_details'] = $this->ApplicantApplicationFormModel->editOtherInformations();//for any other language proficiency details
+            $data['referees'] = $this->ApplicantApplicationFormModel->editRefereesInformations();//for any other language proficiency details
            
             $this->load->view('applicant/applicationForm/ApplicationFormEdit',$data);
             
