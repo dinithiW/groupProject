@@ -395,9 +395,7 @@ if(isset($this->session->userdata['logged_in'])){
                             }
                         }
                         
-                        ?>
-
-                            
+                        ?>                      
                             <tr class="tr">
                                 <td><input type="text" class="Text"  name="secondary_educational_school_name4" size='42'/></td>
                                 <td><input type="text" class="Text"  name="secondary_educational_from4" size='8'/></td>
@@ -425,44 +423,35 @@ if(isset($this->session->userdata['logged_in'])){
                                 <th>Index No</th>
                             </tr>
 
-                            <tr class="tr">
-
-                                <td><input type="text" class="Text" name="heigher_educational_university1"  size='25'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_from1"  size='3'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_to1"  size='3'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_degree_obtained1"  size='25'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_duration1"  size='11'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_year1"  size='4'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_year_no1"  size='7'/></td>
                             
-                            <td><span class="lblStatus"></span></td>
-                            
+                        
+                        <?php
+
+                        /**
+                         * this part is use for get data from seconadary educational details table
+                         * and set to visible the data above mentioned
+                         */
+                        if($higher_educational_details->num_rows()){
+                            foreach($higher_educational_details->result() as $row_in_higher_education){
+
+                        ?>
                             <tr class="tr">
 
-                                <td><input type="text" class="Text" name="heigher_educational_university2"  size='25'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_from2"  size='3'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_to2"  size='3'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_degree_obtained2"  size='25'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_duration2"  size='11'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_class2" size='13'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_year2"  size='4'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_year_no2"  size='7'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->UNIVERSITY ?>" name="heigher_educational_university1"  size='25'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->FROM; ?>" name="heigher_educational_from1"  size='3'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->TO; ?>" name="heigher_educational_to1"  size='3'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->DEGREE_OBTAINED; ?>" name="heigher_educational_degree_obtained1"  size='25'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->DURATION; ?>"name="heigher_educational_duration1"  size='11'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->CLASS; ?>"name="heigher_educational_class1" size='13'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->YEAR; ?>" name="heigher_educational_year1"  size='4'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->INDEX_NO; ?>" name="heigher_educational_year_no1"  size='7'/></td>
+                                <td><span class="lblStatus"></span></td>
 
-                            <td><span class="lblStatus"></span></td>
-
-                            <tr class="tr">
-
-                                <td><input type="text" class="Text" name="heigher_educational_university3"  size='25'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_from3"  size='3'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_to3"  size='3'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_degree_obtained3"  size='25'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_duration3"  size='11'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_class3" size='13'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_year3"  size='4'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_year_no3"  size='7'/></td>
-
-                            <td><span class="lblStatus"></span></td>
+                        <?php
+                            }
+                        }
+                        
+                        ?> 
 
                             <tr class="tr">
 
