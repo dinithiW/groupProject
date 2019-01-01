@@ -9,171 +9,110 @@ if($this->session->userdata['logged_in']){
                 <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4 row centered-form head">
                 <h4 id="headline1"><span color="red"> <b>ATTACH RELEVANT DOCUMENTS</b></span></h4>
 
------------------
 
+                    <div class="headline_for_links">
+                        <font color="#821D12"> <b>REQUIRED DOCUMENTS FOR THIS YEAR</font></b>
+                    </div>
+                    <style>
+                    .headline_for_links{
+                        margin-left:-30px;
+                        
+                    }
+                    </style>
 
+                    <ol>
+                        <?php
+                        if($fetch_data->num_rows()>0){
+                            foreach($fetch_data->result() as $row){
+                        ?>
+                        <li><font color="#821D12"> <b><?php echo $row->LINK_NAME?></b></font></li>    
+                        <?php
+                            }
+                        }
+                            
+                        ?>   
+                    </ol>
 
+                    <ol>
+                        <b> YOUR SUBMITTED DOCUMENTS </b>
+                        <?php
+                            $dbh = new PDO("mysql:host=localhost;dbname=ucsc","root","");
+                            $stat = $dbh->prepare("select * from application_form_documents");
+                            $stat->execute();
+                        ?>
+                        <table class="responstable">
 
+                            <tr>
+                                <th>REQUIRED DOCUMENT</th>
+                                <th data-th="Driver details"><span></span> SUBMITTED DOCUMENT</th>
 
-
----------------------------
-
-                
-                           
-                            <div class="headline_for_links">
-                                <font color="#821D12"> <b>REQUIRED DOCUMENTS FOR THIS YEAR</font></b>
-                            </div>
-<style>
-.headline_for_links{
-    margin-left:-30px;
-    
-}
-</style>
-
-
-                            <ol>
-                                    <?php
-                                    
-                                    if($fetch_data->num_rows()>0){
-                                        foreach($fetch_data->result() as $row){
-                                    ?>
-                                            
-                                            
-                                                <li><font color="#821D12"> <b><?php echo $row->LINK_NAME?></b></font></li>
-                                            
-                                        
-                                    
-                                    <?php
-                                            }
-                                        }
-                                        
-                                    ?>   
-</ol>
---------------------------------
-
-
-                            <ol>
-                            <b> YOUR SUBMITTED DOCUMENTS </b>
-                                <?php
-                                    $dbh = new PDO("mysql:host=localhost;dbname=ucsc","root","");
-                                    $stat = $dbh->prepare("select * from application_form_documents");
-                                    $stat->execute();
-?>
-                                    <table class="responstable">
-  
-                                        <tr>
-                                            <th>REQUIRED DOCUMENT</th>
-                                            <th data-th="Driver details"><span></span> SUBMITTED DOCUMENT</th>
-      
-                                        </tr>
-
-
-                                    <?php
-                                    while($row = $stat->fetch()){
-                                    ?>
-
-                                        <tr>
-                                        <td><?php echo $row['DOCUMENT_TYPE']?></td>
-                                        <td><?php echo $row['INDEX_NUMBER']?></td>
-                                        
-                                        
-                                      </tr>
-                                   
-                                    <?php  
-                                    }
-                                    
-                                ?>
-                                 </table>
-                            </ol>
-    
-    
-    
-
-
------------------
-
-               
-
-
+                            </tr>
+                            <?php
+                            while($row = $stat->fetch()){
+                            ?>
+                            <tr>
+                                <td><?php echo $row['DOCUMENT_TYPE']?></td>
+                                <td><?php echo $row['INDEX_NUMBER']?></td>    
+                            </tr>
+                        
+                            <?php  
+                            }
+                            
+                            ?>
+                        </table>
+                    </ol>
 
                     
-                                <!-- start of a upload link-->
-                            <?php echo form_open_multipart('ApplicationForm/insertfileUpload');?>
-                                <div class="form-group one">
-                                    <div class="custom-select " style="width:430px; height:50px;">
-                                        <select name="selectDegree" id="selectCategory">
-                                            <option value=""> SELECT DOCUMENT </option>
-                                        <?php
-                                    
+                    <!-- start of a upload link-->
+                    <?php echo form_open_multipart('ApplicationForm/insertfileUpload');?>
+                        <div class="form-group one">
+                            <div class="custom-select " style="width:430px; height:50px;">
+                                <select name="selectDegree" id="selectCategory">
+                                    <option value=""> SELECT DOCUMENT </option>
+                                    <?php
+                            
                                     if($fetch_data->num_rows()>0){
                                         foreach($fetch_data->result() as $row){
                                     ?>
-                                            <option value="<?php echo $row->LINK_NAME?>"><?php echo $row->LINK_NAME?></option>
-
+                                    <option value="<?php echo $row->LINK_NAME?>"><?php echo $row->LINK_NAME?></option>
                                     <?php
-                                            }
                                         }
-                                        
+                                    }    
                                     ?>        
-                                        </select>
-                                    </div>
-                                    
-                                    <input type="file" class="inputClass1" id="inputId1" name="attached_file" value="<?php echo $row->LINK_NAME;?>">
-                                    <button name = "submit" type="submit" class="btn btn-lg btn-block btn-primary"  id="button1">upload</button>
-                                    
-                                </div>
-                            </form>
-
+                                </select>
+                            </div>
                             
-                                <!-- end of a upload link-->
+                            <input type="file" class="inputClass1" id="inputId1" name="attached_file" value="<?php echo $row->LINK_NAME;?>">
+                            <button name = "submit" type="submit" class="btn btn-lg btn-block btn-primary"  id="button1">upload</button>
+                            
+                        </div>
+                    </form>
+                    <!-- end of a upload link-->
 
-
- <!-- start of a edit link-->
- <?php echo form_open_multipart('ApplicationForm/insertfileUpload');?>
-                                <div class="form-group one">
-                                    <div class="custom-select " style="width:430px; height:50px;">
-                                        <select name="selectDegree" id="selectCategory">
-                                            <option value=""> SELECT DOCUMENT </option>
-                                        <?php
-                                    
+                    <!-- start of a edit link-->
+                    <?php echo form_open_multipart('ApplicationForm/editfileUpload');?>
+                        <div class="form-group one">
+                            <div class="custom-select " style="width:430px; height:50px;">
+                                <select name="selectCategory" id="selectCategory">
+                                    <option value=""> SELECT DOCUMENT </option>
+                                    <?php
                                     if($fetch_data->num_rows()>0){
                                         foreach($fetch_data->result() as $row){
                                     ?>
-                                            <option value="<?php echo $row->LINK_NAME?>"><?php echo $row->LINK_NAME?></option>
-
+                                    <option value="<?php echo $row->LINK_NAME?>"><?php echo $row->LINK_NAME?></option>
                                     <?php
-                                            }
                                         }
+                                    }
                                         
                                     ?>        
-                                        </select>
-                                    </div>
-                                    
-                                     <button name = "submit" type="submit" class="btn btn-lg btn-block btn-primary"  id="button1">Edit</button>
-                                    
-                                </div>
-                            </form>
-
-                            
-                                <!-- end of a edit link-->
+                                </select>
+                            </div>
+                            <button name = "edit" type="submit" class="btn btn-lg btn-block btn-primary"  id="button1">Edit</button>            
+                        </div>
+                    </form>
 
 
-                                11111111111111
-<?php
-$dbh = new PDO("mysql:host=localhost;dbname=ucsc","root","");
-//$id = isset($_GET['id'])? $_GET['id'] : "";
-//$id = 'index.php';
-$stat = $dbh->prepare("select * from application_form_documents where INDEX_NUMBER=?");
-$stat->bindParam(1,$id);
-$stat->execute();
-$row = $stat->fetch();
-header("Content-Type:".$row['DOCUMENT_NAME']);
-echo $row['DOCUMENT'];
-//echo '<img src="data:image/jpeg;base64,'.base64_encode($row['data']).'"/>';                
-?>
-111111111111111                          
-
-                                
+                    <!-- end of a edit link-->                            
                 </div><!-- end of the head-->    
             </div><!-- end of the container-->  
         </div>

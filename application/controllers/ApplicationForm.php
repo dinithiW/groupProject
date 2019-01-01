@@ -29,6 +29,18 @@
             $this->ApplicantApplicationFormModel->insertFIleForDatabase();
             
         }
+
+        /**
+         * this funciton is use for call AddCustomerForDatabase() function
+         * it will edit file to database
+         */
+        
+        public function editfileUpload(){
+            
+            $this->load->model('ApplicantApplicationFormModel');
+            $this->ApplicantApplicationFormModel->editFIleForDatabase();
+            
+        }
     
         
         

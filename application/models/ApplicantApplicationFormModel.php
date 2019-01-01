@@ -91,6 +91,24 @@ class ApplicantApplicationFormModel extends CI_Model{
         }   
     }
 
+    /*
+    * this function is use for adding files for  for the database
+    */
+    public function editFIleForDatabase(){ 
+        if(isset($_POST['edit'])){
+            $dbh = new PDO("mysql:host=localhost;dbname=ucsc","root","");
+            //$id = isset($_GET['id'])? $_GET['id'] : "";
+            $id  = $this->input->post('selectCategory');
+            $stat = $dbh->prepare("select * from application_form_documents where DOCUMENT_TYPE=?");
+            $stat->bindParam(1,$id);
+            $stat->execute();
+            $row = $stat->fetch();
+            header("Content-Type:".$row['DOCUMENT_NAME']);
+            echo $row['DOCUMENT'];
+            //echo '<img src="data:image/jpeg;base64,'.base64_encode($row['data']).'"/>'; 
+        }
+    }
+
 
     public function insertSpecificationAreas($idNumber){        
         $this->load->database();
