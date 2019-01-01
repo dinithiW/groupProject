@@ -1,3 +1,11 @@
+<?php
+/**
+ * this is use for redirect to the main menu when user log out
+ */
+if(isset($this->session->userdata['logged_in'])){
+?>
+
+
 
 <!DOCTYPE html>
 <html>
@@ -22,12 +30,7 @@
         
         <div id="multistepform-example-container">
 
-            <div class="naigationBar">
-                <a href="<?=base_url('ApplicationForm/updateBasicPersonalDetailsController')?>" class=""  style="color:yellow; font-size: 30px; margin-left:-50px; ">Home</a>
-                <a href= "<?=base_url('ApplicantDashboard/contact')?>" class="" style="color:yellow; font-size: 30px; margin-left:400px; ">Contact</a>
-                <a href= "<?=base_url('ApplicantDashboard/logout')?>"  style="color:yellow; font-size: 30px; margin-left:550px;" class="">Logout</a>
-               
-            </div>
+           
 
             <ul id="multistepform-progressbar">
             
@@ -212,7 +215,7 @@
                             ?>             
                                         <tr>
                                             
-                                            <td><input class="areas" type="checkbox" name="vehicle" id="checkBox" value=""></td>
+                                            <td><input class="areas" type="checkbox" name="check_list[]" id="checkBox" value="<?php echo $row->AREA_NAME;?>"></td>
                                             <td >
                                                 <div class="areasForSelection" align="left"><?php echo $row->AREA_NAME;?></div>
                                             </td>
@@ -394,12 +397,13 @@
                     </select>
                 </div>
 
-                <div class="custom-select " style="width:300px; height:50px;">
+                <div class="custom-select " style="width:430px; height:50px;">
                    <select name="selectDegree" id="selectCategory">
                         <option value="0">Select Degree Category:</option>
-                        <option value="bachelore_of_science">Bachelore of science</option>
-                        <option value="bachelore_of_computer_science">Bachelore of Computer Science</option>
-                        <option value="bachelore_of_arts">Bachelore of Arts</option>
+                        <option value="first_class">First Class(Bachelore of computer science)</option>
+                        <option value="second_upper">Second Upper(Bachelore of computer science)</option>
+                        <option value="second_lower">Second Lower(Bachelore of computer science)</option>
+                        <option value="general">General(Bachelore of computer science)</option>
                     </select>
                 </div>
 
@@ -637,9 +641,11 @@
                     
                 
                     <!-- start of the dropdown for sinhala-->
-                    <div class="custom-select" style="width:300px; height:50px;">
+                    
+                    <div class="custom-select" style="width:300px; height:80px;">
+                        <label for="sinhala">Ability to Work Sinhala</label>
                         <select name="work_sinhala">
-                            <option value="sinhala">Sinhala:</option>
+                            <option value="0">Mark in here:</option>
                             <option value="verygood">Very Good</option>
                             <option value="good">Good</option>
                             <option value="fair">Fair</option>
@@ -649,21 +655,28 @@
                     <!-- end of the dropdown for sinhala1-->
 
                    <!-- start of the dropdown for tamil1-->
-                    <div class="custom-select" style="width:300px; height:50px;">
-                        <select name="work_english">
-                            <option value="0">English:</option>
+                   
+
+                    <div class="custom-select" style="width:300px; height:80px;">
+                        <label for="sinhala">Ability To Teach Sinhala</label>
+                        <select name="teach_sinhala">
+                            <option value="0">Mark in here:</option>
                             <option value="verygood">Very Good</option>
                             <option value="good">Good</option>
                             <option value="fair">Fair</option>
                             <option value="no_knowledge">No Knowledge</option>
                         </select>
                     </div>
+                    
                     <!-- end of the dropdown for tamil1-->
 
                     <!-- start of the dropdown for english1-->
-                    <div class="custom-select" style="width:300px; height:50px;">
+                    
+
+                    <div class="custom-select" style="width:300px; height:80px;">
+                    <label for="tamil">Ability to Work Tamil</label>
                         <select name="work_tamil">
-                            <option value="0">Tamil:</option>
+                            <option value="0">Mark in here:</option>
                             <option value="verygood">Very Good</option>
                             <option value="good">Good</option>
                             <option value="fair">Fair</option>
@@ -673,9 +686,13 @@
                     <!-- end of the dropdown for english1-->
 
                     <!-- start of the dropdown for sinhala2-->
-                    <div class="custom-select" style="width:300px; height:50px;">
-                        <select name="teach_sinhala">
-                            <option value="0">Sinhala:</option>
+                    
+                    
+                   
+                    <div class="custom-select" style="width:300px; height:80px;">
+                        <label for="tamil">Ability To Teach Tamil</label>
+                        <select name="teach_tamil">
+                            <option value="0">Mark in here:</option>
                             <option value="verygood">Very Good</option>
                             <option value="good">Good</option>
                             <option value="fair">Fair</option>
@@ -685,9 +702,10 @@
                    <!-- end of the dropdown for sinhala2-->
 
                     <!-- start of the dropdown for tamil2-->
-                    <div class="custom-select" style="width:300px; height:50px;">
-                        <select name="teach_english">
-                            <option value="0">English:</option>
+                    <div class="custom-select" style="width:300px; height:80px;">
+                        <label for="english">Ability to Work English</label>
+                        <select name="work_english">
+                            <option value="0">Mark in here:</option>
                             <option value="verygood">Very Good</option>
                             <option value="good">Good</option>
                             <option value="fair">Fair</option>
@@ -697,15 +715,17 @@
                     <!-- end of the dropdown for tamil2-->
 
                     <!-- start of the dropdown for english2-->
-                    <div class="custom-select" style="width:300px; height:50px;">
-                        <select name="teach_tamil">
-                            <option value="0">Tamil:</option>
+                    <div class="custom-select" style="width:300px; height:80px;">
+                        <label for="english">Ability To Teach English</label>
+                        <select name="teach_english">
+                            <option value="0">Mark in here:</option>
                             <option value="verygood">Very Good</option>
                             <option value="good">Good</option>
                             <option value="fair">Fair</option>
                             <option value="no_knowledge">No Knowledge</option>
                         </select>
                     </div>
+                    
                     <!-- end of the dropdown for english2-->
 <!-- end of the dropdown series-->
 
@@ -713,12 +733,14 @@
 
                     <!-- start the text box one-->
                     <div form-group>
+                        <label >Experience relevant to the post applied for</label>
                         <input type="text" name="experience" id="experience" class="form-control input-sm" placeholder="                                        Experience relevant to the post applied for (Please indicate the tasks handled with the duration) ">
                     </div>
                     <!-- end the text box one-->
 
                      <!-- start the text box two-->
                     <div form-group>
+                        <label >Details of research and publications, If any</label>
                         <input type="text" name="research" id="research" class="form-control input-sm" placeholder="                                        Details of research and publications, If any (if space is insufficient, please append it with appends) ">
                     </div>
                     <!-- end the text box two-->
@@ -797,7 +819,8 @@
 
                     <!-- other--> 
                     <div form-group>
-                            <input type="text" name="other_details" id="other" class="form-control input-sm" placeholder="                                                                              Any other information that you need like to indicate ">
+                        <label>Any other information that you need like to indicate</label>
+                        <input type="text" name="other_details" id="other" class="form-control input-sm" placeholder="                                                                              Any other information that you need like to indicate ">
                     </div> 
                     <!-- other--> 
 
@@ -805,7 +828,7 @@
                         <b>I here by declare that the particulars furnished by me in the application are true and accurate.<br> I am also aware that if any partuculars contains herein are found to be false or incorrect I am<br> liable to disqualification if the inaccuracy is discovered before the selection and dimissal without any compensation if th inaccuracy is discovered after the appointment</b>
                     </h4> 
 
-                     <div class="calender">
+                     <div class="calender" >
                         <input id = "calender1"  type ="date" name="current_date" data-date-inline-picker="true" />
                     </div>
 
@@ -829,3 +852,11 @@
         </div>
     </body>
 </html>
+
+
+<?php
+}
+else{
+    redirect(base_url()."User/logout");
+}
+?>

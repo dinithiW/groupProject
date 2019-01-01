@@ -183,5 +183,19 @@ class OperatorDashboard extends CI_Controller{
         $taskNum = $this->TaskModel->getTasks($role);
         return $taskNum;
     }
+
+    public function selectCandidates(){
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/selectCandidates');
+        $this->load->view('includes/footer');
+    }
+
+    public function setInterviewDate(){
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/setInterviewDate');
+        $this->load->view('includes/footer');
+    }
+
+    
 }
 ?>

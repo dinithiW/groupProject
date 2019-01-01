@@ -15,9 +15,13 @@ class Login extends CI_Controller {
 
 	//this method will validate the login credentials
 	public function process(){
+        
         $this->load->model('ValidateLogin');
         $this->ValidateLogin->validate();  
+        
     }
+
+
 
     //
     public function errorUsername(){

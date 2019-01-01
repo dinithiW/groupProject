@@ -437,3 +437,96 @@ ALTER TABLE `interview_panel`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+-- phpMyAdmin SQL Dump
+-- version 4.7.9
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Dec 29, 2018 at 11:36 AM
+-- Server version: 10.1.31-MariaDB
+-- PHP Version: 7.2.3
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `ucsc`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `temporary_index_number_for_applicants`
+--
+
+CREATE TABLE `temporary_index_number_for_applicants` (
+  `INDEX_NUMBER` varchar(100) NOT NULL,
+  `USERNAME` varchar(200) NOT NULL,
+  `FULL_NAME` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `temporary_index_number_for_applicants`
+--
+
+INSERT INTO `temporary_index_number_for_applicants` (`INDEX_NUMBER`, `USERNAME`, `FULL_NAME`) VALUES
+('18000', 'ruwan@gmail.com', 'kasun mendis'),
+('18001', 'ruwank@gmail.com', 'kasun mendis');
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+-- phpMyAdmin SQL Dump
+-- version 4.7.9
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Dec 30, 2018 at 04:28 AM
+-- Server version: 10.1.31-MariaDB
+-- PHP Version: 7.2.3
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `ucsc`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `applicats_more_details`
+--
+
+CREATE TABLE `applicats_more_details` (
+  `INDEX_NUMBER` varchar(100) NOT NULL,
+  `EXPERIENCE_RELEVANT_TO_POST` text NOT NULL,
+  `RESEARCH_AND_PUBLICATION_DETAILS` text NOT NULL,
+  `ANY_OTHER_INFORMATION` text NOT NULL,
+  `SUBMISSION_DATE` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

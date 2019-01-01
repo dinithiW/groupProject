@@ -7,6 +7,11 @@ class ApplicantDashboard extends CI_Controller{
 		$this->load->helper('url');
     }
 
+    public function index(){
+        $this->load->view('includes/header');
+        $this->load->view('MainDashboard');
+        $this->load->view('includes/footer');
+    }
 
 
     public function applicationFirstPage(){
@@ -22,13 +27,18 @@ class ApplicantDashboard extends CI_Controller{
      * select files from database and show them
      */
     public function applicationFifththPage(){
-        $this->load->view('includes/header');			
+        
+        $this->load->view('includes/header');
+					
         $this->load->model('operator/categorizeApplilcationsModel');
         $data['fetch_data'] = $this->categorizeApplilcationsModel->fetchFileUploadLinks();
         $this->load->view('applicant/applicationForm/ApplicationFormFileUpoload',$data);
-        
+        $this->load->view('includes/footer');
        
     }
+
+
+    
 
     public function applicationSelectAreas(){
         

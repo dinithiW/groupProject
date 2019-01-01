@@ -11,84 +11,50 @@
             if($this->input->post('Submit')){
                 
                 $this->load->model('ApplicantApplicationFormModel');
- 
-                $id_number =  $this->ApplicantApplicationFormModel->makeApplicationId();
-
-                $email      = $this->session->userdata['sess_varia']['email'];
-                $user_type  = $this->session->userdata['sess_varia']['usertype'];
-                $id_number  = $this->session->userdata['sess_varia']['id_number'];
-                $log        = $this->session->userdata['sess_varia']['logged_in'];
-
-                $session_variables1 = array(
-					'email'    => $email,
-					'usertype' => $user_type,
-					'id_number'=> $id_number,
-			        'logged_in'=> $log
-				);
-                
-                
-                $this->session->set_userdata('sess_varia1', $session_variables1);
-
-                
-
-/*
-                $this->ApplicantApplicationFormModel->insertBasicPersonalDetailsModel($id_number);
-                $this->ApplicantApplicationFormModel->insertSecondaryEducationalDetailsModel($id_number);
-                $this->ApplicantApplicationFormModel->insertHigherEducationalDetailsModel($id_number);
-                $this->ApplicantApplicationFormModel->insertAnyOtherQualificationsModel($id_number);
-                $this->ApplicantApplicationFormModel->insertProfessionalQualificationsModel($id_number);
-                $this->ApplicantApplicationFormModel->insertRefereeModel($id_number);
-                $this->ApplicantApplicationFormModel->insertLanguageProficiencyModel($id_number);
-                //$this->ApplicantApplicationFormModel->insertSpecializationAreaForApplicantModel();
-                $this->ApplicantApplicationFormModel->insertOtherFieldsModel($id_number);
-*/                
-
+                $this->ApplicantApplicationFormModel->insertBasicPersonalDetailsModel();
             }
             else{
                 echo"not entered";
             }
         }
 
-        public function updateBasicPersonalDetailsController(){
-            /*
-            $idNumber ="18se7";
+        /**
+         * this funciton is use for call AddCustomerForDatabase() function
+         * it will upload file to database
+         */
+        
+        public function insertfileUpload(){
+            
             $this->load->model('ApplicantApplicationFormModel');
-            $data['category']    =$this->ApplicantApplicationFormModel->updateApplicationForm($idNumber);
-            $data['mainContest'] ='applicant/applicationForm/ApplicationFormEdit';*/
-            //var_dump($product);
-
-            /*
-            $check = $this->session->userdata['sess_varia1']['id_number'];
+            $this->ApplicantApplicationFormModel->insertFIleForDatabase();
             
-            $email      = $this->session->userdata['sess_varia']['email'];
-            $user_type  = $this->session->userdata['sess_varia']['usertype'];
-            $id_number  = $this->session->userdata['sess_varia']['id_number'];
-            $log        = $this->session->userdata['sess_varia']['logged_in'];
-
-            echo"thie is the :"."$email"."<br>";
-            echo"thie is the :"."$user_type"."<br>";
-            echo"thie is the :"."$id_number"."<br>";
-            echo"thie is the :"."$log"."<br>";
-*/
-
-            //$this->session->set_userdata('name',"ruwanliyanage");
-            echo"this is the main page";
-
-            //$now1 = $this->session->userdata['sess_varia']['logged_in'];
-
-            
-            $this->load->library('session');
-            $rr = $this->session->userdata('age');
-			echo"$rr";
-
-echo"<br>"."end of the mainwwwwwwwwww";
-            //$this->session->set_userdata('name','ruwanliyanage');
-
-
-            //$this->load->view('applicant/applicationForm/ApplicationFormEdit');
-
         }
 
+    /*
+     * this funciton is usefull for edit application 
+     * this will call to function in model 
+     * it will get data from database and will display in the applicatioin form
+     */
+      
+        public function editfileUpload(){
+            $this->load->model('operator/categorizeApplilcationsModel');
+            $this->load->model('ApplicantApplicationFormModel');
+            
+            $data['specification_area'] = $this->categorizeApplilcationsModel->fetch_datas();//for get specification_areas for second page
+            $data['basic_personal_details'] = $this->ApplicantApplicationFormModel->editFileBasicPersonalDetails();//for basic personal details
+            $data['secondary_educational_details'] = $this->ApplicantApplicationFormModel->editFileSecondaryEducationalDetails();//for secondary educational details
+            $data['higher_educational_details'] = $this->ApplicantApplicationFormModel->editFileHigherEducationalDetails();//for higher educational details
+            $data['any_other_qualifications'] = $this->ApplicantApplicationFormModel->editFileOtherQuallificationalDetails();//for any other qualificational details
+            $data['professional_qualifications'] = $this->ApplicantApplicationFormModel->editFileProfessionalQualifications();//for any professional qualificational details
+            $data['language_proficiency'] = $this->ApplicantApplicationFormModel->editFileLauguageProficiency();//for any other language proficiency details
+            $data['more_details'] = $this->ApplicantApplicationFormModel->editOtherInformations();//for any other language proficiency details
+            $data['referees'] = $this->ApplicantApplicationFormModel->editRefereesInformations();//for any other language proficiency details
+           
+            $this->load->view('applicant/applicationForm/ApplicationFormEdit',$data);
+            
+        }
+
+    
         
         
     }

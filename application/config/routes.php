@@ -59,6 +59,7 @@ $route['login/contact'] = 'ApplicantLogin/contact';
 $route['register'] = 'ApplicantLogin/register';
 $route['addUser'] = 'ApplicantLogin/addUser';
 $route['logout']='User/logout';
+$route['advertisement']='User/add';
 
 //$route['loginUser'] = 'UsersLogin/index';
 //$route['loginUser/process'] = 'UsersLogin/process';
@@ -87,6 +88,15 @@ $route['OperatorIndex/checkEmailExists'] = "OperatorDashboard/checkEmailExists";
 $route['OperatorIndex/editMember/(:any)'] = "OperatorDashboard/editMemberView/$1";
 $route['OperatorIndex/deleteMember/(:any)'] = "OperatorDashboard/deleteMemberMsg/$1";
 $route['OperatorIndex/deleteMemberProcess/(:any)'] = "OperatorDashboard/deleteMemberModel/$1";
+//this is for loading the home page of the candidate selection process
+$route['OperatorIndex/select'] = "OperatorDashboard/selectCandidates";
+//this is for loading the home page of the interview date setting process
+$route['OperatorIndex/interviewDate'] = "OperatorDashboard/setInterviewDate";
+
+//SAR routes
+$route['SAR']='SARDashboard/index';
+$route['reports']='SARDashboard/report';
+$route['sendmail']='SARDashboard/sendmail';
 
 //Director routes
 $route['Director'] = 'DirectorDashboard/index';
@@ -104,7 +114,7 @@ $route['Director/finalize'] = 'DirectorDashboard/finalize';
 //panel
 $route['Panel'] = 'InterviewPanelDashboard/index';
 $route['Panel/viewApplicants'] = 'InterviewPanelDashboard/viewApplicants';
-//$route['Panel/viewApplicants'] = 'InterviewPanelDashboard/viewMarks';
+$route['Panel/viewApplicants'] = 'InterviewPanelDashboard/viewMarks';
 
 $route['dashboard'] = 'User/index';
 $route['home'] = 'Home/index';
@@ -126,13 +136,14 @@ $route['registerUsers/home'] = 'Register/applicantHome';
 //show registration success message
 $route['registerUsers/success'] = 'Register/success';
 
-
-
-
 //applicant start
+
+//directing to applicant home
+$route['applicant'] = 'ApplicantDashboard/index';
 $route['application_form_fill'] = 'ApplicantDashboard/applicationFirstPage';
-$route['application_form_edit'] = 'ApplicantDashboard/applicationFirstPage';
+$route['application_form_edit'] = 'ApplicationForm/editfileUpload';
 $route['application_form_documents'] = 'ApplicantDashboard/applicationFifththPage';
+$route['LOGOUT']='User/out';
 //applicant end
 
 
