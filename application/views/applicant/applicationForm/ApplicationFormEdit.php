@@ -546,27 +546,34 @@ if(isset($this->session->userdata['logged_in'])){
                                 <th>Type of Qualifications</th>
                             </tr>
 
+
+                            <?php
+
+                            /**
+                             * this part is use for get data from any professional qualificational details table
+                             * and set to visible the data above mentioned
+                             */
+                            if($professional_qualifications->num_rows()){
+                                foreach($professional_qualifications->result() as $row_in_professional_qualification){
+
+                            ?>
+
                             <tr class="tr">
                                 
-                                <td><input type="text" class="Text" name="any_other_qualifications_institution1"  size='30'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_from1"  size='6'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_to1"  size='6'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_duration1"  size='17'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_type_of_qualification1"  size='36'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->INSTITUTION; ?>" name="any_other_qualifications_institution1"  size='30'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->FROM; ?>" name="any_other_qualifications_from1"  size='6'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TO; ?>" name="any_other_qualifications_to1"  size='6'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->DURATION; ?>" name="any_other_qualifications_duration1"  size='17'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TYPE_OF_QUALIFICATION; ?>" name="any_other_qualifications_type_of_qualification1"  size='36'/></td>
                                 <td><span class="lblStatus"></span></td>
 
                             </tr>    
 
-                            <tr class="tr">
-                                
-                                <td><input type="text" class="Text" name="any_other_qualifications_institution2"  size='30'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_from2"  size='6'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_to2"  size='6'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_duration2"  size='17'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_type_of_qualification2"  size='36'/></td>
-                                <td><span class="lblStatus"></span></td>
-
-                            </tr>
+                            <?php
+                                }
+                            }
+                        
+                            ?>
 
                             <tr class="tr">
                                 
