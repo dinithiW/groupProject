@@ -517,6 +517,18 @@ class ApplicantApplicationFormModel extends CI_Model{
         $query = $this->db->get();
         return $query;
     }
+
+    /**
+     * this function is use for get basic any other qualificational details for edit application form
+     */
+    public function editFileOtherQuallificationalDetails(){
+        $this->load->database();
+        $this->db->select("*");
+        $this->db->from('any_other_qualifications');
+        $this->db->where('INDEX_NUMBER',"19pr000");
+        $query = $this->db->get();
+        return $query;
+    }
 }
 
 ?>

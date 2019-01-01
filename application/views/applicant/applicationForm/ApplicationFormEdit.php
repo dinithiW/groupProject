@@ -428,7 +428,7 @@ if(isset($this->session->userdata['logged_in'])){
                         <?php
 
                         /**
-                         * this part is use for get data from seconadary educational details table
+                         * this part is use for get data from higher educational details table
                          * and set to visible the data above mentioned
                          */
                         if($higher_educational_details->num_rows()){
@@ -483,14 +483,31 @@ if(isset($this->session->userdata['logged_in'])){
                                 <th>Year</th>
                             </tr>
 
+                            
+                        <?php
+
+                            /**
+                             * this part is use for get data from any other qualificational details table
+                             * and set to visible the data above mentioned
+                             */
+                            if($any_other_qualifications->num_rows()){
+                                foreach($any_other_qualifications->result() as $row_in_other_qualification){
+
+                        ?>
+
                             <tr class="tr">
                                 
-                                <td><input type="text" class="Text" name="any_other_qualifications_university1"  size='50'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_deploma1"  size='32'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_duration1"  size='17'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_year1"  size='13'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->INSTITUTION; ?>" name="any_other_qualifications_university1"  size='50'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->DEPLOMA; ?>" name="any_other_qualifications_deploma1"  size='32'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->DURAION; ?>" name="any_other_qualifications_duration1"  size='17'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->YEAR; ?>" name="any_other_qualifications_year1"  size='13'/></td>
                                 <td><span class="lblStatus"></span></td>
 
+                        <?php
+                                }
+                            }
+                        
+                        ?>
                             <tr class="tr">
                                 
                                 <td><input type="text" class="Text" name="any_other_qualifications_university2"  size='50'/></td>
@@ -498,16 +515,6 @@ if(isset($this->session->userdata['logged_in'])){
                                 <td><input type="text" class="Text" name="any_other_qualifications_duration2"  size='17'/></td>
                                 <td><input type="text" class="Text" name="any_other_qualifications_year2"  size='13'/></td>
                                 <td><span class="lblStatus"></span></td>
-
-                            <tr class="tr">
-                               
-                                <td><input type="text" class="Text" name="any_other_qualifications_university3"  size='50'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_deploma3"  size='32'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_duration3"  size='17'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_year3"  size='13'/></td>
-                                <td><span class="lblStatus"></span></td>
-
-                            </tr>
 
                         </table>
                     </div>

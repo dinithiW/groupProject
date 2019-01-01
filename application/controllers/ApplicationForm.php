@@ -43,7 +43,8 @@
             $data['specification_area'] = $this->categorizeApplilcationsModel->fetch_datas();//for get specification_areas for second page
             $data['basic_personal_details'] = $this->ApplicantApplicationFormModel->editFileBasicPersonalDetails();//for basic personal details
             $data['secondary_educational_details'] = $this->ApplicantApplicationFormModel->editFileSecondaryEducationalDetails();//for secondary educational details
-            $data['higher_educational_details'] = $this->ApplicantApplicationFormModel->editFileHigherEducationalDetails();//for secondary educational details
+            $data['higher_educational_details'] = $this->ApplicantApplicationFormModel->editFileHigherEducationalDetails();//for higher educational details
+            $data['any_other_qualifications'] = $this->ApplicantApplicationFormModel->editFileOtherQuallificationalDetails();//for any other qualificational details
         
             $this->load->view('applicant/applicationForm/ApplicationFormEdit',$data);
        
