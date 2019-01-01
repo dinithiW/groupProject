@@ -1,4 +1,12 @@
 
+
+
+
+
+
+
+
+
 <?php
 if($this->session->userdata['logged_in']){
 ?>
@@ -10,23 +18,48 @@ if($this->session->userdata['logged_in']){
                 <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4 row centered-form head">
                 <h4 id="headline1"><span color="red"> ATTACH RELEVANT DOCUMENTS</span></h4>
 
+-----------------
+
+    
+    
+    <?php/*
+    $stat = $dbh->prepare("select * from myblob");
+    $stat->execute();
+    while($row = $stat->fetch()){
+        echo "<li><a href='view.php?id=".$row['id']."' target='_blank'>".$row['name']."</a></li>";
+    }*/
+    ?>
+    
+
+
+-----------------
+
+               
+
+
+
                     <?php
+                    
                         if($fetch_data->num_rows()>0){
                             foreach($fetch_data->result() as $row){
                     ?>
                     
                                 <!-- start of a upload link-->
+                            <?php echo form_open_multipart('ApplicationForm/insertfileUpload');?>
                                 <div class="form-group one">
                                         <h6 id="label1"><b><?php echo $row->LINK_NAME?></b></h6>
-                                        <input type="file" class="inputClass1" id="inputId1" name="attached_file">
-                                        <button type="submit" class="btn btn-lg btn-block btn-primary"  id="button1">upload</button>
-                                    </div>
+                                        <input type="file" class="inputClass1" id="inputId1" name="attached_file" value="<?php echo $row->LINK_NAME;?>">
+                                        <button name = "submit" type="submit" class="btn btn-lg btn-block btn-primary"  id="button1">upload</button>
+                                </div>
+                            </form>
                                 <!-- end of a upload link-->
 
                     <?php
                             }
                         }
+                        
                     ?>
+
                 </div><!-- end of the head-->    
             </div><!-- end of the container-->  
         </div>

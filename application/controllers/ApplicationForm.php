@@ -33,15 +33,26 @@
          * this funciton is use for call AddCustomerForDatabase() function
          * it will upload file to database
          */
+        
         public function insertfileUpload(){
-       
+
+            
+            /**
+             * this is use for connect database and upload files
+             */
+
+            $this->load->model('ApplicantApplicationFormModel');
+            $this->ApplicantApplicationFormModel->insertFIleForDatabase();
+            
+
+
+            /*
             $this->load->helper('form');
-            $this->load->library('form_validation');
-            $data['title'] = 'Create a new Student';
+            
     
             $config = array(
                     'upload_path'    => 'assets/uploaded_file/',
-                    'allowed_types'  => 'jpg|jpeg|png|bmp|txt|pdf',
+                    'allowed_types'  => 'ANY',
                     'max_size'       =>0,
                     'filename'       =>url_title($this->input->post('file')),
                     //'encrypt_name' =>true                   
@@ -55,8 +66,10 @@
             }
             else{
                 $this->load->model('ApplicantApplicationFormModel');
-                $this->ApplicantApplicationFormModel->AddCustomerForDatabase($this->upload->data('full_path'),$this->input->post());
+                $this->ApplicantApplicationFormModel->insertFIleForDatabase($this->upload->data('full_path'),$this->input->post());
             }
+
+            */
         }
     
 
