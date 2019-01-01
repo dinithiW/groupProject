@@ -482,10 +482,24 @@ class ApplicantApplicationFormModel extends CI_Model{
     }
 
     
-    public function editFile(){
+    /**
+     * this function is use for get basic personal details for edit application form
+     */
+    public function editFileBasicPersonalDetails(){
+        
         $this->load->database();
         $this->db->select("*");
         $this->db->from('basic_personal_details');
+        $this->db->where('INDEX_NUMBER',"19pr000");
+        $query = $this->db->get();
+    
+        return $query;
+    }
+
+    public function editFileSecondaryEducationalDetails(){
+        $this->load->database();
+        $this->db->select("*");
+        $this->db->from('secondary_educational_details');
         $this->db->where('INDEX_NUMBER',"19pr000");
         $query = $this->db->get();
         return $query;
