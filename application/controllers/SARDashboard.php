@@ -23,5 +23,11 @@ class SARDashboard extends CI_Controller{
         $this->load->library('email');
         $email->send_mail($this->email, $this->input->post('directormail'), $this->input->post('reportdetails'));
 	}
+
+	public function confirmAdvertisement(){
+		$this->load->model('SAR/advertisementModel');
+		$this->load->advertisementModel->confirmadd();
+		redirect(base_url().'SAR?confirmed=success');
+	}
 }
 ?>
