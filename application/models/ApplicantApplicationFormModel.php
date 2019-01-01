@@ -481,11 +481,10 @@ class ApplicantApplicationFormModel extends CI_Model{
         
     }
 
-
-
-    getDetailsForEdit(){
+    
+    public function editFile(){
         $this->load->database();
-        $this->db->select(*);
+        $this->db->select("*");
         $this->db->from('basic_personal_details');
         $this->db->where('INDEX_NUMBER',"19pr000");
         $query = $this->db->get();

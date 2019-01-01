@@ -30,16 +30,18 @@
             
         }
 
-        /**
-         * this funciton is use for call AddCustomerForDatabase() function
-         * it will edit file to database
-         */
-        
+    /*
+     * this funciton is usefull for edit application 
+     * this will call to function in model 
+     * it will get data from database and will display in the applicatioin form
+     */
+      
         public function editfileUpload(){
             
             $this->load->model('ApplicantApplicationFormModel');
-            $this->ApplicantApplicationFormModel->editFIleForDatabase();
-            
+            $data['fetch_data'] = $this->ApplicantApplicationFormModel->editFile();
+            $this->load->view('applicant/applicationForm/ApplicationFormEdit',$data);
+       
         }
     
         
