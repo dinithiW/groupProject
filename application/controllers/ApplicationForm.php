@@ -12,17 +12,6 @@
                 
                 $this->load->model('ApplicantApplicationFormModel');
                 $this->ApplicantApplicationFormModel->insertBasicPersonalDetailsModel();
-                //$this->ApplicantApplicationFormModel->updateTemporaryIdTable();
-/*                $this->ApplicantApplicationFormModel->insertSecondaryEducationalDetailsModel($id_number);
-                $this->ApplicantApplicationFormModel->insertHigherEducationalDetailsModel($id_number);
-                $this->ApplicantApplicationFormModel->insertAnyOtherQualificationsModel($id_number);
-                $this->ApplicantApplicationFormModel->insertProfessionalQualificationsModel($id_number);
-                $this->ApplicantApplicationFormModel->insertRefereeModel($id_number);
-                $this->ApplicantApplicationFormModel->insertLanguageProficiencyModel($id_number);
-                //$this->ApplicantApplicationFormModel->insertSpecializationAreaForApplicantModel();
-                $this->ApplicantApplicationFormModel->insertOtherFieldsModel($id_number);
-*/                
-
             }
             else{
                 echo"not entered";
