@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>TinyMCE - Setup</title>
-		<link rel="stylesheet" href="<?=base_url('assets/css/loginPanel.css')?>" type="text/css"/>
+    <head>
+        <title>TinyMCE - Setup</title>
+        <link rel="stylesheet" href="<?=base_url('assets/css/loginPanel.css')?>" type="text/css"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width= device-width ,initial-scale = 1">
 
@@ -22,13 +22,13 @@
         }
     </style>
     
-	</head>
-	<body>
-		<div class="content-wrapper">
+    </head>
+    <body>
+        <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Create Advertisement
+        Create Reports
         <!-- <small>Add / Edit User</small> -->
       </h1>
     </section>
@@ -48,20 +48,22 @@
                     </div><!-- /.box-header -->
                     <!-- form start -->
                     
-                    <textarea class="tinymce">
-                    	<!-- <p><span style="font-size: 18pt; font-family: 'indie flower', cursive;">some text here</span></p> -->
+                    <textarea class="tinymce" name="reportdetails">
+                        <!-- <p><span style="font-size: 18pt; font-family: 'indie flower', cursive;">some text here</span></p> -->
                     </textarea>
 
-		<!-- javascript -->
+        <!-- javascript -->
 
-		<script type="text/javascript" src="<?=base_url('assets/js/jquery.min.js')?>"></script>
-		<script type="text/javascript" src="<?=base_url('assets/plugin/tinymce/tinymce.min.js')?>"></script>
-		<script type="text/javascript" src="<?=base_url('assets/plugin/tinymce/init-tinymce.js')?>"></script>
+        <script type="text/javascript" src="<?=base_url('assets/js/jquery.min.js')?>"></script>
+        <script type="text/javascript" src="<?=base_url('assets/plugin/tinymce/tinymce.min.js')?>"></script>
+        <script type="text/javascript" src="<?=base_url('assets/plugin/tinymce/init-tinymce.js')?>"></script>
 
-		<form action = <?= base_url("OperatorIndex/sendEmail")?> method = "post">
-			<br>
-			<input type="submit" name="haha" value = "Send to Director" class="btn btn-primary btn-md" style="float: right">
-		</form>
+        <form action = <?= base_url("sendmail")?> method = "post">
+            <br>
+            Mail Address :
+            <input type="text" name="directormail">
+            <input type="submit" name="haha" value = "Send to Director" class="btn btn-primary btn-md" style="float: right">
+        </form>
                     
                 </div>
             </div>
