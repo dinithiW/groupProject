@@ -1,12 +1,3 @@
-
-
-
-
-
-
-
-
-
 <?php
 if($this->session->userdata['logged_in']){
 ?>
@@ -22,13 +13,7 @@ if($this->session->userdata['logged_in']){
 
     
     
-    <?php/*
-    $stat = $dbh->prepare("select * from myblob");
-    $stat->execute();
-    while($row = $stat->fetch()){
-        echo "<li><a href='view.php?id=".$row['id']."' target='_blank'>".$row['name']."</a></li>";
-    }*/
-    ?>
+    
     
 
 
@@ -52,6 +37,8 @@ if($this->session->userdata['logged_in']){
                                         <button name = "submit" type="submit" class="btn btn-lg btn-block btn-primary"  id="button1">upload</button>
                                 </div>
                             </form>
+
+                            
                                 <!-- end of a upload link-->
 
                     <?php
@@ -60,6 +47,22 @@ if($this->session->userdata['logged_in']){
                         
                     ?>
 
+<p></p>
+
+                           <b> YOUR SUBMITTED DOCUMENTS </b>
+                            <ol>
+                                <?php
+                                     $dbh = new PDO("mysql:host=localhost;dbname=ucsc","root","");
+                                    $stat = $dbh->prepare("select * from application_form_documents");
+                                    $stat->execute();
+                                    while($row = $stat->fetch()){
+                                        echo "<li><a href='view.php?id=".$row['INDEX_NUMBER']."' target='_blank'>".$row['DOCUMENT_NAME']."</a></li>";
+                                    }
+                                ?>
+                            </ol>
+
+
+                                
                 </div><!-- end of the head-->    
             </div><!-- end of the container-->  
         </div>
