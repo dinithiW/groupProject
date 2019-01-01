@@ -555,6 +555,20 @@ class ApplicantApplicationFormModel extends CI_Model{
         $query = $this->db->get();
         return $query;
     }
+
+    
+
+    /**
+     * this function is use for get other applicats_more_details for edit application form
+     */
+    public function editOtherInformations(){
+        $this->load->database();
+        $this->db->select("*");
+        $this->db->from('applicats_more_details');
+        $this->db->where('INDEX_NUMBER',"19pr000");
+        $query = $this->db->get();
+        return $query;
+    }
 }
 
 ?>

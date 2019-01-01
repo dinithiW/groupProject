@@ -699,21 +699,40 @@ if(isset($this->session->userdata['logged_in'])){
                     </div>
                     
                     <!-- end of the dropdown for english2-->
-<!-- end of the dropdown series-->
+                    <!-- end of the dropdown series-->
+
+
+
+                    
+
+                    <?php
+
+                    /**
+                     * this part is use for get data from language proficiency details table
+                     * and set to visible the data above mentioned
+                     */
+                    if($more_details->num_rows()){
+                        foreach($more_details->result() as $row_in_more_details){
+
+                        }
+                    }
+                        
+                    ?>
+
 
                     <h5 id="note1">Note:Indicate your level based on self-evaluation of your ability</h5>
 
                     <!-- start the text box one-->
                     <div form-group>
                         <label >Experience relevant to the post applied for</label>
-                        <input type="text" name="experience" id="experience" class="form-control input-sm" placeholder="                                        Experience relevant to the post applied for (Please indicate the tasks handled with the duration) ">
+                        <input type="text" value ="<?php echo $row_in_more_details->EXPERIENCE_RELEVANT_TO_POST; ?>" name="experience" id="experience" class="form-control input-sm" placeholder="                                        Experience relevant to the post applied for (Please indicate the tasks handled with the duration) ">
                     </div>
                     <!-- end the text box one-->
 
                      <!-- start the text box two-->
                     <div form-group>
                         <label >Details of research and publications, If any</label>
-                        <input type="text" name="research" id="research" class="form-control input-sm" placeholder="                                        Details of research and publications, If any (if space is insufficient, please append it with appends) ">
+                        <input type="text" value ="<?php echo $row_in_more_details->RESEARCH_AND_PUBLICATION_DETAILS; ?>" name="research" id="research" class="form-control input-sm" placeholder="                                        Details of research and publications, If any (if space is insufficient, please append it with appends) ">
                     </div>
                     <!-- end the text box two-->
 
@@ -792,7 +811,7 @@ if(isset($this->session->userdata['logged_in'])){
                     <!-- other--> 
                     <div form-group>
                         <label>Any other information that you need like to indicate</label>
-                        <input type="text" name="other_details" id="other" class="form-control input-sm" placeholder="                                                                              Any other information that you need like to indicate ">
+                        <input type="text" value ="<?php  echo $row_in_more_details->ANY_OTHER_INFORMATION; ?>" name="other_details" id="other" class="form-control input-sm" placeholder="                                                                              Any other information that you need like to indicate ">
                     </div> 
                     <!-- other--> 
 
@@ -801,7 +820,7 @@ if(isset($this->session->userdata['logged_in'])){
                     </h4> 
 
                      <div class="calender" >
-                        <input id = "calender1"  type ="date" name="current_date" data-date-inline-picker="true" />
+                        <input id = "calender1"  type ="date" value ="<?php echo $row_in_more_details->SUBMISSION_DATE; ?>"  name="current_date" data-date-inline-picker="true" />
                     </div>
 
                     
