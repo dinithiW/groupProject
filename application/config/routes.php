@@ -97,6 +97,7 @@ $route['OperatorIndex/interviewDate'] = "OperatorDashboard/setInterviewDate";
 $route['SAR']='SARDashboard/index';
 $route['reports']='SARDashboard/report';
 $route['sendmail']='SARDashboard/sendmail';
+$route['setDates']="SARDashboard/setInterviewDates";
 
 //Director routes
 $route['Director'] = 'DirectorDashboard/index';

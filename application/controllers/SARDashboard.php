@@ -31,12 +31,17 @@ class SARDashboard extends CI_Controller{
 	}
 	public function viewAdvertisement(){
 		$this->load->model('SAR/AdvertisementModel');
-		$this->load->->setNotifyTo0();
+		$this->load->setNotifyTo0();
 		$this->load->library('session');
 		$SESSION["notify_count"]=0;
 
 		$data['advertisement']=$this->AdvertisementModel->getAdvertisement();
 		$this->load->view('users/SAR/advertisement',$data);
+	}
+	public function setInterviewDates(){
+		$this->load->view('includes/header');
+        $this->load->view('users/SAR/setDates');
+        $this->load->view('includes/footer');
 	}
 }
 ?>
