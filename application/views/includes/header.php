@@ -272,7 +272,7 @@ if($checking=='1'){
               </a>
             </li>
              <li class="treeview">
-              <a href="#" >
+              <a href="<?= base_url('candidateList') ?>" >
                 <i class="fa fa-files-o"></i>
                 <span>Candidates</span>
               </a>

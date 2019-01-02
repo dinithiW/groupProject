@@ -57,5 +57,10 @@ class SARDashboard extends CI_Controller{
 		$this->load->view('users/SAR/setDates',$data);
 		$this->load->view('includes/footer');
 	}
+	public function viewCandidates(){
+		$this->load->view('includes/header');
+        $this->load->view('users/SAR/viewCandidates');
+        $this->load->view('includes/footer');
+	}
 }
 ?>
