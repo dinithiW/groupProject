@@ -78,7 +78,7 @@ class OperatorDashboard extends CI_Controller{
        
         $this->load->view('users/operator/header');
         $this->load->view('users/operator/sendEmail');
-        $this->load->view('users/operator/footer');
+        //$this->load->view('users/operator/footer');
     }
 
     //displays all the panel members
@@ -115,7 +115,7 @@ class OperatorDashboard extends CI_Controller{
     public function sendEmail(){
         $this->load->view('users/operator/header');
         $this->load->view('users/operator/showEmails');
-        $this->load->view('includes/footer');
+        //$this->load->view('includes/footer');
     }
 
     public function emailSuccessMessage(){
