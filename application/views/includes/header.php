@@ -278,7 +278,7 @@ if($checking=='1'){
               </a>
             </li>
             <li class="treeview">
-              <a href="#" >
+              <a href="<?= base_url('setDates') ?>"  >
                 <i class="fa fa-files-o"></i>
                 <span>Interview Dates</span>
               </a>
