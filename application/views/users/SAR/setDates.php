@@ -28,7 +28,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Create Reports
+        Interview Dates
         <!-- <small>Add / Edit User</small> -->
       </h1>
     </section>
@@ -62,7 +62,7 @@
             <br>
             Mail Address :
             <input type="text" name="directormail">
-            <input type="submit" name="haha" value = "Send to Director" class="btn btn-primary btn-md" style="float: right">
+            <input type="submit" name="haha" value = "Send" class="btn btn-primary btn-md" style="float: right">
         </form>
                     
                 </div>

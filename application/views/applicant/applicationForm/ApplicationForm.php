@@ -49,37 +49,37 @@ if(isset($this->session->userdata['logged_in'])){
                     <h2 class="fs-title">BASIC PERSONAL DETAILS</h2>
 
                     <h6 class="lables">Full Name (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="first_name" placeholder="Full Name">
+                    <input type="text"  required class="input-fields" name="first_name" placeholder="Full Name" required>
 
                     <h6 class="lables">Surname (in capital blocks)</h6>
                     <input type="text"  required class="input-fields" name="last_name" placeholder="Sur Name">
 
                     <h6 class="lables">Postal Address (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="postal_address" placeholder="Postal Address">
+                    <input type="text"  required class="input-fields" name="postal_address" placeholder="Postal Address"required>
 
                     <h6 class="lables">Permanent Address  (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="permanent_address" placeholder="Permanent Address">
+                    <input type="text"  required class="input-fields" name="permanent_address" placeholder="Permanent Address" required>
                     
                     <h6 class="lables">NIC/Driving Licence/Passport No (in capital blocks)</h6>
-                    <input type="text" required  class="input-fields" name="driving_licence" placeholder="NIC/Driving Licence/Passport No">
+                    <input type="text" required  class="input-fields" name="driving_licence" placeholder="NIC/Driving Licence/Passport No" required>
 
                     <h6 class="lables">Citizenship (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="applicant_citizenship" placeholder="Citizenship">
+                    <input type="text"  required class="input-fields" name="applicant_citizenship" placeholder="Citizenship" required>
 
                     <h6 class="lables">Personal-Email  (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="personalEmail" placeholder="Personal-Email">
+                    <input type="text"  required class="input-fields" name="personalEmail" placeholder="Personal-Email" required>
                     
                     <h6 class="lables">Office-Email (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="officeEmail" placeholder="Office-Email">
+                    <input type="text"  required class="input-fields" name="officeEmail" placeholder="Office-Email" required>
 
                     <h6 class="lables">Mobile Number (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="mobile_number" placeholder="Mobile Number">
+                    <input type="text"  required class="input-fields" name="mobile_number" placeholder="Mobile Number" required>
 
                     <h6 class="lables">Home Number (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="home_number" placeholder="Home Number">
+                    <input type="text"  required class="input-fields" name="home_number" placeholder="Home Number" required>
 
                     <h6 class="lables">Office Number (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="office_number" placeholder="Office Number">
+                    <input type="text"  required class="input-fields" name="office_number" placeholder="Office Number" required>
 
                 <!-- start gender -->
 
@@ -90,99 +90,26 @@ if(isset($this->session->userdata['logged_in'])){
 
                     <div class="custom-sele dropboxGender" style="width:180px; height:100px;">
                         <select name="selectGender">
-                            <option value="male">MALE:</option>
-                            <option value="female">FEMALE</option>
+                            <option value="MALE">MALE:</option>
+                            <option value="FEMALE">FEMALE</option>
                         </select>
                     </div>
 
                     <div class="custom-sele dropboxCivil" style="width:100px; height:50px;">
                         <select name="selectCivilStatus" id="selectCategory">
-                            <option value="married">MARRIED</option>
-                            <option value="un_married">UN MARRIED</option>
+                            <option value="MARRIED">MARRIED</option>
+                            <option value="UN MARRIED">UN MARRIED</option>
                         </select>
                     </div>
 
                     <div class="custom-sele dropboxCitizenship" style="width:100px; height:50px;">
                         <select name="selectCitizenship" id="selectCategory">
-                            <option value="by_decent">BY DESCENT</option>
-                            <option value="by_registration">BY REGISTRATION</option>
+                            <option value="BY DESCENT">BY DESCENT</option>
+                            <option value="BY REGISTRATION">BY REGISTRATION</option>
                         </select>
                     </div>
 
-                    
-
-                
-<!--                    <div class="lables3">
-                        <h5 id="lab1">GENDER</h5>
-                        <h5 class="lables3" id="lables3id1">MALE</h5>
-                        <h5 class="lables3" id="lables3id2">FEMALE</h5>
-                        
-                    </div>
--->
-<!--
-                    <div class ="rad1">
-                        <input type="radio"   id="radioGender1" name="gender" valule="men" >
-                        <input type="radio"   id="radioGender2" name="gender" valule="woman">
-                    </div>
--->
-
-                    <!-- start of the dropdown for tamil2-->
-                    
-
-                    <!-- end of the dropdown for tamil2-->
-
-                
-
-                <!-- end gender -->
-
-                <!-- start civil status -->
- <!--               
-                    <div class="lables4">
-                        <h5 id="lab2">CIVIL STATUS</h5>
-                        <h5 class="lables4" id="lables4id1">MARRIED</h5>
-                        <h5 class="lables4" id="lables4id2">UN MARRIED</h5>
-                        
-                    </div>
--->
-<!--
-                    <div class ="rad2">
-                        <input type="radio"   id="radioCivil1" name="civil_status" >
-                        <input type="radio"   id="radioCivil2" name="civil_status" >
-                    </div>
--->
-                    
-
-                        
-
-                <!-- end civil status -->
-
-
-                <!-- start citizenship -->
-<!--
-                   <div class="lables5">
-                        <h5 id="lab3">IF A CITIZEN OF SRI LANKA HOW OBTAINED</h5>
-                        <h5 class="lables5" id="lables5id1">BY DESCENT</h5>
-                        <h5 class="lables5" id="lables5id2">BY REGISTRATION</h5>
-                        
-                    </div>
--->
-<!--
-                    <div class="custom-sele gend" style="width:150px; height:100px;">
-                        <select name="gender">
-                            <option value="male">maried:</option>
-                            <option value="female">un marid</option>
-                        </select>
-                    </div>
--->
-<!--
-                    <div class ="rad3">
-                        <input type="radio"   id="radioCitizen1" name="citizen" >
-                        <input type="radio"   id="radioCitizen2" name="citizen" >
-                    </div>
--->                    
-                <!-- end citizenship -->    
-                
-                    
+                                    
                     <!-- start the calender-->
                     <div class="calender1">
                         <h4 id="birth-date"> Date of Birth</h4>
@@ -392,18 +319,18 @@ if(isset($this->session->userdata['logged_in'])){
 
                 <div class="custom-sele dropboxSelectPost" style="width:100px; height:50px;">
                     <select name="postApplyFor" id="selectCategory1">
-                        <option value="probationary">LECTURER(PROBATIONARY)</option>
-                        <option value="senior">SENIOR LECTURE GR. II</option>
+                        <option value="PROBATIONARY LECTURER">PROBATIONARY LECTURER</option>
+                        <option value="SENIOR LECTURE GR. II">SENIOR LECTURE GR. II</option>
                     </select>
                 </div>
 
                 <div class="custom-select " style="width:430px; height:50px;">
                    <select name="selectDegree" id="selectCategory">
-                        <option value="0">Select Degree Category:</option>
-                        <option value="first_class">First Class(Bachelore of computer science)</option>
-                        <option value="second_upper">Second Upper(Bachelore of computer science)</option>
-                        <option value="second_lower">Second Lower(Bachelore of computer science)</option>
-                        <option value="general">General(Bachelore of computer science)</option>
+                        <option value="select degree">Select Degree Category:</option>
+                        <option value="First Class(Bachelore of computer science)">First Class(Bachelore of computer science)</option>
+                        <option value="Second Upper(Bachelore of computer science)">Second Upper(Bachelore of computer science)</option>
+                        <option value="Second Lower(Bachelore of computer science)">Second Lower(Bachelore of computer science)</option>
+                        <option value="General(Bachelore of computer science)">General(Bachelore of computer science)</option>
                     </select>
                 </div>
 
@@ -418,6 +345,7 @@ if(isset($this->session->userdata['logged_in'])){
                                 <th>Examination Passed</th>
                                 <th>Year</th>
                             </tr>
+
 
                             <tr class="tr">
                                 <td><input type="text" class="Text"  name="secondary_educational_school_name1" size='42'/></td>
@@ -646,10 +574,10 @@ if(isset($this->session->userdata['logged_in'])){
                         <label for="sinhala">Ability to Work Sinhala</label>
                         <select name="work_sinhala">
                             <option value="0">Mark in here:</option>
-                            <option value="verygood">Very Good</option>
-                            <option value="good">Good</option>
-                            <option value="fair">Fair</option>
-                            <option value="no_knowledge">No Knowledge</option>
+                            <option value="Very Good">Very Good</option>
+                            <option value="Good">Good</option>
+                            <option value="Fair">Fair</option>
+                            <option value="No Knowledge">No Knowledge</option>
                         </select>
                     </div>
                     <!-- end of the dropdown for sinhala1-->
@@ -661,10 +589,10 @@ if(isset($this->session->userdata['logged_in'])){
                         <label for="sinhala">Ability To Teach Sinhala</label>
                         <select name="teach_sinhala">
                             <option value="0">Mark in here:</option>
-                            <option value="verygood">Very Good</option>
-                            <option value="good">Good</option>
-                            <option value="fair">Fair</option>
-                            <option value="no_knowledge">No Knowledge</option>
+                            <option value="Very Good">Very Good</option>
+                            <option value="Good">Good</option>
+                            <option value="Fair">Fair</option>
+                            <option value="No Knowledge">No Knowledge</option>
                         </select>
                     </div>
                     
@@ -677,10 +605,10 @@ if(isset($this->session->userdata['logged_in'])){
                     <label for="tamil">Ability to Work Tamil</label>
                         <select name="work_tamil">
                             <option value="0">Mark in here:</option>
-                            <option value="verygood">Very Good</option>
-                            <option value="good">Good</option>
-                            <option value="fair">Fair</option>
-                            <option value="no_knowledge">No Knowledge</option>
+                            <option value="Very Good">Very Good</option>
+                            <option value="Good">Good</option>
+                            <option value="Fair">Fair</option>
+                            <option value="No Knowledge">No Knowledge</option>
                         </select>
                     </div>
                     <!-- end of the dropdown for english1-->
@@ -693,10 +621,10 @@ if(isset($this->session->userdata['logged_in'])){
                         <label for="tamil">Ability To Teach Tamil</label>
                         <select name="teach_tamil">
                             <option value="0">Mark in here:</option>
-                            <option value="verygood">Very Good</option>
-                            <option value="good">Good</option>
-                            <option value="fair">Fair</option>
-                            <option value="no_knowledge">No Knowledge</option>
+                            <option value="Very Good">Very Good</option>
+                            <option value="Good">Good</option>
+                            <option value="Fair">Fair</option>
+                            <option value="No Knowledge">No Knowledge</option>
                         </select>
                     </div>
                    <!-- end of the dropdown for sinhala2-->
@@ -706,10 +634,10 @@ if(isset($this->session->userdata['logged_in'])){
                         <label for="english">Ability to Work English</label>
                         <select name="work_english">
                             <option value="0">Mark in here:</option>
-                            <option value="verygood">Very Good</option>
-                            <option value="good">Good</option>
-                            <option value="fair">Fair</option>
-                            <option value="no_knowledge">No Knowledge</option>
+                            <option value="Very Good">Very Good</option>
+                            <option value="Good">Good</option>
+                            <option value="Fair">Fair</option>
+                            <option value="No Knowledge">No Knowledge</option>
                         </select>
                     </div>
                     <!-- end of the dropdown for tamil2-->
@@ -719,10 +647,10 @@ if(isset($this->session->userdata['logged_in'])){
                         <label for="english">Ability To Teach English</label>
                         <select name="teach_english">
                             <option value="0">Mark in here:</option>
-                            <option value="verygood">Very Good</option>
-                            <option value="good">Good</option>
-                            <option value="fair">Fair</option>
-                            <option value="no_knowledge">No Knowledge</option>
+                            <option value="Very Good">Very Good</option>
+                            <option value="Good">Good</option>
+                            <option value="Fair">Fair</option>
+                            <option value="No Knowledge">No Knowledge</option>
                         </select>
                     </div>
                     

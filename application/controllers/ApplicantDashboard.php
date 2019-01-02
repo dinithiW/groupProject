@@ -37,6 +37,9 @@ class ApplicantDashboard extends CI_Controller{
        
     }
 
+
+    
+
     public function applicationSelectAreas(){
         
         $this->load->model('operator/categorizeApplilcationsModel');

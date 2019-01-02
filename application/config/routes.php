@@ -96,10 +96,17 @@ $route['OperatorIndex/interviewDate'] = "OperatorDashboard/setInterviewDate";
 //SAR routes
 $route['SAR']='SARDashboard/index';
 $route['reports']='SARDashboard/report';
+$route['sendmail']='SARDashboard/sendmail';
+$route['setDates']="SARDashboard/setInterviewDates";
 
 //Director routes
 $route['Director'] = 'DirectorDashboard/index';
 $route['Director/adRequest'] = 'DirectorDashboard/adRequest';
+$route['Director/approveAd'] = 'DirectorDashboard/approveAd';
+$route['Director/viewApplicants'] = 'DirectorDashboard/viewApplicants';
+$route['Director/approveSelected'] = 'DirectorDashboard/approveSelected';
+$route['Director/approveFinalSet'] = 'DirectorDashboard/approveFinalSet';
+$route['Director/setInterviewDate'] = 'DirectorDashboard/setInterviewDate';
 $route['Director/insertData'] = 'Directordashboard/insertData';
 $route['Director/addMessage'] = 'DirectorDashboard/addNotification';
 $route['Director/viewMessage'] = 'DirectorDashboard/viewNotification';
@@ -135,7 +142,7 @@ $route['registerUsers/success'] = 'Register/success';
 //directing to applicant home
 $route['applicant'] = 'ApplicantDashboard/index';
 $route['application_form_fill'] = 'ApplicantDashboard/applicationFirstPage';
-$route['application_form_edit'] = 'ApplicantDashboard/applicationFirstPage';
+$route['application_form_edit'] = 'ApplicationForm/editfileUpload';
 $route['application_form_documents'] = 'ApplicantDashboard/applicationFifththPage';
 $route['LOGOUT']='User/out';
 //applicant end

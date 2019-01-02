@@ -3,7 +3,7 @@
     <section class="content-header">
       <h1>
         <i class="fa fa-audio-description"></i> Advertisement Request
-        <small>Add / Edit User</small>
+        <small>Request for a new Advertisement</small>
       </h1>
     </section>
     
