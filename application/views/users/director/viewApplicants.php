@@ -20,7 +20,13 @@
                     <div class="box-header">
                         <h3 class="box-title">View Applicantst</h3>
                     </div><!-- /.box-header -->
-                    
+                   <div class =  "table-responsive">
+                        <table class = "table table-bordered">
+                            <tr>
+                                <td></td>
+                            </tr>
+                        </table>
+                   </div>
                 </div>
             </div>
             <div class="col-md-4">
