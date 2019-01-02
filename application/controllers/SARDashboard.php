@@ -7,28 +7,37 @@ class SARDashboard extends CI_Controller{
 		parent::__construct();
 		$this->load->helper('url');
     }
+
     
 	public function index(){
         $this->load->view('includes/header');
         $this->load->view('home');
         $this->load->view('includes/footer');
 	}
+
+
 	public function report(){
 		$this->load->view('includes/header');
         $this->load->view('users/SAR/reportgenerate');
         $this->load->view('includes/footer');
 	}
+
+
 	public function sendmail(){
 		$email = new EmailController();
         $this->load->library('email');
         $email->send_mail($this->email, $this->input->post('directormail'), $this->input->post('reportdetails'));
 	}
 
+
+
 	public function confirmAdvertisement(){
 		$this->load->model('SAR/AdvertisementModel');
 		$this->load->AdvertisementModel->confirmadd();
 		redirect(base_url().'SAR?confirmed=success');
 	}
+
+
 	public function viewAdvertisement(){
 		$this->load->model('SAR/AdvertisementModel');
 		//$this->load->setNotifyTo0();
@@ -38,6 +47,8 @@ class SARDashboard extends CI_Controller{
 		$data['advertisement']=$this->AdvertisementModel->getAdvertisement();
 		$this->load->view('users/SAR/advertisement',$data);
 	}
+
+
 	public function setInterviewDates(){
 		$data=[];
 		$this->load->model('SAR/PanelDetails');
@@ -47,6 +58,8 @@ class SARDashboard extends CI_Controller{
         $this->load->view('users/SAR/setDates', $data);
         $this->load->view('includes/footer');
 	}
+
+
 	public function getAllmailAddresses(){
 		$data=[];
 		$this->load->model('SAR/PanelDetails');
@@ -57,10 +70,53 @@ class SARDashboard extends CI_Controller{
 		$this->load->view('users/SAR/setDates',$data);
 		$this->load->view('includes/footer');
 	}
+
+
 	public function viewCandidates(){
 		$this->load->view('includes/header');
         $this->load->view('users/SAR/viewCandidates');
         $this->load->view('includes/footer');
+	}
+
+
+
+	public function getseniorLecturers(){
+		$data=[];
+		$this->load->model('SAR/Candidates');
+		$data['Members']=$this->load->Candidates->getallseniorlecturers();
+		$this->load->view('includes/header');
+		$this->load->view('users/SAR/viewCandidates',$data);
+		$this->load->view('includes/footer');
+	}
+
+
+	public function getcategoryoneLecturers(){
+		$data=[];
+		$this->load->model('SAR/Candidates');
+		$data['Members']=$this->load->Candidates->getallcategoryonelecturers();
+		$this->load->view('includes/header');
+		$this->load->view('users/SAR/viewCandidates',$data);
+		$this->load->view('includes/footer');
+	}
+
+
+	public function getcategorytwoLecturers(){
+		$data=[];
+		$this->load->model('SAR/Candidates');
+		$data['Members']=$this->load->Candidates->getallcategorytwolecturers();
+		$this->load->view('includes/header');
+		$this->load->view('users/SAR/viewCandidates',$data);
+		$this->load->view('includes/footer');
+	}
+
+
+	public function getcategorythreeLecturers(){
+		$data=[];
+		$this->load->model('SAR/Candidates');
+		$data['Members']=$this->load->Candidates->getallcategorythreelecturers();
+		$this->load->view('includes/header');
+		$this->load->view('users/SAR/viewCandidates',$data);
+		$this->load->view('includes/footer');
 	}
 }
 ?>

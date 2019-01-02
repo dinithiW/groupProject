@@ -25,12 +25,15 @@
         <i class="fa fa-users"></i> Candidates
         <!--<small>Add, Edit, Delete</small>-->
       </h1>
-       </section>
+
+     </section>
     <section class="content">
         <div class="row">
             <div class="col-xs-12 text-right">
+
                 <div class="form-group">
-                    <a class="btn btn-primary" href="<?= base_url('OperatorIndex/addMember') ?>"><i class="fa fa-plus"></i> Add New</a>
+
+                    <!--<a class="btn btn-primary" href="<?= base_url('OperatorIndex/addMember') ?>"><i class="fa fa-plus"></i> Add New</a>-->
                 </div>
             </div>
         </div>
