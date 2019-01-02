@@ -82,8 +82,8 @@ class SARDashboard extends CI_Controller{
 
 	public function getseniorLecturers(){
 		$data=[];
-		$this->load->model('SAR/Candidates');
-		$data['Members']=$this->load->Candidates->getallseniorlecturers();
+		$this->load->model('SAR/CandidatesModel');
+		$data['Members']=$this->load->CandidatesModel->getallseniorlecturers();
 		$this->load->view('includes/header');
 		$this->load->view('users/SAR/viewCandidates',$data);
 		$this->load->view('includes/footer');
@@ -92,8 +92,8 @@ class SARDashboard extends CI_Controller{
 
 	public function getcategoryoneLecturers(){
 		$data=[];
-		$this->load->model('SAR/Candidates');
-		$data['Members']=$this->load->Candidates->getallcategoryonelecturers();
+		$this->load->model('SAR/CandidatesModel');
+		$data['Members']=$this->load->CandidatesModel->getallcategoryonelecturers();
 		$this->load->view('includes/header');
 		$this->load->view('users/SAR/viewCandidates',$data);
 		$this->load->view('includes/footer');
@@ -102,8 +102,8 @@ class SARDashboard extends CI_Controller{
 
 	public function getcategorytwoLecturers(){
 		$data=[];
-		$this->load->model('SAR/Candidates');
-		$data['Members']=$this->load->Candidates->getallcategorytwolecturers();
+		$this->load->model('SAR/CandidatesModel');
+		$data['Members']=$this->load->CandidatesModel->getallcategorytwolecturers();
 		$this->load->view('includes/header');
 		$this->load->view('users/SAR/viewCandidates',$data);
 		$this->load->view('includes/footer');
@@ -112,8 +112,8 @@ class SARDashboard extends CI_Controller{
 
 	public function getcategorythreeLecturers(){
 		$data=[];
-		$this->load->model('SAR/Candidates');
-		$data['Members']=$this->load->Candidates->getallcategorythreelecturers();
+		$this->load->model('SAR/CandidatesModel');
+		$data['Members']=$this->load->CandidatesModel->getallcategorythreelecturers();
 		$this->load->view('includes/header');
 		$this->load->view('users/SAR/viewCandidates',$data);
 		$this->load->view('includes/footer');
