@@ -577,7 +577,8 @@ if(isset($this->session->userdata['logged_in'])){
                              */
                             if($any_other_qualifications->num_rows()){
                                 foreach($any_other_qualifications->result() as $row_in_other_qualification){
-
+                            
+                                    if($row_in_other_qualification->ROW_NUMBER=='1'){
                         ?>
 
                             <tr class="tr">
@@ -588,18 +589,41 @@ if(isset($this->session->userdata['logged_in'])){
                                 <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->YEAR; ?>" name="any_other_qualifications_year1"  size='13'/></td>
                                 <td><span class="lblStatus"></span></td>
 
+                                    <?php
+                                    }
+                                    
+                                    if($row_in_other_qualification->ROW_NUMBER=='2'){
+                                    ?>
+                            <tr class="tr">
+                                
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->INSTITUTION; ?>" name="any_other_qualifications_university2"  size='50'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->DEPLOMA; ?>" name="any_other_qualifications_deploma2"  size='32'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->DURAION; ?>" name="any_other_qualifications_duration2"  size='17'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->YEAR; ?>" name="any_other_qualifications_year2"  size='13'/></td>
+                                <td><span class="lblStatus"></span></td>
+
+
+                                    <?php
+                                    }
+                                    
+                                    if($row_in_other_qualification->ROW_NUMBER=='3'){
+                                    ?>
+                            <tr class="tr">
+                                
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->INSTITUTION; ?>" name="any_other_qualifications_university3"  size='50'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->DEPLOMA; ?>" name="any_other_qualifications_deploma3"  size='32'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->DURAION; ?>" name="any_other_qualifications_duration3"  size='17'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->YEAR; ?>" name="any_other_qualifications_year3"  size='13'/></td>
+                                <td><span class="lblStatus"></span></td>
+
+
                         <?php
+                                    }
                                 }
                             }
                         
                         ?>
-                            <tr class="tr">
-                                
-                                <td><input type="text" class="Text" name="any_other_qualifications_university2"  size='50'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_deploma2"  size='32'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_duration2"  size='17'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_year2"  size='13'/></td>
-                                <td><span class="lblStatus"></span></td>
+                            
 
                         </table>
                     </div>

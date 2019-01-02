@@ -222,6 +222,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         $any_other_qualifications_table_first_row = array(
 
             'INDEX_NUMBER'       =>$idNumber,
+            'ROW_NUMBER'         => '1',
             'INSTITUTION'        =>$this->input->post('any_other_qualifications_university1'),
             'DEPLOMA'            =>$this->input->post('any_other_qualifications_deploma1'),
             'DURAION'            =>$this->input->post('any_other_qualifications_duration1'),
@@ -235,6 +236,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         $any_other_qualifications_table_second_row = array(
 
             'INDEX_NUMBER'       =>$idNumber,
+            'ROW_NUMBER'         => '2',
             'INSTITUTION'        =>$this->input->post('any_other_qualifications_university2'),
             'DEPLOMA'            =>$this->input->post('any_other_qualifications_deploma2'),
             'DURAION'            =>$this->input->post('any_other_qualifications_duration2'),
@@ -248,6 +250,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         $any_other_qualifications_table_third_row = array(
 
             'INDEX_NUMBER'       =>$idNumber,
+            'ROW_NUMBER'         => '3',
             'INSTITUTION'        =>$this->input->post('any_other_qualifications_university3'),
             'DEPLOMA'            =>$this->input->post('any_other_qualifications_deploma3'),
             'DURAION'            =>$this->input->post('any_other_qualifications_duration3'),
@@ -264,11 +267,11 @@ class ApplicantApplicationFormModel extends CI_Model{
         $this->load->database();
         $professional_qualifications_table_first_row = array(
 
-            'INDEX_NUMBER'       =>$idNumber,
+            'INDEX_NUMBER'          =>$idNumber,
             'INSTITUTION'           =>$this->input->post('any_other_qualifications_institution1'),
             'FROM'                  =>$this->input->post('any_other_qualifications_from1'),
             'TO'                    =>$this->input->post('any_other_qualifications_to1'),
-            'DURATION'               =>$this->input->post('any_other_qualifications_duration1'),
+            'DURATION'              =>$this->input->post('any_other_qualifications_duration1'),
             'TYPE_OF_QUALIFICATION' =>$this->input->post('any_other_qualifications_type_of_qualification1')
         );
 
@@ -732,10 +735,10 @@ class ApplicantApplicationFormModel extends CI_Model{
         //$this->db->insert('basic_personal_details', $data);
 
         $this->insertSecondaryEducationalDetailsModel($idNumber);
-        /*
-        $this->insertHigherEducationalDetailsModel($idNumber);
+        
+        //$this->insertHigherEducationalDetailsModel($idNumber);
         $this->insertAnyOtherQualificationsModel($idNumber);
-        $this->insertProfessionalQualificationsModel($idNumber);
+        /*$this->insertProfessionalQualificationsModel($idNumber);
         $this->insertRefereeModel($idNumber);
         $this->insertLanguageProficiencyModel($idNumber);
         $this->insertApplicatsMoreDetails($idNumber);
