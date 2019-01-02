@@ -39,9 +39,23 @@ class SARDashboard extends CI_Controller{
 		$this->load->view('users/SAR/advertisement',$data);
 	}
 	public function setInterviewDates(){
+		$data=[];
+		$this->load->model('SAR/PanelDetails');
+		$data['Members']=$this->PanelDetails->getAllEmailAddresses();
+		var_dump($data['Members']);
 		$this->load->view('includes/header');
-        $this->load->view('users/SAR/setDates');
+        $this->load->view('users/SAR/setDates', $data);
         $this->load->view('includes/footer');
+	}
+	public function getAllmailAddresses(){
+		$data=[];
+		$this->load->model('SAR/PanelDetails');
+		$data['Members']=$this->load->PanelDetails->getAllEmailAddresses();
+		var_dump($data['members']);
+		exit();
+		$this->load->view('includes/header');
+		$this->load->view('users/SAR/setDates',$data);
+		$this->load->view('includes/footer');
 	}
 }
 ?>

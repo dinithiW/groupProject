@@ -4,7 +4,6 @@ class ApplicantApplicationFormModel extends CI_Model{
         parent::__construct();
     }
     
-
     /**
      * this function is use for 
      * insert the basic personal details to database
@@ -115,6 +114,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         $this->load->database();
         $secondary_educational_table_first_row = array(
             'INDEX_NUMBER'       =>$idNumber,
+            'ROW_NUMBER'         => '1',
             'SCHOOL_NAME'        =>$this->input->post('secondary_educational_school_name1'),
             'FROM'               =>$this->input->post('secondary_educational_from1'),
             'TO'                 =>$this->input->post('secondary_educational_to1'),
@@ -125,6 +125,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         
         $secondary_educational_table_second_row = array(
             'INDEX_NUMBER'       =>$idNumber,
+            'ROW_NUMBER'         => '2',
             'SCHOOL_NAME'        =>$this->input->post('secondary_educational_school_name2'),
             'FROM'               =>$this->input->post('secondary_educational_from2'),
             'TO'                 =>$this->input->post('secondary_educational_to2'),
@@ -135,6 +136,7 @@ class ApplicantApplicationFormModel extends CI_Model{
 
         $secondary_educational_table_third_row = array(
             'INDEX_NUMBER'       =>$idNumber,
+            'ROW_NUMBER'         => '3',
             'SCHOOL_NAME'        =>$this->input->post('secondary_educational_school_name3'),
             'FROM'               =>$this->input->post('secondary_educational_from3'),
             'TO'                 =>$this->input->post('secondary_educational_to3'),
@@ -145,6 +147,7 @@ class ApplicantApplicationFormModel extends CI_Model{
    
         $secondary_educational_table_fourth_row = array(
             'INDEX_NUMBER'       =>$idNumber,
+            'ROW_NUMBER'         => '4',
             'SCHOOL_NAME'        =>$this->input->post('secondary_educational_school_name4'),
             'FROM'               =>$this->input->post('secondary_educational_from4'),
             'TO'                 =>$this->input->post('secondary_educational_to4'),
@@ -374,9 +377,7 @@ class ApplicantApplicationFormModel extends CI_Model{
             'TEACH_TAMIL'           =>$name6
         );
         
-
-        $this->db->set($language_proficiency);
-        $this->db->insert($this->db->dbprefix.'language_proficiency');
+        $this->db->insert('language_proficiency', $language_proficiency);
 
     } 
     
@@ -466,11 +467,11 @@ class ApplicantApplicationFormModel extends CI_Model{
     /**
      * this function is use for get basic personal details for edit application form
      */
-    public function editFileBasicPersonalDetails(){
+    public function editFileBasicPersonalDetails($index_number){
         $this->load->database();
         $this->db->select("*");
         $this->db->from('basic_personal_details');
-        $this->db->where('INDEX_NUMBER',"19pr000");
+        $this->db->where('INDEX_NUMBER',$index_number);
         $query = $this->db->get();
         return $query;
     }
@@ -478,11 +479,11 @@ class ApplicantApplicationFormModel extends CI_Model{
     /**
      * this function is use for get basic secondary educational details for edit application form
      */
-    public function editFileSecondaryEducationalDetails(){
+    public function editFileSecondaryEducationalDetails($index_number){
         $this->load->database();
         $this->db->select("*");
         $this->db->from('secondary_educational_details');
-        $this->db->where('INDEX_NUMBER',"19pr000");
+        $this->db->where('INDEX_NUMBER',$index_number);
         $query = $this->db->get();
         return $query;
     }
@@ -490,11 +491,11 @@ class ApplicantApplicationFormModel extends CI_Model{
     /**
      * this function is use for get basic higher educational details for edit application form
      */
-    public function editFileHigherEducationalDetails(){
+    public function editFileHigherEducationalDetails($index_number){
         $this->load->database();
         $this->db->select("*");
         $this->db->from('higher_educational_details');
-        $this->db->where('INDEX_NUMBER',"19pr000");
+        $this->db->where('INDEX_NUMBER',$index_number);
         $query = $this->db->get();
         return $query;
     }
@@ -502,11 +503,11 @@ class ApplicantApplicationFormModel extends CI_Model{
     /**
      * this function is use for get basic any other qualificational details for edit application form
      */
-    public function editFileOtherQuallificationalDetails(){
+    public function editFileOtherQuallificationalDetails($index_number){
         $this->load->database();
         $this->db->select("*");
         $this->db->from('any_other_qualifications');
-        $this->db->where('INDEX_NUMBER',"19pr000");
+        $this->db->where('INDEX_NUMBER',$index_number);
         $query = $this->db->get();
         return $query;
     }
@@ -516,11 +517,11 @@ class ApplicantApplicationFormModel extends CI_Model{
     /**
      * this function is use for get professional qualificational details for edit application form
      */
-    public function editFileProfessionalQualifications(){
+    public function editFileProfessionalQualifications($index_number){
         $this->load->database();
         $this->db->select("*");
         $this->db->from('professional_qualifications');
-        $this->db->where('INDEX_NUMBER',"19pr000");
+        $this->db->where('INDEX_NUMBER',$index_number);
         $query = $this->db->get();
         return $query;
     }
@@ -528,11 +529,11 @@ class ApplicantApplicationFormModel extends CI_Model{
     /**
      * this function is use for get language professioncy details for edit application form
      */
-    public function editFileLauguageProficiency(){
+    public function editFileLauguageProficiency($index_number){
         $this->load->database();
         $this->db->select("*");
         $this->db->from('language_proficiency');
-        $this->db->where('INDEX_NUMBER',"19pr000");
+        $this->db->where('INDEX_NUMBER',$index_number);
         $query = $this->db->get();
         return $query;
     }
@@ -542,11 +543,11 @@ class ApplicantApplicationFormModel extends CI_Model{
     /**
      * this function is use for get other applicats_more_details for edit application form
      */
-    public function editOtherInformations(){
+    public function editOtherInformations($index_number){
         $this->load->database();
         $this->db->select("*");
         $this->db->from('applicats_more_details');
-        $this->db->where('INDEX_NUMBER',"19pr000");
+        $this->db->where('INDEX_NUMBER',$index_number);
         $query = $this->db->get();
         return $query;
     }
@@ -555,11 +556,11 @@ class ApplicantApplicationFormModel extends CI_Model{
     /**
      * this function is use for get other applicats_more_details for edit application form
      */
-    public function editRefereesInformations(){
+    public function editRefereesInformations($index_number){
         $this->load->database();
         $this->db->select("*");
         $this->db->from('referees');
-        $this->db->where('INDEX_NUMBER',"19pr000");
+        $this->db->where('INDEX_NUMBER',$index_number);
         $query = $this->db->get();
         return $query;
     }
@@ -568,11 +569,11 @@ class ApplicantApplicationFormModel extends CI_Model{
     /**
      * this function is use for get other specification area  for edit application form
      */
-    public function editSpecificationAreas(){
+    public function editSpecificationAreas($index_number){
         $this->load->database();
         $this->db->select("*");
         $this->db->from('specialization_area_for_applicant');
-        $this->db->where('INDEX_NUMBER',"19pr000");
+        $this->db->where('INDEX_NUMBER',$index_number);
         $query = $this->db->get();
         return $query;
     }
@@ -584,8 +585,9 @@ class ApplicantApplicationFormModel extends CI_Model{
     
      public function deleteApplicantDetails($index_number){
       
-        $this->deleteBasicPresonalDetails($index_number);
+        //$this->deleteBasicPresonalDetails($index_number);
         $this->deleteSecondaryEducationalDetails($index_number); 
+        /*
         $this->deleteHigherEducationalDetails($index_number); 
         $this->deleteSpecificationAreas($index_number); 
         $this->deleteAnyOtherQualification($index_number);
@@ -593,7 +595,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         $this->deleteLanguageProficiency($index_number); 
         $this->deleteApplicationMoreDetails($index_number); 
         $this->deleteRefereesDetails($index_number); 
-
+        */
 
      }
 
@@ -601,7 +603,7 @@ class ApplicantApplicationFormModel extends CI_Model{
       * this function is used for delete the basic personal details 
       */
      public function deleteBasicPresonalDetails($index_number){
-        $this->load->database()
+        $this->load->database();
         $this->db->where('INDEX_NUMBER', $index_number);
         $this->db->delete('basic_personal_details');
      }
@@ -726,12 +728,11 @@ class ApplicantApplicationFormModel extends CI_Model{
             'DEGREE'             => $name17
         );
 
-       //$this->db->set($data);
-       //$this->db->insert($this->db->dbprefix.'');
-        $this->db->insert('basic_personal_details', $data);
+       
+        //$this->db->insert('basic_personal_details', $data);
 
-        $this->updateTemporaryIdTable($idNumber);
         $this->insertSecondaryEducationalDetailsModel($idNumber);
+        /*
         $this->insertHigherEducationalDetailsModel($idNumber);
         $this->insertAnyOtherQualificationsModel($idNumber);
         $this->insertProfessionalQualificationsModel($idNumber);
@@ -739,6 +740,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         $this->insertLanguageProficiencyModel($idNumber);
         $this->insertApplicatsMoreDetails($idNumber);
         $this->insertSpecificationAreas($idNumber);
+        */
     }
 
 }
