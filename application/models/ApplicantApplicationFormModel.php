@@ -595,6 +595,108 @@ class ApplicantApplicationFormModel extends CI_Model{
         $query = $this->db->get();
         return $query;
     }
+
+
+    /**
+     * this function is use for delete the alldetails of the applicant
+     */
+    
+     public function deleteApplicantDetails(){
+        $index_number = ;
+        $this->deleteBasicPresonalDetails($index_number);
+        $this->deleteSecondaryEducationalDetails($index_number); 
+        $this->deleteHigherEducationalDetails($index_number); 
+        $this->deleteSpecificationAreas($index_number); 
+        $this->deleteAnyOtherQualification($index_number);
+        $this->deleteProfessionalQualification($index_number); 
+        $this->deleteLanguageProficiency($index_number); 
+        $this->deleteApplicationMoreDetails($index_number); 
+        $this->deleteRefereesDetails($index_number); 
+
+
+     }
+
+     /**
+      * this function is used for delete the basic personal details 
+      */
+     public function deleteBasicPresonalDetails($index_number){
+        $this->load->database()
+        $this->db->where('INDEX_NUMBER', $index_number);
+        $this->db->delete('basic_personal_details');
+     }
+
+     /**
+      * this funciton is used for delete the secondary educational details
+      */
+     public function deleteSecondaryEducationalDetails($index_number){
+         $this->load->database();
+         $this->db->where('INDEX_NUMBER',$index_number);
+         $this->db->delete('secondary_educational_details');
+     }
+
+     /**
+      * this funciton is used for delete the higher educational details
+      */
+      public function deleteHigherEducationalDetails($index_number){
+        $this->load->database();
+        $this->db->where('INDEX_NUMBER',$index_number);
+        $this->db->delete('higher_educational_details');
+    }
+
+    /**
+      * this funciton is used for delete the specification areas
+      */
+      public function deleteSpecificationAreas($index_number){
+        $this->load->database();
+        $this->db->where('INDEX_NUMBER',$index_number);
+        $this->db->delete('specialization_area_for_applicant');
+    }
+
+    /**
+      * this funciton is used for delete the any_other_qualifications
+      */
+      public function deleteAnyOtherQualification($index_number){
+        $this->load->database();
+        $this->db->where('INDEX_NUMBER',$index_number);
+        $this->db->delete('any_other_qualifications');
+    }
+
+    /**
+      * this funciton is used for delete the professional_qualifications
+      */
+      public function deleteProfessionalQualification($index_number){
+        $this->load->database();
+        $this->db->where('INDEX_NUMBER',$index_number);
+        $this->db->delete('professional_qualifications');
+    }
+
+    /**
+      * this funciton is used for delete the language_proficiency
+      */
+      public function deleteLanguageProficiency($index_number){
+        $this->load->database();
+        $this->db->where('INDEX_NUMBER',$index_number);
+        $this->db->delete('language_proficiency');
+    }   
+
+    /**
+      * this funciton is used for delete the applicats_more_details
+      */
+      public function deleteApplicationMoreDetails($index_number){
+        $this->load->database();
+        $this->db->where('INDEX_NUMBER',$index_number);
+        $this->db->delete('applicats_more_details');
+    }
+
+    /**
+      * this funciton is used for delete the referees
+      */
+      public function deleteRefereesDetails($index_number){
+        $this->load->database();
+        $this->db->where('INDEX_NUMBER',$index_number);
+        $this->db->delete('referees');
+    }
+
 }
 
 ?>

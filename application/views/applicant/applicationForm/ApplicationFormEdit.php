@@ -43,7 +43,7 @@ if(isset($this->session->userdata['logged_in'])){
             </ul>
             
             
-            <form action= "<?= base_url("ApplicationForm/insertBasicPersonalDetailsController")?>" method = "post" >
+            <form action= "<?= base_url("ApplicationForm/updateApplicationForm")?>" method = "post" >
             
             <?php
 

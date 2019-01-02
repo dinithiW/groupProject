@@ -18,6 +18,21 @@
             }
         }
 
+
+        /**
+         * this funciton is used for update the application form
+         * first delete the relevant details relevant for the id number
+         * after that insert again to the database
+         */
+        public function updateApplicationForm(){
+            if($this->input->post('Submit')){    
+                $this->load->model('ApplicantApplicationFormModel');
+                $this->ApplicantApplicationFormModel->deleteApplicantDetails();
+            }
+            
+        }
+
+
         /**
          * this funciton is use for call AddCustomerForDatabase() function
          * it will upload file to database
