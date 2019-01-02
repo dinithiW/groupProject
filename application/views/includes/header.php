@@ -196,8 +196,9 @@ if($checking=='1'){
             if($role == ROLE_DIRECTOR)
             {
             ?>
-            <li class="treeview">
-              <a href="<?php echo base_url(); ?>userListing">
+            
+            <!-- <li class="treeview">
+              <a href="<?php //echo base_url(); ?>userListing">
                 <i class="fa fa-users"></i>
                 <span>Users</span>
               </a>
@@ -207,13 +208,51 @@ if($checking=='1'){
                 <i class="fa fa-files-o"></i>
                 <span>Reports</span>
               </a>
-            </li>
+            </li> -->
+            
             <li class="treeview">
               <a href="<?= base_url('Director/adRequest') ?>" >
                 <i class="fa fa-audio-description"></i>
-                <span>Advertisment Request</span>
+                <span>Advertisement Request</span>
               </a>
             </li>
+            
+            <li class="treeview">
+              <a href="<?= base_url('Director/approveAd') ?>" >
+              <i class="fa fa-adn"></i>
+                <span>Approve Advertisement</span>
+              </a>
+            </li>
+            
+            <li class="treeview">
+              <a href="<?= base_url('Director/viewApplicants') ?>" >
+                <i class="fa fa-address-card"></i>
+                <span>View Applicants</span>
+              </a>
+            </li>
+
+            <li class="treeview">
+              <a href="<?= base_url('Director/approveSelected') ?>" >
+                <i class="fa fa-address-book"></i>
+                <span>Approve Selected</span>
+              </a>
+            </li>
+
+            <li class="treeview">
+              <a href="<?= base_url('Director/approveFinalSet') ?>" >
+                <i class="fa fa-align-left"></i>
+                <span>Approve Final Set</span>
+              </a>
+            </li>
+
+            <li class="treeview">
+              <a href="setInterviewDate" >
+                <i class="fa fa-check-square"></i>
+                <span>Set Interview Date</span>
+              </a>
+            </li>
+
+
 
             <?php
             }

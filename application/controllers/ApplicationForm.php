@@ -18,6 +18,21 @@
             }
         }
 
+
+        /**
+         * this funciton is used for update the application form
+         * first delete the relevant details relevant for the id number
+         * after that insert again to the database
+         */
+        public function updateApplicationForm(){
+            if($this->input->post('Submit')){    
+                $this->load->model('ApplicantApplicationFormModel');
+                $this->ApplicantApplicationFormModel->deleteApplicantDetails();
+            }
+            
+        }
+
+
         /**
          * this funciton is use for call AddCustomerForDatabase() function
          * it will upload file to database
@@ -49,6 +64,7 @@
             $data['language_proficiency'] = $this->ApplicantApplicationFormModel->editFileLauguageProficiency();//for any other language proficiency details
             $data['more_details'] = $this->ApplicantApplicationFormModel->editOtherInformations();//for any other language proficiency details
             $data['referees'] = $this->ApplicantApplicationFormModel->editRefereesInformations();//for any other language proficiency details
+            $data['selected_specification_area'] = $this->ApplicantApplicationFormModel->editSpecificationAreas();//for any other language proficiency details
            
             $this->load->view('applicant/applicationForm/ApplicationFormEdit',$data);
             

@@ -19,6 +19,42 @@ class DirectorDashboard extends CI_Controller{
 	
 	}
 
+	public function approveAd(){
+		$this->load->view('includes/header');
+		$this->load->view('users/director/approveAd');
+		$this->load->view('includes/footer');
+		
+	}
+
+	public function viewApplicants(){
+		$this->load->view('includes/header');
+		$this->load->view('users/director/viewApplicants');
+		$this->load->view('includes/footer');
+		
+	}
+
+	public function approveSelected(){
+		$this->load->view('includes/header');
+		$this->load->view('users/director/approveSelected');
+		$this->load->view('includes/footer');
+		
+	}
+
+	public function approveFinalSet(){
+		$this->load->view('includes/header');
+		$this->load->view('users/director/approveFinalSet');
+		$this->load->view('includes/footer');
+		
+	}
+
+	public function setInterviewDate(){
+		$this->load->view('includes/header');
+		$this->load->view('users/director/setInterviewDate');
+		$this->load->view('includes/footer');
+		
+	}
+
+	//Send data to the database
 	public function insertData(){
 		
 		$data = array(
