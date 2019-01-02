@@ -99,6 +99,7 @@ $route['reports']='SARDashboard/report';
 $route['sendmail']='SARDashboard/sendmail';
 $route['setDates']="SARDashboard/setInterviewDates";
 $route['candidateList']="SARDashboard/viewCandidates";
+$route['advertisement']="SARDashboard/viewAdvertisement";
 
 //Director routes
 $route['Director'] = 'DirectorDashboard/index';
