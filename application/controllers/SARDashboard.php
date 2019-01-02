@@ -31,7 +31,7 @@ class SARDashboard extends CI_Controller{
 	}
 	public function viewAdvertisement(){
 		$this->load->model('SAR/AdvertisementModel');
-		$this->load->setNotifyTo0();
+		//$this->load->setNotifyTo0();
 		$this->load->library('session');
 		$SESSION["notify_count"]=0;
 
