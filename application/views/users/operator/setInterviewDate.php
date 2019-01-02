@@ -16,15 +16,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
     <!-- <link src="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
+
+    <!-- <style type="text/css">
+      input{
+  display: block;
+}
+    </style> -->
 </head> 
 
 <body>
-
+<!-- <?php phpinfo(); ?> -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        <i class="fa fa-users"></i> Select Candidates
+        <i class="fa fa-users"></i> Set Interview Date
         <!-- <small>Add, Edit, Delete</small> -->
       </h1>
     </section>
@@ -64,19 +70,65 @@
                 </div><!-- /.box-header -->
                 <div class="box-body table-responsive no-padding">
                   <table class="table table-hover table-bordered">
-                    <tr>
-                      <th>Time</th>
-                      <th>Monday</th>
-                      <th>Tuesday</th>
-                      <th>Wednesday</th>
-                      <th>Thursday</th>
-                      <th>Friday</th>
-                      <th>Saturday</th>
-                      <th>Sunday</th>
+                    <tr style="border-color:black;">
+                      <th style="border-color:black;">Time</th>
+                      <th style="border-color:black;">Monday</th>
+                      <th style="border-color:black;">Tuesday</th>
+                      <th style="border-color:black;">Wednesday</th>
+                      <th style="border-color:black;">Thursday</th>
+                      <th style="border-color:black;">Friday</th>
+                      <th style="border-color:black;">Saturday</th>
+                      <th style="border-color:black;">Sunday</th> 
                     </tr>
 
+                    <?php
+                    for($i=8;$i<=17;$i++){
+                    $temp = $i+1;
+                    ?>
                     <tr>
-                      <td>2016/CS/157</td>
+                      <td style="border-color:black;">
+                      <?php echo "$i".".00 - "."$temp".".00";?>
+                    </td>
+                    <?php
+                    for($j=0;$j<=6;$j++){
+                    ?>
+                  <td style="border-color:black;"> <div id = "container" style="padding-bottom: 10px"><!-- <select class="form-control" id="sel1">
+                            <option>Lecturer Probationary</option>
+                            <option>Senior Lecturer</option>
+                            <option>3</option>
+                            <option>4</option> 
+                          </select> --></div><center><b>Add&nbsp&nbsp</b><a class="btn btn-sm btn-success"  id = "btn"><i class="fa fa-plus"></i></a></center></td>
+                  <?php }?>
+                    
+                  </tr>
+                    <?php
+                  }
+
+                    ?>
+
+
+                    <!-- <tr>
+                      <td>
+                      <?php echo "1";?>
+                    </td> -->
+                      <!-- <?php
+                      for($i=8;$i<=18;$i++){
+                      ?><td><?php= "$i"?></td>
+                   <?php }
+                      ?> -->
+
+                      <!-- <td><div id = "container" style="padding-bottom: 10px"><select class="form-control" id="sel1">
+                            <option>Lecturer Probationary</option>
+                            <option>Senior Lecturer</option>
+                            <option>3</option>
+                            <option>4</option> 
+                          </select></div><br><a class="btn btn-sm btn-success"  id = "btn"><i class="fa fa-plus"></i></a></td>
+                      <td><select class="form-control" id="sel1">
+                            <option>Lecturer Probationary</option>
+                            <option>Senior Lecturer</option>
+                            <option>3</option>
+                            <option>4</option> 
+                          </select><br><a class="btn btn-sm btn-success" ><i class="fa fa-plus"></i></a></td>
                       <td><select class="form-control" id="sel1">
                             <option>Lecturer Probationary</option>
                             <option>Senior Lecturer</option>
@@ -106,21 +158,8 @@
                             <option>Senior Lecturer</option>
                             <option>3</option>
                             <option>4</option> 
-                          </select><br><a class="btn btn-sm btn-success" href=""><i class="fa fa-plus"></i></a></td>
-                      <td><select class="form-control" id="sel1">
-                            <option>Lecturer Probationary</option>
-                            <option>Senior Lecturer</option>
-                            <option>3</option>
-                            <option>4</option> 
-                          </select><br><a class="btn btn-sm btn-success" href=""><i class="fa fa-plus"></i></a></td>
-                      <td><select class="form-control" id="sel1">
-                            <option>Lecturer Probationary</option>
-                            <option>Senior Lecturer</option>
-                            <option>3</option>
-                            <option>4</option> 
-                          </select><br><a class="btn btn-sm btn-success" href=""><i class="fa fa-plus"></i></a></td>
-                      
-                    </tr>
+                          </select><br><a class="btn btn-sm btn-success" href=""><i class="fa fa-plus"></i></a></td>  -->
+                    <!-- </tr> -->
 
                     <!-- this was commented -->
                    <!--  <?php
@@ -156,6 +195,42 @@
         </div>
     </section>
 </div>
+
+<script type="text/javascript">
+  (function() {
+  /*var counter = 0;
+  var btn = document.getElementById('btn');
+  var form = document.getElementById('form');*/
+  var addInput = function() {
+    ///counter++;
+
+    var div = document.querySelector("#container"),
+    frag = document.createDocumentFragment(),
+    select = document.createElement("select");
+    select.className = 'form-control';
+    select.id = 'sel1';
+
+select.options.add( new Option("Method1","AU", true, true) );
+select.options.add( new Option("Method2","FI") );
+frag.appendChild(select);
+div.appendChild(frag);
+frag.write("<br>");
+/*
+
+    var input = document.createElement("input");
+    input.id = 'input-' + counter;
+    input.type = 'text';
+    input.name = 'name';
+    input.placeholder = 'Input number ' + counter;
+    form.appendChild(input);*/
+
+    
+  };
+  btn.addEventListener('click', function() {
+    addInput();
+  }.bind(this));
+})();
+</script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/common.js" charset="utf-8"></script>
 <script type="text/javascript">
     jQuery(document).ready(function(){
