@@ -107,6 +107,7 @@ if(isset($this->session->userdata['logged_in'])){
 
                     <div class="custom-sele dropboxGender" style="width:180px; height:100px;">
                         <select name="selectGender" value="<?php  echo $row->GENDER;?>">
+                            <option value="<?php  echo $row->GENDER;?>"><?php  echo $row->GENDER;?></option>
                             <option value="MALE">MALE:</option>
                             <option value="FEMALE">FEMALE</option>
                         </select>
@@ -114,7 +115,7 @@ if(isset($this->session->userdata['logged_in'])){
 
                     <div class="custom-sele dropboxCivil" style="width:100px; height:50px;">
                         <select name="selectCivilStatus" id="selectCategory" value="<?php  echo $row->CIVIL_STATUS;?>">
-                            <option value="<?php  echo $row->LAST_NAME;?>"><?php  echo $row->CIVIL_STATUS;?></option>
+                            <option value="<?php  echo $row->CIVIL_STATUS;?>"><?php  echo $row->CIVIL_STATUS;?></option>
                             <option value="MARRIED">MARRIED</option>
                             <option value="UN MARRIED">UN MARRIED</option>
                         </select>
@@ -657,7 +658,7 @@ if(isset($this->session->userdata['logged_in'])){
                         <label for="sinhala">Ability to Work Sinhala</label>
                         <select name="work_sinhala">
 
-                            <option value="0"><?php echo $row_in_language_proficiency->WORK_SINHALA?></option>
+                            <option value="<?php echo $row_in_language_proficiency->WORK_SINHALA?>"><?php echo $row_in_language_proficiency->WORK_SINHALA?></option>
                             <option value="Very Good">Very Good</option>
                             <option value="Good">Good</option>
                             <option value="Fair">Fair</option>
@@ -672,7 +673,7 @@ if(isset($this->session->userdata['logged_in'])){
                     <div class="custom-select" style="width:300px; height:80px;">
                         <label for="sinhala">Ability To Teach Sinhala</label>
                         <select name="teach_sinhala">
-                        <option value="0"><?php echo $row_in_language_proficiency->TEACH_SINHALA?></option>
+                        <option value="<?php echo $row_in_language_proficiency->TEACH_SINHALA?>"><?php echo $row_in_language_proficiency->TEACH_SINHALA?></option>
                             <option value="Very Good">Very Good</option>
                             <option value="Good">Good</option>
                             <option value="Fair">Fair</option>
@@ -688,7 +689,7 @@ if(isset($this->session->userdata['logged_in'])){
                     <div class="custom-select" style="width:300px; height:80px;">
                     <label for="tamil">Ability to Work Tamil</label>
                         <select name="work_tamil">
-                            <option value="0"><?php echo $row_in_language_proficiency->WORK_TAMIL?></option>
+                            <option value="<?php echo $row_in_language_proficiency->WORK_TAMIL?>"><?php echo $row_in_language_proficiency->WORK_TAMIL?></option>
                             <option value="Very Good">Very Good</option>
                             <option value="Good">Good</option>
                             <option value="Fair">Fair</option>
@@ -704,7 +705,7 @@ if(isset($this->session->userdata['logged_in'])){
                     <div class="custom-select" style="width:300px; height:80px;">
                         <label for="tamil">Ability To Teach Tamil</label>
                         <select name="teach_tamil">
-                            <option value="0"><?php echo $row_in_language_proficiency->TEACH_TAMIL?></option>
+                            <option value="<?php echo $row_in_language_proficiency->TEACH_TAMIL?>"><?php echo $row_in_language_proficiency->TEACH_TAMIL?></option>
                             <option value="Very Good">Very Good</option>
                             <option value="Good">Good</option>
                             <option value="Fair">Fair</option>
@@ -718,7 +719,7 @@ if(isset($this->session->userdata['logged_in'])){
                     <div class="custom-select" style="width:300px; height:80px;">
                         <label for="english">Ability to Work English</label>
                         <select name="work_english">
-                            <option value="0"><?php echo $row_in_language_proficiency->WORK_ENGLISH?></option>
+                            <option value="<?php echo $row_in_language_proficiency->WORK_ENGLISH?>"><?php echo $row_in_language_proficiency->WORK_ENGLISH?></option>
                             <option value="Very Good">Very Good</option>
                             <option value="Good">Good</option>
                             <option value="Fair">Fair</option>
@@ -731,7 +732,7 @@ if(isset($this->session->userdata['logged_in'])){
                     <div class="custom-select" style="width:300px; height:80px;">
                         <label for="english">Ability To Teach English</label>
                         <select name="teach_english">
-                            <option value="0"><?php echo $row_in_language_proficiency->TEACH_ENGLISH?></option>
+                            <option value="<?php echo $row_in_language_proficiency->TEACH_ENGLISH?>"><?php echo $row_in_language_proficiency->TEACH_ENGLISH?></option>
                             <option value="Very Good">Very Good</option>
                             <option value="Good">Good</option>
                             <option value="Fair">Fair</option>
@@ -743,14 +744,10 @@ if(isset($this->session->userdata['logged_in'])){
                     <!-- end of the dropdown for english2-->
                     <!-- end of the dropdown series-->
 
-
-
-                    
-
                     <?php
 
                     /**
-                     * this part is use for get data from language proficiency details table
+                     * this part is use for get data from applicants more details table
                      * and set to visible the data above mentioned
                      */
                     if($more_details->num_rows()){
