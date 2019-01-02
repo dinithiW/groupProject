@@ -114,6 +114,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         $this->load->database();
         $secondary_educational_table_first_row = array(
             'INDEX_NUMBER'       =>$idNumber,
+            'ROW_NUMBER'         => '1',
             'SCHOOL_NAME'        =>$this->input->post('secondary_educational_school_name1'),
             'FROM'               =>$this->input->post('secondary_educational_from1'),
             'TO'                 =>$this->input->post('secondary_educational_to1'),
@@ -124,6 +125,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         
         $secondary_educational_table_second_row = array(
             'INDEX_NUMBER'       =>$idNumber,
+            'ROW_NUMBER'         => '2',
             'SCHOOL_NAME'        =>$this->input->post('secondary_educational_school_name2'),
             'FROM'               =>$this->input->post('secondary_educational_from2'),
             'TO'                 =>$this->input->post('secondary_educational_to2'),
@@ -134,6 +136,7 @@ class ApplicantApplicationFormModel extends CI_Model{
 
         $secondary_educational_table_third_row = array(
             'INDEX_NUMBER'       =>$idNumber,
+            'ROW_NUMBER'         => '3',
             'SCHOOL_NAME'        =>$this->input->post('secondary_educational_school_name3'),
             'FROM'               =>$this->input->post('secondary_educational_from3'),
             'TO'                 =>$this->input->post('secondary_educational_to3'),
@@ -144,6 +147,7 @@ class ApplicantApplicationFormModel extends CI_Model{
    
         $secondary_educational_table_fourth_row = array(
             'INDEX_NUMBER'       =>$idNumber,
+            'ROW_NUMBER'         => '4',
             'SCHOOL_NAME'        =>$this->input->post('secondary_educational_school_name4'),
             'FROM'               =>$this->input->post('secondary_educational_from4'),
             'TO'                 =>$this->input->post('secondary_educational_to4'),
@@ -581,8 +585,9 @@ class ApplicantApplicationFormModel extends CI_Model{
     
      public function deleteApplicantDetails($index_number){
       
-        $this->deleteBasicPresonalDetails($index_number);
+        //$this->deleteBasicPresonalDetails($index_number);
         $this->deleteSecondaryEducationalDetails($index_number); 
+        /*
         $this->deleteHigherEducationalDetails($index_number); 
         $this->deleteSpecificationAreas($index_number); 
         $this->deleteAnyOtherQualification($index_number);
@@ -590,7 +595,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         $this->deleteLanguageProficiency($index_number); 
         $this->deleteApplicationMoreDetails($index_number); 
         $this->deleteRefereesDetails($index_number); 
-
+        */
 
      }
 
@@ -723,11 +728,11 @@ class ApplicantApplicationFormModel extends CI_Model{
             'DEGREE'             => $name17
         );
 
-       //$this->db->set($data);
-       //$this->db->insert($this->db->dbprefix.'');
-        $this->db->insert('basic_personal_details', $data);
+       
+        //$this->db->insert('basic_personal_details', $data);
 
         $this->insertSecondaryEducationalDetailsModel($idNumber);
+        /*
         $this->insertHigherEducationalDetailsModel($idNumber);
         $this->insertAnyOtherQualificationsModel($idNumber);
         $this->insertProfessionalQualificationsModel($idNumber);
@@ -735,6 +740,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         $this->insertLanguageProficiencyModel($idNumber);
         $this->insertApplicatsMoreDetails($idNumber);
         $this->insertSpecificationAreas($idNumber);
+        */
     }
 
 }
