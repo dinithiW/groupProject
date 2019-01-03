@@ -84,7 +84,7 @@
                       <!-- <th>DOB</th> -->
                       <th>Educational Qualifications</th>
                       <th>Professional Qualifications</th>
-                      <th>Previous Experiences</th>
+                      <th>Other Qualifications</th>
                       <th>Specializations</th>
                       <th>Selected</th>
                       <th class="text-center">Actions</th>
@@ -97,7 +97,7 @@
                       <!-- <td><?=$a->dob?></td> -->
                       <td><?=$a->eq?></td>
                       <td><?=$a->pq?></td>
-                      <td><?=$a->pe?></td>
+                      <td><?=$a->oq?></td>
                       <td><?=$a->spe?></td>
 
 
