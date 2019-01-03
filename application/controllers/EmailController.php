@@ -13,8 +13,9 @@ class EmailController
         $emailOb->set_mailtype("html");
         $emailOb->from($from_email, $_SESSION["username"]);
         $emailOb->subject('Reports');
-        $email = explode(' - ', $operatorEmail)[1];
-        $to_email = substr($email, 1, strlen($email) - 2);
+        //$email = explode(' - ', $operatorEmail)[1];
+       // $to_email = substr($email, 1, strlen($email) - 2);
+        $to_email =$directorEmail;
         $emailOb->to($to_email);
         $emailOb->message($txtDetails);
 
