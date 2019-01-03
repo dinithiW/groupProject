@@ -3,6 +3,21 @@ class ApplicantApplicationFormModel extends CI_Model{
     public function __construct(){
         parent::__construct();
     }
+
+
+    /**
+     * this funciton is used for filter the form inputs
+     * trim() is used for prevent the unnessasary whitespaces in the inputs
+     * stripslashes() is used for the prevent the effect of symbols like '/' 
+     */
+
+    public function firlterFormInputs($input){
+        $input = trim($input);
+        $input = stripslashes($input);
+        return $input;
+    }
+
+
     
     /**
      * this function is use for 
@@ -13,23 +28,23 @@ class ApplicantApplicationFormModel extends CI_Model{
         $this->load->database();
         $idNumber = $this->makeApplicationId();
 
-        $name1 = $this->input->post('first_name');
-        $name2 = $this->input->post('last_name');
-        $name3 = $this->input->post('postal_address');
-        $name4 = $this->input->post('permanent_address');
-        $name5 = $this->input->post('driving_licence');
-        $name6 = $this->input->post('applicant_citizenship');
-        $name7 = $this->input->post('personalEmail');
-        $name8 = $this->input->post('officeEmail');
-        $name9 = $this->input->post('mobile_number');
-        $name10 =$this->input->post('home_number');
-        $name11 =$this->input->post('office_number');
+        $name1 = $this->firlterFormInputs($this->input->post('first_name'));
+        $name2 = $this->firlterFormInputs($this->input->post('last_name');
+        $name3 = $this->firlterFormInputs($this->input->post('postal_address');
+        $name4 = $this->firlterFormInputs($this->input->post('permanent_address'));
+        $name5 = $this->firlterFormInputs($this->input->post('driving_licence');
+        $name6 = $this->firlterFormInputs($this->input->post('applicant_citizenship');
+        $name7 = $this->firlterFormInputs($this->input->post('personalEmail'));
+        $name8 = $this->firlterFormInputs($this->input->post('officeEmail'));
+        $name9 = $this->firlterFormInputs($this->input->post('mobile_number'));
+        $name10 =$this->firlterFormInputs($this->input->post('home_number'));
+        $name11 =$this->firlterFormInputs($this->input->post('office_number');
         $name12 =$this->input->post('selectGender');
         $name13 =$this->input->post('selectCivilStatus');
         $name14 =$this->input->post('selectCitizenship');
         $name15 =$this->input->post('birth_date');
         $name16 =$this->input->post('postApplyFor');
-        $name17 =$this->input->post('selectDegree');
+        //$name17 =$this->input->post('selectDegree');
 
         $data = array(
             'INDEX_NUMBER'       => $idNumber,
@@ -48,12 +63,11 @@ class ApplicantApplicationFormModel extends CI_Model{
             'CIVIL_STATUS'       => $name13,
             'CITIZENSHIP'        => $name14,
             'DATE_OF_BIRTH'      => $name15,
-            'POST_APPLY_FOR'     => $name16,
-            'DEGREE'             => $name17
+            'POST_APPLY_FOR'     => $name16
+            //'DEGREE'             => $name17
         );
 
-       //$this->db->set($data);
-       //$this->db->insert($this->db->dbprefix.'');
+       
         $this->db->insert('basic_personal_details', $data);
 
         $this->updateTemporaryIdTable($idNumber);
@@ -598,9 +612,8 @@ class ApplicantApplicationFormModel extends CI_Model{
     
      public function deleteApplicantDetails($index_number){
       
-        //$this->deleteBasicPresonalDetails($index_number);
+        $this->deleteBasicPresonalDetails($index_number);
         $this->deleteSecondaryEducationalDetails($index_number); 
-        /*
         $this->deleteHigherEducationalDetails($index_number); 
         $this->deleteSpecificationAreas($index_number); 
         $this->deleteAnyOtherQualification($index_number);
@@ -608,9 +621,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         $this->deleteLanguageProficiency($index_number); 
         $this->deleteApplicationMoreDetails($index_number); 
         $this->deleteRefereesDetails($index_number); 
-        */
-
-     }
+    }
 
      /**
       * this function is used for delete the basic personal details 
@@ -701,8 +712,8 @@ class ApplicantApplicationFormModel extends CI_Model{
      */
     public function reInsertApplicantDetailsForUpdate($idNumber){
         $this->load->database();
+        $name1 = $this->firlterFormInputs($this->input->post('first_name'));
         
-        $name1 = $this->input->post('first_name');
         $name2 = $this->input->post('last_name');
         $name3 = $this->input->post('postal_address');
         $name4 = $this->input->post('permanent_address');
@@ -718,10 +729,11 @@ class ApplicantApplicationFormModel extends CI_Model{
         $name14 =$this->input->post('selectCitizenship');
         $name15 =$this->input->post('birth_date');
         $name16 =$this->input->post('postApplyFor');
-        $name17 =$this->input->post('selectDegree');
+       // $name17 =$this->input->post('selectDegree');
 
         $data = array(
             'INDEX_NUMBER'       => $idNumber,
+            
             'FIRST_NAME'         => $name1,
             'LAST_NAME'          => $name2,
             'POSTAL_ADDRESS'     => $name3,
@@ -738,21 +750,24 @@ class ApplicantApplicationFormModel extends CI_Model{
             'CITIZENSHIP'        => $name14,
             'DATE_OF_BIRTH'      => $name15,
             'POST_APPLY_FOR'     => $name16,
-            'DEGREE'             => $name17
+            //'DEGREE'             => $name17
         );
 
        
-        /*$this->db->insert('basic_personal_details', $data);
+        $this->db->insert('basic_personal_details', $data);
+        
         $this->insertSecondaryEducationalDetailsModel($idNumber);        
         $this->insertHigherEducationalDetailsModel($idNumber);
         $this->insertAnyOtherQualificationsModel($idNumber);
-        $this->insertProfessionalQualificationsModel($idNumber);*/
-        //$this->insertRefereeModel($idNumber);
-       // $this->insertLanguageProficiencyModel($idNumber);
+        $this->insertProfessionalQualificationsModel($idNumber);
+        $this->insertRefereeModel($idNumber);
+        $this->insertLanguageProficiencyModel($idNumber);
         $this->insertApplicatsMoreDetails($idNumber);
         $this->insertSpecificationAreas($idNumber);
         
     }
+
+    
 
 }
 

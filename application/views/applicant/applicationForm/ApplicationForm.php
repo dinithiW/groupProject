@@ -394,14 +394,14 @@ if(isset($this->session->userdata['logged_in'])){
 
                             <tr class="tr">
 
-                                <td><input type="text" class="Text" name="heigher_educational_university2"  size='25'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_from2"  size='3'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_to2"  size='3'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_degree_obtained2"  size='25'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_duration2"  size='11'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_class2" size='13'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_year2"  size='4'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_year_no2"  size='7'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_university1"  size='25'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_from1"  size='3'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_to1"  size='3'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_degree_obtained1"  size='25'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_duration1"  size='11'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_year1"  size='4'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_year_no1"  size='7'/></td>
 
                                 <td><span class="lblStatus"></span></td>
                             
@@ -540,12 +540,12 @@ if(isset($this->session->userdata['logged_in'])){
                             </tr>
 
                             <tr class="tr">
-                                
+                            
                                 <td><input type="text" class="Text" name="professonal_qualifications_institution3"  size='30'/></td>
                                 <td><input type="text" class="Text" name="professonal_qualifications_from3"  size='6'/></td>
                                 <td><input type="text" class="Text" name="professonal_qualifications_to3"  size='6'/></td>
                                 <td><input type="text" class="Text" name="professonal_qualifications_duration3"  size='17'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_type_of_qualification3"  size='36'/></td>
+                                <td><input type="text" class="Text" name="professonal_qualifications_type_of_qualification3"  size='36'/></td>
                                 <td><span class="lblStatus"></span></td>
 
                             </tr>

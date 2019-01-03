@@ -378,7 +378,7 @@ if(isset($this->session->userdata['logged_in'])){
                 </div>
 
 
-                <div class="custom-sele dropboxSelectPost" style="width:100px; height:50px;">
+                <div class="custom-select" style="width:300px; height:50px;">
                     <select name="postApplyFor" id="selectCategory1">
                     
                         <option value="<?php  echo $row->POST_APPLY_FOR;?>"><?php  echo $row->POST_APPLY_FOR;?></option>
@@ -387,16 +387,7 @@ if(isset($this->session->userdata['logged_in'])){
                     </select>
                 </div>
 
-                <div class="custom-select " style="width:430px; height:50px;">
-                   <select name="selectDegree" id="selectCategory">
-                        
-                        <option value="<?php  echo $row->DEGREE;?>"><?php  echo $row->DEGREE;?></option>
-                        <option value="First Class(Bachelore of computer science)">First Class(Bachelore of computer science)</option>
-                        <option value="Second Upper(Bachelore of computer science)">Second Upper(Bachelore of computer science)</option>
-                        <option value="Second Lower(Bachelore of computer science)">Second Lower(Bachelore of computer science)</option>
-                        <option value="General(Bachelore of computer science)">General(Bachelore of computer science)</option>
-                    </select>
-                </div>
+               
 
                 
                 <h4 id="secondryEducationalTitle">Secondry Educational Details</h4><br/>
