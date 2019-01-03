@@ -339,11 +339,11 @@ class ApplicantApplicationFormModel extends CI_Model{
 
             'INDEX_NUMBER'          =>$idNumber,
             'ROW_NUMBER'            => '1',
-            'NAME'                  =>$this->input->post('referees_name1'),
-            'DESIGNATION'           =>$this->input->post('referees_designation1'),
-            'ADDRESS'               =>$this->input->post('referees_address1'),
-            'EMAIL'                 =>$this->input->post('referees_email1'),
-            'CONTACT_NO'            =>$this->input->post('referees_contact1')
+            'NAME'                  =>$this->firlterFormInputs($this->input->post('referees_name1')),
+            'DESIGNATION'           =>$this->firlterFormInputs($this->input->post('referees_designation1')),
+            'ADDRESS'               =>$this->firlterFormInputs($this->input->post('referees_address1')),
+            'EMAIL'                 =>$this->firlterFormInputs($this->input->post('referees_email1')),
+            'CONTACT_NO'            =>$this->firlterFormInputs($this->input->post('referees_contact1'))
         );
 
         $this->db->set($referee_table_first_row);
@@ -354,11 +354,11 @@ class ApplicantApplicationFormModel extends CI_Model{
 
             'INDEX_NUMBER'          =>$idNumber,
             'ROW_NUMBER'            => '2',
-            'NAME'                  =>$this->input->post('referees_name2'),
-            'DESIGNATION'           =>$this->input->post('referees_designation2'),
-            'ADDRESS'               =>$this->input->post('referees_address2'),
-            'EMAIL'                 =>$this->input->post('referees_email2'),
-            'CONTACT_NO'            =>$this->input->post('referees_contact2')
+            'NAME'                  =>$this->firlterFormInputs($this->input->post('referees_name2')),
+            'DESIGNATION'           =>$this->firlterFormInputs($this->input->post('referees_designation2')),
+            'ADDRESS'               =>$this->firlterFormInputs($this->input->post('referees_address2')),
+            'EMAIL'                 =>$this->firlterFormInputs($this->input->post('referees_email2')),
+            'CONTACT_NO'            =>$this->firlterFormInputs($this->input->post('referees_contact2'))
         );
 
         $this->db->set($referee_table_second_row);
@@ -369,11 +369,11 @@ class ApplicantApplicationFormModel extends CI_Model{
 
             'INDEX_NUMBER'          =>$idNumber,
             'ROW_NUMBER'            => '3',
-            'NAME'                  =>$this->input->post('referees_name3'),
-            'DESIGNATION'           =>$this->input->post('referees_designation3'),
-            'ADDRESS'               =>$this->input->post('referees_address3'),
-            'EMAIL'                 =>$this->input->post('referees_email3'),
-            'CONTACT_NO'            =>$this->input->post('referees_contact3')
+            'NAME'                  =>$this->firlterFormInputs($this->input->post('referees_name3')),
+            'DESIGNATION'           =>$this->firlterFormInputs($this->input->post('referees_designation3')),
+            'ADDRESS'               =>$this->firlterFormInputs($this->input->post('referees_address3')),
+            'EMAIL'                 =>$this->firlterFormInputs($this->input->post('referees_email3')),
+            'CONTACT_NO'            =>$this->firlterFormInputs($this->input->post('referees_contact3'))
         );
 
         $this->db->set($referee_table_third_row);
