@@ -33,8 +33,8 @@ class SARDashboard extends CI_Controller{
 
 	public function confirmAdvertisement(){
 		$this->load->model('SAR/AdvertisementModel');
-		$this->load->AdvertisementModel->confirmadd();
-		redirect(base_url().'SAR?confirmed=success');
+		$this->AdvertisementModel->confirmAdvertisement();
+		redirect(base_url()."SAR/advertisement?confirmed=success");
 	}
 
 
@@ -42,10 +42,13 @@ class SARDashboard extends CI_Controller{
 		$this->load->model('SAR/AdvertisementModel');
 		//$this->load->setNotifyTo0();
 		$this->load->library('session');
-		$SESSION["notify_count"]=0;
+		$_SESSION["notify_count"]=0;
 
 		$data['advertisement']=$this->AdvertisementModel->getAdvertisement();
-		$this->load->view('users/SAR/advertisement',$data);
+		//$this->load->view('users/SAR/advertisement',$data);
+		$this->load->view('includes/header');
+        $this->load->view('users/SAR/advertisement', $data);
+        $this->load->view('includes/footer');
 	}
 
 
@@ -64,8 +67,8 @@ class SARDashboard extends CI_Controller{
 		$data=[];
 		$this->load->model('SAR/PanelDetails');
 		$data['Members']=$this->load->PanelDetails->getAllEmailAddresses();
-		var_dump($data['members']);
-		exit();
+		//var_dump($data['members']);
+		//exit();
 		$this->load->view('includes/header');
 		$this->load->view('users/SAR/setDates',$data);
 		$this->load->view('includes/footer');

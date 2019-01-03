@@ -57,7 +57,9 @@
 	}
 
  	public function getallseniorlecturers(){
-
+ 		$Members=[];
+ 		$this->load->database();
+ 		$this->db->select('');
 
  	}
 
