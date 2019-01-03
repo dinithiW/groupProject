@@ -4,7 +4,7 @@
 
   require("C:/xampp/htdocs/ucsc/assets/lib/PHPMailer-master/src/PHPMailer.php");
   require("C:/xampp/htdocs/ucsc/assets/lib/PHPMailer-master/src/SMTP.php");
-
+  
     $mail = new PHPMailer\PHPMailer\PHPMailer(true);
     $mail->IsSMTP(); // enable SMTP
 

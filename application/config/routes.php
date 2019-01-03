@@ -61,6 +61,7 @@ $route['addUser'] = 'ApplicantLogin/addUser';
 $route['logout']='User/logout';
 $route['advertisement']='User/add';
 
+
 //$route['loginUser'] = 'UsersLogin/index';
 //$route['loginUser/process'] = 'UsersLogin/process';
 
@@ -100,6 +101,7 @@ $route['sendmail']='SARDashboard/sendmail';
 $route['setDates']="SARDashboard/setInterviewDates";
 $route['candidateList']="SARDashboard/viewCandidates";
 $route['SAR/advertisement']="SARDashboard/viewAdvertisement";
+$route['applicants']="SARDashboard/viewApplicants";
 
 //Director routes
 $route['Director'] = 'DirectorDashboard/index';
@@ -117,7 +119,7 @@ $route['Director/finalize'] = 'DirectorDashboard/finalize';
 //panel
 $route['Panel'] = 'InterviewPanelDashboard/index';
 $route['Panel/viewApplicants'] = 'InterviewPanelDashboard/viewApplicants';
-$route['Panel/viewApplicants'] = 'InterviewPanelDashboard/viewMarks';
+$route['Panel/viewApplicant'] = 'InterviewPanelDashboard/viewMarks';
 
 $route['dashboard'] = 'User/index';
 $route['home'] = 'Home/index';

@@ -1,3 +1,8 @@
+<?php
+  //var_dump($array);
+  //exit();
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -35,14 +40,24 @@
                 </div>
             </div>
         </div> -->
-      <div class="form-group  col-xs-12">
+      <div class = "row">
         <label for="input-lg" class="input-lg"> Select Vacancy</label>
-        <select class="form-control input-lg" id="sel1">
-          <option>Lecturer Probationary</option>
-          <option>Senior Lecturer</option>
+      </div>
+
+      <div class = "row">
+        <div class="form-group  col-xs-8 ">
+        
+        <select class="form-control input-lg" id="selectBox" onchange="changeFunc();">
+          <option value = "Lecturer Probationary">Lecturer Probationary</option>
+          <option value = "Senior Lecturer" selected>Senior Lecturer</option>
           <!-- <option>3</option>
           <option>4</option> -->
         </select>
+      </div>
+      </div>
+
+      <div class = "form-group col-xs-2 row">
+        <button type="button" class="btn btn-primary">Search</button>
       </div>
 
         <div class="row">
@@ -66,32 +81,29 @@
                     <tr>
                       <th>Applicant ID</th>
                       <th>Name</th>
-                      <th>DOB</th>
-                      <th>Age</th>
-                      <th>Degree</th>
-                      <th>Class</th>
+                      <!-- <th>DOB</th> -->
                       <th>Educational Qualifications</th>
                       <th>Professional Qualifications</th>
-                      <th>Previous Experiences</th>
+                      <th>Other Qualifications</th>
                       <th>Specializations</th>
                       <th>Selected</th>
                       <th class="text-center">Actions</th>
                     </tr>
 
+                    <?php foreach($array as $a):?>
                     <tr>
-                      <td>2016/CS/157</td>
-                      <td>D.N. Wickramaratne</td>
-                      <td>12/01/1996</td>
-                      <td>28</td>
-                      <td>BSc in Engineering</td>
-                      <td>First Class</td>
-                      <td>Assistant lecturer municipal,hahaha kjkjkjhkjh,asasdadj</td>
-                      <td>Assistant lecturer municipal,hahaha kjkjkjhkjh,asasdadj</td>
-                      <td>Assistant lecturer municipal,hahaha kjkjkjhkjh,asasdadj</td>
-                      <td>Assistant lecturer municipal,hahaha kjkjkjhkjh,asasdadj</td>
-                      <td><input type="checkbox" value=""></td>
-                      <td class="text-center"><a>more</a></td>
+                      <td><?=$a->index?></td>
+                      <td><?="$a->fname $a->lname"?></td>
+                      <!-- <td><?=$a->dob?></td> -->
+                      <td><?=$a->eq?></td>
+                      <td><?=$a->pq?></td>
+                      <td><?=$a->oq?></td>
+                      <td><?=$a->spe?></td>
+
+
                     </tr>
+                    <?php endforeach?>
+                    
 
                     <!-- this was commented -->
                    <!--  <?php
@@ -139,4 +151,20 @@
         });
     });
 </script>
+
+<script type="text/javascript">
+
+   function changeFunc() {
+    var selectBox = document.getElementById("selectBox");
+    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+    if(selectedValue=='Lecturer Probationary'){
+      //show the relevant peeps data
+    }else{
+      //
+    }
+    alert(selectedValue);
+   }
+
+  </script>
+
 </body>

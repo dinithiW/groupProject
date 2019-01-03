@@ -48,7 +48,7 @@ if(!empty($records)) {
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="email">Email Address</label>
-                                        <input type="email" class="form-control" id="email"  name="email" maxlength="255" value = "<?php if(!empty($records)) echo $records->EMAIL; ?>">
+                                        <input disabled type="text" class="form-control" id="email"  name="email" maxlength="255" value = "<?php if(!empty($records)) echo $records->EMAIL; ?>">
                                     </div>
                                 </div>
 
