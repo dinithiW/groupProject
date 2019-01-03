@@ -60,9 +60,31 @@
 
         <form action = <?= base_url("sendmail")?> method = "post">
             <br>
-            Mail Address :
-            <input type="text" name="directormail">
+           <!-- Mail Address :
+            <input type="text" name="directormail"> -->
             <input type="submit" name="haha" value = "Send" class="btn btn-primary btn-md" style="float: right">
+             <label for="role" font="50px">Email Address :</label>
+            <select class="form-control required" id="role" name="lectemail">
+
+                <?php
+                //echo"....................tdhtdhddhddhdhtdhtdhdhtthd...................................................";
+                $i=0;
+                    if(!empty($Members)){
+                        //echo ".....................................................I am empty";
+                        foreach ($Members as $row) {
+                            # code...
+                            ?>
+                            <option value="<?php echo $row->getEmail() ?>"><?php echo $row->getEmail() ?></option>
+                            <?php
+                        }
+
+                    ?>
+                    <?php
+                    }
+
+
+                ?>
+            </select>
         </form>
                     
                 </div>
