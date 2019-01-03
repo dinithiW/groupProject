@@ -397,9 +397,78 @@ if(isset($this->session->userdata['logged_in'])){
                                 <td><input type="text" class="Text" name="heigher_educational_university1"  size='25'/></td>
                                 <td><input type="text" class="Text" name="heigher_educational_from1"  size='3'/></td>
                                 <td><input type="text" class="Text" name="heigher_educational_to1"  size='3'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_degree_obtained1"  size='25'/></td>
+
+<!-- -------------start degree------------------->
+<!-- <td><input type="text" class="Text" name="heigher_educational_degree_obtained1"  size='25'/></td> -->
+                                <td>
+                                    <div class="custom-sele" id="select_degree_div1">
+                                        <select name="heigher_educational_degree_obtained1" id="select_degree_selection1" style="font-size:9px;">
+                                            <option value="">Select Here</option>
+                                            <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
+                                            <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
+                                            <option value="BSC Hons-Informtion System">BSC Hons-Informtion System</option>
+                                            <option value="BSC Hons-Information Technology">BSC Hons-Information Technology</option>
+                                            <option value="BSC Hons-Computer Engineering">BSC Hons-Computer Engineering</option>
+                                            <option value="BSC-Computer Science">BSC-Computer Science</option>
+                                            <option value="BSC-Software Engineering">BSC-Software Engineering</option>
+                                            <option value="BSC-Informtion System">BSC-Informtion System</option>
+                                            <option value="BSC-Information Technology">BSC-Information Technology</option>
+                                            <option value="BSC-Computer Engineering">BSC-Computer Engineering</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </td>
+
+                                <style>
+                                    #select_degree_selection1{
+                                        width:135px;
+                                        height:30px;
+                                        
+                                    }
+
+                                    #select_degree_div1{
+                                        
+                                        margin-top:-12px;
+                                    }
+
+
+                                </style>
+<!-- --------------end degree----------------- -->
+
+                                
                                 <td><input type="text" class="Text" name="heigher_educational_duration1"  size='11'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td>
+                                
+<!-- --------------start class-------------- -->
+                                <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
+                                <td>
+                                    <div class="custom-sele" id="select_class_div1">
+                                        <select name="heigher_educational_class1" id="select_class_selection1" style="font-size:9px;>
+                                            <option value="">Select Here</option>
+                                            <option value="Fisrt Class">Fisrt Class</option>
+                                            <option value="Second Upper">Second Upper</option>
+                                            <option value="Second Lower">Second Lower</option>
+                                            <option value="General">General</option>
+                                        
+                                        </select>
+                                    </div>
+                                </td>
+
+                                <style>
+                                    #select_class_selection1{
+                                        width:85px;
+                                        height:30px;
+                                        
+                                    }
+
+                                    #select_class_div1{
+                                        
+                                        margin-top:-12px;
+                                    }
+
+
+                                </style>
+
+<!-- --------------end class-------------- -->
                                 <td><input type="text" class="Text" name="heigher_educational_year1"  size='4'/></td>
                                 <td><input type="text" class="Text" name="heigher_educational_year_no1"  size='7'/></td>
 
