@@ -317,20 +317,10 @@ if(isset($this->session->userdata['logged_in'])){
                 </div>
 
 
-                <div class="custom-sele dropboxSelectPost" style="width:100px; height:50px;">
+                <div class="custom-select " style="width:350px; height:50px;">
                     <select name="postApplyFor" id="selectCategory1">
                         <option value="PROBATIONARY LECTURER">PROBATIONARY LECTURER</option>
                         <option value="SENIOR LECTURE GR. II">SENIOR LECTURE GR. II</option>
-                    </select>
-                </div>
-
-                <div class="custom-select " style="width:430px; height:50px;">
-                   <select name="selectDegree" id="selectCategory">
-                        <option value="select degree">Select Degree Category:</option>
-                        <option value="First Class(Bachelore of computer science)">First Class(Bachelore of computer science)</option>
-                        <option value="Second Upper(Bachelore of computer science)">Second Upper(Bachelore of computer science)</option>
-                        <option value="Second Lower(Bachelore of computer science)">Second Lower(Bachelore of computer science)</option>
-                        <option value="General(Bachelore of computer science)">General(Bachelore of computer science)</option>
                     </select>
                 </div>
 
@@ -345,7 +335,11 @@ if(isset($this->session->userdata['logged_in'])){
                                 <th>Examination Passed</th>
                                 <th>Year</th>
                             </tr>
-
+<style>
+#table1{
+    margin-top:-120px;
+}
+</style>
 
                             <tr class="tr">
                                 <td><input type="text" class="Text"  name="secondary_educational_school_name1" size='42'/></td>
@@ -398,21 +392,18 @@ if(isset($this->session->userdata['logged_in'])){
                                 <th>Index No</th>
                             </tr>
 
-
-
-
                             <tr class="tr">
 
-                                <td><input type="text" class="Text" name="heigher_educational_university1"  size='25'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_from1"  size='3'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_to1"  size='3'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_degree_obtained1"  size='25'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_duration1"  size='11'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_year1"  size='4'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_year_no1"  size='7'/></td>
-                            
-                            <td><span class="lblStatus"></span></td>
+                                <td><input type="text" class="Text" name="heigher_educational_university2"  size='25'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_from2"  size='3'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_to2"  size='3'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_degree_obtained2"  size='25'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_duration2"  size='11'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_class2" size='13'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_year2"  size='4'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_year_no2"  size='7'/></td>
+
+                                <td><span class="lblStatus"></span></td>
                             
                             <tr class="tr">
 
@@ -691,7 +682,7 @@ if(isset($this->session->userdata['logged_in'])){
                 <!-- start referee table-->        
                 <h4 id="title1">Referees </h4>
                     <div class="content3">
-                        <table id="table1">
+                        <table id="table5">
 
                             <tr>
                                 
@@ -739,6 +730,12 @@ if(isset($this->session->userdata['logged_in'])){
                         </table>
                     </div>
 
+
+<style>
+#table5{
+    margin-top:10px;
+}
+</style>
             <!-- end referee table-->  
 
                     <!-- notice-->   

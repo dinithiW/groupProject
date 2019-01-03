@@ -419,6 +419,8 @@ if(isset($this->session->userdata['logged_in'])){
                         /**
                          * this part is use for get data from seconadary educational details table
                          * and set to visible the data above mentioned
+                         * i check the row number for this 
+                         * because, identify for the correct row
                          */
                         if($secondary_educational_details->num_rows()){
                             foreach($secondary_educational_details->result() as $row_in_secondary_education){
