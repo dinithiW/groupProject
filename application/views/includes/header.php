@@ -260,7 +260,7 @@ if($checking=='1'){
             {
             ?>
             <li class="treeview">
-              <a href="<?php echo base_url(). 'SAR/advertisement'; ?>userListing">
+              <a href="<?= base_url('SAR/advertisement') ?>">
                 <i class="fa fa-users"></i>
                 <span>Advertisement</span>
               </a>
