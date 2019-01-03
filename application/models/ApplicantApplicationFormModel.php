@@ -414,10 +414,10 @@ class ApplicantApplicationFormModel extends CI_Model{
         $this->load->database();
         $other_fields_table_first_row = array(
             'APPLICANT_ID'       =>$idNumber,
-            'EXPERIENCE'         =>$this->input->post('experience'),
-            'RESEARCH'           =>$this->input->post('research'),
-            'OTHER_INFORMS'      =>$this->input->post('other_details'),
-            'DATE'               =>$this->input->post('current_date')
+            'EXPERIENCE'         =>$this->firlterFormInputs($this->input->post('experience')),
+            'RESEARCH'           =>$this->firlterFormInputs($this->input->post('research')),
+            'OTHER_INFORMS'      =>$this->firlterFormInputs($this->input->post('other_details')),
+            'DATE'               =>$this->firlterFormInputs($this->input->post('current_date'))
         );
 
         $this->db->set($other_fields_table_first_row);
@@ -464,9 +464,9 @@ class ApplicantApplicationFormModel extends CI_Model{
         $this->load->database();
         $data = array(
             'INDEX_NUMBER'                       =>$idNumber,
-            'EXPERIENCE_RELEVANT_TO_POST'        =>$this->input->post('experience'),
-            'RESEARCH_AND_PUBLICATION_DETAILS'   =>$this->input->post('research'),
-            'ANY_OTHER_INFORMATION'              =>$this->input->post('other_details'),
+            'EXPERIENCE_RELEVANT_TO_POST'        =>$this->firlterFormInputs($this->input->post('experience')),
+            'RESEARCH_AND_PUBLICATION_DETAILS'   =>$this->firlterFormInputs($this->input->post('research')),
+            'ANY_OTHER_INFORMATION'              =>$this->firlterFormInputs($this->input->post('other_details')),
             'SUBMISSION_DATE'                    =>date('y-m-d')//system find and insert the real date 
         );
         $this->db->insert('applicats_more_details', $data);
