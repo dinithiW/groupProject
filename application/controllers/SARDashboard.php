@@ -121,5 +121,14 @@ class SARDashboard extends CI_Controller{
 		$this->load->view('users/SAR/viewCandidates',$data);
 		$this->load->view('includes/footer');
 	}
+
+	public function viewProbationaryApplicants(){
+		$data=[];
+		$this->load->model('SAR/ApplicantsModel');
+		$data['Members']=$this->ApplicantsModel->getProbationaryApplicants();
+		$this->load->view('includes/header');
+		$this->load->view('users/SAR/applicants');
+		$this->load->view('includes/footer');
+	}
 }
 ?>
