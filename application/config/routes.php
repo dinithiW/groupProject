@@ -101,7 +101,7 @@ $route['sendmail']='SARDashboard/sendmail';
 $route['setDates']="SARDashboard/setInterviewDates";
 $route['candidateList']="SARDashboard/viewCandidates";
 $route['SAR/advertisement']="SARDashboard/viewAdvertisement";
-$route['probationaryapplicants']="SARDashboard/viewProbationaryApplicants";
+$route['applicants']="SARDashboard/viewApplicants";
 
 //Director routes
 $route['Director'] = 'DirectorDashboard/index';

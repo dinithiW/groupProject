@@ -122,12 +122,15 @@ class SARDashboard extends CI_Controller{
 		$this->load->view('includes/footer');
 	}
 
-	public function viewProbationaryApplicants(){
+	public function viewApplicants(){
+		if(!isset($_POST['type'])){
+			$_POST['type'] = "";
+		}
 		$data=[];
 		$this->load->model('SAR/ApplicantsModel');
-		$data['Members']=$this->ApplicantsModel->getProbationaryApplicants();
+		$data['array']=$this->ApplicantsModel->getAllApplicants($_POST['type']);
 		$this->load->view('includes/header');
-		$this->load->view('users/SAR/applicants');
+		$this->load->view('users/SAR/applicants',$data);
 		$this->load->view('includes/footer');
 	}
 }

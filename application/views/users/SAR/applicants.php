@@ -35,11 +35,12 @@
                 </div>
             </div>
         </div> -->
+                <form method="post" action="<?=base_url('applicants')?>">
       <div class="form-group  col-xs-12">
         <label for="input-lg" class="input-lg"> Select Vacancy</label>
-        <select class="form-control input-lg" id="sel1">
-          <option>Lecturer Probationary</option>
-          <option>Senior Lecturer</option>
+        <select class="form-control input-lg" id="sel1" name="type">
+          <option value="PROBATIONARY LECTURER">Lecturer Probationary</option>
+          <option value="SENIOR LECTURE GR. II">Senior Lecturer</option>
           <!-- <option>3</option>
           <option>4</option> -->
         </select>
@@ -47,9 +48,9 @@
   <div class="col-xs-1" align="right">
   
       
-  <button type="button" class="btn btn-primary" style="margin: 5px" >Search</button>
-   
+  <button type="submit" class="btn btn-primary" style="margin: 5px" >Search</button>
 </div>
+</form>
         <div class="row">
             <div class="col-xs-12">
               <div class="box">
@@ -69,34 +70,32 @@
                 <div class="box-body table-responsive no-padding">
                   <table class="table table-hover">
                     <tr>
-                      <th>Applicant ID</th>
+                      <th>Index No</th>
                       <th>Name</th>
-                      <th>DOB</th>
-                      <th>Age</th>
-                      <th>Degree</th>
-                      <th>Class</th>
+                      <th>Gender</th>
+                      <th>Email</th>
+                      
                       <th>Educational Qualifications</th>
                       <th>Professional Qualifications</th>
-                      <th>Previous Experiences</th>
-                      <th>Specializations</th>
-                      <th>Selected</th>
+                     
+                     
                       <th class="text-center">Actions</th>
                     </tr>
 
+                  <?php foreach($array as $a):?>
                     <tr>
-                      <td>2016/CS/157</td>
-                      <td>D.N. Wickramaratne</td>
-                      <td>12/01/1996</td>
-                      <td>28</td>
-                      <td>BSc in Engineering</td>
-                      <td>First Class</td>
-                      <td>Assistant lecturer municipal,hahaha kjkjkjhkjh,asasdadj</td>
-                      <td>Assistant lecturer municipal,hahaha kjkjkjhkjh,asasdadj</td>
-                      <td>Assistant lecturer municipal,hahaha kjkjkjhkjh,asasdadj</td>
-                      <td>Assistant lecturer municipal,hahaha kjkjkjhkjh,asasdadj</td>
-                      <td><input type="checkbox" value=""></td>
-                      <td class="text-center"><a>more</a></td>
+                      <td><?=$a->id?></td>
+                      <td><?="$a->fname $a->lname"?></td>
+                      <td><?=$a->gender?></td>
+                       <td><?=$a->email?></td>
+                      <!-- <td><?=$a->dob?></td> -->
+                      <td><?=$a->eduqualifi?></td>
+                      <td><?=$a->proqualifi?></td>
+                      
+
+
                     </tr>
+                    <?php endforeach?>
 
                     <!-- this was commented -->
                    <!--  <?php

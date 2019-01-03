@@ -266,7 +266,7 @@ if($checking=='1'){
               </a>
             </li>
             <li class="treeview">
-              <a href="<?= base_url('probationaryapplicants') ?>" >
+              <a href="<?= base_url('applicants') ?>" >
                 <i class="fa fa-files-o"></i>
                 <span>Applicants</span>
               </a>
