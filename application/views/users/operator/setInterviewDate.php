@@ -97,7 +97,7 @@
                             <option>Senior Lecturer</option>
                             <option>3</option>
                             <option>4</option> 
-                          </select> --></div><center><b>Add&nbsp&nbsp</b><a class="btn btn-sm btn-success"  id = "btn"><i class="fa fa-plus"></i></a></center></td>
+                          </select> --></div><center><a class="btn btn-sm btn-success"  id = "btn"><i class="fa fa-plus"></i></a></center></td>
                   <?php }?>
                     
                   </tr>
@@ -197,24 +197,23 @@
 </div>
 
 <script type="text/javascript">
-  (function() {
   /*var counter = 0;
   var btn = document.getElementById('btn');
   var form = document.getElementById('form');*/
-  var addInput = function() {
+  var addInput = function(i) {
     ///counter++;
 
-    var div = document.querySelector("#container"),
+    //var div = document.querySelector("#container"),
+    var div = i.parentElement.parentElement,
     frag = document.createDocumentFragment(),
     select = document.createElement("select");
     select.className = 'form-control';
     select.id = 'sel1';
-
-select.options.add( new Option("Method1","AU", true, true) );
-select.options.add( new Option("Method2","FI") );
-frag.appendChild(select);
-div.appendChild(frag);
-frag.write("<br>");
+    select.options.add( new Option("Method1","AU", true, true) );
+    select.options.add( new Option("Method2","FI") );
+    frag.appendChild(select);
+    div.appendChild(frag);
+    frag.write("<br>");
 /*
 
     var input = document.createElement("input");
@@ -226,10 +225,13 @@ frag.write("<br>");
 
     
   };
-  btn.addEventListener('click', function() {
-    addInput();
-  }.bind(this));
-})();
+
+  var classn = document.getElementsByClassName("btn");
+  for (var i = 0; i < classn.length; i++) {
+    classn[i].addEventListener('click', function(){
+        addInput(this);
+    });
+  }
 </script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/common.js" charset="utf-8"></script>
 <script type="text/javascript">
