@@ -713,17 +713,16 @@ class ApplicantApplicationFormModel extends CI_Model{
     public function reInsertApplicantDetailsForUpdate($idNumber){
         $this->load->database();
         $name1 = $this->firlterFormInputs($this->input->post('first_name'));
-        
-        $name2 = $this->input->post('last_name');
-        $name3 = $this->input->post('postal_address');
-        $name4 = $this->input->post('permanent_address');
-        $name5 = $this->input->post('driving_licence');
-        $name6 = $this->input->post('applicant_citizenship');
-        $name7 = $this->input->post('personalEmail');
-        $name8 = $this->input->post('officeEmail');
-        $name9 = $this->input->post('mobile_number');
-        $name10 =$this->input->post('home_number');
-        $name11 =$this->input->post('office_number');
+        $name2 = $this->firlterFormInputs($this->input->post('last_name');
+        $name3 = $this->firlterFormInputs($this->input->post('postal_address');
+        $name4 = $this->firlterFormInputs($this->input->post('permanent_address'));
+        $name5 = $this->firlterFormInputs($this->input->post('driving_licence');
+        $name6 = $this->firlterFormInputs($this->input->post('applicant_citizenship');
+        $name7 = $this->firlterFormInputs($this->input->post('personalEmail'));
+        $name8 = $this->firlterFormInputs($this->input->post('officeEmail'));
+        $name9 = $this->firlterFormInputs($this->input->post('mobile_number'));
+        $name10 =$this->firlterFormInputs($this->input->post('home_number'));
+        $name11 =$this->firlterFormInputs($this->input->post('office_number');
         $name12 =$this->input->post('selectGender');
         $name13 =$this->input->post('selectCivilStatus');
         $name14 =$this->input->post('selectCitizenship');
