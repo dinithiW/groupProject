@@ -933,46 +933,68 @@ if(isset($this->session->userdata['logged_in'])){
                                 <th>Contact No</th>
                             </tr>
                             
-
-                            <?php
-
+<!-- ----------start------------------>
+<?php
                             /**
-                             * this part is use for get data from language proficiency details table
+                             * this part is use for get data from any professional qualificational details table
                              * and set to visible the data above mentioned
                              */
-                            if($referees->num_rows()){
-                                foreach($referees->result() as $row_in_referees){
-                            ?>
+                        if($referees->num_rows()){
+                            foreach($referees->result() as $row_in_referees){
 
+                                if($row_in_referees->ROW_NUMBER=='1'){
+                        ?>
                             <tr class="tr">
                                 
-                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->NAME;?>" name="referees_name1" size='30'/></td>
-                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->DESIGNATION;?>" name="referees_designation1" size='10'/></td>
-                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->ADDRESS;?>" name="referees_address1" size='30'/></td>
-                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->EMAIL;?>" name="referees_email1" size='20'/></td>
-                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->CONTACT_NO;?>" name="referees_contact1" size='10'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->INSTITUTION; ?>" name="any_other_qualifications_institution1"  size='30'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->FROM; ?>" name="any_other_qualifications_from1"  size='6'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TO; ?>" name="any_other_qualifications_to1"  size='6'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->DURATION; ?>" name="any_other_qualifications_duration1"  size='17'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TYPE_OF_QUALIFICATION; ?>" name="any_other_qualifications_type_of_qualification1"  size='36'/></td>
                                 <td><span class="lblStatus"></span></td>
 
-                            </tr>
-
-                            <?php
+                            </tr>  
+                    
+                        <?php
                                 }
-                            }
-                        
-                            ?>
-
+                                if($row_in_referees->ROW_NUMBER=='2'){
+                        ?>
                             <tr class="tr">
+                                
+                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->NAME;?>" name="referees_name2" size='30'/></td>
+                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->DESIGNATION;?>" name="referees_designation2" size='10'/></td>
+                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->ADDRESS;?>" name="referees_address2" size='30'/></td>
+                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->EMAIL;?>" name="referees_email2" size='20'/></td>
+                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->CONTACT_NO;?>" name="referees_contact2" size='10'/></td>
+                                <td><span class="lblStatus"></span></td>
 
-                                <td><input type="text" class="Text" placeholder="" name="referees_name3" size='30'/></td>
-                                <td><input type="text" class="Text" placeholder="" name="referees_designation3" size='10'/></td>
-                                <td><input type="text" class="Text" placeholder="" name="referees_address3" size='30'/></td>
-                                <td><input type="text" class="Text" placeholder="" name="referees_email3" size='20'/></td>
-                                <td><input type="text" class="Text" placeholder="" name="referees_contact3" size='10'/></td>
+                            </tr>                     
+                        <?php
+                                }
+                                if($row_in_referees->ROW_NUMBER=='3'){
+                        ?>
+                        
+                            <tr class="tr">
+                                
+                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->NAME;?>" name="referees_name3" size='30'/></td>
+                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->DESIGNATION;?>" name="referees_designation3" size='10'/></td>
+                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->ADDRESS;?>" name="referees_address3" size='30'/></td>
+                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->EMAIL;?>" name="referees_email3" size='20'/></td>
+                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->CONTACT_NO;?>" name="referees_contact3" size='10'/></td>
                                 <td><span class="lblStatus"></span></td>
 
                             </tr>
+                        
+                        <?php
+                                }                               
+                            }
+                        }
+                        
+                        ?> 
+
                             </tr>
                         </table>
+<!-- ---------------end ------------------------>
                     </div>
 
             <!-- end referee table-->  
