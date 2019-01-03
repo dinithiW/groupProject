@@ -81,7 +81,7 @@
                     <tr>
                       <th>Applicant ID</th>
                       <th>Name</th>
-                      <th>DOB</th>
+                      <!-- <th>DOB</th> -->
                       <th>Educational Qualifications</th>
                       <th>Professional Qualifications</th>
                       <th>Previous Experiences</th>
@@ -94,7 +94,7 @@
                     <tr>
                       <td><?=$a->index?></td>
                       <td><?="$a->fname $a->lname"?></td>
-                      <td><?=$a->dob?></td>
+                      <!-- <td><?=$a->dob?></td> -->
                       <td><?=$a->eq?></td>
                       <td><?=$a->pq?></td>
                       <td><?=$a->pe?></td>

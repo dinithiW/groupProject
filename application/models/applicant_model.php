@@ -20,7 +20,7 @@ class applicant_model extends CI_Model
         $this->db->select("INDEX_NUMBER");
         $this->db->select("FIRST_NAME");
         $this->db->select("LAST_NAME");
-        $this->db->select("DATE_OF_BIRTH");
+        //$this->db->select("DATE_OF_BIRTH");
         $this->db->from("basic_personal_details");
         $query = $this->db->get();
         foreach($query->result() as $row){
@@ -31,7 +31,7 @@ class applicant_model extends CI_Model
             $a->index = $row->INDEX_NUMBER;
             $a->fname = $row->FIRST_NAME;
             $a->lname = $row->LAST_NAME;
-            $a->dob = $row->DATE_OF_BIRTH;
+            //$a->dob = $row->DATE_OF_BIRTH;
 
             $this->db->select("UNIVERSITY");
             $this->db->select("DEGREE_OBTAINED");
@@ -42,7 +42,7 @@ class applicant_model extends CI_Model
             $query2 = $this->db->get();
             
             foreach($query2->result() as $row2){
-                $a->eq .= "$row2->UNIVERSITY,$row2->DEGREE_OBTAINED,$row2->DURATION,$row2->CLASS<br>";
+                $a->eq .= "University: $row2->UNIVERSITY, <br>Degree: $row2->DEGREE_OBTAINED,<br>Duration: $row2->DURATION,<br>Class: $row2->CLASS<br><br>";
             }
 
             $this->db->select("INSTITUTION");
@@ -55,6 +55,18 @@ class applicant_model extends CI_Model
             foreach($query3->result() as $row3){
                 $a->pq .= "$row3->INSTITUTION,$row3->INSTITUTION,$row2->DURATION<br>";
             }
+
+            //my stuff
+            /*$this->db->select("INSTITUTION");
+            $this->db->select("INSTITUTION");
+            $this->db->select("DURATION");
+            $this->db->from("professional_qualifications");
+            $this->db->where("INDEX_NUMBER",  $a->index);
+            $query3 = $this->db->get();
+            
+            foreach($query3->result() as $row3){
+                $a->pq .= "$row3->INSTITUTION,$row3->INSTITUTION,$row2->DURATION<br>";
+            }   */
 
 
             array_push($array, $a);
