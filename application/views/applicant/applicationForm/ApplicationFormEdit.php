@@ -707,12 +707,13 @@ if(isset($this->session->userdata['logged_in'])){
                                 if($row_in_professional_qualification->ROW_NUMBER=='1'){
                         ?>
                             <tr class="tr">
+
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->INSTITUTION; ?>" name="any_other_qualifications_institution1"  size='30'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->FROM; ?>" name="any_other_qualifications_from1"  size='6'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TO; ?>" name="any_other_qualifications_to1"  size='6'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->DURATION; ?>" name="any_other_qualifications_duration1"  size='17'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TYPE_OF_QUALIFICATION; ?>" name="any_other_qualifications_type_of_qualification1"  size='36'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->INSTITUTION; ?>" name="professonal_qualifications_institution1"  size='30'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->FROM; ?>" name="professonal_qualifications_from1"  size='6'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TO; ?>" name="professonal_qualifications_to1"  size='6'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->DURATION; ?>" name="professonal_qualifications_duration1"  size='17'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TYPE_OF_QUALIFICATION; ?>" name="professonal_qualifications_type_of_qualification1"  size='36'/></td>
                                 <td><span class="lblStatus"></span></td>
 
                             </tr>  
@@ -723,11 +724,11 @@ if(isset($this->session->userdata['logged_in'])){
                         ?>
                             <tr class="tr">
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->INSTITUTION; ?>" name="any_other_qualifications_institution2"  size='30'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->FROM; ?>" name="any_other_qualifications_from2"  size='6'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TO; ?>" name="any_other_qualifications_to2"  size='6'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->DURATION; ?>" name="any_other_qualifications_duration2"  size='17'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TYPE_OF_QUALIFICATION; ?>" name="any_other_qualifications_type_of_qualification2"  size='36'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->INSTITUTION; ?>" name="professonal_qualifications_institution2"  size='30'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->FROM; ?>" name="professonal_qualifications_from2"  size='6'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TO; ?>" name="professonal_qualifications_to2"  size='6'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->DURATION; ?>" name="professonal_qualifications_duration2"  size='17'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TYPE_OF_QUALIFICATION; ?>" name="professonal_qualifications_type_of_qualification2"  size='36'/></td>
                                 <td><span class="lblStatus"></span></td>
 
                             </tr>                       
@@ -738,11 +739,11 @@ if(isset($this->session->userdata['logged_in'])){
                         
                             <tr class="tr">
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->INSTITUTION; ?>" name="any_other_qualifications_institution3"  size='30'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->FROM; ?>" name="any_other_qualifications_from3"  size='6'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TO; ?>" name="any_other_qualifications_to3"  size='6'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->DURATION; ?>" name="any_other_qualifications_duration3"  size='17'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TYPE_OF_QUALIFICATION; ?>" name="any_other_qualifications_type_of_qualification3"  size='36'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->INSTITUTION; ?>" name="professonal_qualifications_institution3"  size='30'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->FROM; ?>" name="professonal_qualifications_from3"  size='6'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TO; ?>" name="professonal_qualifications_to3"  size='6'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->DURATION; ?>" name="professonal_qualifications_duration3"  size='17'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TYPE_OF_QUALIFICATION; ?>" name="professonal_qualifications_type_of_qualification3"  size='36'/></td>
                                 <td><span class="lblStatus"></span></td>
 
                             </tr>  
@@ -946,11 +947,11 @@ if(isset($this->session->userdata['logged_in'])){
                         ?>
                             <tr class="tr">
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->INSTITUTION; ?>" name="any_other_qualifications_institution1"  size='30'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->FROM; ?>" name="any_other_qualifications_from1"  size='6'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TO; ?>" name="any_other_qualifications_to1"  size='6'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->DURATION; ?>" name="any_other_qualifications_duration1"  size='17'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TYPE_OF_QUALIFICATION; ?>" name="any_other_qualifications_type_of_qualification1"  size='36'/></td>
+                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->NAME;?>" name="referees_name1" size='30'/></td>
+                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->DESIGNATION;?>" name="referees_designation1" size='10'/></td>
+                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->ADDRESS;?>" name="referees_address1" size='30'/></td>
+                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->EMAIL;?>" name="referees_email1" size='20'/></td>
+                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->CONTACT_NO;?>" name="referees_contact1" size='10'/></td>
                                 <td><span class="lblStatus"></span></td>
 
                             </tr>  
@@ -1017,6 +1018,9 @@ if(isset($this->session->userdata['logged_in'])){
                      <div class="calender" >
                         <input id = "calender1"  type ="date" value ="<?php echo $row_in_more_details->SUBMISSION_DATE; ?>"  name="current_date" data-date-inline-picker="true" />
                     </div>
+
+
+                    <!-- applicant can select the date but however the system will find and insert the corredt date -->
 
                     
 
