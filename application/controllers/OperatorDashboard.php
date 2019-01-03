@@ -185,8 +185,10 @@ class OperatorDashboard extends CI_Controller{
     }
 
     public function selectCandidates(){
+        $this->load->model("applicant_model");
+        $data['array'] = $this->applicant_model->getAll();
         $this->load->view('includes/header');
-        $this->load->view('users/operator/selectCandidates');
+        $this->load->view('users/operator/selectCandidates', $data);
         $this->load->view('includes/footer');
     }
 
