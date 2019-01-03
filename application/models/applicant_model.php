@@ -46,14 +46,14 @@ class applicant_model extends CI_Model
             }
 
             $this->db->select("INSTITUTION");
-            $this->db->select("INSTITUTION");
             $this->db->select("DURATION");
+            $this->db->select("TYPE_OF_QUALIFICATION");
             $this->db->from("professional_qualifications");
             $this->db->where("INDEX_NUMBER",  $a->index);
             $query3 = $this->db->get();
             
             foreach($query3->result() as $row3){
-                $a->pq .= "$row3->INSTITUTION,$row3->INSTITUTION,$row2->DURATION<br>";
+                $a->pq .= "Institution: $row3->INSTITUTION<br>Duration: $row3->DURATION<br>Qualification Type: $row3->TYPE_OF_QUALIFICATION<br><br>";
             }
 
             //my stuff
