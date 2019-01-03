@@ -25,7 +25,7 @@ $userId = "";
                     </div><!-- /.box-header -->
                     <!-- form start -->
                     
-                    <form role="form" action=<?= base_url("OperatorIndex/process")?> method="post" name = "emailDetails">
+                    <form role="form" action=<?= base_url("OperatorIndex/process")?> method="post" name = "emailDetails" enctype="multipart/form-data">
                         <div class="box-body">
 
                             <div class="row">
@@ -67,7 +67,8 @@ $userId = "";
                                             <option value="male">Male</option>
                                             <option value="female">Female</option>
                                         </select> -->
-                                        <input type="file" class = "form-control" name="UploadFileName" >
+                                        <input type="file" class = "form-control" name = "UploadFileName" >
+
                                     </div>
                                 </div>
                             </div>

@@ -9,7 +9,7 @@ class applicant_model extends CI_Model
    public $age;
    public $eq;
    public $pq;
-   public $pe;
+   public $oq;
    public $spe;
 
    public function getAll(){
@@ -57,16 +57,24 @@ class applicant_model extends CI_Model
             }
 
             //my stuff
-            /*$this->db->select("INSTITUTION");
             $this->db->select("INSTITUTION");
-            $this->db->select("DURATION");
-            $this->db->from("professional_qualifications");
+            $this->db->select("DEPLOMA");
+            $this->db->from("any_other_qualifications");
             $this->db->where("INDEX_NUMBER",  $a->index);
-            $query3 = $this->db->get();
+            $query4 = $this->db->get();
             
-            foreach($query3->result() as $row3){
-                $a->pq .= "$row3->INSTITUTION,$row3->INSTITUTION,$row2->DURATION<br>";
-            }   */
+            foreach($query4->result() as $row4){
+                $a->oq .= "Institution: $row4->INSTITUTION,<br>Diploma: $row4->DEPLOMA<br><br>";
+            } 
+
+            $this->db->select("SPECIFICATION_AREA_NAME");
+            $this->db->from("specialization_area_for_applicant");
+            $this->db->where("INDEX_NUMBER",  $a->index);
+            $query5 = $this->db->get();
+            
+            foreach($query5->result() as $row5){
+                $a->spe .= "$row5->SPECIFICATION_AREA_NAME<br>";
+            }    
 
 
             array_push($array, $a);
@@ -75,6 +83,7 @@ class applicant_model extends CI_Model
         return $array;
    }
 
+   
 }
 
   
