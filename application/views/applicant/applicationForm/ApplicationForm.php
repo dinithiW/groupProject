@@ -797,15 +797,15 @@ if(isset($this->session->userdata['logged_in'])){
 
                             <tr class="tr">
 
-                                <td><input type="text" class="Text" name="heigher_educational_university1"  size='25'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_from1"  size='3'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_to1"  size='3'/></td>
+                                <td><input type="text" class="Text" name="master_educational_university1"  size='25'/></td>
+                                <td><input type="text" class="Text" name="master_educational_from1"  size='3'/></td>
+                                <td><input type="text" class="Text" name="master_educational_to1"  size='3'/></td>
 
 <!-- -------------start degree------------------->
 <!-- <td><input type="text" class="Text" name="heigher_educational_degree_obtained1"  size='25'/></td> -->
                                 <td>
                                     <div class="custom-sele" id="select_degree_div1">
-                                        <select name="heigher_educational_degree_obtained1" id="select_degree_selection1" style="font-size:9px;">
+                                        <select name="master_educational_degree_obtained1" id="select_degree_selection1" style="font-size:9px;">
                                             <option value="">Select Here</option>
                                             <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
                                             <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
@@ -839,13 +839,13 @@ if(isset($this->session->userdata['logged_in'])){
 <!-- --------------end degree----------------- -->
 
                                 
-                                <td><input type="text" class="Text" name="heigher_educational_duration1"  size='11'/></td>
+                                <td><input type="text" class="Text" name="master_educational_duration1"  size='11'/></td>
                                 
 <!-- --------------start class-------------- -->
                                 <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
                                 <td>
                                     <div class="custom-sele" id="select_class_div1">
-                                        <select name="heigher_educational_class1" id="select_class_selection0" style="font-size:9px;>
+                                        <select name="master_educational_class1" id="select_class_selection0" style="font-size:9px;>
                                             <option value="">Select Here</option>
                                             <option value="Fisrt Class">Fisrt Class</option>
                                             <option value="Second Upper">Second Upper</option>
@@ -873,22 +873,22 @@ if(isset($this->session->userdata['logged_in'])){
                                 </style>
 
 <!-- --------------end class-------------- -->
-                                <td><input type="text" class="Text" name="heigher_educational_year1"  size='5'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_year_no1"  size='8'/></td>
+                                <td><input type="text" class="Text" name="master_educational_year1"  size='5'/></td>
+                                <td><input type="text" class="Text" name="master_educational_year_no1"  size='8'/></td>
 
                                 <td><span class="lblStatus"></span></td>
                             
                             <tr class="tr">
 
-                                <td><input type="text" class="Text" name="heigher_educational_university2"  size='25'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_from2"  size='3'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_to2"  size='3'/></td>
+                                <td><input type="text" class="Text" name="master_educational_university2"  size='25'/></td>
+                                <td><input type="text" class="Text" name="master_educational_from2"  size='3'/></td>
+                                <td><input type="text" class="Text" name="master_educational_to2"  size='3'/></td>
 
 <!-- -------------start degree------------------->
 <!-- <td><input type="text" class="Text" name="heigher_educational_degree_obtained1"  size='25'/></td> -->
 <td>
                                     <div class="custom-sele" id="select_degree_div2">
-                                        <select name="heigher_educational_degree_obtained2" id="select_degree_selection2" style="font-size:9px;">
+                                        <select name="master_educational_degree_obtained2" id="select_degree_selection2" style="font-size:9px;">
                                             <option value="">Select Here</option>
                                             <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
                                             <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
@@ -921,13 +921,13 @@ if(isset($this->session->userdata['logged_in'])){
                                 </style>
 <!-- --------------end degree----------------- -->
                                 
-                                <td><input type="text" class="Text" name="heigher_educational_duration2"  size='11'/></td>
+                                <td><input type="text" class="Text" name="master_educational_duration2"  size='11'/></td>
 
 <!-- --------------start class-------------- -->
                                 <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
                                 <td>
                                     <div class="custom-sele" id="select_class_div1">
-                                        <select name="heigher_educational_class2" id="select_class_selection1" style="font-size:9px;>
+                                        <select name="master_educational_class2" id="select_class_selection1" style="font-size:9px;>
                                             <option value="">Select Here</option>
                                             <option value="Fisrt Class">Fisrt Class</option>
                                             <option value="Second Upper">Second Upper</option>
@@ -956,22 +956,22 @@ if(isset($this->session->userdata['logged_in'])){
 <!-- --------------end class-------------- -->
                                 
 
-                                <td><input type="text" class="Text" name="heigher_educational_year2"  size='3'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_year_no2"  size='11'/></td>
+                                <td><input type="text" class="Text" name="master_educational_year2"  size='3'/></td>
+                                <td><input type="text" class="Text" name="master_educational_year_no2"  size='11'/></td>
 
                             <td><span class="lblStatus"></span></td>
 
                             <tr class="tr">
 
-                                <td><input type="text" class="Text" name="heigher_educational_university3"  size='25'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_from3"  size='3'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_to3"  size='3'/></td>
+                                <td><input type="text" class="Text" name="master_educational_university3"  size='25'/></td>
+                                <td><input type="text" class="Text" name="master_educational_from3"  size='3'/></td>
+                                <td><input type="text" class="Text" name="master_educational_to3"  size='3'/></td>
                                 
 <!-- -------------start degree------------------->
 <!-- <td><input type="text" class="Text" name="heigher_educational_degree_obtained1"  size='25'/></td> -->
 <td>
                                     <div class="custom-sele" id="select_degree_div2">
-                                        <select name="heigher_educational_degree_obtained3" id="select_degree_selection2" style="font-size:9px;">
+                                        <select name="master_educational_degree_obtained3" id="select_degree_selection2" style="font-size:9px;">
                                             <option value="">Select Here</option>
                                             <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
                                             <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
@@ -1004,13 +1004,13 @@ if(isset($this->session->userdata['logged_in'])){
                                 </style>
 <!-- --------------end degree----------------- -->
                                 
-                                <td><input type="text" class="Text" name="heigher_educational_duration3"  size='11'/></td>
+                                <td><input type="text" class="Text" name="master_educational_duration3"  size='11'/></td>
 
 <!-- --------------start class-------------- -->
                                 <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
                                 <td>
                                     <div class="custom-sele" id="select_class_div1">
-                                        <select name="heigher_educational_class3" id="select_class_selection1" style="font-size:9px;>
+                                        <select name="master_educational_class3" id="select_class_selection1" style="font-size:9px;>
                                             <option value="">Select Here</option>
                                             <option value="Fisrt Class">Fisrt Class</option>
                                             <option value="Second Upper">Second Upper</option>
@@ -1038,22 +1038,22 @@ if(isset($this->session->userdata['logged_in'])){
 
 <!-- --------------end class-------------- -->
 
-                                <td><input type="text" class="Text" name="heigher_educational_year3"  size='4'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_year_no3"  size='7'/></td>
+                                <td><input type="text" class="Text" name="master_educational_year3"  size='4'/></td>
+                                <td><input type="text" class="Text" name="master_educational_year_no3"  size='7'/></td>
 
                             <td><span class="lblStatus"></span></td>
 
                             <tr class="tr">
 
-                                <td><input type="text" class="Text" name="heigher_educational_university4"  size='25'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_from4"  size='3'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_to4"  size='3'/></td>
+                                <td><input type="text" class="Text" name="master_educational_university4"  size='25'/></td>
+                                <td><input type="text" class="Text" name="master_educational_from4"  size='3'/></td>
+                                <td><input type="text" class="Text" name="master_educational_to4"  size='3'/></td>
                                 
 <!-- -------------start degree------------------->
 <!-- <td><input type="text" class="Text" name="heigher_educational_degree_obtained1"  size='25'/></td> -->
 <td>
                                     <div class="custom-sele" id="select_degree_div2">
-                                        <select name="heigher_educational_degree_obtained4" id="select_degree_selection2" style="font-size:9px;">
+                                        <select name="master_educational_degree_obtained4" id="select_degree_selection2" style="font-size:9px;">
                                             <option value="">Select Here</option>
                                             <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
                                             <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
@@ -1086,13 +1086,13 @@ if(isset($this->session->userdata['logged_in'])){
                                 </style>
 <!-- --------------end degree----------------- -->
                                 
-                                <td><input type="text" class="Text" name="heigher_educational_duration4"  size='11'/></td>
+                                <td><input type="text" class="Text" name="master_educational_duration4"  size='11'/></td>
 
 <!-- --------------start class-------------- -->
                                 <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
                                 <td>
                                     <div class="custom-sele" id="select_class_div1">
-                                        <select name="heigher_educational_class4" id="select_class_selection1" style="font-size:9px;>
+                                        <select name="master_educational_class4" id="select_class_selection1" style="font-size:9px;>
                                             <option value="">Select Here</option>
                                             <option value="Fisrt Class">Fisrt Class</option>
                                             <option value="Second Upper">Second Upper</option>
@@ -1120,8 +1120,8 @@ if(isset($this->session->userdata['logged_in'])){
 
 <!-- --------------end class-------------- -->
 
-                                <td><input type="text" class="Text" name="heigher_educational_year4"  size='4'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_year_no4"  size='7'/></td>
+                                <td><input type="text" class="Text" name="master_educational_year4"  size='4'/></td>
+                                <td><input type="text" class="Text" name="master_educational_year_no4"  size='7'/></td>
 
                             <td><span class="lblStatus"></span></td>
 

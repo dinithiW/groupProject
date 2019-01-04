@@ -74,6 +74,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         $this->updateTemporaryIdTable($idNumber);
         $this->insertSecondaryEducationalDetailsModel($idNumber);
         $this->insertHigherEducationalDetailsModel($idNumber);
+        $this->insertMasterEducationalDetailsModel($idNumber);
         $this->insertAnyOtherQualificationsModel($idNumber);
         $this->insertProfessionalQualificationsModel($idNumber);
         $this->insertRefereeModel($idNumber);
@@ -237,6 +238,74 @@ class ApplicantApplicationFormModel extends CI_Model{
         $this->db->insert('higher_educational_details', $higher_educational_table_fourth_row);
      
     }
+
+
+    /**
+     * this function is used for the add data for the masters degree details 
+     * ass the detasils for the higher educational details table
+     */
+    public function insertMasterEducationalDetailsModel($idNumber){
+    
+        $this->load->database();
+        $master_educational_table_first_row = array(
+            'INDEX_NUMBER'       =>$idNumber,
+            'ROW_NUMBER'         => '1',
+            'DEGREE_CATEGORY'    => 'master',
+            'UNIVERSITY'         =>$this->firlterFormInputs($this->input->post('master_educational_university1')),
+            'FROM'               =>$this->firlterFormInputs($this->input->post('master_educational_from1')),
+            'TO'                 =>$this->firlterFormInputs($this->input->post('master_educational_to1')),
+            'DEGREE_OBTAINED'    =>$this->firlterFormInputs($this->input->post('master_educational_degree_obtained1')),
+            'DURATION'           =>$this->firlterFormInputs($this->input->post('master_educational_duration1')),
+            'YEAR'               =>$this->firlterFormInputs($this->input->post('master_educational_year1')),
+            'INDEX_NO'           =>$this->firlterFormInputs($this->input->post('master_educational_year_no1')),
+        );
+        $this->db->insert('higher_educational_details', $master_educational_table_first_row);
+
+        $master_educational_table_second_row = array(
+            'INDEX_NUMBER'       =>$idNumber,
+            'ROW_NUMBER'         => '2',
+            'DEGREE_CATEGORY'    => 'master',
+            'UNIVERSITY'         =>$this->firlterFormInputs($this->input->post('master_educational_university2')),
+            'FROM'               =>$this->firlterFormInputs($this->input->post('master_educational_from2')),
+            'TO'                 =>$this->firlterFormInputs($this->input->post('master_educational_to2')),
+            'DEGREE_OBTAINED'    =>$this->firlterFormInputs($this->input->post('master_educational_degree_obtained2')),
+            'DURATION'           =>$this->firlterFormInputs($this->input->post('master_educational_duration2')),
+            'YEAR'               =>$this->firlterFormInputs($this->input->post('master_educational_year2')),
+            'INDEX_NO'           =>$this->firlterFormInputs($this->input->post('master_educational_year_no2')),
+        );
+        $this->db->insert('higher_educational_details', $master_educational_table_second_row);
+
+        $master_educational_table_third_row = array(
+            'INDEX_NUMBER'       =>$idNumber,
+            'ROW_NUMBER'         => '3',
+            'DEGREE_CATEGORY'    => 'master',
+            'UNIVERSITY'         =>$this->firlterFormInputs($this->input->post('master_educational_university3')),
+            'FROM'               =>$this->firlterFormInputs($this->input->post('master_educational_from3')),
+            'TO'                 =>$this->firlterFormInputs($this->input->post('master_educational_to3')),
+            'DEGREE_OBTAINED'    =>$this->firlterFormInputs($this->input->post('master_educational_degree_obtained3')),
+            'DURATION'           =>$this->firlterFormInputs($this->input->post('master_educational_duration3')),
+            'YEAR'               =>$this->firlterFormInputs($this->input->post('master_educational_year3')),
+            'INDEX_NO'           =>$this->firlterFormInputs($this->input->post('master_educational_year_no3')),
+        );
+        $this->db->insert('higher_educational_details', $master_educational_table_third_row);
+
+        $master_educational_table_fourth_row = array(
+            'INDEX_NUMBER'       =>$idNumber,
+            'ROW_NUMBER'         => '4',
+            'DEGREE_CATEGORY'    => 'master',
+            'UNIVERSITY'         =>$this->firlterFormInputs($this->input->post('master_educational_university4')),
+            'FROM'               =>$this->firlterFormInputs($this->input->post('master_educational_from4')),
+            'TO'                 =>$this->firlterFormInputs($this->input->post('master_educational_to4')),
+            'DEGREE_OBTAINED'    =>$this->firlterFormInputs($this->input->post('master_educational_degree_obtained4')),
+            'DURATION'           =>$this->firlterFormInputs($this->input->post('master_educational_duration4')),
+            'YEAR'               =>$this->firlterFormInputs($this->input->post('master_educational_year4')),
+            'INDEX_NO'           =>$this->firlterFormInputs($this->input->post('master_educational_year_no4')),
+        );
+        $this->db->insert('higher_educational_details', $master_educational_table_fourth_row);
+     
+    }
+
+
 
     public function insertAnyOtherQualificationsModel($idNumber){
         
@@ -762,6 +831,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         
         $this->insertSecondaryEducationalDetailsModel($idNumber);        
         $this->insertHigherEducationalDetailsModel($idNumber);
+        $this->insertMasterEducationalDetailsModel($idNumber);
         $this->insertAnyOtherQualificationsModel($idNumber);
         $this->insertProfessionalQualificationsModel($idNumber);
         $this->insertRefereeModel($idNumber);
