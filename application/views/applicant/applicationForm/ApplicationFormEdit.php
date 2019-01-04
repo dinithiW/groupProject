@@ -104,36 +104,76 @@ if(isset($this->session->userdata['logged_in'])){
                     <h5 id="lableForCivilStatus">CIVIL STATUS</h5>
                     <h5 id="labbleForCitizenship">IF A CITIZEN OF SRI LANKA HOW OBTAINED</h5>
 
+                    <style>
+                        #labbleForCitizenship{
+                            margin-left:500px;
+                        }
+                    </style>
+
+                    <style>
+                        #lableForCivilStatus{
+                            margin-left:-30px;
+                        }
+                    </style>
 
                     <div class="custom-sele dropboxGender" style="width:180px; height:100px;">
-                        <select name="selectGender" value="<?php  echo $row->GENDER;?>">
+                        <select name="selectGender" value="<?php  echo $row->GENDER;?>" id="selectCategory_gender">
                             <option value="<?php  echo $row->GENDER;?>"><?php  echo $row->GENDER;?></option>
                             <option value="MALE">MALE:</option>
                             <option value="FEMALE">FEMALE</option>
                         </select>
                     </div>
 
+                    <style>
+                        #selectCategory_gender{
+                            margin-left:140px;
+                            
+                        }
+                    </style>
+
                     <div class="custom-sele dropboxCivil" style="width:100px; height:50px;">
-                        <select name="selectCivilStatus" id="selectCategory" value="<?php  echo $row->CIVIL_STATUS;?>">
+                        <select name="selectCivilStatus" id="selectCategory_civilstate" value="<?php  echo $row->CIVIL_STATUS;?>">
                             <option value="<?php  echo $row->CIVIL_STATUS;?>"><?php  echo $row->CIVIL_STATUS;?></option>
                             <option value="MARRIED">MARRIED</option>
                             <option value="UN MARRIED">UN MARRIED</option>
                         </select>
                     </div>
 
+                    <style>
+                        #selectCategory_civilstate{
+                            margin-left:120px;
+                            
+                        }
+                    </style>
+
                     <div class="custom-sele dropboxCitizenship" style="width:100px; height:50px;">
-                        <select name="selectCitizenship" id="selectCategory">
+                        <select name="selectCitizenship" id="selectCategory_citizenship">
                             <option value="<?php  echo $row->CITIZENSHIP;?>"><?php  echo $row->CITIZENSHIP;?></option>
                             <option value="BY DESCENT">BY DESCENT</option>
                             <option value="BY REGISTRATION">BY REGISTRATION</option>
                         </select>
                     </div>
                     
+                    <style>
+                        #selectCategory_citizenship{
+                            margin-left:100px;
+                            
+                        }
+                    </style>
+
                     <!-- start the calender-->
-                    <div class="calender1">
+                    <div class="calender1" id ="birth_date_id">
                         <h4 id="birth-date"> Date of Birth</h4>
                         <input type="date" data-date-inline-picker="true"  name="birth_date" value="<?php  echo $row->DATE_OF_BIRTH;?>" />
                     </div>
+
+
+                    <style>
+                        #birth_date_id{
+                            margin-left:330px;
+                            
+                        }
+                    </style>
                     <!-- end the calender-->
 
                     <!-- start the age-->
@@ -378,7 +418,7 @@ if(isset($this->session->userdata['logged_in'])){
                 </div>
 
 
-                <div class="custom-sele dropboxSelectPost" style="width:100px; height:50px;">
+                <div class="custom-select" style="width:300px; height:50px;">
                     <select name="postApplyFor" id="selectCategory1">
                     
                         <option value="<?php  echo $row->POST_APPLY_FOR;?>"><?php  echo $row->POST_APPLY_FOR;?></option>
@@ -387,16 +427,7 @@ if(isset($this->session->userdata['logged_in'])){
                     </select>
                 </div>
 
-                <div class="custom-select " style="width:430px; height:50px;">
-                   <select name="selectDegree" id="selectCategory">
-                        
-                        <option value="<?php  echo $row->DEGREE;?>"><?php  echo $row->DEGREE;?></option>
-                        <option value="First Class(Bachelore of computer science)">First Class(Bachelore of computer science)</option>
-                        <option value="Second Upper(Bachelore of computer science)">Second Upper(Bachelore of computer science)</option>
-                        <option value="Second Lower(Bachelore of computer science)">Second Lower(Bachelore of computer science)</option>
-                        <option value="General(Bachelore of computer science)">General(Bachelore of computer science)</option>
-                    </select>
-                </div>
+               
 
                 
                 <h4 id="secondryEducationalTitle">Secondry Educational Details</h4><br/>

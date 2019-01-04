@@ -184,11 +184,11 @@ class OperatorDashboard extends CI_Controller{
         return $taskNum;
     }
 
-    public function selectCandidates(){
+    public function viewAllCandidates(){
         $this->load->model("applicant_model");
         $data['array'] = $this->applicant_model->getAll();
         $this->load->view('includes/header');
-        $this->load->view('users/operator/selectCandidates', $data);
+        $this->load->view('users/operator/allCandidates', $data);
         $this->load->view('includes/footer');
     }
 
@@ -198,6 +198,32 @@ class OperatorDashboard extends CI_Controller{
         $this->load->view('includes/footer');
     }
 
-    
+    public function categorizeHome(){
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/categorizeHome');
+        $this->load->view('includes/footer');
+    }
+
+    public function directTo(){
+        echo"sldfhhhffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff";
+        $position = $_POST['vacancy'];
+        if($position=="Lecturer Probationary"){
+            redirect(base_url()."OperatorIndex/lpCategory");
+        }else{
+            redirect(base_url()."OperatorIndex/seniorLecturer");
+        }
+    }
+
+    public function showLpCategories(){
+
+    }
+
+    public function showSeniorLecturer(){
+        $this->load->model("applicant_model");
+        $data['array'] = $this->applicant_model->getAll();
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/seniorLecturer',$data);
+        $this->load->view('includes/footer');
+    }
 }
 ?>
