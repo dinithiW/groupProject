@@ -28,37 +28,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        <i class="fa fa-users"></i> Select Candidates
+        <i class="fa fa-users"></i> Senior Lecturer Grd. II
         <!-- <small>Add, Edit, Delete</small> -->
       </h1>
     </section>
     <section class="content">
-        <!-- <div class="row">
-            <div class="col-xs-12 text-right">
-                <div class="form-group">
-                    <a class="btn btn-primary" href="<?= base_url('OperatorIndex/addMember') ?>"><i class="fa fa-plus"></i> Add New</a>
-                </div>
-            </div>
-        </div> -->
-      <div class = "row">
-        <label for="input-lg" class="input-lg"> Select Vacancy</label>
-      </div>
-
-      <div class = "row">
-        <div class="form-group  col-xs-8 ">
         
-        <select class="form-control input-lg" id="selectBox" onchange="changeFunc();">
-          <option value = "Lecturer Probationary">Lecturer Probationary</option>
-          <option value = "Senior Lecturer" selected>Senior Lecturer</option>
-          <!-- <option>3</option>
-          <option>4</option> -->
-        </select>
-      </div>
-      </div>
-
-      <div class = "form-group col-xs-2 row">
-        <button type="button" class="btn btn-primary">Search</button>
-      </div>
 
         <div class="row">
             <div class="col-xs-12">
@@ -86,7 +61,6 @@
                       <th>Professional Qualifications</th>
                       <th>Other Qualifications</th>
                       <th>Specializations</th>
-                      <th>Selected</th>
                       <th class="text-center">Actions</th>
                     </tr>
 
