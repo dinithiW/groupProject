@@ -97,6 +97,8 @@ $route['OperatorIndex/categorize'] = "OperatorDashboard/categorizeHome";
 $route['OperatorIndex/directCategorize'] = "OperatorDashboard/directTo";
 $route['OperatorIndex/lpCategory'] = "OperatorDashboard/showLpCategories";
 $route['OperatorIndex/seniorLecturer'] = "OperatorDashboard/showSeniorLecturer";
+$route['OperatorIndex/selectSL/(:any)'] = "OperatorDashboard/addToSelected/$1";
+$route['OperatorIndex/notSelectSL/(:any)'] = "OperatorDashboard/addToNotSelected/$1";
 
 //SAR routes
 $route['SAR']='SARDashboard/index';
