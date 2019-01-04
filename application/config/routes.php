@@ -109,6 +109,7 @@ $route['OperatorIndex/notSelectSL/(:any)'] = "OperatorDashboard/addToNotSelected
 $route['SAR']='SARDashboard/index';
 $route['reports']='SARDashboard/report';
 $route['sendmail']='SARDashboard/sendmail';
+$route['sendBulkmail/(:any)']='SARDashboard/sendBulkmails/$1';
 $route['setDates']="SARDashboard/setInterviewDates";
 $route['candidateList']="SARDashboard/viewCandidates";
 $route['SAR/advertisement']="SARDashboard/viewAdvertisement";
