@@ -14,6 +14,7 @@ class ApplicantApplicationFormModel extends CI_Model{
     public function firlterFormInputs($input){
         $input = trim($input);
         $input = stripslashes($input);
+        
         return $input;
     }
 
@@ -485,7 +486,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         $data = array( 
             'INDEX_NUMBER'	=> $idNumber 
         );
-        $this->db->where('USERNAME', $this->input->post('personalEmail'));
+        $this->db->where('USERNAME', $this->firlterFormInputs($this->input->post('personalEmail')));
         $this->db->update(' temporary_index_number_for_applicants', $data);
         
     }

@@ -65,38 +65,38 @@ if(isset($this->session->userdata['logged_in'])){
                     <h2 class="fs-title">BASIC PERSONAL DETAILS</h2>
 
                     <h6 class="lables">Full Name (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="first_name" placeholder="Full Name" value="<?php  echo $row->FIRST_NAME;?>">
+                    <input type="text"  required class="input-fields" name="first_name" placeholder="Full Name" value="<?php  echo $row->FIRST_NAME;?>" required>
       
 
                     <h6 class="lables">Surname (in capital blocks)</h6>
                     <input type="text"  required class="input-fields" name="last_name" placeholder="Sur Name" value="<?php  echo $row->LAST_NAME;?>">
 
                     <h6 class="lables">Postal Address (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="postal_address" placeholder="Postal Address" value="<?php  echo $row->POSTAL_ADDRESS;?>">
+                    <input type="text"  required class="input-fields" name="postal_address" placeholder="Postal Address" value="<?php  echo $row->POSTAL_ADDRESS;?>" required>
 
                     <h6 class="lables">Permanent Address  (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="permanent_address" placeholder="Permanent Address" value="<?php  echo $row->PERMANENT_ADDRESS;?>">
+                    <input type="text"  required class="input-fields" name="permanent_address" placeholder="Permanent Address" value="<?php  echo $row->PERMANENT_ADDRESS;?>" required>
                     
                     <h6 class="lables">NIC/Driving Licence/Passport No (in capital blocks)</h6>
-                    <input type="text" required  class="input-fields" name="driving_licence" placeholder="NIC/Driving Licence/Passport No" value="<?php  echo $row->NIC;?>">
+                    <input type="text" required  class="input-fields" name="driving_licence" placeholder="NIC/Driving Licence/Passport No" value="<?php  echo $row->NIC;?>" required>
 
                     <h6 class="lables">Citizenship (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="applicant_citizenship" placeholder="Citizenship" value="<?php  echo $row->CITIZENSHIP_NAME;?>">
+                    <input type="text"  required class="input-fields" name="applicant_citizenship" placeholder="Citizenship" value="<?php  echo $row->CITIZENSHIP_NAME;?>" required>
 
                     <h6 class="lables">Personal-Email  (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="personalEmail" placeholder="Personal-Email" value="<?php  echo $row->PERSONAL_EMAIL;?>">
+                    <input type="text"  required class="input-fields" name="personalEmail" placeholder="Personal-Email" value="<?php  echo $row->PERSONAL_EMAIL;?>" required>
                     
                     <h6 class="lables">Office-Email (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="officeEmail" placeholder="Office-Email" value="<?php  echo $row->OFFICE_EMAIL;?>">
+                    <input type="text"  required class="input-fields" name="officeEmail" placeholder="Office-Email" value="<?php  echo $row->OFFICE_EMAIL;?>" required>
 
                     <h6 class="lables">Mobile Number (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="mobile_number" placeholder="Mobile Number" value="<?php  echo $row->MOBILE_NUMBER;?>">
+                    <input type="text"  required class="input-fields" name="mobile_number" placeholder="Mobile Number" value="<?php  echo $row->MOBILE_NUMBER;?>" required>
 
                     <h6 class="lables">Home Number (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="home_number" placeholder="Home Number" value="<?php  echo $row->HOME_NUMBER;?>">
+                    <input type="text"  required class="input-fields" name="home_number" placeholder="Home Number" value="<?php  echo $row->HOME_NUMBER;?>" required>
 
                     <h6 class="lables">Office Number (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="office_number" placeholder="Office Number" value="<?php  echo $row->OFFICE_NUMBER;?>">
+                    <input type="text"  required class="input-fields" name="office_number" placeholder="Office Number" value="<?php  echo $row->OFFICE_NUMBER;?>" required>
 
                 <!-- start gender -->
 
@@ -413,10 +413,15 @@ if(isset($this->session->userdata['logged_in'])){
 
 <!--end of the javascript file for the drop down -->
 
-                <div class="checkBoxForPostSelectionHeader"> 
+                <div class="checkBoxForPostSelectionHeader" id="header_for_post_apply"> 
                     <h5 id="lab3" >POSTS APPLIED FOR</h5>
                 </div>
 
+                <style>
+                    #header_for_post_apply{
+                        margin-left:120px;
+                    }
+                </style>
 
                 <div class="custom-select" style="width:300px; height:50px;">
                     <select name="postApplyFor" id="selectCategory1">
@@ -487,7 +492,7 @@ if(isset($this->session->userdata['logged_in'])){
                         <?php
                                 }
 
-                                if($row_in_secondary_education->ROW_NUMBER=='2'){
+                                if($row_in_secondary_education->ROW_NUMBER=='3'){
                         
                         ?>
 
@@ -502,7 +507,7 @@ if(isset($this->session->userdata['logged_in'])){
                         <?php
                                 }
 
-                                if($row_in_secondary_education->ROW_NUMBER=='2'){
+                                if($row_in_secondary_education->ROW_NUMBER=='4'){
                         
                         ?>
 
@@ -524,6 +529,8 @@ if(isset($this->session->userdata['logged_in'])){
                         ?>                      
                             
                         </table>
+
+                        
                     </div><!-- end of the Secondry Educational Details table-->
 
 
@@ -608,7 +615,7 @@ if(isset($this->session->userdata['logged_in'])){
                                 <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
                                 <td>
                                     <div class="custom-sele" id="select_class_div1">
-                                        <select name="heigher_educational_class1" id="select_class_selection0" style="font-size:9px;>
+                                        <select name="heigher_educational_class1" id="select_class_selection0" style="font-size:9px;">
                                             <option value="<?php echo $row_in_higher_education->CLASS; ?>"><?php echo $row_in_higher_education->CLASS; ?></option>
                                             <option value="Fisrt Class">Fisrt Class</option>
                                             <option value="Second Upper">Second Upper</option>
@@ -698,7 +705,7 @@ if(isset($this->session->userdata['logged_in'])){
                                 <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
                                 <td>
                                     <div class="custom-sele" id="select_class_div1">
-                                        <select name="heigher_educational_class2" id="select_class_selection0" style="font-size:9px;>
+                                        <select name="heigher_educational_class2" id="select_class_selection0" style="font-size:9px;">
                                             <option value="<?php echo $row_in_higher_education->CLASS; ?>"><?php echo $row_in_higher_education->CLASS; ?></option>
                                             <option value="Fisrt Class">Fisrt Class</option>
                                             <option value="Second Upper">Second Upper</option>
@@ -791,7 +798,7 @@ if(isset($this->session->userdata['logged_in'])){
                                 <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
                                 <td>
                                     <div class="custom-sele" id="select_class_div1">
-                                        <select name="heigher_educational_class3" id="select_class_selection0" style="font-size:9px;>
+                                        <select name="heigher_educational_class3" id="select_class_selection0" style="font-size:9px;">
                                             <option value="<?php echo $row_in_higher_education->CLASS; ?>"><?php echo $row_in_higher_education->CLASS; ?></option>
                                             <option value="Fisrt Class">Fisrt Class</option>
                                             <option value="Second Upper">Second Upper</option>
@@ -883,7 +890,7 @@ if(isset($this->session->userdata['logged_in'])){
                                 <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
                                 <td>
                                     <div class="custom-sele" id="select_class_div1">
-                                        <select name="heigher_educational_class4" id="select_class_selection0" style="font-size:9px;>
+                                        <select name="heigher_educational_class4" id="select_class_selection0" style="font-size:9px;">
                                             <option value="<?php echo $row_in_higher_education->CLASS; ?>"><?php echo $row_in_higher_education->CLASS; ?></option>
                                             <option value="Fisrt Class">Fisrt Class</option>
                                             <option value="Second Upper">Second Upper</option>
@@ -1347,22 +1354,28 @@ if(isset($this->session->userdata['logged_in'])){
                         <b>I here by declare that the particulars furnished by me in the application are true and accurate.<br> I am also aware that if any partuculars contains herein are found to be false or incorrect I am<br> liable to disqualification if the inaccuracy is discovered before the selection and dimissal without any compensation if th inaccuracy is discovered after the appointment</b>
                     </h4> 
 
-                     <div class="calender" >
-                        <input id = "calender1"  type ="date" value ="<?php echo $row_in_more_details->SUBMISSION_DATE; ?>"  name="current_date" data-date-inline-picker="true" />
-                    </div>
 
 
                     <!-- applicant can select the date but however the system will find and insert the corredt date -->
 
                     
 
-                    <div class="iAgreeLable">
+                    <div class="iAgreeLable" id="agreement">
+                        
+                        <input id="" type="checkbox" name="vehicle"  value="" required>
                         <h5>I agree</h5>
                     </div> 
 
-                    <div class="iAgreeButton">
-                        <input id="" type="checkbox" name="vehicle"  value="">
-                    </div> 
+                    <style>
+                        #agreement{
+                            margin-top:20px;
+                            margin-left:380px;
+                        }
+                    </style>
+
+                    <!-- <div class="iAgreeButton">
+                        
+                    </div>  -->
 
                     <input type="button" name="previous" class="previous button" value="Previous">
                     <input type="submit" name="Submit" class="finish button finish" value="Finish">

@@ -35,7 +35,7 @@
             if($this->input->post('Submit')){    
                 
                 $this->load->model('ApplicantApplicationFormModel');
-                $idNumber = '19PR006';
+                $idNumber = '19PR010';
 
                 //$this->ApplicantApplicationFormModel->updateForm($idNumber);
 
@@ -68,7 +68,7 @@
      */
       
         public function editfileUpload(){
-            $index_number = '19PR006';
+            $index_number = '19PR010';
             $this->load->model('operator/categorizeApplilcationsModel');
             $this->load->model('ApplicantApplicationFormModel');
             
