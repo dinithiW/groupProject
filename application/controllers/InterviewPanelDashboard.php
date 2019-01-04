@@ -14,7 +14,7 @@ class InterviewPanelDashboard extends CI_Controller{
     }
 
     public function viewApplicants(){
-    	 $this->load->view('includes/header');
+    	// $this->load->view('includes/header');
         /* echo "hsghajgd";
         $this->load->view('users/interviewPanel/viewApplicants');
         $this->load->view('includes/footer');*/

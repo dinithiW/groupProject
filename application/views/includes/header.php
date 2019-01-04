@@ -2,11 +2,16 @@
   $name = $_SESSION['name'];//for display name in profile
   $pageTitle = "UCSC"; //for display page title
   $role_text = $_SESSION['usertype']; 
-  const ROLE_DIRECTOR = "Director";
+ /* const ROLE_DIRECTOR = "Director";
   const ROLE_MA = "MA";
   const ROLE_SAR = "SAR";
   const ROLE_PANEL = "Panel";
-  const ROLE_APPLICANT = "Applicant";
+  const ROLE_APPLICANT = "Applicant";*/
+if (!defined('ROLE_DIRECTOR')) define('ROLE_DIRECTOR', 'Director');
+if (!defined('ROLE_MA')) define('ROLE_MA', 'MA');
+if (!defined('ROLE_SAR')) define('ROLE_SAR', 'SAR');
+if (!defined('ROLE_PANEL')) define('ROLE_PANEL', 'Panel');
+if (!defined('ROLE_APPLICANT')) define('ROLE_APPLICANT', 'Applicant');
   $role = $_SESSION['usertype'];
 ?>
 
@@ -75,9 +80,9 @@ if($checking=='1'){
 
 
     <!-- NOtification using PHP Ajax Bootstrap -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 
 
   </head>

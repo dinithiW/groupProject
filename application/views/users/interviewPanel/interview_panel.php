@@ -260,8 +260,7 @@
                         <div class="row" style="padding-top: 0px">
                             <div class="form-horizontal">
                                 <div class="col-sm-12" style="padding-top: 80px">
-                                    <input type="hidden" name="txtStaffId"
-                                           value="<?= $_SESSION["id"] ?>">
+                                  
                                     <button type="submit" class="btn btn-fill"
                                             style="left: 50%;transform: translateX(-50%);font-weight: bold;position: relative"
                                             id="submitBtn">
