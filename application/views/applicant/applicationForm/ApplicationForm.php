@@ -48,6 +48,7 @@ if(isset($this->session->userdata['logged_in'])){
                 <div class="form">    
                     <h2 class="fs-title">BASIC PERSONAL DETAILS</h2>
 
+    
                     <h6 class="lables">Full Name (in capital blocks)</h6>
                     <input type="text"  required class="input-fields" name="first_name" placeholder="Full Name" required>
 
@@ -171,6 +172,7 @@ if(isset($this->session->userdata['logged_in'])){
 
                         
                         <table ><!-- start of the fieldset-->
+                       
                             <tr>
                                 <div class="tableLable">AREA NAME<div>
                             </tr>
@@ -364,8 +366,11 @@ if(isset($this->session->userdata['logged_in'])){
 
                 <div class="custom-select " style="width:350px; height:50px;" id="dropdown_for_post">
                     <select name="postApplyFor" id="selectCategory1">
+
                         <option value="PROBATIONARY LECTURER">PROBATIONARY LECTURER</option>
+                        <option value="SENIOR LECTURE GR. I">SENIOR LECTURE GR. I</option>
                         <option value="SENIOR LECTURE GR. II">SENIOR LECTURE GR. II</option>
+                        
                     </select>
                 </div>
 
@@ -633,6 +638,7 @@ if(isset($this->session->userdata['logged_in'])){
                                             <option value="BSC-Information Technology">BSC-Information Technology</option>
                                             <option value="BSC-Computer Engineering">BSC-Computer Engineering</option>
                                             <option value="Other">Other</option>
+                                            
                                         </select>
                                     </div>
                                 </td>
@@ -685,7 +691,7 @@ if(isset($this->session->userdata['logged_in'])){
 
                                 </style>
 
-<!-- --------------end class-------------- -->
+<!-- --------------end class---------------->
 
                                 <td><input type="text" class="Text" name="heigher_educational_year3"  size='4'/></td>
                                 <td><input type="text" class="Text" name="heigher_educational_year_no3"  size='7'/></td>

@@ -28,7 +28,7 @@ class ApplicantApplicationFormModel extends CI_Model{
     public function insertBasicPersonalDetailsModel(){
         $this->load->database();
         $idNumber = $this->makeApplicationId();
-
+        $_SESSION['index_number'] = $idNumber;
         $name1 = $this->firlterFormInputs($this->input->post('first_name'));
         $name2 = $this->firlterFormInputs($this->input->post('last_name'));
         $name3 = $this->firlterFormInputs($this->input->post('postal_address'));
