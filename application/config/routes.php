@@ -111,9 +111,10 @@ $route['reports']='SARDashboard/report';
 $route['sendmail']='SARDashboard/sendmail';
 $route['sendBulkmail/(:any)']='SARDashboard/sendBulkmails/$1';
 $route['setDates']="SARDashboard/setInterviewDates";
-$route['candidateList']="SARDashboard/viewCandidates";
+$route['SAR/candidateList']="SARDashboard/viewCandidates";
 $route['SAR/advertisement']="SARDashboard/viewAdvertisement";
 $route['applicants']="SARDashboard/viewApplicants";
+//$route['SAR/candidates']="SARDashboard/viewCandidates';
 
 
 //Director routes
