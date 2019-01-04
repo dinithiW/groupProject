@@ -33,10 +33,16 @@
          */
         public function updateApplicationForm(){
             if($this->input->post('Submit')){    
+                
                 $this->load->model('ApplicantApplicationFormModel');
-                $idNumber = '19PR004';
+                $idNumber = '19PR006';
+
+                //$this->ApplicantApplicationFormModel->updateForm($idNumber);
+
+                
                 $this->ApplicantApplicationFormModel->deleteApplicantDetails($idNumber);
                 $this->ApplicantApplicationFormModel->reInsertApplicantDetailsForUpdate($idNumber);
+                
                 $this->editfileUpload();
             }
             
@@ -62,7 +68,7 @@
      */
       
         public function editfileUpload(){
-            $index_number = '19PR004';
+            $index_number = '19PR006';
             $this->load->model('operator/categorizeApplilcationsModel');
             $this->load->model('ApplicantApplicationFormModel');
             
