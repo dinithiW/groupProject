@@ -20,35 +20,47 @@
                     <div class="box-header">
                         <h3 class="box-title">View Applicantst</h3>
                     </div><!-- /.box-header -->
-                   <!-- <div class =  "table-responsive">
+                    <div>
+                    <center>
+                        <h3>Basic Persanol Information of Applicants</h3>
+                    </center>
+                    </div>
+                    <br />
+                    <div class =  "table-responsive">
                         <table class = "table table-bordered">
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td><b>Index Number</b></td>
+                                <td><b>Name</b></td>
+                                <td><b>Address</b></td>
+                                <td><b>NIC</b></td>
+                                <td><b>E-Mail</b></td>
+                                <td><b>Contact Number</b></td>
+                                <td><b>Gender</b></td>
+                                <td><b>Civil Status</b></td>
+                                <td><b>Date of Birth</b></td>
                             </tr>
-                        </table>
-                   </div> -->
-                   <!-- <div>
+                        
                         <?php
-                            // class viewApplicants extends CI_controller{
-
-                            //     public function index(){
-                                    
-                            //         $this->load->model('applicantDetails');
-
-                            //         $data['records'] = $this->applicantDetails->getdata();
-
-                            //         $this->load->view('', $data);
-                            //     }
-                            // }
-                        ?>
-                   </div> -->
-                   <?php
                         foreach($records as $rec){
-                            echo $rec->id.",".$rec->name.",".$rec->dead_line."< br>";
+                        ?>
+                            <tr>
+                                <td><?php echo $rec->INDEX_NUMBER; ?></td>
+                                <td><?php echo $rec->FIRST_NAME." ".$rec->LAST_NAME; ?></td>
+                                <td><?php echo $rec->POSTAL_ADDRESS; ?></td>
+                                <td><?php echo $rec->NIC; ?></td>
+                                <td><?php echo $rec->PERSONAL_EMAIL; ?></td>
+                                <td><?php echo $rec->MOBILE_NUMBER; ?></td>
+                                <td><?php echo $rec->GENDER; ?></td>
+                                <td><?php echo $rec->CIVIL_STATUS; ?></td>
+                                <td><?php echo $rec->DATE_OF_BIRTH; ?></td>
+                            </tr>
+                        <?php
                         } 
-                   ?>
+                        ?>
+                        </table>
+                   </div>
+
+                   
                 </div>
             </div>
             <div class="col-md-4">

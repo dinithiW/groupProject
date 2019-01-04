@@ -98,8 +98,9 @@ $route['OperatorIndex/categorize'] = "OperatorDashboard/categorizeHome";
 //
 $route['OperatorIndex/directCategorize'] = "OperatorDashboard/directTo";
 $route['OperatorIndex/lpCategory'] = "OperatorDashboard/showLpCategories";
-//show all senior lecturer applicants and categorize them
-$route['OperatorIndex/seniorLecturer'] = "OperatorDashboard/showSeniorLecturer";
+//show all senior lecturer applicants grade I and categorize them
+$route['OperatorIndex/seniorLecturerGradeI'] = "OperatorDashboard/showSeniorLecturerGradeI";
+$route['OperatorIndex/seniorLecturerGradeII'] = "OperatorDashboard/showSeniorLecturerGradeII";
 //insert into the sl_selected table (value 1)
 $route['OperatorIndex/selectSL/(:any)'] = "OperatorDashboard/addToSelected/$1";
 //insert into the sl_selected table (value 0)
@@ -109,6 +110,7 @@ $route['OperatorIndex/notSelectSL/(:any)'] = "OperatorDashboard/addToNotSelected
 $route['SAR']='SARDashboard/index';
 $route['reports']='SARDashboard/report';
 $route['sendmail']='SARDashboard/sendmail';
+$route['sendBulkmail/(:any)']='SARDashboard/sendBulkmails/$1';
 $route['setDates']="SARDashboard/setInterviewDates";
 $route['candidateList']="SARDashboard/viewCandidates";
 $route['SAR/advertisement']="SARDashboard/viewAdvertisement";

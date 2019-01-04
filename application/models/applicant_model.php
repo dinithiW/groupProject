@@ -21,15 +21,18 @@ class applicant_model extends CI_Model
         $this->db->select("FIRST_NAME");
         $this->db->select("LAST_NAME");
         //$this->db->select("DATE_OF_BIRTH");
-        if($vacancy == "SENIOR LECTURE GR. II"){
+        if($vacancy == "SENIOR LECTURE GR. II" || $vacancy=="SENIOR LECTURE GR. I"){
             $this->db->where("POST_APPLY_FOR",$vacancy);
             $this->db->where("INDEX_NUMBER NOT IN(SELECT INDEX_NUMBER FROM sl_selected)");
         }
 
         if($vacancy=="PROBATIONARY LECTURER"){
+            //session_start();
+           // $_SESSION["category"] = "";
             $this->db->where("POST_APPLY_FOR",$vacancy);
             if($category=="1"){
                 $this->db->where("INDEX_NUMBER IN(SELECT DISTINCT INDEX_NUMBER FROM higher_educational_details WHERE  DEGREE_OBTAINED LIKE 'BSC Hons%' AND( CLASS = 'FIRST CLASS' OR CLASS = 'SECOND UPPER') )");
+               // $_SESSION["category"] = "Category 1";
             }else if($category=="2"){
 
             }else if($category == "3"){

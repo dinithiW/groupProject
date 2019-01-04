@@ -1,7 +1,3 @@
-<?php
-  //var_dump($array);
-  //exit();
-?>
 
 <!DOCTYPE html>
 <html>
@@ -67,7 +63,7 @@
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-                    <h3 class="box-title">Candidates List</h3>
+                    <h3 class="box-title">Category 1</h3>
                     <div class="box-tools">
                         <form action="<?php echo base_url() ?>userListing" method="POST" id="searchList">
                            
@@ -127,19 +123,9 @@
     });
 </script>
 
-<!-- <script type="text/javascript">
 
-   function changeFunc() {
-    var selectBox = document.getElementById("selectBox");
-    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-    if(selectedValue=='Lecturer Probationary'){
-      //show the relevant peeps data
-    }else{
-      //
-    }
-    alert(selectedValue);
-   }
 
-  </script> -->
+
+
 
 </body>

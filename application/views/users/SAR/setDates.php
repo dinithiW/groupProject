@@ -1,3 +1,10 @@
+<?php
+$this->load->library('session');
+$confirmed = "";
+if (!empty($_GET["email"])) {
+    $confirmed = $_GET["email"];
+}
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,6 +22,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="http://fonts.googleapis.com/css?family=Droid+Serif|Tangerine|Lobster:regular" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
     <style>
         a:hover { 
@@ -33,6 +42,20 @@
       </h1>
     </section>
     
+     <section>
+        <div>
+            <?php
+            if ($confirmed == "success") {
+                ?>
+                <div class="alert alert-success"
+                     style="margin-left: 10px;margin-right: 10px;text-align: center;color: #17630a;font-weight: bold">
+                    Email has been sent
+                </div>
+                <?php
+            }
+            ?>
+        </div>
+    </section>
     <section class="content">
     
         <div class="row">
@@ -47,7 +70,7 @@
                         <h3 class="box-title">Enter User Details</h3>
                     </div><!-- /.box-header -->
                     <!-- form start -->
-                    
+                    <form action="<?= base_url("sendBulkmail").'/formdoor'; ?>" method="post">
                     <textarea class="tinymce" name="reportdetails">
                         <!-- <p><span style="font-size: 18pt; font-family: 'indie flower', cursive;">some text here</span></p> -->
                     </textarea>
@@ -69,20 +92,32 @@
                         foreach ($Members as $row) {
                            $count=$count+1;?>
                            <tr>
-                               
                                      <td> <?php echo $row->getfname()." ". $row->getlname() ?></td>
                                     <td> <?php echo $row->getemail() ?></td>
-                                    <td> <input type="checkbox" name="single_select" class="single_select" ></td>
-                                    <td><button type="button" name="email_button" class="btn btn-primary" >send</button></td>
+                                    <input type="hidden" name="directormail<?=$count?>" value="<?= $row->getemail() ?>">
+                                    <td> 
+
+
+                                        <!-- <input type="checkbox" name="single_select<?=$count?>" class="single_select" data-email=<?php echo $row->getemail() ?> data-name=<?php echo $row->getfname()." ". $row->getlname() ?> > -->
+
+                                        <input type="checkbox" name="formdoor[]" class="single_select" data-email=<?php echo $row->getemail() ?> data-name=<?php echo $row->getfname()." ". $row->getlname() ?> value = "<?= $row->getemail() ?>">
+
+
+                                    </td>
+                                    <!--<td><button type="submit" name="email_button" class="btn btn-primary" id="'.$count.'" data-email=<?php echo $row->getemail() ?> data-name=<?php echo $row->getfname()." ". $row->getlname() ?> data-action="single" href = "<?= base_url("sendmail") ?>">send</button ></td>-->
+
+                                
 
                            </tr>
                            <?php
                         }
                     ?>
                     <tr>
-                        <td></td>
+                        <td colspan="3"></td>
+                        <td><button type="submit" name="emailBulk_button" class="btn btn-primary" id="bulk_email" data-action="bulk">Bulk</button></td>
                     </tr>
                 </table>
+           </form>
                  </div>
 
         <!-- javascript -->

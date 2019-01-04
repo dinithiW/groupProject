@@ -20,6 +20,14 @@
                     <div class="box-header">
                         <h3 class="box-title">Approve Advertisement</h3>
                     </div><!-- /.box-header -->
+
+                    <!-- My Work Space -->
+                    <div>
+                        <center>
+                            <button type="button">Accept</button>
+                            <button type="button">Decline</button>
+                        </center>
+                    </div>
                     
                 </div>
             </div>
