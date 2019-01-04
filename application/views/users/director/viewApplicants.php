@@ -20,13 +20,35 @@
                     <div class="box-header">
                         <h3 class="box-title">View Applicantst</h3>
                     </div><!-- /.box-header -->
-                   <div class =  "table-responsive">
+                   <!-- <div class =  "table-responsive">
                         <table class = "table table-bordered">
                             <tr>
                                 <td></td>
+                                <td></td>
+                                <td></td>
                             </tr>
                         </table>
-                   </div>
+                   </div> -->
+                   <!-- <div>
+                        <?php
+                            // class viewApplicants extends CI_controller{
+
+                            //     public function index(){
+                                    
+                            //         $this->load->model('applicantDetails');
+
+                            //         $data['records'] = $this->applicantDetails->getdata();
+
+                            //         $this->load->view('', $data);
+                            //     }
+                            // }
+                        ?>
+                   </div> -->
+                   <?php
+                        foreach($records as $rec){
+                            echo $rec->id.",".$rec->name.",".$rec->dead_line."< br>";
+                        } 
+                   ?>
                 </div>
             </div>
             <div class="col-md-4">
