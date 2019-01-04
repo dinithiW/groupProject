@@ -26,9 +26,9 @@ class InterviewPanelDashboard extends CI_Controller{
         $data['criteria_headings']=$this->MarkingCriteriaModel->getHeadings();
         $data['detailed_criteria_headings']=$this->MarkingCriteriaModel->getDetailedHeadings();
         $data['detailed_criteria']=$this->MarkingCriteriaModel->getDetailedCriteria();
-         $this->load->view('includes/header');
-        $this->load->view('users/interviewPanel/interview_panel',$data);
-         $this->load->view('includes/footer');
+        $this->load->view('includes/header');
+        $this->load->view ('users/interviewPanel/interview_panel');
+        $this->load->view('includes/footer');
 
     }
 
