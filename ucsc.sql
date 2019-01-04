@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 04, 2019 at 02:21 PM
--- Server version: 10.1.31-MariaDB
--- PHP Version: 7.2.3
+-- Generation Time: Jan 04, 2019 at 06:03 PM
+-- Server version: 10.1.13-MariaDB
+-- PHP Version: 5.6.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -137,7 +135,6 @@ CREATE TABLE `applicats_more_details` (
 --
 -- Dumping data for table `applicats_more_details`
 --
-
 INSERT INTO `applicats_more_details` (`INDEX_NUMBER`, `EXPERIENCE_RELEVANT_TO_POST`, `RESEARCH_AND_PUBLICATION_DETAILS`, `ANY_OTHER_INFORMATION`, `SUBMISSION_DATE`) VALUES
 ('19px000', 'edited ', 'edited ', 'edited ', '1999-01-01'),
 ('19pr000', 'Good', 'Good', 'Good', '1888-08-10'),
@@ -149,7 +146,6 @@ INSERT INTO `applicats_more_details` (`INDEX_NUMBER`, `EXPERIENCE_RELEVANT_TO_PO
 ('19SE0068', 'dinithi', 'dinithi', 'dinithi', '19-01-04'),
 ('19PR010', 'experience', '/research', 'other in forms', '19-01-04'),
 ('19PR011', 'insti', 'insti', 'insti', '19-01-04');
-
 -- --------------------------------------------------------
 
 --
@@ -193,6 +189,7 @@ INSERT INTO `basic_personal_details` (`INDEX_NUMBER`, `FIRST_NAME`, `LAST_NAME`,
 ('19SE006', '/comma', '//finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-24', 'SENIOR LECTURE GR. II'),
 ('19SE0068', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'FEMALE', 'UN MARRIED', 'BY DESCENT', '1996-12-04', 'SENIOR LECTURE GR. II'),
 ('19SE008', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'FEMALE', 'UN MARRIED', 'BY DESCENT', '1996-12-04', 'SENIOR LECTURE GR. II');
+
 
 -- --------------------------------------------------------
 
@@ -254,6 +251,7 @@ INSERT INTO `higher_educational_details` (`INDEX_NUMBER`, `ROW_NUMBER`, `DEGREE_
 ('19PR011', '3', 'phd', 'p_uni3', 0, 0, 'BSC-Informtion System', 0, '', 0, 'pIn3'),
 ('19PR011', '4', 'phd', 'p_uni4', 0, 0, 'BSC-Information Technology', 0, '', 0, 'pIn4');
 
+
 -- --------------------------------------------------------
 
 --
@@ -311,6 +309,16 @@ INSERT INTO `language_proficiency` (`INDEX_NUMBER`, `WORK_SINHALA`, `WORK_ENGLIS
 ('19SE0068', 'Very Good', 'No Knowledge', 'Good', 'No Knowledge', 'Very Good', 'Fair'),
 ('19PR010', 'Very Good', 'No Knowledge', 'Good', 'No Knowledge', 'Very Good', 'Fair'),
 ('19PR011', 'Good', 'Fair', 'Fair', 'Very Good', 'Very Good', 'No Knowledge');
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lp_category`
+--
+
+CREATE TABLE `lp_category` (
+  `INDEX_NUMBER` varchar(100) NOT NULL,
+  `CATEGORY` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -445,6 +453,25 @@ INSERT INTO `secondary_educational_details` (`INDEX_NUMBER`, `ROW_NUMBER`, `SCHO
 ('19PR011', '2', 'school', 0, 0, 'school', 0),
 ('19PR011', '3', 'school', 0, 0, 'school', 0),
 ('19PR011', '4', 'school', 0, 0, 'school', 0);
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sl_selected`
+--
+
+CREATE TABLE `sl_selected` (
+  `INDEX_NUMBER` varchar(100) NOT NULL,
+  `SELECTED` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sl_selected`
+--
+
+INSERT INTO `sl_selected` (`INDEX_NUMBER`, `SELECTED`) VALUES
+('19SE002', 1);
 
 -- --------------------------------------------------------
 
@@ -597,13 +624,9 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`USERNAME`, `PASSWORD`, `USER_TYPE`, `NAME`) VALUES
 ('11kasun@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', '11kasun mendis'),
 ('1kasun@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', '1kasun mendis'),
-('aaaa@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'aaa'),
-('aaaaa@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'aaa'),
-('aaaaaaaa@gmail.gom', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'aaaa'),
 ('dasun@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'dasun bimsara'),
 ('david@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'david cameron'),
 ('dian@gmail.com', '202cb962ac59075b964b07152d234b70', 'Applicant', 'dian'),
-('dinithi@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'dinithi'),
 ('diniwic654654k124@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Dinithi Wickramaratne'),
 ('diniwick124@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Dinithi Wickramaratne'),
 ('diniwicksdfsdfsfssdf124@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Dinithi Wickramaratne'),
@@ -614,23 +637,15 @@ INSERT INTO `users` (`USERNAME`, `PASSWORD`, `USER_TYPE`, `NAME`) VALUES
 ('director@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Director', 'Director Director'),
 ('kaneeldias@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Kaneel Dias'),
 ('kasun@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'kasun mendis'),
-('kkk@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'kkk'),
 ('lakindu@gmail.com', 'bcbe3365e6ac95ea2c0343a2395834dd', 'Applicant', 'lakindu akash'),
-('namal@gmail.com', 'b59c67bf196a4758191e42f76670ceba', 'Applicant', 'namal'),
 ('naveen@gmail.com', '934b535800b1cba8f96a5d72f72f1611', 'Applicant', 'naveen'),
 ('nimal@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'nimal'),
-('nuwan1@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'nuwan'),
 ('nuwan@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'nuwan'),
 ('nuwann@gmail.com', 'bcbe3365e6ac95ea2c0343a2395834dd', 'Applicant', 'nuwann'),
-('operatollr@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'kasun mendis'),
 ('operator@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'MA', 'Operator Opz'),
 ('ravi@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'ravi'),
 ('rdduwan@gmail.com', '6512bd43d9caa6e02c990b0a82652dca', 'Applicant', 'kasun mendis'),
 ('ronaldo@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'ronaldo'),
-('ruwadn@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'nuwan'),
-('ruwan1111@gmail.com', '202cb962ac59075b964b07152d234b70', 'Applicant', 'kasun mendis'),
-('ruwan111221@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'kasun mendis'),
-('ruwan11s11@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'kasun mendis'),
 ('ruwan@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'kasun mendis'),
 ('ruwan@gmail.com11', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'kasun mendis'),
 ('ruwaneeee@gmail.com', 'b59c67bf196a4758191e42f76670ceba', 'Applicant', 'chathura'),
@@ -642,7 +657,6 @@ INSERT INTO `users` (`USERNAME`, `PASSWORD`, `USER_TYPE`, `NAME`) VALUES
 ('ruwanqqqqaa@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', 'Applicant', 'kasun mendis'),
 ('ruwanqqqqqaa@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', 'Applicant', 'kasun mendis'),
 ('saji@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Sajila Wickramaratne'),
-('santhush@gmail.com', 'b59c67bf196a4758191e42f76670ceba', 'Applicant', 'santhush'),
 ('sar@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'SAR', 'Sar Sar'),
 ('sDunil@gmail.com', '202cb962ac59075b964b07152d234b70', 'Applicant', 'DDD'),
 ('suneth@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'suneth'),
@@ -651,6 +665,25 @@ INSERT INTO `users` (`USERNAME`, `PASSWORD`, `USER_TYPE`, `NAME`) VALUES
 ('suniloo@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'nuwann'),
 ('tharindu@gmail.com', '934b535800b1cba8f96a5d72f72f1611', 'Applicant', 'tharindu nuwan'),
 ('udana@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'udana vithanage');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `vacancies`
+--
+
+CREATE TABLE `vacancies` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `dead_line` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `vacancies`
+--
+
+INSERT INTO `vacancies` (`id`, `name`, `dead_line`) VALUES
+(1, 'test', '2019-01-02');
 
 --
 -- Indexes for dumped tables
@@ -667,7 +700,7 @@ ALTER TABLE `applicants`
 --
 ALTER TABLE `basic_personal_details`
   ADD PRIMARY KEY (`INDEX_NUMBER`);
-
+  
 --
 -- Indexes for table `file_upload_links`
 --
@@ -682,6 +715,18 @@ ALTER TABLE `interview_panel`
   ADD KEY `FK_Panel` (`EMAIL`);
 
 --
+-- Indexes for table `lp_category`
+--
+ALTER TABLE `lp_category`
+  ADD PRIMARY KEY (`INDEX_NUMBER`);
+
+--
+-- Indexes for table `sl_selected`
+--
+ALTER TABLE `sl_selected`
+  ADD PRIMARY KEY (`INDEX_NUMBER`);
+
+--
 -- Indexes for table `specializationarea`
 --
 ALTER TABLE `specializationarea`
@@ -694,6 +739,12 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`USERNAME`);
 
 --
+-- Indexes for table `vacancies`
+--
+ALTER TABLE `vacancies`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -702,19 +753,21 @@ ALTER TABLE `users`
 --
 ALTER TABLE `file_upload_links`
   MODIFY `LINK_ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
 --
 -- AUTO_INCREMENT for table `interview_panel`
 --
 ALTER TABLE `interview_panel`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
 --
 -- AUTO_INCREMENT for table `specializationarea`
 --
 ALTER TABLE `specializationarea`
   MODIFY `AREA_ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
-
+--
+-- AUTO_INCREMENT for table `vacancies`
+--
+ALTER TABLE `vacancies`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- Constraints for dumped tables
 --
@@ -724,7 +777,6 @@ ALTER TABLE `specializationarea`
 --
 ALTER TABLE `interview_panel`
   ADD CONSTRAINT `FK_Panel` FOREIGN KEY (`EMAIL`) REFERENCES `users` (`USERNAME`);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
