@@ -11,7 +11,7 @@ class applicantDetails extends CI_Model{
     }
 
     function getData(){
-        $query = $this->db->get('Vacancies');
+        $query = $this->db->get('basic_personal_details');
 
         return $query->result();
     }

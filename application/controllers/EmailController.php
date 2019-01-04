@@ -29,6 +29,35 @@ class EmailController
         }
     }
 
+    public function send_mail2($emailOb, $directorEmail, $txtDetails)
+    {
+        $from_email = "webphpjava@gmail.com";
+        $emailOb->set_mailtype("html");
+        $emailOb->from($from_email, $_SESSION["username"]);
+        $emailOb->subject('Reports');
+        //$email = explode(' - ', $operatorEmail)[1];
+       // $to_email = substr($email, 1, strlen($email) - 2);
+        $to_email =$directorEmail;
+        $emailOb->to($to_email);
+        $emailOb->message($txtDetails);
+
+        //Send mail
+        $error = false;
+        if ($emailOb->send()) {
+             //$this->session->set_flashdata("email_sent", "Email sent successfully.");
+            redirect(base_url() . "setDates?email=success");
+        } else {
+//            $this->session->set_flashdata("email_sent", "Error in sending Email.");
+            //redirect(base_url() . "setDates?email=failed");
+            $error = true;
+           // $this->session->set_flashdata("email_sent", "Error in sending Email.");
+            redirect(base_url() . "setDates?email=failed");
+        }
+
+
+    }
+
+
     public function sendMailToApplicant($emailOb, $email, $data)
     {
         $from_email = "webphpjava@gmail.com";

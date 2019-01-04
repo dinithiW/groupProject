@@ -15,7 +15,7 @@ class DirectorDashboard extends CI_Controller{
 
 	public function adRequest(){
 	$this->load->view('includes/header');
-        $this->load->view('users/director/adRequest');
+    $this->load->view('users/director/adRequest');
 	$this->load->view('includes/footer');
 	
 	}
@@ -29,7 +29,7 @@ class DirectorDashboard extends CI_Controller{
 
 	public function viewApplicants(){
 		$this->load->view('includes/header');
-		//$this->load->view('users/director/viewApplicants');
+		// $this->load->view('users/director/viewApplicants');
 		
 	 	$this->load->model('Director/applicantDetails');
 	 	$data['records'] = $this->applicantDetails->getdata();
