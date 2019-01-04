@@ -31,6 +31,7 @@ class SARDashboard extends CI_Controller{
 
 
 
+
 	public function confirmAdvertisement(){
 		$this->load->model('SAR/AdvertisementModel');
 		$this->AdvertisementModel->confirmAdvertisement();
@@ -56,7 +57,7 @@ class SARDashboard extends CI_Controller{
 		$data=[];
 		$this->load->model('SAR/PanelDetails');
 		$data['Members']=$this->PanelDetails->getAllEmailAddresses();
-		var_dump($data['Members']);
+		//var_dump($data['Members']);
 		$this->load->view('includes/header');
         $this->load->view('users/SAR/setDates', $data);
         $this->load->view('includes/footer');
@@ -132,6 +133,25 @@ class SARDashboard extends CI_Controller{
 		$this->load->view('includes/header');
 		$this->load->view('users/SAR/applicants',$data);
 		$this->load->view('includes/footer');
+	}
+
+	public function sendBulkmails($arr){
+		$aDoor = $_POST['formdoor'];
+		 if(empty($aDoor)){
+		 	echo("You didn't select any buildings.");
+
+		 }else{
+		 	$N = count($aDoor);
+		 	//echo("You selected $N door(s): ");
+		 	for($i=0; $i < $N; $i++){
+		 		//echo($aDoor[$i] . " ");
+ 				$email = new EmailController();
+		        $this->load->library('email');
+		        $email->send_mail2($this->email, $aDoor[$i], "dsfs");
+
+		 	}
+
+		 }
 	}
 }
 ?>

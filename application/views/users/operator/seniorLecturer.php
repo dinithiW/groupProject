@@ -73,35 +73,14 @@
                       <td><?=$a->pq?></td>
                       <td><?=$a->oq?></td>
                       <td><?=$a->spe?></td>
-
-
+                      <td class="text-center">
+                          <a class="btn btn-sm btn-success" href="<?php echo base_url().'OperatorIndex/selectSL/'.$a->index; ?>"><i class="fa fa-check"></i></a>
+                          <a class="btn btn-sm btn-danger " href="<?php echo base_url().'OperatorIndex/notSelectSL/'.$a->index; ?>" data-userid=""><i class="fa fa-trash"></i></a> 
+                          <a class="btn btn-sm btn-info " href="" data-userid=""><i class="fa fa-info"></i></a> 
+                      </td>
                     </tr>
                     <?php endforeach?>
                     
-
-                    <!-- this was commented -->
-                   <!--  <?php
-                    
-                        foreach ($Members as $row) {?>
-                    
-                    <tr>
-                      <td><?php echo $row->getPanelID() ?></td>
-                      <td><?php echo $row->getFname()." ".$row->getLname() ?></td>
-                     <td><?php echo $row->getLname() ?></td> 
-                      <td><?php echo $row->getEmail() ?></td>
-                      <td><?php echo $row->getGender()?></td>
-                      <td><?php echo $row->getContact()?></td>
-                      <td><?php echo $row->getDesignation()?></td>
-                      <td><?php echo $row->getAddress()?></td>
-                      <td class="text-center">
-                          <a class="btn btn-sm btn-info" href="<?php echo base_url().'OperatorIndex/editMember/'.$row->getPanelID(); ?>"><i class="fa fa-pencil"></i></a>
-                          <a class="btn btn-sm btn-danger " href="<?php echo base_url().'OperatorIndex/deleteMember/'.$row->getPanelID(); ?>" data-userid="<?php echo $row->getPanelID(); ?>"><i class="fa fa-trash"></i></a> 
-                      </td>
-                    </tr>
-                    <?php
-                        
-                    }
-                    ?> -->
                   </table> 
                   
                 </div><!-- /.box-body -->
