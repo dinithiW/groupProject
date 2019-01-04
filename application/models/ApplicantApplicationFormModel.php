@@ -179,6 +179,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         $higher_educational_table_first_row = array(
             'INDEX_NUMBER'       =>$idNumber,
             'ROW_NUMBER'         => '1',
+            'DEGREE_CATEGORY'    => 'bachelor',
             'UNIVERSITY'         =>$this->firlterFormInputs($this->input->post('heigher_educational_university1')),
             'FROM'               =>$this->firlterFormInputs($this->input->post('heigher_educational_from1')),
             'TO'                 =>$this->firlterFormInputs($this->input->post('heigher_educational_to1')),
@@ -193,6 +194,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         $higher_educational_table_second_row = array(
             'INDEX_NUMBER'       =>$idNumber,
             'ROW_NUMBER'         => '2',
+            'DEGREE_CATEGORY'    => 'bachelor',
             'UNIVERSITY'         =>$this->firlterFormInputs($this->input->post('heigher_educational_university2')),
             'FROM'               =>$this->firlterFormInputs($this->input->post('heigher_educational_from2')),
             'TO'                 =>$this->firlterFormInputs($this->input->post('heigher_educational_to2')),
@@ -207,6 +209,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         $higher_educational_table_third_row = array(
             'INDEX_NUMBER'       =>$idNumber,
             'ROW_NUMBER'         => '3',
+            'DEGREE_CATEGORY'    => 'bachelor',
             'UNIVERSITY'         =>$this->firlterFormInputs($this->input->post('heigher_educational_university3')),
             'FROM'               =>$this->firlterFormInputs($this->input->post('heigher_educational_from3')),
             'TO'                 =>$this->firlterFormInputs($this->input->post('heigher_educational_to3')),
@@ -221,6 +224,7 @@ class ApplicantApplicationFormModel extends CI_Model{
         $higher_educational_table_fourth_row = array(
             'INDEX_NUMBER'       =>$idNumber,
             'ROW_NUMBER'         => '4',
+            'DEGREE_CATEGORY'    => 'bachelor',
             'UNIVERSITY'         =>$this->firlterFormInputs($this->input->post('heigher_educational_university4')),
             'FROM'               =>$this->firlterFormInputs($this->input->post('heigher_educational_from4')),
             'TO'                 =>$this->firlterFormInputs($this->input->post('heigher_educational_to4')),

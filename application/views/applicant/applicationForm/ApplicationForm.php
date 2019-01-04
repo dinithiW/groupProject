@@ -430,7 +430,7 @@ if(isset($this->session->userdata['logged_in'])){
                     </div><!-- end of the Secondry Educational Details table-->
 
 
-                    <h4 id="title2">Higher Educational Details</h4>
+                    <h4 id="title2">Bachelors Educational Details</h4>
                     <div class="table2"><!-- start of the Higher Educational Details table-->
                         <table id="Table">
                             <tr>

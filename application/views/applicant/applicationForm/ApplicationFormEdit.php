@@ -534,7 +534,7 @@ if(isset($this->session->userdata['logged_in'])){
                     </div><!-- end of the Secondry Educational Details table-->
 
 
-                    <h4 id="title2">Higher Educational Details</h4>
+                    <h4 id="title2">Bachelors Educational Details</h4>
                     <div class="table2"><!-- start of the Higher Educational Details table-->
                         <table id="Table">
                             <tr>
@@ -559,7 +559,7 @@ if(isset($this->session->userdata['logged_in'])){
                         if($higher_educational_details->num_rows()){
                             foreach($higher_educational_details->result() as $row_in_higher_education){
 
-                                if($row_in_higher_education->ROW_NUMBER=='1'){
+                                if(($row_in_higher_education->ROW_NUMBER=='1')&&($row_in_higher_education->DEGREE_CATEGORY=='bachelor')){
                         ?>
                             <tr class="tr">
 
@@ -649,7 +649,7 @@ if(isset($this->session->userdata['logged_in'])){
                     
                         <?php
                                 }
-                                if($row_in_higher_education->ROW_NUMBER=='2'){
+                                if(($row_in_higher_education->ROW_NUMBER=='2')&&($row_in_higher_education->DEGREE_CATEGORY=='bachelor')){
                         ?>
                                 <tr class="tr">
 
@@ -738,7 +738,7 @@ if(isset($this->session->userdata['logged_in'])){
                                 <td><span class="lblStatus"></span></td>                       
                         <?php
                                 }
-                                if($row_in_higher_education->ROW_NUMBER=='3'){
+                                if(($row_in_higher_education->ROW_NUMBER=='3')&&($row_in_higher_education->DEGREE_CATEGORY=='bachelor')){
                         ?>
                         
                         <tr class="tr">
@@ -832,7 +832,7 @@ if(isset($this->session->userdata['logged_in'])){
                         
                         <?php
                                 }
-                                if($row_in_higher_education->ROW_NUMBER=='4'){
+                                if(($row_in_higher_education->ROW_NUMBER=='4')&&($row_in_higher_education->DEGREE_CATEGORY=='bachelor')){
                         ?>
                         <tr class="tr">
 
@@ -933,8 +933,16 @@ if(isset($this->session->userdata['logged_in'])){
                             </tr>
                         </table>
                     </div><!-- end of the Higher Educational Details table-->
+                    
                     <h5 id="note1">Note:Certified copies of the certificates and transcripts should be attached</h5>
                 
+
+
+<!-- ---------------start of the master degree details------------------->
+
+
+<!-- ----------------end of the master degree details ------------------ -->
+
 
                    <h4 id="title3">Any Other Qualifications </h4>
                     <div class="table3">
