@@ -77,6 +77,8 @@
                                     <td> <input type="checkbox" name="single_select" class="single_select" data-email=<?php echo $row->getemail() ?> data-name=<?php echo $row->getfname()." ". $row->getlname() ?> ></td>
                                     <td><button type="button" name="email_button" class="btn btn-primary" id="'.$count.'" data-email=<?php echo $row->getemail() ?> data-name=<?php echo $row->getfname()." ". $row->getlname() ?> data-action="single">send</button></td>
 
+                                
+
                            </tr>
                            <?php
                         }

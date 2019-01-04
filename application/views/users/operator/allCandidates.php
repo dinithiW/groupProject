@@ -100,7 +100,7 @@
                       <td><?=$a->pq?></td>
                       <td><?=$a->oq?></td>
                       <td><?=$a->spe?></td>
-
+                      <td class="text-center"><a class="btn btn-sm btn-info " href="" data-userid=""><i class="fa fa-info"></i></a><td>
 
                     </tr>
                     <?php endforeach?>
