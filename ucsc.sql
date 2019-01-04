@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 04, 2019 at 01:58 PM
+-- Generation Time: Jan 04, 2019 at 02:21 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -31,10 +31,10 @@ SET time_zone = "+00:00";
 CREATE TABLE `any_other_qualifications` (
   `INDEX_NUMBER` varchar(100) NOT NULL,
   `ROW_NUMBER` varchar(10) NOT NULL,
-  `INSTITUTION` varchar(200) NOT NULL,
+  `INSTITUTION` varchar(300) NOT NULL,
   `DEPLOMA` varchar(200) NOT NULL,
-  `DURAION` varchar(10) NOT NULL,
-  `YEAR` varchar(10) NOT NULL
+  `DURAION` int(11) NOT NULL,
+  `YEAR` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -42,36 +42,36 @@ CREATE TABLE `any_other_qualifications` (
 --
 
 INSERT INTO `any_other_qualifications` (`INDEX_NUMBER`, `ROW_NUMBER`, `INSTITUTION`, `DEPLOMA`, `DURAION`, `YEAR`) VALUES
-('19PR002', '1', '', '', '', ''),
-('19PR002', '2', '', '', '', ''),
-('19PR002', '3', '', '', '', ''),
-('19PR003', '1', '', '', '', ''),
-('19PR003', '2', '', '', '', ''),
-('19PR003', '3', '', '', '', ''),
-('19SE004', '1', 'last', 'last', 'last', 'last'),
-('19SE004', '2', 'last', 'last', 'last', 'last'),
-('19SE004', '3', 'last', 'last', 'last', 'last'),
-('19SE005', '1', 'last', 'last', 'last', 'last'),
-('19SE005', '2', 'last', 'last', 'last', 'last'),
-('19SE005', '3', 'last', 'last', 'last', 'last'),
-('19SE006', '1', 'finalcut', 'finalcut', 'finalcut', 'finalcut'),
-('19SE006', '2', 'finalcut', 'finalcut', 'finalcut', 'finalcut'),
-('19SE006', '3', 'finalcut', 'finalcut', 'finalcut', 'finalcut'),
-('19PR006', '1', 'finalcut', 'finalcut', 'finalcut', 'finalcut'),
-('19PR006', '2', 'finalcut', 'finalcut', 'finalcut', 'finalcut'),
-('19PR006', '3', 'finalcut', 'finalcut', 'finalcut', 'finalcut'),
-('19SE008', '1', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
-('19SE008', '2', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
-('19SE008', '3', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
-('19SE0068', '1', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
-('19SE0068', '2', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
-('19SE0068', '3', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
-('19PR010', '1', 'institute1', 'deploma1', 'duration1', 'year1'),
-('19PR010', '2', 'institute2', 'deploma2', 'duration2', 'year2'),
-('19PR010', '3', 'institute3', 'deploma3', 'duration3', 'year3'),
-('19PR011', '1', 'insti', 'insti', 'insti', 'insti'),
-('19PR011', '2', 'insti', 'insti', 'insti', 'insti'),
-('19PR011', '3', 'insti', 'insti', 'insti', 'insti');
+('19PR002', '1', '', '', 0, 0),
+('19PR002', '2', '', '', 0, 0),
+('19PR002', '3', '', '', 0, 0),
+('19PR003', '1', '', '', 0, 0),
+('19PR003', '2', '', '', 0, 0),
+('19PR003', '3', '', '', 0, 0),
+('19SE004', '1', 'last', 'last', 0, 0),
+('19SE004', '2', 'last', 'last', 0, 0),
+('19SE004', '3', 'last', 'last', 0, 0),
+('19SE005', '1', 'last', 'last', 0, 0),
+('19SE005', '2', 'last', 'last', 0, 0),
+('19SE005', '3', 'last', 'last', 0, 0),
+('19SE006', '1', 'finalcut', 'finalcut', 0, 0),
+('19SE006', '2', 'finalcut', 'finalcut', 0, 0),
+('19SE006', '3', 'finalcut', 'finalcut', 0, 0),
+('19PR006', '1', 'finalcut', 'finalcut', 0, 0),
+('19PR006', '2', 'finalcut', 'finalcut', 0, 0),
+('19PR006', '3', 'finalcut', 'finalcut', 0, 0),
+('19SE008', '1', 'dinithi', 'dinithi', 0, 0),
+('19SE008', '2', 'dinithi', 'dinithi', 0, 0),
+('19SE008', '3', 'dinithi', 'dinithi', 0, 0),
+('19SE0068', '1', 'dinithi', 'dinithi', 0, 0),
+('19SE0068', '2', 'dinithi', 'dinithi', 0, 0),
+('19SE0068', '3', 'dinithi', 'dinithi', 0, 0),
+('19PR010', '1', 'institute1', 'deploma1', 0, 0),
+('19PR010', '2', 'institute2', 'deploma2', 0, 0),
+('19PR010', '3', 'institute3', 'deploma3', 0, 0),
+('19PR011', '1', 'insti', 'insti', 0, 0),
+('19PR011', '2', 'insti', 'insti', 0, 0),
+('19PR011', '3', 'insti', 'insti', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -158,21 +158,21 @@ INSERT INTO `applicats_more_details` (`INDEX_NUMBER`, `EXPERIENCE_RELEVANT_TO_PO
 
 CREATE TABLE `basic_personal_details` (
   `INDEX_NUMBER` varchar(100) NOT NULL,
-  `FIRST_NAME` varchar(100) NOT NULL,
+  `FIRST_NAME` varchar(200) NOT NULL,
   `LAST_NAME` varchar(200) NOT NULL,
-  `POSTAL_ADDRESS` varchar(200) NOT NULL,
-  `PERMANENT_ADDRESS` varchar(300) NOT NULL,
-  `NIC` varchar(200) NOT NULL,
+  `POSTAL_ADDRESS` varchar(500) NOT NULL,
+  `PERMANENT_ADDRESS` varchar(500) NOT NULL,
+  `NIC` varchar(50) NOT NULL,
   `CITIZENSHIP_NAME` varchar(100) NOT NULL,
   `PERSONAL_EMAIL` varchar(100) NOT NULL,
-  `OFFICE_EMAIL` varchar(200) NOT NULL,
-  `MOBILE_NUMBER` varchar(200) NOT NULL,
+  `OFFICE_EMAIL` varchar(100) NOT NULL,
+  `MOBILE_NUMBER` varchar(20) NOT NULL,
   `HOME_NUMBER` varchar(20) NOT NULL,
   `OFFICE_NUMBER` varchar(20) NOT NULL,
   `GENDER` varchar(10) NOT NULL,
-  `CIVIL_STATUS` varchar(10) NOT NULL,
-  `CITIZENSHIP` varchar(10) NOT NULL,
-  `DATE_OF_BIRTH` varchar(10) NOT NULL,
+  `CIVIL_STATUS` varchar(20) NOT NULL,
+  `CITIZENSHIP` varchar(20) NOT NULL,
+  `DATE_OF_BIRTH` date NOT NULL,
   `POST_APPLY_FOR` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -181,18 +181,18 @@ CREATE TABLE `basic_personal_details` (
 --
 
 INSERT INTO `basic_personal_details` (`INDEX_NUMBER`, `FIRST_NAME`, `LAST_NAME`, `POSTAL_ADDRESS`, `PERMANENT_ADDRESS`, `NIC`, `CITIZENSHIP_NAME`, `PERSONAL_EMAIL`, `OFFICE_EMAIL`, `MOBILE_NUMBER`, `HOME_NUMBER`, `OFFICE_NUMBER`, `GENDER`, `CIVIL_STATUS`, `CITIZENSHIP`, `DATE_OF_BIRTH`, `POST_APPLY_FOR`) VALUES
+('19PR002', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-24', 'PROBATIONARY LECTURER'),
+('19PR003', 'final', 'final', 'final', 'final', 'final', 'final', 'final', 'final', 'final', 'final', 'final', 'MALE', 'MARRIED', 'BY DESCENT', '0000-00-00', 'PROBATIONARY LECTURER'),
+('19PR006', 'comma', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-24', 'SENIOR LECTURE GR. II'),
+('19PR010', 'santhush', 'lliyanage', 'galle', 'galle', '940660513', 'citizenship', 'santhush@gmail.com', 'santhush@gmail.com', '0772308519', '07723308519', '0772308519', 'MALE', 'UN MARRIED', 'BY REGISTR', '1994-06-03', 'PROBATIONARY LECTURER'),
+('19PR011', 'namal', 'namal', 'namal', 'namal', 'namal', 'namal', 'namal@gmail.com', 'namal', 'namal', 'namal', 'namal', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-30', 'PROBATIONARY LECTURER'),
 ('19SE000', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-25', 'SENIOR LECTURE GR. II'),
 ('19SE001', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-25', 'SENIOR LECTURE GR. II'),
-('19PR002', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-24', 'PROBATIONARY LECTURER'),
-('19PR003', 'final', 'final', 'final', 'final', 'final', 'final', 'final', 'final', 'final', 'final', 'final', 'MALE', 'MARRIED', 'BY DESCENT', '', 'PROBATIONARY LECTURER'),
 ('19SE004', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-15', 'SENIOR LECTURE GR. II'),
 ('19SE005', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-15', 'SENIOR LECTURE GR. II'),
 ('19SE006', '/comma', '//finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-24', 'SENIOR LECTURE GR. II'),
-('19PR006', 'comma', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-24', 'SENIOR LECTURE GR. II'),
-('19SE008', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'FEMALE', 'UN MARRIED', 'BY DESCENT', '1996-12-04', 'SENIOR LECTURE GR. II'),
 ('19SE0068', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'FEMALE', 'UN MARRIED', 'BY DESCENT', '1996-12-04', 'SENIOR LECTURE GR. II'),
-('19PR010', 'santhush', 'lliyanage', 'galle', 'galle', '940660513', 'citizenship', 'santhush@gmail.com', 'santhush@gmail.com', '0772308519', '07723308519', '0772308519', 'MALE', 'UN MARRIED', 'BY REGISTR', '1994-06-03', 'PROBATIONARY LECTURER'),
-('19PR011', 'namal', 'namal', 'namal', 'namal', 'namal', 'namal', 'namal@gmail.com', 'namal', 'namal', 'namal', 'namal', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-30', 'PROBATIONARY LECTURER');
+('19SE008', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'FEMALE', 'UN MARRIED', 'BY DESCENT', '1996-12-04', 'SENIOR LECTURE GR. II');
 
 -- --------------------------------------------------------
 
@@ -227,13 +227,13 @@ CREATE TABLE `higher_educational_details` (
   `ROW_NUMBER` varchar(10) NOT NULL,
   `DEGREE_CATEGORY` varchar(100) NOT NULL,
   `UNIVERSITY` varchar(200) NOT NULL,
-  `FROM` varchar(10) NOT NULL,
-  `TO` varchar(10) NOT NULL,
+  `FROM` int(11) NOT NULL,
+  `TO` int(11) NOT NULL,
   `DEGREE_OBTAINED` varchar(200) NOT NULL,
-  `DURATION` varchar(10) NOT NULL,
-  `CLASS` varchar(10) NOT NULL,
-  `YEAR` varchar(10) NOT NULL,
-  `INDEX_NO` varchar(20) NOT NULL
+  `DURATION` int(11) NOT NULL,
+  `CLASS` varchar(100) NOT NULL,
+  `YEAR` int(11) NOT NULL,
+  `INDEX_NO` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -241,18 +241,18 @@ CREATE TABLE `higher_educational_details` (
 --
 
 INSERT INTO `higher_educational_details` (`INDEX_NUMBER`, `ROW_NUMBER`, `DEGREE_CATEGORY`, `UNIVERSITY`, `FROM`, `TO`, `DEGREE_OBTAINED`, `DURATION`, `CLASS`, `YEAR`, `INDEX_NO`) VALUES
-('19PR011', '1', 'bachelor', 'ba_uni1', 'bafr1', 'bato1', 'BSC Hons-Computer Science', 'badu1', 'Fisrt Clas', 'bay1', 'bain1'),
-('19PR011', '2', 'bachelor', 'ba_uni2', 'bafr2', 'bato2', 'BSC Hons-Software Engineering', 'badu2', 'Fisrt Clas', 'bay2', 'bain2'),
-('19PR011', '3', 'bachelor', 'ba_uni3', 'bafr3', 'bato3', 'BSC Hons-Informtion System', 'badu3', 'Fisrt Clas', 'bay3', 'bain3'),
-('19PR011', '4', 'bachelor', 'ba_uni4', 'bafr4', 'bato4', 'BSC Hons-Information Technology', 'badu4', 'Fisrt Clas', 'bay4', 'bain4'),
-('19PR011', '1', 'master', 'ma_uni1', 'mafr1', 'mato1', 'BSC-Computer Science', 'madu1', '', 'may1', 'maIn1'),
-('19PR011', '2', 'master', 'ma_uni2', 'mafr2', 'mato2', 'BSC-Software Engineering', 'madu2', '', 'may2', 'maIn2'),
-('19PR011', '3', 'master', 'ma_uni3', 'mafr3', 'mato2', 'BSC-Informtion System', 'madu3', '', 'may3', 'maIn3'),
-('19PR011', '4', 'master', 'ma_uni4', 'mafr4', 'mato3', 'BSC-Information Technology', 'madu4', '', 'may4', 'maIn3'),
-('19PR011', '1', 'phd', 'p_uni1', 'pf1', 'pt1', 'BSC-Computer Science', 'pdu1', '', 'py1', 'pIn1'),
-('19PR011', '2', 'phd', 'p_uni2', 'pf2', 'pt2', 'BSC-Software Engineering', 'pdu2', '', 'py2', 'pIn2'),
-('19PR011', '3', 'phd', 'p_uni3', 'pf3', 'pt3', 'BSC-Informtion System', 'pdu3', '', 'py3', 'pIn3'),
-('19PR011', '4', 'phd', 'p_uni4', 'pf4', 'pt4', 'BSC-Information Technology', '', '', 'py4', 'pIn4');
+('19PR011', '1', 'bachelor', 'ba_uni1', 0, 0, 'BSC Hons-Computer Science', 0, 'Fisrt Clas', 0, 'bain1'),
+('19PR011', '2', 'bachelor', 'ba_uni2', 0, 0, 'BSC Hons-Software Engineering', 0, 'Fisrt Clas', 0, 'bain2'),
+('19PR011', '3', 'bachelor', 'ba_uni3', 0, 0, 'BSC Hons-Informtion System', 0, 'Fisrt Clas', 0, 'bain3'),
+('19PR011', '4', 'bachelor', 'ba_uni4', 0, 0, 'BSC Hons-Information Technology', 0, 'Fisrt Clas', 0, 'bain4'),
+('19PR011', '1', 'master', 'ma_uni1', 0, 0, 'BSC-Computer Science', 0, '', 0, 'maIn1'),
+('19PR011', '2', 'master', 'ma_uni2', 0, 0, 'BSC-Software Engineering', 0, '', 0, 'maIn2'),
+('19PR011', '3', 'master', 'ma_uni3', 0, 0, 'BSC-Informtion System', 0, '', 0, 'maIn3'),
+('19PR011', '4', 'master', 'ma_uni4', 0, 0, 'BSC-Information Technology', 0, '', 0, 'maIn3'),
+('19PR011', '1', 'phd', 'p_uni1', 0, 0, 'BSC-Computer Science', 0, '', 0, 'pIn1'),
+('19PR011', '2', 'phd', 'p_uni2', 0, 0, 'BSC-Software Engineering', 0, '', 0, 'pIn2'),
+('19PR011', '3', 'phd', 'p_uni3', 0, 0, 'BSC-Informtion System', 0, '', 0, 'pIn3'),
+('19PR011', '4', 'phd', 'p_uni4', 0, 0, 'BSC-Information Technology', 0, '', 0, 'pIn4');
 
 -- --------------------------------------------------------
 
@@ -319,12 +319,12 @@ INSERT INTO `language_proficiency` (`INDEX_NUMBER`, `WORK_SINHALA`, `WORK_ENGLIS
 --
 
 CREATE TABLE `professional_qualifications` (
-  `INDEX_NUMBER` varchar(10) NOT NULL,
+  `INDEX_NUMBER` varchar(100) NOT NULL,
   `ROW_NUMBER` varchar(10) NOT NULL,
   `INSTITUTION` varchar(200) NOT NULL,
-  `FROM` varchar(10) NOT NULL,
-  `TO` varchar(10) NOT NULL,
-  `DURATION` varchar(10) NOT NULL,
+  `FROM` int(11) NOT NULL,
+  `TO` int(11) NOT NULL,
+  `DURATION` int(11) NOT NULL,
   `TYPE_OF_QUALIFICATION` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -333,32 +333,32 @@ CREATE TABLE `professional_qualifications` (
 --
 
 INSERT INTO `professional_qualifications` (`INDEX_NUMBER`, `ROW_NUMBER`, `INSTITUTION`, `FROM`, `TO`, `DURATION`, `TYPE_OF_QUALIFICATION`) VALUES
-('19PR002', '1', '', '', '', '', ''),
-('19PR002', '2', '', '', '', '', ''),
-('19PR003', '1', '', '', '', '', ''),
-('19PR003', '2', '', '', '', '', ''),
-('19SE004', '1', 'last', 'last', 'last', 'last', 'last'),
-('19SE004', '2', 'last', 'last', 'last', 'last', 'last'),
-('19SE005', '1', 'last', 'last', 'last', 'last', 'last'),
-('19SE005', '2', 'last', 'last', 'last', 'last', 'last'),
-('19SE006', '1', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut'),
-('19SE006', '2', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut'),
-('19SE006', '3', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut'),
-('19PR006', '1', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut'),
-('19PR006', '2', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut'),
-('19PR006', '3', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut'),
-('19SE008', '1', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
-('19SE008', '2', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
-('19SE008', '3', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
-('19SE0068', '1', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
-('19SE0068', '2', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
-('19SE0068', '3', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
-('19PR010', '1', 'institution1', 'from1', 'to1', 'duration1', 'qualification1'),
-('19PR010', '2', 'institution2', 'from2', 'to2', 'duration2', 'qualification2'),
-('19PR010', '3', 'institution3', 'from3', 'to3', 'duration3', 'qualification3'),
-('19PR011', '1', 'insti', 'insti', 'insti', 'insti', 'insti'),
-('19PR011', '2', 'insti', 'insti', 'insti', 'insti', 'insti'),
-('19PR011', '3', 'insti', 'insti', 'insti', 'insti', 'insti');
+('19PR002', '1', '', 0, 0, 0, ''),
+('19PR002', '2', '', 0, 0, 0, ''),
+('19PR003', '1', '', 0, 0, 0, ''),
+('19PR003', '2', '', 0, 0, 0, ''),
+('19SE004', '1', 'last', 0, 0, 0, 'last'),
+('19SE004', '2', 'last', 0, 0, 0, 'last'),
+('19SE005', '1', 'last', 0, 0, 0, 'last'),
+('19SE005', '2', 'last', 0, 0, 0, 'last'),
+('19SE006', '1', 'finalcut', 0, 0, 0, 'finalcut'),
+('19SE006', '2', 'finalcut', 0, 0, 0, 'finalcut'),
+('19SE006', '3', 'finalcut', 0, 0, 0, 'finalcut'),
+('19PR006', '1', 'finalcut', 0, 0, 0, 'finalcut'),
+('19PR006', '2', 'finalcut', 0, 0, 0, 'finalcut'),
+('19PR006', '3', 'finalcut', 0, 0, 0, 'finalcut'),
+('19SE008', '1', 'dinithi', 0, 0, 0, 'dinithi'),
+('19SE008', '2', 'dinithi', 0, 0, 0, 'dinithi'),
+('19SE008', '3', 'dinithi', 0, 0, 0, 'dinithi'),
+('19SE0068', '1', 'dinithi', 0, 0, 0, 'dinithi'),
+('19SE0068', '2', 'dinithi', 0, 0, 0, 'dinithi'),
+('19SE0068', '3', 'dinithi', 0, 0, 0, 'dinithi'),
+('19PR010', '1', 'institution1', 0, 0, 0, 'qualification1'),
+('19PR010', '2', 'institution2', 0, 0, 0, 'qualification2'),
+('19PR010', '3', 'institution3', 0, 0, 0, 'qualification3'),
+('19PR011', '1', 'insti', 0, 0, 0, 'insti'),
+('19PR011', '2', 'insti', 0, 0, 0, 'insti'),
+('19PR011', '3', 'insti', 0, 0, 0, 'insti');
 
 -- --------------------------------------------------------
 
@@ -369,7 +369,7 @@ INSERT INTO `professional_qualifications` (`INDEX_NUMBER`, `ROW_NUMBER`, `INSTIT
 CREATE TABLE `referees` (
   `INDEX_NUMBER` varchar(100) NOT NULL,
   `ROW_NUMBER` varchar(10) NOT NULL,
-  `NAME` varchar(200) NOT NULL,
+  `NAME` varchar(300) NOT NULL,
   `DESIGNATION` varchar(200) NOT NULL,
   `ADDRESS` varchar(300) NOT NULL,
   `EMAIL` varchar(200) NOT NULL,
@@ -410,10 +410,10 @@ CREATE TABLE `secondary_educational_details` (
   `INDEX_NUMBER` varchar(100) NOT NULL,
   `ROW_NUMBER` varchar(10) NOT NULL,
   `SCHOOL_NAME` varchar(200) NOT NULL,
-  `FROM` varchar(10) NOT NULL,
-  `TO` varchar(10) NOT NULL,
+  `FROM` int(11) NOT NULL,
+  `TO` int(11) NOT NULL,
   `EXAMINATION_PASSED` varchar(200) NOT NULL,
-  `YEAR` varchar(10) NOT NULL
+  `YEAR` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -421,30 +421,30 @@ CREATE TABLE `secondary_educational_details` (
 --
 
 INSERT INTO `secondary_educational_details` (`INDEX_NUMBER`, `ROW_NUMBER`, `SCHOOL_NAME`, `FROM`, `TO`, `EXAMINATION_PASSED`, `YEAR`) VALUES
-('19SE005', '1', 'last', 'last', 'last', 'last', 'last'),
-('19SE005', '2', 'last', 'last', 'last', 'last', 'last'),
-('19SE005', '3', 'last', 'last', 'last', 'last', 'last'),
-('19SE005', '4', 'last', 'last', 'last', 'last', 'last'),
-('19SE006', '1', 'finalcut', 'ut', 'ut', 'finalcut', 'finalcut'),
-('19SE006', '2', 'finalcut', 'yoyo', 'yoyo', 'finalcut', 'finalcut'),
-('19SE006', '3', 'finalcut', 'yoyo', 'yoyo', 'finalcut', 'finalcut'),
-('19SE006', '4', 'finalcut', 'yoyo', 'yoyo', 'finalcut', 'finalcut'),
-('19SE008', '1', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
-('19SE008', '2', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
-('19SE008', '3', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
-('19SE008', '4', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
-('19SE0068', '1', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
-('19SE0068', '2', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
-('19SE0068', '3', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
-('19SE0068', '4', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
-('19PR010', '1', 'school name1', 'from1', 'to1', 'exam passed1', 'year1'),
-('19PR010', '2', 'school name2', 'from2', 'to2', 'exam passed2', 'year2'),
-('19PR010', '3', 'school name3', 'from3', 'to3', 'exam passed3', 'year3'),
-('19PR010', '4', 'school name4', 'from4', 'to4', 'exam passed4', 'year4'),
-('19PR011', '1', 'school', 'school', 'school', 'school', 'school'),
-('19PR011', '2', 'school', 'school', 'school', 'school', 'school'),
-('19PR011', '3', 'school', 'school', 'school', 'school', 'school'),
-('19PR011', '4', 'school', 'school', 'school', 'school', 'school');
+('19SE005', '1', 'last', 0, 0, 'last', 0),
+('19SE005', '2', 'last', 0, 0, 'last', 0),
+('19SE005', '3', 'last', 0, 0, 'last', 0),
+('19SE005', '4', 'last', 0, 0, 'last', 0),
+('19SE006', '1', 'finalcut', 0, 0, 'finalcut', 0),
+('19SE006', '2', 'finalcut', 0, 0, 'finalcut', 0),
+('19SE006', '3', 'finalcut', 0, 0, 'finalcut', 0),
+('19SE006', '4', 'finalcut', 0, 0, 'finalcut', 0),
+('19SE008', '1', 'dinithi', 0, 0, 'dinithi', 0),
+('19SE008', '2', 'dinithi', 0, 0, 'dinithi', 0),
+('19SE008', '3', 'dinithi', 0, 0, 'dinithi', 0),
+('19SE008', '4', 'dinithi', 0, 0, 'dinithi', 0),
+('19SE0068', '1', 'dinithi', 0, 0, 'dinithi', 0),
+('19SE0068', '2', 'dinithi', 0, 0, 'dinithi', 0),
+('19SE0068', '3', 'dinithi', 0, 0, 'dinithi', 0),
+('19SE0068', '4', 'dinithi', 0, 0, 'dinithi', 0),
+('19PR010', '1', 'school name1', 0, 0, 'exam passed1', 0),
+('19PR010', '2', 'school name2', 0, 0, 'exam passed2', 0),
+('19PR010', '3', 'school name3', 0, 0, 'exam passed3', 0),
+('19PR010', '4', 'school name4', 0, 0, 'exam passed4', 0),
+('19PR011', '1', 'school', 0, 0, 'school', 0),
+('19PR011', '2', 'school', 0, 0, 'school', 0),
+('19PR011', '3', 'school', 0, 0, 'school', 0),
+('19PR011', '4', 'school', 0, 0, 'school', 0);
 
 -- --------------------------------------------------------
 
@@ -661,6 +661,12 @@ INSERT INTO `users` (`USERNAME`, `PASSWORD`, `USER_TYPE`, `NAME`) VALUES
 --
 ALTER TABLE `applicants`
   ADD PRIMARY KEY (`EMAIL`);
+
+--
+-- Indexes for table `basic_personal_details`
+--
+ALTER TABLE `basic_personal_details`
+  ADD PRIMARY KEY (`INDEX_NUMBER`);
 
 --
 -- Indexes for table `file_upload_links`
