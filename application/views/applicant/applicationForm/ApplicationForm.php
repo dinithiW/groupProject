@@ -806,11 +806,11 @@ if(isset($this->session->userdata['logged_in'])){
                                     <div class="custom-sele" id="select_degree_div1">
                                         <select name="master_educational_degree_obtained1" id="select_degree_selection1" style="font-size:9px;">
                                             <option value="">Select Here</option>
-                                            <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
+                                            <!-- <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
                                             <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
                                             <option value="BSC Hons-Informtion System">BSC Hons-Informtion System</option>
                                             <option value="BSC Hons-Information Technology">BSC Hons-Information Technology</option>
-                                            <option value="BSC Hons-Computer Engineering">BSC Hons-Computer Engineering</option>
+                                            <option value="BSC Hons-Computer Engineering">BSC Hons-Computer Engineering</option> -->
                                             <option value="BSC-Computer Science">BSC-Computer Science</option>
                                             <option value="BSC-Software Engineering">BSC-Software Engineering</option>
                                             <option value="BSC-Informtion System">BSC-Informtion System</option>
@@ -878,11 +878,11 @@ if(isset($this->session->userdata['logged_in'])){
                                     <div class="custom-sele" id="select_degree_div2">
                                         <select name="master_educational_degree_obtained2" id="select_degree_selection2" style="font-size:9px;">
                                             <option value="">Select Here</option>
-                                            <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
+                                            <!-- <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
                                             <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
                                             <option value="BSC Hons-Informtion System">BSC Hons-Informtion System</option>
                                             <option value="BSC Hons-Information Technology">BSC Hons-Information Technology</option>
-                                            <option value="BSC Hons-Computer Engineering">BSC Hons-Computer Engineering</option>
+                                            <option value="BSC Hons-Computer Engineering">BSC Hons-Computer Engineering</option> -->
                                             <option value="BSC-Computer Science">BSC-Computer Science</option>
                                             <option value="BSC-Software Engineering">BSC-Software Engineering</option>
                                             <option value="BSC-Informtion System">BSC-Informtion System</option>
@@ -950,11 +950,11 @@ if(isset($this->session->userdata['logged_in'])){
                                     <div class="custom-sele" id="select_degree_div2">
                                         <select name="master_educational_degree_obtained3" id="select_degree_selection2" style="font-size:9px;">
                                             <option value="">Select Here</option>
-                                            <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
+                                            <!-- <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
                                             <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
                                             <option value="BSC Hons-Informtion System">BSC Hons-Informtion System</option>
                                             <option value="BSC Hons-Information Technology">BSC Hons-Information Technology</option>
-                                            <option value="BSC Hons-Computer Engineering">BSC Hons-Computer Engineering</option>
+                                            <option value="BSC Hons-Computer Engineering">BSC Hons-Computer Engineering</option> -->
                                             <option value="BSC-Computer Science">BSC-Computer Science</option>
                                             <option value="BSC-Software Engineering">BSC-Software Engineering</option>
                                             <option value="BSC-Informtion System">BSC-Informtion System</option>
@@ -1021,11 +1021,11 @@ if(isset($this->session->userdata['logged_in'])){
                                     <div class="custom-sele" id="select_degree_div2">
                                         <select name="master_educational_degree_obtained4" id="select_degree_selection2" style="font-size:9px;">
                                             <option value="">Select Here</option>
-                                            <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
+                                            <!-- <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
                                             <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
                                             <option value="BSC Hons-Informtion System">BSC Hons-Informtion System</option>
                                             <option value="BSC Hons-Information Technology">BSC Hons-Information Technology</option>
-                                            <option value="BSC Hons-Computer Engineering">BSC Hons-Computer Engineering</option>
+                                            <option value="BSC Hons-Computer Engineering">BSC Hons-Computer Engineering</option> -->
                                             <option value="BSC-Computer Science">BSC-Computer Science</option>
                                             <option value="BSC-Software Engineering">BSC-Software Engineering</option>
                                             <option value="BSC-Informtion System">BSC-Informtion System</option>
@@ -1113,11 +1113,11 @@ if(isset($this->session->userdata['logged_in'])){
                                     <div class="custom-sele" id="select_degree_div1">
                                         <select name="phd_educational_degree_obtained1" id="select_degree_selection1" style="font-size:9px;">
                                             <option value="">Select Here</option>
-                                            <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
+                                            <!-- <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
                                             <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
                                             <option value="BSC Hons-Informtion System">BSC Hons-Informtion System</option>
                                             <option value="BSC Hons-Information Technology">BSC Hons-Information Technology</option>
-                                            <option value="BSC Hons-Computer Engineering">BSC Hons-Computer Engineering</option>
+                                            <option value="BSC Hons-Computer Engineering">BSC Hons-Computer Engineering</option> -->
                                             <option value="BSC-Computer Science">BSC-Computer Science</option>
                                             <option value="BSC-Software Engineering">BSC-Software Engineering</option>
                                             <option value="BSC-Informtion System">BSC-Informtion System</option>
@@ -1185,11 +1185,11 @@ if(isset($this->session->userdata['logged_in'])){
                                     <div class="custom-sele" id="select_degree_div2">
                                         <select name="phd_educational_degree_obtained2" id="select_degree_selection2" style="font-size:9px;">
                                             <option value="">Select Here</option>
-                                            <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
+                                            <!-- <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
                                             <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
                                             <option value="BSC Hons-Informtion System">BSC Hons-Informtion System</option>
                                             <option value="BSC Hons-Information Technology">BSC Hons-Information Technology</option>
-                                            <option value="BSC Hons-Computer Engineering">BSC Hons-Computer Engineering</option>
+                                            <option value="BSC Hons-Computer Engineering">BSC Hons-Computer Engineering</option> -->
                                             <option value="BSC-Computer Science">BSC-Computer Science</option>
                                             <option value="BSC-Software Engineering">BSC-Software Engineering</option>
                                             <option value="BSC-Informtion System">BSC-Informtion System</option>
@@ -1257,11 +1257,11 @@ if(isset($this->session->userdata['logged_in'])){
                                     <div class="custom-sele" id="select_degree_div2">
                                         <select name="phd_educational_degree_obtained3" id="select_degree_selection2" style="font-size:9px;">
                                             <option value="">Select Here</option>
-                                            <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
+                                            <!-- <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
                                             <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
                                             <option value="BSC Hons-Informtion System">BSC Hons-Informtion System</option>
                                             <option value="BSC Hons-Information Technology">BSC Hons-Information Technology</option>
-                                            <option value="BSC Hons-Computer Engineering">BSC Hons-Computer Engineering</option>
+                                            <option value="BSC Hons-Computer Engineering">BSC Hons-Computer Engineering</option> -->
                                             <option value="BSC-Computer Science">BSC-Computer Science</option>
                                             <option value="BSC-Software Engineering">BSC-Software Engineering</option>
                                             <option value="BSC-Informtion System">BSC-Informtion System</option>
@@ -1328,11 +1328,11 @@ if(isset($this->session->userdata['logged_in'])){
                                     <div class="custom-sele" id="select_degree_div2">
                                         <select name="phd_educational_degree_obtained4" id="select_degree_selection2" style="font-size:9px;">
                                             <option value="">Select Here</option>
-                                            <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
+                                            <!-- <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
                                             <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
                                             <option value="BSC Hons-Informtion System">BSC Hons-Informtion System</option>
                                             <option value="BSC Hons-Information Technology">BSC Hons-Information Technology</option>
-                                            <option value="BSC Hons-Computer Engineering">BSC Hons-Computer Engineering</option>
+                                            <option value="BSC Hons-Computer Engineering">BSC Hons-Computer Engineering</option> -->
                                             <option value="BSC-Computer Science">BSC-Computer Science</option>
                                             <option value="BSC-Software Engineering">BSC-Software Engineering</option>
                                             <option value="BSC-Informtion System">BSC-Informtion System</option>
