@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 02, 2019 at 09:23 AM
--- Server version: 10.1.35-MariaDB
--- PHP Version: 7.2.9
+-- Generation Time: Jan 04, 2019 at 02:21 PM
+-- Server version: 10.1.31-MariaDB
+-- PHP Version: 7.2.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -30,27 +30,48 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `any_other_qualifications` (
   `INDEX_NUMBER` varchar(100) NOT NULL,
-  `INSTITUTION` varchar(200) NOT NULL,
+  `ROW_NUMBER` varchar(10) NOT NULL,
+  `INSTITUTION` varchar(300) NOT NULL,
   `DEPLOMA` varchar(200) NOT NULL,
-  `DURAION` varchar(10) NOT NULL,
-  `YEAR` varchar(10) NOT NULL
+  `DURAION` int(11) NOT NULL,
+  `YEAR` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `any_other_qualifications`
 --
 
-INSERT INTO `any_other_qualifications` (`INDEX_NUMBER`, `INSTITUTION`, `DEPLOMA`, `DURAION`, `YEAR`) VALUES
-('edited ', 'edited ', 'edited ', 'edited ', 'edited '),
-('19SE002', 'insert data', 'insert data', 'insert dat', 'insert dat'),
-('19SE002', 'insert data', 'insert data', 'insert dat', 'insert dat'),
-('19SE002', 'insert data', 'insert data', 'insert dat', 'insert dat'),
-('19SE003', 'insert data', 'insert data', 'insert dat', 'insert dat'),
-('19SE003', 'insert data', 'insert data', 'insert dat', 'insert dat'),
-('19SE003', 'insert data', 'insert data', 'insert dat', 'insert dat'),
-('19PR004', 'morning', 'morning', 'morning', 'morning'),
-('19PR004', '', '', '', ''),
-('19PR004', '', '', '', '');
+INSERT INTO `any_other_qualifications` (`INDEX_NUMBER`, `ROW_NUMBER`, `INSTITUTION`, `DEPLOMA`, `DURAION`, `YEAR`) VALUES
+('19PR002', '1', '', '', 0, 0),
+('19PR002', '2', '', '', 0, 0),
+('19PR002', '3', '', '', 0, 0),
+('19PR003', '1', '', '', 0, 0),
+('19PR003', '2', '', '', 0, 0),
+('19PR003', '3', '', '', 0, 0),
+('19SE004', '1', 'last', 'last', 0, 0),
+('19SE004', '2', 'last', 'last', 0, 0),
+('19SE004', '3', 'last', 'last', 0, 0),
+('19SE005', '1', 'last', 'last', 0, 0),
+('19SE005', '2', 'last', 'last', 0, 0),
+('19SE005', '3', 'last', 'last', 0, 0),
+('19SE006', '1', 'finalcut', 'finalcut', 0, 0),
+('19SE006', '2', 'finalcut', 'finalcut', 0, 0),
+('19SE006', '3', 'finalcut', 'finalcut', 0, 0),
+('19PR006', '1', 'finalcut', 'finalcut', 0, 0),
+('19PR006', '2', 'finalcut', 'finalcut', 0, 0),
+('19PR006', '3', 'finalcut', 'finalcut', 0, 0),
+('19SE008', '1', 'dinithi', 'dinithi', 0, 0),
+('19SE008', '2', 'dinithi', 'dinithi', 0, 0),
+('19SE008', '3', 'dinithi', 'dinithi', 0, 0),
+('19SE0068', '1', 'dinithi', 'dinithi', 0, 0),
+('19SE0068', '2', 'dinithi', 'dinithi', 0, 0),
+('19SE0068', '3', 'dinithi', 'dinithi', 0, 0),
+('19PR010', '1', 'institute1', 'deploma1', 0, 0),
+('19PR010', '2', 'institute2', 'deploma2', 0, 0),
+('19PR010', '3', 'institute3', 'deploma3', 0, 0),
+('19PR011', '1', 'insti', 'insti', 0, 0),
+('19PR011', '2', 'insti', 'insti', 0, 0),
+('19PR011', '3', 'insti', 'insti', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -122,7 +143,12 @@ INSERT INTO `applicats_more_details` (`INDEX_NUMBER`, `EXPERIENCE_RELEVANT_TO_PO
 ('19pr000', 'Good', 'Good', 'Good', '1888-08-10'),
 ('19SE002', 'insert data', 'insert data', 'insert data', '2019-01-02'),
 ('19SE003', 'insert data', 'insert data', 'insert data', '2019-01-02'),
-('19PR004', 'morning', 'morning', 'morning', '2019-01-27');
+('19SE006', 'finalcut', 'finalcut', 'finalcut', '19-01-03'),
+('19PR006', 'finalcut', 'finalcut', '/finalcut unedited', '19-01-04'),
+('19SE008', 'dinithi', 'dinithi', 'dinithi', '19-01-04'),
+('19SE0068', 'dinithi', 'dinithi', 'dinithi', '19-01-04'),
+('19PR010', 'experience', '/research', 'other in forms', '19-01-04'),
+('19PR011', 'insti', 'insti', 'insti', '19-01-04');
 
 -- --------------------------------------------------------
 
@@ -132,80 +158,41 @@ INSERT INTO `applicats_more_details` (`INDEX_NUMBER`, `EXPERIENCE_RELEVANT_TO_PO
 
 CREATE TABLE `basic_personal_details` (
   `INDEX_NUMBER` varchar(100) NOT NULL,
-  `FIRST_NAME` varchar(100) NOT NULL,
+  `FIRST_NAME` varchar(200) NOT NULL,
   `LAST_NAME` varchar(200) NOT NULL,
-  `POSTAL_ADDRESS` varchar(200) NOT NULL,
-  `PERMANENT_ADDRESS` varchar(300) NOT NULL,
-  `NIC` varchar(200) NOT NULL,
+  `POSTAL_ADDRESS` varchar(500) NOT NULL,
+  `PERMANENT_ADDRESS` varchar(500) NOT NULL,
+  `NIC` varchar(50) NOT NULL,
   `CITIZENSHIP_NAME` varchar(100) NOT NULL,
   `PERSONAL_EMAIL` varchar(100) NOT NULL,
-  `OFFICE_EMAIL` varchar(200) NOT NULL,
-  `MOBILE_NUMBER` varchar(200) NOT NULL,
+  `OFFICE_EMAIL` varchar(100) NOT NULL,
+  `MOBILE_NUMBER` varchar(20) NOT NULL,
   `HOME_NUMBER` varchar(20) NOT NULL,
   `OFFICE_NUMBER` varchar(20) NOT NULL,
   `GENDER` varchar(10) NOT NULL,
-  `CIVIL_STATUS` varchar(10) NOT NULL,
-  `CITIZENSHIP` varchar(10) NOT NULL,
-  `DATE_OF_BIRTH` varchar(10) NOT NULL,
-  `POST_APPLY_FOR` varchar(200) NOT NULL,
-  `DEGREE` varchar(200) NOT NULL
+  `CIVIL_STATUS` varchar(20) NOT NULL,
+  `CITIZENSHIP` varchar(20) NOT NULL,
+  `DATE_OF_BIRTH` date NOT NULL,
+  `POST_APPLY_FOR` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `basic_personal_details`
 --
 
-INSERT INTO `basic_personal_details` (`INDEX_NUMBER`, `FIRST_NAME`, `LAST_NAME`, `POSTAL_ADDRESS`, `PERMANENT_ADDRESS`, `NIC`, `CITIZENSHIP_NAME`, `PERSONAL_EMAIL`, `OFFICE_EMAIL`, `MOBILE_NUMBER`, `HOME_NUMBER`, `OFFICE_NUMBER`, `GENDER`, `CIVIL_STATUS`, `CITIZENSHIP`, `DATE_OF_BIRTH`, `POST_APPLY_FOR`, `DEGREE`) VALUES
-('19pr000', 'ruwan', 'edited ', 'edited ', 'edited ', '940660', 'SRI LANKAN', 'naveen@gmail.com', 'n@gmail.com', 'edited ', 'edited ', 'edited ', 'MALE', 'edited ', 'BY DESCENT', '1994-06-03', 'probationary', '0'),
-('19pr001', 'ruwan', 'edited ', 'edited ', 'edited ', '940660', 'SRI LANKAN', 'naveen@gmail.com', 'n@gmail.com', 'edited ', 'edited ', 'edited ', 'MALE', 'edited ', 'BY DESCENT', '1994-06-03', 'PROBATIONARY LECTURER', 'General(Bachelore of computer science)'),
-('19SE002', 'insert data', 'insert data', 'insert data', 'insert data', 'insert data', 'insert data', 'tharindu@gmail.com', 'insert data', 'insert data', 'insert data', 'insert data', 'MALE', 'UN MARRIED', 'BY REGISTR', '1994-09-03', 'SENIOR LECTURE GR. II', 'First Class(Bachelore of computer science)'),
-('19SE003', 'insert data', 'insert data', 'insert data', 'insert data', 'insert data', 'insert data', 'tharindu@gmail.com', 'insert data', 'insert data', 'insert data', 'insert data', 'MALE', 'UN MARRIED', 'BY REGISTR', '1994-09-03', 'SENIOR LECTURE GR. II', 'First Class(Bachelore of computer science)'),
-('19PR004', 'morning', 'morning', 'morning', 'morning', 'morning', 'morning', 'morning', 'morning', 'morning', 'morning', 'morning', 'MALE', 'UN MARRIED', 'BY DESCENT', '2019-01-30', 'PROBATIONARY LECTURER', 'Second Upper(Bachelore of computer science)');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `comments`
---
-
-CREATE TABLE `comments` (
-  `COMMENT_ID` int(11) NOT NULL,
-  `COMMENT_SUBJECT` varchar(250) NOT NULL,
-  `COMMENT_CONTENT` text,
-  `COMMENT_STATUS` int(1) NOT NULL,
-  `COMMENT_TO` varchar(50) NOT NULL,
-  `COMMENT_FROM` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `count`
---
-
-CREATE TABLE `count` (
-  `number` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `count_for_probationary_lectures`
---
-
-CREATE TABLE `count_for_probationary_lectures` (
-  `count` int(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `count_for_senior_lectures`
---
-
-CREATE TABLE `count_for_senior_lectures` (
-  `count` int(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+INSERT INTO `basic_personal_details` (`INDEX_NUMBER`, `FIRST_NAME`, `LAST_NAME`, `POSTAL_ADDRESS`, `PERMANENT_ADDRESS`, `NIC`, `CITIZENSHIP_NAME`, `PERSONAL_EMAIL`, `OFFICE_EMAIL`, `MOBILE_NUMBER`, `HOME_NUMBER`, `OFFICE_NUMBER`, `GENDER`, `CIVIL_STATUS`, `CITIZENSHIP`, `DATE_OF_BIRTH`, `POST_APPLY_FOR`) VALUES
+('19PR002', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-24', 'PROBATIONARY LECTURER'),
+('19PR003', 'final', 'final', 'final', 'final', 'final', 'final', 'final', 'final', 'final', 'final', 'final', 'MALE', 'MARRIED', 'BY DESCENT', '0000-00-00', 'PROBATIONARY LECTURER'),
+('19PR006', 'comma', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-24', 'SENIOR LECTURE GR. II'),
+('19PR010', 'santhush', 'lliyanage', 'galle', 'galle', '940660513', 'citizenship', 'santhush@gmail.com', 'santhush@gmail.com', '0772308519', '07723308519', '0772308519', 'MALE', 'UN MARRIED', 'BY REGISTR', '1994-06-03', 'PROBATIONARY LECTURER'),
+('19PR011', 'namal', 'namal', 'namal', 'namal', 'namal', 'namal', 'namal@gmail.com', 'namal', 'namal', 'namal', 'namal', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-30', 'PROBATIONARY LECTURER'),
+('19SE000', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-25', 'SENIOR LECTURE GR. II'),
+('19SE001', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-25', 'SENIOR LECTURE GR. II'),
+('19SE004', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-15', 'SENIOR LECTURE GR. II'),
+('19SE005', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-15', 'SENIOR LECTURE GR. II'),
+('19SE006', '/comma', '//finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-24', 'SENIOR LECTURE GR. II'),
+('19SE0068', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'FEMALE', 'UN MARRIED', 'BY DESCENT', '1996-12-04', 'SENIOR LECTURE GR. II'),
+('19SE008', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'FEMALE', 'UN MARRIED', 'BY DESCENT', '1996-12-04', 'SENIOR LECTURE GR. II');
 
 -- --------------------------------------------------------
 
@@ -237,33 +224,35 @@ INSERT INTO `file_upload_links` (`LINK_ID`, `LINK_NAME`) VALUES
 
 CREATE TABLE `higher_educational_details` (
   `INDEX_NUMBER` varchar(100) NOT NULL,
+  `ROW_NUMBER` varchar(10) NOT NULL,
+  `DEGREE_CATEGORY` varchar(100) NOT NULL,
   `UNIVERSITY` varchar(200) NOT NULL,
-  `FROM` varchar(10) NOT NULL,
-  `TO` varchar(10) NOT NULL,
+  `FROM` int(11) NOT NULL,
+  `TO` int(11) NOT NULL,
   `DEGREE_OBTAINED` varchar(200) NOT NULL,
-  `DURATION` varchar(10) NOT NULL,
-  `CLASS` varchar(10) NOT NULL,
-  `YEAR` varchar(10) NOT NULL,
-  `INDEX_NO` varchar(20) NOT NULL
+  `DURATION` int(11) NOT NULL,
+  `CLASS` varchar(100) NOT NULL,
+  `YEAR` int(11) NOT NULL,
+  `INDEX_NO` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `higher_educational_details`
 --
 
-INSERT INTO `higher_educational_details` (`INDEX_NUMBER`, `UNIVERSITY`, `FROM`, `TO`, `DEGREE_OBTAINED`, `DURATION`, `CLASS`, `YEAR`, `INDEX_NO`) VALUES
-('19SE002', 'insert data', 'insert dat', 'insert dat', 'insert data', 'insert dat', 'insert dat', 'insert dat', 'insert data'),
-('19SE002', 'insert data', 'insert dat', 'insert dat', 'insert data', 'insert dat', 'insert dat', 'insert dat', 'insert data'),
-('19SE002', 'insert data', 'insert dat', 'insert dat', 'insert data', 'insert dat', 'insert dat', 'insert dat', 'insert data'),
-('19SE002', 'insert data', 'insert dat', 'insert dat', 'insert data', 'insert dat', 'insert dat', 'insert dat', 'insert data'),
-('19SE003', 'insert data', 'insert dat', 'insert dat', 'insert data', 'insert dat', 'insert dat', 'insert dat', 'insert data'),
-('19SE003', 'insert data', 'insert dat', 'insert dat', 'insert data', 'insert dat', 'insert dat', 'insert dat', 'insert data'),
-('19SE003', 'insert data', 'insert dat', 'insert dat', 'insert data', 'insert dat', 'insert dat', 'insert dat', 'insert data'),
-('19SE003', 'insert data', 'insert dat', 'insert dat', 'insert data', 'insert dat', 'insert dat', 'insert dat', 'insert data'),
-('19PR004', 'morning', 'morning', 'morning', 'morning', 'morning', 'morning', 'morning', 'morning'),
-('19PR004', '', '', '', '', '', '', '', ''),
-('19PR004', '', '', '', '', '', '', '', ''),
-('19PR004', '', '', '', '', '', '', '', '');
+INSERT INTO `higher_educational_details` (`INDEX_NUMBER`, `ROW_NUMBER`, `DEGREE_CATEGORY`, `UNIVERSITY`, `FROM`, `TO`, `DEGREE_OBTAINED`, `DURATION`, `CLASS`, `YEAR`, `INDEX_NO`) VALUES
+('19PR011', '1', 'bachelor', 'ba_uni1', 0, 0, 'BSC Hons-Computer Science', 0, 'Fisrt Clas', 0, 'bain1'),
+('19PR011', '2', 'bachelor', 'ba_uni2', 0, 0, 'BSC Hons-Software Engineering', 0, 'Fisrt Clas', 0, 'bain2'),
+('19PR011', '3', 'bachelor', 'ba_uni3', 0, 0, 'BSC Hons-Informtion System', 0, 'Fisrt Clas', 0, 'bain3'),
+('19PR011', '4', 'bachelor', 'ba_uni4', 0, 0, 'BSC Hons-Information Technology', 0, 'Fisrt Clas', 0, 'bain4'),
+('19PR011', '1', 'master', 'ma_uni1', 0, 0, 'BSC-Computer Science', 0, '', 0, 'maIn1'),
+('19PR011', '2', 'master', 'ma_uni2', 0, 0, 'BSC-Software Engineering', 0, '', 0, 'maIn2'),
+('19PR011', '3', 'master', 'ma_uni3', 0, 0, 'BSC-Informtion System', 0, '', 0, 'maIn3'),
+('19PR011', '4', 'master', 'ma_uni4', 0, 0, 'BSC-Information Technology', 0, '', 0, 'maIn3'),
+('19PR011', '1', 'phd', 'p_uni1', 0, 0, 'BSC-Computer Science', 0, '', 0, 'pIn1'),
+('19PR011', '2', 'phd', 'p_uni2', 0, 0, 'BSC-Software Engineering', 0, '', 0, 'pIn2'),
+('19PR011', '3', 'phd', 'p_uni3', 0, 0, 'BSC-Informtion System', 0, '', 0, 'pIn3'),
+('19PR011', '4', 'phd', 'p_uni4', 0, 0, 'BSC-Information Technology', 0, '', 0, 'pIn4');
 
 -- --------------------------------------------------------
 
@@ -314,24 +303,14 @@ CREATE TABLE `language_proficiency` (
 --
 
 INSERT INTO `language_proficiency` (`INDEX_NUMBER`, `WORK_SINHALA`, `WORK_ENGLISH`, `WORK_TAMIL`, `TEACH_SINHALA`, `TEACH_ENGLISH`, `TEACH_TAMIL`) VALUES
-('19pr000', 'Good', 'Good', 'Good', 'Good', 'Good', 'Good'),
 ('19SE002', 'No Knowledge', 'Good', 'Fair', 'Fair', 'Very Good', 'Good'),
 ('19SE003', 'No Knowledge', 'Good', 'Fair', 'Fair', 'Very Good', 'Good'),
-('19PR004', 'No Knowledge', 'No Knowledge', 'No Knowledge', 'No Knowledge', 'No Knowledge', 'No Knowledge');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `other_fields`
---
-
-CREATE TABLE `other_fields` (
-  `APPLICANT_ID` varchar(100) NOT NULL,
-  `EXPERIENCE` text NOT NULL,
-  `RESEARCH` text NOT NULL,
-  `OTHER_INFORMS` text NOT NULL,
-  `DATE` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+('19SE006', 'Very Good', 'No Knowledge', 'Good', 'Very Good', 'No Knowledge', 'Good'),
+('19PR006', 'Very Good', 'No Knowledge', 'Good', 'Very Good', 'No Knowledge', 'Good'),
+('19SE008', 'Very Good', 'No Knowledge', 'Good', 'No Knowledge', 'Very Good', 'Fair'),
+('19SE0068', 'Very Good', 'No Knowledge', 'Good', 'No Knowledge', 'Very Good', 'Fair'),
+('19PR010', 'Very Good', 'No Knowledge', 'Good', 'No Knowledge', 'Very Good', 'Fair'),
+('19PR011', 'Good', 'Fair', 'Fair', 'Very Good', 'Very Good', 'No Knowledge');
 
 -- --------------------------------------------------------
 
@@ -340,11 +319,12 @@ CREATE TABLE `other_fields` (
 --
 
 CREATE TABLE `professional_qualifications` (
-  `INDEX_NUMBER` varchar(10) NOT NULL,
+  `INDEX_NUMBER` varchar(100) NOT NULL,
+  `ROW_NUMBER` varchar(10) NOT NULL,
   `INSTITUTION` varchar(200) NOT NULL,
-  `FROM` varchar(10) NOT NULL,
-  `TO` varchar(10) NOT NULL,
-  `DURATION` varchar(10) NOT NULL,
+  `FROM` int(11) NOT NULL,
+  `TO` int(11) NOT NULL,
+  `DURATION` int(11) NOT NULL,
   `TYPE_OF_QUALIFICATION` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -352,16 +332,33 @@ CREATE TABLE `professional_qualifications` (
 -- Dumping data for table `professional_qualifications`
 --
 
-INSERT INTO `professional_qualifications` (`INDEX_NUMBER`, `INSTITUTION`, `FROM`, `TO`, `DURATION`, `TYPE_OF_QUALIFICATION`) VALUES
-('19SE002', 'insert data', 'insert dat', 'insert dat', 'insert dat', 'insert data'),
-('19SE002', 'insert data', 'insert dat', 'insert dat', 'insert dat', 'insert data'),
-('19SE002', 'insert data', 'insert dat', 'insert dat', 'insert dat', 'insert data'),
-('19SE003', 'insert data', 'insert dat', 'insert dat', 'insert dat', 'insert data'),
-('19SE003', 'insert data', 'insert dat', 'insert dat', 'insert dat', 'insert data'),
-('19SE003', 'insert data', 'insert dat', 'insert dat', 'insert dat', 'insert data'),
-('19PR004', 'morning', 'morning', 'morning', 'morning', 'morning'),
-('19PR004', '', '', '', '', ''),
-('19PR004', '', '', '', '', '');
+INSERT INTO `professional_qualifications` (`INDEX_NUMBER`, `ROW_NUMBER`, `INSTITUTION`, `FROM`, `TO`, `DURATION`, `TYPE_OF_QUALIFICATION`) VALUES
+('19PR002', '1', '', 0, 0, 0, ''),
+('19PR002', '2', '', 0, 0, 0, ''),
+('19PR003', '1', '', 0, 0, 0, ''),
+('19PR003', '2', '', 0, 0, 0, ''),
+('19SE004', '1', 'last', 0, 0, 0, 'last'),
+('19SE004', '2', 'last', 0, 0, 0, 'last'),
+('19SE005', '1', 'last', 0, 0, 0, 'last'),
+('19SE005', '2', 'last', 0, 0, 0, 'last'),
+('19SE006', '1', 'finalcut', 0, 0, 0, 'finalcut'),
+('19SE006', '2', 'finalcut', 0, 0, 0, 'finalcut'),
+('19SE006', '3', 'finalcut', 0, 0, 0, 'finalcut'),
+('19PR006', '1', 'finalcut', 0, 0, 0, 'finalcut'),
+('19PR006', '2', 'finalcut', 0, 0, 0, 'finalcut'),
+('19PR006', '3', 'finalcut', 0, 0, 0, 'finalcut'),
+('19SE008', '1', 'dinithi', 0, 0, 0, 'dinithi'),
+('19SE008', '2', 'dinithi', 0, 0, 0, 'dinithi'),
+('19SE008', '3', 'dinithi', 0, 0, 0, 'dinithi'),
+('19SE0068', '1', 'dinithi', 0, 0, 0, 'dinithi'),
+('19SE0068', '2', 'dinithi', 0, 0, 0, 'dinithi'),
+('19SE0068', '3', 'dinithi', 0, 0, 0, 'dinithi'),
+('19PR010', '1', 'institution1', 0, 0, 0, 'qualification1'),
+('19PR010', '2', 'institution2', 0, 0, 0, 'qualification2'),
+('19PR010', '3', 'institution3', 0, 0, 0, 'qualification3'),
+('19PR011', '1', 'insti', 0, 0, 0, 'insti'),
+('19PR011', '2', 'insti', 0, 0, 0, 'insti'),
+('19PR011', '3', 'insti', 0, 0, 0, 'insti');
 
 -- --------------------------------------------------------
 
@@ -371,7 +368,8 @@ INSERT INTO `professional_qualifications` (`INDEX_NUMBER`, `INSTITUTION`, `FROM`
 
 CREATE TABLE `referees` (
   `INDEX_NUMBER` varchar(100) NOT NULL,
-  `NAME` varchar(200) NOT NULL,
+  `ROW_NUMBER` varchar(10) NOT NULL,
+  `NAME` varchar(300) NOT NULL,
   `DESIGNATION` varchar(200) NOT NULL,
   `ADDRESS` varchar(300) NOT NULL,
   `EMAIL` varchar(200) NOT NULL,
@@ -382,16 +380,25 @@ CREATE TABLE `referees` (
 -- Dumping data for table `referees`
 --
 
-INSERT INTO `referees` (`INDEX_NUMBER`, `NAME`, `DESIGNATION`, `ADDRESS`, `EMAIL`, `CONTACT_NO`) VALUES
-('19SE002', 'insert data', 'insert data', 'insert data', 'insert data', 'insert data'),
-('19SE002', 'insert data', 'insert data', 'insert data', 'insert data', 'insert data'),
-('19SE002', 'insert data', 'insert data', 'insert data', 'insert data', 'insert data'),
-('19SE003', 'insert data', 'insert data', 'insert data', 'insert data', 'insert data'),
-('19SE003', 'insert data', 'insert data', 'insert data', 'insert data', 'insert data'),
-('19SE003', 'insert data', 'insert data', 'insert data', 'insert data', 'insert data'),
-('19PR004', 'morning', 'morning', 'morning', 'morning', 'morning'),
-('19PR004', '', '', '', '', ''),
-('19PR004', '', '', '', '', '');
+INSERT INTO `referees` (`INDEX_NUMBER`, `ROW_NUMBER`, `NAME`, `DESIGNATION`, `ADDRESS`, `EMAIL`, `CONTACT_NO`) VALUES
+('19SE006', '1', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut'),
+('19SE006', '2', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut'),
+('19SE006', '3', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut'),
+('19PR006', '1', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut'),
+('19PR006', '2', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut'),
+('19PR006', '3', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut'),
+('19SE008', '1', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
+('19SE008', '2', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
+('19SE008', '3', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
+('19SE0068', '1', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
+('19SE0068', '2', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
+('19SE0068', '3', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
+('19PR010', '1', 'name1', 'designation1', 'address1', 'email1', 'contact1'),
+('19PR010', '2', 'name2', 'designation2', 'address2', 'email2', 'contact2'),
+('19PR010', '3', 'name3', 'designation3', 'address3', 'email3', 'contact3'),
+('19PR011', '1', 'insti', 'insti', 'insti', 'insti', 'insti'),
+('19PR011', '2', 'insti', 'insti', 'insti', 'insti', 'insti'),
+('19PR011', '3', 'insti', 'insti', 'insti', 'insti', 'insti');
 
 -- --------------------------------------------------------
 
@@ -401,32 +408,43 @@ INSERT INTO `referees` (`INDEX_NUMBER`, `NAME`, `DESIGNATION`, `ADDRESS`, `EMAIL
 
 CREATE TABLE `secondary_educational_details` (
   `INDEX_NUMBER` varchar(100) NOT NULL,
+  `ROW_NUMBER` varchar(10) NOT NULL,
   `SCHOOL_NAME` varchar(200) NOT NULL,
-  `FROM` varchar(10) NOT NULL,
-  `TO` varchar(10) NOT NULL,
+  `FROM` int(11) NOT NULL,
+  `TO` int(11) NOT NULL,
   `EXAMINATION_PASSED` varchar(200) NOT NULL,
-  `YEAR` varchar(10) NOT NULL
+  `YEAR` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `secondary_educational_details`
 --
 
-INSERT INTO `secondary_educational_details` (`INDEX_NUMBER`, `SCHOOL_NAME`, `FROM`, `TO`, `EXAMINATION_PASSED`, `YEAR`) VALUES
-('19pr000', 'edited  college', 'edited ', 'edited ', 'edited ', 'edited '),
-('19pr001', 'edited  college', 'edited ', 'edited ', 'edited ', 'edited '),
-('19SE002', 'insert data', 'insert dat', 'insert dat', 'insert data', 'insert dat'),
-('19SE002', 'insert data', 'insert dat', 'insert dat', 'insert data', 'insert dat'),
-('19SE002', 'insert data', 'insert dat', 'insert dat', 'insert data', 'insert dat'),
-('19SE002', 'insert data', 'insert dat', 'insert dat', 'insert data', 'insert dat'),
-('19SE003', 'insert data', 'insert dat', 'insert dat', 'insert data', 'insert dat'),
-('19SE003', 'insert data', 'insert dat', 'insert dat', 'insert data', 'insert dat'),
-('19SE003', 'insert data', 'insert dat', 'insert dat', 'insert data', 'insert dat'),
-('19SE003', 'insert data', 'insert dat', 'insert dat', 'insert data', 'insert dat'),
-('19PR004', 'morning', 'morning', 'morning', 'morning', 'morning'),
-('19PR004', '', '', '', '', ''),
-('19PR004', '', '', '', '', ''),
-('19PR004', '', '', '', '', '');
+INSERT INTO `secondary_educational_details` (`INDEX_NUMBER`, `ROW_NUMBER`, `SCHOOL_NAME`, `FROM`, `TO`, `EXAMINATION_PASSED`, `YEAR`) VALUES
+('19SE005', '1', 'last', 0, 0, 'last', 0),
+('19SE005', '2', 'last', 0, 0, 'last', 0),
+('19SE005', '3', 'last', 0, 0, 'last', 0),
+('19SE005', '4', 'last', 0, 0, 'last', 0),
+('19SE006', '1', 'finalcut', 0, 0, 'finalcut', 0),
+('19SE006', '2', 'finalcut', 0, 0, 'finalcut', 0),
+('19SE006', '3', 'finalcut', 0, 0, 'finalcut', 0),
+('19SE006', '4', 'finalcut', 0, 0, 'finalcut', 0),
+('19SE008', '1', 'dinithi', 0, 0, 'dinithi', 0),
+('19SE008', '2', 'dinithi', 0, 0, 'dinithi', 0),
+('19SE008', '3', 'dinithi', 0, 0, 'dinithi', 0),
+('19SE008', '4', 'dinithi', 0, 0, 'dinithi', 0),
+('19SE0068', '1', 'dinithi', 0, 0, 'dinithi', 0),
+('19SE0068', '2', 'dinithi', 0, 0, 'dinithi', 0),
+('19SE0068', '3', 'dinithi', 0, 0, 'dinithi', 0),
+('19SE0068', '4', 'dinithi', 0, 0, 'dinithi', 0),
+('19PR010', '1', 'school name1', 0, 0, 'exam passed1', 0),
+('19PR010', '2', 'school name2', 0, 0, 'exam passed2', 0),
+('19PR010', '3', 'school name3', 0, 0, 'exam passed3', 0),
+('19PR010', '4', 'school name4', 0, 0, 'exam passed4', 0),
+('19PR011', '1', 'school', 0, 0, 'school', 0),
+('19PR011', '2', 'school', 0, 0, 'school', 0),
+('19PR011', '3', 'school', 0, 0, 'school', 0),
+('19PR011', '4', 'school', 0, 0, 'school', 0);
 
 -- --------------------------------------------------------
 
@@ -463,16 +481,6 @@ INSERT INTO `specializationarea` (`AREA_ID`, `AREA_NAME`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `specialization_areas`
---
-
-CREATE TABLE `specialization_areas` (
-  `SPECIALIZATION_NAME` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `specialization_area_for_applicant`
 --
 
@@ -486,20 +494,54 @@ CREATE TABLE `specialization_area_for_applicant` (
 --
 
 INSERT INTO `specialization_area_for_applicant` (`INDEX_NUMBER`, `SPECIFICATION_AREA_NAME`) VALUES
-('19SE002', 'Software Engineering'),
-('19SE002', 'Information Systems Security,'),
-('19SE002', 'Computer Networks'),
-('19SE002', 'Grid Computing'),
-('19SE002', 'Artificial Neural Networks'),
-('19SE003', 'Software Engineering'),
-('19SE003', 'Information Systems Security,'),
-('19SE003', 'Computer Networks'),
-('19SE003', 'Grid Computing'),
-('19SE003', 'Artificial Neural Networks'),
-('19PR004', 'Software Engineering'),
-('19PR004', 'Information Systems Security,'),
-('19PR004', 'Computer Networks'),
-('19PR004', 'Grid Computing');
+('19SE006', 'Software Engineering'),
+('19SE006', 'Computer Networks'),
+('19SE006', 'Artificial Neural Networks'),
+('19SE006', 'Data Science'),
+('19SE006', 'Operating systems'),
+('19SE006', 'Enterprise application\r\ndevelopment'),
+('19SE006', 'Computer Graphics and Vision'),
+('19SE006', 'optional 5'),
+('19PR006', 'Software Engineering'),
+('19PR006', 'Information Systems Security,'),
+('19PR006', 'Computer Networks'),
+('19PR006', 'Grid Computing'),
+('19PR006', 'Artificial Neural Networks'),
+('19PR006', 'Enterprise application\r\ndevelopment'),
+('19PR006', 'IT Project management'),
+('19PR006', 'Computer Graphics and Vision'),
+('19PR006', 'Computer Architecture & Engineering'),
+('19PR006', 'optional 5'),
+('19SE008', 'Software Engineering'),
+('19SE008', 'Computer Networks'),
+('19SE008', 'Artificial Neural Networks'),
+('19SE008', 'Data Science'),
+('19SE008', 'Operating systems'),
+('19SE008', 'Enterprise application\r\ndevelopment'),
+('19SE008', 'Computer Graphics and Vision'),
+('19SE008', 'optional 5'),
+('19SE0068', 'Software Engineering'),
+('19SE0068', 'Computer Networks'),
+('19SE0068', 'Artificial Neural Networks'),
+('19SE0068', 'Data Science'),
+('19SE0068', 'Operating systems'),
+('19SE0068', 'Enterprise application\r\ndevelopment'),
+('19SE0068', 'Computer Graphics and Vision'),
+('19SE0068', 'optional 5'),
+('19PR010', 'Software Engineering'),
+('19PR010', 'Computer Networks'),
+('19PR010', 'Artificial Neural Networks'),
+('19PR010', 'Data Science'),
+('19PR010', 'Operating systems'),
+('19PR010', 'Enterprise application\r\ndevelopment'),
+('19PR010', 'Computer Graphics and Vision'),
+('19PR010', 'optional 5'),
+('19PR011', 'Software Engineering'),
+('19PR011', 'Information Systems Security,'),
+('19PR011', 'Computer Networks'),
+('19PR011', 'Computer Graphics and Vision'),
+('19PR011', 'Computer Architecture & Engineering'),
+('19PR011', 'optional 5');
 
 -- --------------------------------------------------------
 
@@ -520,7 +562,20 @@ CREATE TABLE `temporary_index_number_for_applicants` (
 INSERT INTO `temporary_index_number_for_applicants` (`INDEX_NUMBER`, `USERNAME`, `FULL_NAME`) VALUES
 ('19pr000', 'naveen@gmail.com', 'naveen'),
 ('19SE003', 'tharindu@gmail.com', 'tharindu nuwan'),
-('19002', 'ruwaneeee@gmail.com', 'chathura');
+('19002', 'ruwaneeee@gmail.com', 'chathura'),
+('19003', 'nuwan1@gmail.com', 'nuwan'),
+('19004', 'operatollr@gmail.com', 'kasun mendis'),
+('19005', 'ruwadn@gmail.com', 'nuwan'),
+('19006', 'ruwan1111@gmail.com', 'kasun mendis'),
+('19007', 'ruwan11s11@gmail.com', 'kasun mendis'),
+('19008', 'ruwan111221@gmail.com', 'kasun mendis'),
+('19009', 'dinithi@gmail.com', 'dinithi'),
+('19PR010', 'santhush@gmail.com', 'santhush'),
+('19PR011', 'namal@gmail.com', 'namal'),
+('19012', 'kkk@gmail.com', 'kkk'),
+('19013', 'aaaa@gmail.com', 'aaa'),
+('19014', 'aaaaa@gmail.com', 'aaa'),
+('19015', 'aaaaaaaa@gmail.gom', 'aaaa');
 
 -- --------------------------------------------------------
 
@@ -542,9 +597,13 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`USERNAME`, `PASSWORD`, `USER_TYPE`, `NAME`) VALUES
 ('11kasun@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', '11kasun mendis'),
 ('1kasun@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', '1kasun mendis'),
+('aaaa@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'aaa'),
+('aaaaa@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'aaa'),
+('aaaaaaaa@gmail.gom', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'aaaa'),
 ('dasun@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'dasun bimsara'),
 ('david@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'david cameron'),
 ('dian@gmail.com', '202cb962ac59075b964b07152d234b70', 'Applicant', 'dian'),
+('dinithi@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'dinithi'),
 ('diniwic654654k124@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Dinithi Wickramaratne'),
 ('diniwick124@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Dinithi Wickramaratne'),
 ('diniwicksdfsdfsfssdf124@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Dinithi Wickramaratne'),
@@ -555,15 +614,23 @@ INSERT INTO `users` (`USERNAME`, `PASSWORD`, `USER_TYPE`, `NAME`) VALUES
 ('director@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Director', 'Director Director'),
 ('kaneeldias@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Kaneel Dias'),
 ('kasun@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'kasun mendis'),
+('kkk@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'kkk'),
 ('lakindu@gmail.com', 'bcbe3365e6ac95ea2c0343a2395834dd', 'Applicant', 'lakindu akash'),
+('namal@gmail.com', 'b59c67bf196a4758191e42f76670ceba', 'Applicant', 'namal'),
 ('naveen@gmail.com', '934b535800b1cba8f96a5d72f72f1611', 'Applicant', 'naveen'),
 ('nimal@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'nimal'),
+('nuwan1@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'nuwan'),
 ('nuwan@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'nuwan'),
 ('nuwann@gmail.com', 'bcbe3365e6ac95ea2c0343a2395834dd', 'Applicant', 'nuwann'),
+('operatollr@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'kasun mendis'),
 ('operator@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'MA', 'Operator Opz'),
 ('ravi@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'ravi'),
 ('rdduwan@gmail.com', '6512bd43d9caa6e02c990b0a82652dca', 'Applicant', 'kasun mendis'),
 ('ronaldo@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'ronaldo'),
+('ruwadn@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'nuwan'),
+('ruwan1111@gmail.com', '202cb962ac59075b964b07152d234b70', 'Applicant', 'kasun mendis'),
+('ruwan111221@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'kasun mendis'),
+('ruwan11s11@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'kasun mendis'),
 ('ruwan@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'kasun mendis'),
 ('ruwan@gmail.com11', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'kasun mendis'),
 ('ruwaneeee@gmail.com', 'b59c67bf196a4758191e42f76670ceba', 'Applicant', 'chathura'),
@@ -575,6 +642,7 @@ INSERT INTO `users` (`USERNAME`, `PASSWORD`, `USER_TYPE`, `NAME`) VALUES
 ('ruwanqqqqaa@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', 'Applicant', 'kasun mendis'),
 ('ruwanqqqqqaa@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', 'Applicant', 'kasun mendis'),
 ('saji@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Sajila Wickramaratne'),
+('santhush@gmail.com', 'b59c67bf196a4758191e42f76670ceba', 'Applicant', 'santhush'),
 ('sar@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'SAR', 'Sar Sar'),
 ('sDunil@gmail.com', '202cb962ac59075b964b07152d234b70', 'Applicant', 'DDD'),
 ('suneth@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'suneth'),
@@ -583,25 +651,6 @@ INSERT INTO `users` (`USERNAME`, `PASSWORD`, `USER_TYPE`, `NAME`) VALUES
 ('suniloo@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'nuwann'),
 ('tharindu@gmail.com', '934b535800b1cba8f96a5d72f72f1611', 'Applicant', 'tharindu nuwan'),
 ('udana@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'udana vithanage');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `vacancies`
---
-
-CREATE TABLE `vacancies` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `dead_line` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `vacancies`
---
-
-INSERT INTO `vacancies` (`id`, `name`, `dead_line`) VALUES
-(1, 'test', '2019-01-02');
 
 --
 -- Indexes for dumped tables
@@ -614,10 +663,10 @@ ALTER TABLE `applicants`
   ADD PRIMARY KEY (`EMAIL`);
 
 --
--- Indexes for table `comments`
+-- Indexes for table `basic_personal_details`
 --
-ALTER TABLE `comments`
-  ADD PRIMARY KEY (`COMMENT_ID`);
+ALTER TABLE `basic_personal_details`
+  ADD PRIMARY KEY (`INDEX_NUMBER`);
 
 --
 -- Indexes for table `file_upload_links`
@@ -639,38 +688,20 @@ ALTER TABLE `specializationarea`
   ADD PRIMARY KEY (`AREA_ID`);
 
 --
--- Indexes for table `specialization_areas`
---
-ALTER TABLE `specialization_areas`
-  ADD PRIMARY KEY (`SPECIALIZATION_NAME`);
-
---
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`USERNAME`);
 
 --
--- Indexes for table `vacancies`
---
-ALTER TABLE `vacancies`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `comments`
---
-ALTER TABLE `comments`
-  MODIFY `COMMENT_ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `file_upload_links`
 --
 ALTER TABLE `file_upload_links`
-  MODIFY `LINK_ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `LINK_ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `interview_panel`
@@ -683,12 +714,6 @@ ALTER TABLE `interview_panel`
 --
 ALTER TABLE `specializationarea`
   MODIFY `AREA_ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
-
---
--- AUTO_INCREMENT for table `vacancies`
---
-ALTER TABLE `vacancies`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
