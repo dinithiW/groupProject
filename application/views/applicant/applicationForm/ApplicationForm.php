@@ -87,34 +87,74 @@ if(isset($this->session->userdata['logged_in'])){
                     <h5 id="lableForCivilStatus">CIVIL STATUS</h5>
                     <h5 id="labbleForCitizenship">IF A CITIZEN OF SRI LANKA HOW OBTAINED</h5>
 
+                    <style>
+                        #labbleForCitizenship{
+                            margin-left:500px;
+                        }
+                    </style>
+
+                    <style>
+                        #lableForCivilStatus{
+                            margin-left:-30px;
+                        }
+                    </style>
 
                     <div class="custom-sele dropboxGender" style="width:180px; height:100px;">
-                        <select name="selectGender">
+                        <select name="selectGender" id="selectCategory_gender">
                             <option value="MALE">MALE:</option>
                             <option value="FEMALE">FEMALE</option>
                         </select>
                     </div>
 
+                    <style>
+                        #selectCategory_gender{
+                            margin-left:140px;
+                            
+                        }
+                    </style>
+
                     <div class="custom-sele dropboxCivil" style="width:100px; height:50px;">
-                        <select name="selectCivilStatus" id="selectCategory">
+                        <select name="selectCivilStatus" id="selectCategory_civilstate">
                             <option value="MARRIED">MARRIED</option>
                             <option value="UN MARRIED">UN MARRIED</option>
                         </select>
                     </div>
 
+                    <style>
+                        #selectCategory_civilstate{
+                            margin-left:120px;
+                            
+                        }
+                    </style>
+
                     <div class="custom-sele dropboxCitizenship" style="width:100px; height:50px;">
-                        <select name="selectCitizenship" id="selectCategory">
+                        <select name="selectCitizenship" id="selectCategory_citizenship">
                             <option value="BY DESCENT">BY DESCENT</option>
                             <option value="BY REGISTRATION">BY REGISTRATION</option>
                         </select>
                     </div>
 
+                    <style>
+                        #selectCategory_citizenship{
+                            margin-left:100px;
+                            
+                        }
+                    </style>
+
                                     
                     <!-- start the calender-->
-                    <div class="calender1">
+                    <div class="calender1" id="birth_date_id">
                         <h4 id="birth-date"> Date of Birth</h4>
                         <input type="date" data-date-inline-picker="true"  name="birth_date"/>
                     </div>
+
+                    <style>
+                        #birth_date_id{
+                            margin-left:330px;
+                            
+                        }
+                    </style>
+
                     <!-- end the calender-->
 
                     <!-- start the age-->
@@ -312,19 +352,30 @@ if(isset($this->session->userdata['logged_in'])){
 
 <!--end of the javascript file for the drop down -->
 
-                <div class="checkBoxForPostSelectionHeader"> 
+                <div class="checkBoxForPostSelectionHeader" id="header_for_post_apply"> 
                     <h5 id="lab3" >POSTS APPLIED FOR</h5>
                 </div>
 
+                <style>
+                    #header_for_post_apply{
+                        margin-left:120px;
+                    }
+                </style>
 
-                <div class="custom-select " style="width:350px; height:50px;">
+                <div class="custom-select " style="width:350px; height:50px;" id="dropdown_for_post">
                     <select name="postApplyFor" id="selectCategory1">
                         <option value="PROBATIONARY LECTURER">PROBATIONARY LECTURER</option>
                         <option value="SENIOR LECTURE GR. II">SENIOR LECTURE GR. II</option>
                     </select>
                 </div>
 
-                
+                <style>
+                    #dropdown_for_post{
+                        margin-top:10px;
+                        background-color:red;
+                    }
+                </style>
+
                 <h4 id="secondryEducationalTitle">Secondry Educational Details</h4><br/>
                     <div class="table1"><!-- start of the Secondry Educational Details table-->
                         <table id="Table">
@@ -421,7 +472,7 @@ if(isset($this->session->userdata['logged_in'])){
 
                                 <style>
                                     #select_degree_selection1{
-                                        width:135px;
+                                        width:165px;
                                         height:30px;
                                         
                                     }
@@ -442,7 +493,7 @@ if(isset($this->session->userdata['logged_in'])){
                                 <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
                                 <td>
                                     <div class="custom-sele" id="select_class_div1">
-                                        <select name="heigher_educational_class1" id="select_class_selection1" style="font-size:9px;>
+                                        <select name="heigher_educational_class1" id="select_class_selection0" style="font-size:9px;>
                                             <option value="">Select Here</option>
                                             <option value="Fisrt Class">Fisrt Class</option>
                                             <option value="Second Upper">Second Upper</option>
@@ -454,14 +505,15 @@ if(isset($this->session->userdata['logged_in'])){
                                 </td>
 
                                 <style>
-                                    #select_class_selection1{
+                                    #select_class_selection0{
                                         width:85px;
                                         height:30px;
+                                        
                                         
                                     }
 
                                     #select_class_div1{
-                                        
+                                        width:85px;
                                         margin-top:-12px;
                                     }
 
@@ -469,8 +521,8 @@ if(isset($this->session->userdata['logged_in'])){
                                 </style>
 
 <!-- --------------end class-------------- -->
-                                <td><input type="text" class="Text" name="heigher_educational_year1"  size='4'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_year_no1"  size='7'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_year1"  size='5'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_year_no1"  size='8'/></td>
 
                                 <td><span class="lblStatus"></span></td>
                             
@@ -503,7 +555,7 @@ if(isset($this->session->userdata['logged_in'])){
 
                                 <style>
                                     #select_degree_selection2{
-                                        width:135px;
+                                        width:165px;
                                         height:30px;
                                         
                                     }
@@ -552,8 +604,8 @@ if(isset($this->session->userdata['logged_in'])){
 <!-- --------------end class-------------- -->
                                 
 
-                                <td><input type="text" class="Text" name="heigher_educational_year2"  size='4'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_year_no2"  size='7'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_year2"  size='3'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_year_no2"  size='11'/></td>
 
                             <td><span class="lblStatus"></span></td>
 
@@ -586,7 +638,7 @@ if(isset($this->session->userdata['logged_in'])){
 
                                 <style>
                                     #select_degree_selection2{
-                                        width:135px;
+                                        width:165px;
                                         height:30px;
                                         
                                     }
@@ -668,7 +720,7 @@ if(isset($this->session->userdata['logged_in'])){
 
                                 <style>
                                     #select_degree_selection2{
-                                        width:135px;
+                                        width:165px;
                                         height:30px;
                                         
                                     }
