@@ -790,7 +790,6 @@ if(isset($this->session->userdata['logged_in'])){
                                 <th>To</th>
                                 <th>Degree Obtained</th>
                                 <th>Duration</th>
-                                <th>Class</th>
                                 <th>Year</th>
                                 <th>Index No</th>
                             </tr>
@@ -843,18 +842,7 @@ if(isset($this->session->userdata['logged_in'])){
                                 
 <!-- --------------start class-------------- -->
                                 <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
-                                <td>
-                                    <div class="custom-sele" id="select_class_div1">
-                                        <select name="master_educational_class1" id="select_class_selection0" style="font-size:9px;>
-                                            <option value="">Select Here</option>
-                                            <option value="Fisrt Class">Fisrt Class</option>
-                                            <option value="Second Upper">Second Upper</option>
-                                            <option value="Second Lower">Second Lower</option>
-                                            <option value="General">General</option>
-                                        
-                                        </select>
-                                    </div>
-                                </td>
+                                
 
                                 <style>
                                     #select_class_selection0{
@@ -925,18 +913,7 @@ if(isset($this->session->userdata['logged_in'])){
 
 <!-- --------------start class-------------- -->
                                 <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
-                                <td>
-                                    <div class="custom-sele" id="select_class_div1">
-                                        <select name="master_educational_class2" id="select_class_selection1" style="font-size:9px;>
-                                            <option value="">Select Here</option>
-                                            <option value="Fisrt Class">Fisrt Class</option>
-                                            <option value="Second Upper">Second Upper</option>
-                                            <option value="Second Lower">Second Lower</option>
-                                            <option value="General">General</option>
-                                        
-                                        </select>
-                                    </div>
-                                </td>
+                                
 
                                 <style>
                                     #select_class_selection1{
@@ -1008,18 +985,7 @@ if(isset($this->session->userdata['logged_in'])){
 
 <!-- --------------start class-------------- -->
                                 <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
-                                <td>
-                                    <div class="custom-sele" id="select_class_div1">
-                                        <select name="master_educational_class3" id="select_class_selection1" style="font-size:9px;>
-                                            <option value="">Select Here</option>
-                                            <option value="Fisrt Class">Fisrt Class</option>
-                                            <option value="Second Upper">Second Upper</option>
-                                            <option value="Second Lower">Second Lower</option>
-                                            <option value="General">General</option>
-                                        
-                                        </select>
-                                    </div>
-                                </td>
+                                
 
                                 <style>
                                     #select_class_selection1{
@@ -1090,18 +1056,7 @@ if(isset($this->session->userdata['logged_in'])){
 
 <!-- --------------start class-------------- -->
                                 <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
-                                <td>
-                                    <div class="custom-sele" id="select_class_div1">
-                                        <select name="master_educational_class4" id="select_class_selection1" style="font-size:9px;>
-                                            <option value="">Select Here</option>
-                                            <option value="Fisrt Class">Fisrt Class</option>
-                                            <option value="Second Upper">Second Upper</option>
-                                            <option value="Second Lower">Second Lower</option>
-                                            <option value="General">General</option>
-                                        
-                                        </select>
-                                    </div>
-                                </td>
+                                
 
                                 <style>
                                     #select_class_selection1{
@@ -1130,6 +1085,315 @@ if(isset($this->session->userdata['logged_in'])){
                     </div><!-- end of the Higher Educational Details table-->
 
 <!-- --------------------end of  the master degree details--------------------- -->
+
+<!-- --------------start of the phd  degree details------------------ -->
+  
+                    <h4 id="title2">PHD Degree Details</h4>
+                    <div class="table2"><!-- start of the Higher Educational Details table-->
+                        <table id="Table">
+                            <tr>
+                                <th>University / Institution</th>
+                                <th>From</th>
+                                <th>To</th>
+                                <th>Degree Obtained</th>
+                                <th>Duration</th>
+                                <th>Year</th>
+                                <th>Index No</th>
+                            </tr>
+
+                            <tr class="tr">
+
+                                <td><input type="text" class="Text" name="phd_educational_university1"  size='25'/></td>
+                                <td><input type="text" class="Text" name="phd_educational_from1"  size='3'/></td>
+                                <td><input type="text" class="Text" name="phd_educational_to1"  size='3'/></td>
+
+<!-- -------------start degree------------------->
+<!-- <td><input type="text" class="Text" name="heigher_educational_degree_obtained1"  size='25'/></td> -->
+                                <td>
+                                    <div class="custom-sele" id="select_degree_div1">
+                                        <select name="phd_educational_degree_obtained1" id="select_degree_selection1" style="font-size:9px;">
+                                            <option value="">Select Here</option>
+                                            <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
+                                            <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
+                                            <option value="BSC Hons-Informtion System">BSC Hons-Informtion System</option>
+                                            <option value="BSC Hons-Information Technology">BSC Hons-Information Technology</option>
+                                            <option value="BSC Hons-Computer Engineering">BSC Hons-Computer Engineering</option>
+                                            <option value="BSC-Computer Science">BSC-Computer Science</option>
+                                            <option value="BSC-Software Engineering">BSC-Software Engineering</option>
+                                            <option value="BSC-Informtion System">BSC-Informtion System</option>
+                                            <option value="BSC-Information Technology">BSC-Information Technology</option>
+                                            <option value="BSC-Computer Engineering">BSC-Computer Engineering</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </td>
+
+                                <style>
+                                    #select_degree_selection1{
+                                        width:165px;
+                                        height:30px;
+                                        
+                                    }
+
+                                    #select_degree_div1{
+                                        
+                                        margin-top:-12px;
+                                    }
+
+
+                                </style>
+<!-- --------------end degree----------------- -->
+
+                                
+                                <td><input type="text" class="Text" name="phd_educational_duration1"  size='11'/></td>
+                                
+<!-- --------------start class-------------- -->
+                                <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
+                                
+
+                                <style>
+                                    #select_class_selection0{
+                                        width:85px;
+                                        height:30px;
+                                        
+                                        
+                                    }
+
+                                    #select_class_div1{
+                                        width:85px;
+                                        margin-top:-12px;
+                                    }
+
+
+                                </style>
+
+<!-- --------------end class-------------- -->
+                                <td><input type="text" class="Text" name="phd_educational_year1"  size='5'/></td>
+                                <td><input type="text" class="Text" name="phd_educational_year_no1"  size='8'/></td>
+
+                                <td><span class="lblStatus"></span></td>
+                            
+                            <tr class="tr">
+
+                                <td><input type="text" class="Text" name="phd_educational_university2"  size='25'/></td>
+                                <td><input type="text" class="Text" name="phd_educational_from2"  size='3'/></td>
+                                <td><input type="text" class="Text" name="phd_educational_to2"  size='3'/></td>
+
+<!-- -------------start degree------------------->
+<!-- <td><input type="text" class="Text" name="heigher_educational_degree_obtained1"  size='25'/></td> -->
+<td>
+                                    <div class="custom-sele" id="select_degree_div2">
+                                        <select name="phd_educational_degree_obtained2" id="select_degree_selection2" style="font-size:9px;">
+                                            <option value="">Select Here</option>
+                                            <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
+                                            <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
+                                            <option value="BSC Hons-Informtion System">BSC Hons-Informtion System</option>
+                                            <option value="BSC Hons-Information Technology">BSC Hons-Information Technology</option>
+                                            <option value="BSC Hons-Computer Engineering">BSC Hons-Computer Engineering</option>
+                                            <option value="BSC-Computer Science">BSC-Computer Science</option>
+                                            <option value="BSC-Software Engineering">BSC-Software Engineering</option>
+                                            <option value="BSC-Informtion System">BSC-Informtion System</option>
+                                            <option value="BSC-Information Technology">BSC-Information Technology</option>
+                                            <option value="BSC-Computer Engineering">BSC-Computer Engineering</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </td>
+
+                                <style>
+                                    #select_degree_selection2{
+                                        width:165px;
+                                        height:30px;
+                                        
+                                    }
+
+                                    #select_degree_div2{
+                                        
+                                        margin-top:-12px;
+                                    }
+
+
+                                </style>
+<!-- --------------end degree----------------- -->
+                                
+                                <td><input type="text" class="Text" name="phd_educational_duration2"  size='11'/></td>
+
+<!-- --------------start class-------------- -->
+                                <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
+                                
+
+                                <style>
+                                    #select_class_selection1{
+                                        width:85px;
+                                        height:30px;
+                                        
+                                    }
+
+                                    #select_class_div1{
+                                        
+                                        margin-top:-12px;
+                                    }
+
+
+                                </style>
+
+<!-- --------------end class-------------- -->
+                                
+
+                                <td><input type="text" class="Text" name="phd_educational_year2"  size='3'/></td>
+                                <td><input type="text" class="Text" name="phd_educational_year_no2"  size='11'/></td>
+
+                            <td><span class="lblStatus"></span></td>
+
+                            <tr class="tr">
+
+                                <td><input type="text" class="Text" name="phd_educational_university3"  size='25'/></td>
+                                <td><input type="text" class="Text" name="phd_educational_from3"  size='3'/></td>
+                                <td><input type="text" class="Text" name="phd_educational_to3"  size='3'/></td>
+                                
+<!-- -------------start degree------------------->
+<!-- <td><input type="text" class="Text" name="heigher_educational_degree_obtained1"  size='25'/></td> -->
+<td>
+                                    <div class="custom-sele" id="select_degree_div2">
+                                        <select name="phd_educational_degree_obtained3" id="select_degree_selection2" style="font-size:9px;">
+                                            <option value="">Select Here</option>
+                                            <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
+                                            <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
+                                            <option value="BSC Hons-Informtion System">BSC Hons-Informtion System</option>
+                                            <option value="BSC Hons-Information Technology">BSC Hons-Information Technology</option>
+                                            <option value="BSC Hons-Computer Engineering">BSC Hons-Computer Engineering</option>
+                                            <option value="BSC-Computer Science">BSC-Computer Science</option>
+                                            <option value="BSC-Software Engineering">BSC-Software Engineering</option>
+                                            <option value="BSC-Informtion System">BSC-Informtion System</option>
+                                            <option value="BSC-Information Technology">BSC-Information Technology</option>
+                                            <option value="BSC-Computer Engineering">BSC-Computer Engineering</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </td>
+
+                                <style>
+                                    #select_degree_selection2{
+                                        width:165px;
+                                        height:30px;
+                                        
+                                    }
+
+                                    #select_degree_div2{
+                                        
+                                        margin-top:-12px;
+                                    }
+
+
+                                </style>
+<!-- --------------end degree----------------- -->
+                                
+                                <td><input type="text" class="Text" name="phd_educational_duration3"  size='11'/></td>
+
+<!-- --------------start class-------------- -->
+                                <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
+                                
+
+                                <style>
+                                    #select_class_selection1{
+                                        width:85px;
+                                        height:30px;
+                                        
+                                    }
+
+                                    #select_class_div1{
+                                        
+                                        margin-top:-12px;
+                                    }
+
+
+                                </style>
+
+<!-- --------------end class-------------- -->
+
+                                <td><input type="text" class="Text" name="phd_educational_year3"  size='4'/></td>
+                                <td><input type="text" class="Text" name="phd_educational_year_no3"  size='7'/></td>
+
+                            <td><span class="lblStatus"></span></td>
+
+                            <tr class="tr">
+
+                                <td><input type="text" class="Text" name="phd_educational_university4"  size='25'/></td>
+                                <td><input type="text" class="Text" name="phd_educational_from4"  size='3'/></td>
+                                <td><input type="text" class="Text" name="phd_educational_to4"  size='3'/></td>
+                                
+<!-- -------------start degree------------------->
+<!-- <td><input type="text" class="Text" name="heigher_educational_degree_obtained1"  size='25'/></td> -->
+<td>
+                                    <div class="custom-sele" id="select_degree_div2">
+                                        <select name="phd_educational_degree_obtained4" id="select_degree_selection2" style="font-size:9px;">
+                                            <option value="">Select Here</option>
+                                            <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
+                                            <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
+                                            <option value="BSC Hons-Informtion System">BSC Hons-Informtion System</option>
+                                            <option value="BSC Hons-Information Technology">BSC Hons-Information Technology</option>
+                                            <option value="BSC Hons-Computer Engineering">BSC Hons-Computer Engineering</option>
+                                            <option value="BSC-Computer Science">BSC-Computer Science</option>
+                                            <option value="BSC-Software Engineering">BSC-Software Engineering</option>
+                                            <option value="BSC-Informtion System">BSC-Informtion System</option>
+                                            <option value="BSC-Information Technology">BSC-Information Technology</option>
+                                            <option value="BSC-Computer Engineering">BSC-Computer Engineering</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </td>
+
+                                <style>
+                                    #select_degree_selection2{
+                                        width:165px;
+                                        height:30px;
+                                        
+                                    }
+
+                                    #select_degree_div2{
+                                        
+                                        margin-top:-12px;
+                                    }
+
+
+                                </style>
+<!-- --------------end degree----------------- -->
+                                
+                                <td><input type="text" class="Text" name=phd_educational_duration4"  size='11'/></td>
+
+<!-- --------------start class-------------- -->
+                                <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
+                                
+
+                                <style>
+                                    #select_class_selection1{
+                                        width:85px;
+                                        height:30px;
+                                        
+                                    }
+
+                                    #select_class_div1{
+                                        
+                                        margin-top:-12px;
+                                    }
+
+
+                                </style>
+
+<!-- --------------end class-------------- -->
+
+                                <td><input type="text" class="Text" name="phd_educational_year4"  size='4'/></td>
+                                <td><input type="text" class="Text" name="phd_educational_year_no4"  size='7'/></td>
+
+                            <td><span class="lblStatus"></span></td>
+
+                            </tr>
+                        </table>
+                    </div><!-- end of the Higher Educational Details table-->
+
+<!-- --------------------end of  the phd degree details--------------------- -->
+
+
 
                    <h4 id="title3">Any Other Qualifications </h4>
                     <div class="table3">
