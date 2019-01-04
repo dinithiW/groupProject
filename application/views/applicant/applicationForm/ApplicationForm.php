@@ -87,34 +87,74 @@ if(isset($this->session->userdata['logged_in'])){
                     <h5 id="lableForCivilStatus">CIVIL STATUS</h5>
                     <h5 id="labbleForCitizenship">IF A CITIZEN OF SRI LANKA HOW OBTAINED</h5>
 
+                    <style>
+                        #labbleForCitizenship{
+                            margin-left:500px;
+                        }
+                    </style>
+
+                    <style>
+                        #lableForCivilStatus{
+                            margin-left:-30px;
+                        }
+                    </style>
 
                     <div class="custom-sele dropboxGender" style="width:180px; height:100px;">
-                        <select name="selectGender">
+                        <select name="selectGender" id="selectCategory_gender">
                             <option value="MALE">MALE:</option>
                             <option value="FEMALE">FEMALE</option>
                         </select>
                     </div>
 
+                    <style>
+                        #selectCategory_gender{
+                            margin-left:140px;
+                            
+                        }
+                    </style>
+
                     <div class="custom-sele dropboxCivil" style="width:100px; height:50px;">
-                        <select name="selectCivilStatus" id="selectCategory">
+                        <select name="selectCivilStatus" id="selectCategory_civilstate">
                             <option value="MARRIED">MARRIED</option>
                             <option value="UN MARRIED">UN MARRIED</option>
                         </select>
                     </div>
 
+                    <style>
+                        #selectCategory_civilstate{
+                            margin-left:120px;
+                            
+                        }
+                    </style>
+
                     <div class="custom-sele dropboxCitizenship" style="width:100px; height:50px;">
-                        <select name="selectCitizenship" id="selectCategory">
+                        <select name="selectCitizenship" id="selectCategory_citizenship">
                             <option value="BY DESCENT">BY DESCENT</option>
                             <option value="BY REGISTRATION">BY REGISTRATION</option>
                         </select>
                     </div>
 
+                    <style>
+                        #selectCategory_citizenship{
+                            margin-left:100px;
+                            
+                        }
+                    </style>
+
                                     
                     <!-- start the calender-->
-                    <div class="calender1">
+                    <div class="calender1" id="birth_date_id">
                         <h4 id="birth-date"> Date of Birth</h4>
                         <input type="date" data-date-inline-picker="true"  name="birth_date"/>
                     </div>
+
+                    <style>
+                        #birth_date_id{
+                            margin-left:330px;
+                            
+                        }
+                    </style>
+
                     <!-- end the calender-->
 
                     <!-- start the age-->
@@ -312,29 +352,30 @@ if(isset($this->session->userdata['logged_in'])){
 
 <!--end of the javascript file for the drop down -->
 
-                <div class="checkBoxForPostSelectionHeader"> 
+                <div class="checkBoxForPostSelectionHeader" id="header_for_post_apply"> 
                     <h5 id="lab3" >POSTS APPLIED FOR</h5>
                 </div>
 
+                <style>
+                    #header_for_post_apply{
+                        margin-left:120px;
+                    }
+                </style>
 
-                <div class="custom-sele dropboxSelectPost" style="width:100px; height:50px;">
+                <div class="custom-select " style="width:350px; height:50px;" id="dropdown_for_post">
                     <select name="postApplyFor" id="selectCategory1">
                         <option value="PROBATIONARY LECTURER">PROBATIONARY LECTURER</option>
                         <option value="SENIOR LECTURE GR. II">SENIOR LECTURE GR. II</option>
                     </select>
                 </div>
 
-                <div class="custom-select " style="width:430px; height:50px;">
-                   <select name="selectDegree" id="selectCategory">
-                        <option value="select degree">Select Degree Category:</option>
-                        <option value="First Class(Bachelore of computer science)">First Class(Bachelore of computer science)</option>
-                        <option value="Second Upper(Bachelore of computer science)">Second Upper(Bachelore of computer science)</option>
-                        <option value="Second Lower(Bachelore of computer science)">Second Lower(Bachelore of computer science)</option>
-                        <option value="General(Bachelore of computer science)">General(Bachelore of computer science)</option>
-                    </select>
-                </div>
+                <style>
+                    #dropdown_for_post{
+                        margin-top:10px;
+                        background-color:red;
+                    }
+                </style>
 
-                
                 <h4 id="secondryEducationalTitle">Secondry Educational Details</h4><br/>
                     <div class="table1"><!-- start of the Secondry Educational Details table-->
                         <table id="Table">
@@ -345,7 +386,11 @@ if(isset($this->session->userdata['logged_in'])){
                                 <th>Examination Passed</th>
                                 <th>Year</th>
                             </tr>
-
+<style>
+#table1{
+    margin-top:-120px;
+}
+</style>
 
                             <tr class="tr">
                                 <td><input type="text" class="Text"  name="secondary_educational_school_name1" size='42'/></td>
@@ -398,32 +443,169 @@ if(isset($this->session->userdata['logged_in'])){
                                 <th>Index No</th>
                             </tr>
 
-
-
-
                             <tr class="tr">
 
                                 <td><input type="text" class="Text" name="heigher_educational_university1"  size='25'/></td>
                                 <td><input type="text" class="Text" name="heigher_educational_from1"  size='3'/></td>
                                 <td><input type="text" class="Text" name="heigher_educational_to1"  size='3'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_degree_obtained1"  size='25'/></td>
+
+<!-- -------------start degree------------------->
+<!-- <td><input type="text" class="Text" name="heigher_educational_degree_obtained1"  size='25'/></td> -->
+                                <td>
+                                    <div class="custom-sele" id="select_degree_div1">
+                                        <select name="heigher_educational_degree_obtained1" id="select_degree_selection1" style="font-size:9px;">
+                                            <option value="">Select Here</option>
+                                            <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
+                                            <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
+                                            <option value="BSC Hons-Informtion System">BSC Hons-Informtion System</option>
+                                            <option value="BSC Hons-Information Technology">BSC Hons-Information Technology</option>
+                                            <option value="BSC Hons-Computer Engineering">BSC Hons-Computer Engineering</option>
+                                            <option value="BSC-Computer Science">BSC-Computer Science</option>
+                                            <option value="BSC-Software Engineering">BSC-Software Engineering</option>
+                                            <option value="BSC-Informtion System">BSC-Informtion System</option>
+                                            <option value="BSC-Information Technology">BSC-Information Technology</option>
+                                            <option value="BSC-Computer Engineering">BSC-Computer Engineering</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </td>
+
+                                <style>
+                                    #select_degree_selection1{
+                                        width:165px;
+                                        height:30px;
+                                        
+                                    }
+
+                                    #select_degree_div1{
+                                        
+                                        margin-top:-12px;
+                                    }
+
+
+                                </style>
+<!-- --------------end degree----------------- -->
+
+                                
                                 <td><input type="text" class="Text" name="heigher_educational_duration1"  size='11'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_year1"  size='4'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_year_no1"  size='7'/></td>
-                            
-                            <td><span class="lblStatus"></span></td>
+                                
+<!-- --------------start class-------------- -->
+                                <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
+                                <td>
+                                    <div class="custom-sele" id="select_class_div1">
+                                        <select name="heigher_educational_class1" id="select_class_selection0" style="font-size:9px;>
+                                            <option value="">Select Here</option>
+                                            <option value="Fisrt Class">Fisrt Class</option>
+                                            <option value="Second Upper">Second Upper</option>
+                                            <option value="Second Lower">Second Lower</option>
+                                            <option value="General">General</option>
+                                        
+                                        </select>
+                                    </div>
+                                </td>
+
+                                <style>
+                                    #select_class_selection0{
+                                        width:85px;
+                                        height:30px;
+                                        
+                                        
+                                    }
+
+                                    #select_class_div1{
+                                        width:85px;
+                                        margin-top:-12px;
+                                    }
+
+
+                                </style>
+
+<!-- --------------end class-------------- -->
+                                <td><input type="text" class="Text" name="heigher_educational_year1"  size='5'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_year_no1"  size='8'/></td>
+
+                                <td><span class="lblStatus"></span></td>
                             
                             <tr class="tr">
 
                                 <td><input type="text" class="Text" name="heigher_educational_university2"  size='25'/></td>
                                 <td><input type="text" class="Text" name="heigher_educational_from2"  size='3'/></td>
                                 <td><input type="text" class="Text" name="heigher_educational_to2"  size='3'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_degree_obtained2"  size='25'/></td>
+
+<!-- -------------start degree------------------->
+<!-- <td><input type="text" class="Text" name="heigher_educational_degree_obtained1"  size='25'/></td> -->
+<td>
+                                    <div class="custom-sele" id="select_degree_div2">
+                                        <select name="heigher_educational_degree_obtained2" id="select_degree_selection2" style="font-size:9px;">
+                                            <option value="">Select Here</option>
+                                            <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
+                                            <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
+                                            <option value="BSC Hons-Informtion System">BSC Hons-Informtion System</option>
+                                            <option value="BSC Hons-Information Technology">BSC Hons-Information Technology</option>
+                                            <option value="BSC Hons-Computer Engineering">BSC Hons-Computer Engineering</option>
+                                            <option value="BSC-Computer Science">BSC-Computer Science</option>
+                                            <option value="BSC-Software Engineering">BSC-Software Engineering</option>
+                                            <option value="BSC-Informtion System">BSC-Informtion System</option>
+                                            <option value="BSC-Information Technology">BSC-Information Technology</option>
+                                            <option value="BSC-Computer Engineering">BSC-Computer Engineering</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </td>
+
+                                <style>
+                                    #select_degree_selection2{
+                                        width:165px;
+                                        height:30px;
+                                        
+                                    }
+
+                                    #select_degree_div2{
+                                        
+                                        margin-top:-12px;
+                                    }
+
+
+                                </style>
+<!-- --------------end degree----------------- -->
+                                
                                 <td><input type="text" class="Text" name="heigher_educational_duration2"  size='11'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_class2" size='13'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_year2"  size='4'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_year_no2"  size='7'/></td>
+
+<!-- --------------start class-------------- -->
+                                <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
+                                <td>
+                                    <div class="custom-sele" id="select_class_div1">
+                                        <select name="heigher_educational_class2" id="select_class_selection1" style="font-size:9px;>
+                                            <option value="">Select Here</option>
+                                            <option value="Fisrt Class">Fisrt Class</option>
+                                            <option value="Second Upper">Second Upper</option>
+                                            <option value="Second Lower">Second Lower</option>
+                                            <option value="General">General</option>
+                                        
+                                        </select>
+                                    </div>
+                                </td>
+
+                                <style>
+                                    #select_class_selection1{
+                                        width:85px;
+                                        height:30px;
+                                        
+                                    }
+
+                                    #select_class_div1{
+                                        
+                                        margin-top:-12px;
+                                    }
+
+
+                                </style>
+
+<!-- --------------end class-------------- -->
+                                
+
+                                <td><input type="text" class="Text" name="heigher_educational_year2"  size='3'/></td>
+                                <td><input type="text" class="Text" name="heigher_educational_year_no2"  size='11'/></td>
 
                             <td><span class="lblStatus"></span></td>
 
@@ -432,9 +614,78 @@ if(isset($this->session->userdata['logged_in'])){
                                 <td><input type="text" class="Text" name="heigher_educational_university3"  size='25'/></td>
                                 <td><input type="text" class="Text" name="heigher_educational_from3"  size='3'/></td>
                                 <td><input type="text" class="Text" name="heigher_educational_to3"  size='3'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_degree_obtained3"  size='25'/></td>
+                                
+<!-- -------------start degree------------------->
+<!-- <td><input type="text" class="Text" name="heigher_educational_degree_obtained1"  size='25'/></td> -->
+<td>
+                                    <div class="custom-sele" id="select_degree_div2">
+                                        <select name="heigher_educational_degree_obtained3" id="select_degree_selection2" style="font-size:9px;">
+                                            <option value="">Select Here</option>
+                                            <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
+                                            <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
+                                            <option value="BSC Hons-Informtion System">BSC Hons-Informtion System</option>
+                                            <option value="BSC Hons-Information Technology">BSC Hons-Information Technology</option>
+                                            <option value="BSC Hons-Computer Engineering">BSC Hons-Computer Engineering</option>
+                                            <option value="BSC-Computer Science">BSC-Computer Science</option>
+                                            <option value="BSC-Software Engineering">BSC-Software Engineering</option>
+                                            <option value="BSC-Informtion System">BSC-Informtion System</option>
+                                            <option value="BSC-Information Technology">BSC-Information Technology</option>
+                                            <option value="BSC-Computer Engineering">BSC-Computer Engineering</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </td>
+
+                                <style>
+                                    #select_degree_selection2{
+                                        width:165px;
+                                        height:30px;
+                                        
+                                    }
+
+                                    #select_degree_div2{
+                                        
+                                        margin-top:-12px;
+                                    }
+
+
+                                </style>
+<!-- --------------end degree----------------- -->
+                                
                                 <td><input type="text" class="Text" name="heigher_educational_duration3"  size='11'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_class3" size='13'/></td>
+
+<!-- --------------start class-------------- -->
+                                <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
+                                <td>
+                                    <div class="custom-sele" id="select_class_div1">
+                                        <select name="heigher_educational_class3" id="select_class_selection1" style="font-size:9px;>
+                                            <option value="">Select Here</option>
+                                            <option value="Fisrt Class">Fisrt Class</option>
+                                            <option value="Second Upper">Second Upper</option>
+                                            <option value="Second Lower">Second Lower</option>
+                                            <option value="General">General</option>
+                                        
+                                        </select>
+                                    </div>
+                                </td>
+
+                                <style>
+                                    #select_class_selection1{
+                                        width:85px;
+                                        height:30px;
+                                        
+                                    }
+
+                                    #select_class_div1{
+                                        
+                                        margin-top:-12px;
+                                    }
+
+
+                                </style>
+
+<!-- --------------end class-------------- -->
+
                                 <td><input type="text" class="Text" name="heigher_educational_year3"  size='4'/></td>
                                 <td><input type="text" class="Text" name="heigher_educational_year_no3"  size='7'/></td>
 
@@ -445,9 +696,78 @@ if(isset($this->session->userdata['logged_in'])){
                                 <td><input type="text" class="Text" name="heigher_educational_university4"  size='25'/></td>
                                 <td><input type="text" class="Text" name="heigher_educational_from4"  size='3'/></td>
                                 <td><input type="text" class="Text" name="heigher_educational_to4"  size='3'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_degree_obtained4"  size='25'/></td>
+                                
+<!-- -------------start degree------------------->
+<!-- <td><input type="text" class="Text" name="heigher_educational_degree_obtained1"  size='25'/></td> -->
+<td>
+                                    <div class="custom-sele" id="select_degree_div2">
+                                        <select name="heigher_educational_degree_obtained4" id="select_degree_selection2" style="font-size:9px;">
+                                            <option value="">Select Here</option>
+                                            <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
+                                            <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
+                                            <option value="BSC Hons-Informtion System">BSC Hons-Informtion System</option>
+                                            <option value="BSC Hons-Information Technology">BSC Hons-Information Technology</option>
+                                            <option value="BSC Hons-Computer Engineering">BSC Hons-Computer Engineering</option>
+                                            <option value="BSC-Computer Science">BSC-Computer Science</option>
+                                            <option value="BSC-Software Engineering">BSC-Software Engineering</option>
+                                            <option value="BSC-Informtion System">BSC-Informtion System</option>
+                                            <option value="BSC-Information Technology">BSC-Information Technology</option>
+                                            <option value="BSC-Computer Engineering">BSC-Computer Engineering</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </td>
+
+                                <style>
+                                    #select_degree_selection2{
+                                        width:165px;
+                                        height:30px;
+                                        
+                                    }
+
+                                    #select_degree_div2{
+                                        
+                                        margin-top:-12px;
+                                    }
+
+
+                                </style>
+<!-- --------------end degree----------------- -->
+                                
                                 <td><input type="text" class="Text" name="heigher_educational_duration4"  size='11'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_class4" size='13'/></td>
+
+<!-- --------------start class-------------- -->
+                                <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
+                                <td>
+                                    <div class="custom-sele" id="select_class_div1">
+                                        <select name="heigher_educational_class4" id="select_class_selection1" style="font-size:9px;>
+                                            <option value="">Select Here</option>
+                                            <option value="Fisrt Class">Fisrt Class</option>
+                                            <option value="Second Upper">Second Upper</option>
+                                            <option value="Second Lower">Second Lower</option>
+                                            <option value="General">General</option>
+                                        
+                                        </select>
+                                    </div>
+                                </td>
+
+                                <style>
+                                    #select_class_selection1{
+                                        width:85px;
+                                        height:30px;
+                                        
+                                    }
+
+                                    #select_class_div1{
+                                        
+                                        margin-top:-12px;
+                                    }
+
+
+                                </style>
+
+<!-- --------------end class-------------- -->
+
                                 <td><input type="text" class="Text" name="heigher_educational_year4"  size='4'/></td>
                                 <td><input type="text" class="Text" name="heigher_educational_year_no4"  size='7'/></td>
 
@@ -528,33 +848,33 @@ if(isset($this->session->userdata['logged_in'])){
 
                             <tr class="tr">
                                 
-                                <td><input type="text" class="Text" name="any_other_qualifications_institution1"  size='30'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_from1"  size='6'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_to1"  size='6'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_duration1"  size='17'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_type_of_qualification1"  size='36'/></td>
+                                <td><input type="text" class="Text" name="professonal_qualifications_institution1"  size='30'/></td>
+                                <td><input type="text" class="Text" name="professonal_qualifications_from1"  size='6'/></td>
+                                <td><input type="text" class="Text" name="professonal_qualifications_to1"  size='6'/></td>
+                                <td><input type="text" class="Text" name="professonal_qualifications_duration1"  size='17'/></td>
+                                <td><input type="text" class="Text" name="professonal_qualifications_type_of_qualification1"  size='36'/></td>
                                 <td><span class="lblStatus"></span></td>
 
                             </tr>    
 
                             <tr class="tr">
                                 
-                                <td><input type="text" class="Text" name="any_other_qualifications_institution2"  size='30'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_from2"  size='6'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_to2"  size='6'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_duration2"  size='17'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_type_of_qualification2"  size='36'/></td>
+                                <td><input type="text" class="Text" name="professonal_qualifications_institution2"  size='30'/></td>
+                                <td><input type="text" class="Text" name="professonal_qualifications_from2"  size='6'/></td>
+                                <td><input type="text" class="Text" name="professonal_qualifications_to2"  size='6'/></td>
+                                <td><input type="text" class="Text" name="professonal_qualifications_duration2"  size='17'/></td>
+                                <td><input type="text" class="Text" name="professonal_qualifications_type_of_qualification2"  size='36'/></td>
                                 <td><span class="lblStatus"></span></td>
 
                             </tr>
 
                             <tr class="tr">
-                                
-                                <td><input type="text" class="Text" name="any_other_qualifications_institution3"  size='30'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_from3"  size='6'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_to3"  size='6'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_duration3"  size='17'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_type_of_qualification3"  size='36'/></td>
+                            
+                                <td><input type="text" class="Text" name="professonal_qualifications_institution3"  size='30'/></td>
+                                <td><input type="text" class="Text" name="professonal_qualifications_from3"  size='6'/></td>
+                                <td><input type="text" class="Text" name="professonal_qualifications_to3"  size='6'/></td>
+                                <td><input type="text" class="Text" name="professonal_qualifications_duration3"  size='17'/></td>
+                                <td><input type="text" class="Text" name="professonal_qualifications_type_of_qualification3"  size='36'/></td>
                                 <td><span class="lblStatus"></span></td>
 
                             </tr>
@@ -691,7 +1011,7 @@ if(isset($this->session->userdata['logged_in'])){
                 <!-- start referee table-->        
                 <h4 id="title1">Referees </h4>
                     <div class="content3">
-                        <table id="table1">
+                        <table id="table5">
 
                             <tr>
                                 
@@ -739,6 +1059,12 @@ if(isset($this->session->userdata['logged_in'])){
                         </table>
                     </div>
 
+
+<style>
+#table5{
+    margin-top:10px;
+}
+</style>
             <!-- end referee table-->  
 
                     <!-- notice-->   

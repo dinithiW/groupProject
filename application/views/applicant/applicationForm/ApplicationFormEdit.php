@@ -104,36 +104,76 @@ if(isset($this->session->userdata['logged_in'])){
                     <h5 id="lableForCivilStatus">CIVIL STATUS</h5>
                     <h5 id="labbleForCitizenship">IF A CITIZEN OF SRI LANKA HOW OBTAINED</h5>
 
+                    <style>
+                        #labbleForCitizenship{
+                            margin-left:500px;
+                        }
+                    </style>
+
+                    <style>
+                        #lableForCivilStatus{
+                            margin-left:-30px;
+                        }
+                    </style>
 
                     <div class="custom-sele dropboxGender" style="width:180px; height:100px;">
-                        <select name="selectGender" value="<?php  echo $row->GENDER;?>">
+                        <select name="selectGender" value="<?php  echo $row->GENDER;?>" id="selectCategory_gender">
                             <option value="<?php  echo $row->GENDER;?>"><?php  echo $row->GENDER;?></option>
                             <option value="MALE">MALE:</option>
                             <option value="FEMALE">FEMALE</option>
                         </select>
                     </div>
 
+                    <style>
+                        #selectCategory_gender{
+                            margin-left:140px;
+                            
+                        }
+                    </style>
+
                     <div class="custom-sele dropboxCivil" style="width:100px; height:50px;">
-                        <select name="selectCivilStatus" id="selectCategory" value="<?php  echo $row->CIVIL_STATUS;?>">
+                        <select name="selectCivilStatus" id="selectCategory_civilstate" value="<?php  echo $row->CIVIL_STATUS;?>">
                             <option value="<?php  echo $row->CIVIL_STATUS;?>"><?php  echo $row->CIVIL_STATUS;?></option>
                             <option value="MARRIED">MARRIED</option>
                             <option value="UN MARRIED">UN MARRIED</option>
                         </select>
                     </div>
 
+                    <style>
+                        #selectCategory_civilstate{
+                            margin-left:120px;
+                            
+                        }
+                    </style>
+
                     <div class="custom-sele dropboxCitizenship" style="width:100px; height:50px;">
-                        <select name="selectCitizenship" id="selectCategory">
+                        <select name="selectCitizenship" id="selectCategory_citizenship">
                             <option value="<?php  echo $row->CITIZENSHIP;?>"><?php  echo $row->CITIZENSHIP;?></option>
                             <option value="BY DESCENT">BY DESCENT</option>
                             <option value="BY REGISTRATION">BY REGISTRATION</option>
                         </select>
                     </div>
                     
+                    <style>
+                        #selectCategory_citizenship{
+                            margin-left:100px;
+                            
+                        }
+                    </style>
+
                     <!-- start the calender-->
-                    <div class="calender1">
+                    <div class="calender1" id ="birth_date_id">
                         <h4 id="birth-date"> Date of Birth</h4>
                         <input type="date" data-date-inline-picker="true"  name="birth_date" value="<?php  echo $row->DATE_OF_BIRTH;?>" />
                     </div>
+
+
+                    <style>
+                        #birth_date_id{
+                            margin-left:330px;
+                            
+                        }
+                    </style>
                     <!-- end the calender-->
 
                     <!-- start the age-->
@@ -378,7 +418,7 @@ if(isset($this->session->userdata['logged_in'])){
                 </div>
 
 
-                <div class="custom-sele dropboxSelectPost" style="width:100px; height:50px;">
+                <div class="custom-select" style="width:300px; height:50px;">
                     <select name="postApplyFor" id="selectCategory1">
                     
                         <option value="<?php  echo $row->POST_APPLY_FOR;?>"><?php  echo $row->POST_APPLY_FOR;?></option>
@@ -387,16 +427,7 @@ if(isset($this->session->userdata['logged_in'])){
                     </select>
                 </div>
 
-                <div class="custom-select " style="width:430px; height:50px;">
-                   <select name="selectDegree" id="selectCategory">
-                        
-                        <option value="<?php  echo $row->DEGREE;?>"><?php  echo $row->DEGREE;?></option>
-                        <option value="First Class(Bachelore of computer science)">First Class(Bachelore of computer science)</option>
-                        <option value="Second Upper(Bachelore of computer science)">Second Upper(Bachelore of computer science)</option>
-                        <option value="Second Lower(Bachelore of computer science)">Second Lower(Bachelore of computer science)</option>
-                        <option value="General(Bachelore of computer science)">General(Bachelore of computer science)</option>
-                    </select>
-                </div>
+               
 
                 
                 <h4 id="secondryEducationalTitle">Secondry Educational Details</h4><br/>
@@ -419,10 +450,14 @@ if(isset($this->session->userdata['logged_in'])){
                         /**
                          * this part is use for get data from seconadary educational details table
                          * and set to visible the data above mentioned
+                         * i check the row number for this 
+                         * because, identify for the correct row
                          */
                         if($secondary_educational_details->num_rows()){
                             foreach($secondary_educational_details->result() as $row_in_secondary_education){
 
+
+                                if($row_in_secondary_education->ROW_NUMBER=='1'){
                         ?>
 
                             <tr class="tr">
@@ -432,22 +467,62 @@ if(isset($this->session->userdata['logged_in'])){
                                 <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->EXAMINATION_PASSED;?>" name="secondary_educational_examination1" size='42'/></td>
                                 <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->YEAR;?>" name="secondary_educational_year1" size='5'/></td>
                                 <td><span class="lblStatus"></span></td>
+                        
+                        <?php
+                                }
+
+                                if($row_in_secondary_education->ROW_NUMBER=='2'){
+                        
+                        ?>
+
+                            <tr class="tr">
+                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->SCHOOL_NAME;?>"  name="secondary_educational_school_name2" size='42'/></td>
+                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->FROM;?>" name="secondary_educational_from2" size='8'/></td>
+                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->TO;?>" name="secondary_educational_to2" size='8'/></td>
+                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->EXAMINATION_PASSED;?>" name="secondary_educational_examination2" size='42'/></td>
+                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->YEAR;?>" name="secondary_educational_year2" size='5'/></td>
+                                <td><span class="lblStatus"></span></td>
+                            </tr>
 
                         <?php
-                                
+                                }
+
+                                if($row_in_secondary_education->ROW_NUMBER=='2'){
+                        
+                        ?>
+
+                            <tr class="tr">
+                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->SCHOOL_NAME;?>"  name="secondary_educational_school_name3" size='42'/></td>
+                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->FROM;?>" name="secondary_educational_from3" size='8'/></td>
+                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->TO;?>" name="secondary_educational_to3" size='8'/></td>
+                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->EXAMINATION_PASSED;?>" name="secondary_educational_examination3" size='42'/></td>
+                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->YEAR;?>" name="secondary_educational_year3" size='5'/></td>
+                                <td><span class="lblStatus"></span></td>
+
+                        <?php
+                                }
+
+                                if($row_in_secondary_education->ROW_NUMBER=='2'){
+                        
+                        ?>
+
+                            <tr class="tr">
+                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->SCHOOL_NAME;?>"  name="secondary_educational_school_name4" size='42'/></td>
+                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->FROM;?>" name="secondary_educational_from4" size='8'/></td>
+                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->TO;?>" name="secondary_educational_to4" size='8'/></td>
+                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->EXAMINATION_PASSED;?>" name="secondary_educational_examination4" size='42'/></td>
+                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->YEAR;?>" name="secondary_educational_year4" size='5'/></td>
+                                <td><span class="lblStatus"></span></td>
+
+                            </tr>
+
+                        <?php
+                                }  
                             }
                         }
                         
                         ?>                      
-                            <tr class="tr">
-                                <td><input type="text" class="Text"  name="secondary_educational_school_name4" size='42'/></td>
-                                <td><input type="text" class="Text"  name="secondary_educational_from4" size='8'/></td>
-                                <td><input type="text" class="Text"  name="secondary_educational_to4" size='8'/></td>
-                                <td><input type="text" class="Text"  name="secondary_educational_examination4" size='42'/></td>
-                                <td><input type="text" class="Text"  name="secondary_educational_year4" size='5'/></td>
-                            <td><span class="lblStatus"></span></td>
                             
-                            </tr>
                         </table>
                     </div><!-- end of the Secondry Educational Details table-->
 
@@ -477,6 +552,7 @@ if(isset($this->session->userdata['logged_in'])){
                         if($higher_educational_details->num_rows()){
                             foreach($higher_educational_details->result() as $row_in_higher_education){
 
+                                if($row_in_higher_education->ROW_NUMBER=='1'){
                         ?>
                             <tr class="tr">
 
@@ -489,25 +565,62 @@ if(isset($this->session->userdata['logged_in'])){
                                 <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->YEAR; ?>" name="heigher_educational_year1"  size='4'/></td>
                                 <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->INDEX_NO; ?>" name="heigher_educational_year_no1"  size='7'/></td>
                                 <td><span class="lblStatus"></span></td>
-
+                    
                         <?php
+                                }
+                                if($row_in_higher_education->ROW_NUMBER=='2'){
+                        ?>
+                                <tr class="tr">
+
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->UNIVERSITY ?>" name="heigher_educational_university2"  size='25'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->FROM; ?>" name="heigher_educational_from2"  size='3'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->TO; ?>" name="heigher_educational_to2"  size='3'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->DEGREE_OBTAINED; ?>" name="heigher_educational_degree_obtained2"  size='25'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->DURATION; ?>"name="heigher_educational_duration2"  size='11'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->CLASS; ?>"name="heigher_educational_class2" size='13'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->YEAR; ?>" name="heigher_educational_year2"  size='4'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->INDEX_NO; ?>" name="heigher_educational_year_no2"  size='7'/></td>
+                                <td><span class="lblStatus"></span></td>                       
+                        <?php
+                                }
+                                if($row_in_higher_education->ROW_NUMBER=='3'){
+                        ?>
+                        
+                        <tr class="tr">
+
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->UNIVERSITY ?>" name="heigher_educational_university3"  size='25'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->FROM; ?>" name="heigher_educational_from3"  size='3'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->TO; ?>" name="heigher_educational_to3"  size='3'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->DEGREE_OBTAINED; ?>" name="heigher_educational_degree_obtained3"  size='25'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->DURATION; ?>"name="heigher_educational_duration3"  size='11'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->CLASS; ?>"name="heigher_educational_class3" size='13'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->YEAR; ?>" name="heigher_educational_year3"  size='4'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->INDEX_NO; ?>" name="heigher_educational_year_no3"  size='7'/></td>
+                                <td><span class="lblStatus"></span></td>  
+                        
+                        <?php
+                                }
+                                if($row_in_higher_education->ROW_NUMBER=='4'){
+                        ?>
+                        <tr class="tr">
+
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->UNIVERSITY ?>" name="heigher_educational_university4"  size='25'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->FROM; ?>" name="heigher_educational_from4"  size='3'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->TO; ?>" name="heigher_educational_to4"  size='3'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->DEGREE_OBTAINED; ?>" name="heigher_educational_degree_obtained4"  size='25'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->DURATION; ?>"name="heigher_educational_duration4"  size='11'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->CLASS; ?>"name="heigher_educational_class4" size='13'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->YEAR; ?>" name="heigher_educational_year4"  size='4'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->INDEX_NO; ?>" name="heigher_educational_year_no4"  size='7'/></td>
+                                <td><span class="lblStatus"></span></td>  
+                            
+                        <?php
+
+                                }
                             }
                         }
                         
                         ?> 
-
-                            <tr class="tr">
-
-                                <td><input type="text" class="Text" name="heigher_educational_university4"  size='25'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_from4"  size='3'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_to4"  size='3'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_degree_obtained4"  size='25'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_duration4"  size='11'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_class4" size='13'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_year4"  size='4'/></td>
-                                <td><input type="text" class="Text" name="heigher_educational_year_no4"  size='7'/></td>
-
-                            <td><span class="lblStatus"></span></td>
 
                             </tr>
                         </table>
@@ -535,7 +648,8 @@ if(isset($this->session->userdata['logged_in'])){
                              */
                             if($any_other_qualifications->num_rows()){
                                 foreach($any_other_qualifications->result() as $row_in_other_qualification){
-
+                            
+                                    if($row_in_other_qualification->ROW_NUMBER=='1'){
                         ?>
 
                             <tr class="tr">
@@ -546,18 +660,41 @@ if(isset($this->session->userdata['logged_in'])){
                                 <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->YEAR; ?>" name="any_other_qualifications_year1"  size='13'/></td>
                                 <td><span class="lblStatus"></span></td>
 
+                                    <?php
+                                    }
+                                    
+                                    if($row_in_other_qualification->ROW_NUMBER=='2'){
+                                    ?>
+                            <tr class="tr">
+                                
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->INSTITUTION; ?>" name="any_other_qualifications_university2"  size='50'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->DEPLOMA; ?>" name="any_other_qualifications_deploma2"  size='32'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->DURAION; ?>" name="any_other_qualifications_duration2"  size='17'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->YEAR; ?>" name="any_other_qualifications_year2"  size='13'/></td>
+                                <td><span class="lblStatus"></span></td>
+
+
+                                    <?php
+                                    }
+                                    
+                                    if($row_in_other_qualification->ROW_NUMBER=='3'){
+                                    ?>
+                            <tr class="tr">
+                                
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->INSTITUTION; ?>" name="any_other_qualifications_university3"  size='50'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->DEPLOMA; ?>" name="any_other_qualifications_deploma3"  size='32'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->DURAION; ?>" name="any_other_qualifications_duration3"  size='17'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->YEAR; ?>" name="any_other_qualifications_year3"  size='13'/></td>
+                                <td><span class="lblStatus"></span></td>
+
+
                         <?php
+                                    }
                                 }
                             }
                         
                         ?>
-                            <tr class="tr">
-                                
-                                <td><input type="text" class="Text" name="any_other_qualifications_university2"  size='50'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_deploma2"  size='32'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_duration2"  size='17'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_year2"  size='13'/></td>
-                                <td><span class="lblStatus"></span></td>
+                            
 
                         </table>
                     </div>
@@ -589,46 +726,70 @@ if(isset($this->session->userdata['logged_in'])){
                                 <th>Type of Qualifications</th>
                             </tr>
 
-
-                            <?php
-
+<!-- ----------------------------- -->
+<?php
                             /**
                              * this part is use for get data from any professional qualificational details table
                              * and set to visible the data above mentioned
                              */
-                            if($professional_qualifications->num_rows()){
-                                foreach($professional_qualifications->result() as $row_in_professional_qualification){
+                        if($professional_qualifications->num_rows()){
+                            foreach($professional_qualifications->result() as $row_in_professional_qualification){
 
-                            ?>
-
+                                if($row_in_professional_qualification->ROW_NUMBER=='1'){
+                        ?>
                             <tr class="tr">
+
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->INSTITUTION; ?>" name="any_other_qualifications_institution1"  size='30'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->FROM; ?>" name="any_other_qualifications_from1"  size='6'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TO; ?>" name="any_other_qualifications_to1"  size='6'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->DURATION; ?>" name="any_other_qualifications_duration1"  size='17'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TYPE_OF_QUALIFICATION; ?>" name="any_other_qualifications_type_of_qualification1"  size='36'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->INSTITUTION; ?>" name="professonal_qualifications_institution1"  size='30'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->FROM; ?>" name="professonal_qualifications_from1"  size='6'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TO; ?>" name="professonal_qualifications_to1"  size='6'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->DURATION; ?>" name="professonal_qualifications_duration1"  size='17'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TYPE_OF_QUALIFICATION; ?>" name="professonal_qualifications_type_of_qualification1"  size='36'/></td>
                                 <td><span class="lblStatus"></span></td>
 
-                            </tr>    
-
-                            <?php
+                            </tr>  
+                    
+                        <?php
                                 }
-                            }
-                        
-                            ?>
-
+                                if($row_in_professional_qualification->ROW_NUMBER=='2'){
+                        ?>
                             <tr class="tr">
                                 
-                                <td><input type="text" class="Text" name="any_other_qualifications_institution3"  size='30'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_from3"  size='6'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_to3"  size='6'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_duration3"  size='17'/></td>
-                                <td><input type="text" class="Text" name="any_other_qualifications_type_of_qualification3"  size='36'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->INSTITUTION; ?>" name="professonal_qualifications_institution2"  size='30'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->FROM; ?>" name="professonal_qualifications_from2"  size='6'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TO; ?>" name="professonal_qualifications_to2"  size='6'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->DURATION; ?>" name="professonal_qualifications_duration2"  size='17'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TYPE_OF_QUALIFICATION; ?>" name="professonal_qualifications_type_of_qualification2"  size='36'/></td>
                                 <td><span class="lblStatus"></span></td>
+
+                            </tr>                       
+                        <?php
+                                }
+                                if($row_in_professional_qualification->ROW_NUMBER=='3'){
+                        ?>
+                        
+                            <tr class="tr">
+                                
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->INSTITUTION; ?>" name="professonal_qualifications_institution3"  size='30'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->FROM; ?>" name="professonal_qualifications_from3"  size='6'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TO; ?>" name="professonal_qualifications_to3"  size='6'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->DURATION; ?>" name="professonal_qualifications_duration3"  size='17'/></td>
+                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TYPE_OF_QUALIFICATION; ?>" name="professonal_qualifications_type_of_qualification3"  size='36'/></td>
+                                <td><span class="lblStatus"></span></td>
+
+                            </tr>  
+                        
+                        <?php
+                                }                               
+                            }
+                        }
+                        
+                        ?> 
 
                             </tr>
                         </table>
+
+<!-- -------------------end----------------------------->
                     </div><!-- end of the table1-->
 
 
@@ -804,17 +965,17 @@ if(isset($this->session->userdata['logged_in'])){
                                 <th>Contact No</th>
                             </tr>
                             
-
-                            <?php
-
+<!-- ----------start------------------>
+<?php
                             /**
-                             * this part is use for get data from language proficiency details table
+                             * this part is use for get data from any professional qualificational details table
                              * and set to visible the data above mentioned
                              */
-                            if($referees->num_rows()){
-                                foreach($referees->result() as $row_in_referees){
-                            ?>
+                        if($referees->num_rows()){
+                            foreach($referees->result() as $row_in_referees){
 
+                                if($row_in_referees->ROW_NUMBER=='1'){
+                        ?>
                             <tr class="tr">
                                 
                                 <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->NAME;?>" name="referees_name1" size='30'/></td>
@@ -824,26 +985,48 @@ if(isset($this->session->userdata['logged_in'])){
                                 <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->CONTACT_NO;?>" name="referees_contact1" size='10'/></td>
                                 <td><span class="lblStatus"></span></td>
 
-                            </tr>
-
-                            <?php
+                            </tr>  
+                    
+                        <?php
                                 }
-                            }
-                        
-                            ?>
-
+                                if($row_in_referees->ROW_NUMBER=='2'){
+                        ?>
                             <tr class="tr">
+                                
+                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->NAME;?>" name="referees_name2" size='30'/></td>
+                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->DESIGNATION;?>" name="referees_designation2" size='10'/></td>
+                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->ADDRESS;?>" name="referees_address2" size='30'/></td>
+                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->EMAIL;?>" name="referees_email2" size='20'/></td>
+                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->CONTACT_NO;?>" name="referees_contact2" size='10'/></td>
+                                <td><span class="lblStatus"></span></td>
 
-                                <td><input type="text" class="Text" placeholder="" name="referees_name3" size='30'/></td>
-                                <td><input type="text" class="Text" placeholder="" name="referees_designation3" size='10'/></td>
-                                <td><input type="text" class="Text" placeholder="" name="referees_address3" size='30'/></td>
-                                <td><input type="text" class="Text" placeholder="" name="referees_email3" size='20'/></td>
-                                <td><input type="text" class="Text" placeholder="" name="referees_contact3" size='10'/></td>
+                            </tr>                     
+                        <?php
+                                }
+                                if($row_in_referees->ROW_NUMBER=='3'){
+                        ?>
+                        
+                            <tr class="tr">
+                                
+                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->NAME;?>" name="referees_name3" size='30'/></td>
+                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->DESIGNATION;?>" name="referees_designation3" size='10'/></td>
+                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->ADDRESS;?>" name="referees_address3" size='30'/></td>
+                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->EMAIL;?>" name="referees_email3" size='20'/></td>
+                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->CONTACT_NO;?>" name="referees_contact3" size='10'/></td>
                                 <td><span class="lblStatus"></span></td>
 
                             </tr>
+                        
+                        <?php
+                                }                               
+                            }
+                        }
+                        
+                        ?> 
+
                             </tr>
                         </table>
+<!-- ---------------end ------------------------>
                     </div>
 
             <!-- end referee table-->  
@@ -866,6 +1049,9 @@ if(isset($this->session->userdata['logged_in'])){
                      <div class="calender" >
                         <input id = "calender1"  type ="date" value ="<?php echo $row_in_more_details->SUBMISSION_DATE; ?>"  name="current_date" data-date-inline-picker="true" />
                     </div>
+
+
+                    <!-- applicant can select the date but however the system will find and insert the corredt date -->
 
                     
 

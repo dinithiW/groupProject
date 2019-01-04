@@ -32,7 +32,8 @@ class PanelMembers extends CI_Model{
         /*if($id != 0){
             $this->db->where("USERNAME !=", $oldEmail);
         }else{*/
-            $this->db->where("USERNAME", $username); 
+        $this->db->where("USERNAME", $username);
+        //$this->db->where("") 
        /* }*/
         $query = $this->db->get();  
         //$this->db->where("isDeleted", 0);
@@ -304,7 +305,7 @@ class PanelMembers extends CI_Model{
         $this->form_validation->set_rules('lname','Last Name','trim|required|max_length[255]');
         $this->form_validation->set_rules('mobile','Mobile Number','required|min_length[10]');
         $this->form_validation->set_rules('gender','Gender','trim|required');
-        $this->form_validation->set_rules('email','Email','trim|required|valid_email|max_length[255]');
+        //$this->form_validation->set_rules('email','Email','trim|required|valid_email|max_length[255]');
         $this->form_validation->set_rules('designation','Designation','trim|required|max_length[255]');
         $this->form_validation->set_rules('address','Address','trim|required|max_length[255]');
 
@@ -324,11 +325,11 @@ class PanelMembers extends CI_Model{
                 $address = $this->input->post('address');
                 $mobile = $this->input->post('mobile');
                 
-                $userInfoPanel = array('FNAME'=>$fname,'LNAME'=>$lname,'EMAIL'=>$email,'GENDER'=>$gender ,'CONTACT_NUMBER'=>$mobile,'DESIGNATION'=>$designation,'ADDRESS'=>$address);
+                $userInfoPanel = array('FNAME'=>$fname,'LNAME'=>$lname,'GENDER'=>$gender ,'CONTACT_NUMBER'=>$mobile,'DESIGNATION'=>$designation,'ADDRESS'=>$address);
 
                 $name = $fname." ".$lname;
 
-                $userInfoUsers = array('USERNAME'=>$email,'NAME'=> $name);
+                $userInfoUsers = array('NAME'=> $name);
 
                 $result = $this->editUsers($userInfoUsers,$oldEmail);
                     if($result > 0){

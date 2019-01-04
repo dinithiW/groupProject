@@ -102,13 +102,13 @@ if($checking=='1'){
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="<?php echo base_url(); ?>assets/dist/img/avatar.png" class="user-image" alt="User Image"/>
+                  <img src="<?php echo base_url(); ?>assets/dist/img/girl.jpeg" class="user-image" alt="User Image"/>
                   <span class="hidden-xs"><?php echo $name; ?></span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
-                    <img src="<?php echo base_url(); ?>assets/dist/img/avatar.png" class="img-circle" alt="User Image" />
+                    <img src="<?php echo base_url(); ?>assets/dist/img/girl.jpeg" class="img-circle" alt="User Image" />
                     <p>
                       <?php echo $name; ?>
                       <small><?php echo $role_text; ?></small>
@@ -163,9 +163,16 @@ if($checking=='1'){
             </li>
 
             <li class="treeview">
-              <a href="<?= base_url('OperatorIndex/select')?>" >
+              <a href="<?= base_url('OperatorIndex/categorize')?>" >
                 <i class="fa fa-users"></i>
                 <span>Categorize Applicants</span>
+              </a>
+            </li>
+
+            <li class="treeview">
+              <a href="<?= base_url('OperatorIndex/viewAll')?>" >
+                <i class="fa fa-users"></i>
+                <span>View All Applicants</span>
               </a>
             </li>
 
@@ -260,19 +267,19 @@ if($checking=='1'){
             {
             ?>
             <li class="treeview">
-              <a href="<?php echo base_url(); ?>userListing">
+              <a href="<?= base_url('SAR/advertisement') ?>">
                 <i class="fa fa-users"></i>
                 <span>Advertisement</span>
               </a>
             </li>
             <li class="treeview">
-              <a href="#" >
+              <a href="<?= base_url('applicants') ?>" >
                 <i class="fa fa-files-o"></i>
                 <span>Applicants</span>
               </a>
             </li>
              <li class="treeview">
-              <a href="#" >
+              <a href="<?= base_url('candidateList') ?>" >
                 <i class="fa fa-files-o"></i>
                 <span>Candidates</span>
               </a>

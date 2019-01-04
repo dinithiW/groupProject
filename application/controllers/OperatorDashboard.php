@@ -76,9 +76,9 @@ class OperatorDashboard extends CI_Controller{
 
     public function sendAdToSAR(){
        
-        $this->load->view('users/operator/header');
+        $this->load->view('includes/header');
         $this->load->view('users/operator/sendEmail');
-        $this->load->view('users/operator/footer');
+        $this->load->view('includes/footer');
     }
 
     //displays all the panel members
@@ -115,7 +115,7 @@ class OperatorDashboard extends CI_Controller{
     public function sendEmail(){
         $this->load->view('users/operator/header');
         $this->load->view('users/operator/showEmails');
-        $this->load->view('includes/footer');
+        //$this->load->view('includes/footer');
     }
 
     public function emailSuccessMessage(){
@@ -139,7 +139,7 @@ class OperatorDashboard extends CI_Controller{
         $userId = $this->input->post("userId");
         $username = $this->input->post("email");
         $this->load->model('operator/PanelMembers');
-        $result = $this->PanelMembers->checkEmailExists($username);
+        $result = $this->PanelMembers->checkEmailExists($username, $userId);
         /*if(empty($userId)){
             echo"1";
             
@@ -184,9 +184,11 @@ class OperatorDashboard extends CI_Controller{
         return $taskNum;
     }
 
-    public function selectCandidates(){
+    public function viewAllCandidates(){
+        $this->load->model("applicant_model");
+        $data['array'] = $this->applicant_model->getAll();
         $this->load->view('includes/header');
-        $this->load->view('users/operator/selectCandidates');
+        $this->load->view('users/operator/allCandidates', $data);
         $this->load->view('includes/footer');
     }
 
@@ -196,6 +198,32 @@ class OperatorDashboard extends CI_Controller{
         $this->load->view('includes/footer');
     }
 
-    
+    public function categorizeHome(){
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/categorizeHome');
+        $this->load->view('includes/footer');
+    }
+
+    public function directTo(){
+        echo"sldfhhhffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff";
+        $position = $_POST['vacancy'];
+        if($position=="Lecturer Probationary"){
+            redirect(base_url()."OperatorIndex/lpCategory");
+        }else{
+            redirect(base_url()."OperatorIndex/seniorLecturer");
+        }
+    }
+
+    public function showLpCategories(){
+
+    }
+
+    public function showSeniorLecturer(){
+        $this->load->model("applicant_model");
+        $data['array'] = $this->applicant_model->getAll();
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/seniorLecturer',$data);
+        $this->load->view('includes/footer');
+    }
 }
 ?>
