@@ -9,7 +9,8 @@ class DirectorDashboard extends CI_Controller{
 	public function index(){
         $this->load->view('includes/header');
         $this->load->view('home');
-        $this->load->view('includes/footer');
+		$this->load->view('includes/footer');
+		
 	}
 
 	public function adRequest(){
@@ -28,9 +29,13 @@ class DirectorDashboard extends CI_Controller{
 
 	public function viewApplicants(){
 		$this->load->view('includes/header');
-		$this->load->view('users/director/viewApplicants');
-		$this->load->view('includes/footer');
+		//$this->load->view('users/director/viewApplicants');
 		
+	 	$this->load->model('Director/applicantDetails');
+	 	$data['records'] = $this->applicantDetails->getdata();
+		 $this->load->view('users/director/viewApplicants', $data);
+		$this->load->view('includes/footer');
+		 
 	}
 
 	public function approveSelected(){

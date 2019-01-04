@@ -10,4 +10,10 @@ class applicantDetails extends CI_Model{
         $this->load->database();
     }
 
+    function getData(){
+        $query = $this->db->get('Vacancies');
+
+        return $query->result();
+    }
+}
 ?>

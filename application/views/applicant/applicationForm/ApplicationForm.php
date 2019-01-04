@@ -372,7 +372,7 @@ if(isset($this->session->userdata['logged_in'])){
                 <style>
                     #dropdown_for_post{
                         margin-top:10px;
-                        background-color:red;
+                        
                     }
                 </style>
 
@@ -426,6 +426,7 @@ if(isset($this->session->userdata['logged_in'])){
                             
                             </tr>
                         </table>
+                        <a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
                     </div><!-- end of the Secondry Educational Details table-->
 
 
@@ -1082,19 +1083,22 @@ if(isset($this->session->userdata['logged_in'])){
                         <b>I here by declare that the particulars furnished by me in the application are true and accurate.<br> I am also aware that if any partuculars contains herein are found to be false or incorrect I am<br> liable to disqualification if the inaccuracy is discovered before the selection and dimissal without any compensation if th inaccuracy is discovered after the appointment</b>
                     </h4> 
 
-                     <div class="calender" >
-                        <input id = "calender1"  type ="date" name="current_date" data-date-inline-picker="true" />
-                    </div>
-
-                    
-
-                    <div class="iAgreeLable">
+                    <div class="iAgreeLable" id="agreement">
+                        
+                        <input id="" type="checkbox" name="vehicle"  value="" required>
                         <h5>I agree</h5>
                     </div> 
 
-                    <div class="iAgreeButton">
-                        <input id="" type="checkbox" name="vehicle"  value="">
-                    </div> 
+                    <style>
+                        #agreement{
+                            margin-top:20px;
+                            margin-left:380px;
+                        }
+                    </style>
+
+                    <!-- <div class="iAgreeButton">
+                        
+                    </div>  -->
 
                     <input type="button" name="previous" class="previous button" value="Previous">
                     <input type="submit" name="Submit" class="finish button finish" value="Finish">
