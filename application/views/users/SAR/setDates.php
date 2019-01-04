@@ -70,14 +70,18 @@
                            $count=$count+1;?>
                            <tr>
                                
-                                    <td> <?php echo $row->getfname()." " $row->getlname() ?></td>
+                                     <td> <?php echo $row->getfname()." ". $row->getlname() ?></td>
                                     <td> <?php echo $row->getemail() ?></td>
-                                    <td> <input type="checkbox" name="single_select" class="single_select" data-email=>
-                                
+                                    <td> <input type="checkbox" name="single_select" class="single_select" ></td>
+                                    <td><button type="button" name="email_button" class="btn btn-primary">send</button></td>
 
                            </tr>
+                           <?php
                         }
                     ?>
+                    <tr>
+                        <td></td>
+                    </tr>
                 </table>
                  </div>
 

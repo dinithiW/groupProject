@@ -48,8 +48,8 @@ class PanelDetails extends CI_model{
 			# code...
 			$Member=new PanelDetails();
 			$Member->setEmail($row->EMAIL);
-			$Member->setEmail($row->FNAME);
-			$Member->setEmail($row->LNAME);
+			$Member->setFname($row->FNAME);
+			$Member->setLname($row->LNAME);
 			array_push($Members, $Member);
 		}
 		return $Members;
