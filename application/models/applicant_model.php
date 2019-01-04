@@ -12,7 +12,7 @@ class applicant_model extends CI_Model
    public $oq;
    public $spe;
 
-   public function getAll(){
+   public function getAll($vacancy=""){
 
         $array = [];
 
@@ -21,6 +21,14 @@ class applicant_model extends CI_Model
         $this->db->select("FIRST_NAME");
         $this->db->select("LAST_NAME");
         //$this->db->select("DATE_OF_BIRTH");
+        if($vacancy == "SENIOR LECTURE GR. II"){
+            $this->db->where("POST_APPLY_FOR",$vacancy);
+            $this->db->where("INDEX_NUMBER NOT IN(SELECT INDEX_NUMBER FROM sl_selected)");
+        }
+
+        if($vacancy=="PROBATIONARY LECTURER"){
+            $this->db->where("POST_APPLY_FOR",$vacancy);
+        }
         $this->db->from("basic_personal_details");
         $query = $this->db->get();
         foreach($query->result() as $row){
@@ -83,7 +91,19 @@ class applicant_model extends CI_Model
         return $array;
    }
 
-   
+   public function selectedSL($applicantId){
+        $this->load->database();
+        $data = array('INDEX_NUMBER'=>$applicantId,'SELECTED'=>1);
+        $this->db->insert('sl_selected', $data);
+        
+   }
+
+   public function notSelectedSL($applicantId){
+        $this->load->database();
+        $data = array('INDEX_NUMBER'=>$applicantId,'SELECTED'=>0);
+        $this->db->insert('sl_selected', $data);
+        
+   }
 }
 
   
