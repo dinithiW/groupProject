@@ -15,6 +15,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="http://fonts.googleapis.com/css?family=Droid+Serif|Tangerine|Lobster:regular" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
     <style>
         a:hover { 
@@ -72,15 +74,18 @@
                                
                                      <td> <?php echo $row->getfname()." ". $row->getlname() ?></td>
                                     <td> <?php echo $row->getemail() ?></td>
-                                    <td> <input type="checkbox" name="single_select" class="single_select" ></td>
-                                    <td><button type="button" name="email_button" class="btn btn-primary">send</button></td>
+                                    <td> <input type="checkbox" name="single_select" class="single_select" data-email=<?php echo $row->getemail() ?> data-name=<?php echo $row->getfname()." ". $row->getlname() ?> ></td>
+                                    <td><button type="button" name="email_button" class="btn btn-primary" id="'.$count.'" data-email=<?php echo $row->getemail() ?> data-name=<?php echo $row->getfname()." ". $row->getlname() ?> data-action="single">send</button></td>
+
+                                
 
                            </tr>
                            <?php
                         }
                     ?>
                     <tr>
-                        <td></td>
+                        <td colspan="3"></td>
+                        <td><button type="button" name="emailBulk_button" class="btn btn-primary" id="bulk_email" data-action="bulk">Bulk</button>
                     </tr>
                 </table>
                  </div>

@@ -215,6 +215,13 @@ class OperatorDashboard extends CI_Controller{
     }
 
     public function showLpCategories(){
+        //$category = $_POST['category'];
+        //$this->load->model("applicant_model");
+        //$data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER",$category);
+        
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/lpCategories');
+        $this->load->view('includes/footer');
 
     }
 
