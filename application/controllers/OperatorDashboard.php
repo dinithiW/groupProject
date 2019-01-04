@@ -205,7 +205,7 @@ class OperatorDashboard extends CI_Controller{
     }
 
     public function directTo(){
-        //echo"sldfhhhffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff";
+        
         $position = $_POST['vacancy'];
         if($position=="Lecturer Probationary"){
             redirect(base_url()."OperatorIndex/lpCategory");

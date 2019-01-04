@@ -12,7 +12,7 @@ class applicant_model extends CI_Model
    public $oq;
    public $spe;
 
-   public function getAll($vacancy=""){
+   public function getAll($vacancy="",$category = ""){
 
         $array = [];
 
@@ -28,6 +28,16 @@ class applicant_model extends CI_Model
 
         if($vacancy=="PROBATIONARY LECTURER"){
             $this->db->where("POST_APPLY_FOR",$vacancy);
+            if($category=="1"){
+                $this->db->where("INDEX_NUMBER IN(SELECT DISTINCT INDEX_NUMBER FROM higher_educational_details WHERE  DEGREE_OBTAINED LIKE 'BSC Hons%' AND( CLASS = 'FIRST CLASS' OR CLASS = 'SECOND UPPER') )");
+            }else if($category=="2"){
+
+            }else if($category == "3"){
+
+            }else{
+
+            }
+
         }
         $this->db->from("basic_personal_details");
         $query = $this->db->get();
