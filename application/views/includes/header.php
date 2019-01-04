@@ -341,9 +341,14 @@ if($checking=='1'){
             }
             if($role == ROLE_APPLICANT)
             {
+
+              
+
+
             ?>
             <li class="treeview">
               <a href="<?php echo base_url(); ?>application_form_fill">
+
                 <i class="fa fa-files-o"></i>
                 <span>Fill Application</span>
               </a>

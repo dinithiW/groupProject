@@ -46,18 +46,31 @@ class ValidateLogin extends CI_Model{
 				if($row->PASSWORD == md5($password)){
 					$this->load->library('session');
 
+
+					// starting eidted by ruwan
+					$index_number = "";
+					if($row->USER_TYPE =="Applicant"){
+						$email =$row->USERNAME;
+						$index_number = $this->findTemporeryId($email);
+					}
+
+					// ending eidted by ruwan
+
 					$userdata = array(
 	        			'username'  => $row->USERNAME,
-	        			//'email'     => $row->EMAIL,
 	        			'usertype'  => $row->USER_TYPE,
 	        			'name'      => $row->NAME,
-	        			'logged_in' => TRUE
+						'logged_in' => TRUE,
+						'index_number' =>$index_number, 
+						'application_form_filled' => FALSE
+						
 					);
 				
 					$this->session->set_userdata($userdata);
-					
+
 					$this->load->view('includes/header');
 					$this->load->view('MainDashboard');
+					
 					$this->load->view('includes/footer');
 					
 				//incorrect password
@@ -77,6 +90,26 @@ class ValidateLogin extends CI_Model{
 		}
 	}
 
+	// starting eidted by ruwan
+
+
+	/**
+	 * this function is used for the get the temprorary id 
+	 * this return the temporary id
+	 * this add for the sesssion variable
+	 */
+
+	public function findTemporeryId($email){
+ 
+		$this->load->database();
+		$this->db->select('INDEX_NUMBER');
+		$this->db->from('temporary_index_number_for_applicants');
+		$this->db->where('USERNAME',$email);
+		$temporyId = $this->db->get()->row()->INDEX_NUMBER;
+		return $temporyId;
+	}
+
+	// ending eidted by ruwan
 
 
 }
