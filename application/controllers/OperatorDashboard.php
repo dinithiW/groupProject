@@ -312,5 +312,26 @@ class OperatorDashboard extends CI_Controller{
     public function moreInfo($applicantID){
 
     }
+
+    public function viewCategorizedApplicants(){
+
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/viewCategorizedHome');
+        $this->load->view('includes/footer');
+
+    }
+
+    public function searchCandidates(){
+
+        $vacancy = $_POST['vacancy'];
+
+        $this->load->model("applicant_model");  
+        $data['array'] = $this->applicant_model->getAllCategorized($vacancy);
+        $data['position'] = $vacancy;
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/viewCategorized',$data);
+        $this->load->view('includes/footer');
+
+    }
 }
 ?>
