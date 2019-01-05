@@ -53,8 +53,8 @@
         <select class="form-control input-lg" id="selectBox" name = "vacancy">
            <!-- <select class="form-control input-lg" id="selectBox" onchange="changeFunc();"> -->
           <option value = "Lecturer Probationary">Lecturer Probationary</option>
-          <option value = "Senior Lecturer Gr. I" selected>Senior Lecturer Gr. I</option>
-          <option value = "Senior Lecturer Gr. II" selected>Senior Lecturer Gr. II</option>
+          <option value = "Senior Lecturer Gr. I">Senior Lecturer Gr. I</option>
+          <option value = "Senior Lecturer Gr. II" >Senior Lecturer Gr. II</option>
         </select>
       </div>
       </div>
