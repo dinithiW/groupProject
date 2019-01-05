@@ -49,24 +49,35 @@ class ValidateLogin extends CI_Model{
 
 					// starting eidted by ruwan
 					$index_number = "";
+					$flag ="";
 					if($row->USER_TYPE =="Applicant"){
 						$email =$row->USERNAME;
-						$index_number = $this->findTemporeryId($email);
+						
+
+						if($this->findPermanentId($email)){
+							$index_number = $this->findPermanentId($email);
+							$flag ="yes";
+						}
+						else if($this->findTemporeryId($email)){
+							$index_number = $this->findTemporeryId($email);
+							$flag ="not";
+						}
 					}
 
 					// ending eidted by ruwan
 
 					$userdata = array(
-	        			'username'  => $row->USERNAME,
-	        			'usertype'  => $row->USER_TYPE,
-	        			'name'      => $row->NAME,
-						'logged_in' => TRUE,
+	        			'username'     => $row->USERNAME,
+	        			'usertype'     => $row->USER_TYPE,
+	        			'name'         => $row->NAME,
+						'logged_in'    => TRUE,
 						'index_number' =>$index_number, 
-						'application_form_filled' => "not"
-						
+						'application_form_filled' => $flag						
 					);
 				
 					$this->session->set_userdata($userdata);
+
+
 
 					$this->load->view('includes/header');
 					$this->load->view('MainDashboard');
@@ -107,6 +118,26 @@ class ValidateLogin extends CI_Model{
 		$this->db->where('USERNAME',$email);
 		$temporyId = $this->db->get()->row()->INDEX_NUMBER;
 		return $temporyId;
+	}
+
+	// ending eidted by ruwan
+
+
+	
+	/**
+	 * this function is used for the get the temprorary id 
+	 * this return the temporary id
+	 * this add for the sesssion variable
+	 */
+
+	public function findPermanentId($email){
+ 
+		$this->load->database();
+		$this->db->select('INDEX_NUMBER');
+		$this->db->from('basic_personal_details');
+		$this->db->where('PERSONAL_EMAIL',$email);
+		$permanentId = $this->db->get()->row()->INDEX_NUMBER;
+		return $permanentId;
 	}
 
 	// ending eidted by ruwan
