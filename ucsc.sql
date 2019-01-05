@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 04, 2019 at 06:03 PM
+-- Generation Time: Jan 05, 2019 at 10:27 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.23
 
@@ -135,6 +135,7 @@ CREATE TABLE `applicats_more_details` (
 --
 -- Dumping data for table `applicats_more_details`
 --
+
 INSERT INTO `applicats_more_details` (`INDEX_NUMBER`, `EXPERIENCE_RELEVANT_TO_POST`, `RESEARCH_AND_PUBLICATION_DETAILS`, `ANY_OTHER_INFORMATION`, `SUBMISSION_DATE`) VALUES
 ('19px000', 'edited ', 'edited ', 'edited ', '1999-01-01'),
 ('19pr000', 'Good', 'Good', 'Good', '1888-08-10'),
@@ -146,6 +147,7 @@ INSERT INTO `applicats_more_details` (`INDEX_NUMBER`, `EXPERIENCE_RELEVANT_TO_PO
 ('19SE0068', 'dinithi', 'dinithi', 'dinithi', '19-01-04'),
 ('19PR010', 'experience', '/research', 'other in forms', '19-01-04'),
 ('19PR011', 'insti', 'insti', 'insti', '19-01-04');
+
 -- --------------------------------------------------------
 
 --
@@ -179,7 +181,7 @@ CREATE TABLE `basic_personal_details` (
 INSERT INTO `basic_personal_details` (`INDEX_NUMBER`, `FIRST_NAME`, `LAST_NAME`, `POSTAL_ADDRESS`, `PERMANENT_ADDRESS`, `NIC`, `CITIZENSHIP_NAME`, `PERSONAL_EMAIL`, `OFFICE_EMAIL`, `MOBILE_NUMBER`, `HOME_NUMBER`, `OFFICE_NUMBER`, `GENDER`, `CIVIL_STATUS`, `CITIZENSHIP`, `DATE_OF_BIRTH`, `POST_APPLY_FOR`) VALUES
 ('19PR002', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-24', 'PROBATIONARY LECTURER'),
 ('19PR003', 'final', 'final', 'final', 'final', 'final', 'final', 'final', 'final', 'final', 'final', 'final', 'MALE', 'MARRIED', 'BY DESCENT', '0000-00-00', 'PROBATIONARY LECTURER'),
-('19PR006', 'comma', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-24', 'SENIOR LECTURE GR. II'),
+('19PR006', 'comma', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-24', 'SENIOR LECTURE GR. I'),
 ('19PR010', 'santhush', 'lliyanage', 'galle', 'galle', '940660513', 'citizenship', 'santhush@gmail.com', 'santhush@gmail.com', '0772308519', '07723308519', '0772308519', 'MALE', 'UN MARRIED', 'BY REGISTR', '1994-06-03', 'PROBATIONARY LECTURER'),
 ('19PR011', 'namal', 'namal', 'namal', 'namal', 'namal', 'namal', 'namal@gmail.com', 'namal', 'namal', 'namal', 'namal', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-30', 'PROBATIONARY LECTURER'),
 ('19SE000', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-25', 'SENIOR LECTURE GR. II'),
@@ -188,8 +190,7 @@ INSERT INTO `basic_personal_details` (`INDEX_NUMBER`, `FIRST_NAME`, `LAST_NAME`,
 ('19SE005', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-15', 'SENIOR LECTURE GR. II'),
 ('19SE006', '/comma', '//finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-24', 'SENIOR LECTURE GR. II'),
 ('19SE0068', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'FEMALE', 'UN MARRIED', 'BY DESCENT', '1996-12-04', 'SENIOR LECTURE GR. II'),
-('19SE008', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'FEMALE', 'UN MARRIED', 'BY DESCENT', '1996-12-04', 'SENIOR LECTURE GR. II');
-
+('19SE008', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'FEMALE', 'UN MARRIED', 'BY DESCENT', '1996-12-04', 'SENIOR LECTURE GR. I');
 
 -- --------------------------------------------------------
 
@@ -238,19 +239,9 @@ CREATE TABLE `higher_educational_details` (
 --
 
 INSERT INTO `higher_educational_details` (`INDEX_NUMBER`, `ROW_NUMBER`, `DEGREE_CATEGORY`, `UNIVERSITY`, `FROM`, `TO`, `DEGREE_OBTAINED`, `DURATION`, `CLASS`, `YEAR`, `INDEX_NO`) VALUES
-('19PR011', '1', 'bachelor', 'ba_uni1', 0, 0, 'BSC Hons-Computer Science', 0, 'Fisrt Clas', 0, 'bain1'),
-('19PR011', '2', 'bachelor', 'ba_uni2', 0, 0, 'BSC Hons-Software Engineering', 0, 'Fisrt Clas', 0, 'bain2'),
-('19PR011', '3', 'bachelor', 'ba_uni3', 0, 0, 'BSC Hons-Informtion System', 0, 'Fisrt Clas', 0, 'bain3'),
-('19PR011', '4', 'bachelor', 'ba_uni4', 0, 0, 'BSC Hons-Information Technology', 0, 'Fisrt Clas', 0, 'bain4'),
-('19PR011', '1', 'master', 'ma_uni1', 0, 0, 'BSC-Computer Science', 0, '', 0, 'maIn1'),
-('19PR011', '2', 'master', 'ma_uni2', 0, 0, 'BSC-Software Engineering', 0, '', 0, 'maIn2'),
-('19PR011', '3', 'master', 'ma_uni3', 0, 0, 'BSC-Informtion System', 0, '', 0, 'maIn3'),
-('19PR011', '4', 'master', 'ma_uni4', 0, 0, 'BSC-Information Technology', 0, '', 0, 'maIn3'),
-('19PR011', '1', 'phd', 'p_uni1', 0, 0, 'BSC-Computer Science', 0, '', 0, 'pIn1'),
-('19PR011', '2', 'phd', 'p_uni2', 0, 0, 'BSC-Software Engineering', 0, '', 0, 'pIn2'),
-('19PR011', '3', 'phd', 'p_uni3', 0, 0, 'BSC-Informtion System', 0, '', 0, 'pIn3'),
-('19PR011', '4', 'phd', 'p_uni4', 0, 0, 'BSC-Information Technology', 0, '', 0, 'pIn4');
-
+('19PR002', '1', 'bachelor', 'alidshladh', 2000, 2016, 'BSC Hons. Computer Science', 6, 'first class', 2016, 'dfgdglkjdfg'),
+('19PR003', '2', 'bachelor', 'dsfgsgsgdgs', 2000, 2004, 'BSC Hons. Computer Science', 4, 'second upper', 2004, 'dgdfgdgdfgd'),
+('19PR011', '1', 'bachelors', 'koihoihoih', 2001, 2016, 'BSC Hons in Information t', 6, 'second lower', 2016, 'sdfsdf');
 
 -- --------------------------------------------------------
 
@@ -309,6 +300,7 @@ INSERT INTO `language_proficiency` (`INDEX_NUMBER`, `WORK_SINHALA`, `WORK_ENGLIS
 ('19SE0068', 'Very Good', 'No Knowledge', 'Good', 'No Knowledge', 'Very Good', 'Fair'),
 ('19PR010', 'Very Good', 'No Knowledge', 'Good', 'No Knowledge', 'Very Good', 'Fair'),
 ('19PR011', 'Good', 'Fair', 'Fair', 'Very Good', 'Very Good', 'No Knowledge');
+
 -- --------------------------------------------------------
 
 --
@@ -454,7 +446,6 @@ INSERT INTO `secondary_educational_details` (`INDEX_NUMBER`, `ROW_NUMBER`, `SCHO
 ('19PR011', '3', 'school', 0, 0, 'school', 0),
 ('19PR011', '4', 'school', 0, 0, 'school', 0);
 
-
 -- --------------------------------------------------------
 
 --
@@ -466,12 +457,16 @@ CREATE TABLE `sl_selected` (
   `SELECTED` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `sl_selected`
+-- Table structure for table `sl_selected_gradei`
 --
 
-INSERT INTO `sl_selected` (`INDEX_NUMBER`, `SELECTED`) VALUES
-('19SE002', 1);
+CREATE TABLE `sl_selected_gradei` (
+  `INDEX_NUMBER` varchar(100) NOT NULL,
+  `SELECTED` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -602,7 +597,8 @@ INSERT INTO `temporary_index_number_for_applicants` (`INDEX_NUMBER`, `USERNAME`,
 ('19012', 'kkk@gmail.com', 'kkk'),
 ('19013', 'aaaa@gmail.com', 'aaa'),
 ('19014', 'aaaaa@gmail.com', 'aaa'),
-('19015', 'aaaaaaaa@gmail.gom', 'aaaa');
+('19015', 'aaaaaaaa@gmail.gom', 'aaaa'),
+('19016', 'dinithi@gmail.com', 'Dinithi Nisansa Wickramaratne');
 
 -- --------------------------------------------------------
 
@@ -627,6 +623,7 @@ INSERT INTO `users` (`USERNAME`, `PASSWORD`, `USER_TYPE`, `NAME`) VALUES
 ('dasun@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'dasun bimsara'),
 ('david@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'david cameron'),
 ('dian@gmail.com', '202cb962ac59075b964b07152d234b70', 'Applicant', 'dian'),
+('dinithi@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Applicant', 'Dinithi Nisansa Wickramaratne'),
 ('diniwic654654k124@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Dinithi Wickramaratne'),
 ('diniwick124@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Dinithi Wickramaratne'),
 ('diniwicksdfsdfsfssdf124@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Dinithi Wickramaratne'),
@@ -700,7 +697,7 @@ ALTER TABLE `applicants`
 --
 ALTER TABLE `basic_personal_details`
   ADD PRIMARY KEY (`INDEX_NUMBER`);
-  
+
 --
 -- Indexes for table `file_upload_links`
 --
@@ -724,6 +721,12 @@ ALTER TABLE `lp_category`
 -- Indexes for table `sl_selected`
 --
 ALTER TABLE `sl_selected`
+  ADD PRIMARY KEY (`INDEX_NUMBER`);
+
+--
+-- Indexes for table `sl_selected_gradei`
+--
+ALTER TABLE `sl_selected_gradei`
   ADD PRIMARY KEY (`INDEX_NUMBER`);
 
 --
@@ -777,6 +780,18 @@ ALTER TABLE `vacancies`
 --
 ALTER TABLE `interview_panel`
   ADD CONSTRAINT `FK_Panel` FOREIGN KEY (`EMAIL`) REFERENCES `users` (`USERNAME`);
+
+--
+-- Constraints for table `sl_selected`
+--
+ALTER TABLE `sl_selected`
+  ADD CONSTRAINT `fk_sl_selected` FOREIGN KEY (`INDEX_NUMBER`) REFERENCES `basic_personal_details` (`INDEX_NUMBER`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `sl_selected_gradei`
+--
+ALTER TABLE `sl_selected_gradei`
+  ADD CONSTRAINT `fk_sl_selectedi` FOREIGN KEY (`INDEX_NUMBER`) REFERENCES `basic_personal_details` (`INDEX_NUMBER`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

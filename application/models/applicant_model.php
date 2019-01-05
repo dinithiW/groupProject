@@ -21,24 +21,34 @@ class applicant_model extends CI_Model
         $this->db->select("FIRST_NAME");
         $this->db->select("LAST_NAME");
         //$this->db->select("DATE_OF_BIRTH");
-        if($vacancy == "SENIOR LECTURE GR. II" || $vacancy=="SENIOR LECTURE GR. I"){
+        if($vacancy == "SENIOR LECTURE GR. II"){
             $this->db->where("POST_APPLY_FOR",$vacancy);
             $this->db->where("INDEX_NUMBER NOT IN(SELECT INDEX_NUMBER FROM sl_selected)");
+        }
+
+        if($vacancy=="SENIOR LECTURE GR. I"){
+            $this->db->where("POST_APPLY_FOR",$vacancy);
+            $this->db->where("INDEX_NUMBER NOT IN(SELECT INDEX_NUMBER FROM sl_selected_gradei)");
         }
 
         if($vacancy=="PROBATIONARY LECTURER"){
             //session_start();
            // $_SESSION["category"] = "";
             $this->db->where("POST_APPLY_FOR",$vacancy);
+            $this->db->where("INDEX_NUMBER NOT IN(SELECT INDEX_NUMBER FROM lp_category)");
             if($category=="1"){
-                $this->db->where("INDEX_NUMBER IN(SELECT DISTINCT INDEX_NUMBER FROM higher_educational_details WHERE  DEGREE_OBTAINED LIKE 'BSC Hons%' AND( CLASS = 'FIRST CLASS' OR CLASS = 'SECOND UPPER') )");
+                $this->db->where("INDEX_NUMBER IN(SELECT DISTINCT INDEX_NUMBER FROM higher_educational_details WHERE  DEGREE_OBTAINED LIKE 'BSC Hons%' AND( CLASS LIKE 'FIRST CLAS%' OR CLASS LIKE 'SECOND UPPER%') )");
                // $_SESSION["category"] = "Category 1";
             }else if($category=="2"){
-
+                $this->db->where("INDEX_NUMBER IN(SELECT DISTINCT INDEX_NUMBER FROM higher_educational_details WHERE  DEGREE_OBTAINED LIKE 'BSC Hons%' AND CLASS LIKE 'SECOND LOWER%' ) ");
             }else if($category == "3"){
-
+               $this->db->where("INDEX_NUMBER IN(SELECT DISTINCT INDEX_NUMBER FROM higher_educational_details WHERE 
+((DEGREE_OBTAINED LIKE 'BSc%' AND DEGREE_OBTAINED NOT LIKE 'BSc Hons%')
+ OR (DEGREE_OBTAINED ='OTHER' AND CLASS = 'SECOND UPPER'))
+AND (DEGREE_OBTAINED LIKE 'PhD%' OR(DEGREE_OBTAINED LIKE 'MSc%' AND DURATION >= 24))) ;
+");
             }else{
-
+                
             }
 
         }
@@ -104,17 +114,17 @@ class applicant_model extends CI_Model
         return $array;
    }
 
-   public function selectedSL($applicantId){
+   public function selectedSL($applicantId,$tableName){
         $this->load->database();
         $data = array('INDEX_NUMBER'=>$applicantId,'SELECTED'=>1);
-        $this->db->insert('sl_selected', $data);
+        $this->db->insert($tableName, $data);
         
    }
 
-   public function notSelectedSL($applicantId){
+   public function notSelectedSL($applicantId,$tableName){
         $this->load->database();
         $data = array('INDEX_NUMBER'=>$applicantId,'SELECTED'=>0);
-        $this->db->insert('sl_selected', $data);
+        $this->db->insert($tableName, $data);
         
    }
 }
