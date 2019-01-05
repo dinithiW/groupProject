@@ -105,6 +105,9 @@ $route['OperatorIndex/seniorLecturerGradeII'] = "OperatorDashboard/showSeniorLec
 $route['OperatorIndex/selectSL/(:any)'] = "OperatorDashboard/addToSelected/$1";
 //insert into the sl_selected table (value 0)
 $route['OperatorIndex/notSelectSL/(:any)'] = "OperatorDashboard/addToNotSelected/$1";
+$route['OperatorIndex/selectSLGradeI/(:any)'] = "OperatorDashboard/addToSelectedGradeI/$1";
+//insert into the sl_selected table (value 0)
+$route['OperatorIndex/notSelectSLGradeI/(:any)'] = "OperatorDashboard/addToNotSelectedGradeI/$1";
 
 //SAR routes
 $route['SAR']='SARDashboard/index';

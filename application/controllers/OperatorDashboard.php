@@ -223,6 +223,7 @@ class OperatorDashboard extends CI_Controller{
         
         $this->load->model("applicant_model");
         $data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER","1");
+        $data['category'] = "Category 1";
         $this->load->view('includes/header');
         $this->load->view('users/operator/lpCategories',$data);
         $this->load->view('includes/footer');
@@ -241,20 +242,32 @@ class OperatorDashboard extends CI_Controller{
         $this->load->model("applicant_model");
         $data['array'] = $this->applicant_model->getAll("SENIOR LECTURE GR. I");
         $this->load->view('includes/header');
-        $this->load->view('users/operator/seniorLecturer',$data);
+        $this->load->view('users/operator/seniorLecturerGradeI',$data);
         $this->load->view('includes/footer');
     }
 
     public function addToSelected($applicantId){
         $this->load->model("applicant_model");
-        $this->applicant_model->selectedSL($applicantId);
-        redirect(base_url()."OperatorIndex/seniorLecturer");
+        $this->applicant_model->selectedSL($applicantId,"sl_selected");
+        redirect(base_url()."OperatorIndex/seniorLecturerGradeII");
     }
 
     public function addToNotSelected($applicantId){
         $this->load->model("applicant_model");
-        $this->applicant_model->notSelectedSL($applicantId);
-        redirect(base_url()."OperatorIndex/seniorLecturer");
+        $this->applicant_model->notSelectedSL($applicantId,"sl_selected");
+        redirect(base_url()."OperatorIndex/seniorLecturerGradeII");
+    }
+
+    public function addToSelectedGradeI($applicantId){
+        $this->load->model("applicant_model");
+        $this->applicant_model->selectedSL($applicantId,"sl_selected_gradei");
+        redirect(base_url()."OperatorIndex/seniorLecturerGradeI");
+    }
+
+    public function addToNotSelectedGradeI($applicantId){
+        $this->load->model("applicant_model");
+        $this->applicant_model->notSelectedSL($applicantId,"sl_selected_gradei");
+        redirect(base_url()."OperatorIndex/seniorLecturerGradeI");
     }
 
     //yet to implement
