@@ -378,14 +378,20 @@ class OperatorDashboard extends CI_Controller{
         $this->load->view('includes/footer');
     }
 
-    public function editSpecializationArea(){
+    public function editSpecializationArea($sid){
+        $this->load->model('operator/ApplicationFormModel');
+        $data['records']= $this->ApplicationFormModel->getSpecialization($sid);
         $this->load->view('includes/header');
-        $this->load->view('users/operator/addSpecialization');
+        $this->load->view('users/operator/editSpecialization',$data);
         $this->load->view('includes/footer');
     }
 
-    public function editFileUploadLink(){
-
+    public function editFileUploadLink($sid){
+        $this->load->model('operator/ApplicationFormModel');
+        $data['records']= $this->ApplicationFormModel->getFileUpload($sid);
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/editFileUpload',$data);
+        $this->load->view('includes/footer');
     }
 
     public function deleteSpecializationArea($sid){
@@ -412,6 +418,18 @@ class OperatorDashboard extends CI_Controller{
         $fname = $_POST['fname'];
         $this->load->model('operator/ApplicationFormModel');
         $this->ApplicationFormModel->addNewFileUpload($fname);
+    }
+
+    public function editSpecializationToDb($sid){
+        $fname = $_POST['fname'];
+        $this->load->model('operator/ApplicationFormModel');
+        $this->ApplicationFormModel->editSpecialization($sid,$fname);
+    }
+
+    public function editFileUploadToDb($sid){
+        $fname = $_POST['fname'];
+        $this->load->model('operator/ApplicationFormModel');
+        $this->ApplicationFormModel->editFileUpload($sid,$fname);
     }
 }
 ?>

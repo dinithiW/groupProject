@@ -49,16 +49,22 @@ class ApplicationFormModel extends CI_Model{
     }
 
     //returns the details of a single member
-    public function getMember($panelID){
 
+    public function getSpecialization($sid){
         $this->db->select('*');
-        $this->db->from('interview_panel');
-        $this->db->where('PANEL_ID',$panelID);
+        $this->db->from('specializationarea');
+        $this->db->where('AREA_ID',$sid);
         $query = $this->db->get();
         return $query->row();
     }
 
-    
+    public function getFileUpload($sid){
+        $this->db->select('*');
+        $this->db->from('file_upload_links');
+        $this->db->where('LINK_ID',$sid);
+        $query = $this->db->get();
+        return $query->row();
+    }
 
 
     function addNewS()
@@ -127,102 +133,50 @@ class ApplicationFormModel extends CI_Model{
             }
     }
 
-
-
-    function edit()
-    {
-        $this->load->view("includes/header");
-        $this->load->view("users/operator/editMember");
-        $this->load->view("includes/footer");
-        
-    }
-	
-    function editMemberDetails($panelID){
-        
-        //echo"$panelID";
-        $this->load->library('form_validation');
+    function editSpecialization($sid,$fname){
+         $this->load->library('form_validation');
             
-        $this->form_validation->set_rules('fname','First Name','trim|required|max_length[255]');
-        $this->form_validation->set_rules('lname','Last Name','trim|required|max_length[255]');
-        $this->form_validation->set_rules('mobile','Mobile Number','required|min_length[10]');
-        $this->form_validation->set_rules('gender','Gender','trim|required');
-        //$this->form_validation->set_rules('email','Email','trim|required|valid_email|max_length[255]');
-        $this->form_validation->set_rules('designation','Designation','trim|required|max_length[255]');
-        $this->form_validation->set_rules('address','Address','trim|required|max_length[255]');
-
-            if($this->form_validation->run() == FALSE)
-            {
-                $this->edit();
-            }
-            else
-            {
-                $data = $this->getMember($panelID);
-                $oldEmail = $data->EMAIL;
-                $fname = $this->input->post('fname');
-                $lname = $this->input->post('lname');
-                $email = $this->input->post('email');
-                $gender = $_POST['gender'];
-                $designation = $this->input->post('designation');
-                $address = $this->input->post('address');
-                $mobile = $this->input->post('mobile');
-                
-                $userInfoPanel = array('FNAME'=>$fname,'LNAME'=>$lname,'GENDER'=>$gender ,'CONTACT_NUMBER'=>$mobile,'DESIGNATION'=>$designation,'ADDRESS'=>$address);
-
-                $name = $fname." ".$lname;
-
-                $userInfoUsers = array('NAME'=> $name);
-
-                $result = $this->editUsers($userInfoUsers,$oldEmail);
-                    if($result > 0){
-                        $result1 = $this->editPanelUsers($userInfoPanel,$panelID);
-                        if($result1>0){
-                            $this->session->set_flashdata('success', 'User details updated successfully');
-                        }else{
-                            $this->session->set_flashdata('error', 'User details update failed');
-                    }
-                    
-                }
-                else
-                {
-                    $this->session->set_flashdata('error', 'User details update failed');
-                }
-                
-                redirect('OperatorIndex/addPanelMember');
-                //}
-                
-            }
-    }
-	
-    //edit panel memeber details 
-    public function editPanelUsers($userInfoPanel,$panelID){
+        $this->form_validation->set_rules('fname','Specialization','required|max_length[255]');
+        $userInfoUsers = array('AREA_NAME'=> $fname);
 
         $this->db->trans_start();
-        $this->db->where('PANEL_ID', $panelID);
-        $this->db->update('interview_panel', $userInfoPanel); //Change effect
+        $this->db->where('AREA_ID', $sid);
+        $this->db->update('specializationarea', $userInfoUsers); //Change effect
         $rows =  $this->db->affected_rows();
          $this->db->trans_complete();
         if($rows>0){
-            return $rows;
+            $this->session->set_flashdata('success', 'User details updated successfully');
         }else{
-            return FALSE;
+            $this->session->set_flashdata('error', 'User details update failed');
         }
+
+        redirect('OperatorIndex/specialization');
+
     }
 
-    //add member to the table users
-    public function editUsers($userInfoUsers,$email){
+    function editFileUpload($sid,$fname){
+         $this->load->library('form_validation');
+            
+        $this->form_validation->set_rules('fname','File Upload Link','required|max_length[255]');
+        $userInfoUsers = array('LINK_NAME'=> $fname);
 
         $this->db->trans_start();
-        $this->db->where('USERNAME', $email);
-        $this->db->update('users', $userInfoUsers); //Change effect
+        $this->db->where('LINK_ID', $sid);
+        $this->db->update('file_upload_links', $userInfoUsers); //Change effect
         $rows =  $this->db->affected_rows();
          $this->db->trans_complete();
         if($rows>0){
-            return $rows;
+            $this->session->set_flashdata('success', 'User details updated successfully');
         }else{
-            return FALSE;
+            $this->session->set_flashdata('error', 'User details update failed');
         }
 
+        redirect('OperatorIndex/fileUploads');
+
     }
+
+
+
 
     public function deleteSpecialization($sID){
         //echo"teehee";

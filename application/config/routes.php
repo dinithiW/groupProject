@@ -136,6 +136,9 @@ $route['OperatorIndex/deleteUploadLink/(:any)'] = "OperatorDashboard/deleteFileU
 $route['OperatorIndex/addSpecializationprocess'] = "OperatorDashboard/addSpecializationToDb";
 $route['OperatorIndex/addFileUploadprocess'] = "OperatorDashboard/addFileUploadToDb";
 
+$route['OperatorIndex/editSpecializationProcess/(:any)'] = "OperatorDashboard/editSpecializationToDb/$1";
+$route['OperatorIndex/editFileUploadProcess/(:any)'] = "OperatorDashboard/editFileUploadToDb/$1";
+
 //SAR routes
 $route['SAR']='SARDashboard/index';
 $route['reports']='SARDashboard/report';
