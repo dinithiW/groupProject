@@ -35,12 +35,13 @@
                 </div>
             </div>
         </div> -->
-                <form method="post" action="<?=base_url(c)?>">
+                <form method="post" action="<?=base_url('applicants')?>">
       <div class="form-group  col-xs-12">
         <label for="input-lg" class="input-lg"> Select Vacancy</label>
         <select class="form-control input-lg" id="sel1" name="type">
           <option value="PROBATIONARY LECTURER">Lecturer Probationary</option>
-          <option value="SENIOR LECTURE GR. II">Senior Lecturer</option>
+          <option value="SENIOR LECTURE GR. I">Senior Lecturer(Grade 1)</option>
+          <option value="SENIOR LECTURE GR. II">Senior Lecturer(Grade 2)</option>
           <!-- <option>3</option>
           <option>4</option> -->
         </select>
@@ -75,7 +76,8 @@
                       <th>Gender</th>
                       <th>Email</th>
                       
-                      <th>Educational Qualifications</th>
+                     <!-- <th>Educational Qualifications</th>-->
+                     <th>specialization Areas</th>
                       <th>Professional Qualifications</th>
                      
                      
@@ -89,7 +91,7 @@
                       <td><?=$a->gender?></td>
                        <td><?=$a->email?></td>
                       <!-- <td><?=$a->dob?></td> -->
-                      <td><?=$a->eduqualifi?></td>
+                      <td><?=$a->spe?></td>
                       <td><?=$a->proqualifi?></td>
                       
 

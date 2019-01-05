@@ -13,6 +13,7 @@ class ApplicantsModel extends CI_model{
 	public $proqualifi;
 	public $prevexp;
 	public $actions;
+	public $spe;
 
 	public function __construct() {
 		parent::__construct();
@@ -61,6 +62,14 @@ class ApplicantsModel extends CI_model{
             $query3 = $this->db->get();
             foreach($query3->result() as $row3){
                 $a->proqualifi .= "Institution: $row3->INSTITUTION<br>Duration: $row3->DURATION<br>Qualification Type: $row3->TYPE_OF_QUALIFICATION<br><br>";
+            }
+            $this->db->select("SPECIFICATION_AREA_NAME");
+            $this->db->from("specialization_area_for_applicant");
+            $this->db->where("INDEX_NUMBER",$a->id);
+            $query4=$this->db->get();
+            foreach ($query4->result() as $row4) {
+            	$a->spe.="$row4->SPECIFICATION_AREA_NAME<br>";
+            	# code...
             }
 
             array_push($array, $a);
