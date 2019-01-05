@@ -215,7 +215,7 @@ class OperatorDashboard extends CI_Controller{
         //echo"am I here?";
         $this->load->model("applicant_model");
         $data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER","1");
-        $data['category'] = "Category 1";
+        $data['category'] = " 1";
         $this->load->view('includes/header');
         $this->load->view('users/operator/lpCategories',$data);
         $this->load->view('includes/footer');
@@ -280,14 +280,23 @@ class OperatorDashboard extends CI_Controller{
         $this->load->model("applicant_model");
         $this->applicant_model->selectedLP($applicantId,$category);
 
-        $data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER",$category);
+       /* $data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER",$categoryFrom);
+        $data['category'] = $categoryFrom;*/
+        redirect(base_url()."OperatorIndex/lectrerProbationary/$categoryFrom");
+        
+        
+    }
+
+    public function showLps($categoryFrom){
+        //echo"am I here?";
+        $this->load->model("applicant_model");
+        $data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER",$categoryFrom);
         $data['category'] = $categoryFrom;
         $this->load->view('includes/header');
         $this->load->view('users/operator/lpCategories',$data);
         $this->load->view('includes/footer');
-        
-    }
 
+    }
     //notSelectLP
     public function addToNotSelectedLP($applicantId){
         $this->load->model("applicant_model");

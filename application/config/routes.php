@@ -68,6 +68,7 @@ $route['advertisement']='User/add';
 
 //Management Assistant routes
 $route['OperatorIndex'] = 'OperatorDashboard/index';
+
 $route['OperatorIndex/createAd'] = 'OperatorDashboard/ad';
 $route['OperatorIndex/emails'] = 'OperatorDashboard/showEmails';
 $route['OperatorIndex/sendEmail'] = 'OperatorDashboard/sendAdToSAR';
@@ -99,6 +100,7 @@ $route['OperatorIndex/categorize'] = "OperatorDashboard/categorizeHome";
 $route['OperatorIndex/directCategorize'] = "OperatorDashboard/directTo";
 $route['OperatorIndex/lpCategory'] = "OperatorDashboard/showLpCategories";
 $route['OperatorIndex/lecturerProbationary'] = "OperatorDashboard/showLpCandidates";
+$route['OperatorIndex/lectrerProbationary/(:any)'] = "OperatorDashboard/showLps/$1";
 //show all senior lecturer applicants grade I and categorize them
 $route['OperatorIndex/seniorLecturerGradeI'] = "OperatorDashboard/showSeniorLecturerGradeI";
 $route['OperatorIndex/seniorLecturerGradeII'] = "OperatorDashboard/showSeniorLecturerGradeII";
@@ -110,7 +112,6 @@ $route['OperatorIndex/notSelectSL/(:any)'] = "OperatorDashboard/addToNotSelected
 $route['OperatorIndex/selectSLGradeI/(:any)'] = "OperatorDashboard/addToSelectedGradeI/$1";
 //insert into the sl_selected table (value 0)
 $route['OperatorIndex/notSelectSLGradeI/(:any)'] = "OperatorDashboard/addToNotSelectedGradeI/$1";
-
 $route['OperatorIndex/selectLP/(:any)/(:any)'] = "OperatorDashboard/addToSelectedLP/$1/$2";
 //insert into the sl_selected table (value 0)
 $route['OperatorIndex/notSelectLP/(:any)'] = "OperatorDashboard/addToNotSelectedLP/$1";

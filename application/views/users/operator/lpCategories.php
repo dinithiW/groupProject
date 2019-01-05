@@ -27,7 +27,15 @@
         <i class="fa fa-users"></i> Lecturer Probationary
         <!-- <small>Add, Edit, Delete</small> -->
       </h1>
+
     </section>
+    <!-- <div class="row">
+            <div class="col-xs-12 text-right">
+                <div class="form-group">
+                    <a class="btn btn-primary" href="<?= base_url('OperatorIndex/categorize') ?>"><i class="fa fa-home"></i> Categorization Home</a>
+                </div>
+            </div>
+        </div> -->
     <section class="content">
        <div class = "row">
         <label for="input-lg" class="input-lg"> Select Category</label>
