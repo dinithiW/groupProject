@@ -136,8 +136,22 @@ class ValidateLogin extends CI_Model{
 		$this->db->select('INDEX_NUMBER');
 		$this->db->from('basic_personal_details');
 		$this->db->where('PERSONAL_EMAIL',$email);
-		$permanentId = $this->db->get()->row()->INDEX_NUMBER;
-		return $permanentId;
+		$query = $this->db->get();
+
+		
+		if($query->num_rows()>0){
+			$permanentId ="";
+			foreach($query->result() as $row){
+				$permanentId = $row->INDEX_NUMBER;
+			}
+			return $permanentId;
+		}
+		else{
+			return FALSE;
+		}
+
+		//$permanentId = $this->db->get()->row()->INDEX_NUMBER;
+		
 	}
 
 	// ending eidted by ruwan

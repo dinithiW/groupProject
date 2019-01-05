@@ -62,6 +62,7 @@ if(isset($this->session->userdata['logged_in'])){
 
                 <div class="form">    
                     <h2 class="fs-title">BASIC PERSONAL DETAILS</h2>
+                    <a href="https://youtu.be/w0I_3ZdIS9Q">CLICK HERE FOR SEE THE DEMOSTRATION FOR THIS </a>
 
                     <h6 class="lables">Full Name (in capital blocks)</h6>
                     <input type="text"  required class="input-fields" name="first_name" placeholder="Full Name" value="<?php  echo $row->FIRST_NAME;?>" required>
@@ -186,7 +187,7 @@ if(isset($this->session->userdata['logged_in'])){
                             FOR SELECTED  SPECIFICATION AREAS
                         </legend>
                         
-
+                        <a href="https://youtu.be/P1EskmwSI4M">CLICK HERE FOR SEE THE DEMOSTRATION FOR THIS TABLE</a>
                         
                         <table ><!-- start of the fieldset-->
                             <tr>
@@ -436,6 +437,7 @@ if(isset($this->session->userdata['logged_in'])){
 
                 
                 <h4 id="secondryEducationalTitle">Secondry Educational Details</h4><br/>
+                <a href="https://youtu.be/JdnX3n6i_wI">CLICK HERE FOR SEE THE DEMOSTRATION FOR THIS TABLE</a>
                     <div class="table1"><!-- start of the Secondry Educational Details table-->
 
                     
@@ -535,6 +537,7 @@ if(isset($this->session->userdata['logged_in'])){
 
 
                     <h4 id="title2">Bachelors Degree Details</h4>
+                    <a href="https://youtu.be/3ANR8AYTLFI">CLICK HERE FOR SEE THE DEMOSTRATION FOR THIS TABLE</a>
                     <div class="table2"><!-- start of the Higher Educational Details table-->
                         <table id="Table">
                             <tr>
@@ -922,6 +925,8 @@ if(isset($this->session->userdata['logged_in'])){
                         </table>
                     </div><!-- end of the Higher Educational Details table-->
                     
+                    <h5 id="note1">Note:The field name "Duration" in above table should be filled by number of months</h5>
+                
                     <h5 id="note1">Note:Certified copies of the certificates and transcripts should be attached</h5>
                 
 
@@ -930,6 +935,7 @@ if(isset($this->session->userdata['logged_in'])){
 
 
                     <h4 id="title2">Masters Degree Details</h4>
+                    <a href="https://youtu.be/69StLKHr06c">CLICK HERE FOR SEE THE DEMOSTRATION FOR THIS TABLE</a>
                     <div class="table2"><!-- start of the Higher Educational Details table-->
                         <table id="Table">
                             <tr>
@@ -974,11 +980,11 @@ if(isset($this->session->userdata['logged_in'])){
                                             <option value="BSC Hons-Informtion System">BSC Hons-Informtion System</option>
                                             <option value="BSC Hons-Information Technology">BSC Hons-Information Technology</option>
                                             <option value="BSC Hons-Computer Engineering">BSC Hons-Computer Engineering</option> -->
-                                            <option value="MSC-Computer Science">BSC-Computer Science</option>
-                                            <option value="MSC-Software Engineering">BSC-Software Engineering</option>
-                                            <option value="MSC-Informtion System">BSC-Informtion System</option>
-                                            <option value="MSC-Information Technology">BSC-Information Technology</option>
-                                            <option value="MSC-Computer Engineering">BSC-Computer Engineering</option>
+                                            <option value="MSC-Computer Science">MSC-Computer Science</option>
+                                            <option value="MSC-Software Engineering">MSC-Software Engineering</option>
+                                            <option value="MSC-Informtion System">MSC-Informtion System</option>
+                                            <option value="MSC-Information Technology">MSC-Information Technology</option>
+                                            <option value="MSC-Computer Engineering">MSC-Computer Engineering</option>
                                             <option value="Other">Other</option>
                                         </select>
                                     </div>
@@ -1232,6 +1238,7 @@ if(isset($this->session->userdata['logged_in'])){
                                 </style>
 <!-- --------------end degree----------------- -->
 
+
                                 
                                 <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->DURATION; ?>"name="master_educational_duration4"  size='15'/></td>
                                 
@@ -1272,6 +1279,9 @@ if(isset($this->session->userdata['logged_in'])){
                         </table>
                     </div><!-- end of the Higher Educational Details table-->
                     
+
+                    <h5 id="note1">Note:The field name "Duration" in above table should be filled by number of months</h5>
+                
                     <h5 id="note1">Note:Certified copies of the certificates and transcripts should be attached</h5>
                 
 
@@ -1284,6 +1294,7 @@ if(isset($this->session->userdata['logged_in'])){
 
 
                     <h4 id="title2">PHD Degree Details</h4>
+                    <a href="https://youtu.be/GDS-nrTpgvY">CLICK HERE FOR SEE THE DEMOSTRATION FOR THIS TABLE</a>
                     <div class="table2"><!-- start of the Higher Educational Details table-->
                         <table id="Table">
                             <tr>
@@ -1626,6 +1637,8 @@ if(isset($this->session->userdata['logged_in'])){
                         </table>
                     </div><!-- end of the Higher Educational Details table-->
                     
+                    <h5 id="note1">Note:The field name "Duration" in above table should be filled by number of months</h5>
+                
                     <h5 id="note1">Note:Certified copies of the certificates and transcripts should be attached</h5>
                 
 
@@ -1638,6 +1651,7 @@ if(isset($this->session->userdata['logged_in'])){
 
 
                    <h4 id="title3">Any Other Qualifications </h4>
+                   <a href="https://youtu.be/8NHHeYQFUL0">CLICK HERE FOR SEE THE DEMOSTRATION FOR THIS TABLE</a>
                     <div class="table3">
                         <table id="Table">
                             <tr>
@@ -1707,6 +1721,8 @@ if(isset($this->session->userdata['logged_in'])){
 
                         </table>
                     </div>
+                    <h5 id="note1">Note:The field name "Duration" in above table should be filled by number of months</h5>
+                
                     <h5 id="note2">Note:Certified copies of the certificates and transcripts should be attached</h5>
 
 
@@ -1723,6 +1739,7 @@ if(isset($this->session->userdata['logged_in'])){
                 
 
                     <h4 id="title1">Professional Qualifications </h4>
+                    <a href="https://youtu.be/SemZfq4InTM">CLICK HERE FOR SEE THE DEMOSTRATION FOR THIS TABLE</a>
                     <div class="table1"><!-- start of the table1-->
                         <table id="Table">
 
@@ -1798,11 +1815,15 @@ if(isset($this->session->userdata['logged_in'])){
                             </tr>
                         </table>
 
+                        <h5 id="note1">Note:The field name "Duration" in above table should be filled by number of months</h5>
+                
+
 <!-- -------------------end----------------------------->
                     </div><!-- end of the table1-->
 
 
                     <h4 id="title2">Proficiency in Sinhala/Tamil/English</h4>
+                    <a href="https://youtu.be/2KNnbY0ywVI">CLICK HERE FOR SEE THE DEMOSTRATION FOR THIS TABLE</a>
                     <h5 id="title3">*******Ability to Work************ | ********* Ability To Teach********</h5>
                     
                     <!-- start of the dropdown buttons-->
@@ -1932,6 +1953,7 @@ if(isset($this->session->userdata['logged_in'])){
                     <h5 id="note1">Note:Indicate your level based on self-evaluation of your ability</h5>
 
                     <!-- start the text box one-->
+                    <a href="https://youtu.be/PhnmS1Lvyl8">CLICK HERE FOR SEE THE DEMOSTRATION FOR THIS </a>
                     <div form-group>
                         <label >Experience relevant to the post applied for</label>
                         <input type="text" value ="<?php echo $row_in_more_details->EXPERIENCE_RELEVANT_TO_POST; ?>" name="experience" id="experience" class="form-control input-sm" placeholder="                                        Experience relevant to the post applied for (Please indicate the tasks handled with the duration) ">
@@ -1962,6 +1984,7 @@ if(isset($this->session->userdata['logged_in'])){
 
                 <!-- start referee table-->        
                 <h4 id="title1">Referees </h4>
+                <a href="https://youtu.be/mf-xr_-1q00">CLICK HERE FOR SEE THE DEMOSTRATION FOR THIS TABLE</a>
                     <div class="content3">
                         <table id="table1">
 

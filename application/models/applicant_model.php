@@ -35,15 +35,20 @@ class applicant_model extends CI_Model
             //session_start();
            // $_SESSION["category"] = "";
             $this->db->where("POST_APPLY_FOR",$vacancy);
+            $this->db->where("INDEX_NUMBER NOT IN(SELECT INDEX_NUMBER FROM lp_category)");
             if($category=="1"){
-                $this->db->where("INDEX_NUMBER IN(SELECT DISTINCT INDEX_NUMBER FROM higher_educational_details WHERE  DEGREE_OBTAINED LIKE 'BSC Hons%' AND( CLASS = 'FIRST CLAS' OR CLASS = 'SECOND UPPER') )");
+                $this->db->where("INDEX_NUMBER IN(SELECT DISTINCT INDEX_NUMBER FROM higher_educational_details WHERE  DEGREE_OBTAINED LIKE 'BSC Hons%' AND( CLASS LIKE 'FIRST CLAS%' OR CLASS LIKE 'SECOND UPPER%') )");
                // $_SESSION["category"] = "Category 1";
             }else if($category=="2"){
-
+                $this->db->where("INDEX_NUMBER IN(SELECT DISTINCT INDEX_NUMBER FROM higher_educational_details WHERE  DEGREE_OBTAINED LIKE 'BSC Hons%' AND CLASS LIKE 'SECOND LOWER%' ) ");
             }else if($category == "3"){
-
+               $this->db->where("INDEX_NUMBER IN(SELECT DISTINCT INDEX_NUMBER FROM higher_educational_details WHERE 
+((DEGREE_OBTAINED LIKE 'BSc%' AND DEGREE_OBTAINED NOT LIKE 'BSc Hons%')
+ OR (DEGREE_OBTAINED ='OTHER' AND CLASS = 'SECOND UPPER'))
+AND (DEGREE_OBTAINED LIKE 'PhD%' OR(DEGREE_OBTAINED LIKE 'MSc%' AND DURATION >= 24))) ;
+");
             }else{
-
+                
             }
 
         }
