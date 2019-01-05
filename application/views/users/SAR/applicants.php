@@ -35,7 +35,7 @@
                 </div>
             </div>
         </div> -->
-                <form method="post" action="<?=base_url('applicants')?>">
+                <form method="post" action="<?=base_url(c)?>">
       <div class="form-group  col-xs-12">
         <label for="input-lg" class="input-lg"> Select Vacancy</label>
         <select class="form-control input-lg" id="sel1" name="type">
