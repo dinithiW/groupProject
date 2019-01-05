@@ -39,7 +39,7 @@
         
         <select class="form-control input-lg" id="selectBox" name = "vacancy">
            <!-- <select class="form-control input-lg" id="selectBox" onchange="changeFunc();"> -->
-          <option value = "1" selected>Category 1</option>
+          <option value = "1" >Category 1</option>
           <option value = "2" >Category 2</option>
           <option value = "3" >Category 3</option>
           <option value = "0" >Others</option>
@@ -63,7 +63,7 @@
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-                    <h3 class="box-title"><?php echo $category ?></h3>
+                    <h3 class="box-title">Category <?php if($category=="0"){echo "others";} else {echo "$category"; }?></h3>
                     <div class="box-tools">
                         <form action="<?php echo base_url() ?>userListing" method="POST" id="searchList">
                            
@@ -79,10 +79,11 @@
                       <th>Professional Qualifications</th>
                       <th>Other Qualifications</th>
                       <th>Specializations</th>
-                      <th>Change Category</th>>
+                      <th>Change Category</th>
                       <th class="text-center">Actions</th>
                     </tr>
 
+                    
                     <?php foreach($array as $a):?>
                     <tr>
                       <td><?=$a->index?></td>
@@ -92,22 +93,45 @@
                       <td><?=$a->pq?></td>
                       <td><?=$a->oq?></td>
                       <td><?=$a->spe?></td>
+                      <form method = "post" action = "<?= base_url().'OperatorIndex/selectLP/'.$a->index.'/'.$category;?>">
                       <td>
                         <select class="form-control" id="selectBox" name = <?php echo "category_$a->index"?>>
+
+                          <?php if($category=="1"):?>
                           <option value = "1" selected>Category 1</option>
                           <option value = "2" >Category 2</option>
                           <option value = "3" >Category 3</option>
-                          <option value = "0" >Others</option>
+                          <option value = "0" >Not Selected</option>
+
+                         <?php elseif($category=="2"): ?>
+                          <option value = "1">Category 1</option>
+                          <option value = "2"  selected >Category 2</option>
+                          <option value = "3" >Category 3</option>
+                          <option value = "0" >Not Selected</option>
+
+                        <?php elseif($category=="3"): ?>
+                          <option value = "1">Category 1</option>
+                          <option value = "2"   >Category 2</option>
+                          <option value = "3" selected >Category 3</option>
+                          <option value = "0" >Not Selected</option>
+
+                        <?php else: ?>
+                          <option value = "1">Category 1</option>
+                          <option value = "2"   >Category 2</option>
+                          <option value = "3"  >Category 3</option>
+                          <option value = "0" selected>Not Selected</option>
+                        <?php endif;?> 
                         </select>
+                        
                       </td>
                       <td class="text-center">
-                          <a class="btn btn-sm btn-success" href="<?php echo base_url().'OperatorIndex/selectSL/'.$a->index; ?>"><i class="fa fa-check"></i></a>
-                          <a class="btn btn-sm btn-danger " href="<?php echo base_url().'OperatorIndex/notSelectSL/'.$a->index; ?>" data-userid=""><i class="fa fa-trash"></i></a> 
+                          <input type = "submit"  value="&#xf00c" class="btn btn-sm btn-success fa fa-check" >
+                          <!-- <a class="btn btn-sm btn-danger " href="<?php echo base_url().'OperatorIndex/notSelectLP/'.$a->index; ?>" data-userid=""><i class="fa fa-trash"></i></a>  -->
                           <a class="btn btn-sm btn-info " href="" data-userid=""><i class="fa fa-info"></i></a> 
                       </td>
                     </tr>
                     <?php endforeach?>
-                    
+                  </form>  
                   </table> 
                   
                 </div><!-- /.box-body -->

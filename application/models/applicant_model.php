@@ -43,10 +43,10 @@ class applicant_model extends CI_Model
                 $this->db->where("INDEX_NUMBER IN(SELECT DISTINCT INDEX_NUMBER FROM higher_educational_details WHERE  DEGREE_OBTAINED LIKE 'BSC Hons%' AND CLASS LIKE 'SECOND LOWER%' ) ");
             }else if($category == "3"){
                $this->db->where("INDEX_NUMBER IN(SELECT DISTINCT INDEX_NUMBER FROM higher_educational_details WHERE 
-((DEGREE_OBTAINED LIKE 'BSc%' AND DEGREE_OBTAINED NOT LIKE 'BSc Hons%')
- OR (DEGREE_OBTAINED ='OTHER' AND CLASS = 'SECOND UPPER'))
-AND (DEGREE_OBTAINED LIKE 'PhD%' OR(DEGREE_OBTAINED LIKE 'MSc%' AND DURATION >= 24))) ;
-");
+                    ((DEGREE_OBTAINED LIKE 'BSc%' AND DEGREE_OBTAINED NOT LIKE 'BSc Hons%')
+                     OR (DEGREE_OBTAINED ='OTHER' AND CLASS LIKE 'SECOND UPPER%'))
+                    AND (DEGREE_OBTAINED LIKE 'PhD%' OR(DEGREE_OBTAINED LIKE 'MSc%' AND DURATION >= 24))) ;
+                    ");
             }else{
                 
             }
@@ -125,6 +125,21 @@ AND (DEGREE_OBTAINED LIKE 'PhD%' OR(DEGREE_OBTAINED LIKE 'MSc%' AND DURATION >= 
         $this->load->database();
         $data = array('INDEX_NUMBER'=>$applicantId,'SELECTED'=>0);
         $this->db->insert($tableName, $data);
+        
+   }
+
+   public function selectedLP($applicantId,$category){
+        $this->load->database();
+        $data = array('INDEX_NUMBER'=>$applicantId,'CATEGORY'=>$category);
+        $this->db->insert('lp_category', $data);
+        
+   }
+
+   //-1 means others right?
+   public function notSelectedLP($applicantId){
+        $this->load->database();
+        $data = array('INDEX_NUMBER'=>$applicantId,'CATEGORY'=>-1);
+        $this->db->insert('lp_category', $data);
         
    }
 }

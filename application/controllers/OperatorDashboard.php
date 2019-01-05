@@ -101,12 +101,6 @@ class OperatorDashboard extends CI_Controller{
         $this->load->view('includes/footer');
     }
 
-    /*public function addMemberModel(){
-        $this->load->model('operator/PanelMembers');
-        $this->PanelMembers->add();
-
-    }*/
-
     public function addingMember(){
         $this->load->model('operator/PanelMembers');
         $this->PanelMembers->addNewUser();
@@ -231,13 +225,9 @@ class OperatorDashboard extends CI_Controller{
     //route lecturerProbationary
     public function showLpCandidates(){
         $category = $_POST['vacancy'];
-        echo $category;
-        //$this->load->model("applicant_model");
-        //$data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER",$category);
-        
         $this->load->model("applicant_model");
         $data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER",$category);
-        $data['category'] = "Category $category";
+        $data['category'] = $category;
         $this->load->view('includes/header');
         $this->load->view('users/operator/lpCategories',$data);
         $this->load->view('includes/footer');
@@ -283,7 +273,32 @@ class OperatorDashboard extends CI_Controller{
         $this->applicant_model->notSelectedSL($applicantId,"sl_selected_gradei");
         redirect(base_url()."OperatorIndex/seniorLecturerGradeI");
     }
+    //selectLP
+    public function addToSelectedLP($applicantId,$categoryFrom){
+        $temp = "category_".$applicantId;
+        $category = $_POST["$temp"];
+        $this->load->model("applicant_model");
+        $this->applicant_model->selectedLP($applicantId,$category);
 
+        $data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER",$category);
+        $data['category'] = $categoryFrom;
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/lpCategories',$data);
+        $this->load->view('includes/footer');
+        
+    }
+
+    //notSelectLP
+    public function addToNotSelectedLP($applicantId){
+        $this->load->model("applicant_model");
+        $this->applicant_model->notSelectedLP($applicantId,$category);
+        
+        $data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER",$category);
+        $data['category'] = $category;
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/lpCategories',$data);
+        $this->load->view('includes/footer');
+    }
     //yet to implement
     public function moreInfo($applicantID){
 

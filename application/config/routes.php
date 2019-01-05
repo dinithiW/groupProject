@@ -111,6 +111,10 @@ $route['OperatorIndex/selectSLGradeI/(:any)'] = "OperatorDashboard/addToSelected
 //insert into the sl_selected table (value 0)
 $route['OperatorIndex/notSelectSLGradeI/(:any)'] = "OperatorDashboard/addToNotSelectedGradeI/$1";
 
+$route['OperatorIndex/selectLP/(:any)/(:any)'] = "OperatorDashboard/addToSelectedLP/$1/$2";
+//insert into the sl_selected table (value 0)
+$route['OperatorIndex/notSelectLP/(:any)'] = "OperatorDashboard/addToNotSelectedLP/$1";
+
 //SAR routes
 $route['SAR']='SARDashboard/index';
 $route['reports']='SARDashboard/report';
