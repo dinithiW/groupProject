@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 05, 2019 at 10:27 AM
+-- Generation Time: Jan 05, 2019 at 03:12 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.23
 
@@ -19,6 +19,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `ucsc`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `advertisement`
+--
+
+CREATE TABLE `advertisement` (
+  `adid` int(11) NOT NULL,
+  `message` varchar(3000) DEFAULT NULL,
+  `notified` int(11) DEFAULT NULL,
+  `confirmed` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `advertisement`
+--
+
+INSERT INTO `advertisement` (`adid`, `message`, `notified`, `confirmed`) VALUES
+(1, '<p style="text-align: center;"><span style="font-size:18px"><strong><span style="color:#16a085">Vacancy</span></strong></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse hic atque suscipit officia reiciendis <span style="font-size:16px">voluptatibus </span>enim fugiat quaerat exercitationem architecto ex, quam perferendis. Totam quos officiis perferendis, soluta vero corrupti?</p><p><em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse hic atque suscipit officia reiciendis voluptatibus enim fugiat quaerat exercitationem architecto ex, quam perferendis. Totam quos officiis perferendis, soluta vero corrupti?</em></p><p><strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse hic atque suscipit officia reiciendis voluptatibus enim fugiat quaerat exercitationem architecto ex, quam perferendis. Totam quos officiis perferendis, soluta vero corrupti?</strong></p><p><span style="font-family:Comic Sans MS,cursive">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse hic atque suscipit officia reiciendis voluptatibus enim fugiat quaerat exercitationem architecto ex, quam perferendis. Totam quos officiis perferendis, soluta vero corrupti?</span></p><p>&nbsp;</p>', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -312,6 +332,79 @@ CREATE TABLE `lp_category` (
   `CATEGORY` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `lp_category`
+--
+
+INSERT INTO `lp_category` (`INDEX_NUMBER`, `CATEGORY`) VALUES
+('19PR002', 0),
+('19PR003', 2),
+('19PR010', 3),
+('19PR011', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `marking_field`
+--
+
+CREATE TABLE `marking_field` (
+  `mid` int(11) NOT NULL,
+  `mhid` int(11) DEFAULT NULL,
+  `name` varchar(100) DEFAULT NULL,
+  `marks` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `marking_field`
+--
+
+INSERT INTO `marking_field` (`mid`, `mhid`, `name`, `marks`) VALUES
+(1, 1, 'Bachelors Degree', '0'),
+(2, 1, '1st Class', '15'),
+(3, 1, '2nd Class', '08'),
+(4, 1, '3rd Class', '04'),
+(5, 2, 'Postgraduate / Professional Qualifications', '0'),
+(6, 2, 'PhD', '20'),
+(7, 2, 'MPhil', '10'),
+(8, 2, 'MSc(Research 2 years)', '08'),
+(9, 2, 'MSc(Taught 2 years)', '05'),
+(10, 2, 'National / International Awards', '10'),
+(11, 2, 'Academic Awards', '08'),
+(12, 2, 'Other', '05'),
+(13, 3, 'Journal', '10'),
+(14, 3, 'Refreed Conference', '05'),
+(15, 3, 'Abstract / Non-Refreed', '02'),
+(16, 5, 'Interfaculty (1st,2nd,3rd)', '02'),
+(17, 5, 'Inter University', '03'),
+(18, 5, 'National Pool', '05'),
+(19, 5, 'Union President Secretary', '03');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `marking_field_heading`
+--
+
+CREATE TABLE `marking_field_heading` (
+  `mhid` int(11) NOT NULL,
+  `name` varchar(100) DEFAULT NULL,
+  `detailed` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `marking_field_heading`
+--
+
+INSERT INTO `marking_field_heading` (`mhid`, `name`, `detailed`) VALUES
+(1, 'Academic Qualifications', 1),
+(2, 'Other Qualifications / Academic Achievements', 1),
+(3, 'Publications', 1),
+(4, 'Subject Knowledge and Experience', 0),
+(5, 'Extra Curricular Activities', 1),
+(6, 'Presentation to prove teaching ability', 0),
+(7, 'Performance at the interview', 0);
+
 -- --------------------------------------------------------
 
 --
@@ -457,6 +550,18 @@ CREATE TABLE `sl_selected` (
   `SELECTED` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `sl_selected`
+--
+
+INSERT INTO `sl_selected` (`INDEX_NUMBER`, `SELECTED`) VALUES
+('19SE000', 1),
+('19SE001', 0),
+('19SE004', 0),
+('19SE005', 1),
+('19SE006', 1),
+('19SE0068', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -467,6 +572,14 @@ CREATE TABLE `sl_selected_gradei` (
   `INDEX_NUMBER` varchar(100) NOT NULL,
   `SELECTED` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sl_selected_gradei`
+--
+
+INSERT INTO `sl_selected_gradei` (`INDEX_NUMBER`, `SELECTED`) VALUES
+('19PR006', 0),
+('19SE008', 1);
 
 -- --------------------------------------------------------
 
@@ -687,6 +800,12 @@ INSERT INTO `vacancies` (`id`, `name`, `dead_line`) VALUES
 --
 
 --
+-- Indexes for table `advertisement`
+--
+ALTER TABLE `advertisement`
+  ADD PRIMARY KEY (`adid`);
+
+--
 -- Indexes for table `applicants`
 --
 ALTER TABLE `applicants`
@@ -718,10 +837,23 @@ ALTER TABLE `lp_category`
   ADD PRIMARY KEY (`INDEX_NUMBER`);
 
 --
+-- Indexes for table `marking_field`
+--
+ALTER TABLE `marking_field`
+  ADD PRIMARY KEY (`mid`),
+  ADD KEY `mhid` (`mhid`);
+
+--
+-- Indexes for table `marking_field_heading`
+--
+ALTER TABLE `marking_field_heading`
+  ADD PRIMARY KEY (`mhid`);
+
+--
 -- Indexes for table `sl_selected`
 --
 ALTER TABLE `sl_selected`
-  ADD PRIMARY KEY (`INDEX_NUMBER`);
+  ADD KEY `INDEX_NUMBER` (`INDEX_NUMBER`);
 
 --
 -- Indexes for table `sl_selected_gradei`
@@ -752,6 +884,11 @@ ALTER TABLE `vacancies`
 --
 
 --
+-- AUTO_INCREMENT for table `advertisement`
+--
+ALTER TABLE `advertisement`
+  MODIFY `adid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
 -- AUTO_INCREMENT for table `file_upload_links`
 --
 ALTER TABLE `file_upload_links`
@@ -761,6 +898,16 @@ ALTER TABLE `file_upload_links`
 --
 ALTER TABLE `interview_panel`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `marking_field`
+--
+ALTER TABLE `marking_field`
+  MODIFY `mid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+--
+-- AUTO_INCREMENT for table `marking_field_heading`
+--
+ALTER TABLE `marking_field_heading`
+  MODIFY `mhid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `specializationarea`
 --
@@ -782,16 +929,28 @@ ALTER TABLE `interview_panel`
   ADD CONSTRAINT `FK_Panel` FOREIGN KEY (`EMAIL`) REFERENCES `users` (`USERNAME`);
 
 --
+-- Constraints for table `lp_category`
+--
+ALTER TABLE `lp_category`
+  ADD CONSTRAINT `lp_category_ibfk_1` FOREIGN KEY (`INDEX_NUMBER`) REFERENCES `basic_personal_details` (`INDEX_NUMBER`);
+
+--
+-- Constraints for table `marking_field`
+--
+ALTER TABLE `marking_field`
+  ADD CONSTRAINT `marking_field_ibfk_1` FOREIGN KEY (`mhid`) REFERENCES `marking_field_heading` (`mhid`);
+
+--
 -- Constraints for table `sl_selected`
 --
 ALTER TABLE `sl_selected`
-  ADD CONSTRAINT `fk_sl_selected` FOREIGN KEY (`INDEX_NUMBER`) REFERENCES `basic_personal_details` (`INDEX_NUMBER`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `sl_selected_ibfk_1` FOREIGN KEY (`INDEX_NUMBER`) REFERENCES `basic_personal_details` (`INDEX_NUMBER`);
 
 --
 -- Constraints for table `sl_selected_gradei`
 --
 ALTER TABLE `sl_selected_gradei`
-  ADD CONSTRAINT `fk_sl_selectedi` FOREIGN KEY (`INDEX_NUMBER`) REFERENCES `basic_personal_details` (`INDEX_NUMBER`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `sl_selected_gradei_ibfk_1` FOREIGN KEY (`INDEX_NUMBER`) REFERENCES `basic_personal_details` (`INDEX_NUMBER`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

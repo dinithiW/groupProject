@@ -31,6 +31,14 @@
         <i class="fa fa-users"></i> Senior Lecturer Grd. II
         <!-- <small>Add, Edit, Delete</small> -->
       </h1>
+
+      <div class="row">
+            <div class="col-xs-12 text-right">
+                <div class="form-group">
+                    <a class="btn btn-primary" href="<?= base_url('OperatorIndex/categorize') ?>"><i class="fa fa-home"></i> Categorization Home</a>
+                </div>
+            </div>
+        </div>
     </section>
     <section class="content">
         
