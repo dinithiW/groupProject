@@ -3,7 +3,7 @@ class ApplicantApplicationFormModel extends CI_Model{
     public function __construct(){
         parent::__construct();
     }
-
+    
 
     /**
      * this funciton is used for filter the form inputs
