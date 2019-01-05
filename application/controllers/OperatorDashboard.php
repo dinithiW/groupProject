@@ -205,12 +205,14 @@ class OperatorDashboard extends CI_Controller{
     }
 
     public function directTo(){
-        //echo"sldfhhhffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff";
+        
         $position = $_POST['vacancy'];
         if($position=="Lecturer Probationary"){
             redirect(base_url()."OperatorIndex/lpCategory");
+        }else if($position=="Senior Lecturer Gr. I"){
+            redirect(base_url()."OperatorIndex/seniorLecturerGradeI");
         }else{
-            redirect(base_url()."OperatorIndex/seniorLecturer");
+            redirect(base_url()."OperatorIndex/seniorLecturerGradeII");
         }
     }
 
@@ -219,15 +221,25 @@ class OperatorDashboard extends CI_Controller{
         //$this->load->model("applicant_model");
         //$data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER",$category);
         
+        $this->load->model("applicant_model");
+        $data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER","1");
         $this->load->view('includes/header');
-        $this->load->view('users/operator/lpCategories');
+        $this->load->view('users/operator/lpCategories',$data);
         $this->load->view('includes/footer');
 
     }
 
-    public function showSeniorLecturer(){
+    public function showSeniorLecturerGradeII(){
         $this->load->model("applicant_model");
         $data['array'] = $this->applicant_model->getAll("SENIOR LECTURE GR. II");
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/seniorLecturer',$data);
+        $this->load->view('includes/footer');
+    }
+
+    public function showSeniorLecturerGradeI(){
+        $this->load->model("applicant_model");
+        $data['array'] = $this->applicant_model->getAll("SENIOR LECTURE GR. I");
         $this->load->view('includes/header');
         $this->load->view('users/operator/seniorLecturer',$data);
         $this->load->view('includes/footer');

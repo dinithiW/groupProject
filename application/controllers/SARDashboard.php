@@ -77,6 +77,7 @@ class SARDashboard extends CI_Controller{
 
 
 	public function viewCandidates(){
+		//echo "haha";
 		$this->load->view('includes/header');
         $this->load->view('users/SAR/viewCandidates');
         $this->load->view('includes/footer');

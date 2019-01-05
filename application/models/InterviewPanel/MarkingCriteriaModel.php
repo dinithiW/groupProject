@@ -13,7 +13,7 @@ class MarkingCriteriaModel extends CI_model{
 
 		public function getDetailedHeadings(){
 			$this->load->database();
-			$sql=$this->db->query("SELECT * FROM marking_fields_heading where detailed=1");
+			$sql=$this->db->query("SELECT * FROM marking_field_heading where detailed=1");
 			return $sql->result();
 		}
 
