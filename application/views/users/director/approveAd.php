@@ -14,20 +14,11 @@
             <div class="col-md-8">
               <!-- general form elements -->
                 
-                
-                
+
                 <div class="box box-primary">
                     <div class="box-header">
-                        <h3 class="box-title">Approve Advertisement</h3>
+                        <h3 class="box-title">Approve Selected Applicants</h3>
                     </div><!-- /.box-header -->
-
-                    <!-- My Work Space -->
-                    <div>
-                        <center>
-                            <button type="button">Accept</button>
-                            <button type="button">Decline</button>
-                        </center>
-                    </div>
                     
                 </div>
             </div>

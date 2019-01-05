@@ -59,6 +59,14 @@ class DirectorDashboard extends CI_Controller{
 		
 	}
 
+	//Send an email to SAR
+	public function sendmail(){
+		$email = new EmailController();
+        $this->load->library('email');
+        $email->send_mail($this->email, $this->input->post('directormail'), $this->input->post('reportdetails'));
+	}
+
+
 	//Send data to the database
 	public function insertData(){
 		
@@ -95,6 +103,7 @@ class DirectorDashboard extends CI_Controller{
 		$this->load->model('Notification');
         $this->Notification->view();
 	}
+	
 }
 
 ?>
