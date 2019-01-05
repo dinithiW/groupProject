@@ -109,7 +109,8 @@ class OperatorDashboard extends CI_Controller{
     public function sendEmail(){
         $this->load->view('users/operator/header');
         $this->load->view('users/operator/showEmails');
-        //$this->load->view('includes/footer');
+        $this->load->view('includes/footer');
+        //redirect(base_url().'OperatorIndex/sendEmail');
     }
 
     public function emailSuccessMessage(){
@@ -331,6 +332,33 @@ class OperatorDashboard extends CI_Controller{
         $this->load->view('includes/header');
         $this->load->view('users/operator/viewCategorized',$data);
         $this->load->view('includes/footer');
+
+    }
+
+    public function editForm(){
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/editApplicationHome');
+        $this->load->view('includes/footer');
+    }
+
+    public function directEditApplication(){
+        $field = $_POST['editField'];
+        if($field=="sa"){
+            redirect(base_url()."OperatorIndex/specialization");
+        }else{
+            redirect(base_url()."OperatorIndex/fileUploads");
+        }
+    }
+
+    public function viewSpecializations(){
+        $this->load->model('operator/ApplicationFormModel');
+        $data['Specializations'] = $this->ApplicationFormModel->getAllSpecializations();
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/specialization',$data);
+        $this->load->view('includes/footer');
+    }
+
+    public function viewFileUploads(){
 
     }
 }

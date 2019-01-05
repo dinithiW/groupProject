@@ -118,6 +118,13 @@ $route['OperatorIndex/selectLP/(:any)/(:any)'] = "OperatorDashboard/addToSelecte
 $route['OperatorIndex/notSelectLP/(:any)'] = "OperatorDashboard/addToNotSelectedLP/$1";
 $route['OperatorIndex/viewCategorized'] = "OperatorDashboard/viewCategorizedApplicants";
 $route['OperatorIndex/searchCategorized'] = "OperatorDashboard/searchCandidates";
+$route['OperatorIndex/editApplication'] = "OperatorDashboard/editForm";
+$route['OperatorIndex/directEditApplication'] = "OperatorDashboard/directEditApplication";
+
+$route['OperatorIndex/specialization'] = "OperatorDashboard/viewSpecializations";
+$route['OperatorIndex/fileUploads'] = "OperatorDashboard/viewFileUploads";
+
+
 
 //SAR routes
 $route['SAR']='SARDashboard/index';
