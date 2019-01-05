@@ -135,6 +135,19 @@ class SARDashboard extends CI_Controller{
 		$this->load->view('users/SAR/applicants',$data);
 		$this->load->view('includes/footer');
 	}
+	/*public function viewCandidates(){
+		if(!isset($_POST['type'])){
+			$_POST['type']="";
+			$_POST['cat']="";
+			$array[];
+			$this->load->model('SAR/CandidatesModel');
+			$data['array']=$this->CandidatesModel->getAll($_POST['type']);
+			$this->load->view('includes/header');
+			$this->load->view('users/SAR/viewCandidates',$data);
+			$this->load->view('includes/footer');
+
+		}
+	}*/
 
 	public function sendBulkmails($arr){
 		$aDoor = $_POST['formdoor'];

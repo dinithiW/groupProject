@@ -41,12 +41,14 @@
                 </div>
             </div>
         </div> -->
-         <form method="post" action="<?= base_url('applicants') ?>">
+         <form method="post" action="<?= base_url('Panel/viewApplicants') ?>">
             <div class="form-group  col-xs-12">
                 <label for="input-lg" class="input-lg"> Select Vacancy</label>
-                <select class="form-control input-lg" id="sel1" name="type">
-                    <option value="PROBATIONARY LECTURER">Lecturer Probationary</option>
-                    <option value="SENIOR LECTURE GR. II">Senior Lecturer</option>
+                <select class="form-control input-lg" id="sel1" name="lecturerType">
+                    <option value="PROBATIONARY_LECTURER" <?= isset($lecturerType) ? $lecturerType == 'PROBATIONARY_LECTURER' ? 'selected' : '' : '' ?>>Lecturer Probationary</option>
+                    <option value="SENIOR_LECTURE_GR.I" <?= isset($lecturerType) ? $lecturerType == 'SENIOR_LECTURE_GR.I' ? 'selected' : '' : '' ?>>Senior Lecturer (Grade 1)</option>
+                    <option value="SENIOR_LECTURE_GR.II" <?= isset($lecturerType) ? $lecturerType == 'SENIOR_LECTURE_GR.II' ? 'selected' : '' : '' ?>>Senior Lecturer (Grade 2)</option>
+
                     <!-- <option>3</option>
                     <option>4</option> -->
                 </select>
@@ -80,25 +82,34 @@
 
                         </tr>
                          <tbody>
-                            <tr>
-                                 <td>abc</td>
-                                    <td>abc</td>
-                                    <td>abc</td>
-                                    <td>abc</td>
-
-
-                            </tr>
-                             <tr>
-                                 <td>abc</td>
-                                    <td>abc</td>
-                                    <td>abc</td>
-                                    <td>abc</td>
-                                
-                                
-                            </tr>
-                            <script>
+                         <script>
                                 var applicants = new Array();
                             </script>
+                            <?php
+                            $value = 0;
+                            foreach ($applicants as $row) {
+                                ?>
+                                <tr id="tr<?= $value ?>">
+                                    <td><?= $row->INDEX_NUMBER ?></td>
+                                    <td><?= $row->LAST_NAME ?></td>
+                                    <td><?= $row->PERSONAL_EMAIL ?></td>
+                                    <td>0</td>
+                                </tr>
+                                <script>
+                                <?php
+                                    echo "
+                                        applicants.push({
+                                            interviewers_count: '1',
+                                            fullName: '$row->FIRST_NAME $row->LAST_NAME'
+                                          });
+                                        ";
+                                    ?>
+                                </script>
+                                <?php
+                                $value++;
+                            }
+                            ?>
+                           
                         </tbody>
                     </table>
                      </div><!-- /.box-body -->

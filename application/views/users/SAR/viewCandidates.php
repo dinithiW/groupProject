@@ -47,6 +47,15 @@
           <!-- <option>3</option>
           <option>4</option> -->
         </select>
+
+         <select class="form-control input-lg" id="sel1" name="cate" marfin="10px">
+        <option value="1">Category 1</option>
+          <option value="2">Category 2</option>
+          <option value="3">Category 3</option>
+          <!-- <option>3</option>
+          <option>4</option> -->
+        </select>
+
         </div>
         <div class="col-xs-1" align="right">
   
