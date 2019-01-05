@@ -47,7 +47,6 @@ if(isset($this->session->userdata['logged_in'])){
             
                 <div class="form">    
                     <h2 class="fs-title">BASIC PERSONAL DETAILS</h2>
-
     
                     <h6 class="lables">Full Name (in capital blocks)</h6>
                     <input type="text"  required class="input-fields" name="first_name" placeholder="Full Name" required>
@@ -102,6 +101,7 @@ if(isset($this->session->userdata['logged_in'])){
 
                     <div class="custom-sele dropboxGender" style="width:180px; height:100px;">
                         <select name="selectGender" id="selectCategory_gender">
+                            <option value="">select here:</option>
                             <option value="MALE">MALE:</option>
                             <option value="FEMALE">FEMALE</option>
                         </select>
@@ -116,6 +116,7 @@ if(isset($this->session->userdata['logged_in'])){
 
                     <div class="custom-sele dropboxCivil" style="width:100px; height:50px;">
                         <select name="selectCivilStatus" id="selectCategory_civilstate">
+                            <option value="">select here:</option>
                             <option value="MARRIED">MARRIED</option>
                             <option value="UN MARRIED">UN MARRIED</option>
                         </select>
@@ -130,6 +131,7 @@ if(isset($this->session->userdata['logged_in'])){
 
                     <div class="custom-sele dropboxCitizenship" style="width:100px; height:50px;">
                         <select name="selectCitizenship" id="selectCategory_citizenship">
+                            <option value="">select here:</option>
                             <option value="BY DESCENT">BY DESCENT</option>
                             <option value="BY REGISTRATION">BY REGISTRATION</option>
                         </select>

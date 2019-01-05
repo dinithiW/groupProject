@@ -16,7 +16,8 @@
         
         public function insertBasicPersonalDetailsController(){
             if($this->input->post('Submit')){
-                
+                 
+                $_SESSION['application_form_filled'] = "yes";//prevent the access to the again application form
                 $this->load->model('ApplicantApplicationFormModel');
                 $this->ApplicantApplicationFormModel->insertBasicPersonalDetailsModel();
             }

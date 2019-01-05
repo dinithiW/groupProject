@@ -359,13 +359,7 @@ if($checking=='1'){
                 <span>Fill Application</span>
               </a>
             </li>
-            <li class="treeview">
-            <a href="<?php echo base_url(); ?>application_form_edit">
-                <i class="fa fa-files-o"></i>
-                <span>Edit Application</span>
-              </a>
-            </li>
-
+            
             <li class="treeview">
               <a href="<?php echo base_url(); ?>application_form_documents">
                 <i class="fa fa-files-o"></i>

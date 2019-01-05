@@ -62,7 +62,7 @@ class ValidateLogin extends CI_Model{
 	        			'name'      => $row->NAME,
 						'logged_in' => TRUE,
 						'index_number' =>$index_number, 
-						'application_form_filled' => FALSE
+						'application_form_filled' => "not"
 						
 					);
 				

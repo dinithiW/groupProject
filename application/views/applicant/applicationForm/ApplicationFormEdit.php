@@ -30,7 +30,7 @@ if(isset($this->session->userdata['logged_in'])){
         
         <div id="multistepform-example-container">
 
-           
+           <?php echo $_SERVER['application_form_filled']?>
 
             <ul id="multistepform-progressbar">
             
@@ -428,6 +428,7 @@ if(isset($this->session->userdata['logged_in'])){
                     
                         <option value="<?php  echo $row->POST_APPLY_FOR;?>"><?php  echo $row->POST_APPLY_FOR;?></option>
                         <option value="PROBATIONARY LECTURER">PROBATIONARY LECTURER</option>
+                        <option value="SENIOR LECTURE GR. I">SENIOR LECTURE GR. I</option>
                         <option value="SENIOR LECTURE GR. II">SENIOR LECTURE GR. II</option>
                     </select>
                 </div>
