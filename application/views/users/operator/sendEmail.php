@@ -1,12 +1,16 @@
 <?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
+
+<?php
 $userId = "";
 ?>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        <i class="fa fa-users"></i> User Management
-        <small>Add User</small>
+        <i class="fa fa-users"></i> Send Email For Approval
+        <small>To SAR</small>
       </h1>
     </section>
     
@@ -21,7 +25,7 @@ $userId = "";
                 
                 <div class="box box-primary">
                     <div class="box-header">
-                        <h3 class="box-title">Enter User Details</h3>
+                        <h3 class="box-title">Enter Details</h3>
                     </div><!-- /.box-header -->
                     <!-- form start -->
                     

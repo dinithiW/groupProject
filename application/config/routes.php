@@ -72,6 +72,7 @@ $route['OperatorIndex'] = 'OperatorDashboard/index';
 $route['OperatorIndex/createAd'] = 'OperatorDashboard/ad';
 $route['OperatorIndex/emails'] = 'OperatorDashboard/showEmails';
 $route['OperatorIndex/sendEmail'] = 'OperatorDashboard/sendAdToSAR';
+
 $route['OperatorIndex/process'] = 'OperatorDashboard/sendEmail';
 //this directs to the home of adding a new member
 $route['OperatorIndex/addPanelMember'] = 'OperatorDashboard/addPanelMember';

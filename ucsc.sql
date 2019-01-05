@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 05, 2019 at 01:47 PM
+-- Generation Time: Jan 05, 2019 at 03:12 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.23
 
@@ -332,6 +332,16 @@ CREATE TABLE `lp_category` (
   `CATEGORY` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `lp_category`
+--
+
+INSERT INTO `lp_category` (`INDEX_NUMBER`, `CATEGORY`) VALUES
+('19PR002', 0),
+('19PR003', 2),
+('19PR010', 3),
+('19PR011', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -540,6 +550,18 @@ CREATE TABLE `sl_selected` (
   `SELECTED` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `sl_selected`
+--
+
+INSERT INTO `sl_selected` (`INDEX_NUMBER`, `SELECTED`) VALUES
+('19SE000', 1),
+('19SE001', 0),
+('19SE004', 0),
+('19SE005', 1),
+('19SE006', 1),
+('19SE0068', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -550,6 +572,14 @@ CREATE TABLE `sl_selected_gradei` (
   `INDEX_NUMBER` varchar(100) NOT NULL,
   `SELECTED` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sl_selected_gradei`
+--
+
+INSERT INTO `sl_selected_gradei` (`INDEX_NUMBER`, `SELECTED`) VALUES
+('19PR006', 0),
+('19SE008', 1);
 
 -- --------------------------------------------------------
 
@@ -804,7 +834,7 @@ ALTER TABLE `interview_panel`
 -- Indexes for table `lp_category`
 --
 ALTER TABLE `lp_category`
-  ADD KEY `INDEX_NUMBER` (`INDEX_NUMBER`);
+  ADD PRIMARY KEY (`INDEX_NUMBER`);
 
 --
 -- Indexes for table `marking_field`
@@ -829,7 +859,7 @@ ALTER TABLE `sl_selected`
 -- Indexes for table `sl_selected_gradei`
 --
 ALTER TABLE `sl_selected_gradei`
-  ADD KEY `INDEX_NUMBER` (`INDEX_NUMBER`);
+  ADD PRIMARY KEY (`INDEX_NUMBER`);
 
 --
 -- Indexes for table `specializationarea`
