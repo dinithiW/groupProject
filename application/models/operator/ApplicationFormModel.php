@@ -30,6 +30,24 @@ class ApplicationFormModel extends CI_Model{
 
     }
 
+    public function getAllFileUploadsLinks(){
+        $fileUploadsLinks = [];
+        $this->load->database();
+        $this->db->select('LINK_ID');
+        $this->db->select('LINK_NAME');
+        $this->db->from('file_upload_links');
+
+        $query = $this->db->get();
+
+        foreach ($query->result() as $row) {
+            $fileUploadsLink = new ApplicationFormModel();
+            $fileUploadsLink->fileUploadID= $row->LINK_ID;
+            $fileUploadsLink->fileUploadName= $row->LINK_NAME;
+            array_push($fileUploadsLinks,$fileUploadsLink);
+        }
+        return $fileUploadsLinks;
+    }
+
     //returns the details of a single member
     public function getMember($panelID){
 
@@ -43,123 +61,73 @@ class ApplicationFormModel extends CI_Model{
     
 
 
-    function addNew()
+    function addNewS()
     {
         $this->load->view("includes/header");
-        $this->load->view("users/operator/addMember");
+        $this->load->view("users/operator/addSpecialization");
         $this->load->view("includes/footer");
         
     }
 
-    function addNewUser(){
-        
+    function addNewSpecialization($sname){
         $this->load->library('form_validation');
             
-        $this->form_validation->set_rules('fname','First Name','trim|required|max_length[255]');
-        $this->form_validation->set_rules('lname','Last Name','trim|required|max_length[255]');
-        $this->form_validation->set_rules('mobile','Mobile Number','required|min_length[10]');
-        $this->form_validation->set_rules('gender','Gender','trim|required');
-        $this->form_validation->set_rules('email','Email','trim|required|valid_email|max_length[255]');
-        $this->form_validation->set_rules('designation','Designation','trim|required|max_length[255]');
-        $this->form_validation->set_rules('address','Address','trim|required|max_length[255]');
+        $this->form_validation->set_rules('sname','Specialization Name','trim|required|max_length[255]');
+       
+       if($this->form_validation->run() == FALSE)
+            {
+                $this->addNewS();
+            }else{
+                $userInfoUsers = array('AREA_NAME'=>$sname);
+
+                $this->db->trans_start();
+                $this->db->insert('specializationarea', $userInfoUsers);
+                $rows =  $this->db->affected_rows();
+                $this->db->trans_complete();
         
+                if($rows>0){
+                    $this->session->set_flashdata('success', 'New Specialization created successfully');
+                 }else{
+                    $this->session->set_flashdata('error', 'Creation failed');
+                }
+                redirect('OperatorIndex/addSpecialization');
+            }
+    }
+    
+    function addNewF()
+    {
+        $this->load->view("includes/header");
+        $this->load->view("users/operator/addFileUploadLink");
+        $this->load->view("includes/footer");
+        
+    }
+
+	function addNewFileUpload($fname){
+        $this->load->library('form_validation');
             
-            if($this->form_validation->run() == FALSE)
+        $this->form_validation->set_rules('fname','File Link Name','trim|required|max_length[255]');
+       
+       if($this->form_validation->run() == FALSE)
             {
-                $this->addNew();
-            }
-            else
-            {
-                $fname = $this->input->post('fname');
-                $lname = $this->input->post('lname');
-                $email = $this->input->post('email');
-                $gender = $_POST['gender'];
-                $designation = $this->input->post('designation');
-                $address = $this->input->post('address');
-                $mobile = $this->input->post('mobile');
-                
-                $namesub = substr($fname,0,3);
-                $nameid = strtolower($namesub);
+                $this->addNewF();
+            }else{
+                $userInfoUsers = array('LINK_NAME'=>$fname);
 
-                $this->load->database();
-                $this->db->select("ID");
-                $this->db->from("interview_panel");
-                $this->db->order_by("ID", "desc");
-                $query = $this->db->get(); 
-                $rowcount = $query->num_rows();
+                $this->db->trans_start();
+                $this->db->insert('file_upload_links', $userInfoUsers);
+                $rows =  $this->db->affected_rows();
+                $this->db->trans_complete();
         
-                if($rowcount>0){
-                    $row = $query->row(); 
-                    $ans = $row->ID;
-                    $panelID = "$nameid"."$ans";
-                }else{
-                    $panelID = "$nameid"."1";
+                if($rows>0){
+                    $this->session->set_flashdata('success', 'New Upload Link created successfully');
+                 }else{
+                    $this->session->set_flashdata('error', 'Creation failed');
                 }
-                
-                
-
-                $userInfoPanel = array('PANEL_ID'=>$panelID,'FNAME'=>$fname,'LNAME'=>$lname,'EMAIL'=>$email,'GENDER'=>$gender ,'CONTACT_NUMBER'=>$mobile,'DESIGNATION'=>$designation,'ADDRESS'=>$address);
-
-                $name = $fname." ".$lname;
-                $usertype = "Panel";
-
-                $userInfoUsers = array('USERNAME'=>$email, 'PASSWORD'=>md5("abc"), 'USER_TYPE'=>$usertype, 'NAME'=> $name);
-                
-                //$this->load->model('user_model');
-                $result = $this->addUsers($userInfoUsers);
-                
-                if($result > 0)
-                {
-                    $result1 = $this->addPanelUsers($userInfoPanel);
-                    if($result1>0){
-                        $this->session->set_flashdata('success', 'New User created successfully');
-                    }else{
-                        $this->session->set_flashdata('error', 'User creation failed');
-                    }
-                    
-                }
-                else
-                {
-                    $this->session->set_flashdata('error', 'User creation failed');
-                }
-                
-                redirect('OperatorIndex/addMember');
+                redirect('OperatorIndex/addUploadLink');
             }
     }
-	//add member to interview panel
-    public function addPanelUsers($userInfoPanel){
 
-        $this->db->trans_start();
-        $this->db->insert('interview_panel', $userInfoPanel);
-       // $this->db->insert('interview_panel', $userInfo);
-       $rows =  $this->db->affected_rows();
-        $this->db->trans_complete();
-       if($rows>0){
-            return $rows;
-        }else{
-            return FALSE;
-        }
-        //echo"$hayhay";
-        
 
-    }
-
-    //add member to the table users
-    public function addUsers($userInfoUsers){
-
-        echo"anybodyyyyyy?????";
-        $this->db->trans_start();
-        $this->db->insert('users', $userInfoUsers);
-       $rows =  $this->db->affected_rows();
-       $this->db->trans_complete();
-        $this->db->trans_complete();
-       if($rows>0){
-            return $rows;
-        }else{
-            return FALSE;
-        }
-
-    }
 
     function edit()
     {
@@ -255,14 +223,19 @@ class ApplicationFormModel extends CI_Model{
         }
 
     }
-	
-    //need to implement this
-    public function deleteMember($panelID){
-        $data = $this->getMember($panelID);
-        $email = $data->EMAIL;
-        $this -> db -> where('USERNAME', $email);
-        $this -> db -> delete('users');
+
+    public function deleteSpecialization($sID){
+        //echo"teehee";
+        $this -> db -> where('AREA_ID', $sID);
+        $this -> db -> delete('specializationarea');
     }
+
+    public function deleteFileUpload($sID){
+        //echo"teehee";
+        $this -> db -> where('LINK_ID', $sID);
+        $this -> db -> delete('file_upload_links');
+    }
+
 
 
 }

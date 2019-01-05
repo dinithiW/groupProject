@@ -124,7 +124,17 @@ $route['OperatorIndex/directEditApplication'] = "OperatorDashboard/directEditApp
 $route['OperatorIndex/specialization'] = "OperatorDashboard/viewSpecializations";
 $route['OperatorIndex/fileUploads'] = "OperatorDashboard/viewFileUploads";
 
+$route['OperatorIndex/addSpecialization'] = "OperatorDashboard/addSpecializationArea";
+$route['OperatorIndex/addUploadLink'] = "OperatorDashboard/addFileUploadLink";
 
+$route['OperatorIndex/editSpecialization/(:any)'] = "OperatorDashboard/editSpecializationArea/$1";
+$route['OperatorIndex/editUploadLink/(:any)'] = "OperatorDashboard/editFileUploadLink/$1";
+
+$route['OperatorIndex/deleteSpecialization/(:any)'] = "OperatorDashboard/deleteSpecializationArea/$1";
+$route['OperatorIndex/deleteUploadLink/(:any)'] = "OperatorDashboard/deleteFileUploadLink/$1";
+
+$route['OperatorIndex/addSpecializationprocess'] = "OperatorDashboard/addSpecializationToDb";
+$route['OperatorIndex/addFileUploadprocess'] = "OperatorDashboard/addFileUploadToDb";
 
 //SAR routes
 $route['SAR']='SARDashboard/index';

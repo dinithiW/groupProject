@@ -17,17 +17,16 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        <i class="fa fa-users"></i> Specialization Areas
+        <i class="fa fa-users"></i> File Upload Links
         <small>Add, Edit, Delete</small>
       </h1>
     </section>
-<br>
     
     <section class="content"> 
       <div class="row">
             <div class="col-xs-12 text-right">
                 <div class="form-group">
-                    <a class="btn btn-primary" href="<?= base_url('OperatorIndex/addSpecialization') ?>"><i class="fa fa-plus"></i> Add New</a>
+                    <a class="btn btn-primary" href="<?= base_url('OperatorIndex/addUploadLink') ?>"><i class="fa fa-plus"></i> Add New</a>
                 </div>
             </div>
         </div>
@@ -35,34 +34,34 @@
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-                    <h3 class="box-title">Areas</h3>
-                    <!-- <div class="box-tools">
+                    <h3 class="box-title">Upload Links</h3>
+                    <div class="box-tools">
                         <form action="<?php echo base_url() ?>userListing" method="POST" id="searchList">
                             <div class="input-group">
                               
                             </div>
                         </form>
-                    </div> -->
+                    </div>
                 </div><!-- /.box-header -->
                 <div class="box-body table-responsive no-padding">
                    <table class="table table-hover">
                     <tr>
-                      <th>Specialization ID</th>
-                      <th>Specialization Name</th>
+                      <th>File Upload Link ID</th>
+                      <th>File Upload Link Name</th>
                       <th class="text-center">Actions</th>
                     </tr>
 
                     <?php
                     
-                        foreach ($Specializations as $row) {?>
+                        foreach ($FileUploads as $row) {?>
                     
                     <tr>
-                      <td><?php echo $row->specializationID ?></td>
-                      <td><?php echo $row->specializationName ?></td>
+                      <td><?php echo $row->fileUploadID ?></td>
+                      <td><?php echo $row->fileUploadName ?></td>
                      
                       <td class="text-center">
-                          <a class="btn btn-sm btn-info" href="<?php echo base_url().'OperatorIndex/editSpecialization/'.$row->specializationID; ?>"><i class="fa fa-pencil"></i></a>
-                          <a class="btn btn-sm btn-danger " href="<?php echo base_url().'OperatorIndex/deleteSpecialization/'.$row->specializationID; ?>" data-userid="<?php echo $row->specializationID; ?>"><i class="fa fa-trash"></i></a> 
+                          <a class="btn btn-sm btn-info" href="<?php echo base_url().'OperatorIndex/editUploadLink/'.$row->fileUploadID; ?>"><i class="fa fa-pencil"></i></a>
+                          <a class="btn btn-sm btn-danger " href="<?php echo base_url().'OperatorIndex/deleteUploadLink/'.$row->fileUploadID; ?>" data-userid="<?php echo $row->fileUploadID; ?>"><i class="fa fa-trash"></i></a> 
                       </td>
                     </tr>
                     <?php
@@ -81,5 +80,4 @@
     </section>
 </div>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/common.js" charset="utf-8"></script>
-
 </body>
