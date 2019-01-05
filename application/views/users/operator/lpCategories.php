@@ -33,7 +33,7 @@
         <label for="input-lg" class="input-lg"> Select Category</label>
       </div>
 
-      <form action = "<?= base_url().'OperatorIndex/directCategorize'?>" method = "post">
+      <form action = "<?= base_url().'OperatorIndex/lecturerProbationary'?>" method = "post">
       <div class = "row">
         <div class="form-group  col-xs-8 ">
         
@@ -63,7 +63,7 @@
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-                    <h3 class="box-title"><?php echo $category?></h3>
+                    <h3 class="box-title"><?php echo $category ?></h3>
                     <div class="box-tools">
                         <form action="<?php echo base_url() ?>userListing" method="POST" id="searchList">
                            
@@ -79,6 +79,7 @@
                       <th>Professional Qualifications</th>
                       <th>Other Qualifications</th>
                       <th>Specializations</th>
+                      <th>Change Category</th>>
                       <th class="text-center">Actions</th>
                     </tr>
 
@@ -91,6 +92,14 @@
                       <td><?=$a->pq?></td>
                       <td><?=$a->oq?></td>
                       <td><?=$a->spe?></td>
+                      <td>
+                        <select class="form-control" id="selectBox" name = <?php echo "category_$a->index"?>>
+                          <option value = "1" selected>Category 1</option>
+                          <option value = "2" >Category 2</option>
+                          <option value = "3" >Category 3</option>
+                          <option value = "0" >Others</option>
+                        </select>
+                      </td>
                       <td class="text-center">
                           <a class="btn btn-sm btn-success" href="<?php echo base_url().'OperatorIndex/selectSL/'.$a->index; ?>"><i class="fa fa-check"></i></a>
                           <a class="btn btn-sm btn-danger " href="<?php echo base_url().'OperatorIndex/notSelectSL/'.$a->index; ?>" data-userid=""><i class="fa fa-trash"></i></a> 

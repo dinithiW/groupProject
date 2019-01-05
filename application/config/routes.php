@@ -98,9 +98,11 @@ $route['OperatorIndex/categorize'] = "OperatorDashboard/categorizeHome";
 //
 $route['OperatorIndex/directCategorize'] = "OperatorDashboard/directTo";
 $route['OperatorIndex/lpCategory'] = "OperatorDashboard/showLpCategories";
+$route['OperatorIndex/lecturerProbationary'] = "OperatorDashboard/showLpCandidates";
 //show all senior lecturer applicants grade I and categorize them
 $route['OperatorIndex/seniorLecturerGradeI'] = "OperatorDashboard/showSeniorLecturerGradeI";
 $route['OperatorIndex/seniorLecturerGradeII'] = "OperatorDashboard/showSeniorLecturerGradeII";
+
 //insert into the sl_selected table (value 1)
 $route['OperatorIndex/selectSL/(:any)'] = "OperatorDashboard/addToSelected/$1";
 //insert into the sl_selected table (value 0)

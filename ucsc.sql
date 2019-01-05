@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 05, 2019 at 05:01 AM
+-- Generation Time: Jan 05, 2019 at 10:27 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.23
 
@@ -239,18 +239,9 @@ CREATE TABLE `higher_educational_details` (
 --
 
 INSERT INTO `higher_educational_details` (`INDEX_NUMBER`, `ROW_NUMBER`, `DEGREE_CATEGORY`, `UNIVERSITY`, `FROM`, `TO`, `DEGREE_OBTAINED`, `DURATION`, `CLASS`, `YEAR`, `INDEX_NO`) VALUES
-('19PR011', '1', 'bachelor', 'ba_uni1', 0, 0, 'BSC Hons-Computer Science', 0, 'Fisrt Clas', 0, 'bain1'),
-('19PR011', '2', 'bachelor', 'ba_uni2', 0, 0, 'BSC Hons-Software Engineering', 0, 'Fisrt Clas', 0, 'bain2'),
-('19PR011', '3', 'bachelor', 'ba_uni3', 0, 0, 'BSC Hons-Informtion System', 0, 'Fisrt Clas', 0, 'bain3'),
-('19PR011', '4', 'bachelor', 'ba_uni4', 0, 0, 'BSC Hons-Information Technology', 0, 'Fisrt Clas', 0, 'bain4'),
-('19PR011', '1', 'master', 'ma_uni1', 0, 0, 'BSC-Computer Science', 0, '', 0, 'maIn1'),
-('19PR011', '2', 'master', 'ma_uni2', 0, 0, 'BSC-Software Engineering', 0, '', 0, 'maIn2'),
-('19PR011', '3', 'master', 'ma_uni3', 0, 0, 'BSC-Informtion System', 0, '', 0, 'maIn3'),
-('19PR011', '4', 'master', 'ma_uni4', 0, 0, 'BSC-Information Technology', 0, '', 0, 'maIn3'),
-('19PR011', '1', 'phd', 'p_uni1', 0, 0, 'BSC-Computer Science', 0, '', 0, 'pIn1'),
-('19PR011', '2', 'phd', 'p_uni2', 0, 0, 'BSC-Software Engineering', 0, '', 0, 'pIn2'),
-('19PR011', '3', 'phd', 'p_uni3', 0, 0, 'BSC-Informtion System', 0, '', 0, 'pIn3'),
-('19PR011', '4', 'phd', 'p_uni4', 0, 0, 'BSC-Information Technology', 0, '', 0, 'pIn4');
+('19PR002', '1', 'bachelor', 'alidshladh', 2000, 2016, 'BSC Hons. Computer Science', 6, 'first class', 2016, 'dfgdglkjdfg'),
+('19PR003', '2', 'bachelor', 'dsfgsgsgdgs', 2000, 2004, 'BSC Hons. Computer Science', 4, 'second upper', 2004, 'dgdfgdgdfgd'),
+('19PR011', '1', 'bachelors', 'koihoihoih', 2001, 2016, 'BSC Hons in Information t', 6, 'second lower', 2016, 'sdfsdf');
 
 -- --------------------------------------------------------
 
@@ -466,18 +457,6 @@ CREATE TABLE `sl_selected` (
   `SELECTED` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `sl_selected`
---
-
-INSERT INTO `sl_selected` (`INDEX_NUMBER`, `SELECTED`) VALUES
-('19SE000', 1),
-('19SE001', 1),
-('19SE004', 1),
-('19SE005', 0),
-('19SE006', 0),
-('19SE0068', 0);
-
 -- --------------------------------------------------------
 
 --
@@ -488,14 +467,6 @@ CREATE TABLE `sl_selected_gradei` (
   `INDEX_NUMBER` varchar(100) NOT NULL,
   `SELECTED` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `sl_selected_gradei`
---
-
-INSERT INTO `sl_selected_gradei` (`INDEX_NUMBER`, `SELECTED`) VALUES
-('19PR006', 1),
-('19SE008', 0);
 
 -- --------------------------------------------------------
 
@@ -809,6 +780,18 @@ ALTER TABLE `vacancies`
 --
 ALTER TABLE `interview_panel`
   ADD CONSTRAINT `FK_Panel` FOREIGN KEY (`EMAIL`) REFERENCES `users` (`USERNAME`);
+
+--
+-- Constraints for table `sl_selected`
+--
+ALTER TABLE `sl_selected`
+  ADD CONSTRAINT `fk_sl_selected` FOREIGN KEY (`INDEX_NUMBER`) REFERENCES `basic_personal_details` (`INDEX_NUMBER`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `sl_selected_gradei`
+--
+ALTER TABLE `sl_selected_gradei`
+  ADD CONSTRAINT `fk_sl_selectedi` FOREIGN KEY (`INDEX_NUMBER`) REFERENCES `basic_personal_details` (`INDEX_NUMBER`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

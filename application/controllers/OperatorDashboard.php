@@ -216,14 +216,28 @@ class OperatorDashboard extends CI_Controller{
         }
     }
 
+    //route lpCategory
     public function showLpCategories(){
-        //$category = $_POST['category'];
+        //echo"am I here?";
+        $this->load->model("applicant_model");
+        $data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER","1");
+        $data['category'] = "Category 1";
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/lpCategories',$data);
+        $this->load->view('includes/footer');
+
+    }
+
+    //route lecturerProbationary
+    public function showLpCandidates(){
+        $category = $_POST['vacancy'];
+        echo $category;
         //$this->load->model("applicant_model");
         //$data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER",$category);
         
         $this->load->model("applicant_model");
-        $data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER","1");
-        $data['category'] = "Category 1";
+        $data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER",$category);
+        $data['category'] = "Category $category";
         $this->load->view('includes/header');
         $this->load->view('users/operator/lpCategories',$data);
         $this->load->view('includes/footer');
