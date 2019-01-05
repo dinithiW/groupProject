@@ -28,15 +28,33 @@
 
      </section>
     <section class="content">
-        <div class="row">
+        <!--<div class="row">
             <div class="col-xs-12 text-right">
 
                 <div class="form-group">
 
-                    <!--<a class="btn btn-primary" href="<?= base_url('OperatorIndex/addMember') ?>"><i class="fa fa-plus"></i> Add New</a>-->
-                </div>
+                    <<a class="btn btn-primary" href="<?= //base_url('OperatorIndex/addMember') ?>"><i class="fa fa-plus"></i> Add New</a>-->
+              <!--  </div>
             </div>
+        </div> -->
+        <form method=POST action="<?= base_url('applicants') ?>"></form>
+        <div class="form-group  col-xs-12">
+        <label for="input-lg" class="input-lg"> Select Vacancy</label>
+        <select class="form-control input-lg" id="sel1" name="type">
+        <option value="PROBATIONARY LECTURER">Lecturer Probationary</option>
+        <option value="SENIOR LECTURE GR. II">Senior Lecturer</option>
+          <!-- <option>3</option>
+          <option>4</option> -->
+        </select>
         </div>
+        <div class="col-xs-1" align="right">
+  
+      
+          <button type="submit" class="btn btn-primary" style="margin: 5px" >Search</button>
+        </div>
+
+
+
         <div class="row">
             <div class="col-xs-12">
               <div class="box">

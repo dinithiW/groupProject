@@ -60,7 +60,7 @@
             <div class="col-sm-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Applicant List</h3>
+                        <h3 class="box-title">Candidate List</h3>
                         <div class="box-tools">
                             <form action="<?php echo base_url() ?>userListing" method="POST" id="searchList">
                                 <div class="input-group">
