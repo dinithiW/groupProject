@@ -796,7 +796,7 @@ if(isset($this->session->userdata['logged_in'])){
 <!-- --------------start of the master degree details------------------ -->
   
                     <h4 id="title2">Masters Degree Details</h4>
-                    <a href="https://youtu.be/69StLKHr06c>CLICK HERE FOR SEE THE DEMOSTRATION FOR THIS TABLE</a>
+                    <a href="https://youtu.be/69StLKHr06c">CLICK HERE FOR SEE THE DEMOSTRATION FOR THIS TABLE</a>
                     <div class="table2"><!-- start of the Higher Educational Details table-->
                         <table id="Table">
                             <tr>
