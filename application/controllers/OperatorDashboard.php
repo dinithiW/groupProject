@@ -135,15 +135,6 @@ class OperatorDashboard extends CI_Controller{
         $username = $this->input->post("email");
         $this->load->model('operator/PanelMembers');
         $result = $this->PanelMembers->checkEmailExists($username, $userId);
-        /*if(empty($userId)){
-            echo"1";
-            
-        }else{
-            echo"2";
-            $result = $this->PanelMembers->checkEmailExists($username,$userID);
-        }*/
-        
-
         if(empty($result)){ echo("true"); }
         else { echo("false"); }
     }
@@ -186,14 +177,47 @@ class OperatorDashboard extends CI_Controller{
         $this->load->view('users/operator/allCandidates', $data);
         $this->load->view('includes/footer');
     }
-
+    //interview date setting home
     public function setInterviewDate(){
         $this->load->model('applicant_model');
-        $data['array'] = $this->applicant_model->getSelectedCandidates("Senior Lecturer Gr. I");
-        $data['headerName'] = "Senior Lecturer Gr. I Selected";
+        $data['array'] = $this->applicant_model->getSelectedCandidates("Senior Lecturer Grade I selected");
+        $data['headerName'] = "Senior Lecturer Grade I selected";
+        $data['showAlert'] = "false";
         $this->load->view('includes/header');
         $this->load->view('users/operator/setInterviewDate',$data);
         $this->load->view('includes/footer');
+    }
+
+    //interview date setting after selection of category
+    public function setIntervewDate(){
+        $position = $_POST['vacancy'];
+        $this->load->model('applicant_model');
+        $data['array'] = $this->applicant_model->getSelectedCandidates($position);
+        $data['headerName'] = $position;
+        $data['showAlert'] = "false";
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/setInterviewDate',$data);
+        $this->load->view('includes/footer');
+    }
+
+    public function addInterviewDateToDB(){
+        $data = [];
+        $idate = $_POST['idate'];
+        $itime = $_POST['iname'];
+        
+        $this->load->model('operator/InterviewModel');
+        if(isset($_POST['submit'])){
+            if(!empty($_POST['check_list'])) {
+                // Counting number of checked checkboxes.
+                $checked_count = count($_POST['check_list']);
+                // Loop to store and display values of individual checked checkbox.
+                foreach($_POST['check_list'] as $selected) {
+                    $this->InterviewModel->insertInterview($selected);
+                }
+            }else{
+                $data['showAlert'] = "false";
+            }
+        }
     }
 
     public function categorizeHome(){
@@ -437,10 +461,21 @@ class OperatorDashboard extends CI_Controller{
 
     public function sendEMailsToApplicants(){
         $this->load->model('applicant_model');
-        $data['array'] = $this->applicant_model->getSelectedCandidates("Senior Lecturer Gr. I");
+        $data['array'] = $this->applicant_model->getSelectedCandidates("Senior Lecturer Grade I selected");
         $this->load->view('includes/header');
         $this->load->view('users/operator/sendEmailToCandidates',$data);
         $this->load->view('includes/footer');
     }
+
+    public function sendEMailsTApplicants(){
+        /*$position = $_POST['vacancy'];
+        $this->load->model('applicant_model');
+        $data['array'] = $this->applicant_model->getSelectedCandidates($position);
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/sendEmailToCandidates',$data);
+        $this->load->view('includes/footer');*/
+    }
+
+
 }
 ?>

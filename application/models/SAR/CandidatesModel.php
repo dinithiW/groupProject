@@ -1,19 +1,25 @@
-<?php
+<?php if(!defined('BASEPATH')) exit('No direct script access allowed');
+
  
  class CandidatesModel extends CI_model{
- 	private $id;
- 	private $fname;
- 	private $lname;
- 	private $gender;
- 	private $email;
- 	private $degree;
- 	private $className;
+ public $index;
+   public $fname;
+   public $lname;
+   public $dob;
+   public $age;
+   public $eq;
+   public $pq;
+   public $oq;
+   public $spe;
+   public $email;
 
  	public function __construct() {
 		parent::__construct();
 	}
 
-	public function setID($id){
+	public function getAll($vacancy)
+
+	/*public function setID($id){
 		$this->id=$id;
 	}
 	public function getID(){
@@ -77,7 +83,8 @@
 
  	public function getallcategorythreelecturers(){
 
- 	}
+ 	}*/
+
 
 
 

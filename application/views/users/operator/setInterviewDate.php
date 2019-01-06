@@ -6,9 +6,6 @@
     <link rel="stylesheet" href="<?=base_url('assets/css/loginPanel.css')?>" type="text/css"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width= device-width ,initial-scale = 1">
-
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
-
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -16,12 +13,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
     <!-- <link src="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
-
-    <!-- <style type="text/css">
-      input{
-  display: block;
-}
-    </style> -->
 </head> 
 
 <body>
@@ -36,17 +27,17 @@
     </section>
     <section class="content">
 
-      <form action = "<?= base_url().'OperatorIndex/lecturerProbationary'?>" method = "post">
+      <form action = "<?= base_url().'OperatorIndex/intervewDate'?>" method = "post">
       <div class = "row">
         <div class="form-group  col-xs-8 ">
         
         <select class="form-control input-lg" id="selectBox" name = "vacancy">
            <!-- <select class="form-control input-lg" id="selectBox" onchange="changeFunc();"> -->
-          <option value = "1" >Senior Lecturer Grade I selected</option>
-          <option value = "2" >Senior Lecturer Grade II selected</option>
-          <option value = "3" >Lecturer Probationary Category 1</option>
-          <option value = "0" >Lecturer Probationary Category 2</option>
-          <option value = "0" >Lecturer Probationary Category 3</option>
+          <option value = "Senior Lecturer Grade I selected" >Senior Lecturer Grade I selected</option>
+          <option value = "Senior Lecturer Grade II selected" >Senior Lecturer Grade II selected</option>
+          <option value = "Lecturer Probationary Category 1" >Lecturer Probationary Category 1</option>
+          <option value = "Lecturer Probationary Category 2" >Lecturer Probationary Category 2</option>
+          <option value = "Lecturer Probationary Category 3" >Lecturer Probationary Category 3</option>
         </select>
 
 
@@ -65,32 +56,27 @@
 <br>
 <br>
 <div class="col-md-8">
-  <div class="box">
-    <form role="form" id="addUser" action="<?php echo base_url() ?>OperatorIndex/addMemberprocess" method="post" role="form">
-                        <div class="box-body">
-                            <div class="row">
-                                <div class="col-md-6">                                
-                                    <div class="form-group">
-                                        <label for="fname" class="col-md-6">Interview Date</label>
-                                        <input type="date" class="form-control required" id="fname" name="fname" maxlength="128">
-                                    </div>
-                                    
-                                </div>
+  <div class="box box-primary">
+    <form role="form" id="addUser" action="<?php echo base_url() ?>OperatorIndex/addInterviewDate" method="post" role="form">
+    <div class="box-body">
+      <div class="row">
+        <div class="col-md-6">                                
+          <div class="form-group">
+            <label for="fname" class="col-md-6">Interview Date</label>
+              <input required type="date" class="form-control required" id="idate" name="fname" maxlength="128">
+          </div>
+        </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="lname" class="col-md-6">Time</label>
-                                        <input type="time" class="form-control required">
+                                        <input required type="time" class="form-control required" name = "itime">
                                     
                                     </div>
                                 </div>
                             </div>
                          
-                        </div><!-- /.box-body -->
-    
-                        <!-- <div class="box-footer">
-                            <input type="submit" class="btn btn-primary" value="Submit" />
-                            <input type="reset" class="btn btn-default" value="Reset" />
-                        </div> -->
+                        </div>
+
                     </form>
                 </div>
             </div>
@@ -101,7 +87,7 @@
         <div class="row">
 
             <div class="col-xs-12">
-              <div class="box">
+              <div class="box box-primary">
                 <div class="box-header">
                     <h3 class="box-title">Candidates List</h3>
                     <div class="box-tools">
@@ -119,9 +105,9 @@
                 <div class="box-header">
                     <h3 class="box-title"><?= $headerName?></h3>
                     <div class="box-tools">
-                        <form action="<?php echo base_url() ?>userListing" method="POST" id="searchList">
+                        <!-- <form action="<?php echo base_url() ?>userListing" method="POST" id="searchList">
                            
-                        </form>
+                        </form> -->
                     </div>
                 </div><!-- /.box-header -->
                 <div class="box-body table-responsive no-padding">
@@ -130,9 +116,9 @@
                     <tr>
                       <th>Applicant ID</th>
                       <th>Name</th>
-                      <th>Email Address</th>
+                      <!-- <th>Email Address</th> -->
                       <th >Selected</th>
-                      <th class="text-center">Actions</th>
+                      <!-- <th class="text-center">Actions</th> -->
                     </tr>
 
                     
@@ -140,24 +126,23 @@
                     <tr>
                       <td><?=$a->index?></td>
                       <td><?="$a->fname $a->lname"?></td>
-                      <td><?=$a->email?></td>
+                      <!-- <td><?=$a->email?></td> -->
                       <td>
-                       <input type="checkbox" name="check_list[]" value="<?= $a->email?>" class = "checkbox"> 
+                       <input type="checkbox" name="check_list[]" value="<?= $a->index?>" class = "checkbox"> 
                       <!-- <input type="date" name="check_list[]" value="<?= $a->email?>" class = "checkbox"> -->
                     </td>
-                      
-                      
                      
-                      <td class="text-center">
-                          <!-- <input type = "submit"  value="&#xf00c" class="btn btn-sm btn-success fa fa-envelope-square" > -->
-                          <!-- <a class="btn btn-sm btn-danger " href="<?php echo base_url().'OperatorIndex/notSelectLP/'.$a->index; ?>" data-userid=""><i class="fa fa-trash"></i></a>  -->
-                          <a class="btn btn-sm btn-info " href="" data-userid=""><i class="fa fa-envelope">&nbspSend Email Individually</i></a> 
-                      </td>
                     </tr>
                     <?php endforeach?>
-                  </form>  
                   </table> 
-                  
+                  <div class = "form-group col-xs-2 ">
+        <input type="submit" class="btn btn-primary float-right" value = "Confirm Interview Date">
+
+      </div> 
+      <br>
+      <br>
+      
+         </form>          
                 </div><!-- /.box-body -->
                 <div class="box-footer clearfix">
                     <?php echo $this->pagination->create_links(); ?>
@@ -168,6 +153,14 @@
     </section>
                   
                 </div><!-- /.box-body -->
+<?php if($showAlert=="true"){?>
+    <div class="row">
+    <div class="alert alert-danger col-md-4 col-md-offset-4" align="center">
+<button type = "button" class="close" data-dismiss = "alert" aria-hidden="true">x</button>
+    Atleast one option must be selected!
+    </div>
+</div>
+<?php }?>
                 <div class="box-footer clearfix">
                     <?php echo $this->pagination->create_links(); ?>
                 </div>
@@ -176,6 +169,12 @@
         </div>
     </section>
 </div>
+
+
+
+
+
+
 
 <script type="text/javascript">
   /*var counter = 0;
@@ -214,8 +213,9 @@
     });
   }
 </script>
+
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/common.js" charset="utf-8"></script>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     jQuery(document).ready(function(){
         jQuery('ul.pagination li a').click(function (e) {
             e.preventDefault();            
@@ -225,7 +225,7 @@
             jQuery("#searchList").submit();
         });
     });
-</script>
+</script> -->
 </body>
 
 
