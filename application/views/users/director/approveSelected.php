@@ -30,7 +30,12 @@
                         <table class = "table table-bordered">
                             <tr>
                                 <td><b>Index number</b></td>
-                                <td><b>First name</b></td>
+                                <td><b>Name</b></td>
+                                <td><b>Gender</b></td>
+                                <td><b>E-Mail</b></td>
+                                <td><b>Contact No</b></td>
+                                <td><b>Post</b></td>
+                                <th class="text-center">Actions</th>
                             </tr>
 
                         <?php 
@@ -39,6 +44,13 @@
                             <tr>
                                 <td><?php echo $rec->INDEX_NUMBER; ?></td>
                                 <td><?php echo $rec->FIRST_NAME." ".$rec->LAST_NAME; ?></td>
+                                <td><?php echo $rec->GENDER; ?></td>
+                                <td><?php echo $rec->PERSONAL_EMAIL; ?></td>
+                                <td><?php echo $rec->MOBILE_NUMBER; ?></td>
+                                <td><?php echo $rec->POST_APPLY_FOR; ?></td>
+                                <td class="text-center">
+                                    <a class="btn btn-sm btn-danger " href="<?php echo base_url().'Director/deleteApplicant'.$rec->INDEX_NUMBER; ?>" data-userid="<?php echo $rec->INDEX_NUMBER; ?>"><i class="fa fa-trash"></i></a> 
+                                </td>
                             </tr>
                         <?php
                         } 

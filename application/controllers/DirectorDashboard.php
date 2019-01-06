@@ -51,6 +51,16 @@ class DirectorDashboard extends CI_Controller{
 		
 	}
 
+	public function deleteApplicant($INDEX_NUMBER){
+		$this->load->view('messages/delSelectedApplicant');
+	}
+	
+	public function deleteApplicantModel($INDEX_NUMBER){
+        $this->load->model('Director/applicantDetails');
+        $this->applicantDetails->rejectSelectedApplicant($INDEX_NUMBER);
+        redirect(base_url().'Director/approveSelected');
+    }
+
 	public function approveFinalSet(){
 		$this->load->view('includes/header');
 		$this->load->view('users/director/approveFinalSet');
