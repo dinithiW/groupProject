@@ -198,7 +198,7 @@ $route['registerUsers/success'] = 'Register/success';
 //directing to applicant home
 $route['applicant'] = 'ApplicantDashboard/index';
 $route['application_form_fill'] = 'ApplicantDashboard/applicationFirstPage';
-$route['application_form_fill'] = 'ApplicantDashboard/applicationSecondPage';
+//$route['application_form_fill'] = 'ApplicantDashboard/applicationSecondPage';
 $route['application_form_edit'] = 'ApplicationForm/editfileUpload';
 $route['application_form_documents'] = 'ApplicantDashboard/applicationFifththPage';
 $route['application_form_for_view'] = 'ApplicationForm/applicationFileViewFor';
