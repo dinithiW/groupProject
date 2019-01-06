@@ -95,6 +95,8 @@ $route['OperatorIndex/deleteMemberProcess/(:any)'] = "OperatorDashboard/deleteMe
 $route['OperatorIndex/viewAll'] = "OperatorDashboard/viewAllCandidates";
 //this is for loading the home page of the interview date setting process
 $route['OperatorIndex/interviewDate'] = "OperatorDashboard/setInterviewDate";
+$route['OperatorIndex/intervewDate'] = "OperatorDashboard/setIntervewDate";
+$route['OperatorIndex/addInterviewDate'] = "OperatorDashboard/addInterviewDateToDB";
 //to select the vacancy sl or lp
 $route['OperatorIndex/categorize'] = "OperatorDashboard/categorizeHome";
 //
@@ -139,6 +141,9 @@ $route['OperatorIndex/addFileUploadprocess'] = "OperatorDashboard/addFileUploadT
 $route['OperatorIndex/editSpecializationProcess/(:any)'] = "OperatorDashboard/editSpecializationToDb/$1";
 $route['OperatorIndex/editFileUploadProcess/(:any)'] = "OperatorDashboard/editFileUploadToDb/$1";
 $route['OperatorIndex/sendApplicantEmails'] = "OperatorDashboard/sendEMailsToApplicants";
+$route['OperatorIndex/sendApplicntEmails'] = "OperatorDashboard/sendEMailsTApplicants";
+
+
 
 //SAR routes
 $route['SAR']='SARDashboard/index';

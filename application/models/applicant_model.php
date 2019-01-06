@@ -252,17 +252,9 @@ class applicant_model extends CI_Model
            $this->db->where("INDEX_NUMBER IN(SELECT INDEX_NUMBER FROM sl_selected_gradei WHERE SELECTED = 1)");
         }
 
-        /*if($vacancy == "Senior Lecturer Grade I not selected"){
-           $this->db->where("INDEX_NUMBER IN(SELECT INDEX_NUMBER FROM sl_selected_gradei WHERE SELECTED = 0)");
-        }*/
-
         if($vacancy == "Senior Lecturer Grade II selected"){
            $this->db->where("INDEX_NUMBER IN(SELECT INDEX_NUMBER FROM sl_selected WHERE SELECTED = 1)");
         }
-
-        /*if($vacancy == "Senior Lecturer Grade II not selected"){
-           $this->db->where("INDEX_NUMBER IN(SELECT INDEX_NUMBER FROM sl_selected WHERE SELECTED = 0)");
-        }*/
 
         if($vacancy == "Lecturer Probationary Category 1"){
            $this->db->where("INDEX_NUMBER IN(SELECT INDEX_NUMBER FROM lp_category WHERE CATEGORY = 1)");
