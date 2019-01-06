@@ -1,17 +1,18 @@
 <?php
 if($this->session->userdata['logged_in']){
 ?>
-    <div class="content-wrapper">
+<div class="content-wrapper">
     <section class="content">
         <div class="row">
             <div class="container" style="width: 1200px;"><!-- start of the container-->
                 <!-- start of the head-->
+
                 <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4 row centered-form head">
                 <h4 id="headline1"><span color="red"> <b>ATTACH RELEVANT DOCUMENTS</b></span></h4>
 
 
                     <div class="headline_for_links">
-                        <font color="#821D12"> <b>REQUIRED DOCUMENTS FOR THIS YEAR</font></b>
+                        <font color="#821D12"> <b>REQUIRED DOCUMENTS FOR THIS YEAR</b></font>
                     </div>
                     <style>
                     .headline_for_links{
@@ -37,22 +38,21 @@ if($this->session->userdata['logged_in']){
                         <b> YOUR SUBMITTED DOCUMENTS </b>
                         <?php
                             $dbh = new PDO("mysql:host=localhost;dbname=ucsc","root","");
-                            $stat = $dbh->prepare("select * from application_form_documents");
+                            $index = $_SESSION['index_number'];
+                            $stat = $dbh->prepare("select * from application_form_documents where INDEX_NUMBER = '$index'");
                             $stat->execute();
                         ?>
                         <table class="responstable" id="tableId">
 
                             <tr>
-                                <th>REQUIRED DOCUMENT</th>
-                                <th data-th="Driver details"><span></span> SUBMITTED DOCUMENT</th>
-
+                                <th>SUBMITTED DOCUMENT</th>
                             </tr>
                             <?php
                             while($row = $stat->fetch()){
                             ?>
                             <tr>
-                                <td><?php echo $row['DOCUMENT_TYPE']?></td>
-                                <td><?php echo $row['INDEX_NUMBER']?></td>    
+                                <td><?php echo substr($row['DOCUMENT_NAME'],0,strlen($row['DOCUMENT_NAME'])-4)?></td>
+                               
                             </tr>
                         
                             <?php  
@@ -72,7 +72,7 @@ if($this->session->userdata['logged_in']){
 
                     
                     <!-- start of a upload link-->
-                    <?php echo form_open_multipart('ApplicationForm/insertfileUpload');?>
+                    <?php echo form_open_multipart('ApplicationForm/insertfileUpload'); ?>
                         <div class="form-group one">
                             <div class="custom-select " style="width:430px; height:50px;">
                                 <select name="selectDegree" id="selectCategory">
@@ -89,8 +89,8 @@ if($this->session->userdata['logged_in']){
                                     ?>        
                                 </select>
                             </div>
-                            
-                            <input type="file" class="inputClass1" id="inputId1" name="attached_file" value="<?php echo $row->LINK_NAME;?>">
+                            <input type="file" name="userfile"  class="btn btn-default btn-file" value="<?php echo $row->LINK_NAME;?>"/>
+                            <!-- <input type="file" class=" inputClass1" id="inputId1" name="attached_file" value="<?/*php echo $row->LINK_NAME;*/?>" accept="application/pdf"> -->
                             <button name = "submit" type="submit" class="btn btn-lg btn-block btn-primary"  id="button1">upload</button>
                             
                             <style>
@@ -126,7 +126,8 @@ if($this->session->userdata['logged_in']){
                     <!-- end of a upload link-->
 
                     <!-- start of a edit link-->
-                    <?php echo form_open_multipart('ApplicationForm/editfileUpload');?>
+                   
+                    <form action= "<?= base_url("ApplicationForm/viewUploadedFile")?>" method = "post" >
                         <div class="form-group one">
                             <div class="custom-select " style="width:430px; height:50px;">
                                 <select name="selectCategory" id="selectDocument">
@@ -135,7 +136,7 @@ if($this->session->userdata['logged_in']){
                                     if($fetch_data->num_rows()>0){
                                         foreach($fetch_data->result() as $row){
                                     ?>
-                                    <option value="<?php echo $row->LINK_NAME?>"><?php echo $row->LINK_NAME?></option>
+                                    <option name ="selected_document" value="<?php echo $row->LINK_NAME?>"><?php echo $row->LINK_NAME?></option>
                                     <?php
                                         }
                                     }
@@ -143,9 +144,9 @@ if($this->session->userdata['logged_in']){
                                     ?>        
                                 </select>
                             </div>
-                            <button name = "edit" type="submit" class="btn btn-lg btn-block btn-primary"  id="button3">Edit</button>            
-                            <button name = "edit" type="submit" class="btn btn-lg btn-block btn-primary deleteButton"  id="button4">Delete</button>            
-                   
+                            <button name = "edit" type="submit" class="btn btn-lg btn-block btn-primary"  id="button3">View</button>            
+                            <!-- <button name = "edit" type="submit" class="btn btn-lg btn-block btn-primary deleteButton"  id="button4">Delete</button>            
+                    -->
                             <style>
 
                                 #button3{
@@ -178,10 +179,11 @@ if($this->session->userdata['logged_in']){
                             </style>
                         </div>
                     </form>
+ </div><!-- end of the head-->   
+
+                    <!-- end of a edit link-->  
 
 
-                    <!-- end of a edit link-->                            
-                </div><!-- end of the head-->    
             </div><!-- end of the container-->  
         </div>
     </section>
