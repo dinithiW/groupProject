@@ -83,6 +83,10 @@ class SARDashboard extends CI_Controller{
         $this->load->view('includes/footer');
 	}
 
+	public function searchCandidates(){
+		$vacancy=$_POST['vacancy'];
+	}
+
 
 
 	public function getseniorLecturers(){
