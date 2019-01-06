@@ -422,7 +422,7 @@ if(isset($this->session->userdata['logged_in'])){
                 </style>
 
                 <div class="custom-select" style="width:300px; height:50px;">
-                    <select name="postApplyFor" id="selectCategory1" disabled>
+                    <select disabled name="postApplyFor" id="selectCategory1" disabled>
                     
                         <option value="<?php  echo $row->POST_APPLY_FOR;?>"><?php  echo $row->POST_APPLY_FOR;?></option>
                         <option value="PROBATIONARY LECTURER">PROBATIONARY LECTURER</option>
@@ -1300,7 +1300,6 @@ if(isset($this->session->userdata['logged_in'])){
                                 <th>From</th>
                                 <th>To</th>
                                 <th>Degree Obtained</th>
-                                <th>Duration</th>
                                 <th>Class</th>
                                 <th>Year</th>
                                 <th>Index No</th>
@@ -1399,7 +1398,7 @@ if(isset($this->session->userdata['logged_in'])){
 
                                 <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->UNIVERSITY ?>" name="phd_educational_university2"  size='25'/></td>
                                 <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->FROM; ?>" name="phd_educational_from2"  size='3'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->TO; ?>" name="phd_educational_to2"  size='3'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->TO; ?>" name="phd_educational_to2"  size='3'/></td>
                                 
                                  <!-- ---------------start------------- ------------>
                                 
@@ -1966,8 +1965,8 @@ if(isset($this->session->userdata['logged_in'])){
                     <!-- end the text box two-->
 
 
-                    <input disabled type="button" name="previous" class="previous button" value="Previous">
-                    <input disabled type="button" name="submit" class="next button" value="Next">
+                    <input  type="button" name="previous" class="previous button" value="Previous">
+                    <input  type="button" name="submit" class="next button" value="Next">
                 
             </div>
 
@@ -2008,11 +2007,11 @@ if(isset($this->session->userdata['logged_in'])){
                         ?>
                             <tr class="tr">
                                 
-                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->NAME;?>" name="referees_name1" size='30'/></td>
-                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->DESIGNATION;?>" name="referees_designation1" size='10'/></td>
-                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->ADDRESS;?>" name="referees_address1" size='30'/></td>
-                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->EMAIL;?>" name="referees_email1" size='20'/></td>
-                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->CONTACT_NO;?>" name="referees_contact1" size='10'/></td>
+                                <td><input disabled type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->NAME;?>" name="referees_name1" size='30'/></td>
+                                <td><input disabled type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->DESIGNATION;?>" name="referees_designation1" size='10'/></td>
+                                <td><input disabled type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->ADDRESS;?>" name="referees_address1" size='30'/></td>
+                                <td><input disabled type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->EMAIL;?>" name="referees_email1" size='20'/></td>
+                                <td><input disabled type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->CONTACT_NO;?>" name="referees_contact1" size='10'/></td>
                                 <td><span class="lblStatus"></span></td>
 
                             </tr>  
@@ -2023,11 +2022,11 @@ if(isset($this->session->userdata['logged_in'])){
                         ?>
                             <tr class="tr">
                                 
-                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->NAME;?>" name="referees_name2" size='30'/></td>
-                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->DESIGNATION;?>" name="referees_designation2" size='10'/></td>
-                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->ADDRESS;?>" name="referees_address2" size='30'/></td>
-                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->EMAIL;?>" name="referees_email2" size='20'/></td>
-                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->CONTACT_NO;?>" name="referees_contact2" size='10'/></td>
+                                <td><input disabled type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->NAME;?>" name="referees_name2" size='30'/></td>
+                                <td><input disabled type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->DESIGNATION;?>" name="referees_designation2" size='10'/></td>
+                                <td><input disabled type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->ADDRESS;?>" name="referees_address2" size='30'/></td>
+                                <td><input disabled type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->EMAIL;?>" name="referees_email2" size='20'/></td>
+                                <td><input disabled type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->CONTACT_NO;?>" name="referees_contact2" size='10'/></td>
                                 <td><span class="lblStatus"></span></td>
 
                             </tr>                     
@@ -2038,11 +2037,11 @@ if(isset($this->session->userdata['logged_in'])){
                         
                             <tr class="tr">
                                 
-                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->NAME;?>" name="referees_name3" size='30'/></td>
-                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->DESIGNATION;?>" name="referees_designation3" size='10'/></td>
-                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->ADDRESS;?>" name="referees_address3" size='30'/></td>
-                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->EMAIL;?>" name="referees_email3" size='20'/></td>
-                                <td><input type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->CONTACT_NO;?>" name="referees_contact3" size='10'/></td>
+                                <td><input disabled type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->NAME;?>" name="referees_name3" size='30'/></td>
+                                <td><input disabled type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->DESIGNATION;?>" name="referees_designation3" size='10'/></td>
+                                <td><input disabled type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->ADDRESS;?>" name="referees_address3" size='30'/></td>
+                                <td><input disabled type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->EMAIL;?>" name="referees_email3" size='20'/></td>
+                                <td><input disabled type="text" class="Text" placeholder="" value ="<?php echo $row_in_referees->CONTACT_NO;?>" name="referees_contact3" size='10'/></td>
                                 <td><span class="lblStatus"></span></td>
 
                             </tr>
@@ -2068,7 +2067,7 @@ if(isset($this->session->userdata['logged_in'])){
                     <!-- other--> 
                     <div form-group>
                         <label>Any other information that you need like to indicate</label>
-                        <input type="text" value ="<?php  echo $row_in_more_details->ANY_OTHER_INFORMATION; ?>" name="other_details" id="other" class="form-control input-sm" placeholder="                                                                              Any other information that you need like to indicate ">
+                        <input disabled type="text" value ="<?php  echo $row_in_more_details->ANY_OTHER_INFORMATION; ?>" name="other_details" id="other" class="form-control input-sm" placeholder="                                                                              Any other information that you need like to indicate ">
                     </div> 
                     <!-- other--> 
 
@@ -2084,7 +2083,7 @@ if(isset($this->session->userdata['logged_in'])){
 
                     <div class="iAgreeLable" id="agreement">
                         
-                        <input id="" type="checkbox" name="vehicle"  value="" required>
+                        <input disabled id="" type="checkbox" name="vehicle"  value="" required>
                         <h5>I agree</h5>
                     </div> 
 
