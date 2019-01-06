@@ -536,8 +536,7 @@ if(isset($this->session->userdata['logged_in'])){
 
 
                     <h4 id="title2">Bachelors Degree Details</h4>
-                    <a href="https://youtu.be/3ANR8AYTLFI">CLICK HERE FOR SEE THE DEMOSTRATION FOR THIS TABLE</a>
-                    <div class="table2"><!-- start of the Higher Educational Details table-->
+                      <div class="table2"><!-- start of the Higher Educational Details table-->
                         <table id="Table">
                             <tr>
                                 <th>University / Institution</th>
@@ -565,16 +564,16 @@ if(isset($this->session->userdata['logged_in'])){
                         ?>
                             <tr class="tr">
 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->UNIVERSITY ?>" name="heigher_educational_university1"  size='33'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->FROM; ?>" name="heigher_educational_from1"  size='5'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->TO; ?>" name="heigher_educational_to1"  size='5'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->UNIVERSITY ?>" name="heigher_educational_university1"  size='33'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->FROM; ?>" name="heigher_educational_from1"  size='5'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->TO; ?>" name="heigher_educational_to1"  size='5'/></td>
 
                                 <!-- ---------------start------------- ------------>
                                 
                                 
                                 <td>
                                     <div class="custom-sele" id="select_degree_div1">
-                                        <select name="heigher_educational_degree_obtained1" id="select_degree_selection1" style="font-size:9px;">
+                                        <select disabled name="heigher_educational_degree_obtained1" id="select_degree_selection1" style="font-size:9px;">
                                             <option value="<?php echo $row_in_higher_education->DEGREE_OBTAINED; ?>"><?php echo $row_in_higher_education->DEGREE_OBTAINED; ?></option>
                                             <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
                                             <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
@@ -608,13 +607,13 @@ if(isset($this->session->userdata['logged_in'])){
 <!-- --------------end degree----------------- -->
 
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->DURATION; ?>"name="heigher_educational_duration1"  size='15'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->DURATION; ?>"name="heigher_educational_duration1"  size='15'/></td>
                                 
 <!-- --------------start class-------------- -->
                                 <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
                                 <td>
                                     <div class="custom-sele" id="select_class_div1">
-                                        <select name="heigher_educational_class1" id="select_class_selection0" style="font-size:9px;">
+                                        <select disabled name="heigher_educational_class1" id="select_class_selection0" style="font-size:9px;">
                                             <option value="<?php echo $row_in_higher_education->CLASS; ?>"><?php echo $row_in_higher_education->CLASS; ?></option>
                                             <option value="Fisrt Class">Fisrt Class</option>
                                             <option value="Second Upper">Second Upper</option>
@@ -642,8 +641,8 @@ if(isset($this->session->userdata['logged_in'])){
                                 </style>
                                 <!-- -----------------end-------------------- -->
 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->YEAR; ?>" name="heigher_educational_year1"  size='10'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->INDEX_NO; ?>" name="heigher_educational_year_no1"  size='14'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->YEAR; ?>" name="heigher_educational_year1"  size='10'/></td>
+                                <td><input disabled  type="text" class="Text" value ="<?php echo $row_in_higher_education->INDEX_NO; ?>" name="heigher_educational_year_no1"  size='14'/></td>
                                 <td><span class="lblStatus"></span></td>
                     
                         <?php
@@ -652,16 +651,16 @@ if(isset($this->session->userdata['logged_in'])){
                         ?>
                                 <tr class="tr">
 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->UNIVERSITY ?>" name="heigher_educational_university2"  size='25'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->FROM; ?>" name="heigher_educational_from2"  size='3'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->TO; ?>" name="heigher_educational_to2"  size='3'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->UNIVERSITY ?>" name="heigher_educational_university2"  size='25'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->FROM; ?>" name="heigher_educational_from2"  size='3'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->TO; ?>" name="heigher_educational_to2"  size='3'/></td>
                                 
                                  <!-- ---------------start------------- ------------>
                                
                                 
                                 <td>
                                     <div class="custom-sele" id="select_degree_div1">
-                                        <select name="heigher_educational_degree_obtained2" id="select_degree_selection1" style="font-size:9px;">
+                                        <select disabled name="heigher_educational_degree_obtained2" id="select_degree_selection1" style="font-size:9px;">
                                             <option value="<?php echo $row_in_higher_education->DEGREE_OBTAINED; ?>"><?php echo $row_in_higher_education->DEGREE_OBTAINED; ?></option>
                                             <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
                                             <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
@@ -695,13 +694,13 @@ if(isset($this->session->userdata['logged_in'])){
 <!-- --------------end degree----------------- -->
 
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->DURATION; ?>"name="heigher_educational_duration2"  size='15'/></td>
+                                <td><input disabled  type="text" class="Text" value ="<?php echo $row_in_higher_education->DURATION; ?>"name="heigher_educational_duration2"  size='15'/></td>
                                 
 <!-- --------------start class-------------- -->
                                 <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
                                 <td>
                                     <div class="custom-sele" id="select_class_div1">
-                                        <select name="heigher_educational_class2" id="select_class_selection0" style="font-size:9px;">
+                                        <select disabled name="heigher_educational_class2" id="select_class_selection0" style="font-size:9px;">
                                             <option value="<?php echo $row_in_higher_education->CLASS; ?>"><?php echo $row_in_higher_education->CLASS; ?></option>
                                             <option value="Fisrt Class">Fisrt Class</option>
                                             <option value="Second Upper">Second Upper</option>
@@ -729,8 +728,8 @@ if(isset($this->session->userdata['logged_in'])){
                                 </style>
                                 <!-- -----------------end-------------------- -->
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->YEAR; ?>" name="heigher_educational_year2"  size='4'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->INDEX_NO; ?>" name="heigher_educational_year_no2"  size='7'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->YEAR; ?>" name="heigher_educational_year2"  size='4'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->INDEX_NO; ?>" name="heigher_educational_year_no2"  size='7'/></td>
                                 <td><span class="lblStatus"></span></td>                       
                         <?php
                                 }
@@ -739,9 +738,9 @@ if(isset($this->session->userdata['logged_in'])){
                         
                         <tr class="tr">
 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->UNIVERSITY ?>" name="heigher_educational_university3"  size='25'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->FROM; ?>" name="heigher_educational_from3"  size='3'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->TO; ?>" name="heigher_educational_to3"  size='3'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->UNIVERSITY ?>" name="heigher_educational_university3"  size='25'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->FROM; ?>" name="heigher_educational_from3"  size='3'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->TO; ?>" name="heigher_educational_to3"  size='3'/></td>
                                 
                                 
                                 
@@ -751,7 +750,7 @@ if(isset($this->session->userdata['logged_in'])){
                                 
                                 <td>
                                     <div class="custom-sele" id="select_degree_div1">
-                                        <select name="heigher_educational_degree_obtained3" id="select_degree_selection1" style="font-size:9px;">
+                                        <select disabled name="heigher_educational_degree_obtained3" id="select_degree_selection1" style="font-size:9px;">
                                             <option value="<?php echo $row_in_higher_education->DEGREE_OBTAINED; ?>"><?php echo $row_in_higher_education->DEGREE_OBTAINED; ?></option>
                                             <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
                                             <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
@@ -785,13 +784,13 @@ if(isset($this->session->userdata['logged_in'])){
 <!-- --------------end degree----------------- -->
 
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->DURATION; ?>"name="heigher_educational_duration3"  size='15'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->DURATION; ?>"name="heigher_educational_duration3"  size='15'/></td>
                                 
 <!-- --------------start class-------------- -->
                                 <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
                                 <td>
                                     <div class="custom-sele" id="select_class_div1">
-                                        <select name="heigher_educational_class3" id="select_class_selection0" style="font-size:9px;">
+                                        <select disabled name="heigher_educational_class3" id="select_class_selection0" style="font-size:9px;">
                                             <option value="<?php echo $row_in_higher_education->CLASS; ?>"><?php echo $row_in_higher_education->CLASS; ?></option>
                                             <option value="Fisrt Class">Fisrt Class</option>
                                             <option value="Second Upper">Second Upper</option>
@@ -819,8 +818,8 @@ if(isset($this->session->userdata['logged_in'])){
                                 </style>
                                 <!-- -----------------end-------------------- -->
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->YEAR; ?>" name="heigher_educational_year3"  size='4'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->INDEX_NO; ?>" name="heigher_educational_year_no3"  size='7'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->YEAR; ?>" name="heigher_educational_year3"  size='4'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->INDEX_NO; ?>" name="heigher_educational_year_no3"  size='7'/></td>
                                 <td><span class="lblStatus"></span></td>  
                         
                         <?php
@@ -829,9 +828,9 @@ if(isset($this->session->userdata['logged_in'])){
                         ?>
                         <tr class="tr">
 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->UNIVERSITY ?>" name="heigher_educational_university4"  size='25'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->FROM; ?>" name="heigher_educational_from4"  size='3'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->TO; ?>" name="heigher_educational_to4"  size='3'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->UNIVERSITY ?>" name="heigher_educational_university4"  size='25'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->FROM; ?>" name="heigher_educational_from4"  size='3'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->TO; ?>" name="heigher_educational_to4"  size='3'/></td>
                                
                                
                                 
@@ -840,7 +839,7 @@ if(isset($this->session->userdata['logged_in'])){
                                 
                                  <td>
                                  <div class="custom-sele" id="select_degree_div1">
-                                        <select name="heigher_educational_degree_obtained4" id="select_degree_selection1" style="font-size:9px;">
+                                        <select disabled name="heigher_educational_degree_obtained4" id="select_degree_selection1" style="font-size:9px;">
                                             <option value="<?php echo $row_in_higher_education->DEGREE_OBTAINED; ?>"><?php echo $row_in_higher_education->DEGREE_OBTAINED; ?></option>
                                             <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
                                             <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
@@ -874,13 +873,13 @@ if(isset($this->session->userdata['logged_in'])){
 <!-- --------------end degree----------------- -->
 
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->DURATION; ?>"name="heigher_educational_duration4"  size='15'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->DURATION; ?>"name="heigher_educational_duration4"  size='15'/></td>
                                 
 <!-- --------------start class-------------- -->
                                 <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
                                 <td>
                                     <div class="custom-sele" id="select_class_div1">
-                                        <select name="heigher_educational_class4" id="select_class_selection0" style="font-size:9px;">
+                                        <select disabled name="heigher_educational_class4" id="select_class_selection0" style="font-size:9px;">
                                             <option value="<?php echo $row_in_higher_education->CLASS; ?>"><?php echo $row_in_higher_education->CLASS; ?></option>
                                             <option value="Fisrt Class">Fisrt Class</option>
                                             <option value="Second Upper">Second Upper</option>
@@ -908,8 +907,8 @@ if(isset($this->session->userdata['logged_in'])){
                                 </style>
                                 <!-- -----------------end-------------------- -->
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->YEAR; ?>" name="heigher_educational_year4"  size='4'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->INDEX_NO; ?>" name="heigher_educational_year_no4"  size='7'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->YEAR; ?>" name="heigher_educational_year4"  size='4'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->INDEX_NO; ?>" name="heigher_educational_year_no4"  size='7'/></td>
                                 <td><span class="lblStatus"></span></td>  
                             
                         <?php
@@ -934,7 +933,7 @@ if(isset($this->session->userdata['logged_in'])){
 
 
                     <h4 id="title2">Masters Degree Details</h4>
-                    <a href="https://youtu.be/69StLKHr06c">CLICK HERE FOR SEE THE DEMOSTRATION FOR THIS TABLE</a>
+                    
                     <div class="table2"><!-- start of the Higher Educational Details table-->
                         <table id="Table">
                             <tr>
@@ -963,16 +962,16 @@ if(isset($this->session->userdata['logged_in'])){
                         ?>
                             <tr class="tr">
 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->UNIVERSITY ?>" name="master_educational_university1"  size='33'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->FROM; ?>" name="master_educational_from1"  size='5'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->TO; ?>" name="master_educational_to1"  size='5'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->UNIVERSITY ?>" name="master_educational_university1"  size='33'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->FROM; ?>" name="master_educational_from1"  size='5'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->TO; ?>" name="master_educational_to1"  size='5'/></td>
 
                                 <!-- ---------------start------------- ------------>
                                
                                 
                                 <td>
                                     <div class="custom-sele" id="select_degree_div1">
-                                        <select name="master_educational_degree_obtained1" id="select_degree_selection1" style="font-size:9px;">
+                                        <select disabled name="master_educational_degree_obtained1" id="select_degree_selection1" style="font-size:9px;">
                                             <option value="<?php echo $row_in_higher_education->DEGREE_OBTAINED; ?>"><?php echo $row_in_higher_education->DEGREE_OBTAINED; ?></option>
                                             <!-- <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
                                             <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
@@ -1006,7 +1005,7 @@ if(isset($this->session->userdata['logged_in'])){
 <!-- --------------end degree----------------- -->
 
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->DURATION; ?>"name="master_educational_duration1"  size='15'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->DURATION; ?>"name="master_educational_duration1"  size='15'/></td>
                                 
 <!-- --------------start class-------------- -->
                                 <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
@@ -1029,8 +1028,8 @@ if(isset($this->session->userdata['logged_in'])){
                                 </style>
                                 <!-- -----------------end-------------------- -->
 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->YEAR; ?>" name="master_educational_year1"  size='10'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->INDEX_NO; ?>" name="master_educational_year_no1"  size='14'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->YEAR; ?>" name="master_educational_year1"  size='10'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->INDEX_NO; ?>" name="master_educational_year_no1"  size='14'/></td>
                                 <td><span class="lblStatus"></span></td>
                     
                         <?php
@@ -1039,16 +1038,16 @@ if(isset($this->session->userdata['logged_in'])){
                         ?>
                                 <tr class="tr">
 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->UNIVERSITY ?>" name="master_educational_university2"  size='25'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->FROM; ?>" name="master_educational_from2"  size='3'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->TO; ?>" name="master_educational_to2"  size='3'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->UNIVERSITY ?>" name="master_educational_university2"  size='25'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->FROM; ?>" name="master_educational_from2"  size='3'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->TO; ?>" name="master_educational_to2"  size='3'/></td>
                                 
                                  <!-- ---------------start------------- ------------>
                                 
                                 
                                 <td>
                                     <div class="custom-sele" id="select_degree_div1">
-                                        <select name="master_educational_degree_obtained2" id="select_degree_selection1" style="font-size:9px;">
+                                        <select disabled name="master_educational_degree_obtained2" id="select_degree_selection1" style="font-size:9px;">
                                             <option value="<?php echo $row_in_higher_education->DEGREE_OBTAINED; ?>"><?php echo $row_in_higher_education->DEGREE_OBTAINED; ?></option>
                                             <!-- <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
                                             <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
@@ -1082,7 +1081,7 @@ if(isset($this->session->userdata['logged_in'])){
 <!-- --------------end degree----------------- -->
 
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->DURATION; ?>"name="master_educational_duration2"  size='15'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->DURATION; ?>"name="master_educational_duration2"  size='15'/></td>
                                 
 <!-- --------------start class-------------- -->
                                 <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
@@ -1105,8 +1104,8 @@ if(isset($this->session->userdata['logged_in'])){
                                 </style>
                                 <!-- -----------------end-------------------- -->
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->YEAR; ?>" name="master_educational_year2"  size='4'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->INDEX_NO; ?>" name="master_educational_year_no2"  size='7'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->YEAR; ?>" name="master_educational_year2"  size='4'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->INDEX_NO; ?>" name="master_educational_year_no2"  size='7'/></td>
                                 <td><span class="lblStatus"></span></td>                       
                         <?php
                                 }
@@ -1115,9 +1114,9 @@ if(isset($this->session->userdata['logged_in'])){
                         
                         <tr class="tr">
 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->UNIVERSITY ?>" name="master_educational_university3"  size='25'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->FROM; ?>" name="master_educational_from3"  size='3'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->TO; ?>" name="master_educational_to3"  size='3'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->UNIVERSITY ?>" name="master_educational_university3"  size='25'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->FROM; ?>" name="master_educational_from3"  size='3'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->TO; ?>" name="master_educational_to3"  size='3'/></td>
                                 
                                 
                                 
@@ -1127,7 +1126,7 @@ if(isset($this->session->userdata['logged_in'])){
                                 
                                 <td>
                                     <div class="custom-sele" id="select_degree_div1">
-                                        <select name="master_educational_degree_obtained3" id="select_degree_selection1" style="font-size:9px;">
+                                        <select disabled name="master_educational_degree_obtained3" id="select_degree_selection1" style="font-size:9px;">
                                             <option value="<?php echo $row_in_higher_education->DEGREE_OBTAINED; ?>"><?php echo $row_in_higher_education->DEGREE_OBTAINED; ?></option>
                                             <!-- <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
                                             <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
@@ -1161,7 +1160,7 @@ if(isset($this->session->userdata['logged_in'])){
 <!-- --------------end degree----------------- -->
 
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->DURATION; ?>"name="master_educational_duration3"  size='15'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->DURATION; ?>"name="master_educational_duration3"  size='15'/></td>
                                 
 <!-- --------------start class-------------- -->
                                 <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
@@ -1183,8 +1182,8 @@ if(isset($this->session->userdata['logged_in'])){
                                 </style>
                                 <!-- -----------------end-------------------- -->
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->YEAR; ?>" name="master_educational_year3"  size='4'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->INDEX_NO; ?>" name="master_educational_year_no3"  size='7'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->YEAR; ?>" name="master_educational_year3"  size='4'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->INDEX_NO; ?>" name="master_educational_year_no3"  size='7'/></td>
                                 <td><span class="lblStatus"></span></td>  
                         
                         <?php
@@ -1193,9 +1192,9 @@ if(isset($this->session->userdata['logged_in'])){
                         ?>
                         <tr class="tr">
 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->UNIVERSITY ?>" name="master_educational_university4"  size='25'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->FROM; ?>" name="master_educational_from4"  size='3'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->TO; ?>" name="master_educational_to4"  size='3'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->UNIVERSITY ?>" name="master_educational_university4"  size='25'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->FROM; ?>" name="master_educational_from4"  size='3'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->TO; ?>" name="master_educational_to4"  size='3'/></td>
                                
                                
                                 
@@ -1204,7 +1203,7 @@ if(isset($this->session->userdata['logged_in'])){
                                 
                                  <td>
                                     <div class="custom-sele" id="select_degree_div1">
-                                        <select name="master_educational_degree_obtained4" id="select_degree_selection1" style="font-size:9px;">
+                                        <select disabled name="master_educational_degree_obtained4" id="select_degree_selection1" style="font-size:9px;">
                                             <option value="<?php echo $row_in_higher_education->DEGREE_OBTAINED; ?>"><?php echo $row_in_higher_education->DEGREE_OBTAINED; ?></option>
                                             <!-- <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
                                             <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
@@ -1239,7 +1238,7 @@ if(isset($this->session->userdata['logged_in'])){
 
 
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->DURATION; ?>"name="master_educational_duration4"  size='15'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->DURATION; ?>"name="master_educational_duration4"  size='15'/></td>
                                 
 <!-- --------------start class-------------- -->
                                 <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
@@ -1262,8 +1261,8 @@ if(isset($this->session->userdata['logged_in'])){
                                 </style>
                                 <!-- -----------------end-------------------- -->
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->YEAR; ?>" name="master_educational_year4"  size='4'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->INDEX_NO; ?>" name="master_educational_year_no4"  size='7'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->YEAR; ?>" name="master_educational_year4"  size='4'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->INDEX_NO; ?>" name="master_educational_year_no4"  size='7'/></td>
                                 <td><span class="lblStatus"></span></td>  
                             
                         <?php
@@ -1293,7 +1292,7 @@ if(isset($this->session->userdata['logged_in'])){
 
 
                     <h4 id="title2">PHD Degree Details</h4>
-                    <a href="https://youtu.be/GDS-nrTpgvY">CLICK HERE FOR SEE THE DEMOSTRATION FOR THIS TABLE</a>
+                    
                     <div class="table2"><!-- start of the Higher Educational Details table-->
                         <table id="Table">
                             <tr>
@@ -1322,16 +1321,16 @@ if(isset($this->session->userdata['logged_in'])){
                         ?>
                             <tr class="tr">
 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->UNIVERSITY ?>" name="phd_educational_university1"  size='33'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->FROM; ?>" name="phd_educational_from1"  size='5'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->TO; ?>" name="phd_educational_to1"  size='5'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->UNIVERSITY ?>" name="phd_educational_university1"  size='33'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->FROM; ?>" name="phd_educational_from1"  size='5'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->TO; ?>" name="phd_educational_to1"  size='5'/></td>
 
                                 <!-- ---------------start------------- ------------>
                                
                                 
                                 <td>
                                     <div class="custom-sele" id="select_degree_div1">
-                                        <select name="phd_educational_degree_obtained1" id="select_degree_selection1" style="font-size:9px;">
+                                        <select disabled name="phd_educational_degree_obtained1" id="select_degree_selection1" style="font-size:9px;">
                                             <option value="<?php echo $row_in_higher_education->DEGREE_OBTAINED; ?>"><?php echo $row_in_higher_education->DEGREE_OBTAINED; ?></option>
                                             <!-- <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
                                             <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
@@ -1365,7 +1364,7 @@ if(isset($this->session->userdata['logged_in'])){
 <!-- --------------end degree----------------- -->
 
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->DURATION; ?>"name="phd_educational_duration1"  size='15'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->DURATION; ?>"name="phd_educational_duration1"  size='15'/></td>
                                 
 <!-- --------------start class-------------- -->
                                 <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
@@ -1388,8 +1387,8 @@ if(isset($this->session->userdata['logged_in'])){
                                 </style>
                                 <!-- -----------------end-------------------- -->
 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->YEAR; ?>" name="phd_educational_year1"  size='10'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->INDEX_NO; ?>" name="phd_educational_year_no1"  size='14'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->YEAR; ?>" name="phd_educational_year1"  size='10'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->INDEX_NO; ?>" name="phd_educational_year_no1"  size='14'/></td>
                                 <td><span class="lblStatus"></span></td>
                     
                         <?php
@@ -1398,8 +1397,8 @@ if(isset($this->session->userdata['logged_in'])){
                         ?>
                                 <tr class="tr">
 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->UNIVERSITY ?>" name="phd_educational_university2"  size='25'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->FROM; ?>" name="phd_educational_from2"  size='3'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->UNIVERSITY ?>" name="phd_educational_university2"  size='25'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->FROM; ?>" name="phd_educational_from2"  size='3'/></td>
                                 <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->TO; ?>" name="phd_educational_to2"  size='3'/></td>
                                 
                                  <!-- ---------------start------------- ------------>
@@ -1407,7 +1406,7 @@ if(isset($this->session->userdata['logged_in'])){
                                 
                                 <td>
                                     <div class="custom-sele" id="select_degree_div1">
-                                        <select name="phd_educational_degree_obtained2" id="select_degree_selection1" style="font-size:9px;">
+                                        <select disabled name="phd_educational_degree_obtained2" id="select_degree_selection1" style="font-size:9px;">
                                             <option value="<?php echo $row_in_higher_education->DEGREE_OBTAINED; ?>"><?php echo $row_in_higher_education->DEGREE_OBTAINED; ?></option>
                                             <!-- <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
                                             <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
@@ -1441,7 +1440,7 @@ if(isset($this->session->userdata['logged_in'])){
 <!-- --------------end degree----------------- -->
 
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->DURATION; ?>"name="phd_educational_duration2"  size='15'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->DURATION; ?>"name="phd_educational_duration2"  size='15'/></td>
                                 
 <!-- --------------start class-------------- -->
                                 <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
@@ -1464,8 +1463,8 @@ if(isset($this->session->userdata['logged_in'])){
                                 </style>
                                 <!-- -----------------end-------------------- -->
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->YEAR; ?>" name="phd_educational_year2"  size='4'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->INDEX_NO; ?>" name="phd_educational_year_no2"  size='7'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->YEAR; ?>" name="phd_educational_year2"  size='4'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->INDEX_NO; ?>" name="phd_educational_year_no2"  size='7'/></td>
                                 <td><span class="lblStatus"></span></td>                       
                         <?php
                                 }
@@ -1474,9 +1473,9 @@ if(isset($this->session->userdata['logged_in'])){
                         
                         <tr class="tr">
 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->UNIVERSITY ?>" name="phd_educational_university3"  size='25'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->FROM; ?>" name="phd_educational_from3"  size='3'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->TO; ?>" name="phd_educational_to3"  size='3'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->UNIVERSITY ?>" name="phd_educational_university3"  size='25'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->FROM; ?>" name="phd_educational_from3"  size='3'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->TO; ?>" name="phd_educational_to3"  size='3'/></td>
                                 
                                 
                                 
@@ -1486,7 +1485,7 @@ if(isset($this->session->userdata['logged_in'])){
                                 
                                 <td>
                                     <div class="custom-sele" id="select_degree_div1">
-                                        <select name="phd_educational_degree_obtained3" id="select_degree_selection1" style="font-size:9px;">
+                                        <select disabled name="phd_educational_degree_obtained3" id="select_degree_selection1" style="font-size:9px;">
                                             <option value="<?php echo $row_in_higher_education->DEGREE_OBTAINED; ?>"><?php echo $row_in_higher_education->DEGREE_OBTAINED; ?></option>
                                             <!-- <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
                                             <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
@@ -1520,7 +1519,7 @@ if(isset($this->session->userdata['logged_in'])){
 <!-- --------------end degree----------------- -->
 
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->DURATION; ?>"name="phd_educational_duration3"  size='15'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->DURATION; ?>"name="phd_educational_duration3"  size='15'/></td>
                                 
 <!-- --------------start class-------------- -->
                                 <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
@@ -1542,8 +1541,8 @@ if(isset($this->session->userdata['logged_in'])){
                                 </style>
                                 <!-- -----------------end-------------------- -->
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->YEAR; ?>" name="phd_educational_year3"  size='4'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->INDEX_NO; ?>" name="phd_educational_year_no3"  size='7'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->YEAR; ?>" name="phd_educational_year3"  size='4'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->INDEX_NO; ?>" name="phd_educational_year_no3"  size='7'/></td>
                                 <td><span class="lblStatus"></span></td>  
                         
                         <?php
@@ -1552,9 +1551,9 @@ if(isset($this->session->userdata['logged_in'])){
                         ?>
                         <tr class="tr">
 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->UNIVERSITY ?>" name="phd_educational_university4"  size='25'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->FROM; ?>" name="phd_educational_from4"  size='3'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->TO; ?>" name="phd_educational_to4"  size='3'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->UNIVERSITY ?>" name="phd_educational_university4"  size='25'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->FROM; ?>" name="phd_educational_from4"  size='3'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->TO; ?>" name="phd_educational_to4"  size='3'/></td>
                                
                                
                                 
@@ -1563,7 +1562,7 @@ if(isset($this->session->userdata['logged_in'])){
                                 
                                  <td>
                                     <div class="custom-sele" id="select_degree_div1">
-                                        <select name="phd_educational_degree_obtained4" id="select_degree_selection1" style="font-size:9px;">
+                                        <select disabled name="phd_educational_degree_obtained4" id="select_degree_selection1" style="font-size:9px;">
                                             <option value="<?php echo $row_in_higher_education->DEGREE_OBTAINED; ?>"><?php echo $row_in_higher_education->DEGREE_OBTAINED; ?></option>
                                             <!-- <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
                                             <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
@@ -1597,7 +1596,7 @@ if(isset($this->session->userdata['logged_in'])){
 <!-- --------------end degree----------------- -->
 
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->DURATION; ?>"name="phd_educational_duration4"  size='15'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->DURATION; ?>"name="phd_educational_duration4"  size='15'/></td>
                                 
 <!-- --------------start class-------------- -->
                                 <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
@@ -1620,8 +1619,8 @@ if(isset($this->session->userdata['logged_in'])){
                                 </style>
                                 <!-- -----------------end-------------------- -->
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->YEAR; ?>" name="phd_educational_year4"  size='4'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_higher_education->INDEX_NO; ?>" name="phd_educational_year_no4"  size='7'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->YEAR; ?>" name="phd_educational_year4"  size='4'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_higher_education->INDEX_NO; ?>" name="phd_educational_year_no4"  size='7'/></td>
                                 <td><span class="lblStatus"></span></td>  
                             
                         <?php
@@ -1650,7 +1649,7 @@ if(isset($this->session->userdata['logged_in'])){
 
 
                    <h4 id="title3">Any Other Qualifications </h4>
-                   <a href="https://youtu.be/8NHHeYQFUL0">CLICK HERE FOR SEE THE DEMOSTRATION FOR THIS TABLE</a>
+                   
                     <div class="table3">
                         <table id="Table">
                             <tr>
@@ -1676,10 +1675,10 @@ if(isset($this->session->userdata['logged_in'])){
 
                             <tr class="tr">
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->INSTITUTION; ?>" name="any_other_qualifications_university1"  size='50'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->DEPLOMA; ?>" name="any_other_qualifications_deploma1"  size='32'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->DURAION; ?>" name="any_other_qualifications_duration1"  size='17'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->YEAR; ?>" name="any_other_qualifications_year1"  size='13'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_other_qualification->INSTITUTION; ?>" name="any_other_qualifications_university1"  size='50'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_other_qualification->DEPLOMA; ?>" name="any_other_qualifications_deploma1"  size='32'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_other_qualification->DURAION; ?>" name="any_other_qualifications_duration1"  size='17'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_other_qualification->YEAR; ?>" name="any_other_qualifications_year1"  size='13'/></td>
                                 <td><span class="lblStatus"></span></td>
 
                                     <?php
@@ -1689,10 +1688,10 @@ if(isset($this->session->userdata['logged_in'])){
                                     ?>
                             <tr class="tr">
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->INSTITUTION; ?>" name="any_other_qualifications_university2"  size='50'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->DEPLOMA; ?>" name="any_other_qualifications_deploma2"  size='32'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->DURAION; ?>" name="any_other_qualifications_duration2"  size='17'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->YEAR; ?>" name="any_other_qualifications_year2"  size='13'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_other_qualification->INSTITUTION; ?>" name="any_other_qualifications_university2"  size='50'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_other_qualification->DEPLOMA; ?>" name="any_other_qualifications_deploma2"  size='32'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_other_qualification->DURAION; ?>" name="any_other_qualifications_duration2"  size='17'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_other_qualification->YEAR; ?>" name="any_other_qualifications_year2"  size='13'/></td>
                                 <td><span class="lblStatus"></span></td>
 
 
@@ -1703,10 +1702,10 @@ if(isset($this->session->userdata['logged_in'])){
                                     ?>
                             <tr class="tr">
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->INSTITUTION; ?>" name="any_other_qualifications_university3"  size='50'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->DEPLOMA; ?>" name="any_other_qualifications_deploma3"  size='32'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->DURAION; ?>" name="any_other_qualifications_duration3"  size='17'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_other_qualification->YEAR; ?>" name="any_other_qualifications_year3"  size='13'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_other_qualification->INSTITUTION; ?>" name="any_other_qualifications_university3"  size='50'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_other_qualification->DEPLOMA; ?>" name="any_other_qualifications_deploma3"  size='32'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_other_qualification->DURAION; ?>" name="any_other_qualifications_duration3"  size='17'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_other_qualification->YEAR; ?>" name="any_other_qualifications_year3"  size='13'/></td>
                                 <td><span class="lblStatus"></span></td>
 
 
@@ -1738,7 +1737,7 @@ if(isset($this->session->userdata['logged_in'])){
                 
 
                     <h4 id="title1">Professional Qualifications </h4>
-                    <a href="https://youtu.be/SemZfq4InTM">CLICK HERE FOR SEE THE DEMOSTRATION FOR THIS TABLE</a>
+                    
                     <div class="table1"><!-- start of the table1-->
                         <table id="Table">
 
@@ -1765,11 +1764,11 @@ if(isset($this->session->userdata['logged_in'])){
                             <tr class="tr">
 
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->INSTITUTION; ?>" name="professonal_qualifications_institution1"  size='30'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->FROM; ?>" name="professonal_qualifications_from1"  size='6'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TO; ?>" name="professonal_qualifications_to1"  size='6'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->DURATION; ?>" name="professonal_qualifications_duration1"  size='17'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TYPE_OF_QUALIFICATION; ?>" name="professonal_qualifications_type_of_qualification1"  size='36'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_professional_qualification->INSTITUTION; ?>" name="professonal_qualifications_institution1"  size='30'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_professional_qualification->FROM; ?>" name="professonal_qualifications_from1"  size='6'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TO; ?>" name="professonal_qualifications_to1"  size='6'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_professional_qualification->DURATION; ?>" name="professonal_qualifications_duration1"  size='17'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TYPE_OF_QUALIFICATION; ?>" name="professonal_qualifications_type_of_qualification1"  size='36'/></td>
                                 <td><span class="lblStatus"></span></td>
 
                             </tr>  
@@ -1780,11 +1779,11 @@ if(isset($this->session->userdata['logged_in'])){
                         ?>
                             <tr class="tr">
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->INSTITUTION; ?>" name="professonal_qualifications_institution2"  size='30'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->FROM; ?>" name="professonal_qualifications_from2"  size='6'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TO; ?>" name="professonal_qualifications_to2"  size='6'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->DURATION; ?>" name="professonal_qualifications_duration2"  size='17'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TYPE_OF_QUALIFICATION; ?>" name="professonal_qualifications_type_of_qualification2"  size='36'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_professional_qualification->INSTITUTION; ?>" name="professonal_qualifications_institution2"  size='30'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_professional_qualification->FROM; ?>" name="professonal_qualifications_from2"  size='6'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TO; ?>" name="professonal_qualifications_to2"  size='6'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_professional_qualification->DURATION; ?>" name="professonal_qualifications_duration2"  size='17'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TYPE_OF_QUALIFICATION; ?>" name="professonal_qualifications_type_of_qualification2"  size='36'/></td>
                                 <td><span class="lblStatus"></span></td>
 
                             </tr>                       
@@ -1795,11 +1794,11 @@ if(isset($this->session->userdata['logged_in'])){
                         
                             <tr class="tr">
                                 
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->INSTITUTION; ?>" name="professonal_qualifications_institution3"  size='30'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->FROM; ?>" name="professonal_qualifications_from3"  size='6'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TO; ?>" name="professonal_qualifications_to3"  size='6'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->DURATION; ?>" name="professonal_qualifications_duration3"  size='17'/></td>
-                                <td><input type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TYPE_OF_QUALIFICATION; ?>" name="professonal_qualifications_type_of_qualification3"  size='36'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_professional_qualification->INSTITUTION; ?>" name="professonal_qualifications_institution3"  size='30'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_professional_qualification->FROM; ?>" name="professonal_qualifications_from3"  size='6'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TO; ?>" name="professonal_qualifications_to3"  size='6'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_professional_qualification->DURATION; ?>" name="professonal_qualifications_duration3"  size='17'/></td>
+                                <td><input disabled type="text" class="Text" value ="<?php echo $row_in_professional_qualification->TYPE_OF_QUALIFICATION; ?>" name="professonal_qualifications_type_of_qualification3"  size='36'/></td>
                                 <td><span class="lblStatus"></span></td>
 
                             </tr>  
@@ -1822,7 +1821,7 @@ if(isset($this->session->userdata['logged_in'])){
 
 
                     <h4 id="title2">Proficiency in Sinhala/Tamil/English</h4>
-                    <a href="https://youtu.be/2KNnbY0ywVI">CLICK HERE FOR SEE THE DEMOSTRATION FOR THIS TABLE</a>
+                    
                     <h5 id="title3">*******Ability to Work************ | ********* Ability To Teach********</h5>
                     
                     <!-- start of the dropdown buttons-->
@@ -1846,7 +1845,7 @@ if(isset($this->session->userdata['logged_in'])){
                     
                     <div class="custom-select" style="width:300px; height:80px;">
                         <label for="sinhala">Ability to Work Sinhala</label>
-                        <select name="work_sinhala">
+                        <select disabled name="work_sinhala">
 
                             <option value="<?php echo $row_in_language_proficiency->WORK_SINHALA?>"><?php echo $row_in_language_proficiency->WORK_SINHALA?></option>
                             <option value="Very Good">Very Good</option>
@@ -1862,8 +1861,8 @@ if(isset($this->session->userdata['logged_in'])){
 
                     <div class="custom-select" style="width:300px; height:80px;">
                         <label for="sinhala">Ability To Teach Sinhala</label>
-                        <select name="teach_sinhala">
-                        <option value="<?php echo $row_in_language_proficiency->TEACH_SINHALA?>"><?php echo $row_in_language_proficiency->TEACH_SINHALA?></option>
+                        <select disabled name="teach_sinhala">
+                            <option value="<?php echo $row_in_language_proficiency->TEACH_SINHALA?>"><?php echo $row_in_language_proficiency->TEACH_SINHALA?></option>
                             <option value="Very Good">Very Good</option>
                             <option value="Good">Good</option>
                             <option value="Fair">Fair</option>
@@ -1878,7 +1877,7 @@ if(isset($this->session->userdata['logged_in'])){
 
                     <div class="custom-select" style="width:300px; height:80px;">
                     <label for="tamil">Ability to Work Tamil</label>
-                        <select name="work_tamil">
+                        <select disabled name="work_tamil">
                             <option value="<?php echo $row_in_language_proficiency->WORK_TAMIL?>"><?php echo $row_in_language_proficiency->WORK_TAMIL?></option>
                             <option value="Very Good">Very Good</option>
                             <option value="Good">Good</option>
@@ -1894,7 +1893,7 @@ if(isset($this->session->userdata['logged_in'])){
                    
                     <div class="custom-select" style="width:300px; height:80px;">
                         <label for="tamil">Ability To Teach Tamil</label>
-                        <select name="teach_tamil">
+                        <select disabled name="teach_tamil">
                             <option value="<?php echo $row_in_language_proficiency->TEACH_TAMIL?>"><?php echo $row_in_language_proficiency->TEACH_TAMIL?></option>
                             <option value="Very Good">Very Good</option>
                             <option value="Good">Good</option>
@@ -1908,7 +1907,7 @@ if(isset($this->session->userdata['logged_in'])){
                     <!-- start of the dropdown for tamil2-->
                     <div class="custom-select" style="width:300px; height:80px;">
                         <label for="english">Ability to Work English</label>
-                        <select name="work_english">
+                        <select disabled name="work_english">
                             <option value="<?php echo $row_in_language_proficiency->WORK_ENGLISH?>"><?php echo $row_in_language_proficiency->WORK_ENGLISH?></option>
                             <option value="Very Good">Very Good</option>
                             <option value="Good">Good</option>
@@ -1921,7 +1920,7 @@ if(isset($this->session->userdata['logged_in'])){
                     <!-- start of the dropdown for english2-->
                     <div class="custom-select" style="width:300px; height:80px;">
                         <label for="english">Ability To Teach English</label>
-                        <select name="teach_english">
+                        <select disabled name="teach_english">
                             <option value="<?php echo $row_in_language_proficiency->TEACH_ENGLISH?>"><?php echo $row_in_language_proficiency->TEACH_ENGLISH?></option>
                             <option value="Very Good">Very Good</option>
                             <option value="Good">Good</option>
@@ -1952,23 +1951,23 @@ if(isset($this->session->userdata['logged_in'])){
                     <h5 id="note1">Note:Indicate your level based on self-evaluation of your ability</h5>
 
                     <!-- start the text box one-->
-                    <a href="https://youtu.be/PhnmS1Lvyl8">CLICK HERE FOR SEE THE DEMOSTRATION FOR THIS </a>
+                   
                     <div form-group>
                         <label >Experience relevant to the post applied for</label>
-                        <input type="text" value ="<?php echo $row_in_more_details->EXPERIENCE_RELEVANT_TO_POST; ?>" name="experience" id="experience" class="form-control input-sm" placeholder="                                        Experience relevant to the post applied for (Please indicate the tasks handled with the duration) ">
+                        <input disabled type="text" value ="<?php echo $row_in_more_details->EXPERIENCE_RELEVANT_TO_POST; ?>" name="experience" id="experience" class="form-control input-sm" placeholder="                                        Experience relevant to the post applied for (Please indicate the tasks handled with the duration) ">
                     </div>
                     <!-- end the text box one-->
 
                      <!-- start the text box two-->
                     <div form-group>
                         <label >Details of research and publications, If any</label>
-                        <input type="text" value ="<?php echo $row_in_more_details->RESEARCH_AND_PUBLICATION_DETAILS; ?>" name="research" id="research" class="form-control input-sm" placeholder="                                        Details of research and publications, If any (if space is insufficient, please append it with appends) ">
+                        <input disabled type="text" value ="<?php echo $row_in_more_details->RESEARCH_AND_PUBLICATION_DETAILS; ?>" name="research" id="research" class="form-control input-sm" placeholder="                                        Details of research and publications, If any (if space is insufficient, please append it with appends) ">
                     </div>
                     <!-- end the text box two-->
 
 
-                    <input type="button" name="previous" class="previous button" value="Previous">
-                    <input type="button" name="submit" class="next button" value="Next">
+                    <input disabled type="button" name="previous" class="previous button" value="Previous">
+                    <input disabled type="button" name="submit" class="next button" value="Next">
                 
             </div>
 
@@ -1983,7 +1982,7 @@ if(isset($this->session->userdata['logged_in'])){
 
                 <!-- start referee table-->        
                 <h4 id="title1">Referees </h4>
-                <a href="https://youtu.be/mf-xr_-1q00">CLICK HERE FOR SEE THE DEMOSTRATION FOR THIS TABLE</a>
+                
                     <div class="content3">
                         <table id="table1">
 
