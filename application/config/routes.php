@@ -142,7 +142,7 @@ $route['OperatorIndex/editSpecializationProcess/(:any)'] = "OperatorDashboard/ed
 $route['OperatorIndex/editFileUploadProcess/(:any)'] = "OperatorDashboard/editFileUploadToDb/$1";
 $route['OperatorIndex/sendApplicantEmails'] = "OperatorDashboard/sendEMailsToApplicants";
 $route['OperatorIndex/sendApplicntEmails'] = "OperatorDashboard/sendEMailsTApplicants";
-
+$route['OperatorIndex/interviewDateEmails'] = "OperatorDashboard/sendInterviewEmails";
 
 
 //SAR routes

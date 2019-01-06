@@ -498,6 +498,17 @@ class OperatorDashboard extends CI_Controller{
         $this->load->view('includes/footer');*/
     }
 
+    public function sendInterviewEmails(){
+        $description = "Interview Notification";
+        $content = $_POST['content'];
+        $time_date  = explode("_", $_POST['timeSlot']);
+        $date = $time_date[0];
+        $time = $time_date[1];
+
+        $this->load->model('operator/InterviewModel');
+        $this->load->InterviewModel->getEmails($date,$time);
+
+    }
 
 }
 ?>

@@ -32,32 +32,29 @@
         <label for="input-lg" class="input-lg"> Select Time Slot</label>
       </div>
 
-      <form action = "<?= base_url().'OperatorIndex/lecturerProbationary'?>" method = "post">
+      <form action = "<?= base_url().'OperatorIndex/interviewDateEmails'?>" method = "post">
       <div class = "row">
         <div class="form-group  col-xs-8 ">
         
-        <select class="form-control input-lg" id="selectBox" name = "vacancy">
+        <select class="form-control input-lg" id="selectBox" name = "timeSlot">
            
            <?php foreach ($array as $row): ?>
-             <option value = <?=$row->rdate?>><?php echo $row->idate.'&nbsp&nbspat '. $row->itime?></option>
+             <option value = <?=$row->rdate.'_'.$row->rtime?>><?php echo $row->idate.'&nbsp&nbspat '. $row->itime?></option>
            <?php endforeach ?>
         </select>
       </div>
       </div>
-</form>
+
     </section>
 <section class="content">
     
         <div class="row">
             <!-- left column -->
             <div class="col-md-8">
-              <!-- general form elements -->
-                
-                
-                
+
                 <div class="box box-primary">
                     <div class="box-header">
-                        <h3 class="box-title">Enter User Details</h3>
+                        <h3 class="box-title">Type Here</h3>
                     </div><!-- /.box-header -->
                     <!-- form start -->
                     
@@ -71,9 +68,8 @@
     <script type="text/javascript" src="<?=base_url('assets/plugin/tinymce/tinymce.min.js')?>"></script>
     <script type="text/javascript" src="<?=base_url('assets/plugin/tinymce/init-tinymce.js')?>"></script>
 
-    <form action = <?= base_url("OperatorIndex/sendEmail")?> method = "post">
       <br>
-      <input type="submit" name="haha" value = "Send to SAR for approval" class="btn btn-primary btn-md" style="float: right">
+      <input type="submit" name="haha" value = "Send Emails To Candidates" class="btn btn-primary btn-md" style="float: right">
     </form>
                     
                 </div>
@@ -112,56 +108,7 @@
     <section class="content">
         
 
-        <div class="row">
-            <div class="col-xs-12">
-              <div class="box">
-                <div class="box-header">
-                    <h3 class="box-title">Category<!--  <?php if($category=="0"){echo "others";} else {echo "$category"; }?> --></h3>
-                    <div class="box-tools">
-                        <form action="<?php echo base_url() ?>userListing" method="POST" id="searchList">
-                           
-                        </form>
-                    </div>
-                </div><!-- /.box-header -->
-                <div class="box-body table-responsive no-padding">
-                  <table class="table table-hover">
-                    <tr>
-                      <th>Applicant ID</th>
-                      <th>Name</th>
-                      <th>Email Address</th>
-                      <th >Selected</th>
-                      <th class="text-center">Actions</th>
-                    </tr>
-
-                    <form method = "post" action = "<?= base_url().'OperatorIndex/selectLP/'.$a->index.'/'.$category;?>">
-                    <?php foreach($array as $a):?>
-                    <tr>
-                      <td><?=$a->index?></td>
-                      <td><?="$a->fname $a->lname"?></td>
-                      <td><?=$a->email?></td>
-                      <td>
-                      <input type="checkbox" name="check_list[]" value="<?= $a->email?>" class = "checkbox">
-                    </td>
-                      
-                      
-                     
-                      <td class="text-center">
-                          <!-- <input type = "submit"  value="&#xf00c" class="btn btn-sm btn-success fa fa-envelope-square" > -->
-                          <!-- <a class="btn btn-sm btn-danger " href="<?php echo base_url().'OperatorIndex/notSelectLP/'.$a->index; ?>" data-userid=""><i class="fa fa-trash"></i></a>  -->
-                          <a class="btn btn-sm btn-info " href="" data-userid=""><i class="fa fa-envelope">&nbspSend Email Individually</i></a> 
-                      </td>
-                    </tr>
-                    <?php endforeach?>
-                  </form>  
-                  </table> 
-                  
-                </div><!-- /.box-body -->
-                <div class="box-footer clearfix">
-                    <?php echo $this->pagination->create_links(); ?>
-                </div>
-              </div><!-- /.box -->
-            </div>
-        </div>
+        
     </section>
 </div>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/common.js" charset="utf-8"></script>

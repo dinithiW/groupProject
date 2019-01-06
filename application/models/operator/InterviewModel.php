@@ -6,6 +6,7 @@ class InterviewModel extends CI_Model{
     public $idate;
     public $itime;
     public $rdate;//shortened for real date for ease
+    public $rtime;
 
 	public function __construct() {
 		parent::__construct();
@@ -34,6 +35,7 @@ class InterviewModel extends CI_Model{
             $date = date_create($row->INTERVIEW_DATE);
             $interview->idate = date_format($date, 'jS F Y');
             $interview->rdate = $row->INTERVIEW_DATE;
+            $interview->rtime = $row->INTERVIEW_TIME;
             $interview->itime = $row->INTERVIEW_TIME;
             array_push($interviews,$interview);
         }
@@ -41,23 +43,22 @@ class InterviewModel extends CI_Model{
         return $interviews;
     }
 
-    public function getAllSpecializations(){
-        $specializations = [];
-        $this->load->database();
-        $this->db->select('AREA_ID');
-        $this->db->select('AREA_NAME');
-        $this->db->from('specializationarea');
+    public function getEmails($date,$time){
+        $this->load->db();
+        $this->db->select('INDEX_NUMBER');
+        $this->db->where("INTERVIEW_DATE",$date);
+        $this->db->where("INTERVIEW_TIME",$time);
+        $this->db->from('candidates_interviews');
 
         $query = $this->db->get();
 
         foreach ($query->result() as $row) {
-            $specialization = new ApplicationFormModel();
-            $specialization->specializationID= $row->AREA_ID;
-            $specialization->specializationName= $row->AREA_NAME;
-            array_push($specializations,$specialization);
-        }
-        return $specializations;
+            //$this->db->select('INDEX_NUMBER');
+            $this->db->select('PERSONAL_EMAIL');
+            $this->db->where("INDEX_NUMBER",$row);
+            $this->db->from('basic_personal_details');
 
+        }
     }
 
     //returns the details of a single member
