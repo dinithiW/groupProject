@@ -101,12 +101,6 @@ class OperatorDashboard extends CI_Controller{
         $this->load->view('includes/footer');
     }
 
-    /*public function addMemberModel(){
-        $this->load->model('operator/PanelMembers');
-        $this->PanelMembers->add();
-
-    }*/
-
     public function addingMember(){
         $this->load->model('operator/PanelMembers');
         $this->PanelMembers->addNewUser();
@@ -205,27 +199,42 @@ class OperatorDashboard extends CI_Controller{
     }
 
     public function directTo(){
-        //echo"sldfhhhffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff";
+        
         $position = $_POST['vacancy'];
         if($position=="Lecturer Probationary"){
             redirect(base_url()."OperatorIndex/lpCategory");
+        }else if($position=="Senior Lecturer Gr. I"){
+            redirect(base_url()."OperatorIndex/seniorLecturerGradeI");
         }else{
-            redirect(base_url()."OperatorIndex/seniorLecturer");
+            redirect(base_url()."OperatorIndex/seniorLecturerGradeII");
         }
     }
 
+    //route lpCategory
     public function showLpCategories(){
-        //$category = $_POST['category'];
-        //$this->load->model("applicant_model");
-        //$data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER",$category);
-        
+        //echo"am I here?";
+        $this->load->model("applicant_model");
+        $data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER","1");
+        $data['category'] = " 1";
         $this->load->view('includes/header');
-        $this->load->view('users/operator/lpCategories');
+        $this->load->view('users/operator/lpCategories',$data);
         $this->load->view('includes/footer');
 
     }
 
-    public function showSeniorLecturer(){
+    //route lecturerProbationary
+    public function showLpCandidates(){
+        $category = $_POST['vacancy'];
+        $this->load->model("applicant_model");
+        $data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER",$category);
+        $data['category'] = $category;
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/lpCategories',$data);
+        $this->load->view('includes/footer');
+
+    }
+
+    public function showSeniorLecturerGradeII(){
         $this->load->model("applicant_model");
         $data['array'] = $this->applicant_model->getAll("SENIOR LECTURE GR. II");
         $this->load->view('includes/header');
@@ -233,18 +242,72 @@ class OperatorDashboard extends CI_Controller{
         $this->load->view('includes/footer');
     }
 
+    public function showSeniorLecturerGradeI(){
+        $this->load->model("applicant_model");
+        $data['array'] = $this->applicant_model->getAll("SENIOR LECTURE GR. I");
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/seniorLecturerGradeI',$data);
+        $this->load->view('includes/footer');
+    }
+
     public function addToSelected($applicantId){
         $this->load->model("applicant_model");
-        $this->applicant_model->selectedSL($applicantId);
-        redirect(base_url()."OperatorIndex/seniorLecturer");
+        $this->applicant_model->selectedSL($applicantId,"sl_selected");
+        redirect(base_url()."OperatorIndex/seniorLecturerGradeII");
     }
 
     public function addToNotSelected($applicantId){
         $this->load->model("applicant_model");
-        $this->applicant_model->notSelectedSL($applicantId);
-        redirect(base_url()."OperatorIndex/seniorLecturer");
+        $this->applicant_model->notSelectedSL($applicantId,"sl_selected");
+        redirect(base_url()."OperatorIndex/seniorLecturerGradeII");
     }
 
+    public function addToSelectedGradeI($applicantId){
+        $this->load->model("applicant_model");
+        $this->applicant_model->selectedSL($applicantId,"sl_selected_gradei");
+        redirect(base_url()."OperatorIndex/seniorLecturerGradeI");
+    }
+
+    public function addToNotSelectedGradeI($applicantId){
+        $this->load->model("applicant_model");
+        $this->applicant_model->notSelectedSL($applicantId,"sl_selected_gradei");
+        redirect(base_url()."OperatorIndex/seniorLecturerGradeI");
+    }
+    //selectLP
+    public function addToSelectedLP($applicantId,$categoryFrom){
+        $temp = "category_".$applicantId;
+        $category = $_POST["$temp"];
+        $this->load->model("applicant_model");
+        $this->applicant_model->selectedLP($applicantId,$category);
+
+       /* $data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER",$categoryFrom);
+        $data['category'] = $categoryFrom;*/
+        redirect(base_url()."OperatorIndex/lectrerProbationary/$categoryFrom");
+        
+        
+    }
+
+    public function showLps($categoryFrom){
+        //echo"am I here?";
+        $this->load->model("applicant_model");
+        $data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER",$categoryFrom);
+        $data['category'] = $categoryFrom;
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/lpCategories',$data);
+        $this->load->view('includes/footer');
+
+    }
+    //notSelectLP
+    public function addToNotSelectedLP($applicantId){
+        $this->load->model("applicant_model");
+        $this->applicant_model->notSelectedLP($applicantId,$category);
+        
+        $data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER",$category);
+        $data['category'] = $category;
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/lpCategories',$data);
+        $this->load->view('includes/footer');
+    }
     //yet to implement
     public function moreInfo($applicantID){
 

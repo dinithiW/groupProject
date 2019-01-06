@@ -34,6 +34,8 @@ class RegisterUser extends CI_Model{
 				if(md5($password)!= md5($repeat)){
 					redirect(base_url()."registerUsers/errorPassword");
 				}else{
+
+		
    					
    					$this->load->library('session');
    					
@@ -41,7 +43,8 @@ class RegisterUser extends CI_Model{
             			'USERNAME' => $email,
             			'PASSWORD' => md5($password),
             			'USER_TYPE' => 'Applicant',
-            			'NAME' => $name
+						'NAME' => $name
+						
         			);
 
 					$this->db->insert('users', $insertData);
@@ -84,10 +87,11 @@ class RegisterUser extends CI_Model{
 
         			 $userdata = array(
 	        			'username'  => $email,
-	        			//'email'     => $row->EMAIL,
 	        			'usertype'  => 'Applicant',
 	        			'name'      => $name,
-	        			'logged_in' => TRUE
+						'logged_in' => TRUE,
+						'index_number' =>$temporary_index_number, 
+						'application_form_filled' => "not"
 					);
 
         			
@@ -134,7 +138,7 @@ class RegisterUser extends CI_Model{
 }*/
 	
 
-
+	
 
 
 

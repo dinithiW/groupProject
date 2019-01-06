@@ -68,9 +68,11 @@ $route['advertisement']='User/add';
 
 //Management Assistant routes
 $route['OperatorIndex'] = 'OperatorDashboard/index';
+
 $route['OperatorIndex/createAd'] = 'OperatorDashboard/ad';
 $route['OperatorIndex/emails'] = 'OperatorDashboard/showEmails';
 $route['OperatorIndex/sendEmail'] = 'OperatorDashboard/sendAdToSAR';
+
 $route['OperatorIndex/process'] = 'OperatorDashboard/sendEmail';
 //this directs to the home of adding a new member
 $route['OperatorIndex/addPanelMember'] = 'OperatorDashboard/addPanelMember';
@@ -98,12 +100,22 @@ $route['OperatorIndex/categorize'] = "OperatorDashboard/categorizeHome";
 //
 $route['OperatorIndex/directCategorize'] = "OperatorDashboard/directTo";
 $route['OperatorIndex/lpCategory'] = "OperatorDashboard/showLpCategories";
-//show all senior lecturer applicants and categorize them
-$route['OperatorIndex/seniorLecturer'] = "OperatorDashboard/showSeniorLecturer";
+$route['OperatorIndex/lecturerProbationary'] = "OperatorDashboard/showLpCandidates";
+$route['OperatorIndex/lectrerProbationary/(:any)'] = "OperatorDashboard/showLps/$1";
+//show all senior lecturer applicants grade I and categorize them
+$route['OperatorIndex/seniorLecturerGradeI'] = "OperatorDashboard/showSeniorLecturerGradeI";
+$route['OperatorIndex/seniorLecturerGradeII'] = "OperatorDashboard/showSeniorLecturerGradeII";
+
 //insert into the sl_selected table (value 1)
 $route['OperatorIndex/selectSL/(:any)'] = "OperatorDashboard/addToSelected/$1";
 //insert into the sl_selected table (value 0)
 $route['OperatorIndex/notSelectSL/(:any)'] = "OperatorDashboard/addToNotSelected/$1";
+$route['OperatorIndex/selectSLGradeI/(:any)'] = "OperatorDashboard/addToSelectedGradeI/$1";
+//insert into the sl_selected table (value 0)
+$route['OperatorIndex/notSelectSLGradeI/(:any)'] = "OperatorDashboard/addToNotSelectedGradeI/$1";
+$route['OperatorIndex/selectLP/(:any)/(:any)'] = "OperatorDashboard/addToSelectedLP/$1/$2";
+//insert into the sl_selected table (value 0)
+$route['OperatorIndex/notSelectLP/(:any)'] = "OperatorDashboard/addToNotSelectedLP/$1";
 
 //SAR routes
 $route['SAR']='SARDashboard/index';
@@ -111,9 +123,10 @@ $route['reports']='SARDashboard/report';
 $route['sendmail']='SARDashboard/sendmail';
 $route['sendBulkmail/(:any)']='SARDashboard/sendBulkmails/$1';
 $route['setDates']="SARDashboard/setInterviewDates";
-$route['candidateList']="SARDashboard/viewCandidates";
+$route['SAR/candidateList']="SARDashboard/viewCandidates";
 $route['SAR/advertisement']="SARDashboard/viewAdvertisement";
 $route['applicants']="SARDashboard/viewApplicants";
+//$route['SAR/candidates']="SARDashboard/viewCandidates';
 
 
 //Director routes

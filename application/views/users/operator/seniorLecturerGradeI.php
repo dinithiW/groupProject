@@ -28,10 +28,9 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        <i class="fa fa-users"></i> Senior Lecturer Grd. II
+        <i class="fa fa-users"></i> Senior Lecturer Grd. I
         <!-- <small>Add, Edit, Delete</small> -->
       </h1>
-
       <div class="row">
             <div class="col-xs-12 text-right">
                 <div class="form-group">
@@ -82,8 +81,8 @@
                       <td><?=$a->oq?></td>
                       <td><?=$a->spe?></td>
                       <td class="text-center">
-                          <a class="btn btn-sm btn-success" href="<?php echo base_url().'OperatorIndex/selectSL/'.$a->index; ?>"><i class="fa fa-check"></i></a>
-                          <a class="btn btn-sm btn-danger " href="<?php echo base_url().'OperatorIndex/notSelectSL/'.$a->index; ?>" data-userid=""><i class="fa fa-trash"></i></a> 
+                          <a class="btn btn-sm btn-success" href="<?php echo base_url().'OperatorIndex/selectSLGradeI/'.$a->index; ?>"><i class="fa fa-check"></i></a>
+                          <a class="btn btn-sm btn-danger " href="<?php echo base_url().'OperatorIndex/notSelectSLGradeI/'.$a->index; ?>" data-userid=""><i class="fa fa-trash"></i></a> 
                           <a class="btn btn-sm btn-info " href="" data-userid=""><i class="fa fa-info"></i></a> 
                       </td>
                     </tr>

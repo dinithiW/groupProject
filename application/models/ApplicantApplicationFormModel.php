@@ -3,7 +3,7 @@ class ApplicantApplicationFormModel extends CI_Model{
     public function __construct(){
         parent::__construct();
     }
-
+    
 
     /**
      * this funciton is used for filter the form inputs
@@ -28,7 +28,7 @@ class ApplicantApplicationFormModel extends CI_Model{
     public function insertBasicPersonalDetailsModel(){
         $this->load->database();
         $idNumber = $this->makeApplicationId();
-
+        $_SESSION['index_number'] = $idNumber;
         $name1 = $this->firlterFormInputs($this->input->post('first_name'));
         $name2 = $this->firlterFormInputs($this->input->post('last_name'));
         $name3 = $this->firlterFormInputs($this->input->post('postal_address'));
@@ -627,7 +627,7 @@ class ApplicantApplicationFormModel extends CI_Model{
             'INDEX_NUMBER'	=> $idNumber 
         );
         $this->db->where('USERNAME', $this->firlterFormInputs($this->input->post('personalEmail')));
-        $this->db->update(' temporary_index_number_for_applicants', $data);
+        $this->db->update('temporary_index_number_for_applicants', $data);
         
     }
 

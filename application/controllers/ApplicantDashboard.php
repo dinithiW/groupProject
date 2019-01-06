@@ -13,11 +13,20 @@ class ApplicantDashboard extends CI_Controller{
         $this->load->view('includes/footer');
     }
 
-
+/**
+ * this function is used for the check that applicatn already filled the form or not
+ */
     public function applicationFirstPage(){
-        $this->load->model('operator/categorizeApplilcationsModel');
-        $data['fetch_data'] = $this->categorizeApplilcationsModel->fetch_datas();
-        $this->load->view('applicant/applicationForm/ApplicationForm',$data);
+
+        if($_SESSION['application_form_filled'] == "not"){
+            $this->load->model('operator/categorizeApplilcationsModel');
+            $data['fetch_data'] = $this->categorizeApplilcationsModel->fetch_datas();
+            $this->load->view('applicant/applicationForm/ApplicationForm',$data);
+        }
+        if($_SESSION['application_form_filled'] == "yes"){
+            redirect('ApplicationForm/editfileUpload');
+        }
+        
     	
     }
     
