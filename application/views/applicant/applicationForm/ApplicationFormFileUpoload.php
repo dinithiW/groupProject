@@ -89,7 +89,7 @@ if($this->session->userdata['logged_in']){
                                     ?>        
                                 </select>
                             </div>
-                            <input type="file" name="userfile"  class="btn btn-default btn-file" value="<?php echo $row->LINK_NAME;?>"/>
+                            <input type="file" id="inputId1" name="userfile"  class="btn btn-default btn-file" value="<?php echo $row->LINK_NAME;?>"/>
                             <!-- <input type="file" class=" inputClass1" id="inputId1" name="attached_file" value="<?/*php echo $row->LINK_NAME;*/?>" accept="application/pdf"> -->
                             <button name = "submit" type="submit" class="btn btn-lg btn-block btn-primary"  id="button1">upload</button>
                             
@@ -101,7 +101,7 @@ if($this->session->userdata['logged_in']){
                                     padding-top:1px;
                                     background-color:red;
                                     margin-left:125px;
-                                    margin-top:-25px;
+                                    margin-top:-35px;
                                     color: #024457;
                                 }
                                 #inputId1{

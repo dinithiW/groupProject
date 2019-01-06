@@ -23,5 +23,18 @@ class applicantDetails extends CI_Model{
 
         return $query->result();
     }
+
+    public function getApplicant($INDEX_NUMBER){
+
+        $this->db->select('*');
+        $this->db->from('basic_personal_details');
+        $this->db->where('INDEX_NUMBER',$INDEX_NUMBER);
+        $query = $this->db->get();
+        return $query->row();
+    }
+
+    public function rejectSelectedApplicant($INDEX_NUMBER){
+        $this->db->delete('sl_selected', array('INDEX_NUMBER' => $INDEX_NUMBER));
+    }
 }
 ?>

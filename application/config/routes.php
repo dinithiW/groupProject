@@ -158,6 +158,8 @@ $route['Director/adRequest'] = 'DirectorDashboard/adRequest';
 $route['Director/approveAd'] = 'DirectorDashboard/approveAd';
 $route['Director/viewApplicants'] = 'DirectorDashboard/viewApplicants';
 $route['Director/approveSelected'] = 'DirectorDashboard/approveSelected';
+$route['Director/deleteApplicant(:any)'] = 'DirectorDashboard/deleteApplicant/$1';
+$route['Director/deleteApplicantModel(:any)'] = 'DirectorDashboard/deleteApplicantModel/$1';
 $route['Director/approveFinalSet'] = 'DirectorDashboard/approveFinalSet';
 $route['Director/setInterviewDate'] = 'DirectorDashboard/setInterviewDate';
 $route['Director/sendmail'] = 'Directordashboard/sendmail';
@@ -198,6 +200,7 @@ $route['applicant'] = 'ApplicantDashboard/index';
 $route['application_form_fill'] = 'ApplicantDashboard/applicationFirstPage';
 $route['application_form_edit'] = 'ApplicationForm/editfileUpload';
 $route['application_form_documents'] = 'ApplicantDashboard/applicationFifththPage';
+$route['application_form_for_view'] = 'ApplicationForm/applicationFileViewFor';
 $route['LOGOUT']='User/out';
 //applicant end
 

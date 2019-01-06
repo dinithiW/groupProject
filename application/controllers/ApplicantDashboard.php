@@ -46,6 +46,23 @@ class ApplicantDashboard extends CI_Controller{
        
     }
 
+    
+
+    /**
+     * this function is use for the show the application form for the higher authorized users
+     * select files from database and show them
+     */
+    public function applicationFileViewFor(){
+        
+        $this->load->view('includes/header');
+					
+        $this->load->model('operator/categorizeApplilcationsModel');
+        $data['fetch_data'] = $this->categorizeApplilcationsModel->fetchFileUploadLinks();
+        $this->load->view('applicant/applicationForm/ApplicationFormFileUpoload',$data);
+        $this->load->view('includes/footer');
+       
+    }
+
 
     
 
