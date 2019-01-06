@@ -96,7 +96,7 @@
                 $this->load->view('applicant/applicationForm/viewDegreehCertificate',$data);
             }
             else if($option=="CERTIFIED NIC COPY"){
-                $this->load->view(viewCertifiedNic,$data);
+                $this->load->view('applicant/applicationForm/viewCertifiedNic',$data);
             }
 
 
