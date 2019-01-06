@@ -49,7 +49,7 @@
                                 <td><?php echo $rec->MOBILE_NUMBER; ?></td>
                                 <td><?php echo $rec->POST_APPLY_FOR; ?></td>
                                 <td class="text-center">
-                                    <a class="btn btn-sm btn-danger " href="<?php echo base_url().'Director/deleteApplicant'.$rec->INDEX_NUMBER; ?>" data-userid="<?php echo $rec->INDEX_NUMBER; ?>"><i class="fa fa-trash"></i></a> 
+                                    <a class="btn btn-sm btn-danger " href="<?php echo base_url().'Director/deleteApplicant/'.$rec->INDEX_NUMBER; ?>" data-userid="<?php echo $rec->INDEX_NUMBER; ?>"><i class="fa fa-trash"></i></a> 
                                 </td>
                             </tr>
                         <?php

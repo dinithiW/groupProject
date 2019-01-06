@@ -15,9 +15,9 @@
 
 var sURL = window.document.URL.toString();
 var id = sURL.split('/').pop();
-var part1 = '../Director/deleteApplicantModel/';
+var part1 = '../deleteApplicantModel/';
 var newURL = part1.concat(id);
-var cancelURL = '../Director/approveSelected';
+var cancelURL = '../approveSelected';
 swal({
   title: 'Are you sure?',
   text: 'This user will be deleted permanently',

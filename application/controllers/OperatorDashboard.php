@@ -15,7 +15,7 @@ class OperatorDashboard extends CI_Controller{
     }
     
     //this function for select areas of applicants 
-    public function categorizeApplications(){
+    /*public function categorizeApplications(){
         $this->load->view('users/operator/header');
         $this->load->model('operator/categorizeApplilcationsModel');
         $data['fetch_data1'] = $this->categorizeApplilcationsModel->fetch_datas();
@@ -66,7 +66,7 @@ class OperatorDashboard extends CI_Controller{
         echo $this->input->post('deleteFileUploadLink');
         redirect(base_url()."OperatorDashboard/reDirect");
     }
-
+*/
     //loads the view related to creating an advertisement
     public function ad(){
         $this->load->view('includes/header');
@@ -188,8 +188,11 @@ class OperatorDashboard extends CI_Controller{
     }
 
     public function setInterviewDate(){
+        $this->load->model('applicant_model');
+        $data['array'] = $this->applicant_model->getSelectedCandidates("Senior Lecturer Gr. I");
+        $data['headerName'] = "Senior Lecturer Gr. I Selected";
         $this->load->view('includes/header');
-        $this->load->view('users/operator/setInterviewDate');
+        $this->load->view('users/operator/setInterviewDate',$data);
         $this->load->view('includes/footer');
     }
 
