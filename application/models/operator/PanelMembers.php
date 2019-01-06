@@ -385,8 +385,12 @@ class PanelMembers extends CI_Model{
 	
     //need to implement this
     public function deleteMember($panelID){
+        
         $data = $this->getMember($panelID);
         $email = $data->EMAIL;
+        $this->db->where('EMAIL',$email);
+        $this -> db -> delete('interview_panel');
+
         $this -> db -> where('USERNAME', $email);
         $this -> db -> delete('users');
     }

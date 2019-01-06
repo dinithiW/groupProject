@@ -116,6 +116,25 @@ $route['OperatorIndex/notSelectSLGradeI/(:any)'] = "OperatorDashboard/addToNotSe
 $route['OperatorIndex/selectLP/(:any)/(:any)'] = "OperatorDashboard/addToSelectedLP/$1/$2";
 //insert into the sl_selected table (value 0)
 $route['OperatorIndex/notSelectLP/(:any)'] = "OperatorDashboard/addToNotSelectedLP/$1";
+$route['OperatorIndex/viewCategorized'] = "OperatorDashboard/viewCategorizedApplicants";
+$route['OperatorIndex/searchCategorized'] = "OperatorDashboard/searchCandidates";
+$route['OperatorIndex/editApplication'] = "OperatorDashboard/editForm";
+$route['OperatorIndex/directEditApplication'] = "OperatorDashboard/directEditApplication";
+
+$route['OperatorIndex/specialization'] = "OperatorDashboard/viewSpecializations";
+$route['OperatorIndex/fileUploads'] = "OperatorDashboard/viewFileUploads";
+
+$route['OperatorIndex/addSpecialization'] = "OperatorDashboard/addSpecializationArea";
+$route['OperatorIndex/addUploadLink'] = "OperatorDashboard/addFileUploadLink";
+
+$route['OperatorIndex/editSpecialization/(:any)'] = "OperatorDashboard/editSpecializationArea/$1";
+$route['OperatorIndex/editUploadLink/(:any)'] = "OperatorDashboard/editFileUploadLink/$1";
+
+$route['OperatorIndex/deleteSpecialization/(:any)'] = "OperatorDashboard/deleteSpecializationArea/$1";
+$route['OperatorIndex/deleteUploadLink/(:any)'] = "OperatorDashboard/deleteFileUploadLink/$1";
+
+$route['OperatorIndex/addSpecializationprocess'] = "OperatorDashboard/addSpecializationToDb";
+$route['OperatorIndex/addFileUploadprocess'] = "OperatorDashboard/addFileUploadToDb";
 
 //SAR routes
 $route['SAR']='SARDashboard/index';
@@ -137,6 +156,7 @@ $route['Director/viewApplicants'] = 'DirectorDashboard/viewApplicants';
 $route['Director/approveSelected'] = 'DirectorDashboard/approveSelected';
 $route['Director/approveFinalSet'] = 'DirectorDashboard/approveFinalSet';
 $route['Director/setInterviewDate'] = 'DirectorDashboard/setInterviewDate';
+$route['Director/sendmail'] = 'Directordashboard/sendmail';
 $route['Director/insertData'] = 'Directordashboard/insertData';
 $route['Director/addMessage'] = 'DirectorDashboard/addNotification';
 $route['Director/viewMessage'] = 'DirectorDashboard/viewNotification';

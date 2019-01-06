@@ -11,7 +11,7 @@
     
         <div class="row">
             <!-- left column -->
-            <div class="col-md-8">
+            <div class="col-md-12">
               <!-- general form elements -->
                 
                 
@@ -20,7 +20,31 @@
                     <div class="box-header">
                         <h3 class="box-title">Approve Selected Applicants</h3>
                     </div><!-- /.box-header -->
-                    
+                    <div>
+                        <center>
+                            <h3>Selected Applicants</h3>
+                        </center>
+                    </div>
+                    <br />
+                    <div class = "table-responsive">
+                        <table class = "table table-bordered">
+                            <tr>
+                                <td><b>Index number</b></td>
+                                <td><b>First name</b></td>
+                            </tr>
+
+                        <?php 
+                        foreach($records as $rec){
+                        ?>
+                            <tr>
+                                <td><?php echo $rec->INDEX_NUMBER; ?></td>
+                                <td><?php echo $rec->FIRST_NAME." ".$rec->LAST_NAME; ?></td>
+                            </tr>
+                        <?php
+                        } 
+                        ?>
+                        </table>
+                    </div>
                 </div>
             </div>
             <div class="col-md-4">
