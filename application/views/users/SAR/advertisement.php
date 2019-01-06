@@ -65,8 +65,7 @@ if (!empty($_GET["confirmed"])) {
                     <form method="post" action="<?= base_url('SARDashboard/confirmAdvertisement') ?>">
                         <div class="row" style="background-color: white;border: 2px solid #7a4d01;padding: 10px">
                             <?php
-                            foreach ($advertisement as $row)
-                                echo $row->message;
+                                $this->load->view('add');
                             ?>
                         </div>
                         <button type="submit" class="btn btn-fill"

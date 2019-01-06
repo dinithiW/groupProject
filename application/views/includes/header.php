@@ -33,6 +33,7 @@ if($checking=='1'){
   <head>
     <meta charset="UTF-8">
     <title><?php echo $pageTitle; ?></title>
+    <link rel="icon" type="images/png" href="<?= base_url('assets/images/ucscLogo.jpg')?>">
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.4 -->
 
@@ -167,7 +168,7 @@ if($checking=='1'){
             </li>
 
             <li class="treeview">
-              <a href="" >
+              <a href="<?= base_url('OperatorIndex/editApplication')?>" >
                 <i class="fa fa-pencil-square-o"></i>
                 <span>Edit Application Form</span>
               </a>
@@ -188,7 +189,7 @@ if($checking=='1'){
             </li>
 
             <li class="treeview">
-              <a href="<?= base_url('OperatorIndex/viewAll')?>" >
+              <a href="<?= base_url('OperatorIndex/viewCategorized')?>" >
                 <i class="fa fa-users"></i>
                 <span>View Categorized Applicants</span>
               </a>
@@ -293,19 +294,19 @@ if($checking=='1'){
             <li class="treeview">
               <a href="<?= base_url('applicants') ?>" >
                 <i class="fa fa-files-o"></i>
-                <span>Applicants</span>
+                <span>View Applicants</span>
               </a>
             </li>
              <li class="treeview">
               <a href="<?= base_url('SAR/candidateList') ?>" >
                 <i class="fa fa-files-o"></i>
-                <span>Candidates</span>
+                <span>View Candidates</span>
               </a>
             </li>
             <li class="treeview">
               <a href="<?= base_url('setDates') ?>"  >
                 <i class="fa fa-files-o"></i>
-                <span>Interview Dates</span>
+                <span>Send Interview Dates To Panel</span>
               </a>
             </li>
 
@@ -319,7 +320,7 @@ if($checking=='1'){
              <li class="treeview">
               <a href="<?= base_url('reports') ?>" >
                 <i class="fa fa-files-o"></i>
-                <span>Reports</span>
+                <span>Create Reports</span>
               </a>
             </li>
 
@@ -332,21 +333,10 @@ if($checking=='1'){
             <li class="treeview">
               <a href="<?= base_url('Panel/viewApplicants') ?>" >
                 <i class="fa fa-files-o"></i>
-                <span>View Applicants</span>
+                <span>Candidates</span>
               </a>
             </li>
-             <li class="treeview">
-              <a href="#" >
-                <i class="fa fa-files-o"></i>
-                <span>View Marks</span>
-              </a>
-            </li>
-             <li class="treeview">
-              <a href="#" >
-                <i class="fa fa-files-o"></i>
-                <span>Marking Sheet</span>
-              </a>
-            </li>
+            
 
             <?php
             }

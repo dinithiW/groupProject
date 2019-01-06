@@ -68,9 +68,11 @@ $route['advertisement']='User/add';
 
 //Management Assistant routes
 $route['OperatorIndex'] = 'OperatorDashboard/index';
+
 $route['OperatorIndex/createAd'] = 'OperatorDashboard/ad';
 $route['OperatorIndex/emails'] = 'OperatorDashboard/showEmails';
 $route['OperatorIndex/sendEmail'] = 'OperatorDashboard/sendAdToSAR';
+
 $route['OperatorIndex/process'] = 'OperatorDashboard/sendEmail';
 //this directs to the home of adding a new member
 $route['OperatorIndex/addPanelMember'] = 'OperatorDashboard/addPanelMember';
@@ -99,6 +101,7 @@ $route['OperatorIndex/categorize'] = "OperatorDashboard/categorizeHome";
 $route['OperatorIndex/directCategorize'] = "OperatorDashboard/directTo";
 $route['OperatorIndex/lpCategory'] = "OperatorDashboard/showLpCategories";
 $route['OperatorIndex/lecturerProbationary'] = "OperatorDashboard/showLpCandidates";
+$route['OperatorIndex/lectrerProbationary/(:any)'] = "OperatorDashboard/showLps/$1";
 //show all senior lecturer applicants grade I and categorize them
 $route['OperatorIndex/seniorLecturerGradeI'] = "OperatorDashboard/showSeniorLecturerGradeI";
 $route['OperatorIndex/seniorLecturerGradeII'] = "OperatorDashboard/showSeniorLecturerGradeII";
@@ -110,6 +113,28 @@ $route['OperatorIndex/notSelectSL/(:any)'] = "OperatorDashboard/addToNotSelected
 $route['OperatorIndex/selectSLGradeI/(:any)'] = "OperatorDashboard/addToSelectedGradeI/$1";
 //insert into the sl_selected table (value 0)
 $route['OperatorIndex/notSelectSLGradeI/(:any)'] = "OperatorDashboard/addToNotSelectedGradeI/$1";
+$route['OperatorIndex/selectLP/(:any)/(:any)'] = "OperatorDashboard/addToSelectedLP/$1/$2";
+//insert into the sl_selected table (value 0)
+$route['OperatorIndex/notSelectLP/(:any)'] = "OperatorDashboard/addToNotSelectedLP/$1";
+$route['OperatorIndex/viewCategorized'] = "OperatorDashboard/viewCategorizedApplicants";
+$route['OperatorIndex/searchCategorized'] = "OperatorDashboard/searchCandidates";
+$route['OperatorIndex/editApplication'] = "OperatorDashboard/editForm";
+$route['OperatorIndex/directEditApplication'] = "OperatorDashboard/directEditApplication";
+
+$route['OperatorIndex/specialization'] = "OperatorDashboard/viewSpecializations";
+$route['OperatorIndex/fileUploads'] = "OperatorDashboard/viewFileUploads";
+
+$route['OperatorIndex/addSpecialization'] = "OperatorDashboard/addSpecializationArea";
+$route['OperatorIndex/addUploadLink'] = "OperatorDashboard/addFileUploadLink";
+
+$route['OperatorIndex/editSpecialization/(:any)'] = "OperatorDashboard/editSpecializationArea/$1";
+$route['OperatorIndex/editUploadLink/(:any)'] = "OperatorDashboard/editFileUploadLink/$1";
+
+$route['OperatorIndex/deleteSpecialization/(:any)'] = "OperatorDashboard/deleteSpecializationArea/$1";
+$route['OperatorIndex/deleteUploadLink/(:any)'] = "OperatorDashboard/deleteFileUploadLink/$1";
+
+$route['OperatorIndex/addSpecializationprocess'] = "OperatorDashboard/addSpecializationToDb";
+$route['OperatorIndex/addFileUploadprocess'] = "OperatorDashboard/addFileUploadToDb";
 
 //SAR routes
 $route['SAR']='SARDashboard/index';
@@ -131,6 +156,7 @@ $route['Director/viewApplicants'] = 'DirectorDashboard/viewApplicants';
 $route['Director/approveSelected'] = 'DirectorDashboard/approveSelected';
 $route['Director/approveFinalSet'] = 'DirectorDashboard/approveFinalSet';
 $route['Director/setInterviewDate'] = 'DirectorDashboard/setInterviewDate';
+$route['Director/sendmail'] = 'Directordashboard/sendmail';
 $route['Director/insertData'] = 'Directordashboard/insertData';
 $route['Director/addMessage'] = 'DirectorDashboard/addNotification';
 $route['Director/viewMessage'] = 'DirectorDashboard/viewNotification';

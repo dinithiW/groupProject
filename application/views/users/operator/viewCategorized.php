@@ -1,7 +1,3 @@
-<?php
-  //var_dump($array);
-  //exit();
-?>
 
 <!DOCTYPE html>
 <html>
@@ -28,17 +24,47 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        <i class="fa fa-users"></i> Senior Lecturer Grd. I
+        <i class="fa fa-users"></i> Categorized Applicants
         <!-- <small>Add, Edit, Delete</small> -->
       </h1>
-      <div class="row">
+
+    </section>
+    <!-- <div class="row">
             <div class="col-xs-12 text-right">
                 <div class="form-group">
                     <a class="btn btn-primary" href="<?= base_url('OperatorIndex/categorize') ?>"><i class="fa fa-home"></i> Categorization Home</a>
                 </div>
             </div>
-        </div>
+        </div> -->
+    <section class="content">
+       <div class = "row">
+        <label for="input-lg" class="input-lg"> Select Category</label>
+      </div>
+
+      <form action = "<?= base_url().'OperatorIndex/searchCategorized'?>" method = "post">
+      <div class = "row">
+        <div class="form-group  col-xs-8 ">
+        
+        <select class="form-control input-lg" id="selectBox" name = "vacancy">
+           <!-- <select class="form-control input-lg" id="selectBox" onchange="changeFunc();"> -->
+          <option value = "Senior Lecturer Grade I selected" >Senior Lecturer Grade I selected</option>
+          <option value = "Senior Lecturer Grade I not selected" >Senior Lecturer Grade I not selected</option>
+          <option value = "Senior Lecturer Grade II selected" >Senior Lecturer Grade II selected</option>
+          <option value = "Senior Lecturer Grade II not selected" >Senior Lecturer Grade II not selected</option>
+          <option value = "Lecturer Probationary Category 1" >Lecturer Probationary Category 1</option>
+          <option value = "Lecturer Probationary Category 2" >Lecturer Probationary Category 2</option>
+          <option value = "Lecturer Probationary Category 3" >Lecturer Probationary Category 3</option>
+          <option value = "Lecturer Probationary not selected" >Lecturer Probationary not selected</option>
+        </select>
+      </div>
+      </div>
+    
+      <div class = "form-group col-xs-2 row">
+        <input type="submit" class="btn btn-primary" value = "Search">
+      </div> 
+</form>  
     </section>
+
     <section class="content">
         
 
@@ -46,15 +72,10 @@
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-                    <h3 class="box-title">Candidates List</h3>
+                    <h3 class="box-title"><?php echo "$position"?></h3>
                     <div class="box-tools">
                         <form action="<?php echo base_url() ?>userListing" method="POST" id="searchList">
-                            <div class="input-group">
-                              <!-- <input type="text" name="searchText" value="<?php echo $searchText; ?>" class="form-control input-sm pull-right" style="width: 150px;" placeholder="Search"/>  -->
-                              <!-- <div class="input-group-btn">
-                                <button class="btn btn-sm btn-default searchList"><i class="fa fa-search"></i></button>
-                              </div> -->
-                            </div>
+                           
                         </form>
                     </div>
                 </div><!-- /.box-header -->
@@ -63,30 +84,33 @@
                     <tr>
                       <th>Applicant ID</th>
                       <th>Name</th>
-                      <!-- <th>DOB</th> -->
+                      <th>DOB
                       <th>Educational Qualifications</th>
                       <th>Professional Qualifications</th>
                       <th>Other Qualifications</th>
                       <th>Specializations</th>
+                      
                       <th class="text-center">Actions</th>
                     </tr>
 
+                    
                     <?php foreach($array as $a):?>
                     <tr>
                       <td><?=$a->index?></td>
                       <td><?="$a->fname $a->lname"?></td>
-                      <!-- <td><?=$a->dob?></td> -->
+                      <td><?=$a->dob?></td> 
                       <td><?=$a->eq?></td>
                       <td><?=$a->pq?></td>
                       <td><?=$a->oq?></td>
                       <td><?=$a->spe?></td>
+                      
                       <td class="text-center">
-                          <a class="btn btn-sm btn-success" href="<?php echo base_url().'OperatorIndex/selectSLGradeI/'.$a->index; ?>"><i class="fa fa-check"></i></a>
-                          <a class="btn btn-sm btn-danger " href="<?php echo base_url().'OperatorIndex/notSelectSLGradeI/'.$a->index; ?>" data-userid=""><i class="fa fa-trash"></i></a> 
+                          <!-- <input type = "submit"  value="&#xf00c" class="btn btn-sm btn-success fa fa-check" >
+                          <a class="btn btn-sm btn-danger " href="<?php echo base_url().'OperatorIndex/notSelectLP/'.$a->index; ?>" data-userid=""><i class="fa fa-trash"></i></a>   -->
                           <a class="btn btn-sm btn-info " href="" data-userid=""><i class="fa fa-info"></i></a> 
                       </td>
                     </tr>
-                    <?php endforeach?>
+                    <?php endforeach?> 
                     
                   </table> 
                   
@@ -100,7 +124,7 @@
     </section>
 </div>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/common.js" charset="utf-8"></script>
-<script type="text/javascript">
+ <!-- <script type="text/javascript">
     jQuery(document).ready(function(){
         jQuery('ul.pagination li a').click(function (e) {
             e.preventDefault();            
@@ -110,21 +134,11 @@
             jQuery("#searchList").submit();
         });
     });
-</script>
+</script>  -->
 
-<script type="text/javascript">
 
-   function changeFunc() {
-    var selectBox = document.getElementById("selectBox");
-    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-    if(selectedValue=='Lecturer Probationary'){
-      //show the relevant peeps data
-    }else{
-      //
-    }
-    alert(selectedValue);
-   }
 
-  </script>
+
+
 
 </body>

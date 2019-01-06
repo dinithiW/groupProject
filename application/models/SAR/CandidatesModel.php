@@ -56,6 +56,9 @@
 		return $this->className;
 	}
 
+	public function getAll(){
+		
+	}
  	public function getallseniorlecturers(){
  		$Members=[];
  		$this->load->database();

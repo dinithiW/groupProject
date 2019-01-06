@@ -33,19 +33,29 @@
 
                 <div class="form-group">
 
-                    <<a class="btn btn-primary" href="<?= //base_url('OperatorIndex/addMember') ?>"><i class="fa fa-plus"></i> Add New</a>-->
+                    <<a class="btn btn-primary" href="<?= base_url('OperatorIndex/addMember') ?>"><i class="fa fa-plus"></i> Add New</a>-->
               <!--  </div>
             </div>
         </div> -->
-        <form method=POST action="<?= base_url('applicants') ?>"></form>
+        <form method=POST action="<?=base_url('applicants')?>"></form>
         <div class="form-group  col-xs-12">
         <label for="input-lg" class="input-lg"> Select Vacancy</label>
         <select class="form-control input-lg" id="sel1" name="type">
         <option value="PROBATIONARY LECTURER">Lecturer Probationary</option>
-        <option value="SENIOR LECTURE GR. II">Senior Lecturer</option>
+          <option value="SENIOR LECTURE GR. I">Senior Lecturer(Grade 1)</option>
+          <option value="SENIOR LECTURE GR. II">Senior Lecturer(Grade 2)</option>
           <!-- <option>3</option>
           <option>4</option> -->
         </select>
+
+         <select class="form-control input-lg" id="sel1" name="cate" marfin="10px">
+        <option value="1">Category 1</option>
+          <option value="2">Category 2</option>
+          <option value="3">Category 3</option>
+          <!-- <option>3</option>
+          <option>4</option> -->
+        </select>
+
         </div>
         <div class="col-xs-1" align="right">
   

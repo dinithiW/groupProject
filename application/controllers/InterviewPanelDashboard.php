@@ -20,6 +20,25 @@ class InterviewPanelDashboard extends CI_Controller{
         $this->load->view('includes/footer');*/
        // $this->load->model('InterviewPanel/ApplicantModel');
         //$data['applicants']=$this->ApplicantModel->getApplicants();
+        $this->load->model('InterviewPanel/ApplicantModel');
+         if ($this->input->post('lecturerType') != "") {
+            $_SESSION['lecturerType'] = $this->input->post('lecturerType');
+            if ($this->input->post('lecturerType') == "PROBATIONARY_LECTURER") {
+                $data['applicants'] = $this->ApplicantModel->getApplicants("PROBATIONARY_LECTURER");
+            } else if ($this->input->post('lecturerType') == "SENIOR_LECTURE_GR.I") {
+                $data['applicants'] = $this->ApplicantModel->getApplicants("SENIOR_LECTURE_GR.I");
+            } else if ($this->input->post('lecturerType') == "SENIOR_LECTURE_GR.II") {
+                $data['applicants'] = $this->ApplicantModel->getApplicants("SENIOR_LECTURE_GR.II");
+            }
+        } else {
+            if (!isset($_SESSION['lecturerType'])) {
+                $_SESSION['lecturerType'] = "PROBATIONARY_LECTURER";
+            }
+            $data['applicants'] = $this->ApplicantModel->getApplicants($_SESSION['lecturerType']);
+        }
+        $data['lecturerType'] = $_SESSION['lecturerType'];
+        
+
 
         $this->load->model('InterviewPanel/MarkingCriteriaModel');
 
@@ -32,7 +51,62 @@ class InterviewPanelDashboard extends CI_Controller{
 
     }
 
-    public function submitData(){
+     public function submitApplicantMarks()
+    {
+        $this->load->model('InterviewPanel/ApplicantModel');
+        if ($this->input->post('dropdownName') != "") {
+            $_SESSION['lecturerType'] = $this->input->post('dropdownName');
+            if ($this->input->post('dropdownName') == "PROBATIONARY_LECTURER") {
+                $this->ApplicantModel->submitApplicantMarks("PROBATIONARY_LECTURER");
+            } else if ($this->input->post('dropdownName') == "SENIOR_LECTURE_GR.I") {
+                $this->ApplicantModel->submitApplicantMarks("SENIOR_LECTURE_GR.I");
+            } else if ($this->input->post('dropdownName') == "SENIOR_LECTURE_GR.II") {
+                $this->ApplicantModel->submitApplicantMarks("SENIOR_LECTURE_GR.II");
+            }
+        }
+        redirect(base_url() . "Panel/viewApplicants");
+    }
+    public function getMarks()
+    {
+        $this->load->model('InterviewPanel/ApplicantModel');
+        $marks = $this->ApplicantModel->getApplicantData($this->input->post('dropdownName'));
+        $total = 0;
+        $count = 0;
+        foreach ($marks as $row) {
+            $count++;
+            $total += intval($row->marks);
+            echo "<tr style=\"font-size: 16px;background-color: white;height: 50px;cursor: pointer\"
+                                <td></td>
+                                <td>$row->NAME</td>
+                                <td><span>$row->marks / 100</span></td>
+                                </tr>";
+        }
+        if ($count==0) {
+            # code...
+            $count=1;
+        }
+        $value=$total/$count;
+        echo "<tr style=\"font-size: 16px;background-color: white;height: 50px;cursor: pointer\"\n' +
+                        '<td></td>\n' +
+                        '<td style=\"font-weight: bold\">Total</td>\n' +
+                        '<td><span style='font-weight: bold'>$value / 100</span></td>\n' +
+                        '</tr>";
+    }
+    public function getComments()
+    {
+        $this->load->model('InterviewPanel/ApplicantModel');
+        $comments = $this->ApplicantModel->getApplicantData($this->input->post('dropdownName'));
+        foreach ($comments as $row) {
+            echo "<tr style=\"font-size: 16px;background-color: white;height: 50px;cursor: pointer\"
+                                <td></td>
+                                <td>$row->NAME</td>
+                                <td><span>$row->comment</span></td>
+                                </tr>";
+        }
+    }
+
+
+   /* public function submitData(){
         $this->load->model('InterviewPanel/ApplicantModel');
         $this->ApplicantModel->submitApplicantMarks();
         redirect(base_url()."interviewPanel/interview_panel");
@@ -44,7 +118,7 @@ class InterviewPanelDashboard extends CI_Controller{
         foreach ($comments as $row) {
            echo $row->title.'.'.$row->name.' = '.$row->description.'~';
         }
-    }
+    }*/
 
      /*public function viewMarks(){
          $this->load->view('users/interviewPanel/header');

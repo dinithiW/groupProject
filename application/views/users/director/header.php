@@ -47,6 +47,7 @@
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Progress</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Reports</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contacts</a>
+    <a href="<?= base_url('User/logout') ?>" style="float:right;" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Logout</a>
     
     <!-- <ul class="nav navbar-nav navbar-right">
       <li class="dropdown">hahaha
@@ -56,7 +57,7 @@
     </ul> -->
 
     
-    <a href="<?= base_url('OperatorDashboard/logout') ?>" style="float:right;" class="w3-bar-item w3-button w3-hide-small w3-hover-white dropbtn">Logout</a>
+   
     
     
     

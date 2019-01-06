@@ -101,12 +101,6 @@ class OperatorDashboard extends CI_Controller{
         $this->load->view('includes/footer');
     }
 
-    /*public function addMemberModel(){
-        $this->load->model('operator/PanelMembers');
-        $this->PanelMembers->add();
-
-    }*/
-
     public function addingMember(){
         $this->load->model('operator/PanelMembers');
         $this->PanelMembers->addNewUser();
@@ -115,7 +109,8 @@ class OperatorDashboard extends CI_Controller{
     public function sendEmail(){
         $this->load->view('users/operator/header');
         $this->load->view('users/operator/showEmails');
-        //$this->load->view('includes/footer');
+        $this->load->view('includes/footer');
+        //redirect(base_url().'OperatorIndex/sendEmail');
     }
 
     public function emailSuccessMessage(){
@@ -221,7 +216,7 @@ class OperatorDashboard extends CI_Controller{
         //echo"am I here?";
         $this->load->model("applicant_model");
         $data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER","1");
-        $data['category'] = "Category 1";
+        $data['category'] = " 1";
         $this->load->view('includes/header');
         $this->load->view('users/operator/lpCategories',$data);
         $this->load->view('includes/footer');
@@ -231,13 +226,9 @@ class OperatorDashboard extends CI_Controller{
     //route lecturerProbationary
     public function showLpCandidates(){
         $category = $_POST['vacancy'];
-        echo $category;
-        //$this->load->model("applicant_model");
-        //$data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER",$category);
-        
         $this->load->model("applicant_model");
         $data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER",$category);
-        $data['category'] = "Category $category";
+        $data['category'] = $category;
         $this->load->view('includes/header');
         $this->load->view('users/operator/lpCategories',$data);
         $this->load->view('includes/footer');
@@ -283,10 +274,144 @@ class OperatorDashboard extends CI_Controller{
         $this->applicant_model->notSelectedSL($applicantId,"sl_selected_gradei");
         redirect(base_url()."OperatorIndex/seniorLecturerGradeI");
     }
+    //selectLP
+    public function addToSelectedLP($applicantId,$categoryFrom){
+        $temp = "category_".$applicantId;
+        $category = $_POST["$temp"];
+        $this->load->model("applicant_model");
+        $this->applicant_model->selectedLP($applicantId,$category);
 
+       /* $data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER",$categoryFrom);
+        $data['category'] = $categoryFrom;*/
+        redirect(base_url()."OperatorIndex/lectrerProbationary/$categoryFrom");
+        
+        
+    }
+
+    public function showLps($categoryFrom){
+        //echo"am I here?";
+        $this->load->model("applicant_model");
+        $data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER",$categoryFrom);
+        $data['category'] = $categoryFrom;
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/lpCategories',$data);
+        $this->load->view('includes/footer');
+
+    }
+    //notSelectLP
+    public function addToNotSelectedLP($applicantId){
+        $this->load->model("applicant_model");
+        $this->applicant_model->notSelectedLP($applicantId,$category);
+        
+        $data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER",$category);
+        $data['category'] = $category;
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/lpCategories',$data);
+        $this->load->view('includes/footer');
+    }
     //yet to implement
     public function moreInfo($applicantID){
 
+    }
+
+    public function viewCategorizedApplicants(){
+
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/viewCategorizedHome');
+        $this->load->view('includes/footer');
+
+    }
+
+    public function searchCandidates(){
+
+        $vacancy = $_POST['vacancy'];
+
+        $this->load->model("applicant_model");  
+        $data['array'] = $this->applicant_model->getAllCategorized($vacancy);
+        $data['position'] = $vacancy;
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/viewCategorized',$data);
+        $this->load->view('includes/footer');
+
+    }
+
+    public function editForm(){
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/editApplicationHome');
+        $this->load->view('includes/footer');
+    }
+
+    public function directEditApplication(){
+        $field = $_POST['editField'];
+        if($field=="sa"){
+            redirect(base_url()."OperatorIndex/specialization");
+        }else{
+            redirect(base_url()."OperatorIndex/fileUploads");
+        }
+    }
+
+    public function viewSpecializations(){
+        $this->load->model('operator/ApplicationFormModel');
+        $data['Specializations'] = $this->ApplicationFormModel->getAllSpecializations();
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/specialization',$data);
+        $this->load->view('includes/footer');
+    }
+
+    public function viewFileUploads(){
+        $this->load->model('operator/ApplicationFormModel');
+        $data['FileUploads'] = $this->ApplicationFormModel->getAllFileUploadsLinks();
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/fileUploadLinks',$data);
+        $this->load->view('includes/footer');
+    }
+
+    public function addSpecializationArea(){
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/addSpecialization');
+        $this->load->view('includes/footer');
+    }
+
+    public function addFileUploadLink(){
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/addFileUploadLink');
+        $this->load->view('includes/footer');
+    }
+
+    public function editSpecializationArea(){
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/addSpecialization');
+        $this->load->view('includes/footer');
+    }
+
+    public function editFileUploadLink(){
+
+    }
+
+    public function deleteSpecializationArea($sid){
+        //echo"$sid";
+        $this->load->model('operator/ApplicationFormModel');
+        $this->ApplicationFormModel->deleteSpecialization($sid);
+        redirect(base_url()."OperatorIndex/specialization");
+    }
+
+    public function deleteFileUploadLink($sid){
+        $this->load->model('operator/ApplicationFormModel');
+        $this->ApplicationFormModel->deleteFileUpload($sid);
+        redirect(base_url()."OperatorIndex/fileUploads");
+    }
+
+    public function addSpecializationToDb(){
+        $sname = $_POST['sname'];
+        $this->load->model('operator/ApplicationFormModel');
+        $this->ApplicationFormModel->addNewSpecialization($sname);
+        //redirect(base_url()."OperatorIndex/fileUploads");
+    }
+
+    public function addFileUploadToDb(){
+        $fname = $_POST['fname'];
+        $this->load->model('operator/ApplicationFormModel');
+        $this->ApplicationFormModel->addNewFileUpload($fname);
     }
 }
 ?>
