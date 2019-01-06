@@ -1,10 +1,11 @@
 <?php
     class ApplicationForm extends CI_Controller{
-
+        
         public function __construct(){
             parent::__construct();
             $this->load->helper('url');
             $this->load->library('session');
+            $this->load->helper(array('form','url'));
         }
 
         /**
@@ -49,13 +50,80 @@
         /**
          * this funciton is use for call AddCustomerForDatabase() function
          * it will upload file to database
-         */
+         */             
         public function insertfileUpload(){
-            
+            echo $this->input->post('userfile');
+
             $this->load->model('ApplicantApplicationFormModel');
             $this->ApplicantApplicationFormModel->insertFIleForDatabase();
             
         }
+
+        /**
+         * this funciton is use for call ViewFromDatabase() function
+         * it will shwow data from database
+         */             
+        public function viewUploadedDocument(){
+
+            // $this->load->model('ApplicantApplicationFormModel');
+            // $this->ApplicantApplicationFormModel->ViewFromDatabase();
+            
+        }
+
+
+
+        public function viewUploadedFile(){
+            $option = $this->input->post('selectCategory');
+            //echo "this is the ".$option;
+
+            $key = $this->getKeyValueInDatabase($option);
+            $key = $key.".pdf";
+            echo $key;
+            $this->load->model('ApplicantApplicationFormModel');
+            $data = $this->ApplicantApplicationFormModel->viewUploadedPdf($key);
+
+            if($option=="BIRTH CERTIFICATE"){
+                $this->load->view(viewBirthCertificate,$data);
+            }
+            else if($option=="GCE A/L RESULT SHEET"){
+                $this->load->view(viewAlresult,$data);
+            }
+            else if($option=="CURRICULUM VITAE"){
+                $this->load->view(viewCurriculumVitae,$data);
+            }
+            else if($option=="DEGREE CERTIFICATE"){
+                $this->load->view(viewDegreehCertificate,$data);
+            }
+            else if($option=="CERTIFIED NIC COPY"){
+                $this->load->view(viewCertifiedNic,$data);
+            }
+
+
+        }
+
+
+        /**
+         * this function is used for the fined the key value for search the database
+         */
+        public function getKeyValueInDatabase($data){
+            if($data=="BIRTH CERTIFICATE"){
+                return "BIRTH_CERTIFICATE";
+            }
+            else if($data=="GCE A/L RESULT SHEET"){
+                return "GCE_AL_RESULT_SHEET";
+            }
+            else if($data=="CURRICULUM VITAE"){
+                return "CURRICULUM_VITAE";
+            }
+            else if($data=="DEGREE CERTIFICATE"){
+                return "DEGREE_CERTIFICATE";
+            }
+            else if($data=="CERTIFIED NIC COPY"){
+                return "CERTIFIED_NIC_COPY";
+            }
+        }
+
+        
 
     /*
      * when click the option in header file this funciton will active
