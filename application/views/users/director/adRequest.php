@@ -29,7 +29,7 @@
                                 <div class="col-md-6">                                
                                     <div class="form-group">
                                         <label for="vacanciesneeded">Vacancies needed : </label>
-                                        <select name = "dropdown">
+                                        <select type = "dropdown" id = "vacanciesneeded" name = "vacanciesneeded">
                                             <option value = "probLec">Probationary Lecture</option>
                                             <option value = "seniorLecOne">Senior Lecturer Grade I</option>
                                             <option value = "seniorLecTwo">Senior Lecturer Grade I</option>

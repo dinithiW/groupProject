@@ -29,6 +29,23 @@ class ApplicantDashboard extends CI_Controller{
         
     	
     }
+
+    /**
+ * this function is used for the check that applicatn already filled the form or not
+ */
+public function applicationSecondPage(){
+    //echo $_SESSION['application_form_filled'];
+    if($_SESSION['application_form_filled'] == "not"){
+        $this->load->model('operator/categorizeApplilcationsModel');
+        $data['fetch_data'] = $this->categorizeApplilcationsModel->fetch_datas();
+        $this->load->view('applicant/applicationForm/ApplicationFormCopy',$data);
+    }
+    if($_SESSION['application_form_filled'] == "yes"){
+        redirect('ApplicationForm/editfileUpload');
+    }
+    
+    
+}
     
 
     /**
@@ -36,6 +53,23 @@ class ApplicantDashboard extends CI_Controller{
      * select files from database and show them
      */
     public function applicationFifththPage(){
+        
+        $this->load->view('includes/header');
+					
+        $this->load->model('operator/categorizeApplilcationsModel');
+        $data['fetch_data'] = $this->categorizeApplilcationsModel->fetchFileUploadLinks();
+        $this->load->view('applicant/applicationForm/ApplicationFormFileUpoload',$data);
+        $this->load->view('includes/footer');
+       
+    }
+
+    
+
+    /**
+     * this function is use for the show the application form for the higher authorized users
+     * select files from database and show them
+     */
+    public function applicationFileViewFor(){
         
         $this->load->view('includes/header');
 					

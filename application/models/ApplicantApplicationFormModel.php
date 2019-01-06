@@ -1,9 +1,57 @@
 <?php
 class ApplicantApplicationFormModel extends CI_Model{
+    
     public function __construct(){
         parent::__construct();
+        $this->load->library('session');
+        $this->load->helper(array('form','url'));
     }
     
+
+    public function insertFIleForDatabase(){
+
+        $this->load->helper('form');
+        $this->load->library('form_validation');
+        $data['title'] = 'Create a new Student';
+
+        $config = array(
+                'upload_path'    => 'assets/uploaded_file/',
+                'allowed_types'  => 'pdf|jpeg|jpg',
+                'max_size'       =>0,
+                'filename'       =>url_title($this->input->post('file')),
+                                  
+        );
+
+        $name = $this->input->post("userfile");
+        $this->load->library('upload', $config);
+
+        if (!$this->upload->do_upload('userfile')){
+            
+            echo $this->upload->display_errors('<p>', '</p>');
+        }else{
+            
+            
+            $this->addDocumentForDatabase($this->upload->data('full_path'),$name);
+            
+        }
+    }
+
+
+
+    public function addDocumentForDatabase($path,$post){ 
+        
+        $data = array(
+            'INDEX_NUMBER'  =>$_SESSION['index_number'],
+            'DOCUMENT_NAME' =>substr($path ,42),
+            'DOCUMENT_TYPE' =>"document",
+            'DOCUMENT'      =>$path 
+            
+        );
+
+        $this->db->insert('application_form_documents', $data);
+        redirect(base_url()."ApplicantDashboard/applicationFifththPage");
+    }
+
 
     /**
      * this funciton is used for filter the form inputs
@@ -84,7 +132,24 @@ class ApplicantApplicationFormModel extends CI_Model{
         $this->insertSpecificationAreas($idNumber);
     }
 
-    
+
+    /**
+     * this funciton is used for the insert pdf fiels for the database
+     */
+
+    public function ViewFromDatabase($key){
+        $dbh = new PDO("mysql:host=localhost;dbname=ucsc","root","");
+        $stat = $dbh->prepare("select * from application_form_documents where INDEX_NUMBER=? and DOCUMENT_NAME=?");
+       
+        $index_number = $_SESSION['index_number'];
+        $stat->bindParam(1,$index_number);
+        $stat->bindParam(1,$key);
+        $stat->execute();
+        $row = $stat->fetch();
+        header("Content-Type:".$row['DOCUMENT_TYPE']);
+        echo $row['	DOCUMENT'];
+    }
+   
 
     /*
     * this function is use for adding files for  for the database
@@ -104,6 +169,21 @@ class ApplicantApplicationFormModel extends CI_Model{
             echo $row['DOCUMENT'];
             //echo '<img src="data:image/jpeg;base64,'.base64_encode($row['data']).'"/>'; 
         }
+    }
+
+
+    /**
+     * this function is used for the view the uploaded pdf to the database
+     */
+    public function viewUploadedPdf($key){
+        
+        $this->load->database();
+        $this->db->select('DOCUMENT_NAME');
+        $this->db->select('DOCUMENT');
+        $this->db->from('application_form_documents');
+        $this->db->where('DOCUMENT_NAME',$key);
+        $query = $this->db->get();
+        return $query;
     }
 
 

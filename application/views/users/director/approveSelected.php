@@ -20,9 +20,10 @@
                     <div class="box-header">
                         <h3 class="box-title">Approve Selected Applicants</h3>
                     </div><!-- /.box-header -->
+
                     <div>
                         <center>
-                            <h3>Selected Applicants</h3>
+                            <h3><b>Lecturer Probationary </b>(Selected)</h3>
                         </center>
                     </div>
                     <br />
@@ -30,21 +31,217 @@
                         <table class = "table table-bordered">
                             <tr>
                                 <td><b>Index number</b></td>
-                                <td><b>First name</b></td>
+                                <td><b>Name</b></td>
+                                <td><b>Gender</b></td>
+                                <td><b>E-Mail</b></td>
+                                <td><b>Contact No</b></td>
+                                <td><b>Post</b></td>
+                                <th class="text-center">Actions</th>
                             </tr>
 
                         <?php 
-                        foreach($records as $rec){
+                        foreach($records_lp as $rec){
                         ?>
                             <tr>
                                 <td><?php echo $rec->INDEX_NUMBER; ?></td>
                                 <td><?php echo $rec->FIRST_NAME." ".$rec->LAST_NAME; ?></td>
+                                <td><?php echo $rec->GENDER; ?></td>
+                                <td><?php echo $rec->PERSONAL_EMAIL; ?></td>
+                                <td><?php echo $rec->MOBILE_NUMBER; ?></td>
+                                <td><?php echo $rec->POST_APPLY_FOR; ?></td>
+                                <td class="text-center">
+                                    <a class="btn btn-sm btn-danger " href="<?php echo base_url().'Director/deleteApplicant/'.$rec->INDEX_NUMBER; ?>" data-userid="<?php echo $rec->INDEX_NUMBER; ?>"><i class="fa fa-trash"></i></a> 
+                                </td>
                             </tr>
                         <?php
                         } 
                         ?>
                         </table>
                     </div>
+                    <br />
+
+                    <div>
+                        <center>
+                            <h3><b>Lecturer Probationary </b>(Not Selected)</h3>
+                        </center>
+                    </div>
+                    <br />
+                    <div class = "table-responsive">
+                        <table class = "table table-bordered">
+                            <tr>
+                                <td><b>Index number</b></td>
+                                <td><b>Name</b></td>
+                                <td><b>Gender</b></td>
+                                <td><b>E-Mail</b></td>
+                                <td><b>Contact No</b></td>
+                                <td><b>Post</b></td>
+                            </tr>
+
+                        <?php 
+                        foreach($n_records_lp as $rec){
+                        ?>
+                            <tr>
+                                <td><?php echo $rec->INDEX_NUMBER; ?></td>
+                                <td><?php echo $rec->FIRST_NAME." ".$rec->LAST_NAME; ?></td>
+                                <td><?php echo $rec->GENDER; ?></td>
+                                <td><?php echo $rec->PERSONAL_EMAIL; ?></td>
+                                <td><?php echo $rec->MOBILE_NUMBER; ?></td>
+                                <td><?php echo $rec->POST_APPLY_FOR; ?></td>
+                            </tr>
+                        <?php
+                        } 
+                        ?>
+                        </table>
+                    </div>
+                    <br />
+
+                    <div>
+                        <center>
+                            <h3><b>Senior Lecturers Grade I </b>(Selected)</h3>
+                        </center>
+                    </div>
+                    <br />
+                    <div class = "table-responsive">
+                        <table class = "table table-bordered">
+                            <tr>
+                                <td><b>Index number</b></td>
+                                <td><b>Name</b></td>
+                                <td><b>Gender</b></td>
+                                <td><b>E-Mail</b></td>
+                                <td><b>Contact No</b></td>
+                                <td><b>Post</b></td>
+                                <th class="text-center">Actions</th>
+                            </tr>
+
+                        <?php 
+                        foreach($records_i as $rec){
+                        ?>
+                            <tr>
+                                <td><?php echo $rec->INDEX_NUMBER; ?></td>
+                                <td><?php echo $rec->FIRST_NAME." ".$rec->LAST_NAME; ?></td>
+                                <td><?php echo $rec->GENDER; ?></td>
+                                <td><?php echo $rec->PERSONAL_EMAIL; ?></td>
+                                <td><?php echo $rec->MOBILE_NUMBER; ?></td>
+                                <td><?php echo $rec->POST_APPLY_FOR; ?></td>
+                                <td class="text-center">
+                                    <a class="btn btn-sm btn-danger " href="<?php echo base_url().'Director/deleteApplicant/'.$rec->INDEX_NUMBER; ?>" data-userid="<?php echo $rec->INDEX_NUMBER; ?>"><i class="fa fa-trash"></i></a> 
+                                </td>
+                            </tr>
+                        <?php
+                        } 
+                        ?>
+                        </table>
+                    </div>
+                    <br />
+
+                    <div>
+                        <center>
+                            <h3><b>Senior Lecturers Grade I </b>(Not Selected)</h3>
+                        </center>
+                    </div>
+                    <br />
+                    <div class = "table-responsive">
+                        <table class = "table table-bordered">
+                            <tr>
+                                <td><b>Index number</b></td>
+                                <td><b>Name</b></td>
+                                <td><b>Gender</b></td>
+                                <td><b>E-Mail</b></td>
+                                <td><b>Contact No</b></td>
+                                <td><b>Post</b></td>
+                            </tr>
+
+                        <?php 
+                        foreach($n_records_i as $rec){
+                        ?>
+                            <tr>
+                                <td><?php echo $rec->INDEX_NUMBER; ?></td>
+                                <td><?php echo $rec->FIRST_NAME." ".$rec->LAST_NAME; ?></td>
+                                <td><?php echo $rec->GENDER; ?></td>
+                                <td><?php echo $rec->PERSONAL_EMAIL; ?></td>
+                                <td><?php echo $rec->MOBILE_NUMBER; ?></td>
+                                <td><?php echo $rec->POST_APPLY_FOR; ?></td>
+                            </tr>
+                        <?php
+                        } 
+                        ?>
+                        </table>
+                    </div>
+                    <br />
+
+                    <div>
+                        <center>
+                            <h3><b>Senior Lecturers Grade II </b>(Selected)</h3>
+                        </center>
+                    </div>
+                    <br />
+                    <div class = "table-responsive">
+                        <table class = "table table-bordered">
+                            <tr>
+                                <td><b>Index number</b></td>
+                                <td><b>Name</b></td>
+                                <td><b>Gender</b></td>
+                                <td><b>E-Mail</b></td>
+                                <td><b>Contact No</b></td>
+                                <td><b>Post</b></td>
+                                <th class="text-center">Actions</th>
+                            </tr>
+
+                        <?php 
+                        foreach($records_ii as $rec){
+                        ?>
+                            <tr>
+                                <td><?php echo $rec->INDEX_NUMBER; ?></td>
+                                <td><?php echo $rec->FIRST_NAME." ".$rec->LAST_NAME; ?></td>
+                                <td><?php echo $rec->GENDER; ?></td>
+                                <td><?php echo $rec->PERSONAL_EMAIL; ?></td>
+                                <td><?php echo $rec->MOBILE_NUMBER; ?></td>
+                                <td><?php echo $rec->POST_APPLY_FOR; ?></td>
+                                <td class="text-center">
+                                    <a class="btn btn-sm btn-danger " href="<?php echo base_url().'Director/deleteApplicant/'.$rec->INDEX_NUMBER; ?>" data-userid="<?php echo $rec->INDEX_NUMBER; ?>"><i class="fa fa-trash"></i></a> 
+                                </td>
+                            </tr>
+                        <?php
+                        } 
+                        ?>
+                        </table>
+                    </div>
+                    <br />
+
+                    <div>
+                        <center>
+                            <h3><b>Senior Lecturers Grade II </b>(Not Selected)</h3>
+                        </center>
+                    </div>
+                    <br />
+                    <div class = "table-responsive">
+                        <table class = "table table-bordered">
+                            <tr>
+                                <td><b>Index number</b></td>
+                                <td><b>Name</b></td>
+                                <td><b>Gender</b></td>
+                                <td><b>E-Mail</b></td>
+                                <td><b>Contact No</b></td>
+                                <td><b>Post</b></td>
+                            </tr>
+
+                        <?php 
+                        foreach($n_records_ii as $rec){
+                        ?>
+                            <tr>
+                                <td><?php echo $rec->INDEX_NUMBER; ?></td>
+                                <td><?php echo $rec->FIRST_NAME." ".$rec->LAST_NAME; ?></td>
+                                <td><?php echo $rec->GENDER; ?></td>
+                                <td><?php echo $rec->PERSONAL_EMAIL; ?></td>
+                                <td><?php echo $rec->MOBILE_NUMBER; ?></td>
+                                <td><?php echo $rec->POST_APPLY_FOR; ?></td>
+                            </tr>
+                        <?php
+                        } 
+                        ?>
+                        </table>
+                    </div>
+
                 </div>
             </div>
             <div class="col-md-4">

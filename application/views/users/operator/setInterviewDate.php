@@ -35,156 +35,137 @@
       </h1>
     </section>
     <section class="content">
-        <!-- <div class="row">
-            <div class="col-xs-12 text-right">
-                <div class="form-group">
-                    <a class="btn btn-primary" href="<?= base_url('OperatorIndex/addMember') ?>"><i class="fa fa-plus"></i> Add New</a>
+
+      <form action = "<?= base_url().'OperatorIndex/lecturerProbationary'?>" method = "post">
+      <div class = "row">
+        <div class="form-group  col-xs-8 ">
+        
+        <select class="form-control input-lg" id="selectBox" name = "vacancy">
+           <!-- <select class="form-control input-lg" id="selectBox" onchange="changeFunc();"> -->
+          <option value = "1" >Senior Lecturer Grade I selected</option>
+          <option value = "2" >Senior Lecturer Grade II selected</option>
+          <option value = "3" >Lecturer Probationary Category 1</option>
+          <option value = "0" >Lecturer Probationary Category 2</option>
+          <option value = "0" >Lecturer Probationary Category 3</option>
+        </select>
+
+
+      </div>
+
+
+      </div>
+    
+      <div class = "form-group col-xs-2 row">
+        <input type="submit" class="btn btn-primary" value = "Search">
+      </div> 
+
+      
+</form>
+<br>
+<br>
+<br>
+<div class="col-md-8">
+  <div class="box">
+    <form role="form" id="addUser" action="<?php echo base_url() ?>OperatorIndex/addMemberprocess" method="post" role="form">
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-md-6">                                
+                                    <div class="form-group">
+                                        <label for="fname" class="col-md-6">Interview Date</label>
+                                        <input type="date" class="form-control required" id="fname" name="fname" maxlength="128">
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="lname" class="col-md-6">Time</label>
+                                        <input type="time" class="form-control required">
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                         
+                        </div><!-- /.box-body -->
+    
+                        <!-- <div class="box-footer">
+                            <input type="submit" class="btn btn-primary" value="Submit" />
+                            <input type="reset" class="btn btn-default" value="Reset" />
+                        </div> -->
+                    </form>
                 </div>
             </div>
-        </div> -->
-      <!-- <div class="form-group  col-xs-12">
-        <label for="input-lg" class="input-lg"> Select Vacancy</label>
-        <select class="form-control input-lg" id="sel1">
-          <option>Lecturer Probationary</option>
-          <option>Senior Lecturer</option>
-          <option>3</option>
-          <option>4</option> 
-        </select>
-      </div> -->
-
+        <!-- <div class = "form-group row form-control ">
+          <label>Interview Date</label>
+          <input type="date" name="check_list[]" value="" class = "checkbox">
+        </div>  -->
         <div class="row">
+
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
                     <h3 class="box-title">Candidates List</h3>
                     <div class="box-tools">
+                      
+                    </div>
+                </div><!-- /.box-header -->
+                <div class="box-body table-responsive no-padding">
+                  <section class="content">
+        
+
+        <div class="row">
+
+            <div class="col-xs-12">
+              <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title"><?= $headerName?></h3>
+                    <div class="box-tools">
                         <form action="<?php echo base_url() ?>userListing" method="POST" id="searchList">
-                            <div class="input-group">
-                              <!-- <input type="text" name="searchText" value="<?php echo $searchText; ?>" class="form-control input-sm pull-right" style="width: 150px;" placeholder="Search"/>  -->
-                              <!-- <div class="input-group-btn">
-                                <button class="btn btn-sm btn-default searchList"><i class="fa fa-search"></i></button>
-                              </div> -->
-                            </div>
+                           
                         </form>
                     </div>
                 </div><!-- /.box-header -->
                 <div class="box-body table-responsive no-padding">
-                  <table class="table table-hover table-bordered">
-                    <tr style="border-color:black;">
-                      <th style="border-color:black;">Time</th>
-                      <th style="border-color:black;">Monday</th>
-                      <th style="border-color:black;">Tuesday</th>
-                      <th style="border-color:black;">Wednesday</th>
-                      <th style="border-color:black;">Thursday</th>
-                      <th style="border-color:black;">Friday</th>
-                      <th style="border-color:black;">Saturday</th>
-                      <th style="border-color:black;">Sunday</th> 
+                  <form method = "post" action = "">
+                  <table class="table table-hover">
+                    <tr>
+                      <th>Applicant ID</th>
+                      <th>Name</th>
+                      <th>Email Address</th>
+                      <th >Selected</th>
+                      <th class="text-center">Actions</th>
                     </tr>
 
-                    <?php
-                    for($i=8;$i<=17;$i++){
-                    $temp = $i+1;
-                    ?>
-                    <tr>
-                      <td style="border-color:black;">
-                      <?php echo "$i".".00 - "."$temp".".00";?>
-                    </td>
-                    <?php
-                    for($j=0;$j<=6;$j++){
-                    ?>
-                  <td style="border-color:black;"> <div id = "container" style="padding-bottom: 10px"><!-- <select class="form-control" id="sel1">
-                            <option>Lecturer Probationary</option>
-                            <option>Senior Lecturer</option>
-                            <option>3</option>
-                            <option>4</option> 
-                          </select> --></div><center><a class="btn btn-sm btn-success"  id = "btn"><i class="fa fa-plus"></i></a></center></td>
-                  <?php }?>
                     
-                  </tr>
-                    <?php
-                  }
-
-                    ?>
-
-
-                    <!-- <tr>
+                    <?php foreach($array as $a):?>
+                    <tr>
+                      <td><?=$a->index?></td>
+                      <td><?="$a->fname $a->lname"?></td>
+                      <td><?=$a->email?></td>
                       <td>
-                      <?php echo "1";?>
-                    </td> -->
-                      <!-- <?php
-                      for($i=8;$i<=18;$i++){
-                      ?><td><?php= "$i"?></td>
-                   <?php }
-                      ?> -->
-
-                      <!-- <td><div id = "container" style="padding-bottom: 10px"><select class="form-control" id="sel1">
-                            <option>Lecturer Probationary</option>
-                            <option>Senior Lecturer</option>
-                            <option>3</option>
-                            <option>4</option> 
-                          </select></div><br><a class="btn btn-sm btn-success"  id = "btn"><i class="fa fa-plus"></i></a></td>
-                      <td><select class="form-control" id="sel1">
-                            <option>Lecturer Probationary</option>
-                            <option>Senior Lecturer</option>
-                            <option>3</option>
-                            <option>4</option> 
-                          </select><br><a class="btn btn-sm btn-success" ><i class="fa fa-plus"></i></a></td>
-                      <td><select class="form-control" id="sel1">
-                            <option>Lecturer Probationary</option>
-                            <option>Senior Lecturer</option>
-                            <option>3</option>
-                            <option>4</option> 
-                          </select><br><a class="btn btn-sm btn-success" href=""><i class="fa fa-plus"></i></a></td>
-                      <td><select class="form-control" id="sel1">
-                            <option>Lecturer Probationary</option>
-                            <option>Senior Lecturer</option>
-                            <option>3</option>
-                            <option>4</option> 
-                          </select><br><a class="btn btn-sm btn-success" href=""><i class="fa fa-plus"></i></a></td>
-                      <td><select class="form-control" id="sel1">
-                            <option>Lecturer Probationary</option>
-                            <option>Senior Lecturer</option>
-                            <option>3</option>
-                            <option>4</option> 
-                          </select><br><a class="btn btn-sm btn-success" href=""><i class="fa fa-plus"></i></a></td>
-                      <td><select class="form-control" id="sel1">
-                            <option>Lecturer Probationary</option>
-                            <option>Senior Lecturer</option>
-                            <option>3</option>
-                            <option>4</option> 
-                          </select><br><a class="btn btn-sm btn-success" href=""><i class="fa fa-plus"></i></a></td>
-                      <td><select class="form-control" id="sel1">
-                            <option>Lecturer Probationary</option>
-                            <option>Senior Lecturer</option>
-                            <option>3</option>
-                            <option>4</option> 
-                          </select><br><a class="btn btn-sm btn-success" href=""><i class="fa fa-plus"></i></a></td>  -->
-                    <!-- </tr> -->
-
-                    <!-- this was commented -->
-                   <!--  <?php
-                    
-                        foreach ($Members as $row) {?>
-                    
-                    <tr>
-                      <td><?php echo $row->getPanelID() ?></td>
-                      <td><?php echo $row->getFname()." ".$row->getLname() ?></td>
-                     <td><?php echo $row->getLname() ?></td> 
-                      <td><?php echo $row->getEmail() ?></td>
-                      <td><?php echo $row->getGender()?></td>
-                      <td><?php echo $row->getContact()?></td>
-                      <td><?php echo $row->getDesignation()?></td>
-                      <td><?php echo $row->getAddress()?></td>
+                       <input type="checkbox" name="check_list[]" value="<?= $a->email?>" class = "checkbox"> 
+                      <!-- <input type="date" name="check_list[]" value="<?= $a->email?>" class = "checkbox"> -->
+                    </td>
+                      
+                      
+                     
                       <td class="text-center">
-                          <a class="btn btn-sm btn-info" href="<?php echo base_url().'OperatorIndex/editMember/'.$row->getPanelID(); ?>"><i class="fa fa-pencil"></i></a>
-                          <a class="btn btn-sm btn-danger " href="<?php echo base_url().'OperatorIndex/deleteMember/'.$row->getPanelID(); ?>" data-userid="<?php echo $row->getPanelID(); ?>"><i class="fa fa-trash"></i></a> 
+                          <!-- <input type = "submit"  value="&#xf00c" class="btn btn-sm btn-success fa fa-envelope-square" > -->
+                          <!-- <a class="btn btn-sm btn-danger " href="<?php echo base_url().'OperatorIndex/notSelectLP/'.$a->index; ?>" data-userid=""><i class="fa fa-trash"></i></a>  -->
+                          <a class="btn btn-sm btn-info " href="" data-userid=""><i class="fa fa-envelope">&nbspSend Email Individually</i></a> 
                       </td>
                     </tr>
-                    <?php
-                        
-                    }
-                    ?> -->
+                    <?php endforeach?>
+                  </form>  
                   </table> 
+                  
+                </div><!-- /.box-body -->
+                <div class="box-footer clearfix">
+                    <?php echo $this->pagination->create_links(); ?>
+                </div>
+              </div><!-- /.box -->
+            </div>
+        </div>
+    </section>
                   
                 </div><!-- /.box-body -->
                 <div class="box-footer clearfix">
@@ -246,3 +227,44 @@
     });
 </script>
 </body>
+
+
+
+<!-- <table class="table table-hover table-bordered">
+                    <tr style="border-color:black;">
+                      <th style="border-color:black;">Time</th>
+                      <th style="border-color:black;">Monday</th>
+                      <th style="border-color:black;">Tuesday</th>
+                      <th style="border-color:black;">Wednesday</th>
+                      <th style="border-color:black;">Thursday</th>
+                      <th style="border-color:black;">Friday</th>
+                      <th style="border-color:black;">Saturday</th>
+                      <th style="border-color:black;">Sunday</th> 
+                    </tr>
+
+                    <?php
+                    for($i=8;$i<=17;$i++){
+                    $temp = $i+1;
+                    ?>
+                    <tr>
+                      <td style="border-color:black;">
+                      <?php echo "$i".".00 - "."$temp".".00";?>
+                    </td>
+                    <?php
+                    for($j=0;$j<=6;$j++){
+                    ?>
+                  <td style="border-color:black;"> <div id = "container" style="padding-bottom: 10px"> <select class="form-control" id="sel1">
+                            <option>Lecturer Probationary</option>
+                            <option>Senior Lecturer</option>
+                            <option>3</option>
+                            <option>4</option> 
+                          </select></div><center><a class="btn btn-sm btn-success"  id = "btn"><i class="fa fa-plus"></i></a></center></td>
+                  <?php }?>
+                    
+                  </tr>
+                    <?php
+                  }
+
+                    ?>
+                 
+                  </table>  -->

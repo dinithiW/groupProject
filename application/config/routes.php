@@ -136,6 +136,10 @@ $route['OperatorIndex/deleteUploadLink/(:any)'] = "OperatorDashboard/deleteFileU
 $route['OperatorIndex/addSpecializationprocess'] = "OperatorDashboard/addSpecializationToDb";
 $route['OperatorIndex/addFileUploadprocess'] = "OperatorDashboard/addFileUploadToDb";
 
+$route['OperatorIndex/editSpecializationProcess/(:any)'] = "OperatorDashboard/editSpecializationToDb/$1";
+$route['OperatorIndex/editFileUploadProcess/(:any)'] = "OperatorDashboard/editFileUploadToDb/$1";
+$route['OperatorIndex/sendApplicantEmails'] = "OperatorDashboard/sendEMailsToApplicants";
+
 //SAR routes
 $route['SAR']='SARDashboard/index';
 $route['reports']='SARDashboard/report';
@@ -154,6 +158,8 @@ $route['Director/adRequest'] = 'DirectorDashboard/adRequest';
 $route['Director/approveAd'] = 'DirectorDashboard/approveAd';
 $route['Director/viewApplicants'] = 'DirectorDashboard/viewApplicants';
 $route['Director/approveSelected'] = 'DirectorDashboard/approveSelected';
+$route['Director/deleteApplicant/(:any)'] = 'DirectorDashboard/deleteApplicant/$1';
+$route['Director/deleteApplicantModel/(:any)'] = 'DirectorDashboard/deleteApplicantModel/$1';
 $route['Director/approveFinalSet'] = 'DirectorDashboard/approveFinalSet';
 $route['Director/setInterviewDate'] = 'DirectorDashboard/setInterviewDate';
 $route['Director/sendmail'] = 'Directordashboard/sendmail';
@@ -192,8 +198,10 @@ $route['registerUsers/success'] = 'Register/success';
 //directing to applicant home
 $route['applicant'] = 'ApplicantDashboard/index';
 $route['application_form_fill'] = 'ApplicantDashboard/applicationFirstPage';
+//$route['application_form_fill'] = 'ApplicantDashboard/applicationSecondPage';
 $route['application_form_edit'] = 'ApplicationForm/editfileUpload';
 $route['application_form_documents'] = 'ApplicantDashboard/applicationFifththPage';
+$route['application_form_for_view'] = 'ApplicationForm/applicationFileViewFor';
 $route['LOGOUT']='User/out';
 //applicant end
 

@@ -210,7 +210,7 @@ if($checking=='1'){
             </li>
 
             <li class="treeview">
-              <a href="#" >
+              <a href="<?= base_url('OperatorIndex/sendApplicantEmails')?>" >
                 <i class="fa fa-envelope"></i>
                 <span>Send Emails to Applicants</span>
               </a>
@@ -342,10 +342,6 @@ if($checking=='1'){
             }
             if($role == ROLE_APPLICANT)
             {
-
-              
-
-
             ?>
             <li class="treeview">
               <a href="<?php echo base_url(); ?>application_form_fill">
@@ -359,6 +355,13 @@ if($checking=='1'){
               <a href="<?php echo base_url(); ?>application_form_documents">
                 <i class="fa fa-files-o"></i>
                 <span>File Upload</span>
+              </a>
+            </li>
+
+            <li class="treeview">
+              <a href="<?php echo base_url(); ?>application_form_for_view">
+                <i class="fa fa-files-o"></i>
+                <span>view file</span>
               </a>
             </li>
 
