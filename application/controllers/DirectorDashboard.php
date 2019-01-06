@@ -69,7 +69,13 @@ class DirectorDashboard extends CI_Controller{
 
 	public function approveFinalSet(){
 		$this->load->view('includes/header');
-		$this->load->view('users/director/approveFinalSet');
+
+		$this->load->model('Director/applicantDetails');
+		$data['records_lp'] = $this->applicantDetails->getMarks_l_p();
+		$data['records_i'] = $this->applicantDetails->getMarks_s_l_i();
+		$data['records_ii'] = $this->applicantDetails->getMarks_s_l_ii();
+
+		$this->load->view('users/director/approveFinalSet', $data);
 		$this->load->view('includes/footer');
 		
 	}

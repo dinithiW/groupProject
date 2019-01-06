@@ -20,7 +20,99 @@
                     <div class="box-header">
                         <h3 class="box-title">Approve Final Set</h3>
                     </div><!-- /.box-header -->
+
+                    <div>
+                        <center>
+                            <h3><b>Lecturer Probationary Higher Marks</b></h3>
+                        </center>
+                    </div>
+                    <br />
+                    <div class = "table-responsive">
+                        <table class = "table table-bordered">
+                            <tr>
+                                <th>Index number</th>
+                                <th>Username</th>
+                                <th>Marks</th>
+                                <th>Interview panel's opinion</th>
+                            </tr>
+
+                        <?php 
+                        foreach($records_lp as $rec){
+                        ?>
+                            <tr>
+                                <td><?php echo $rec->INDEX_NUMBER; ?></td>
+                                <td><?php echo $rec->USERNAME; ?></td>
+                                <td><?php echo $rec->marks; ?></td>
+                                <td><?php echo $rec->comment; ?></td>
+                            </tr>
+                        <?php
+                        } 
+                        ?>
+                        </table>
+                    </div>
+                    <br />
                     
+                    <div>
+                        <center>
+                            <h3><b>Senior Lecturers Grade I Higher Marks</b></h3>
+                        </center>
+                    </div>
+                    <br />
+                    <div class = "table-responsive">
+                        <table class = "table table-bordered">
+                            <tr>
+                                <th>Index number</th>
+                                <th>Username</th>
+                                <th>Marks</th>
+                                <th>Interview panel's opinion</th>
+                            </tr>
+
+                        <?php 
+                        foreach($records_i as $rec){
+                        ?>
+                            <tr>
+                                <td><?php echo $rec->INDEX_NUMBER; ?></td>
+                                <td><?php echo $rec->USERNAME; ?></td>
+                                <td><?php echo $rec->marks; ?></td>
+                                <td><?php echo $rec->comment; ?></td>
+                            </tr>
+                        <?php
+                        } 
+                        ?>
+                        </table>
+                    </div>
+                    <br />
+
+                    <div>
+                        <center>
+                            <h3><b>Senior Lecturers Grade II Higher Marks</b></h3>
+                        </center>
+                    </div>
+                    <br />
+                    <div class = "table-responsive">
+                        <table class = "table table-bordered">
+                            <tr>
+                                <th>Index number</th>
+                                <th>Username</th>
+                                <th>Marks</th>
+                                <th>Interview panel's opinion</th>
+                            </tr>
+
+                        <?php 
+                        foreach($records_ii as $rec){
+                        ?>
+                            <tr>
+                                <td><?php echo $rec->INDEX_NUMBER; ?></td>
+                                <td><?php echo $rec->USERNAME; ?></td>
+                                <td><?php echo $rec->marks; ?></td>
+                                <td><?php echo $rec->comment; ?></td>
+                            </tr>
+                        <?php
+                        } 
+                        ?>
+                        </table>
+                    </div>
+
                 </div>
             </div>
             <div class="col-md-4">

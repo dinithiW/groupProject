@@ -65,6 +65,30 @@ class applicantDetails extends CI_Model{
         return $query->result();
     }
 
+    //Get data about lecturer probationary who takes higher marks for interview
+    function getMarks_l_p(){
+        $subquery = 'SELECT * FROM lp_category_marks';
+        $query = $this->db->query($subquery);
+
+        return $query->result();
+    }
+
+    //Get data about senior lecturer grade I who takes higher marks for interview
+    function getMarks_s_l_i(){
+        $subquery = 'SELECT * FROM sl_selected_gradei_marks';
+        $query = $this->db->query($subquery);
+
+        return $query->result();
+    }
+
+    //Get data about senior lecturer grade II who takes higher marks for interview
+    function getMarks_s_l_ii(){
+        $subquery = 'SELECT * FROM sl_selected_gradeii_marks';
+        $query = $this->db->query($subquery);
+
+        return $query->result();
+    }
+
     //
     public function getApplicant($INDEX_NUMBER){
 
