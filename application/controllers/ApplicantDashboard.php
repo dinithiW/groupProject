@@ -34,7 +34,7 @@ class ApplicantDashboard extends CI_Controller{
  * this function is used for the check that applicatn already filled the form or not
  */
 public function applicationSecondPage(){
-
+    //echo $_SESSION['application_form_filled'];
     if($_SESSION['application_form_filled'] == "not"){
         $this->load->model('operator/categorizeApplilcationsModel');
         $data['fetch_data'] = $this->categorizeApplilcationsModel->fetch_datas();

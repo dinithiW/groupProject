@@ -306,7 +306,7 @@ if($checking=='1'){
             <li class="treeview">
               <a href="<?= base_url('setDates') ?>"  >
                 <i class="fa fa-files-o"></i>
-                <span>Send Interview Dates To Panel</span>
+                <span>Send Emails To Panel</span>
               </a>
             </li>
 
