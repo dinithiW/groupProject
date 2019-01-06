@@ -176,6 +176,7 @@ class ApplicantApplicationFormModel extends CI_Model{
      * this function is used for the view the uploaded pdf to the database
      */
     public function viewUploadedPdf($key){
+        
         $this->load->database();
         $this->db->select('DOCUMENT_NAME');
         $this->db->select('DOCUMENT');

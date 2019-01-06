@@ -78,12 +78,13 @@
 
             $key = $this->getKeyValueInDatabase($option);
             $key = $key.".pdf";
-            echo $key;
             $this->load->model('ApplicantApplicationFormModel');
-            $data = $this->ApplicantApplicationFormModel->viewUploadedPdf($key);
+            $qq =  $this->ApplicantApplicationFormModel->viewUploadedPdf($key);
+            $data['pdf_details']  = $this->ApplicantApplicationFormModel->viewUploadedPdf($key);
+            
 
             if($option=="BIRTH CERTIFICATE"){
-                $this->load->view(viewBirthCertificate,$data);
+                $this->load->view('applicant/applicationForm/viewBirthCertificate',$data);
             }
             else if($option=="GCE A/L RESULT SHEET"){
                 $this->load->view(viewAlresult,$data);

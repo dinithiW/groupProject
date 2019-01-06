@@ -51,7 +51,7 @@ if($this->session->userdata['logged_in']){
                             while($row = $stat->fetch()){
                             ?>
                             <tr>
-                                <td><?php echo substr($row['DOCUMENT_NAME'],0,strlen($row['DOCUMENT_NAME'])-5)?></td>
+                                <td><?php echo substr($row['DOCUMENT_NAME'],0,strlen($row['DOCUMENT_NAME'])-4)?></td>
                                
                             </tr>
                         
