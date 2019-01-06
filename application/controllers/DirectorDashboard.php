@@ -45,7 +45,13 @@ class DirectorDashboard extends CI_Controller{
 		// $this->load->view('users/director/approveSelected');
 		
 		$this->load->model('Director/applicantDetails');
-		$data['records'] = $this->applicantDetails->getSelected();
+		$data['records_lp'] = $this->applicantDetails->getSelected_l_p();
+		$data['n_records_lp'] = $this->applicantDetails->getNotSelected_l_p();
+		$data['records_i'] = $this->applicantDetails->getSelected_s_l_i();
+		$data['n_records_i'] = $this->applicantDetails->getNotSelected_s_l_i();
+		$data['records_ii'] = $this->applicantDetails->getSelected_s_l_ii();
+		$data['n_records_ii'] = $this->applicantDetails->getNotSelected_s_l_ii();
+
 		$this->load->view('users/director/approveSelected', $data);
 		$this->load->view('includes/footer');
 		

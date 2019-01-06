@@ -59,12 +59,45 @@
         <input type="submit" class="btn btn-primary" value = "Search">
       </div> 
 
-      <!-- <div class = "form-group row ">
+      
+</form>
+<br>
+<br>
+<br>
+<div class="col-md-8">
+  <div class="box">
+    <form role="form" id="addUser" action="<?php echo base_url() ?>OperatorIndex/addMemberprocess" method="post" role="form">
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-md-6">                                
+                                    <div class="form-group">
+                                        <label for="fname" class="col-md-6">Interview Date</label>
+                                        <input type="date" class="form-control required" id="fname" name="fname" maxlength="128">
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="lname" class="col-md-6">Time</label>
+                                        <input type="time" class="form-control required">
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                         
+                        </div><!-- /.box-body -->
+    
+                        <!-- <div class="box-footer">
+                            <input type="submit" class="btn btn-primary" value="Submit" />
+                            <input type="reset" class="btn btn-default" value="Reset" />
+                        </div> -->
+                    </form>
+                </div>
+            </div>
+        <!-- <div class = "form-group row form-control ">
           <label>Interview Date</label>
           <input type="date" name="check_list[]" value="" class = "checkbox">
-        </div> -->
-</form>
-        
+        </div>  -->
         <div class="row">
 
             <div class="col-xs-12">

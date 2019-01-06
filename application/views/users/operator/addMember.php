@@ -86,28 +86,7 @@ $userId = "";
                                         <input type="text" class="form-control required" id="address" name="address" maxlength="255">
                                     </div>
                                 </div>
-                            
-
-
-                                <!-- <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="role">Role</label>
-                                        <select class="form-control required" id="role" name="role">
-                                            <option value="0">Select Role</option>
-                                            <?php
-                                            if(!empty($roles))
-                                            {
-                                                foreach ($roles as $rl)
-                                                {
-                                                    ?>
-                                                    <option value="<?php echo $rl->roleId ?>"><?php echo $rl->role ?></option>
-                                                    <?php
-                                                }
-                                            }
-                                            ?>
-                                        </select>
-                                    </div>
-                                </div>  -->   
+                               
                             </div>
                         </div><!-- /.box-body -->
     
