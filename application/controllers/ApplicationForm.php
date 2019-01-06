@@ -93,7 +93,7 @@
                 $this->load->view('applicant/applicationForm/viewCurriculumVitae',$data);
             }
             else if($option=="DEGREE CERTIFICATE"){
-                $this->load->view(viewDegreehCertificate,$data);
+                $this->load->view('applicant/applicationForm/viewDegreehCertificate',$data);
             }
             else if($option=="CERTIFIED NIC COPY"){
                 $this->load->view(viewCertifiedNic,$data);
