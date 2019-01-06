@@ -109,7 +109,8 @@ class OperatorDashboard extends CI_Controller{
     public function sendEmail(){
         $this->load->view('users/operator/header');
         $this->load->view('users/operator/showEmails');
-        //$this->load->view('includes/footer');
+        $this->load->view('includes/footer');
+        //redirect(base_url().'OperatorIndex/sendEmail');
     }
 
     public function emailSuccessMessage(){
@@ -311,6 +312,106 @@ class OperatorDashboard extends CI_Controller{
     //yet to implement
     public function moreInfo($applicantID){
 
+    }
+
+    public function viewCategorizedApplicants(){
+
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/viewCategorizedHome');
+        $this->load->view('includes/footer');
+
+    }
+
+    public function searchCandidates(){
+
+        $vacancy = $_POST['vacancy'];
+
+        $this->load->model("applicant_model");  
+        $data['array'] = $this->applicant_model->getAllCategorized($vacancy);
+        $data['position'] = $vacancy;
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/viewCategorized',$data);
+        $this->load->view('includes/footer');
+
+    }
+
+    public function editForm(){
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/editApplicationHome');
+        $this->load->view('includes/footer');
+    }
+
+    public function directEditApplication(){
+        $field = $_POST['editField'];
+        if($field=="sa"){
+            redirect(base_url()."OperatorIndex/specialization");
+        }else{
+            redirect(base_url()."OperatorIndex/fileUploads");
+        }
+    }
+
+    public function viewSpecializations(){
+        $this->load->model('operator/ApplicationFormModel');
+        $data['Specializations'] = $this->ApplicationFormModel->getAllSpecializations();
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/specialization',$data);
+        $this->load->view('includes/footer');
+    }
+
+    public function viewFileUploads(){
+        $this->load->model('operator/ApplicationFormModel');
+        $data['FileUploads'] = $this->ApplicationFormModel->getAllFileUploadsLinks();
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/fileUploadLinks',$data);
+        $this->load->view('includes/footer');
+    }
+
+    public function addSpecializationArea(){
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/addSpecialization');
+        $this->load->view('includes/footer');
+    }
+
+    public function addFileUploadLink(){
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/addFileUploadLink');
+        $this->load->view('includes/footer');
+    }
+
+    public function editSpecializationArea(){
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/addSpecialization');
+        $this->load->view('includes/footer');
+    }
+
+    public function editFileUploadLink(){
+
+    }
+
+    public function deleteSpecializationArea($sid){
+        //echo"$sid";
+        $this->load->model('operator/ApplicationFormModel');
+        $this->ApplicationFormModel->deleteSpecialization($sid);
+        redirect(base_url()."OperatorIndex/specialization");
+    }
+
+    public function deleteFileUploadLink($sid){
+        $this->load->model('operator/ApplicationFormModel');
+        $this->ApplicationFormModel->deleteFileUpload($sid);
+        redirect(base_url()."OperatorIndex/fileUploads");
+    }
+
+    public function addSpecializationToDb(){
+        $sname = $_POST['sname'];
+        $this->load->model('operator/ApplicationFormModel');
+        $this->ApplicationFormModel->addNewSpecialization($sname);
+        //redirect(base_url()."OperatorIndex/fileUploads");
+    }
+
+    public function addFileUploadToDb(){
+        $fname = $_POST['fname'];
+        $this->load->model('operator/ApplicationFormModel');
+        $this->ApplicationFormModel->addNewFileUpload($fname);
     }
 }
 ?>

@@ -38,7 +38,7 @@ $userId = "";
                                         <label for="fname">Subject of email</label>
                                          
             
-                                        <input type="text" class="form-control required" name='subject' id='email' maxlength="128" placeholder="Enter the subject of the email">
+                                        <input type="text" class="form-control required" name='subject' id='email' required maxlength="128" placeholder="Enter the subject of the email">
                                     </div>
                                 </div>
                             </div>
@@ -47,7 +47,7 @@ $userId = "";
                                 <div class="col-md-8">
                                     <div class="form-group">
                                         <label for="lname">Description</label>
-                                        <textarea class="form-control" rows="5" id="comment" name='description' placeholder="Enter the Description"></textarea>
+                                        <textarea required class="form-control" rows="5" id="comment" name='description' placeholder="Enter the Description"></textarea>
                                         
                                     </div>
                                 </div>
@@ -71,7 +71,7 @@ $userId = "";
                                             <option value="male">Male</option>
                                             <option value="female">Female</option>
                                         </select> -->
-                                        <input type="file" class = "form-control" name = "UploadFileName" >
+                                        <input required type="file" class = "form-control" name = "UploadFileName" >
 
                                     </div>
                                 </div>

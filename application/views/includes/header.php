@@ -167,7 +167,7 @@ if($checking=='1'){
             </li>
 
             <li class="treeview">
-              <a href="" >
+              <a href="<?= base_url('OperatorIndex/editApplication')?>" >
                 <i class="fa fa-pencil-square-o"></i>
                 <span>Edit Application Form</span>
               </a>
@@ -188,7 +188,7 @@ if($checking=='1'){
             </li>
 
             <li class="treeview">
-              <a href="<?= base_url('OperatorIndex/viewAll')?>" >
+              <a href="<?= base_url('OperatorIndex/viewCategorized')?>" >
                 <i class="fa fa-users"></i>
                 <span>View Categorized Applicants</span>
               </a>
