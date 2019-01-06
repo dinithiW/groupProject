@@ -174,7 +174,7 @@
         $data['more_details'] = $this->ApplicantApplicationFormModel->editOtherInformations($index_number);//for any other language proficiency details          
         $data['referees'] = $this->ApplicantApplicationFormModel->editRefereesInformations($index_number);//for any other language proficiency details        
         $data['selected_specification_area'] = $this->ApplicantApplicationFormModel->editSpecificationAreas($index_number);//for any other language proficiency details           
-        $this->load->view('applicant/applicationForm/ApplicationFormEdit',$data);
+        $this->load->view('applicant/applicationForm/ApplicationFormReadOnly',$data);
         
     }
 
