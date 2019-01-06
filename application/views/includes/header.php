@@ -271,12 +271,12 @@ if($checking=='1'){
               </a>
             </li>
 
-            <li class="treeview">
+            <!-- <li class="treeview">
               <a href="setInterviewDate" >
                 <i class="fa fa-check-square"></i>
                 <span>Set Interview Date</span>
               </a>
-            </li>
+            </li> -->
 
 
 

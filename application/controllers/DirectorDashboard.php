@@ -100,7 +100,8 @@ class DirectorDashboard extends CI_Controller{
 		
 		$data = array(
 			'name' => $this->input->post('vacanciesneeded', TRUE),
-			'dead_line' => $this->input->post('deadline', TRUE)
+			'dead_line' => $this->input->post('deadline', TRUE),
+			'comments' => $this->input->post('notes', TRUE)
 		);
 
 		
