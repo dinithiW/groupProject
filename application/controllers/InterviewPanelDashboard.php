@@ -21,27 +21,23 @@ class InterviewPanelDashboard extends CI_Controller{
        // $this->load->model('InterviewPanel/ApplicantModel');
         //$data['applicants']=$this->ApplicantModel->getApplicants();
         $this->load->model('InterviewPanel/ApplicantModel');
-        if($this->input->post('lecturerType')!=""){
-            if($this->input->post('lecturerType')=="PROBATIONARY_LECTURER"){
-                $data['lecturerType']="PROBATIONARY_LECTURER";
-                $data['applicants']=$this->ApplicantModel->getApplicantsPL();
-
-            }else if($this->input->post('lecturerType')=="SENIOR_LECTURE_GR.I"){
-                $data['lecturerType']="SENIOR_LECTURE_GR.I";
-                $data['applicants']=$this->ApplicantModel->getApplicantsSL1();
-
-            }else if ($this->input->post('lecturerType') == "SENIOR_LECTURE_GR.II") {
-                $data['lecturerType'] = "SENIOR_LECTURE_GR.II";
-                $data['applicants'] = $this->ApplicantModel->getApplicantsSL2();
+         if ($this->input->post('lecturerType') != "") {
+            $_SESSION['lecturerType'] = $this->input->post('lecturerType');
+            if ($this->input->post('lecturerType') == "PROBATIONARY_LECTURER") {
+                $data['applicants'] = $this->ApplicantModel->getApplicants("PROBATIONARY_LECTURER");
+            } else if ($this->input->post('lecturerType') == "SENIOR_LECTURE_GR.I") {
+                $data['applicants'] = $this->ApplicantModel->getApplicants("SENIOR_LECTURE_GR.I");
+            } else if ($this->input->post('lecturerType') == "SENIOR_LECTURE_GR.II") {
+                $data['applicants'] = $this->ApplicantModel->getApplicants("SENIOR_LECTURE_GR.II");
             }
         } else {
-           if (!isset($_SESSION['lecturerType'])) {
+            if (!isset($_SESSION['lecturerType'])) {
                 $_SESSION['lecturerType'] = "PROBATIONARY_LECTURER";
             }
             $data['applicants'] = $this->ApplicantModel->getApplicants($_SESSION['lecturerType']);
         }
-
-        }
+        $data['lecturerType'] = $_SESSION['lecturerType'];
+        
 
 
         $this->load->model('InterviewPanel/MarkingCriteriaModel');
