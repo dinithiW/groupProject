@@ -81,6 +81,10 @@ class InterviewPanelDashboard extends CI_Controller{
                                 <td><span>$row->marks / 100</span></td>
                                 </tr>";
         }
+        if ($count==0) {
+            # code...
+            $count=1;
+        }
         $value=$total/$count;
         echo "<tr style=\"font-size: 16px;background-color: white;height: 50px;cursor: pointer\"\n' +
                         '<td></td>\n' +
