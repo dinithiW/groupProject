@@ -11,6 +11,7 @@ class applicant_model extends CI_Model
    public $pq;
    public $oq;
    public $spe;
+   public $email;
 
    public function getAll($vacancy="",$category = ""){
 
@@ -237,12 +238,64 @@ class applicant_model extends CI_Model
 
         return $array;
    }
-   /*public function notSelectedLP($applicantId){
+
+   public function getSelectedCandidates($vacancy){
+        $array = [];
+
         $this->load->database();
-        $data = array('INDEX_NUMBER'=>$applicantId,'CATEGORY'=>-1);
-        $this->db->insert('lp_category', $data);
+        $this->db->select("INDEX_NUMBER");
+        $this->db->select("FIRST_NAME");
+        $this->db->select("LAST_NAME");
+        $this->db->select("PERSONAL_EMAIL");
+
+        if($vacancy == "Senior Lecturer Grade I selected"){
+           $this->db->where("INDEX_NUMBER IN(SELECT INDEX_NUMBER FROM sl_selected_gradei WHERE SELECTED = 1)");
+        }
+
+        /*if($vacancy == "Senior Lecturer Grade I not selected"){
+           $this->db->where("INDEX_NUMBER IN(SELECT INDEX_NUMBER FROM sl_selected_gradei WHERE SELECTED = 0)");
+        }*/
+
+        if($vacancy == "Senior Lecturer Grade II selected"){
+           $this->db->where("INDEX_NUMBER IN(SELECT INDEX_NUMBER FROM sl_selected WHERE SELECTED = 1)");
+        }
+
+        /*if($vacancy == "Senior Lecturer Grade II not selected"){
+           $this->db->where("INDEX_NUMBER IN(SELECT INDEX_NUMBER FROM sl_selected WHERE SELECTED = 0)");
+        }*/
+
+        if($vacancy == "Lecturer Probationary Category 1"){
+           $this->db->where("INDEX_NUMBER IN(SELECT INDEX_NUMBER FROM lp_category WHERE CATEGORY = 1)");
+        }
+
+        if($vacancy == "Lecturer Probationary Category 2"){
+           $this->db->where("INDEX_NUMBER IN(SELECT INDEX_NUMBER FROM lp_category WHERE CATEGORY = 2)");
+        }
+
+        if($vacancy == "Lecturer Probationary Category 3"){
+           $this->db->where("INDEX_NUMBER IN(SELECT INDEX_NUMBER FROM lp_category WHERE CATEGORY = 3)");
+        }
+
+        /*if($vacancy == "Lecturer Probationary not selected"){
+           $this->db->where("INDEX_NUMBER IN(SELECT INDEX_NUMBER FROM lp_category WHERE CATEGORY = 0)");
+        }*/
         
-   }*/
+        $this->db->from("basic_personal_details");
+        $query = $this->db->get();
+        foreach($query->result() as $row){
+            $a = new applicant_model();
+
+            $a->index = $row->INDEX_NUMBER;
+            $a->fname = $row->FIRST_NAME;
+            $a->lname = $row->LAST_NAME;
+            $a->email = $row->PERSONAL_EMAIL;
+  
+            array_push($array, $a);
+        }
+
+        return $array;
+   }
+   
 }
 
 ?>

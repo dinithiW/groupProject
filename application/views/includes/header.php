@@ -210,7 +210,7 @@ if($checking=='1'){
             </li>
 
             <li class="treeview">
-              <a href="#" >
+              <a href="<?= base_url('OperatorIndex/sendApplicantEmails')?>" >
                 <i class="fa fa-envelope"></i>
                 <span>Send Emails to Applicants</span>
               </a>

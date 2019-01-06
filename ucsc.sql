@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 05, 2019 at 03:12 PM
+-- Generation Time: Jan 06, 2019 at 10:32 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.23
 
@@ -228,8 +228,7 @@ CREATE TABLE `file_upload_links` (
 --
 
 INSERT INTO `file_upload_links` (`LINK_ID`, `LINK_NAME`) VALUES
-(9, 'BIRTH CERTIFICATE'),
-(10, 'GCE A/L RESULT SHEET'),
+(10, 'GCE A/L RESULT SHEET 1'),
 (11, 'CURRICULUM VITAE'),
 (12, 'DEGREE CERTIFICATE'),
 (13, 'CERTIFIED NIC COPY');
@@ -286,8 +285,6 @@ CREATE TABLE `interview_panel` (
 --
 
 INSERT INTO `interview_panel` (`ID`, `PANEL_ID`, `FNAME`, `LNAME`, `EMAIL`, `GENDER`, `CONTACT_NUMBER`, `DESIGNATION`, `ADDRESS`) VALUES
-(1, 'din0', 'Dinithi', 'Wickramaratne', 'diniwic654654k124@gmail.com', 'female', '7154648940', 'sadasd', '23/4,Rev.S.Mahinda Mawatha,Ratmalana'),
-(2, 'din1', 'Dinithi', 'Wickramaratne', 'dinssd234fsdfdfiwick124@gmail.com', 'male', '7154164894', 'sdfsf', '23/4,Rev.S.Mahinda Mawatha,Ratmalana'),
 (3, 'kan0', 'Kaneel', 'Dias', 'kaneeldias@gmail.com', 'male', '0771952226', '545545dfgdg', 'dfghydhdhdhdhdh,Mount Lavinia'),
 (4, 'saj3', 'Sajila', 'Wickramaratne', 'saji@gmail.com', 'female', '7154648945', 'sdfsdf', '23/4,Rev.S.Mahinda Mawatha,Ratmalana');
 
@@ -337,10 +334,24 @@ CREATE TABLE `lp_category` (
 --
 
 INSERT INTO `lp_category` (`INDEX_NUMBER`, `CATEGORY`) VALUES
-('19PR002', 0),
-('19PR003', 2),
+('19PR002', 1),
+('19PR003', 0),
 ('19PR010', 3),
-('19PR011', 1);
+('19PR011', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lp_category_marks`
+--
+
+CREATE TABLE `lp_category_marks` (
+  `lpid` int(11) NOT NULL,
+  `INDEX_NUMBER` varchar(100) NOT NULL,
+  `USERNAME` varchar(255) NOT NULL,
+  `marks` int(11) NOT NULL,
+  `comment` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -584,6 +595,34 @@ INSERT INTO `sl_selected_gradei` (`INDEX_NUMBER`, `SELECTED`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `sl_selected_gradeii_marks`
+--
+
+CREATE TABLE `sl_selected_gradeii_marks` (
+  `sg2id` int(11) NOT NULL,
+  `INDEX_NUMBER` varchar(100) NOT NULL,
+  `USERNAME` varchar(255) NOT NULL,
+  `marks` int(11) NOT NULL,
+  `comment` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sl_selected_gradei_marks`
+--
+
+CREATE TABLE `sl_selected_gradei_marks` (
+  `sg1id` int(11) NOT NULL,
+  `INDEX_NUMBER` varchar(100) NOT NULL,
+  `USERNAME` varchar(255) NOT NULL,
+  `marks` int(11) NOT NULL,
+  `comment` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `specializationarea`
 --
 
@@ -597,21 +636,19 @@ CREATE TABLE `specializationarea` (
 --
 
 INSERT INTO `specializationarea` (`AREA_ID`, `AREA_NAME`) VALUES
-(1, 'Software Engineering'),
-(2, 'Information Systems Security,'),
-(3, 'Computer Networks'),
-(4, 'Grid Computing'),
-(5, 'Artificial Neural Networks'),
+(4, 'Grid Computing I'),
+(5, 'Artificial Neural Networks 1'),
 (6, 'Human-Computer Interaction'),
 (7, 'Data Science'),
 (8, 'Embedded Systems'),
 (9, 'Operating systems'),
-(10, 'Software Verification and Quality Assurance'),
 (11, 'Enterprise application\r\ndevelopment'),
 (12, 'IT Project management'),
 (13, 'Computer Graphics and Vision'),
 (19, 'Computer Architecture & Engineering'),
-(20, 'optional 5');
+(22, 'Internet Security'),
+(23, 'Software Engineering'),
+(24, 'Industrial Exposure');
 
 -- --------------------------------------------------------
 
@@ -737,12 +774,10 @@ INSERT INTO `users` (`USERNAME`, `PASSWORD`, `USER_TYPE`, `NAME`) VALUES
 ('david@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'david cameron'),
 ('dian@gmail.com', '202cb962ac59075b964b07152d234b70', 'Applicant', 'dian'),
 ('dinithi@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Applicant', 'Dinithi Nisansa Wickramaratne'),
-('diniwic654654k124@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Dinithi Wickramaratne'),
 ('diniwick124@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Dinithi Wickramaratne'),
 ('diniwicksdfsdfsfssdf124@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Dinithi Wickramaratne'),
 ('diniwiwerck124@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Dinithi Wickramaratne'),
 ('dinsdfiwick124@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Dinithi Wickramaratne'),
-('dinssd234fsdfdfiwick124@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Dinithi Wickramaratne'),
 ('dinssdfsdfdfiwick124@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Dinithi Wickramaratne'),
 ('director@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Director', 'Director Director'),
 ('kaneeldias@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Kaneel Dias'),
@@ -837,6 +872,13 @@ ALTER TABLE `lp_category`
   ADD PRIMARY KEY (`INDEX_NUMBER`);
 
 --
+-- Indexes for table `lp_category_marks`
+--
+ALTER TABLE `lp_category_marks`
+  ADD PRIMARY KEY (`lpid`),
+  ADD KEY `USERNAME` (`USERNAME`);
+
+--
 -- Indexes for table `marking_field`
 --
 ALTER TABLE `marking_field`
@@ -860,6 +902,20 @@ ALTER TABLE `sl_selected`
 --
 ALTER TABLE `sl_selected_gradei`
   ADD PRIMARY KEY (`INDEX_NUMBER`);
+
+--
+-- Indexes for table `sl_selected_gradeii_marks`
+--
+ALTER TABLE `sl_selected_gradeii_marks`
+  ADD PRIMARY KEY (`sg2id`),
+  ADD KEY `USERNAME` (`USERNAME`);
+
+--
+-- Indexes for table `sl_selected_gradei_marks`
+--
+ALTER TABLE `sl_selected_gradei_marks`
+  ADD PRIMARY KEY (`sg1id`),
+  ADD KEY `USERNAME` (`USERNAME`);
 
 --
 -- Indexes for table `specializationarea`
@@ -899,6 +955,11 @@ ALTER TABLE `file_upload_links`
 ALTER TABLE `interview_panel`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
+-- AUTO_INCREMENT for table `lp_category_marks`
+--
+ALTER TABLE `lp_category_marks`
+  MODIFY `lpid` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `marking_field`
 --
 ALTER TABLE `marking_field`
@@ -909,10 +970,20 @@ ALTER TABLE `marking_field`
 ALTER TABLE `marking_field_heading`
   MODIFY `mhid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
+-- AUTO_INCREMENT for table `sl_selected_gradeii_marks`
+--
+ALTER TABLE `sl_selected_gradeii_marks`
+  MODIFY `sg2id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `sl_selected_gradei_marks`
+--
+ALTER TABLE `sl_selected_gradei_marks`
+  MODIFY `sg1id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `specializationarea`
 --
 ALTER TABLE `specializationarea`
-  MODIFY `AREA_ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `AREA_ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT for table `vacancies`
 --
@@ -935,6 +1006,12 @@ ALTER TABLE `lp_category`
   ADD CONSTRAINT `lp_category_ibfk_1` FOREIGN KEY (`INDEX_NUMBER`) REFERENCES `basic_personal_details` (`INDEX_NUMBER`);
 
 --
+-- Constraints for table `lp_category_marks`
+--
+ALTER TABLE `lp_category_marks`
+  ADD CONSTRAINT `lp_category_marks_ibfk_1` FOREIGN KEY (`USERNAME`) REFERENCES `users` (`USERNAME`);
+
+--
 -- Constraints for table `marking_field`
 --
 ALTER TABLE `marking_field`
@@ -951,6 +1028,18 @@ ALTER TABLE `sl_selected`
 --
 ALTER TABLE `sl_selected_gradei`
   ADD CONSTRAINT `sl_selected_gradei_ibfk_1` FOREIGN KEY (`INDEX_NUMBER`) REFERENCES `basic_personal_details` (`INDEX_NUMBER`);
+
+--
+-- Constraints for table `sl_selected_gradeii_marks`
+--
+ALTER TABLE `sl_selected_gradeii_marks`
+  ADD CONSTRAINT `sl_selected_gradeii_marks_ibfk_1` FOREIGN KEY (`USERNAME`) REFERENCES `users` (`USERNAME`);
+
+--
+-- Constraints for table `sl_selected_gradei_marks`
+--
+ALTER TABLE `sl_selected_gradei_marks`
+  ADD CONSTRAINT `sl_selected_gradei_marks_ibfk_1` FOREIGN KEY (`USERNAME`) REFERENCES `users` (`USERNAME`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

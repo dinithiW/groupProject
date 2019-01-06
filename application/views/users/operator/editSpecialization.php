@@ -2,7 +2,7 @@
 $userId = 0;
 
 if(!empty($records)) {
-    $userId = $records->PANEL_ID;
+    $userId = $records->AREA_ID;
 }
 ?>
 <div class="content-wrapper">
@@ -22,27 +22,23 @@ if(!empty($records)) {
               <!-- general form elements -->
                 <div class="box box-primary">
                     <div class="box-header">
-                        <h3 class="box-title">Enter User Details</h3>
+                        <h3 class="box-title">Enter Details</h3>
                     </div><!-- /.box-header -->
                     <!-- form start -->
                     
-                    <form role="form" id="editUser" action="<?php echo base_url().'OperatorIndex/editMemberprocess/'.$records->PANEL_ID; ?>" method="post" role="form">
+                    <form role="form" id="editUser" action="<?php echo base_url().'OperatorIndex/editSpecializationProcess/'.$records->AREA_ID; ?>" method="post" role="form">
                         <div class="box-body">
                             <div class="row">
                                 <div class="col-md-6">                                
                                     <div class="form-group">
-                                        <label for="fname">First Name</label>
-                                        <input type="text" class="form-control required" id="fname" name="fname" maxlength="128" value = "<?php if(!empty($records)) echo $records->FNAME; ?>">
+                                        <label for="fname">Specialization Name</label>
+                                        <input type="text" class="form-control required" id="fname" name="fname" maxlength="128" value = "<?php if(!empty($records)) echo $records->AREA_NAME; ?>">
                                         <input type="hidden" value="<?php echo $userId; ?>" name="userId" id="userId" />  
                                     </div>
                                     
                                 </div>
                                 
                             </div>
-                            
-
-                          
-
                         </div><!-- /.box-body -->
     
                         <div class="box-footer">
