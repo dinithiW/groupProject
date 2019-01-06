@@ -96,7 +96,7 @@ $route['OperatorIndex/viewAll'] = "OperatorDashboard/viewAllCandidates";
 //this is for loading the home page of the interview date setting process
 $route['OperatorIndex/interviewDate'] = "OperatorDashboard/setInterviewDate";
 $route['OperatorIndex/intervewDate'] = "OperatorDashboard/setIntervewDate";
-$route['OperatorIndex/addInterviewDate'] = "OperatorDashboard/addInterviewDateToDB";
+$route['OperatorIndex/addInterviewDate/(:any)'] = "OperatorDashboard/addInterviewDateToDB/$1";
 //to select the vacancy sl or lp
 $route['OperatorIndex/categorize'] = "OperatorDashboard/categorizeHome";
 //

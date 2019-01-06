@@ -1,14 +1,45 @@
 <?php 
 
-class ApplicationFormModel extends CI_Model{
+class InterviewModel extends CI_Model{
 
     public $indexNo;
     public $idate;
     public $itime;
+    public $rdate;//shortened for real date for ease
 
 	public function __construct() {
 		parent::__construct();
 	}
+
+    public function insertInterview($selected,$idate,$itime){
+        $userInfoUsers = array('INDEX_NUMBER'=>$selected,'INTERVIEW_DATE'=>$idate,
+            'INTERVIEW_TIME'=>$itime);
+
+        $this->db->trans_start();
+        $this->db->insert('candidates_interviews', $userInfoUsers);
+        $this->db->trans_complete();
+    }
+
+    public function getInterviewGroups(){
+        $interviews = [];
+        $this->load->database();
+        $this->db->select('INTERVIEW_DATE');
+        $this->db->select('INTERVIEW_TIME');
+        $this->db->from('candidates_interviews');
+
+        $query = $this->db->get();
+
+        foreach ($query->result() as $row) {
+            $interview = new InterviewModel();
+            $date = date_create($row->INTERVIEW_DATE);
+            $interview->idate = date_format($date, 'jS F Y');
+            $interview->rdate = $row->INTERVIEW_DATE;
+            $interview->itime = $row->INTERVIEW_TIME;
+            array_push($interviews,$interview);
+        }
+
+        return $interviews;
+    }
 
     public function getAllSpecializations(){
         $specializations = [];
