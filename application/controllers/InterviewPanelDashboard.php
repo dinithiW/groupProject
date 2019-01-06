@@ -77,7 +77,7 @@ class InterviewPanelDashboard extends CI_Controller{
             $total += intval($row->marks);
             echo "<tr style=\"font-size: 16px;background-color: white;height: 50px;cursor: pointer\"
                                 <td></td>
-                                <td>$row->USERNAME</td>
+                                <td>$row->NAME</td>
                                 <td><span>$row->marks / 100</span></td>
                                 </tr>";
         }
@@ -99,7 +99,7 @@ class InterviewPanelDashboard extends CI_Controller{
         foreach ($comments as $row) {
             echo "<tr style=\"font-size: 16px;background-color: white;height: 50px;cursor: pointer\"
                                 <td></td>
-                                <td>$row->USERNAME</td>
+                                <td>$row->NAME</td>
                                 <td><span>$row->comment</span></td>
                                 </tr>";
         }

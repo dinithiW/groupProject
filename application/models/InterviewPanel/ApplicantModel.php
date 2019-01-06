@@ -34,13 +34,17 @@ class ApplicantModel extends CI_Model{
     {
         $this->load->database();
         if ($applicantType == "PROBATIONARY_LECTURER") {
-            $sql = $this->db->query("SELECT * FROM lp_category_marks where INDEX_NUMBER=?", array($this->input->post('aid')));
+           // $sql = $this->db->query("SELECT * FROM lp_category_marks where INDEX_NUMBER=?", array($this->input->post('aid')));
+            $sql = $this->db->query("SELECT INDEX_NUMBER,marks,comment,NAME FROM lp_category_marks acc,users u where acc.USERNAME=u.USERNAME && INDEX_NUMBER=?", array($this->input->post('aid')));
             return $sql->result();
         } else if ($applicantType == "SENIOR_LECTURE_GR.I") {
-            $sql = $this->db->query("SELECT * FROM sl_selected_gradei_marks where INDEX_NUMBER=?", array($this->input->post('aid')));
+          //  $sql = $this->db->query("SELECT * FROM sl_selected_gradei_marks where INDEX_NUMBER=?", array($this->input->post('aid')));
+            $sql = $this->db->query("SELECT INDEX_NUMBER,marks,comment,NAME FROM sl_selected_gradei_marks acc,users u where acc.USERNAME=u.USERNAME && INDEX_NUMBER=?", array($this->input->post('aid')));
             return $sql->result();
         } else if ($applicantType == "SENIOR_LECTURE_GR.II") {
-            $sql = $this->db->query("SELECT * FROM sl_selected_gradeii_marks where INDEX_NUMBER=?", array($this->input->post('aid')));
+           // $sql = $this->db->query("SELECT * FROM sl_selected_gradeii_marks where INDEX_NUMBER=?", array($this->input->post('aid')));
+            $sql = $this->db->query("SELECT INDEX_NUMBER,marks,comment,NAME  FROM sl_selected_gradeii_marks acc,users u where acc.USERNAME=u.USERNAME && INDEX_NUMBER=?", array($this->input->post('aid')));
+
             return $sql->result();
         }
     }
