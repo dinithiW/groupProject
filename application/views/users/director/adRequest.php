@@ -29,7 +29,11 @@
                                 <div class="col-md-6">                                
                                     <div class="form-group">
                                         <label for="vacanciesneeded">Vacancies needed : </label>
-                                        <input type="text" class="form-control required" id="vacanciesneeded" name="vacanciesneeded" maxlength="128">
+                                        <select name = "dropdown">
+                                            <option value = "probLec">Probationary Lecture</option>
+                                            <option value = "seniorLecOne">Senior Lecturer Grade I</option>
+                                            <option value = "seniorLecTwo">Senior Lecturer Grade I</option>
+                                        </select>
                                     </div>
                                     
                                 </div>

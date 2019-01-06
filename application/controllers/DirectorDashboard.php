@@ -27,20 +27,26 @@ class DirectorDashboard extends CI_Controller{
 		
 	}
 
+	//Get data basic personal details
 	public function viewApplicants(){
 		$this->load->view('includes/header');
 		// $this->load->view('users/director/viewApplicants');
 		
 	 	$this->load->model('Director/applicantDetails');
 	 	$data['records'] = $this->applicantDetails->getdata();
-		 $this->load->view('users/director/viewApplicants', $data);
+		$this->load->view('users/director/viewApplicants', $data);
 		$this->load->view('includes/footer');
 		 
 	}
 
+	//Get basic personal details about selected applicants
 	public function approveSelected(){
 		$this->load->view('includes/header');
-		$this->load->view('users/director/approveSelected');
+		// $this->load->view('users/director/approveSelected');
+		
+		$this->load->model('Director/applicantDetails');
+		$data['records'] = $this->applicantDetails->getSelected();
+		$this->load->view('users/director/approveSelected', $data);
 		$this->load->view('includes/footer');
 		
 	}
@@ -58,6 +64,14 @@ class DirectorDashboard extends CI_Controller{
 		$this->load->view('includes/footer');
 		
 	}
+
+	//Send an email to SAR
+	public function sendmail(){
+		$email = new EmailController();
+        $this->load->library('email');
+        $email->send_mail($this->email, $this->input->post('directormail'), $this->input->post('reportdetails'));
+	}
+
 
 	//Send data to the database
 	public function insertData(){
@@ -95,6 +109,7 @@ class DirectorDashboard extends CI_Controller{
 		$this->load->model('Notification');
         $this->Notification->view();
 	}
+	
 }
 
 ?>
