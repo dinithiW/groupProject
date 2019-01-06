@@ -138,6 +138,7 @@ $route['OperatorIndex/addFileUploadprocess'] = "OperatorDashboard/addFileUploadT
 
 $route['OperatorIndex/editSpecializationProcess/(:any)'] = "OperatorDashboard/editSpecializationToDb/$1";
 $route['OperatorIndex/editFileUploadProcess/(:any)'] = "OperatorDashboard/editFileUploadToDb/$1";
+$route['OperatorIndex/sendApplicantEmails'] = "OperatorDashboard/sendEMailsToApplicants";
 
 //SAR routes
 $route['SAR']='SARDashboard/index';

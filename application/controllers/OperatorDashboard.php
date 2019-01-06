@@ -431,5 +431,13 @@ class OperatorDashboard extends CI_Controller{
         $this->load->model('operator/ApplicationFormModel');
         $this->ApplicationFormModel->editFileUpload($sid,$fname);
     }
+
+    public function sendEMailsToApplicants(){
+        $this->load->model('applicant_model');
+        $data['array'] = $this->applicant_model->getSelectedCandidates("Senior Lecturer Gr. I");
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/sendEmailToCandidates',$data);
+        $this->load->view('includes/footer');
+    }
 }
 ?>
