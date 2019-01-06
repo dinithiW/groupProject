@@ -90,7 +90,7 @@
                 $this->load->view('applicant/applicationForm/viewAlResult',$data);
             }
             else if($option=="CURRICULUM VITAE"){
-                $this->load->view(viewCurriculumVitae,$data);
+                $this->load->view('applicant/applicationForm/viewCurriculumVitae',$data);
             }
             else if($option=="DEGREE CERTIFICATE"){
                 $this->load->view(viewDegreehCertificate,$data);
