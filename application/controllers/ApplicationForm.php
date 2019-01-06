@@ -87,7 +87,7 @@
                 $this->load->view('applicant/applicationForm/viewBirthCertificate',$data);
             }
             else if($option=="GCE A/L RESULT SHEET"){
-                $this->load->view(viewAlresult,$data);
+                $this->load->view('applicant/applicationForm/viewAlResult',$data);
             }
             else if($option=="CURRICULUM VITAE"){
                 $this->load->view(viewCurriculumVitae,$data);
