@@ -62,41 +62,40 @@ if(isset($this->session->userdata['logged_in'])){
 
                 <div class="form">    
                     <h2 class="fs-title">BASIC PERSONAL DETAILS</h2>
-                    <a href="https://youtu.be/w0I_3ZdIS9Q">CLICK HERE FOR SEE THE DEMOSTRATION FOR THIS </a>
-
+                    
                     <h6 class="lables">Full Name (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="first_name" placeholder="Full Name" value="<?php  echo $row->FIRST_NAME;?>" required>
+                    <input type="text"   class="input-fields" name="first_name" placeholder="Full Name" value="<?php  echo $row->FIRST_NAME;?>" disabled >
       
 
                     <h6 class="lables">Surname (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="last_name" placeholder="Sur Name" value="<?php  echo $row->LAST_NAME;?>">
+                    <input type="text"  disabled class="input-fields" name="last_name" placeholder="Sur Name" value="<?php  echo $row->LAST_NAME;?>">
 
                     <h6 class="lables">Postal Address (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="postal_address" placeholder="Postal Address" value="<?php  echo $row->POSTAL_ADDRESS;?>" required>
+                    <input type="text" disabled  class="input-fields" name="postal_address" placeholder="Postal Address" value="<?php  echo $row->POSTAL_ADDRESS;?>" >
 
                     <h6 class="lables">Permanent Address  (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="permanent_address" placeholder="Permanent Address" value="<?php  echo $row->PERMANENT_ADDRESS;?>" required>
+                    <input type="text"  disabled class="input-fields" name="permanent_address" placeholder="Permanent Address" value="<?php  echo $row->PERMANENT_ADDRESS;?>" >
                     
                     <h6 class="lables">NIC/Driving Licence/Passport No (in capital blocks)</h6>
-                    <input type="text" required  class="input-fields" name="driving_licence" placeholder="NIC/Driving Licence/Passport No" value="<?php  echo $row->NIC;?>" required>
+                    <input type="text" disabled  class="input-fields" name="driving_licence" placeholder="NIC/Driving Licence/Passport No" value="<?php  echo $row->NIC;?>" >
 
                     <h6 class="lables">Citizenship (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="applicant_citizenship" placeholder="Citizenship" value="<?php  echo $row->CITIZENSHIP_NAME;?>" required>
+                    <input type="text"  disabled class="input-fields" name="applicant_citizenship" placeholder="Citizenship" value="<?php  echo $row->CITIZENSHIP_NAME;?>" >
 
                     <h6 class="lables">Personal-Email  (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="personalEmail" placeholder="Personal-Email" value="<?php  echo $row->PERSONAL_EMAIL;?>" required>
+                    <input type="text"  disabled class="input-fields" name="personalEmail" placeholder="Personal-Email" value="<?php  echo $row->PERSONAL_EMAIL;?>" >
                     
                     <h6 class="lables">Office-Email (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="officeEmail" placeholder="Office-Email" value="<?php  echo $row->OFFICE_EMAIL;?>" required>
+                    <input type="text"  disabled class="input-fields" name="officeEmail" placeholder="Office-Email" value="<?php  echo $row->OFFICE_EMAIL;?>" >
 
                     <h6 class="lables">Mobile Number (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="mobile_number" placeholder="Mobile Number" value="<?php  echo $row->MOBILE_NUMBER;?>" required>
+                    <input type="text"  disabled class="input-fields" name="mobile_number" placeholder="Mobile Number" value="<?php  echo $row->MOBILE_NUMBER;?>" >
 
                     <h6 class="lables">Home Number (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="home_number" placeholder="Home Number" value="<?php  echo $row->HOME_NUMBER;?>" required>
+                    <input type="text"  disabled class="input-fields" name="home_number" placeholder="Home Number" value="<?php  echo $row->HOME_NUMBER;?>" >
 
                     <h6 class="lables">Office Number (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="office_number" placeholder="Office Number" value="<?php  echo $row->OFFICE_NUMBER;?>" required>
+                    <input type="text"  disabled class="input-fields" name="office_number" placeholder="Office Number" value="<?php  echo $row->OFFICE_NUMBER;?>" >
 
                 <!-- start gender -->
 
@@ -117,7 +116,7 @@ if(isset($this->session->userdata['logged_in'])){
                     </style>
 
                     <div class="custom-sele dropboxGender" style="width:180px; height:100px;">
-                        <select name="selectGender" value="<?php  echo $row->GENDER;?>" id="selectCategory_gender">
+                        <select name="selectGender" value="<?php  echo $row->GENDER;?>" id="selectCategory_gender" disabled>
                             <option value="<?php  echo $row->GENDER;?>"><?php  echo $row->GENDER;?></option>
                             <option value="MALE">MALE:</option>
                             <option value="FEMALE">FEMALE</option>
@@ -132,7 +131,7 @@ if(isset($this->session->userdata['logged_in'])){
                     </style>
 
                     <div class="custom-sele dropboxCivil" style="width:100px; height:50px;">
-                        <select name="selectCivilStatus" id="selectCategory_civilstate" value="<?php  echo $row->CIVIL_STATUS;?>">
+                        <select name="selectCivilStatus" id="selectCategory_civilstate" value="<?php  echo $row->CIVIL_STATUS;?>" disabled>
                             <option value="<?php  echo $row->CIVIL_STATUS;?>"><?php  echo $row->CIVIL_STATUS;?></option>
                             <option value="MARRIED">MARRIED</option>
                             <option value="UN MARRIED">UN MARRIED</option>
@@ -147,7 +146,7 @@ if(isset($this->session->userdata['logged_in'])){
                     </style>
 
                     <div class="custom-sele dropboxCitizenship" style="width:100px; height:50px;">
-                        <select name="selectCitizenship" id="selectCategory_citizenship">
+                        <select name="selectCitizenship" id="selectCategory_citizenship" disabled>
                             <option value="<?php  echo $row->CITIZENSHIP;?>"><?php  echo $row->CITIZENSHIP;?></option>
                             <option value="BY DESCENT">BY DESCENT</option>
                             <option value="BY REGISTRATION">BY REGISTRATION</option>
@@ -164,7 +163,7 @@ if(isset($this->session->userdata['logged_in'])){
                     <!-- start the calender-->
                     <div class="calender1" id ="birth_date_id">
                         <h4 id="birth-date"> Date of Birth</h4>
-                        <input type="date" data-date-inline-picker="true"  name="birth_date" value="<?php  echo $row->DATE_OF_BIRTH;?>" />
+                        <input type="date" data-date-inline-picker="true" disabled name="birth_date" value="<?php  echo $row->DATE_OF_BIRTH;?>" />
                     </div>
 
 
@@ -187,7 +186,6 @@ if(isset($this->session->userdata['logged_in'])){
                             FOR SELECTED  SPECIFICATION AREAS
                         </legend>
                         
-                        <a href="https://youtu.be/P1EskmwSI4M">CLICK HERE FOR SEE THE DEMOSTRATION FOR THIS TABLE</a>
                         
                         <table ><!-- start of the fieldset-->
                             <tr>
@@ -228,7 +226,7 @@ if(isset($this->session->userdata['logged_in'])){
                             ?>             
                                         <tr>            
                                             <td>
-                                                <input class="areas" type="checkbox" name="check_list[]" id="checkBox" value="<?php echo $row_in_specification_area->AREA_NAME;?>"  checked>
+                                                <input class="areas" type="checkbox" name="check_list[]" id="checkBox" value="<?php echo $row_in_specification_area->AREA_NAME;?>" disabled checked>
                                             </td>
                                             <td >
                                                 <div class="areasForSelection" align="left"><?php echo $row_in_specification_area->AREA_NAME;?></div>
@@ -243,7 +241,7 @@ if(isset($this->session->userdata['logged_in'])){
 
                                     <tr>            
                                         <td>
-                                            <input class="areas" type="checkbox" name="check_list[]" id="checkBox" value="<?php echo $row_in_specification_area->AREA_NAME;?>"  >
+                                            <input class="areas" disabled type="checkbox" name="check_list[]" id="checkBox" value="<?php echo $row_in_specification_area->AREA_NAME;?>"  >
                                         </td>
                                         <td >
                                             <div class="areasForSelection" align="left"><?php echo $row_in_specification_area->AREA_NAME;?></div>
@@ -424,12 +422,13 @@ if(isset($this->session->userdata['logged_in'])){
                 </style>
 
                 <div class="custom-select" style="width:300px; height:50px;">
-                    <select name="postApplyFor" id="selectCategory1">
+                    <select name="postApplyFor" id="selectCategory1" disabled>
                     
                         <option value="<?php  echo $row->POST_APPLY_FOR;?>"><?php  echo $row->POST_APPLY_FOR;?></option>
                         <option value="PROBATIONARY LECTURER">PROBATIONARY LECTURER</option>
                         <option value="SENIOR LECTURE GR. I">SENIOR LECTURE GR. I</option>
                         <option value="SENIOR LECTURE GR. II">SENIOR LECTURE GR. II</option>
+
                     </select>
                 </div>
 
@@ -437,7 +436,7 @@ if(isset($this->session->userdata['logged_in'])){
 
                 
                 <h4 id="secondryEducationalTitle">Secondry Educational Details</h4><br/>
-                <a href="https://youtu.be/JdnX3n6i_wI">CLICK HERE FOR SEE THE DEMOSTRATION FOR THIS TABLE</a>
+              
                     <div class="table1"><!-- start of the Secondry Educational Details table-->
 
                     
@@ -468,11 +467,11 @@ if(isset($this->session->userdata['logged_in'])){
                         ?>
 
                             <tr class="tr">
-                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->SCHOOL_NAME;?>"  name="secondary_educational_school_name1" size='42'/></td>
-                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->FROM;?>" name="secondary_educational_from1" size='8'/></td>
-                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->TO;?>" name="secondary_educational_to1" size='8'/></td>
-                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->EXAMINATION_PASSED;?>" name="secondary_educational_examination1" size='42'/></td>
-                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->YEAR;?>" name="secondary_educational_year1" size='5'/></td>
+                                <td><input disabled type="text" class="Text" value= "<?php echo $row_in_secondary_education->SCHOOL_NAME;?>"  name="secondary_educational_school_name1" size='42'/></td>
+                                <td><input disabled type="text" class="Text" value= "<?php echo $row_in_secondary_education->FROM;?>" name="secondary_educational_from1" size='8'/></td>
+                                <td><input disabled type="text" class="Text" value= "<?php echo $row_in_secondary_education->TO;?>" name="secondary_educational_to1" size='8'/></td>
+                                <td><input disabled type="text" class="Text" value= "<?php echo $row_in_secondary_education->EXAMINATION_PASSED;?>" name="secondary_educational_examination1" size='42'/></td>
+                                <td><input disabled type="text" class="Text" value= "<?php echo $row_in_secondary_education->YEAR;?>" name="secondary_educational_year1" size='5'/></td>
                                 <td><span class="lblStatus"></span></td>
                         
                         <?php
@@ -483,11 +482,11 @@ if(isset($this->session->userdata['logged_in'])){
                         ?>
 
                             <tr class="tr">
-                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->SCHOOL_NAME;?>"  name="secondary_educational_school_name2" size='42'/></td>
-                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->FROM;?>" name="secondary_educational_from2" size='8'/></td>
-                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->TO;?>" name="secondary_educational_to2" size='8'/></td>
-                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->EXAMINATION_PASSED;?>" name="secondary_educational_examination2" size='42'/></td>
-                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->YEAR;?>" name="secondary_educational_year2" size='5'/></td>
+                                <td><input disabled type="text" class="Text" value= "<?php echo $row_in_secondary_education->SCHOOL_NAME;?>"  name="secondary_educational_school_name2" size='42'/></td>
+                                <td><input disabled type="text" class="Text" value= "<?php echo $row_in_secondary_education->FROM;?>" name="secondary_educational_from2" size='8'/></td>
+                                <td><input disabled type="text" class="Text" value= "<?php echo $row_in_secondary_education->TO;?>" name="secondary_educational_to2" size='8'/></td>
+                                <td><input disabled type="text" class="Text" value= "<?php echo $row_in_secondary_education->EXAMINATION_PASSED;?>" name="secondary_educational_examination2" size='42'/></td>
+                                <td><input disabled type="text" class="Text" value= "<?php echo $row_in_secondary_education->YEAR;?>" name="secondary_educational_year2" size='5'/></td>
                                 <td><span class="lblStatus"></span></td>
                             </tr>
 
@@ -499,11 +498,11 @@ if(isset($this->session->userdata['logged_in'])){
                         ?>
 
                             <tr class="tr">
-                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->SCHOOL_NAME;?>"  name="secondary_educational_school_name3" size='42'/></td>
-                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->FROM;?>" name="secondary_educational_from3" size='8'/></td>
-                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->TO;?>" name="secondary_educational_to3" size='8'/></td>
-                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->EXAMINATION_PASSED;?>" name="secondary_educational_examination3" size='42'/></td>
-                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->YEAR;?>" name="secondary_educational_year3" size='5'/></td>
+                                <td><input disabled type="text" class="Text" value= "<?php echo $row_in_secondary_education->SCHOOL_NAME;?>"  name="secondary_educational_school_name3" size='42'/></td>
+                                <td><input disabled type="text" class="Text" value= "<?php echo $row_in_secondary_education->FROM;?>" name="secondary_educational_from3" size='8'/></td>
+                                <td><input disabled type="text" class="Text" value= "<?php echo $row_in_secondary_education->TO;?>" name="secondary_educational_to3" size='8'/></td>
+                                <td><input disabled type="text" class="Text" value= "<?php echo $row_in_secondary_education->EXAMINATION_PASSED;?>" name="secondary_educational_examination3" size='42'/></td>
+                                <td><input disabled type="text" class="Text" value= "<?php echo $row_in_secondary_education->YEAR;?>" name="secondary_educational_year3" size='5'/></td>
                                 <td><span class="lblStatus"></span></td>
 
                         <?php
@@ -514,11 +513,11 @@ if(isset($this->session->userdata['logged_in'])){
                         ?>
 
                             <tr class="tr">
-                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->SCHOOL_NAME;?>"  name="secondary_educational_school_name4" size='42'/></td>
-                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->FROM;?>" name="secondary_educational_from4" size='8'/></td>
-                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->TO;?>" name="secondary_educational_to4" size='8'/></td>
-                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->EXAMINATION_PASSED;?>" name="secondary_educational_examination4" size='42'/></td>
-                                <td><input type="text" class="Text" value= "<?php echo $row_in_secondary_education->YEAR;?>" name="secondary_educational_year4" size='5'/></td>
+                                <td><input disabled type="text" class="Text" value= "<?php echo $row_in_secondary_education->SCHOOL_NAME;?>"  name="secondary_educational_school_name4" size='42'/></td>
+                                <td><input disabled type="text" class="Text" value= "<?php echo $row_in_secondary_education->FROM;?>" name="secondary_educational_from4" size='8'/></td>
+                                <td><input disabled type="text" class="Text" value= "<?php echo $row_in_secondary_education->TO;?>" name="secondary_educational_to4" size='8'/></td>
+                                <td><input disabled type="text" class="Text" value= "<?php echo $row_in_secondary_education->EXAMINATION_PASSED;?>" name="secondary_educational_examination4" size='42'/></td>
+                                <td><input disabled type="text" class="Text" value= "<?php echo $row_in_secondary_education->YEAR;?>" name="secondary_educational_year4" size='5'/></td>
                                 <td><span class="lblStatus"></span></td>
 
                             </tr>
