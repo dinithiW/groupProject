@@ -89,6 +89,13 @@ class applicantDetails extends CI_Model{
         return $query->result();
     }
 
+    function getCreatedAd(){
+        $subquery = 'SELECT * FROM created_ad';
+        $query = $this->db->query($subquery);
+
+        return $query->result();
+    }
+
     //
     public function getApplicant($INDEX_NUMBER){
 
