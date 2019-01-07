@@ -26,7 +26,7 @@ swal({
 },
 function(isConfirm){
   if (isConfirm) {
-    window.location.href = 'index';
+    window.location.href = '../loginUsers';
   }
 }); }, 1);
 

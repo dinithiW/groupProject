@@ -307,7 +307,7 @@ if($checking=='1'){
             </li>
 
             <li class="treeview">
-              <a href="#" >
+              <a href="<?= base_url('SAR/ViewMarksUI') ?>" >
                 <i class="fa fa-files-o"></i>
                 <span>View Marks</span>
               </a>

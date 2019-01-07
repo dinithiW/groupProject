@@ -143,6 +143,7 @@ $route['OperatorIndex/editFileUploadProcess/(:any)'] = "OperatorDashboard/editFi
 $route['OperatorIndex/sendApplicantEmails'] = "OperatorDashboard/sendEMailsToApplicants";
 $route['OperatorIndex/sendApplicntEmails'] = "OperatorDashboard/sendEMailsTApplicants";
 $route['OperatorIndex/interviewDateEmails'] = "OperatorDashboard/sendInterviewEmails";
+$route['OperatorIndex/viewApplicationForm/(:any)'] = "OperatorDashboard/applicantViewMore/$1";
 
 
 //SAR routes
@@ -152,8 +153,12 @@ $route['sendmail']='SARDashboard/sendmail';
 $route['sendBulkmail/(:any)']='SARDashboard/sendBulkmails/$1';
 $route['setDates']="SARDashboard/setInterviewDates";
 $route['SAR/candidateList']="SARDashboard/viewCandidates";
+$route['SAR/categorizedApplicants']="SARDashboard/searchCandidates";
 $route['SAR/advertisement']="SARDashboard/viewAdvertisement";
 $route['applicants']="SARDashboard/viewApplicants";
+$route['SAR/ViewMarks']="SARDashboard/viewMarks";
+$route['SAR/ViewMarksUI']="SARDashboard/viewMarksUI";
+
 //$route['SAR/candidates']="SARDashboard/viewCandidates';
 
 
