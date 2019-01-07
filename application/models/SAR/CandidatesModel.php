@@ -12,19 +12,23 @@
    public $oq;
    public $spe;
    public $email;
+   public $marks;
+   public $comment;
+   public $username;
 
  	public function __construct() {
 		parent::__construct();
 	}
 
 	public function getAll($vacancy){
-		$array[];
+
+		$array=[];
 		$this->load->database();
 		$this->db->select('INDEX_NUMBER');
 		$this->db->select('FIRST_NAME');
 		$this->db->select("LAST_NAME");
         $this->db->select("DATE_OF_BIRTH");
-        if($vacancy=="Senior Lecturer Grade I selected"){
+       if($vacancy=="Senior Lecturer Grade I selected"){
         	$this->db->where("INDEX_NUMBER IN(SELECT INDEX_NUMBER FROM sl_selected_gradei WHERE SELECTED = 1)");
         }
         if($vacancy=="Senior Lecturer Grade I not selected"){
@@ -55,9 +59,9 @@
         $this->db->from('basic_personal_details');
         $query=$this->db->get();
 
-         $query = $this->db->get();
+        // $query = $this->db->get();
         foreach($query->result() as $row){
-            $a = new applicant_model();
+            $a = new CandidatesModel();
             $a->eq = "";
             $a->pq = "";
 
@@ -89,7 +93,7 @@
                 $a->pq .= "Institution: $row3->INSTITUTION<br>Duration: $row3->DURATION<br>Qualification Type: $row3->TYPE_OF_QUALIFICATION<br><br>";
             }
 
-            //my stuff
+            
             $this->db->select("INSTITUTION");
             $this->db->select("DEPLOMA");
             $this->db->from("any_other_qualifications");
@@ -114,6 +118,61 @@
         }
 
         return $array;
+
+	}
+	public function getMarks($vacancy){
+		$array=[];
+		$this->load->database();
+		$this->db->select('INDEX_NUMBER');
+		$this->db->select('FIRST_NAME');
+		$this->db->select("LAST_NAME");
+		if($vacancy=="Senior Lecturer Grade I selected"){
+        	$this->db->where("INDEX_NUMBER IN(SELECT INDEX_NUMBER FROM sl_selected_gradei_marks");
+        }
+        if($vacancy == "Senior Lecturer Grade II selected"){
+           $this->db->where("INDEX_NUMBER IN(SELECT INDEX_NUMBER FROM sl_selected_gradeii_marks");
+        }
+        if($vacancy == "Lecturer Probationary Category 1"){
+           $this->db->where("INDEX_NUMBER IN(SELECT INDEX_NUMBER FROM lp_category_marks");
+        }
+       	$this->db->from('basic_personal_details');
+        $query=$this->db->get();
+        foreach ($query->result() as $row1) {
+        	 $a = new CandidatesModel();
+        	 $a->index=$row1->INDEX_NUMBER;
+        	 $a->fname=$row1->FIRST_NAME;
+        	 $a->lname=$row1->LAST_NAME;
+
+        	$this->db->select("USERNAME");
+            $this->db->select("marks");
+            $this->db->select("comment");
+            if($vacancy=="Senior Lecturer Grade I selected"){
+            	$this->db->from("sl_selected_gradei_marks");
+            }
+            if($vacancy == "Senior Lecturer Grade II selected"){
+            	$this->db->from("sl_selected_gradeii_marks");
+            }
+            if($vacancy == "Lecturer Probationary Category 1"){
+            	$this->db->from("lp_category_marks");
+            }
+            $this->db->where("INDEX_NUMBER",  $a->index);
+            $query2 = $this->db->get();
+
+        	# code...
+        	foreach ($query2->result() as $row2) {
+        		# code...
+
+        		$a->marks.="$row2->marks<br> ";
+        		$a->comment.="$row2->comment<br>";
+        		$a->username.="$row2->USERNAME<br>";
+
+        	}
+        array_push($array, $a);
+        }
+
+        return $array;
+
+
 
 	}
 

@@ -152,8 +152,11 @@ $route['sendmail']='SARDashboard/sendmail';
 $route['sendBulkmail/(:any)']='SARDashboard/sendBulkmails/$1';
 $route['setDates']="SARDashboard/setInterviewDates";
 $route['SAR/candidateList']="SARDashboard/viewCandidates";
+$route['SAR/categorizedApplicants']="SARDashboard/searchCandidates";
 $route['SAR/advertisement']="SARDashboard/viewAdvertisement";
 $route['applicants']="SARDashboard/viewApplicants";
+$route['SAR/ViewMarks']="SARDashboard/viewMarks";
+
 //$route['SAR/candidates']="SARDashboard/viewCandidates';
 
 

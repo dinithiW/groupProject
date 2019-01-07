@@ -94,6 +94,19 @@ class SARDashboard extends CI_Controller{
 
 	}
 
+	public function viewMarks(){
+
+		$vacancy = $_POST['dee'];
+		echo "hey $vacancy";
+		$this->load->model('SAR/CandidatesModel');
+		$data['array']=$this->CandidatesModel->getMarks($vacancy);
+		$data['position']=$vacancy;
+		$this->load->view('includes/header');
+		$this->load->view('users/SAR/viewMarks',$data);
+		$this->load->view('includes/footer');
+
+	}
+
 
 
 	public function getseniorLecturers(){
