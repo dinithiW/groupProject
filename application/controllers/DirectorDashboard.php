@@ -22,7 +22,11 @@ class DirectorDashboard extends CI_Controller{
 
 	public function approveAd(){
 		$this->load->view('includes/header');
-		$this->load->view('users/director/approveAd');
+		
+		$this->load->model('Director/applicantDetails');
+		$data['records'] = $this->applicantDetails->getCreatedAd();
+		
+		$this->load->view('users/director/approveAd', $data);
 		$this->load->view('includes/footer');
 		
 	}
@@ -111,6 +115,28 @@ class DirectorDashboard extends CI_Controller{
 			$message = "Request sent successfully.";
 			echo "<script type='text/javascript'>alert('$message');</script>";
 			redirect('DirectorDashboard/adRequest');
+		} else{
+			$message = "Error. Something went wrong!";
+			echo "<script type='text/javascript'>alert('$message');</script>";
+		}
+
+		
+	}
+
+	//Send advertisment approval details to database
+	public function insertAdDetails(){
+		
+		$data = array(
+			'reject_reason' => $this->input->post('opinion', TRUE)
+		);
+
+		
+		$response = $this->db->insert('created_ad', $data);
+		
+		if($response){
+			$message = "Request sent successfully.";
+			echo "<script type='text/javascript'>alert('$message');</script>";
+			redirect('DirectorDashboard/approveAd');
 		} else{
 			$message = "Error. Something went wrong!";
 			echo "<script type='text/javascript'>alert('$message');</script>";

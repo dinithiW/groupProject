@@ -169,6 +169,7 @@ $route['Director/approveFinalSet'] = 'DirectorDashboard/approveFinalSet';
 $route['Director/setInterviewDate'] = 'DirectorDashboard/setInterviewDate';
 $route['Director/sendmail'] = 'Directordashboard/sendmail';
 $route['Director/insertData'] = 'Directordashboard/insertData';
+$route['Director/insertAdDetails'] = 'Directordashboard/insertAdDetails';
 $route['Director/addMessage'] = 'DirectorDashboard/addNotification';
 $route['Director/viewMessage'] = 'DirectorDashboard/viewNotification';
 $route['Director/finalize'] = 'DirectorDashboard/finalize';
