@@ -1,32 +1,64 @@
 <?php 
 
-class ApplicationFormModel extends CI_Model{
+class InterviewModel extends CI_Model{
 
     public $indexNo;
     public $idate;
     public $itime;
+    public $rdate;//shortened for real date for ease
+    public $rtime;
 
 	public function __construct() {
 		parent::__construct();
 	}
 
-    public function getAllSpecializations(){
-        $specializations = [];
+    public function insertInterview($selected,$idate,$itime){
+        $userInfoUsers = array('INDEX_NUMBER'=>$selected,'INTERVIEW_DATE'=>$idate,
+            'INTERVIEW_TIME'=>$itime);
+
+        $this->db->trans_start();
+        $this->db->insert('candidates_interviews', $userInfoUsers);
+        $this->db->trans_complete();
+    }
+
+    public function getInterviewGroups(){
+        $interviews = [];
         $this->load->database();
-        $this->db->select('AREA_ID');
-        $this->db->select('AREA_NAME');
-        $this->db->from('specializationarea');
+        $this->db->select('INTERVIEW_DATE');
+        $this->db->select('INTERVIEW_TIME');
+        $this->db->from('candidates_interviews');
 
         $query = $this->db->get();
 
         foreach ($query->result() as $row) {
-            $specialization = new ApplicationFormModel();
-            $specialization->specializationID= $row->AREA_ID;
-            $specialization->specializationName= $row->AREA_NAME;
-            array_push($specializations,$specialization);
+            $interview = new InterviewModel();
+            $date = date_create($row->INTERVIEW_DATE);
+            $interview->idate = date_format($date, 'jS F Y');
+            $interview->rdate = $row->INTERVIEW_DATE;
+            $interview->rtime = $row->INTERVIEW_TIME;
+            $interview->itime = $row->INTERVIEW_TIME;
+            array_push($interviews,$interview);
         }
-        return $specializations;
 
+        return $interviews;
+    }
+
+    public function getEmails($date,$time){
+        $this->load->db();
+        $this->db->select('INDEX_NUMBER');
+        $this->db->where("INTERVIEW_DATE",$date);
+        $this->db->where("INTERVIEW_TIME",$time);
+        $this->db->from('candidates_interviews');
+
+        $query = $this->db->get();
+
+        foreach ($query->result() as $row) {
+            //$this->db->select('INDEX_NUMBER');
+            $this->db->select('PERSONAL_EMAIL');
+            $this->db->where("INDEX_NUMBER",$row);
+            $this->db->from('basic_personal_details');
+
+        }
     }
 
     //returns the details of a single member

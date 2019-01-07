@@ -180,7 +180,7 @@ class OperatorDashboard extends CI_Controller{
     //interview date setting home
     public function setInterviewDate(){
         $this->load->model('applicant_model');
-        $data['array'] = $this->applicant_model->getSelectedCandidates("Senior Lecturer Grade I selected");
+        $data['array'] = $this->applicant_model->getSelectedCandidates("Senior_Lecturer Grade_I_selected");
         $data['headerName'] = "Senior Lecturer Grade I selected";
         $data['showAlert'] = "false";
         $this->load->view('includes/header');
@@ -193,31 +193,53 @@ class OperatorDashboard extends CI_Controller{
         $position = $_POST['vacancy'];
         $this->load->model('applicant_model');
         $data['array'] = $this->applicant_model->getSelectedCandidates($position);
-        $data['headerName'] = $position;
+        $temp = str_replace('_', ' ', $position);
+        $data['headerName'] = $temp;
         $data['showAlert'] = "false";
         $this->load->view('includes/header');
         $this->load->view('users/operator/setInterviewDate',$data);
         $this->load->view('includes/footer');
     }
 
-    public function addInterviewDateToDB(){
+    public function addInterviewDateToDB($vacancy){
+
         $data = [];
         $idate = $_POST['idate'];
-        $itime = $_POST['iname'];
+        $itime = $_POST['itime'];
         
+        $temp = str_replace('_', ' ', $vacancy);
+
         $this->load->model('operator/InterviewModel');
-        if(isset($_POST['submit'])){
+        //if(isset($_POST['submit'])){
+            
+            //echo"1$idate";
             if(!empty($_POST['check_list'])) {
+                //echo"hello";
+                //echo"2$iname";
                 // Counting number of checked checkboxes.
                 $checked_count = count($_POST['check_list']);
                 // Loop to store and display values of individual checked checkbox.
                 foreach($_POST['check_list'] as $selected) {
-                    $this->InterviewModel->insertInterview($selected);
+                    $this->InterviewModel->insertInterview($selected,$idate,$itime);
                 }
-            }else{
                 $data['showAlert'] = "false";
+                $this->load->model('applicant_model');
+                $data['array'] = $this->applicant_model->getSelectedCandidates($vacancy);
+                $data['headerName'] = $temp;
+                $this->load->view('includes/header');
+                $this->load->view('users/operator/setInterviewDate',$data);
+                $this->load->view('includes/footer');
+            }else{
+                //echo"hello";
+                $this->load->model('applicant_model');
+                $data['array'] = $this->applicant_model->getSelectedCandidates($vacancy);
+                $data['headerName'] = $temp;
+                $data['showAlert'] = "true";
+                $this->load->view('includes/header');
+                $this->load->view('users/operator/setInterviewDate',$data);
+                $this->load->view('includes/footer');
             }
-        }
+        //}
     }
 
     public function categorizeHome(){
@@ -460,8 +482,8 @@ class OperatorDashboard extends CI_Controller{
     }
 
     public function sendEMailsToApplicants(){
-        $this->load->model('applicant_model');
-        $data['array'] = $this->applicant_model->getSelectedCandidates("Senior Lecturer Grade I selected");
+        $this->load->model('operator/InterviewModel');
+        $data['array'] = $this->InterviewModel->getInterviewGroups();
         $this->load->view('includes/header');
         $this->load->view('users/operator/sendEmailToCandidates',$data);
         $this->load->view('includes/footer');
@@ -476,6 +498,17 @@ class OperatorDashboard extends CI_Controller{
         $this->load->view('includes/footer');*/
     }
 
+    public function sendInterviewEmails(){
+        $description = "Interview Notification";
+        $content = $_POST['content'];
+        $time_date  = explode("_", $_POST['timeSlot']);
+        $date = $time_date[0];
+        $time = $time_date[1];
+
+        $this->load->model('operator/InterviewModel');
+        $this->load->InterviewModel->getEmails($date,$time);
+
+    }
 
 }
 ?>

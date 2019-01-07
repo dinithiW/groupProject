@@ -33,11 +33,11 @@
         
         <select class="form-control input-lg" id="selectBox" name = "vacancy">
            <!-- <select class="form-control input-lg" id="selectBox" onchange="changeFunc();"> -->
-          <option value = "Senior Lecturer Grade I selected" >Senior Lecturer Grade I selected</option>
-          <option value = "Senior Lecturer Grade II selected" >Senior Lecturer Grade II selected</option>
-          <option value = "Lecturer Probationary Category 1" >Lecturer Probationary Category 1</option>
-          <option value = "Lecturer Probationary Category 2" >Lecturer Probationary Category 2</option>
-          <option value = "Lecturer Probationary Category 3" >Lecturer Probationary Category 3</option>
+          <option value = "Senior_Lecturer_Grade_I_selected" >Senior Lecturer Grade I selected</option>
+          <option value = "Senior_Lecturer_Grade_II_selected" >Senior Lecturer Grade II selected</option>
+          <option value = "Lecturer_Probationary_Category_1" >Lecturer Probationary Category 1</option>
+          <option value = "Lecturer_Probationary_Category_2" >Lecturer Probationary Category 2</option>
+          <option value = "Lecturer_Probationary_Category_3" >Lecturer Probationary Category 3</option>
         </select>
 
 
@@ -57,19 +57,20 @@
 <br>
 <div class="col-md-8">
   <div class="box box-primary">
-    <form role="form" id="addUser" action="<?php echo base_url() ?>OperatorIndex/addInterviewDate" method="post" role="form">
+    <?php $temp = str_replace(' ', '_', $headerName);?>
+    <form role="form" id="addUser" action="<?php echo base_url() ?>OperatorIndex/addInterviewDate/<?=$temp?>" method="post" role="form">
     <div class="box-body">
       <div class="row">
         <div class="col-md-6">                                
           <div class="form-group">
             <label for="fname" class="col-md-6">Interview Date</label>
-              <input required type="date" class="form-control required" id="idate" name="fname" maxlength="128">
+              <input  type="date" class="form-control required" id="idate" name="idate" maxlength="128" required>
           </div>
         </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="lname" class="col-md-6">Time</label>
-                                        <input required type="time" class="form-control required" name = "itime">
+                                        <input  type="time" class="form-control required" name = "itime" required>
                                     
                                     </div>
                                 </div>
@@ -77,7 +78,7 @@
                          
                         </div>
 
-                    </form>
+                    
                 </div>
             </div>
         <!-- <div class = "form-group row form-control ">
@@ -111,7 +112,7 @@
                     </div>
                 </div><!-- /.box-header -->
                 <div class="box-body table-responsive no-padding">
-                  <form method = "post" action = "">
+                  <!-- <form method = "post" action = ""> -->
                   <table class="table table-hover">
                     <tr>
                       <th>Applicant ID</th>
@@ -176,7 +177,7 @@
 
 
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
   /*var counter = 0;
   var btn = document.getElementById('btn');
   var form = document.getElementById('form');*/
@@ -194,14 +195,7 @@
     frag.appendChild(select);
     div.appendChild(frag);
     frag.write("<br>");
-/*
 
-    var input = document.createElement("input");
-    input.id = 'input-' + counter;
-    input.type = 'text';
-    input.name = 'name';
-    input.placeholder = 'Input number ' + counter;
-    form.appendChild(input);*/
 
     
   };
@@ -212,7 +206,7 @@
         addInput(this);
     });
   }
-</script>
+</script> -->
 
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/common.js" charset="utf-8"></script>
 <!-- <script type="text/javascript">
@@ -227,6 +221,15 @@
     });
 </script> -->
 </body>
+
+
+
+    <!-- var input = document.createElement("input");
+    input.id = 'input-' + counter;
+    input.type = 'text';
+    input.name = 'name';
+    input.placeholder = 'Input number ' + counter;
+    form.appendChild(input); -->
 
 
 

@@ -2099,8 +2099,7 @@ if(isset($this->session->userdata['logged_in'])){
                     </div>  -->
 
                     <input type="button" name="previous" class="previous button" value="Previous">
-                    <input type="submit" name="Submit" class="finish button finish" value="Finish">
-                
+                    
             </div>
             </form>
 <!-- *********************************************************** end the fourth page************************************************--> 
