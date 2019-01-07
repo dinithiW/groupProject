@@ -1043,7 +1043,6 @@ INSERT INTO `specialization_area_for_applicant` (`INDEX_NUMBER`, `SPECIFICATION_
 ('19SE013', 'Operating systems');
 
 -- --------------------------------------------------------
-
 --
 -- Table structure for table `temporary_index_number_for_applicants`
 --
@@ -1059,24 +1058,24 @@ CREATE TABLE `temporary_index_number_for_applicants` (
 --
 
 INSERT INTO `temporary_index_number_for_applicants` (`INDEX_NUMBER`, `USERNAME`, `FULL_NAME`) VALUES
-('19pr000', 'naveen@gmail.com', 'naveen'),
-('19SE003', 'tharindu@gmail.com', 'tharindu nuwan'),
-('19002', 'ruwaneeee@gmail.com', 'chathura'),
-('19003', 'nuwan1@gmail.com', 'nuwan'),
-('19004', 'operatollr@gmail.com', 'kasun mendis'),
-('19005', 'ruwadn@gmail.com', 'nuwan'),
-('19006', 'ruwan1111@gmail.com', 'kasun mendis'),
-('19007', 'ruwan11s11@gmail.com', 'kasun mendis'),
-('19008', 'ruwan111221@gmail.com', 'kasun mendis'),
-('19009', 'dinithi@gmail.com', 'dinithi'),
-('19PR010', 'santhush@gmail.com', 'santhush'),
-('19PR011', 'namal@gmail.com', 'namal'),
-('19012', 'kkk@gmail.com', 'kkk'),
-('19013', 'aaaa@gmail.com', 'aaa'),
-('19014', 'aaaaa@gmail.com', 'aaa'),
-('19015', 'aaaaaaaa@gmail.gom', 'aaaa'),
-('19016', 'dinithi@gmail.com', 'Dinithi Nisansa Wickramaratne'),
-('19017', 'diniwick124123@gmail.com', 'Dinithi Nisansa Wickramaratne');
+('19000', 'kamal@gmail.com', 'kamal deshapriya'),
+('19001', 'kamal@gmail.com', 'kamal deshapriya'),
+('19PR001', 'kasun@gmail.com', 'kasun mendis'),
+('19003', 'nalin@gmail.com', 'nalin perera'),
+('19004', 'supun@gmail.com', 'supun malaka'),
+('19PR002', 'dinesh@gmail.com', 'dinesh lakmal'),
+('19SE003', 'sajith@gmail.com', 'sajith nawalage'),
+('19PR004', 'dilum@gmail.com', 'dilum sanjeewa'),
+('19SE005', 'sithum@gmail.com', 'situm maleesha'),
+('19SE006', 'senith@gmail.com', 'senith harshana'),
+('19SE008', 'dilan@gmail.com', 'dilan sathsara'),
+('19PR009', 'pahan@gmail.com', 'pahan sanjeewa'),
+('19SE010', 'pawan@gmail.com', 'pawan liyanage'),
+('19SE011', 'pathum@gmail.com', 'pathum dilshan'),
+('19SE012', 'suwin@gmail.com', 'suwin vidula'),
+('19SE013', 'pasan@gmail.com', 'pasan palpita');
+
+
 
 -- --------------------------------------------------------
 
