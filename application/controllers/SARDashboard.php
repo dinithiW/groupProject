@@ -198,12 +198,12 @@ class SARDashboard extends CI_Controller{
         $this->load->view('applicant/applicationForm/ApplicationFormReadOnly',$data);
         
     }
-    
+
 
 	public function sendBulkmails($arr){
 		$aDoor = $_POST['formdoor'];
 		 if(empty($aDoor)){
-		 	echo("You didn't select any buildings.");
+		 	echo("You didn't select any Email");
 
 		 }else{
 		 	$N = count($aDoor);
