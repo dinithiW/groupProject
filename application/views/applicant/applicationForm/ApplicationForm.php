@@ -465,7 +465,7 @@ if(isset($this->session->userdata['logged_in'])){
                                 <td>
                                     <div class="custom-sele" id="select_degree_div1">
                                         <select name="heigher_educational_degree_obtained1" id="select_degree_selection1" style="font-size:9px;">
-                                            <option value="">Select Here</option>
+                                            <option value="select here">Select Here</option>
                                             <option value="BSC Hons-Computer Science">BSC Hons-Computer Science</option>
                                             <option value="BSC Hons-Software Engineering">BSC Hons-Software Engineering</option>
                                             <option value="BSC Hons-Informtion System">BSC Hons-Informtion System</option>
@@ -504,7 +504,7 @@ if(isset($this->session->userdata['logged_in'])){
                                 <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
                                 <td>
                                     <div class="custom-sele" id="select_class_div1">
-                                        <select name="heigher_educational_class1" id="select_class_selection0" style="font-size:9px;>
+                                        <select name="heigher_educational_class1" id="select_class_selection0" style="font-size:9px;">
                                             <option value="">Select Here</option>
                                             <option value="Fisrt Class">Fisrt Class</option>
                                             <option value="Second Upper">Second Upper</option>
@@ -586,7 +586,7 @@ if(isset($this->session->userdata['logged_in'])){
                                 <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
                                 <td>
                                     <div class="custom-sele" id="select_class_div1">
-                                        <select name="heigher_educational_class2" id="select_class_selection1" style="font-size:9px;>
+                                        <select name="heigher_educational_class2" id="select_class_selection1" style="font-size:9px;">
                                             <option value="">Select Here</option>
                                             <option value="Fisrt Class">Fisrt Class</option>
                                             <option value="Second Upper">Second Upper</option>
@@ -670,7 +670,7 @@ if(isset($this->session->userdata['logged_in'])){
                                 <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
                                 <td>
                                     <div class="custom-sele" id="select_class_div1">
-                                        <select name="heigher_educational_class3" id="select_class_selection1" style="font-size:9px;>
+                                        <select name="heigher_educational_class3" id="select_class_selection1" style="font-size:9px;">
                                             <option value="">Select Here</option>
                                             <option value="Fisrt Class">Fisrt Class</option>
                                             <option value="Second Upper">Second Upper</option>
@@ -752,7 +752,7 @@ if(isset($this->session->userdata['logged_in'])){
                                 <!-- <td><input type="text" class="Text" name="heigher_educational_class1" size='13'/></td> -->
                                 <td>
                                     <div class="custom-sele" id="select_class_div1">
-                                        <select name="heigher_educational_class4" id="select_class_selection1" style="font-size:9px;>
+                                        <select name="heigher_educational_class4" id="select_class_selection1" style="font-size:9px;">
                                             <option value="">Select Here</option>
                                             <option value="Fisrt Class">Fisrt Class</option>
                                             <option value="Second Upper">Second Upper</option>
@@ -790,6 +790,8 @@ if(isset($this->session->userdata['logged_in'])){
                     </div><!-- end of the Higher Educational Details table-->
 
                     <h5 id="note1">Note:The field name "Duration" in above table should be filled by number of months</h5>
+
+                    <h5 id="note1">Note:If selected others, Please specify the degree in the "Any other information that you need like to indicate" cage in last page</h5>
                 
                     <h5 id="note1">Note:Certified copies of the certificates and transcripts should be attached</h5>
                 
@@ -1100,6 +1102,8 @@ if(isset($this->session->userdata['logged_in'])){
                     </div><!-- end of the Higher Educational Details table-->
 
                     <h5 id="note1">Note:The field name "Duration" in above table should be filled by number of months</h5>
+
+                    <h5 id="note1">Note:If selected others, Please specify the degree in the "Any other information that you need like to indicate" cage in last page</h5>
                 
                     <h5 id="note1">Note:Certified copies of the certificates and transcripts should be attached</h5>
 
@@ -1412,6 +1416,8 @@ if(isset($this->session->userdata['logged_in'])){
                     </div><!-- end of the Higher Educational Details table-->
 
                     <h5 id="note1">Note:The field name "Duration" in above table should be filled by number of months</h5>
+
+                    <h5 id="note1">Note:If selected others, Please specify the degree in the "Any other information that you need like to indicate" cage in last page</h5>
                 
                     <h5 id="note1">Note:Certified copies of the certificates and transcripts should be attached</h5>
 
@@ -1540,7 +1546,7 @@ if(isset($this->session->userdata['logged_in'])){
                     <div class="custom-select" style="width:300px; height:80px;">
                         <label for="sinhala">Ability to Work Sinhala</label>
                         <select name="work_sinhala">
-                            <option value="0">Mark in here:</option>
+                            <option value="select here">Mark in here:</option>
                             <option value="Very Good">Very Good</option>
                             <option value="Good">Good</option>
                             <option value="Fair">Fair</option>
@@ -1555,7 +1561,7 @@ if(isset($this->session->userdata['logged_in'])){
                     <div class="custom-select" style="width:300px; height:80px;">
                         <label for="sinhala">Ability To Teach Sinhala</label>
                         <select name="teach_sinhala">
-                            <option value="0">Mark in here:</option>
+                            <option value="select here">Mark in here:</option>
                             <option value="Very Good">Very Good</option>
                             <option value="Good">Good</option>
                             <option value="Fair">Fair</option>
@@ -1571,7 +1577,7 @@ if(isset($this->session->userdata['logged_in'])){
                     <div class="custom-select" style="width:300px; height:80px;">
                     <label for="tamil">Ability to Work Tamil</label>
                         <select name="work_tamil">
-                            <option value="0">Mark in here:</option>
+                            <option value="select here">Mark in here:</option>
                             <option value="Very Good">Very Good</option>
                             <option value="Good">Good</option>
                             <option value="Fair">Fair</option>
@@ -1587,7 +1593,7 @@ if(isset($this->session->userdata['logged_in'])){
                     <div class="custom-select" style="width:300px; height:80px;">
                         <label for="tamil">Ability To Teach Tamil</label>
                         <select name="teach_tamil">
-                            <option value="0">Mark in here:</option>
+                            <option value="select here">Mark in here:</option>
                             <option value="Very Good">Very Good</option>
                             <option value="Good">Good</option>
                             <option value="Fair">Fair</option>
@@ -1600,7 +1606,7 @@ if(isset($this->session->userdata['logged_in'])){
                     <div class="custom-select" style="width:300px; height:80px;">
                         <label for="english">Ability to Work English</label>
                         <select name="work_english">
-                            <option value="0">Mark in here:</option>
+                            <option value="select here">Mark in here:</option>
                             <option value="Very Good">Very Good</option>
                             <option value="Good">Good</option>
                             <option value="Fair">Fair</option>
@@ -1613,7 +1619,7 @@ if(isset($this->session->userdata['logged_in'])){
                     <div class="custom-select" style="width:300px; height:80px;">
                         <label for="english">Ability To Teach English</label>
                         <select name="teach_english">
-                            <option value="0">Mark in here:</option>
+                            <option value="select here">Mark in here:</option>
                             <option value="Very Good">Very Good</option>
                             <option value="Good">Good</option>
                             <option value="Fair">Fair</option>

@@ -1,5 +1,5 @@
 <?php
-
+include 'EmailController.php';
 class OperatorDashboard extends CI_Controller{
 
 	public function __construct() {
@@ -506,7 +506,9 @@ class OperatorDashboard extends CI_Controller{
         $time = $time_date[1];
 
         $this->load->model('operator/InterviewModel');
-        $this->load->InterviewModel->getEmails($date,$time);
+        $this->InterviewModel->getEmails($date,$time,$description,$content);
+
+        
 
     }
 
@@ -527,6 +529,12 @@ class OperatorDashboard extends CI_Controller{
         $data['selected_specification_area'] = $this->ApplicantApplicationFormModel->editSpecificationAreas($index_number);//for any other language proficiency details           
         $this->load->view('applicant/applicationForm/ApplicationFormReadOnly',$data);
         
+    }
+
+    public function sendmail(){
+        $email = new EmailController();
+        $this->load->library('email');
+        $email->send_mail($this->email, $this->input->post('directormail'), $this->input->post('reportdetails'));
     }
 
 }

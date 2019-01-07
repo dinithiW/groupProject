@@ -105,9 +105,6 @@ if (!empty($_GET["email"])) {
 
                                     </td>
                                     <!--<td><button type="submit" name="email_button" class="btn btn-primary" id="'.$count.'" data-email=<?php echo $row->getemail() ?> data-name=<?php echo $row->getfname()." ". $row->getlname() ?> data-action="single" href = "<?= base_url("sendmail") ?>">send</button ></td>-->
-
-                                
-
                            </tr>
                            <?php
                         }
