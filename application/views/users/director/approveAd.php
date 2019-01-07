@@ -44,11 +44,11 @@
                                 <td><?php echo $rec->vacancy_id; ?></td>
                                 <td><?php echo $rec->ad_url; ?></td>
                                 <td>
-                                    <a class="btn btn-sm btn-info " href="<?php echo base_url().'Director/approvelAd/'.$rec->vacancy_id ?>" data-userid=""><i class="fa fa-info"></i></a>
+                                    <a class="btn btn-sm btn-info " href="<?php echo base_url().'Director/approvelAd/'.$rec->vacancy_id ?>" data-userid=""><i class="fa fa-check"></i></a>
                                 </td>
                                 <td>
-                                    <form action="<?php echo base_url() ?>Director/insertAdDetials" method="post">
-                                        <input type = "text" name = "opinion" />
+                                    <form action="<?php echo base_url().'Director/adOpinion/'.$rec->vacancy_id ?>" method="post">
+                                        <input type = "text" name = "<?php echo $rec->vacancy_id; ?>" />
                                     </form>
                                 </td>
                             </tr>

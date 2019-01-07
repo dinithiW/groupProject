@@ -37,8 +37,11 @@ class DirectorDashboard extends CI_Controller{
 		redirect(base_url().'Director/approveAd');
 	}
 
-	public function adOpinion($cmt){
-		
+	public function adOpinion($id){
+		$cmt = $_POST["$id"];
+		$this->load->model('Director/applicantDetails');
+		$this->applicantDetails->setopinion($id, $cmt);
+		redirect(base_url().'Director/approveAd');
 	}
 
 	//Get data basic personal details
