@@ -32,6 +32,7 @@
                                 <th>Ad Reference</th>
                                 <th>Vacancy Id</th>
                                 <th>Ad URL</th>
+                                <th>Approval</th>
                                 <th>Director's Opinion</th>
                             </tr>
 
@@ -42,6 +43,9 @@
                                 <td><?php echo $rec->ad_ref; ?></td>
                                 <td><?php echo $rec->vacancy_id; ?></td>
                                 <td><?php echo $rec->ad_url; ?></td>
+                                <td>
+                                    <a class="btn btn-sm btn-info " href="<?php echo base_url().'Director/approvelAd/'.$rec->vacancy_id ?>" data-userid=""><i class="fa fa-info"></i></a>
+                                </td>
                                 <td>
                                     <form action="<?php echo base_url() ?>Director/insertAdDetials" method="post">
                                         <input type = "text" name = "opinion" />

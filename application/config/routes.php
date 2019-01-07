@@ -170,6 +170,7 @@ $route['Director/setInterviewDate'] = 'DirectorDashboard/setInterviewDate';
 $route['Director/sendmail'] = 'Directordashboard/sendmail';
 $route['Director/insertData'] = 'Directordashboard/insertData';
 $route['Director/insertAdDetails'] = 'Directordashboard/insertAdDetails';
+$route['Director/approvelAd/(:any)'] = 'DirectorDashboard/approvelAd/$1';
 $route['Director/addMessage'] = 'DirectorDashboard/addNotification';
 $route['Director/viewMessage'] = 'DirectorDashboard/viewNotification';
 $route['Director/finalize'] = 'DirectorDashboard/finalize';
