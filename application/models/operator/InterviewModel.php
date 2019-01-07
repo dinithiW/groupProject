@@ -43,25 +43,32 @@ class InterviewModel extends CI_Model{
         return $interviews;
     }
 
-    public function getEmails($date,$time){
-        $this->load->db();
+    public function getEmails($date,$time,$description,$content){
+        $this->load->database();
         $this->db->select('INDEX_NUMBER');
         $this->db->where("INTERVIEW_DATE",$date);
         $this->db->where("INTERVIEW_TIME",$time);
         $this->db->from('candidates_interviews');
+        $this->load->model('operator/EmailModel');
 
         $query = $this->db->get();
 
         foreach ($query->result() as $row) {
+            //echo $row1->;
             //$this->db->select('INDEX_NUMBER');
             $this->db->select('PERSONAL_EMAIL');
-            $this->db->where("INDEX_NUMBER",$row);
-            $this->db->from('basic_personal_details');
+            $this->db->from('basic_personal_details as t1');
+            $this->db->join('candidates_interviews as t2', 't1.INDEX_NUMBER = t2.INDEX_NUMBER', 'INNER');
+            
 
             $query2 = $this->db->get();
 
-            foreach ($query2->result() as $row) {
-                
+            foreach ($query2->result() as $row2) {
+                //echo $row2;
+                $email = new EmailController();
+                $this->load->library('email');
+                $email->send_mail3($this->email, $row2->PERSONAL_EMAIL, $content);
+                //$this->EmailModel->singleEmail($row,$description,$content);
             }
 
         }

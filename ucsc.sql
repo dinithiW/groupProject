@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 06, 2019 at 10:32 AM
+-- Generation Time: Jan 07, 2019 at 09:49 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.23
 
@@ -51,8 +51,8 @@ CREATE TABLE `any_other_qualifications` (
   `ROW_NUMBER` varchar(10) NOT NULL,
   `INSTITUTION` varchar(300) NOT NULL,
   `DEPLOMA` varchar(200) NOT NULL,
-  `DURAION` int(11) NOT NULL,
-  `YEAR` int(11) NOT NULL
+  `DURAION` varchar(11) NOT NULL,
+  `YEAR` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -60,36 +60,48 @@ CREATE TABLE `any_other_qualifications` (
 --
 
 INSERT INTO `any_other_qualifications` (`INDEX_NUMBER`, `ROW_NUMBER`, `INSTITUTION`, `DEPLOMA`, `DURAION`, `YEAR`) VALUES
-('19PR002', '1', '', '', 0, 0),
-('19PR002', '2', '', '', 0, 0),
-('19PR002', '3', '', '', 0, 0),
-('19PR003', '1', '', '', 0, 0),
-('19PR003', '2', '', '', 0, 0),
-('19PR003', '3', '', '', 0, 0),
-('19SE004', '1', 'last', 'last', 0, 0),
-('19SE004', '2', 'last', 'last', 0, 0),
-('19SE004', '3', 'last', 'last', 0, 0),
-('19SE005', '1', 'last', 'last', 0, 0),
-('19SE005', '2', 'last', 'last', 0, 0),
-('19SE005', '3', 'last', 'last', 0, 0),
-('19SE006', '1', 'finalcut', 'finalcut', 0, 0),
-('19SE006', '2', 'finalcut', 'finalcut', 0, 0),
-('19SE006', '3', 'finalcut', 'finalcut', 0, 0),
-('19PR006', '1', 'finalcut', 'finalcut', 0, 0),
-('19PR006', '2', 'finalcut', 'finalcut', 0, 0),
-('19PR006', '3', 'finalcut', 'finalcut', 0, 0),
-('19SE008', '1', 'dinithi', 'dinithi', 0, 0),
-('19SE008', '2', 'dinithi', 'dinithi', 0, 0),
-('19SE008', '3', 'dinithi', 'dinithi', 0, 0),
-('19SE0068', '1', 'dinithi', 'dinithi', 0, 0),
-('19SE0068', '2', 'dinithi', 'dinithi', 0, 0),
-('19SE0068', '3', 'dinithi', 'dinithi', 0, 0),
-('19PR010', '1', 'institute1', 'deploma1', 0, 0),
-('19PR010', '2', 'institute2', 'deploma2', 0, 0),
-('19PR010', '3', 'institute3', 'deploma3', 0, 0),
-('19PR011', '1', 'insti', 'insti', 0, 0),
-('19PR011', '2', 'insti', 'insti', 0, 0),
-('19PR011', '3', 'insti', 'insti', 0, 0);
+('19PR001', '1', 'INSTITUTION1', 'MANAGEMENT', '12', '2010'),
+('19PR001', '2', 'INSTITUTION2', 'HUMAN RESOURCE', '8', '2011'),
+('19PR001', '3', 'INSTITUTION3', 'FINANCE AND MARKETING', '10', '2012'),
+('19SE000', '1', 'INSTITUTE1', 'ENGLISH', '12', '2006'),
+('19SE000', '2', 'INSTITUTE2', 'HUMAN RESOURCE', '12', '2007'),
+('19SE000', '3', 'INSTITUTE3', 'MANAGEMENT', '12', '2008'),
+('19PR002', '1', 'INSTITUTE1', 'ENGLISH', '11', '2009'),
+('19PR002', '2', 'INSTITUTE2', 'HUMAN RESOURCES', '12', '2010'),
+('19PR002', '3', 'INSTITUTE3', 'MANAGEMENT', '15', '2011'),
+('19SE003', '1', 'INSTITUTE1', 'ECONOMY', '12', '2015'),
+('19SE003', '2', 'INSTITUTE2', 'MARKETING', '6', '2013'),
+('19SE003', '3', 'INSTITUTE3', 'GRAPHIC DESIGN', '6', '2012'),
+('19PR004', '1', 'INSTITUTION1', 'E MONEY', '08', '2010'),
+('19PR004', '2', 'INSTITUTION2', 'ENGLISH', '12', '2011'),
+('19PR004', '3', 'INSTITUTION3', 'ACCOUNTING', '06', '2012'),
+('19SE005', '1', 'INSTITUTE1', 'ENGLISH', '12', '2007'),
+('19SE005', '2', 'INSTITUTE2', 'MARKETING', '08', '2009'),
+('19SE005', '3', 'INSTITUTE3', 'ECONOMY', '10', '2010'),
+('19SE006', '1', 'INSTITUTION1', 'ENGLISH', '12', '2010'),
+('19SE006', '2', 'INSTITUTION2', 'GRAPHIC DESIGN', '06', '2011'),
+('19SE006', '3', 'INSTITUTION3', 'MANAGEMENT', '08', '2012'),
+('19SE007', '1', 'INSTITUTION1', 'ENGLISH', '10', '2005'),
+('19SE007', '2', 'INSTITUTION2', 'DEVELOPMENT', '12', '2010'),
+('19SE007', '3', 'INSTITUTION3', 'GRAPHIC DESIGN', '22', '2015'),
+('19SE008', '1', 'INSTITUTION1', 'ENGLISH', '10', '2005'),
+('19SE008', '2', 'INSTITUTION2', 'DEVELOPMENT', '12', '2010'),
+('19SE008', '3', 'INSTITUTION3', 'GRAPHIC DESIGN', '22', '2015'),
+('19PR009', '1', 'INTSITUTE1', 'ENGLISH', '06', '2005'),
+('19PR009', '2', 'INTSITUTE2', 'DEVELOPMENT', '08', '2006'),
+('19PR009', '3', 'INTSITUTE3', 'PROGRAMING', '10', '2007'),
+('19SE010', '1', 'INSTITUTION1', 'ENGLISH', '10', '2008'),
+('19SE010', '2', 'INSTITUTION2', 'COMPUTING', '12', '2007'),
+('19SE010', '3', 'INSTITUTION3', 'MANAGEMENT', '08', '2006'),
+('19SE011', '1', 'INSTITUTE1', 'ENGLISH', '10', '2005'),
+('19SE011', '2', 'INSTITUTE2', 'PROGRAMMING', '12', '2006'),
+('19SE011', '3', 'INSTITUTE3', 'ARCITECTURE', '11', '2007'),
+('19SE012', '1', 'INSTITUTION1', 'ENGLISH', '12', '2004'),
+('19SE012', '2', 'INSTITUTION2', 'PROGRAMMER', '10', '2005'),
+('19SE012', '3', 'INSTITUTION3', 'MANAGEMENT', '08', '2006'),
+('19SE013', '1', 'INSTITUTE1', 'ENGLISH', '10', '2010'),
+('19SE013', '2', 'INSTITUTE2', 'DEVELOPMENT', '12', '2012'),
+('19SE013', '3', 'INSTITUTE4', 'MANAGEMENT', '08', '2007');
 
 -- --------------------------------------------------------
 
@@ -157,16 +169,21 @@ CREATE TABLE `applicats_more_details` (
 --
 
 INSERT INTO `applicats_more_details` (`INDEX_NUMBER`, `EXPERIENCE_RELEVANT_TO_POST`, `RESEARCH_AND_PUBLICATION_DETAILS`, `ANY_OTHER_INFORMATION`, `SUBMISSION_DATE`) VALUES
-('19px000', 'edited ', 'edited ', 'edited ', '1999-01-01'),
-('19pr000', 'Good', 'Good', 'Good', '1888-08-10'),
-('19SE002', 'insert data', 'insert data', 'insert data', '2019-01-02'),
-('19SE003', 'insert data', 'insert data', 'insert data', '2019-01-02'),
-('19SE006', 'finalcut', 'finalcut', 'finalcut', '19-01-03'),
-('19PR006', 'finalcut', 'finalcut', '/finalcut unedited', '19-01-04'),
-('19SE008', 'dinithi', 'dinithi', 'dinithi', '19-01-04'),
-('19SE0068', 'dinithi', 'dinithi', 'dinithi', '19-01-04'),
-('19PR010', 'experience', '/research', 'other in forms', '19-01-04'),
-('19PR011', 'insti', 'insti', 'insti', '19-01-04');
+('19PR001', 'EXPERIENCE ABOUT POST APPLY', 'ABOUT RESEARCHES', 'ANY OTHER DETAILS ABOUT YOU', '19-01-05'),
+('19SE000', 'TYPE HERE YOUR EXPERIENCE RELEVANT TO THE APPLIED POST IN BLOCK LETTERS', 'TYPE  HERE ABOUT DETAILS OF YOUR RESEARCHES AND PUBLICATIONS IN BLOCK LETTERS', 'TYPE HERE ABOUT ANY OTHER INFORMATION YOU WANT TO STATE (IF HAVE) IN BLOCK LETTERS', '19-01-06'),
+('19PR002', 'EXPERIENCE', 'RESEARCHES', 'TYPE HERE ABOUT ANY OTHER INFORMATION YOU WANT TO STATE (IF HAVE) IN BLOCK LETTERS', '19-01-07'),
+('19SE003', 'EXPERIENCES', 'RESEARCHES', 'TYPE HERE ABOUT ANY OTHER INFORMATION YOU WANT TO STATE (IF HAVE) IN BLOCK LETTERS', '19-01-07'),
+('19PR004', 'POST APPLIED FOR', 'EXPERIENCE', 'TYPE HERE ABOUT ANY OTHER INFORMATION YOU WANT TO STATE (IF HAVE) IN BLOCK LETTERS', '19-01-07'),
+('19SE005', 'EXPERIENCE 1', 'RESEARCH 1', 'TYPE HERE ABOUT ANY OTHER INFORMATION YOU WANT TO STATE (IF HAVE) IN BLOCK LETTERS', '19-01-07'),
+('19SE006', 'POST FOR APPLY', 'RESEARCH', 'TYPE HERE ABOUT ANY OTHER INFORMATION YOU WANT TO STATE (IF HAVE) IN BLOCK LETTERS', '19-01-07'),
+('19SE007', 'EXPERIENCE', 'RESEARCH', 'TYPE HERE ABOUT ANY OTHER INFORMATION YOU WANT TO STATE (IF HAVE) IN BLOCK LETTERS', '19-01-07'),
+('19SE008', 'EXPERIENCE', 'RESEARCH', 'TYPE HERE ABOUT ANY OTHER INFORMATION YOU WANT TO STATE (IF HAVE) IN BLOCK LETTERS', '19-01-07'),
+('19PR009', 'EXPERIENCE', 'RESEARCH', 'TYPE HERE ABOUT ANY OTHER INFORMATION YOU WANT TO STATE (IF HAVE) IN BLOCK LETTERS', '19-01-07'),
+('19SE010', 'EXPERIENCE', 'RESEARCHES', 'TYPE HERE ABOUT ANY OTHER INFORMATION YOU WANT TO STATE (IF HAVE) IN BLOCK LETTERS', '19-01-07'),
+('19SE011', 'EXPERIENCE', 'PUBLICATION', 'TYPE HERE ABOUT ANY OTHER INFORMATION YOU WANT TO STATE (IF HAVE) IN BLOCK LETTERS', '19-01-07'),
+('19SE012', 'EXPIREANCE', 'RESEARCH', 'TYPE HERE ABOUT ANY OTHER INFORMATION YOU WANT TO STATE (IF HAVE) IN BLOCK LETTERS', '19-01-07'),
+('19SE013', 'EXPRIENCE', 'SEARCH', 'TYPE HERE ABOUT ANY OTHER INFORMATION YOU WANT TO STATE (IF HAVE) IN BLOCK LETTERS', '19-01-07');
+
 
 -- --------------------------------------------------------
 
@@ -199,18 +216,63 @@ CREATE TABLE `basic_personal_details` (
 --
 
 INSERT INTO `basic_personal_details` (`INDEX_NUMBER`, `FIRST_NAME`, `LAST_NAME`, `POSTAL_ADDRESS`, `PERMANENT_ADDRESS`, `NIC`, `CITIZENSHIP_NAME`, `PERSONAL_EMAIL`, `OFFICE_EMAIL`, `MOBILE_NUMBER`, `HOME_NUMBER`, `OFFICE_NUMBER`, `GENDER`, `CIVIL_STATUS`, `CITIZENSHIP`, `DATE_OF_BIRTH`, `POST_APPLY_FOR`) VALUES
-('19PR002', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-24', 'PROBATIONARY LECTURER'),
-('19PR003', 'final', 'final', 'final', 'final', 'final', 'final', 'final', 'final', 'final', 'final', 'final', 'MALE', 'MARRIED', 'BY DESCENT', '0000-00-00', 'PROBATIONARY LECTURER'),
-('19PR006', 'comma', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-24', 'SENIOR LECTURE GR. I'),
-('19PR010', 'santhush', 'lliyanage', 'galle', 'galle', '940660513', 'citizenship', 'santhush@gmail.com', 'santhush@gmail.com', '0772308519', '07723308519', '0772308519', 'MALE', 'UN MARRIED', 'BY REGISTR', '1994-06-03', 'PROBATIONARY LECTURER'),
-('19PR011', 'namal', 'namal', 'namal', 'namal', 'namal', 'namal', 'namal@gmail.com', 'namal', 'namal', 'namal', 'namal', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-30', 'PROBATIONARY LECTURER'),
-('19SE000', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-25', 'SENIOR LECTURE GR. II'),
-('19SE001', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'test1', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-25', 'SENIOR LECTURE GR. II'),
-('19SE004', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-15', 'SENIOR LECTURE GR. II'),
-('19SE005', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-15', 'SENIOR LECTURE GR. II'),
-('19SE006', '/comma', '//finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-24', 'SENIOR LECTURE GR. II'),
-('19SE0068', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'FEMALE', 'UN MARRIED', 'BY DESCENT', '1996-12-04', 'SENIOR LECTURE GR. II'),
-('19SE008', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'FEMALE', 'UN MARRIED', 'BY DESCENT', '1996-12-04', 'SENIOR LECTURE GR. I');
+('19PR001', 'MUDIYANEGE KASUN MENDIS', 'M.K.MENDIS', 'NO 23, MAHARA, KADAWATHA', 'NO 50, BANDARAPUDA, BADULLA', '651258562v', 'SRI LANKAN', 'kasun@gmail.com', 'kasunoffice@gmail.com', '0772308516', '0812356945', '0375615268', 'FEMALE', 'MARRIED', 'BY DESCENT', '1965-10-10', 'PROBATIONARY LECTURER'),
+('19PR002', 'WIDANAGE DINESH LAKMAL', 'W.D.LAKMAL', 'HASALAKA, MATHALE', 'NO 23, WISAL MAWATHA, ANURADHAPURA', '940660513v', 'SRI LANKAN', 'dinesh@gmail.com', 'office@gmail.com', '0772308519', '0115602586', '0118956526', 'MALE', 'MARRIED', 'BY DESCENT', '1990-03-06', 'PROBATIONARY LECTURER'),
+('19PR004', 'LIYANAGE DILUM SANJEEWA', 'L.D. SANJEEWA', 'NO 23, RATHMALANA', 'NO 25,PAMUNUWA , MAHARAGAMA', '879653256v', 'SRI LANKAN', 'dilum@gmail.com', 'office', '0772308519', '011562368', '011856236', 'MALE', 'UN MARRIED', 'BY REGISTRATION', '1987-08-12', 'SENIOR LECTURE GR. I'),
+('19PR009', 'MAHAGAMAGE PAHAN SANJEEWA', 'M.P. SANJEEWA', 'NO 20, BASE ROAD, NUGEGODA', 'NO 25, NEW TOWN, GALLE', '851665321v', 'SRI LANKAN', 'pahan@gmail.com', 'office@gmail.com', '0762305186', '0912308562', '0112308519', 'MALE', 'MARRIED', 'BY DESCENT', '1994-01-16', 'PROBATIONARY LECTURER'),
+('19SE000', 'KARIYAWASAM MUDIYANSELAGE KAMAL DESHAPRIYA', 'DESHAPRIYA K.M.K', 'NO23, DESILVA ROAD, BORELLA', 'NO 25, KATUBEDDA, MORATUWA', '890660135v', 'SRI LANKAN', 'kamal@gmail.com', 'office@gmail.com', '0772308518', '0112308519', '0112058519', 'MALE', 'UN MARRIED', 'BY DESCENT', '1980-08-05', 'SENIOR LECTURE GR. I'),
+('19SE003', 'KUMARAGE SAJITH NAWALAGE', 'K.S.NAWALAGE', 'NO 25, HABARANA', 'NO 25, MAHARAGAMA', '562856235v', 'SRI LANKAN', 'sajith@gmail.com', 'office1@gmail.com', '0772308569', '094526389', '0775623685', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-24', 'SENIOR LECTURE GR. I'),
+('19SE005', 'GAMAGE SITHUM MALEESHA', 'G.T.MALEESHA', 'NO 45, NAWALA', 'NO 15, NEW TOWN , GALLE', '940660510v', 'SRI LANKAN', 'sithum@gmail.com', 'office@gmail.com', '0772308519', '0112385963', '0115623652', 'MALE', 'MARRIED', 'BY DESCENT', '1994-02-04', 'SENIOR LECTURE GR. II'),
+('19SE006', 'RAJAKARUNA SENITH HARSHANA', 'R.S.HARSHANA', 'NO 50, MAKOLA, GALLE', 'NO 10, THISSA, DAMBULLA', '945623515v', 'SRI LANKAN', 'senith@gmail.com', 'office@gmail.com', '0772308519', '0714455629', '0112308519', 'MALE', 'MARRIED', 'BY DESCENT', '1994-06-06', 'PROBATIONARY LECTURER'),
+('19SE007', 'GAMAGE DILAN SATHSARA', 'G.D.SATHSARA', 'NO 10, BASE ROAD, RATHNAPURA', 'NO 40, DISK MAWATHA, HATON', '842556325v', 'SRI LANKAN', 'dilan@gmail.com', 'office@gmail.com', '0775685623', '0782308519', '0112305628', 'MALE', 'MARRIED', 'BY REGISTRATION', '1994-06-03', 'SENIOR LECTURE GR. I'),
+('19SE008', 'GAMAGE DILAN SATHSARA', 'G.D.SATHSARA', 'NO 10, BASE ROAD, RATHNAPURA', 'NO 40, DISK MAWATHA, HATON', '842556325v', 'SRI LANKAN', 'dilan@gmail.com', 'office@gmail.com', '0775685623', '0782308519', '0112305628', 'MALE', 'MARRIED', 'BY REGISTRATION', '1994-06-03', 'SENIOR LECTURE GR. I'),
+('19SE010', 'VIDANAGE PAWAN LIYANAGE', 'V.P.LIYANAGE', 'NO 23, NEW TOWN, NAWALA', 'NO 25, CROSS ROAD, MIRIHANA', '5623365621v', 'SRI LANKAN', 'pawan@gmail.com', 'office@gmail.com', '0785623652', '0762356526', '0118956233', 'MALE', 'MARRIED', 'BY DESCENT', '1989-01-17', 'SENIOR LECTURE GR. I'),
+('19SE011', 'PATHUM DILSHAN RAJAPAKSHE', 'P.D.RAJAPAKSHE', 'NO 23, MAIN ROAD, GAMPAHA', 'NO 25, CROSS MAVATHA, RATHNAPURA', '8562235652v', 'SRI LANKAN', 'pathum@gmail.com', 'office@gmail.com', '0724562351', '0712308519', '0112308519', 'MALE', 'MARRIED', 'BY REGISTRATION', '2019-01-18', 'SENIOR LECTURE GR. II'),
+('19SE012', 'SUWIN VINDULA SAMARASEKARA', 'S.V.SAMARASEKARA', 'NO 23, KADAWATHA', 'NO 34, THISSAMAHARAMA', '8542235623v', 'SRI LANKAN', 'suwin@gmail.com', 'officemail@gmail.com', '0792308519', '0112308519', '0742308519', 'MALE', 'UN MARRIED', 'BY DESCENT', '1980-01-11', 'SENIOR LECTURE GR. II'),
+('19SE013', 'PASAN PALPITA VIDANAGE', 'P.P.VIDANAGE', 'NO 35, BASE ROAD, MARADANA', 'NO 34, KING ROAD, NAWINNA', '845663215v', 'SRI LANKAN', 'pasan@gmail.com', 'week@gmail.com', '0755632586', '0762368596', '0112308519', 'MALE', 'UN MARRIED', 'BY DESCENT', '1986-01-17', 'SENIOR LECTURE GR. II');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `candidates_interviews`
+--
+
+CREATE TABLE `candidates_interviews` (
+  `INDEX_NUMBER` varchar(100) NOT NULL,
+  `INTERVIEW_DATE` date NOT NULL,
+  `INTERVIEW_TIME` time NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `candidates_interviews`
+--
+
+INSERT INTO `candidates_interviews` (`INDEX_NUMBER`, `INTERVIEW_DATE`, `INTERVIEW_TIME`) VALUES
+('19SE008', '2019-01-17', '01:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `created_ad`
+--
+
+CREATE TABLE `created_ad` (
+  `id` int(11) NOT NULL,
+  `ad_ref` varchar(255) NOT NULL,
+  `vacancy_id` int(11) NOT NULL,
+  `ad_url` varchar(255) NOT NULL,
+  `is_approved` int(1) NOT NULL DEFAULT '0',
+  `reject_reason` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `created_ad`
+--
+
+INSERT INTO `created_ad` (`id`, `ad_ref`, `vacancy_id`, `ad_url`, `is_approved`, `reject_reason`) VALUES
+(1, 'ad_001', 2, 'https://michaeldykhoff.files.wordpress.com/2012/09/think-city-front.png', 1, 'my op'),
+(3, 'ad_002', 3, 'http://images.ucsc.cmb.ac.lk/index.php/Inauguration-Ceremony---2018/4', 0, 'comment'),
+(5, 'ad_004', 4, 'http://images.ucsc.cmb.ac.lk/index.php/Inauguration-Ceremony---2018/2', 0, '');
 
 -- --------------------------------------------------------
 
@@ -228,7 +290,7 @@ CREATE TABLE `file_upload_links` (
 --
 
 INSERT INTO `file_upload_links` (`LINK_ID`, `LINK_NAME`) VALUES
-(10, 'GCE A/L RESULT SHEET 1'),
+(10, 'GCE A/L RESULT SHEET 2'),
 (11, 'CURRICULUM VITAE'),
 (12, 'DEGREE CERTIFICATE'),
 (13, 'CERTIFIED NIC COPY');
@@ -244,12 +306,12 @@ CREATE TABLE `higher_educational_details` (
   `ROW_NUMBER` varchar(10) NOT NULL,
   `DEGREE_CATEGORY` varchar(100) NOT NULL,
   `UNIVERSITY` varchar(200) NOT NULL,
-  `FROM` int(11) NOT NULL,
-  `TO` int(11) NOT NULL,
+  `FROM` varchar(20) NOT NULL,
+  `TO` text NOT NULL,
   `DEGREE_OBTAINED` varchar(200) NOT NULL,
-  `DURATION` int(11) NOT NULL,
+  `DURATION` varchar(20) NOT NULL,
   `CLASS` varchar(100) NOT NULL,
-  `YEAR` int(11) NOT NULL,
+  `YEAR` varchar(20) NOT NULL,
   `INDEX_NO` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -258,9 +320,175 @@ CREATE TABLE `higher_educational_details` (
 --
 
 INSERT INTO `higher_educational_details` (`INDEX_NUMBER`, `ROW_NUMBER`, `DEGREE_CATEGORY`, `UNIVERSITY`, `FROM`, `TO`, `DEGREE_OBTAINED`, `DURATION`, `CLASS`, `YEAR`, `INDEX_NO`) VALUES
-('19PR002', '1', 'bachelor', 'alidshladh', 2000, 2016, 'BSC Hons. Computer Science', 6, 'first class', 2016, 'dfgdglkjdfg'),
-('19PR003', '2', 'bachelor', 'dsfgsgsgdgs', 2000, 2004, 'BSC Hons. Computer Science', 4, 'second upper', 2004, 'dgdfgdgdfgd'),
-('19PR011', '1', 'bachelors', 'koihoihoih', 2001, 2016, 'BSC Hons in Information t', 6, 'second lower', 2016, 'sdfsdf');
+('19PR001', '1', 'bachelor', 'INSTITUTION1', '2008', '2009', 'BSC Hons-Computer Science', '12', 'Second Lower', '2009', '1600749'),
+('19PR001', '2', 'bachelor', 'INSTITUTION2', '2009', '2010', 'BSC-Software Engineering', '6', 'Fisrt Class', '2010', '16555492'),
+('19PR001', '3', 'bachelor', 'INSTITUTION3', '2010', '2011', 'BSC-Software Engineering', '10', 'General', '2011', '158963525'),
+('19PR001', '4', 'bachelor', 'INSTITUTION4', '2007', '2009', 'BSC-Information Technology', '18', 'General', '2009', '8565235'),
+('19PR001', '1', 'master', 'INSTITUTION1', '2008', '2009', 'MSC-Computer Science', '12', '', '2009', '17238596'),
+('19PR001', '2', 'master', 'INSTITUTION2', '2009', '2010', 'MSC-Software Engineering', '15', '', '2010', '18000795'),
+('19PR001', '3', 'master', 'INSTITUTION3', '2007', '2008', 'MSC-Information Technology', '8', '', '2008', '19333566'),
+('19PR001', '4', 'master', 'INSTITUTION4', '2010', '2011', 'Other', '9', '', '2011', '19888562'),
+('19PR001', '1', 'phd', 'INSTITUTION1', '2007', '2008', 'PHD-Informtion System', '10', '', '2008', '15000652'),
+('19PR001', '2', 'phd', 'INSTITUTION2', '2009', '2010', 'PHD-Software Engineering', '11', '', '2009', '16000780'),
+('19PR001', '3', 'phd', 'INSTITUTION3', '2010', '2011', 'PHD-Software Engineering', '12', '', '2011', '17000568'),
+('19PR001', '4', 'phd', 'INSTITUTION4', '2011', '2013', 'PHD-Computer Science', '0', '', '2013', '19333342'),
+('19SE000', '1', 'bachelor', 'INSTITUTE1', '2004', '2005', 'BSC Hons-Software Engineering', '12', 'Second Lower', '2005', '16000749'),
+('19SE000', '2', 'bachelor', 'INSTITUTE2', '2005', '2005', 'BSC Hons-Information Technology', '6', 'Second Lower', '2005', '16000748'),
+('19SE000', '3', 'bachelor', 'INSTITUTE3', '2006', '2007', 'BSC-Computer Science', '12', 'Fisrt Class', '2007', '160007497'),
+('19SE000', '4', 'bachelor', 'INSTITUTE4', '2007', '2009', 'BSC-Informtion System', '18', 'Second Upper', '2009', '16000719'),
+('19SE000', '1', 'master', 'INSTITUTE1', '2003', '2005', 'MSC-Computer Science', '24', '', '2005', '16400749'),
+('19SE000', '2', 'master', 'INSTITUTE2', '2003', '2004', 'MSC-Software Engineering', '12', '', '2004', '16005748'),
+('19SE000', '3', 'master', 'INSTITUTE3', '2005', '2006', 'MSC-Information Technology', '12', '', '2006', '16080797'),
+('19SE000', '4', 'master', 'INSTITUTE4', '2006', '2007', 'MSC-Information Technology', '12', '', '2007', '16050719'),
+('19SE000', '1', 'phd', 'INSTITUTE1', '2003', '2005', 'PHD-Software Engineering', '24', '', '2005', '16200749'),
+('19SE000', '2', 'phd', 'INSTITUTE2', '2003', '2004', 'PHD-Informtion System', '12', '', '2004', '16205748'),
+('19SE000', '3', 'phd', 'INSTITUTE3', '2005', '2006', 'PHD-Information Technology', '12', '', '2006', '16280797'),
+('19SE000', '4', 'phd', 'INSTITUTE4', '2006', '2007', 'PHD-Software Engineering', '11', '', '2007', '16250719'),
+('19PR002', '1', 'bachelor', 'INSTITUTE1', '2008', '2009', 'BSC Hons-Software Engineering', '12', 'Second Upper', '2009', '16000751'),
+('19PR002', '2', 'bachelor', 'INSTITUTE2', '2010', '2011', 'BSC Hons-Informtion System', '10', 'Second Lower', '2011', '160008597'),
+('19PR002', '3', 'bachelor', 'INSTITUTE3', '2012', '2013', 'BSC Hons-Computer Engineering', '08', 'Second Upper', '2013', '160007853'),
+('19PR002', '4', 'bachelor', 'INSTITUTE4', '2014', '2015', 'BSC Hons-Informtion System', '06', 'General', '2015', '160008956'),
+('19PR002', '1', 'master', 'INSTITUTE1', '2008', '2009', 'MSC-Computer Science', '10', '', '2009', '18000965'),
+('19PR002', '2', 'master', 'INSTITUTE2', '2010', '2015', 'MSC-Software Engineering', '09', '', '2015', '19000563'),
+('19PR002', '3', 'master', 'INSTITUTE3', '2012', '2013', 'MSC-Informtion System', '10', '', '2013', '16000522'),
+('19PR002', '4', 'master', 'INSTITUTE4', '2011', '2012', 'MSC-Information Technology', '09', '', '2012', '15963258'),
+('19PR002', '1', 'phd', 'INSTITUTE1', '2005', '2006', 'PHD-Computer Science', '10', '', '2006', '11256365'),
+('19PR002', '2', 'phd', 'INSTITUTE2', '2006', '2007', 'PHD-Software Engineering', '09', '', '2007', '52638978'),
+('19PR002', '3', 'phd', 'INSTITUTE3', '2007', '2008', 'PHD-Software Engineering', '10', '', '2008', '8965325'),
+('19PR002', '4', 'phd', 'INSTITUTE4', '2006', '2009', 'PHD-Computer Engineering', '', '', '2009', '89562354'),
+('19SE003', '1', 'bachelor', 'INSTITUTE1', '2005', '2006', 'BSC Hons-Software Engineering', '10', 'Second Upper', '2006', '19562305'),
+('19SE003', '2', 'bachelor', 'INSTITUTE2', '2006', '2007', 'BSC Hons-Software Engineering', '11', 'Second Upper', '2007', '1800956'),
+('19SE003', '3', 'bachelor', 'INSTITUTE3', '2010', '2011', 'BSC Hons-Informtion System', '10', 'Second Lower', '2009', '15756328'),
+('19SE003', '4', 'bachelor', 'INSTITUTE4', '2012', '2013', 'BSC Hons-Informtion System', '09', 'Fisrt Class', '2010', '1195632'),
+('19SE003', '1', 'master', 'INSTITUTE1', '2005', '2006', 'MSC-Software Engineering', '08', '', '2006', '1200563'),
+('19SE003', '2', 'master', 'INSTITUTE2', '2006', '2007', 'MSC-Software Engineering', '09', '', '2007', '1520356'),
+('19SE003', '3', 'master', 'INSTITUTE3', '2008', '2009', 'MSC-Informtion System', '10', '', '2008', '1356829'),
+('19SE003', '4', 'master', 'INSTITUTE4', '2009', '2010', 'MSC-Informtion System', '11', '', '2010', '18652365'),
+('19SE003', '1', 'phd', 'INSTITUTE1', '2010', '2011', 'PHD-Software Engineering', '08', '', '2011', '15000563'),
+('19SE003', '2', 'phd', 'INSTITUTE2', '2011', '2012', 'PHD-Software Engineering', '09', '', '2012', '15010563'),
+('19SE003', '3', 'phd', 'INSTITUTE3', '2012', '2013', 'PHD-Informtion System', '10', '', '2013', '15002563'),
+('19SE003', '4', 'phd', 'INSTITUTE4', '2013', '2014', 'PHD-Information Technology', '11', '', '2014', '15000562'),
+('19PR004', '1', 'bachelor', 'INSTITUTION1', '2007', '2008', 'BSC Hons-Informtion System', '10', 'Second Upper', '2008', '1600074'),
+('19PR004', '2', 'bachelor', 'INSTITUTION2', '2009', '2010', 'BSC Hons-Information Technology', '08', 'General', '2010', '1500235'),
+('19PR004', '3', 'bachelor', 'INSTITUTION3', '2010', '2011', 'BSC-Computer Science', '06', 'Second Upper', '2011', '160002'),
+('19PR004', '4', 'bachelor', 'INSTITUTION4', '2012', '2013', 'BSC-Informtion System', '12', 'Fisrt Class', '2013', '115522'),
+('19PR004', '1', 'master', 'INSTITUTION1', '2005', '2006', 'MSC-Software Engineering', '06', '', '2006', '1526386'),
+('19PR004', '2', 'master', 'INSTITUTION2', '2007', '2008', 'MSC-Informtion System', '112', '', '2008', '1623656'),
+('19PR004', '3', 'master', 'INSTITUTION3', '2008', '2009', 'MSC-Informtion System', '12', '', '2009', '196563785'),
+('19PR004', '4', 'master', 'INSTITUTION4', '2008', '2010', 'MSC-Computer Engineering', '12', '', '2010', '1963256'),
+('19PR004', '1', 'phd', 'INSTITUTION1', '2007', '2008', 'PHD-Informtion System', '12', '', '2008', '150006'),
+('19PR004', '2', 'phd', 'INSTITUTION2', '2008', '2009', 'PHD-Software Engineering', '12', '', '2009', '1600052'),
+('19PR004', '3', 'phd', 'INSTITUTION3', '2009', '2010', 'PHD-Information Technology', '12', '', '2010', '1755262'),
+('19PR004', '4', 'phd', 'INSTITUTION4', '2010', '2011', 'PHD-Informtion System', '12', '', '2011', '1652652'),
+('19SE005', '1', 'bachelor', 'INSTITUTE1', '2007', '208', 'BSC Hons-Computer Science', '08', 'Fisrt Class', '2008', '16000854'),
+('19SE005', '2', 'bachelor', 'INSTITUTE2', '2008', '2009', 'BSC Hons-Software Engineering', '10', 'Fisrt Class', '2009', '16008554'),
+('19SE005', '3', 'bachelor', 'INSTITUTE3', '2009', '2010', 'BSC Hons-Computer Engineering', '09', 'Fisrt Class', '2010', '16005533'),
+('19SE005', '4', 'bachelor', 'INSTITUTE4', '2010', '2011', 'BSC Hons-Information Technology', '07', 'Fisrt Class', '2011', '1855623'),
+('19SE005', '1', 'master', 'INSTITUTE1', '2005', '2006', 'MSC-Computer Science', '08', '', '2006', '16000749'),
+('19SE005', '2', 'master', 'INSTITUTE2', '2006', '2007', 'MSC-Informtion System', '10', '', '2007', '10666759'),
+('19SE005', '3', 'master', 'INSTITUTE3', '2007', '2008', 'MSC-Information Technology', '11', '', '2008', '16005161'),
+('19SE005', '4', 'master', 'INSTITUTE4', '2008', '2009', 'MSC-Software Engineering', '12', '', '2009', '16005555'),
+('19SE005', '1', 'phd', 'INSTITUTE1', '2007', '2008', 'PHD-Computer Science', '08', '', '2007', '1566623'),
+('19SE005', '2', 'phd', 'INSTITUTE2', '2008', '2009', 'PHD-Software Engineering', '10', '', '2008', '18562633'),
+('19SE005', '3', 'phd', 'INSTITUTE3', '2009', '2010', 'PHD-Informtion System', '11', '', '2009', '1564553'),
+('19SE005', '4', 'phd', 'INSTITUTE4', '2010', '2011', 'PHD-Information Technology', '', '', '2010', '1954623'),
+('19SE006', '1', 'bachelor', 'INSTITUTION1', '2006', '2007', 'BSC Hons-Software Engineering', '10', 'Second Upper', '2007', '15666256'),
+('19SE006', '2', 'bachelor', 'INSTITUTION2', '2007', '2008', 'BSC Hons-Informtion System', '08', 'Second Lower', '2008', '15662356'),
+('19SE006', '3', 'bachelor', 'INSTITUTION3', '2008', '2009', 'BSC Hons-Information Technology', '07', 'Second Upper', '2009', '15686256'),
+('19SE006', '4', 'bachelor', 'INSTITUTION4', '2009', '2010', 'BSC Hons-Computer Engineering', '06', 'Second Lower', '2010', '15656895'),
+('19SE006', '1', 'master', 'INSTITUTION1', '2008', '2009', 'MSC-Software Engineering', '08', '', '2009', '1965326'),
+('19SE006', '2', 'master', 'INSTITUTION2', '2009', '2010', 'MSC-Information Technology', '07', '', '2010', '15646464'),
+('19SE006', '3', 'master', 'INSTITUTION3', '2012', '2013', 'MSC-Informtion System', '10', '', '2013', '1965656'),
+('19SE006', '4', 'master', 'INSTITUTION4', '2014', '2015', 'MSC-Computer Engineering', '11', '', '2015', '1655654'),
+('19SE006', '1', 'phd', 'INSTITUTION1', '2008', '2009', 'PHD-Software Engineering', '05', '', '2009', '1956252'),
+('19SE006', '2', 'phd', 'INSTITUTION2', '2009', '2010', 'PHD-Computer Science', '06', '', '2010', '195631'),
+('19SE006', '3', 'phd', 'INSTITUTION3', '2010', '2011', 'PHD-Informtion System', '10', '', '2011', '1995666'),
+('19SE006', '4', 'phd', 'INSTITUTION4', '2011', '2012', 'PHD-Information Technology', '', '', '2012', '185642'),
+('19SE007', '1', 'bachelor', 'INSTITUTION1', '2003', '2004', 'BSC Hons-Software Engineering', '06', 'Fisrt Class', '2004', '1422265'),
+('19SE007', '2', 'bachelor', 'INSTITUTION2', '2005', '2008', 'BSC Hons-Information Technology', '30', 'Second Upper', '2008', '1522636'),
+('19SE007', '3', 'bachelor', 'INSTITUTION3', '2007', '2009', 'BSC Hons-Informtion System', '18', 'Second Lower', '2009', '1652336'),
+('19SE007', '4', 'bachelor', 'INSTITUTION4', '2009', '2010', 'BSC-Informtion System', '10', 'Second Lower', '2010', '1856235'),
+('19SE007', '1', 'master', 'INSTITUTION1', '2002', '2003', 'MSC-Software Engineering', '08', '', '2003', '1566326'),
+('19SE007', '2', 'master', 'INSTITUTION2', '2003', '2004', 'MSC-Informtion System', '10', '', '2004', '1548623'),
+('19SE007', '3', 'master', 'INSTITUTION3', '2005', '2006', 'MSC-Information Technology', '11', '', '2006', '1456235'),
+('19SE007', '4', 'master', 'INSTITUTION4', '2006', '2007', 'MSC-Computer Engineering', '07', '', '2007', '1956235'),
+('19SE007', '1', 'phd', 'INSTITUTION1', '2005', '2006', 'PHD-Software Engineering', '05', '', '2006', '1456239'),
+('19SE007', '2', 'phd', 'INSTITUTION2', '2008', '2009', 'PHD-Information Technology', '10', '', '2009', '1856232'),
+('19SE007', '3', 'phd', 'INSTITUTION3', '2010', '2011', 'PHD-Informtion System', '15', '', '2011', '1956456'),
+('19SE007', '4', 'phd', 'INSTITUTION4', '2013', '2014', 'PHD-Computer Engineering', '', '', '2014', '1856233'),
+('19SE008', '1', 'bachelor', 'INSTITUTION1', '2003', '2004', 'BSC Hons-Software Engineering', '06', 'Fisrt Class', '2004', '1422265'),
+('19SE008', '2', 'bachelor', 'INSTITUTION2', '2005', '2008', 'BSC Hons-Information Technology', '30', 'Second Upper', '2008', '1522636'),
+('19SE008', '3', 'bachelor', 'INSTITUTION3', '2007', '2009', 'BSC Hons-Informtion System', '18', 'Second Lower', '2009', '1652336'),
+('19SE008', '4', 'bachelor', 'INSTITUTION4', '2009', '2010', 'BSC-Informtion System', '10', 'Second Lower', '2010', '1856235'),
+('19SE008', '1', 'master', 'INSTITUTION1', '2002', '2003', 'MSC-Software Engineering', '08', '', '2003', '1566326'),
+('19SE008', '2', 'master', 'INSTITUTION2', '2003', '2004', 'MSC-Informtion System', '10', '', '2004', '1548623'),
+('19SE008', '3', 'master', 'INSTITUTION3', '2005', '2006', 'MSC-Information Technology', '11', '', '2006', '1456235'),
+('19SE008', '4', 'master', 'INSTITUTION4', '2006', '2007', 'MSC-Computer Engineering', '07', '', '2007', '1956235'),
+('19SE008', '1', 'phd', 'INSTITUTION1', '2005', '2006', 'PHD-Software Engineering', '05', '', '2006', '1456239'),
+('19SE008', '2', 'phd', 'INSTITUTION2', '2008', '2009', 'PHD-Information Technology', '10', '', '2009', '1856232'),
+('19SE008', '3', 'phd', 'INSTITUTION3', '2010', '2011', 'PHD-Informtion System', '15', '', '2011', '1956456'),
+('19SE008', '4', 'phd', 'INSTITUTION4', '2013', '2014', 'PHD-Computer Engineering', '', '', '2014', '1856233'),
+('19PR009', '1', 'bachelor', 'INTSITUTE1', '2000', '2001', 'BSC Hons-Computer Science', '08', 'Fisrt Class', '2001', '1522235'),
+('19PR009', '2', 'bachelor', 'INTSITUTE2', '2001', '2002', 'BSC-Computer Science', '12', 'Second Upper', '2002', '1422235'),
+('19PR009', '3', 'bachelor', 'INTSITUTE3', '2002', '2003', 'Other', '10', 'Second Lower', '2003', '165526'),
+('19PR009', '4', 'bachelor', 'INTSITUTE4', '2003', '2004', 'BSC-Computer Engineering', '11', 'General', '2004', '18565'),
+('19PR009', '1', 'master', 'INTSITUTE1', '2002', '2003', 'MSC-Software Engineering', '10', '', '2003', '145566'),
+('19PR009', '2', 'master', 'INTSITUTE2', '2003', '2004', 'MSC-Information Technology', '08', '', '2004', '12356'),
+('19PR009', '3', 'master', 'INTSITUTE3', '2004', '2005', 'MSC-Software Engineering', '10', '', '2005', '145685'),
+('19PR009', '4', 'master', 'INTSITUTE4', '2005', '2006', 'MSC-Computer Engineering', '12', '', '2006', '185623'),
+('19PR009', '1', 'phd', 'INTSITUTE1', '2001', '2002', 'PHD-Software Engineering', '10', '', '2002', '123456'),
+('19PR009', '2', 'phd', 'INTSITUTE2', '2003', '2004', 'PHD-Informtion System', '12', '', '2001', '15426'),
+('19PR009', '3', 'phd', 'INTSITUTE3', '2004', '2005', 'PHD-Information Technology', '11', '', '2005', '142563'),
+('19PR009', '4', 'phd', 'INTSITUTE4', '2006', '2007', 'Other', '08', '', '2007', '175623'),
+('19SE010', '1', 'bachelor', 'INSTITUTION1', '2001', '2002', 'BSC Hons-Computer Science', '12', 'Second Upper', '2002', '145263'),
+('19SE010', '2', 'bachelor', 'INSTITUTION2', '2002', '2003', 'BSC-Computer Science', '10', 'Second Upper', '2003', '12345'),
+('19SE010', '3', 'bachelor', 'INSTITUTION3', '2003', '2004', 'Other', '06', 'Second Upper', '2004', '118564'),
+('19SE010', '4', 'bachelor', '', '', '', '', '', '', '', ''),
+('19SE010', '1', 'master', 'INSTITUTION1', '2001', '2002', 'MSC-Software Engineering', '2002', '', '2002', '103456'),
+('19SE010', '2', 'master', 'INSTITUTION2', '2002', '2003', 'MSC-Informtion System', '2003', '', '2003', '1001452'),
+('19SE010', '3', 'master', 'INSTITUTION3', '2003', '2004', 'MSC-Information Technology', '2004', '', '2004', '751203'),
+('19SE010', '4', 'master', '', '', '', '', '', '', '', ''),
+('19SE010', '1', 'phd', 'INSTITUTION1', '2001', '2002', 'PHD-Software Engineering', '10', '', '2002', '154623'),
+('19SE010', '2', 'phd', 'INSTITUTION2', '2003', '2004', 'PHD-Software Engineering', '10', '', '2004', '142563'),
+('19SE010', '3', 'phd', 'INSTITUTION3', '2004', '2005', 'PHD-Informtion System', '12', '', '2005', '185623'),
+('19SE010', '4', 'phd', '', '', '', '', '', '', '', ''),
+('19SE011', '1', 'bachelor', 'INSTITUTE1', '2005', '2006', 'BSC Hons-Informtion System', '08', 'Fisrt Class', '2006', '145263'),
+('19SE011', '2', 'bachelor', 'INSTITUTE2', '2007', '2008', 'BSC Hons-Computer Engineering', '12', 'Second Upper', '2008', '185642'),
+('19SE011', '3', 'bachelor', 'INSTITUTE3', '2009', '2010', 'BSC-Software Engineering', '11', 'Second Upper', '2010', '185623'),
+('19SE011', '4', 'bachelor', '', '', '', '', '', '', '', ''),
+('19SE011', '1', 'master', 'INSTITUTE1', '2005', '2006', 'MSC-Software Engineering', '10', '', '2006', '125836'),
+('19SE011', '2', 'master', 'INSTITUTE2', '2007', '2008', 'MSC-Informtion System', '08', '', '2008', '845263'),
+('19SE011', '3', 'master', 'INSTITUTE3', '2008', '2009', 'MSC-Information Technology', '09', '', '2009', '754623'),
+('19SE011', '4', 'master', '', '', '', '', '', '', '', ''),
+('19SE011', '1', 'phd', 'INSTITUTE1', '2005', '2006', 'PHD-Software Engineering', '10', '', '2006', '5426378'),
+('19SE011', '2', 'phd', 'INSTITUTE2', '2004', '2005', 'PHD-Information Technology', '11', '', '2005', '6542856'),
+('19SE011', '3', 'phd', 'INSTITUTE3', '2006', '2007', 'PHD-Informtion System', '12', '', '2004', '526348'),
+('19SE011', '4', 'phd', '', '', '', '', '', '', '', ''),
+('19SE012', '1', 'bachelor', 'INSTITUTION1', '2004', '2005', 'BSC Hons-Software Engineering', '10', 'Fisrt Class', '2005', '158596'),
+('19SE012', '2', 'bachelor', 'INSTITUTION2', '2005', '2006', 'BSC-Computer Science', '11', 'Second Upper', '2006', '412563'),
+('19SE012', '3', 'bachelor', 'INSTITUTION3', '2006', '2007', 'Other', '12', 'Second Upper', '2007', '854756'),
+('19SE012', '4', 'bachelor', '', '', '', '', '', '', '', ''),
+('19SE012', '1', 'master', 'INSTITUTION1', '2001', '2002', 'MSC-Computer Science', '12', '', '2002', '1562365'),
+('19SE012', '2', 'master', 'INSTITUTION2', '2001', '2003', 'MSC-Software Engineering', '10', '', '2003', '12565678'),
+('19SE012', '3', 'master', 'INSTITUTION3', '2002', '2004', 'MSC-Information Technology', '08', '', '2004', '1125635'),
+('19SE012', '4', 'master', '', '', '', '', '', '', '', ''),
+('19SE012', '1', 'phd', 'INSTITUTION1', '2004', '2005', 'PHD-Computer Science', '10', '', '2005', '4857652'),
+('19SE012', '2', 'phd', 'INSTITUTION2', '2005', '2006', 'PHD-Software Engineering', '11', '', '2006', '586235'),
+('19SE012', '3', 'phd', 'INSTITUTION3', '2007', '2008', 'PHD-Informtion System', '12', '', '2008', '1452365'),
+('19SE012', '4', 'phd', '', '', '', '', '', '', '', ''),
+('19SE013', '1', 'bachelor', 'INSTITUTE1', '2005', '2006', 'BSC Hons-Software Engineering', '10', 'Second Upper', '2006', '845623'),
+('19SE013', '2', 'bachelor', 'INSTITUTE2', '2007', '2008', 'BSC-Computer Science', '11', 'Fisrt Class', '2008', '965234'),
+('19SE013', '3', 'bachelor', 'INSTITUTE3', '2008', '2009', 'BSC-Information Technology', '12', 'Second Lower', '2009', '754236'),
+('19SE013', '4', 'bachelor', '', '', '', '', '', '', '', ''),
+('19SE013', '1', 'master', 'INSTITUTE1', '2004', '2005', 'MSC-Computer Science', '10', '', '2005', '4521635'),
+('19SE013', '2', 'master', 'INSTITUTE2', '2005', '2006', 'MSC-Software Engineering', '11', '', '2006', '754256'),
+('19SE013', '3', 'master', 'INSTITUTE3', '2006', '2007', 'MSC-Information Technology', '8', '', '2007', '856923'),
+('19SE013', '4', 'master', '', '', '', '', '', '', '', ''),
+('19SE013', '1', 'phd', 'INSTITUTE1', '2005', '2006', 'PHD-Informtion System', '10', '', '2006', '4856254'),
+('19SE013', '2', 'phd', 'INSTITUTE2', '2007', '2008', 'PHD-Information Technology', '12', '', '2008', '2533654'),
+('19SE013', '3', 'phd', 'INSTITUTE3', '2009', '2010', 'PHD-Information Technology', '08', '', '2010', '362545'),
+('19SE013', '4', 'phd', '', '', '', '', '', '', '', '');
+
 
 -- --------------------------------------------------------
 
@@ -309,14 +537,20 @@ CREATE TABLE `language_proficiency` (
 --
 
 INSERT INTO `language_proficiency` (`INDEX_NUMBER`, `WORK_SINHALA`, `WORK_ENGLISH`, `WORK_TAMIL`, `TEACH_SINHALA`, `TEACH_ENGLISH`, `TEACH_TAMIL`) VALUES
-('19SE002', 'No Knowledge', 'Good', 'Fair', 'Fair', 'Very Good', 'Good'),
-('19SE003', 'No Knowledge', 'Good', 'Fair', 'Fair', 'Very Good', 'Good'),
-('19SE006', 'Very Good', 'No Knowledge', 'Good', 'Very Good', 'No Knowledge', 'Good'),
-('19PR006', 'Very Good', 'No Knowledge', 'Good', 'Very Good', 'No Knowledge', 'Good'),
-('19SE008', 'Very Good', 'No Knowledge', 'Good', 'No Knowledge', 'Very Good', 'Fair'),
-('19SE0068', 'Very Good', 'No Knowledge', 'Good', 'No Knowledge', 'Very Good', 'Fair'),
-('19PR010', 'Very Good', 'No Knowledge', 'Good', 'No Knowledge', 'Very Good', 'Fair'),
-('19PR011', 'Good', 'Fair', 'Fair', 'Very Good', 'Very Good', 'No Knowledge');
+('19PR001', 'Very Good', 'Good', 'Good', 'Very Good', 'Good', 'Fair'),
+('19SE000', 'Very Good', 'Fair', 'Good', 'Good', 'No Knowledge', 'Good'),
+('19PR002', 'Very Good', 'Good', 'Good', 'Good', 'Very Good', 'Very Good'),
+('19SE003', 'Very Good', 'Good', 'Fair', 'Good', 'Good', 'No Knowledge'),
+('19PR004', 'Good', 'Very Good', 'Fair', 'Very Good', 'Good', 'No Knowledge'),
+('19SE005', 'Very Good', 'Good', 'Very Good', 'Good', 'Good', 'Very Good'),
+('19SE006', 'Very Good', 'Good', 'No Knowledge', 'Good', 'Good', 'Fair'),
+('19SE007', 'Very Good', 'Very Good', 'Good', 'Very Good', 'Good', 'Fair'),
+('19SE008', 'Very Good', 'Very Good', 'Good', 'Very Good', 'Good', 'Fair'),
+('19PR009', 'Very Good', 'Very Good', 'Good', 'Very Good', 'Good', 'Fair'),
+('19SE010', 'Very Good', 'Very Good', 'Good', 'Very Good', 'Very Good', 'Fair'),
+('19SE011', 'Very Good', 'Very Good', 'Good', 'Very Good', 'Very Good', 'Fair'),
+('19SE012', 'Very Good', 'Fair', 'Good', 'Good', 'Fair', 'No Knowledge'),
+('19SE013', 'Very Good', 'Very Good', 'Fair', 'Very Good', 'Very Good', 'No Knowledge');
 
 -- --------------------------------------------------------
 
@@ -334,9 +568,6 @@ CREATE TABLE `lp_category` (
 --
 
 INSERT INTO `lp_category` (`INDEX_NUMBER`, `CATEGORY`) VALUES
-('19PR002', 1),
-('19PR003', 0),
-('19PR010', 3),
 ('19PR011', 0);
 
 -- --------------------------------------------------------
@@ -426,9 +657,9 @@ CREATE TABLE `professional_qualifications` (
   `INDEX_NUMBER` varchar(100) NOT NULL,
   `ROW_NUMBER` varchar(10) NOT NULL,
   `INSTITUTION` varchar(200) NOT NULL,
-  `FROM` int(11) NOT NULL,
-  `TO` int(11) NOT NULL,
-  `DURATION` int(11) NOT NULL,
+  `FROM` varchar(11) NOT NULL,
+  `TO` varchar(11) NOT NULL,
+  `DURATION` varchar(11) NOT NULL,
   `TYPE_OF_QUALIFICATION` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -437,32 +668,50 @@ CREATE TABLE `professional_qualifications` (
 --
 
 INSERT INTO `professional_qualifications` (`INDEX_NUMBER`, `ROW_NUMBER`, `INSTITUTION`, `FROM`, `TO`, `DURATION`, `TYPE_OF_QUALIFICATION`) VALUES
-('19PR002', '1', '', 0, 0, 0, ''),
-('19PR002', '2', '', 0, 0, 0, ''),
-('19PR003', '1', '', 0, 0, 0, ''),
-('19PR003', '2', '', 0, 0, 0, ''),
-('19SE004', '1', 'last', 0, 0, 0, 'last'),
-('19SE004', '2', 'last', 0, 0, 0, 'last'),
-('19SE005', '1', 'last', 0, 0, 0, 'last'),
-('19SE005', '2', 'last', 0, 0, 0, 'last'),
-('19SE006', '1', 'finalcut', 0, 0, 0, 'finalcut'),
-('19SE006', '2', 'finalcut', 0, 0, 0, 'finalcut'),
-('19SE006', '3', 'finalcut', 0, 0, 0, 'finalcut'),
-('19PR006', '1', 'finalcut', 0, 0, 0, 'finalcut'),
-('19PR006', '2', 'finalcut', 0, 0, 0, 'finalcut'),
-('19PR006', '3', 'finalcut', 0, 0, 0, 'finalcut'),
-('19SE008', '1', 'dinithi', 0, 0, 0, 'dinithi'),
-('19SE008', '2', 'dinithi', 0, 0, 0, 'dinithi'),
-('19SE008', '3', 'dinithi', 0, 0, 0, 'dinithi'),
-('19SE0068', '1', 'dinithi', 0, 0, 0, 'dinithi'),
-('19SE0068', '2', 'dinithi', 0, 0, 0, 'dinithi'),
-('19SE0068', '3', 'dinithi', 0, 0, 0, 'dinithi'),
-('19PR010', '1', 'institution1', 0, 0, 0, 'qualification1'),
-('19PR010', '2', 'institution2', 0, 0, 0, 'qualification2'),
-('19PR010', '3', 'institution3', 0, 0, 0, 'qualification3'),
-('19PR011', '1', 'insti', 0, 0, 0, 'insti'),
-('19PR011', '2', 'insti', 0, 0, 0, 'insti'),
-('19PR011', '3', 'insti', 0, 0, 0, 'insti');
+('19PR001', '1', 'INSTITUTION1', '2007', '2008', '12', 'WORKED AS MANAGER'),
+('19PR001', '2', 'INSTITUTION2', '2009', '2010', '10', 'WORKED AS ASSISTANT'),
+('19PR001', '3', 'INSTITUTION3', '2008', '2010', '18', 'WORKD AS DIRECTOR'),
+('19SE000', '1', 'INSTITUTE1', '2004', '2005', '12', 'WORKED AS MANAGER'),
+('19SE000', '2', 'INSTITUTE2', '2005', '2006', '12', 'WORKED AS ASSISTANT MANAGER'),
+('19SE000', '3', 'INSTITUTE3', '2006', '2007', '12', 'WORKED AS TREASURE'),
+('19PR002', '1', 'INSTITUTE1', '2005', '2006', '12', 'SENIOR ASSISTANT'),
+('19PR002', '2', 'INSTITUTE2', '2007', '2006', '10', 'MANAGEMENT ASSISTANT'),
+('19PR002', '3', 'INSTITUTE3', '2008', '2009', '10', 'MANAGER'),
+('19SE003', '1', 'INSTITUTE1', '2008', '2009', '8', 'ASSISTANT LECTURER'),
+('19SE003', '2', 'INSTITUTE2', '2009', '2010', '9', 'LECTURER'),
+('19SE003', '3', 'INSTITUTE3', '2010', '2011', '10', 'LECTURER'),
+('19PR004', '1', 'INSTITUTION1', '2009', '2010', '10', 'SUPERVISOR'),
+('19PR004', '2', 'INSTITUTION2', '2010', '2011', '11', 'LECTURER'),
+('19PR004', '3', 'INSTITUTION3', '2011', '2012', '12', 'MANAGER'),
+('19SE005', '1', 'INSTITUTE1', '2006', '2007', '10', 'WORD AS MANAGER'),
+('19SE005', '2', 'INSTITUTE2', '2007', '2008', '11', 'WORKED AS DESIGNMER'),
+('19SE005', '3', 'INSTITUTE3', '2008', '2009', '12', 'WORKED AS  MANAGER'),
+('19SE006', '1', 'INSTITUTION1', '2008', '2009', '06', 'WORKED AS MANAGER'),
+('19SE006', '2', 'INSTITUTION2', '2009', '2010', '12', 'WORKED AS DIRESCTOR'),
+('19SE006', '3', 'INSTITUTION3', '2010', '2011', '10', 'WORKED AS ACCOUNTANT'),
+('19SE007', '1', 'INSTITUTION1', '2013', '2014', '10', 'WORKED AS ACCOUNTING'),
+('19SE007', '2', 'INSTITUTION2', '2014', '2015', '12', 'LECTURER'),
+('19SE007', '3', 'INSTITUTION3', '2016', '2017', '08', 'LECTURER'),
+('19SE008', '1', 'INSTITUTION1', '2013', '2014', '10', 'WORKED AS ACCOUNTING'),
+('19SE008', '2', 'INSTITUTION2', '2014', '2015', '12', 'LECTURER'),
+('19SE008', '3', 'INSTITUTION3', '2016', '2017', '08', 'LECTURER'),
+('19PR009', '1', 'INTSITUTE1', '2001', '2002', '10', 'WORKED AS MANAGER'),
+('19PR009', '2', 'INTSITUTE2', '2002', '2003', '08', 'WORKED AS DEVELOPER'),
+('19PR009', '3', 'INTSITUTE3', '2004', '2005', '06', 'WORKED AS ASSIATANA'),
+('19SE010', '1', 'INSTITUTION1', '2004', '2005', '06', 'WORKED AS MANAGER'),
+('19SE010', '2', 'INSTITUTION2', '2005', '2006', '10', 'WORKED AS ACCOUNTING'),
+('19SE010', '3', 'INSTITUTION3', '2007', '2009', '11', 'WORKED AS LECTURER'),
+('19SE011', '1', 'INSTITUTE1', '2005', '2006', '10', 'WORKED AS MANAGER'),
+('19SE011', '2', 'INSTITUTE2', '2006', '2007', '05', 'WORKED AS PRESIDENT'),
+('19SE011', '3', 'INSTITUTE3', '2008', '2009', '18', 'WORKED AS LECTURE'),
+('19SE012', '1', 'INSTITUTION1', '2001', '2003', '10', 'WORKED AS MANAGER'),
+('19SE012', '2', 'INSTITUTION2', '2005', '2006', '09', 'WORKED AS DESIGNER'),
+('19SE012', '3', 'INSTITUTION3', '2006', '2007', '08', 'WORKED AS ASSISTANT'),
+('19SE013', '1', 'INSTITUTE1', '2004', '2005', '12', 'WORK AS MANAGER'),
+('19SE013', '2', 'INSTITUTE2', '2005', '2006', '10', 'WORK AS DEVELOPER'),
+('19SE013', '3', 'INSTITUTE3', '2007', '2008', '08', 'WORK AS DESIGNER');
+
+
 
 -- --------------------------------------------------------
 
@@ -485,26 +734,52 @@ CREATE TABLE `referees` (
 --
 
 INSERT INTO `referees` (`INDEX_NUMBER`, `ROW_NUMBER`, `NAME`, `DESIGNATION`, `ADDRESS`, `EMAIL`, `CONTACT_NO`) VALUES
-('19SE006', '1', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut'),
-('19SE006', '2', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut'),
-('19SE006', '3', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut'),
-('19PR006', '1', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut'),
-('19PR006', '2', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut'),
-('19PR006', '3', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut'),
-('19SE008', '1', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
-('19SE008', '2', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
-('19SE008', '3', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
-('19SE0068', '1', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
-('19SE0068', '2', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
-('19SE0068', '3', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi'),
-('19PR010', '1', 'name1', 'designation1', 'address1', 'email1', 'contact1'),
-('19PR010', '2', 'name2', 'designation2', 'address2', 'email2', 'contact2'),
-('19PR010', '3', 'name3', 'designation3', 'address3', 'email3', 'contact3'),
-('19PR011', '1', 'insti', 'insti', 'insti', 'insti', 'insti'),
-('19PR011', '2', 'insti', 'insti', 'insti', 'insti', 'insti'),
-('19PR011', '3', 'insti', 'insti', 'insti', 'insti', 'insti');
+('19PR001', '1', 'THISUN BUDDIKA', 'MANAGER', 'NAWAM MAWATHA,GALLE', 'thisun@gmail.com', '0775623568'),
+('19PR001', '2', 'UDESH DE SILVA', 'DIRECTOR', 'PAMUNUWA, MAHARAGAMA', 'udesh@gmail.com', '0752356998'),
+('19PR001', '3', 'MALAKE PERERA', 'LECTURER', 'MAHARA,KADAWATHA', 'malaka@gmail.com', '0775623658'),
+('19SE000', '1', 'KASUN MENDIS', 'MANAGER', 'AGULANA,MAHARAGAMA', 'kasun@gmail.com', '0772308519'),
+('19SE000', '2', 'AMAL PERERA', 'DIRECTOR', 'GOTHATUWA, ANGODA', 'amal@gmail.com', '0771234567'),
+('19SE000', '3', 'SANDEEP PERERA', 'LECTURER', 'HOMADOLA, NAWALA', 'sandeep@gmail.com', '0712308519'),
+('19PR002', '1', 'KASUN MENDIS', 'MANAGER', 'AGULANA,MAHARAGAMA', 'kasun@gmail.com', '0772308519'),
+('19PR002', '2', 'AMAL PERERA', 'DIRECTOR', 'GOTHATUWA, ANGODA', 'amal@gmail.com', '0771234567'),
+('19PR002', '3', 'SANDEEP PERERA', 'LECTURER', 'HOMADOLA, NAWALA', 'sandeep@gmail.com', '0712308519'),
+('19SE003', '1', 'KASUN PERERA', 'MANAGER', 'AGULANA,MAHARAGAMA', 'kasun@gmail.com', '0772308519'),
+('19SE003', '2', 'AMAL MENDIS', 'DIRECTOR', 'GOTHATUWA, ANGODA', 'amal@gmail.com', '0771234567'),
+('19SE003', '3', 'SANDEEP SILVA', 'LECTURER', 'HOMADOLA, NAWALA', 'sandeep@gmail.com', '0712308519'),
+('19PR004', '1', 'KASUN MENDIS', 'MANAGER', 'AGULANA,MAHARAGAMA', 'kasun@gmail.com', '0772308519'),
+('19PR004', '2', 'AMAL PERERA', 'DIRECTOR', 'GOTHATUWA, ANGODA', 'amal@gmail.com', '0771234567'),
+('19PR004', '3', 'SANDEEP SILVA', 'LECTURER', 'HOMADOLA, NAWALA', 'sandeep@gmail.com', '0712308519'),
+('19SE005', '1', 'KASUN MENDIS', 'MANAGER', 'AGULANA,MAHARAGAMA', 'kasun@gmail.com', '0772308519'),
+('19SE005', '2', 'AMAL PERERA', 'DIRECTOR', 'GOTHATUWA, ANGODA', 'amal@gmail.com', '0771234567'),
+('19SE005', '3', 'SANDEEP PERERA', 'LECTURER', 'HOMADOLA, NAWALA', 'sandeep@gmail.com', '0712308519'),
+('19SE006', '1', 'KASUN MENDIS', 'MANAGER', 'AGULANA,MAHARAGAMA', 'kasun@gmail.com', '0772308519'),
+('19SE006', '2', 'AMAL PERERA', 'DIRECTOR', 'GOTHATUWA, ANGODA', 'amal@gmail.com', '0771234567'),
+('19SE006', '3', 'SANDEEP PERERA', 'LECTURER', 'HOMADOLA, NAWALA', 'sandeep@gmail.com', '0712308519'),
+('19SE007', '1', 'KASUN MENDIS', 'MANAGER', 'AGULANA,MAHARAGAMA', 'kasun@gmail.com', '0772308519'),
+('19SE007', '2', 'AMAL PERERA', 'DIRECTOR', 'GOTHATUWA, ANGODA', 'amal@gmail.com', '0771234567'),
+('19SE007', '3', 'SANDEEP PERERA', 'LECTURER', 'HOMADOLA, NAWALA', 'sandeep@gmail.com', '0712308519'),
+('19SE008', '1', 'KASUN MENDIS', 'MANAGER', 'AGULANA,MAHARAGAMA', 'kasun@gmail.com', '0772308519'),
+('19SE008', '2', 'AMAL PERERA', 'DIRECTOR', 'GOTHATUWA, ANGODA', 'amal@gmail.com', '0771234567'),
+('19SE008', '3', 'SANDEEP PERERA', 'LECTURER', 'HOMADOLA, NAWALA', 'sandeep@gmail.com', '0712308519'),
+('19PR009', '1', 'KASUN MENDIS', 'MANAGER', 'AGULANA,MAHARAGAMA', 'kasun@gmail.com', '0772308519'),
+('19PR009', '2', 'AMAL PERERA', 'DIRECTOR', 'GOTHATUWA, ANGODA', 'amal@gmail.com', '0771234567'),
+('19PR009', '3', 'SANDEEP PERERA', 'LECTURER', 'HOMADOLA, NAWALA', 'sandeep@gmail.com', '0712308519'),
+('19SE010', '1', 'KASUN PATHUM', 'MANAGER', 'AGULANA,MAHARAGAMA', 'kasun@gmail.com', '0772308519'),
+('19SE010', '2', 'AMAL SILVA', 'DIRECTOR', 'GOTHATUWA, ANGODA', 'amal@gmail.com', '0771234567'),
+('19SE010', '3', 'SANDEEP VIMANTHA', 'LECTURER', 'HOMADOLA, NAWALA', 'sandeep@gmail.com', '0712308519'),
+('19SE011', '1', 'KASUN PERERA', 'MANAGER', 'AGULANA,MAHARAGAMA', 'kasun@gmail.com', '0772308519'),
+('19SE011', '2', 'AMAL SILVA', 'DIRECTOR', 'GOTHATUWA, ANGODA', 'amal@gmail.com', '0771234567'),
+('19SE011', '3', 'SANDEEP PERERA', 'LECTURER', 'HOMADOLA, NAWALA', 'sandeep@gmail.com', '0712308519'),
+('19SE012', '1', 'RAHAL MENDIS', 'MANAGER', 'AGULANA,MAHARAGAMA', 'kasun@gmail.com', '0772308519'),
+('19SE012', '2', 'VIMAL PERERA', 'DIRECTOR', 'GOTHATUWA, ANGODA', 'amal@gmail.com', '0771234567'),
+('19SE012', '3', 'VIDUSHAN VIMANTHA', 'LECTURER', 'HOMADOLA, NAWALA', 'sandeep@gmail.com', '0712308519'),
+('19SE013', '1', 'SEVANA MIHIRAN', 'MANAGER', 'AGULANA,MAHARAGAMA', 'kasun@gmail.com', '0772308519'),
+('19SE013', '2', 'VIMAL PERERA', 'DIRECTOR', 'GOTHATUWA, ANGODA', 'amal@gmail.com', '0771234567'),
+('19SE013', '3', 'SANDEEP SILVA', 'LECTURER', 'HOMADOLA, NAWALA', 'sandeep@gmail.com', '0712308519');
+
 
 -- --------------------------------------------------------
+
 
 --
 -- Table structure for table `secondary_educational_details`
@@ -514,10 +789,10 @@ CREATE TABLE `secondary_educational_details` (
   `INDEX_NUMBER` varchar(100) NOT NULL,
   `ROW_NUMBER` varchar(10) NOT NULL,
   `SCHOOL_NAME` varchar(200) NOT NULL,
-  `FROM` int(11) NOT NULL,
-  `TO` int(11) NOT NULL,
+  `FROM` varchar(11) NOT NULL,
+  `TO` varchar(11) NOT NULL,
   `EXAMINATION_PASSED` varchar(200) NOT NULL,
-  `YEAR` int(11) NOT NULL
+  `YEAR` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -525,30 +800,63 @@ CREATE TABLE `secondary_educational_details` (
 --
 
 INSERT INTO `secondary_educational_details` (`INDEX_NUMBER`, `ROW_NUMBER`, `SCHOOL_NAME`, `FROM`, `TO`, `EXAMINATION_PASSED`, `YEAR`) VALUES
-('19SE005', '1', 'last', 0, 0, 'last', 0),
-('19SE005', '2', 'last', 0, 0, 'last', 0),
-('19SE005', '3', 'last', 0, 0, 'last', 0),
-('19SE005', '4', 'last', 0, 0, 'last', 0),
-('19SE006', '1', 'finalcut', 0, 0, 'finalcut', 0),
-('19SE006', '2', 'finalcut', 0, 0, 'finalcut', 0),
-('19SE006', '3', 'finalcut', 0, 0, 'finalcut', 0),
-('19SE006', '4', 'finalcut', 0, 0, 'finalcut', 0),
-('19SE008', '1', 'dinithi', 0, 0, 'dinithi', 0),
-('19SE008', '2', 'dinithi', 0, 0, 'dinithi', 0),
-('19SE008', '3', 'dinithi', 0, 0, 'dinithi', 0),
-('19SE008', '4', 'dinithi', 0, 0, 'dinithi', 0),
-('19SE0068', '1', 'dinithi', 0, 0, 'dinithi', 0),
-('19SE0068', '2', 'dinithi', 0, 0, 'dinithi', 0),
-('19SE0068', '3', 'dinithi', 0, 0, 'dinithi', 0),
-('19SE0068', '4', 'dinithi', 0, 0, 'dinithi', 0),
-('19PR010', '1', 'school name1', 0, 0, 'exam passed1', 0),
-('19PR010', '2', 'school name2', 0, 0, 'exam passed2', 0),
-('19PR010', '3', 'school name3', 0, 0, 'exam passed3', 0),
-('19PR010', '4', 'school name4', 0, 0, 'exam passed4', 0),
-('19PR011', '1', 'school', 0, 0, 'school', 0),
-('19PR011', '2', 'school', 0, 0, 'school', 0),
-('19PR011', '3', 'school', 0, 0, 'school', 0),
-('19PR011', '4', 'school', 0, 0, 'school', 0);
+('19PR001', '1', 'MAHANAMA COLLEGE', '1880', '1893', 'GRADE 5 SCHOLARSHIP', '1885'),
+('19PR001', '2', 'MAHANAMA COLLEGE', '1880', '1893', 'GCE O/L EXAMINATION', '1890'),
+('19PR001', '3', 'MAHANAMA COLLEGE', '1880', '1893', 'GEC A/L EXAMINATION', '1893'),
+('19PR001', '4', '', '', '', '', ''),
+('19SE000', '1', 'NALANDA COLLEGE', '2000', '2004', 'GRADE 5 SCHOLARSHIP EXAMINATION', '2004'),
+('19SE000', '2', 'ROYAL COLLEGE', '2005', '2009', 'GCE O/L EXAMINATION', '2009'),
+('19SE000', '3', 'ANANDA COLLEGE', '2010', '2013', 'GCE A/L EXAMINATION', '2013'),
+('19SE000', '4', '', '', '', '', ''),
+('19PR002', '1', 'PRINCE OF WALES', '2001', '2005', 'GRADE 5 SCHOLARSHIP', '2005'),
+('19PR002', '2', 'RICHMOND COLLEGE', '2005', '2010', 'GCE OL EXAMINATION', '2010'),
+('19PR002', '3', 'ANANDA COLLEGE', '2010', '2013', 'GCE AL EXAMINATION', '2013'),
+('19PR002', '4', '', '', '', '', ''),
+('19SE003', '1', 'NALANDA COLLEGE', '2000', '2004', 'GRADE 5 SCHOOLARSHIP', '2004'),
+('19SE003', '2', 'NALANDA COLLEGE', '2005', '2010', 'GCE OL EXAMINATION', '2010'),
+('19SE003', '3', 'NALANDA COLLEGE', '2010', '2013', 'GCE AL EXAMINATION', '2013'),
+('19SE003', '4', '', '', '', '', ''),
+('19PR004', '1', 'MAHANAMA COLLEGE', '2000', '2004', 'GRADE 5 SCHOLARSHIP', '2004'),
+('19PR004', '2', 'MAHANAMA COLLEGE', '2005', '2009', 'GCE OL EXAMINATION', '2010'),
+('19PR004', '3', 'MAHANAMA COLLEGE', '2011', '2013', 'GCE AL EXAMINATION', '2013'),
+('19PR004', '4', '', '', '', '', ''),
+('19SE005', '1', 'CENTRAL COLLEGE, MAHARA', '2000', '2004', 'GRADE 5 SCHOLARSHIP', '2004'),
+('19SE005', '2', 'CENTRAL COLLEGE, MAHARA', '2005', '2010', 'GCE OL EXAMINATION', '2010'),
+('19SE005', '3', 'CENTRAL COLLEGE, MAHARA', '2010', '2013', 'GCE AL EXAMINATION', '2013'),
+('19SE005', '4', '', '', '', '', ''),
+('19SE006', '1', 'WEERAKETIYA CENTRAL', '2000', '2013', 'GEADE 5 SCHOLARSHIP', '2005'),
+('19SE006', '2', 'WEERAKETIYA CENTRAL', '2000', '2013', 'GCE OL EXAMINATION', '2010'),
+('19SE006', '3', 'WEERAKETIYA CENTRAL', '2000', '2013', 'GCE AL EXAMINATION', '2013'),
+('19SE006', '4', '', '', '', '', ''),
+('19SE007', '1', 'ZAHIRA COLLEGE', '2001', '2005', 'GRADE 5 SCHOOLARSHIP', '2005'),
+('19SE007', '2', 'ZAHIRA COLLEGE', '2005', '2010', 'GCE OL EXAMINATION', '2010'),
+('19SE007', '3', 'ZAHIRA COLLEGE', '2010', '2013', 'GCE AL EXAMINATION', '2013'),
+('19SE007', '4', '', '', '', '', ''),
+('19SE008', '1', 'ZAHIRA COLLEGE', '2001', '2005', 'GRADE 5 SCHOOLARSHIP', '2005'),
+('19SE008', '2', 'ZAHIRA COLLEGE', '2005', '2010', 'GCE OL EXAMINATION', '2010'),
+('19SE008', '3', 'ZAHIRA COLLEGE', '2010', '2013', 'GCE AL EXAMINATION', '2013'),
+('19SE008', '4', '', '', '', '', ''),
+('19PR009', '1', 'RICHMOND COLLEGE', '2000', '2004', 'GRADE 5 SCHOOLARSHIP', '2004'),
+('19PR009', '2', 'RICHMOND COLLEGE', '2005', '2010', 'GCE OL EXAMINATION', '2010'),
+('19PR009', '3', 'RICHMOND COLLEGE', '2010', '2013', 'GCE AL EXAMINATION', '2013'),
+('19PR009', '4', '', '', '', '', ''),
+('19SE010', '1', 'RAHULA COLLEGE', '2000', '2004', 'GRADE 5 SCHOLARSHIP', '2004'),
+('19SE010', '2', 'RAHULA COLLEGE', '2005', '2010', 'GCE OL EXAMINATION', '2010'),
+('19SE010', '3', 'RAHULA COLLEGE', '2010', '2013', 'GCE AL EXAMINATION', '2013'),
+('19SE010', '4', '', '', '', '', ''),
+('19SE011', '1', 'KANNANGARA VIDYALAYA', '2000', '2013', 'GRADE 5 SCHOOLARSHIP', '2004'),
+('19SE011', '2', 'KANNANGARA VIDYALAYA', '2000', '2013', 'GCE OL EXAMINATION', '2010'),
+('19SE011', '3', 'KANNANGARA VIDYALAYA', '2000', '2013', 'OGE AL EXAMINATION', '2013'),
+('19SE011', '4', '', '', '', '', ''),
+('19SE012', '1', 'MAHINDA COLLEGE', '2001', '2014', 'GRADE 5 SCHOLARSHIP', '2014'),
+('19SE012', '2', 'MAHINDA COLLEGE', '2001', '2014', 'GCE OL EXAMINATION', '2014'),
+('19SE012', '3', 'MAHINDA COLLEGE', '2001', '2014', 'GCE AL EXAMINATION', '2014'),
+('19SE012', '4', '', '', '', '', ''),
+('19SE013', '1', 'BOMIRIYA CENTRAL', '2000', '2013', 'GRADE 5 EXAMINATION', '2004'),
+('19SE013', '2', 'BOMIRIYA CENTRAL', '2000', '2013', 'GCE OL EXAMINATION', '2010'),
+('19SE013', '3', 'BOMIRIYA CENTRAL', '2000', '2013', 'GCE AL EXAMINATION', '2013'),
+('19SE013', '4', '', '', '', '', '');
+
 
 -- --------------------------------------------------------
 
@@ -568,8 +876,6 @@ CREATE TABLE `sl_selected` (
 INSERT INTO `sl_selected` (`INDEX_NUMBER`, `SELECTED`) VALUES
 ('19SE000', 1),
 ('19SE001', 0),
-('19SE004', 0),
-('19SE005', 1),
 ('19SE006', 1),
 ('19SE0068', 1);
 
@@ -666,57 +972,77 @@ CREATE TABLE `specialization_area_for_applicant` (
 --
 
 INSERT INTO `specialization_area_for_applicant` (`INDEX_NUMBER`, `SPECIFICATION_AREA_NAME`) VALUES
+('19PR001', 'Software Engineering'),
+('19PR001', 'Data Science'),
+('19PR001', 'Operating systems'),
+('19PR001', 'Software Verification and Quality Assurance'),
+('19PR001', 'Enterprise application\r\ndevelopment'),
+('19SE000', 'Software Engineering'),
+('19SE000', 'Information Systems Security,'),
+('19SE000', 'Artificial Neural Networks'),
+('19SE000', 'Data Science'),
+('19SE000', 'Software Verification and Quality Assurance'),
+('19SE000', 'Enterprise application\r\ndevelopment'),
+('19SE000', 'IT Project management'),
+('19PR002', 'Software Engineering'),
+('19PR002', 'Information Systems Security,'),
+('19PR002', 'Computer Networks'),
+('19PR002', 'Grid Computing'),
+('19SE003', 'Software Engineering'),
+('19SE003', 'Computer Networks'),
+('19SE003', 'Grid Computing'),
+('19SE003', 'Artificial Neural Networks'),
+('19PR004', 'Software Engineering'),
+('19PR004', 'Information Systems Security,'),
+('19PR004', 'Computer Networks'),
+('19PR004', 'Grid Computing'),
+('19SE005', 'Software Engineering'),
+('19SE005', 'Information Systems Security,'),
+('19SE005', 'Computer Networks'),
+('19SE005', 'Grid Computing'),
+('19SE005', 'Artificial Neural Networks'),
 ('19SE006', 'Software Engineering'),
+('19SE006', 'Information Systems Security,'),
 ('19SE006', 'Computer Networks'),
+('19SE006', 'Grid Computing'),
 ('19SE006', 'Artificial Neural Networks'),
-('19SE006', 'Data Science'),
-('19SE006', 'Operating systems'),
-('19SE006', 'Enterprise application\r\ndevelopment'),
-('19SE006', 'Computer Graphics and Vision'),
-('19SE006', 'optional 5'),
-('19PR006', 'Software Engineering'),
-('19PR006', 'Information Systems Security,'),
-('19PR006', 'Computer Networks'),
-('19PR006', 'Grid Computing'),
-('19PR006', 'Artificial Neural Networks'),
-('19PR006', 'Enterprise application\r\ndevelopment'),
-('19PR006', 'IT Project management'),
-('19PR006', 'Computer Graphics and Vision'),
-('19PR006', 'Computer Architecture & Engineering'),
-('19PR006', 'optional 5'),
+('19SE007', 'Software Engineering'),
+('19SE007', 'Information Systems Security,'),
+('19SE007', 'Computer Networks'),
+('19SE007', 'Grid Computing'),
+('19SE007', 'IT Project management'),
+('19SE007', 'Computer Graphics and Vision'),
+('19SE007', 'Computer Architecture & Engineering'),
 ('19SE008', 'Software Engineering'),
+('19SE008', 'Information Systems Security,'),
 ('19SE008', 'Computer Networks'),
-('19SE008', 'Artificial Neural Networks'),
-('19SE008', 'Data Science'),
-('19SE008', 'Operating systems'),
-('19SE008', 'Enterprise application\r\ndevelopment'),
+('19SE008', 'Grid Computing'),
+('19SE008', 'IT Project management'),
 ('19SE008', 'Computer Graphics and Vision'),
-('19SE008', 'optional 5'),
-('19SE0068', 'Software Engineering'),
-('19SE0068', 'Computer Networks'),
-('19SE0068', 'Artificial Neural Networks'),
-('19SE0068', 'Data Science'),
-('19SE0068', 'Operating systems'),
-('19SE0068', 'Enterprise application\r\ndevelopment'),
-('19SE0068', 'Computer Graphics and Vision'),
-('19SE0068', 'optional 5'),
-('19PR010', 'Software Engineering'),
-('19PR010', 'Computer Networks'),
-('19PR010', 'Artificial Neural Networks'),
-('19PR010', 'Data Science'),
-('19PR010', 'Operating systems'),
-('19PR010', 'Enterprise application\r\ndevelopment'),
-('19PR010', 'Computer Graphics and Vision'),
-('19PR010', 'optional 5'),
-('19PR011', 'Software Engineering'),
-('19PR011', 'Information Systems Security,'),
-('19PR011', 'Computer Networks'),
-('19PR011', 'Computer Graphics and Vision'),
-('19PR011', 'Computer Architecture & Engineering'),
-('19PR011', 'optional 5');
+('19SE008', 'Computer Architecture & Engineering'),
+('19PR009', 'Software Engineering'),
+('19PR009', 'Artificial Neural Networks'),
+('19PR009', 'Operating systems'),
+('19PR009', 'IT Project management'),
+('19SE010', 'Human-Computer Interaction'),
+('19SE010', 'Data Science'),
+('19SE010', 'Operating systems'),
+('19SE010', 'Software Verification and Quality Assurance'),
+('19SE011', 'Software Engineering'),
+('19SE011', 'Information Systems Security,'),
+('19SE011', 'Computer Networks'),
+('19SE011', 'Data Science'),
+('19SE011', 'Operating systems'),
+('19SE012', 'Computer Networks'),
+('19SE012', 'Grid Computing'),
+('19SE012', 'Data Science'),
+('19SE012', 'Operating systems'),
+('19SE013', 'Software Engineering'),
+('19SE013', 'Computer Networks'),
+('19SE013', 'Data Science'),
+('19SE013', 'Operating systems');
 
 -- --------------------------------------------------------
-
 --
 -- Table structure for table `temporary_index_number_for_applicants`
 --
@@ -732,23 +1058,24 @@ CREATE TABLE `temporary_index_number_for_applicants` (
 --
 
 INSERT INTO `temporary_index_number_for_applicants` (`INDEX_NUMBER`, `USERNAME`, `FULL_NAME`) VALUES
-('19pr000', 'naveen@gmail.com', 'naveen'),
-('19SE003', 'tharindu@gmail.com', 'tharindu nuwan'),
-('19002', 'ruwaneeee@gmail.com', 'chathura'),
-('19003', 'nuwan1@gmail.com', 'nuwan'),
-('19004', 'operatollr@gmail.com', 'kasun mendis'),
-('19005', 'ruwadn@gmail.com', 'nuwan'),
-('19006', 'ruwan1111@gmail.com', 'kasun mendis'),
-('19007', 'ruwan11s11@gmail.com', 'kasun mendis'),
-('19008', 'ruwan111221@gmail.com', 'kasun mendis'),
-('19009', 'dinithi@gmail.com', 'dinithi'),
-('19PR010', 'santhush@gmail.com', 'santhush'),
-('19PR011', 'namal@gmail.com', 'namal'),
-('19012', 'kkk@gmail.com', 'kkk'),
-('19013', 'aaaa@gmail.com', 'aaa'),
-('19014', 'aaaaa@gmail.com', 'aaa'),
-('19015', 'aaaaaaaa@gmail.gom', 'aaaa'),
-('19016', 'dinithi@gmail.com', 'Dinithi Nisansa Wickramaratne');
+('19000', 'kamal@gmail.com', 'kamal deshapriya'),
+('19001', 'kamal@gmail.com', 'kamal deshapriya'),
+('19PR001', 'kasun@gmail.com', 'kasun mendis'),
+('19003', 'nalin@gmail.com', 'nalin perera'),
+('19004', 'supun@gmail.com', 'supun malaka'),
+('19PR002', 'dinesh@gmail.com', 'dinesh lakmal'),
+('19SE003', 'sajith@gmail.com', 'sajith nawalage'),
+('19PR004', 'dilum@gmail.com', 'dilum sanjeewa'),
+('19SE005', 'sithum@gmail.com', 'situm maleesha'),
+('19SE006', 'senith@gmail.com', 'senith harshana'),
+('19SE008', 'dilan@gmail.com', 'dilan sathsara'),
+('19PR009', 'pahan@gmail.com', 'pahan sanjeewa'),
+('19SE010', 'pawan@gmail.com', 'pawan liyanage'),
+('19SE011', 'pathum@gmail.com', 'pathum dilshan'),
+('19SE012', 'suwin@gmail.com', 'suwin vidula'),
+('19SE013', 'pasan@gmail.com', 'pasan palpita');
+
+
 
 -- --------------------------------------------------------
 
@@ -774,6 +1101,7 @@ INSERT INTO `users` (`USERNAME`, `PASSWORD`, `USER_TYPE`, `NAME`) VALUES
 ('david@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'david cameron'),
 ('dian@gmail.com', '202cb962ac59075b964b07152d234b70', 'Applicant', 'dian'),
 ('dinithi@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Applicant', 'Dinithi Nisansa Wickramaratne'),
+('diniwick124123@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Applicant', 'Dinithi Nisansa Wickramaratne'),
 ('diniwick124@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Dinithi Wickramaratne'),
 ('diniwicksdfsdfsfssdf124@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Dinithi Wickramaratne'),
 ('diniwiwerck124@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Dinithi Wickramaratne'),
@@ -820,15 +1148,20 @@ INSERT INTO `users` (`USERNAME`, `PASSWORD`, `USER_TYPE`, `NAME`) VALUES
 CREATE TABLE `vacancies` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `dead_line` date NOT NULL
+  `dead_line` date NOT NULL,
+  `specialization_requirements` text NOT NULL,
+  `comments` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `vacancies`
 --
 
-INSERT INTO `vacancies` (`id`, `name`, `dead_line`) VALUES
-(1, 'test', '2019-01-02');
+INSERT INTO `vacancies` (`id`, `name`, `dead_line`, `specialization_requirements`, `comments`) VALUES
+(1, 'test', '2019-01-02', '', ''),
+(2, 'seniorLecOne', '2019-01-31', '', ''),
+(3, 'Senior Lecturer Grade I', '2019-01-30', '', 'Any notes here... '),
+(4, 'Probationary Lecture', '2019-02-01', '', 'Any notes here... ');
 
 --
 -- Indexes for dumped tables
@@ -851,6 +1184,19 @@ ALTER TABLE `applicants`
 --
 ALTER TABLE `basic_personal_details`
   ADD PRIMARY KEY (`INDEX_NUMBER`);
+
+--
+-- Indexes for table `candidates_interviews`
+--
+ALTER TABLE `candidates_interviews`
+  ADD PRIMARY KEY (`INDEX_NUMBER`);
+
+--
+-- Indexes for table `created_ad`
+--
+ALTER TABLE `created_ad`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `vacancy_id` (`vacancy_id`);
 
 --
 -- Indexes for table `file_upload_links`
@@ -895,7 +1241,7 @@ ALTER TABLE `marking_field_heading`
 -- Indexes for table `sl_selected`
 --
 ALTER TABLE `sl_selected`
-  ADD KEY `INDEX_NUMBER` (`INDEX_NUMBER`);
+  ADD PRIMARY KEY (`INDEX_NUMBER`);
 
 --
 -- Indexes for table `sl_selected_gradei`
@@ -945,6 +1291,11 @@ ALTER TABLE `vacancies`
 ALTER TABLE `advertisement`
   MODIFY `adid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
+-- AUTO_INCREMENT for table `created_ad`
+--
+ALTER TABLE `created_ad`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
 -- AUTO_INCREMENT for table `file_upload_links`
 --
 ALTER TABLE `file_upload_links`
@@ -988,10 +1339,22 @@ ALTER TABLE `specializationarea`
 -- AUTO_INCREMENT for table `vacancies`
 --
 ALTER TABLE `vacancies`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `candidates_interviews`
+--
+ALTER TABLE `candidates_interviews`
+  ADD CONSTRAINT `fk_int_can` FOREIGN KEY (`INDEX_NUMBER`) REFERENCES `basic_personal_details` (`INDEX_NUMBER`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `created_ad`
+--
+ALTER TABLE `created_ad`
+  ADD CONSTRAINT `created_ad_ibfk_1` FOREIGN KEY (`vacancy_id`) REFERENCES `vacancies` (`id`);
 
 --
 -- Constraints for table `interview_panel`

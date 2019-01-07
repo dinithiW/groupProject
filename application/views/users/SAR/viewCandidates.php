@@ -90,6 +90,7 @@ $position = "";
                       <th>Professional Qualifications</th>
                       <th>Other Qualifications</th>
                       <th>Specializations</th>
+                       <th>Change Category</th>
                       
                       <th class="text-center">Actions</th>
                     </tr>

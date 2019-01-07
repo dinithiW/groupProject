@@ -926,6 +926,8 @@ if(isset($this->session->userdata['logged_in'])){
                     </div><!-- end of the Higher Educational Details table-->
                     
                     <h5 id="note1">Note:The field name "Duration" in above table should be filled by number of months</h5>
+
+                    <h5 id="note1">Note:If selected others, Please specify the degree in the "Any other information that you need like to indicate" cage in last page</h5>
                 
                     <h5 id="note1">Note:Certified copies of the certificates and transcripts should be attached</h5>
                 
@@ -1281,6 +1283,8 @@ if(isset($this->session->userdata['logged_in'])){
                     
 
                     <h5 id="note1">Note:The field name "Duration" in above table should be filled by number of months</h5>
+
+                    <h5 id="note1">Note:If selected others, Please specify the degree in the "Any other information that you need like to indicate" cage in last page</h5>
                 
                     <h5 id="note1">Note:Certified copies of the certificates and transcripts should be attached</h5>
                 
@@ -1303,7 +1307,7 @@ if(isset($this->session->userdata['logged_in'])){
                                 <th>To</th>
                                 <th>Degree Obtained</th>
                                 <th>Duration</th>
-                                <th>Class</th>
+                
                                 <th>Year</th>
                                 <th>Index No</th>
                             </tr>
@@ -1638,6 +1642,8 @@ if(isset($this->session->userdata['logged_in'])){
                     </div><!-- end of the Higher Educational Details table-->
                     
                     <h5 id="note1">Note:The field name "Duration" in above table should be filled by number of months</h5>
+
+                    <h5 id="note1">Note:If selected others, Please specify the degree in the "Any other information that you need like to indicate" cage in last page</h5>
                 
                     <h5 id="note1">Note:Certified copies of the certificates and transcripts should be attached</h5>
                 

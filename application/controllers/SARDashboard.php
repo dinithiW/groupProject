@@ -85,12 +85,60 @@ class SARDashboard extends CI_Controller{
 
 	public function searchCandidates(){
 		$vacancy=$_POST['vacancy'];
+
 		$this->load->model('SAR/CandidatesModel');
 		$data['array']=$this->CandidatesModel->getAll($vacancy);
 		$data['position']=$vacancy;
 		$this->load->view('includes/header');
 		$this->load->view('users/SAR/viewcategorized',$data);
 		$this->load->view('includes/footer');
+
+	}
+	public function editCandidates($applicantID,$vacancy2){
+		$vacancy = str_replace("%20", " ", $vacancy2);
+		//$vacancy=$_POST['vacancy'];
+		$final=$_POST['result'];
+		//echo $vacancy;
+
+	//	echo $final;
+		//$aplicantID=$_POST['index'];
+		//echo $applicantID;
+		if ($vacancy=="Senior Lecturer Grade I selected" ||$vacancy=="Senior Lecturer Grade I not selected") {
+			//echo "hello";
+			# code...
+
+			$this->load->model('SAR/ApplicantsModel');
+			$this->ApplicantsModel->updateSLi($applicantID,$final);
+
+			$this->load->model('SAR/CandidatesModel');
+			$data['array']=$this->CandidatesModel->getAll($vacancy);
+			$data['position']=$vacancy;
+			$this->load->view('includes/header');
+			$this->load->view('users/SAR/viewcategorized',$data);
+			$this->load->view('includes/footer');
+		}
+		if ($vacancy=="Senior Lecturer Grade II selected" ||$vacancy=="Senior Lecturer Grade II not selected") {
+			# code...
+			$this->load->model('SAR/ApplicantsModel');
+			$this->ApplicantsModel->updateSLii($applicantID,$final);
+
+			$this->load->model('SAR/CandidatesModel');
+			$data['array']=$this->CandidatesModel->getAll($vacancy);
+			$data['position']=$vacancy;
+			$this->load->view('includes/header');
+			$this->load->view('users/SAR/viewcategorized',$data);
+			$this->load->view('includes/footer');
+		}else{
+			$this->load->model('SAR/ApplicantsModel');
+			$this->ApplicantsModel->updateLP($applicantID,$final);
+		
+			$this->load->model('SAR/CandidatesModel');
+			$data['array']=$this->CandidatesModel->getAll($vacancy);
+			$data['position']=$vacancy;
+			$this->load->view('includes/header');
+			$this->load->view('users/SAR/viewcategorized',$data);
+			$this->load->view('includes/footer');
+		}
 
 	}
 
