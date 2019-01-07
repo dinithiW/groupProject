@@ -41,11 +41,11 @@
         <label for="input-lg" class="input-lg">Select Category</label>
       </div>
 
-      <form action = "<?= base_url().'SAR/ViewMarks'?>" method = "post">
+     <form action = "<?= base_url().'SAR/ViewMarks'?>" method = "post">
       <div class = "row">
         <div class="form-group  col-xs-8 ">
         
-        <select class="form-control input-lg" id="selectBox" name = "dee">
+        <select class="form-control input-lg" id="selectBox" name = "vacancy">
            <!-- <select class="form-control input-lg" id="selectBox" onchange="changeFunc();"> -->
           <option value = "Senior Lecturer Grade I selected" >Senior Lecturer Grade I selected</option>
           <option value = "Senior Lecturer Grade I not selected" >Senior Lecturer Grade I not selected</option>
