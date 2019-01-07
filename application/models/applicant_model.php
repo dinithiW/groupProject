@@ -248,32 +248,29 @@ class applicant_model extends CI_Model
         $this->db->select("LAST_NAME");
         $this->db->select("PERSONAL_EMAIL");
 
-        if($vacancy == "Senior Lecturer Grade I selected"){
+        if($vacancy == "Senior_Lecturer_Grade_I_selected"){
            $this->db->where("INDEX_NUMBER IN(SELECT INDEX_NUMBER FROM sl_selected_gradei WHERE SELECTED = 1)");
+           $this->db->where("INDEX_NUMBER NOT IN(SELECT INDEX_NUMBER FROM candidates_interviews )");
         }
 
-        /*if($vacancy == "Senior Lecturer Grade I not selected"){
-           $this->db->where("INDEX_NUMBER IN(SELECT INDEX_NUMBER FROM sl_selected_gradei WHERE SELECTED = 0)");
-        }*/
-
-        if($vacancy == "Senior Lecturer Grade II selected"){
+        if($vacancy == "Senior_Lecturer_Grade_II_selected"){
            $this->db->where("INDEX_NUMBER IN(SELECT INDEX_NUMBER FROM sl_selected WHERE SELECTED = 1)");
+           $this->db->where("INDEX_NUMBER NOT IN(SELECT INDEX_NUMBER FROM candidates_interviews )");
         }
 
-        /*if($vacancy == "Senior Lecturer Grade II not selected"){
-           $this->db->where("INDEX_NUMBER IN(SELECT INDEX_NUMBER FROM sl_selected WHERE SELECTED = 0)");
-        }*/
-
-        if($vacancy == "Lecturer Probationary Category 1"){
+        if($vacancy == "Lecturer_Probationary_Category_1"){
            $this->db->where("INDEX_NUMBER IN(SELECT INDEX_NUMBER FROM lp_category WHERE CATEGORY = 1)");
+           $this->db->where("INDEX_NUMBER NOT IN(SELECT INDEX_NUMBER FROM candidates_interviews )");
         }
 
-        if($vacancy == "Lecturer Probationary Category 2"){
+        if($vacancy == "Lecturer_Probationary_Category_2"){
            $this->db->where("INDEX_NUMBER IN(SELECT INDEX_NUMBER FROM lp_category WHERE CATEGORY = 2)");
+           $this->db->where("INDEX_NUMBER NOT IN(SELECT INDEX_NUMBER FROM candidates_interviews )");
         }
 
-        if($vacancy == "Lecturer Probationary Category 3"){
+        if($vacancy == "Lecturer_Probationary_Category_3"){
            $this->db->where("INDEX_NUMBER IN(SELECT INDEX_NUMBER FROM lp_category WHERE CATEGORY = 3)");
+           $this->db->where("INDEX_NUMBER NOT IN(SELECT INDEX_NUMBER FROM candidates_interviews )");
         }
 
         /*if($vacancy == "Lecturer Probationary not selected"){

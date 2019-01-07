@@ -271,12 +271,12 @@ if($checking=='1'){
               </a>
             </li>
 
-            <li class="treeview">
+            <!-- <li class="treeview">
               <a href="setInterviewDate" >
                 <i class="fa fa-check-square"></i>
                 <span>Set Interview Date</span>
               </a>
-            </li>
+            </li> -->
 
 
 
@@ -306,7 +306,7 @@ if($checking=='1'){
             <li class="treeview">
               <a href="<?= base_url('setDates') ?>"  >
                 <i class="fa fa-files-o"></i>
-                <span>Send Interview Dates To Panel</span>
+                <span>Send Emails To Panel</span>
               </a>
             </li>
 
