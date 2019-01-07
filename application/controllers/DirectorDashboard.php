@@ -31,6 +31,16 @@ class DirectorDashboard extends CI_Controller{
 		
 	}
 
+	public function approvelAd($id){
+		$this->load->model('Director/applicantDetails');
+		$this->applicantDetails->setapprovel($id);
+		redirect(base_url().'Director/approveAd');
+	}
+
+	public function adOpinion($cmt){
+		
+	}
+
 	//Get data basic personal details
 	public function viewApplicants(){
 		$this->load->view('includes/header');

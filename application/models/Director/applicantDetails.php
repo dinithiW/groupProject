@@ -96,6 +96,27 @@ class applicantDetails extends CI_Model{
         return $query->result();
     }
 
+    function setapprovel($id){
+        // echo "here $id";
+        // $subquery = 'UPDATE created_ad SET is_approved = 1 WHERE vacancy_id = "$id"';
+        // echo "running";
+        // $this->db->query($subquery);
+
+        $this->db->trans_start();
+        $this->db->set('is_approved', 1);
+        $this->db->where('vacancy_id', $id);
+        $this->db->update('created_ad'); //Change effect
+        $rows =  $this->db->affected_rows();
+         $this->db->trans_complete();
+        if($rows>0){
+            echo 'here...';
+            // return $rows;
+        }else{
+            echo 'this is else part';
+            // return FALSE;
+        }
+    }
+
     //
     public function getApplicant($INDEX_NUMBER){
 
