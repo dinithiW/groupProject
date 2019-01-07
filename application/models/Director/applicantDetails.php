@@ -67,7 +67,7 @@ class applicantDetails extends CI_Model{
 
     //Get data about lecturer probationary who takes higher marks for interview
     function getMarks_l_p(){
-        $subquery = 'SELECT * FROM lp_category_marks';
+        $subquery = 'SELECT * FROM lp_category_marks ORDER BY marks DESC LIMIT 3';
         $query = $this->db->query($subquery);
 
         return $query->result();
@@ -75,7 +75,7 @@ class applicantDetails extends CI_Model{
 
     //Get data about senior lecturer grade I who takes higher marks for interview
     function getMarks_s_l_i(){
-        $subquery = 'SELECT * FROM sl_selected_gradei_marks';
+        $subquery = 'SELECT * FROM sl_selected_gradei_marks ORDER BY marks DESC LIMIT 3';
         $query = $this->db->query($subquery);
 
         return $query->result();
@@ -83,12 +83,13 @@ class applicantDetails extends CI_Model{
 
     //Get data about senior lecturer grade II who takes higher marks for interview
     function getMarks_s_l_ii(){
-        $subquery = 'SELECT * FROM sl_selected_gradeii_marks';
+        $subquery = 'SELECT * FROM sl_selected_gradeii_marks ORDER BY marks DESC LIMIT 3';
         $query = $this->db->query($subquery);
 
         return $query->result();
     }
 
+    //Get all fields of created ad table
     function getCreatedAd(){
         $subquery = 'SELECT * FROM created_ad';
         $query = $this->db->query($subquery);
@@ -96,6 +97,7 @@ class applicantDetails extends CI_Model{
         return $query->result();
     }
 
+    //When click the approve botton is_approved colomn will be 1
     function setapprovel($id){
         // echo "here $id";
         // $subquery = 'UPDATE created_ad SET is_approved = 1 WHERE vacancy_id = "$id"';
@@ -117,6 +119,7 @@ class applicantDetails extends CI_Model{
         }
     }
 
+    //Director opinion about advertisment
     function setopinion($id, $cmt){
         $this->db->trans_start();
         $this->db->set('reject_reason', $cmt);
