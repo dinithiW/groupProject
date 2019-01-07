@@ -74,8 +74,45 @@ class DirectorDashboard extends CI_Controller{
 		
 	}
 
-	public function deleteApplicant($INDEX_NUMBER){
-		$this->load->view('messages/delSelectedApplicant');
+	//Approvel for not selected (Lecturer Probetionary)
+	public function approveNotSelected($id){
+		$this->load->model('Director/applicantDetails');
+		$this->applicantDetails->setNotSelected($id);
+		redirect(base_url().'Director/approveSelected');
+	}
+
+	//Approvel for not selected (Senior Lecturer I)
+	public function approveNotSelectedSEI($id){
+		$this->load->model('Director/applicantDetails');
+		$this->applicantDetails->setSelectedSEI($id);
+		redirect(base_url().'Director/approveSelected');
+	}
+
+	//Reject selected applicants (Senior Lecturer I)
+	public function rejectSelectedSEI($id){
+		$this->load->model('Director/applicantDetails');
+		$this->applicantDetails->rejectSelectedSEI($id);
+		redirect(base_url().'Director/approveSelected');
+	}
+
+	//Approvel for not selected (Senior Lecturer II)
+	public function approveNotSelectedSEII($id){
+		$this->load->model('Director/applicantDetails');
+		$this->applicantDetails->setSelectedSEII($id);
+		redirect(base_url().'Director/approveSelected');
+	}
+
+	//Reject selected applicants (Senior Lecturer II)
+	public function rejectSelectedSEII($id){
+		$this->load->model('Director/applicantDetails');
+		$this->applicantDetails->rejectSelectedSEII($id);
+		redirect(base_url().'Director/approveSelected');
+	}
+
+	public function deleteApplicant($id){
+		$this->load->model('Director/applicantDetails');
+		$this->applicantDetails->setSelected($id);
+		redirect(base_url().'Director/approveSelected');
 	}
 	
 	public function deleteApplicantModel($INDEX_NUMBER){
