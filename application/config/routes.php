@@ -96,7 +96,7 @@ $route['OperatorIndex/viewAll'] = "OperatorDashboard/viewAllCandidates";
 //this is for loading the home page of the interview date setting process
 $route['OperatorIndex/interviewDate'] = "OperatorDashboard/setInterviewDate";
 $route['OperatorIndex/intervewDate'] = "OperatorDashboard/setIntervewDate";
-$route['OperatorIndex/addInterviewDate'] = "OperatorDashboard/addInterviewDateToDB";
+$route['OperatorIndex/addInterviewDate/(:any)'] = "OperatorDashboard/addInterviewDateToDB/$1";
 //to select the vacancy sl or lp
 $route['OperatorIndex/categorize'] = "OperatorDashboard/categorizeHome";
 //
@@ -142,7 +142,7 @@ $route['OperatorIndex/editSpecializationProcess/(:any)'] = "OperatorDashboard/ed
 $route['OperatorIndex/editFileUploadProcess/(:any)'] = "OperatorDashboard/editFileUploadToDb/$1";
 $route['OperatorIndex/sendApplicantEmails'] = "OperatorDashboard/sendEMailsToApplicants";
 $route['OperatorIndex/sendApplicntEmails'] = "OperatorDashboard/sendEMailsTApplicants";
-
+$route['OperatorIndex/interviewDateEmails'] = "OperatorDashboard/sendInterviewEmails";
 
 
 //SAR routes
@@ -172,6 +172,9 @@ $route['Director/approveFinalSet'] = 'DirectorDashboard/approveFinalSet';
 $route['Director/setInterviewDate'] = 'DirectorDashboard/setInterviewDate';
 $route['Director/sendmail'] = 'Directordashboard/sendmail';
 $route['Director/insertData'] = 'Directordashboard/insertData';
+$route['Director/insertAdDetails'] = 'Directordashboard/insertAdDetails';
+$route['Director/approvelAd/(:any)'] = 'DirectorDashboard/approvelAd/$1';
+$route['Director/adOpinion/(:any)'] = 'DirectorDashboard/adOpinion/$1';
 $route['Director/addMessage'] = 'DirectorDashboard/addNotification';
 $route['Director/viewMessage'] = 'DirectorDashboard/viewNotification';
 $route['Director/finalize'] = 'DirectorDashboard/finalize';
