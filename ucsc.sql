@@ -780,6 +780,7 @@ INSERT INTO `referees` (`INDEX_NUMBER`, `ROW_NUMBER`, `NAME`, `DESIGNATION`, `AD
 
 -- --------------------------------------------------------
 
+
 --
 -- Table structure for table `secondary_educational_details`
 --
@@ -788,10 +789,10 @@ CREATE TABLE `secondary_educational_details` (
   `INDEX_NUMBER` varchar(100) NOT NULL,
   `ROW_NUMBER` varchar(10) NOT NULL,
   `SCHOOL_NAME` varchar(200) NOT NULL,
-  `FROM` int(11) NOT NULL,
-  `TO` int(11) NOT NULL,
+  `FROM` varchar(11) NOT NULL,
+  `TO` varchar(11) NOT NULL,
   `EXAMINATION_PASSED` varchar(200) NOT NULL,
-  `YEAR` int(11) NOT NULL
+  `YEAR` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -799,30 +800,63 @@ CREATE TABLE `secondary_educational_details` (
 --
 
 INSERT INTO `secondary_educational_details` (`INDEX_NUMBER`, `ROW_NUMBER`, `SCHOOL_NAME`, `FROM`, `TO`, `EXAMINATION_PASSED`, `YEAR`) VALUES
-('19SE005', '1', 'last', 0, 0, 'last', 0),
-('19SE005', '2', 'last', 0, 0, 'last', 0),
-('19SE005', '3', 'last', 0, 0, 'last', 0),
-('19SE005', '4', 'last', 0, 0, 'last', 0),
-('19SE006', '1', 'finalcut', 0, 0, 'finalcut', 0),
-('19SE006', '2', 'finalcut', 0, 0, 'finalcut', 0),
-('19SE006', '3', 'finalcut', 0, 0, 'finalcut', 0),
-('19SE006', '4', 'finalcut', 0, 0, 'finalcut', 0),
-('19SE008', '1', 'dinithi', 0, 0, 'dinithi', 0),
-('19SE008', '2', 'dinithi', 0, 0, 'dinithi', 0),
-('19SE008', '3', 'dinithi', 0, 0, 'dinithi', 0),
-('19SE008', '4', 'dinithi', 0, 0, 'dinithi', 0),
-('19SE0068', '1', 'dinithi', 0, 0, 'dinithi', 0),
-('19SE0068', '2', 'dinithi', 0, 0, 'dinithi', 0),
-('19SE0068', '3', 'dinithi', 0, 0, 'dinithi', 0),
-('19SE0068', '4', 'dinithi', 0, 0, 'dinithi', 0),
-('19PR010', '1', 'school name1', 0, 0, 'exam passed1', 0),
-('19PR010', '2', 'school name2', 0, 0, 'exam passed2', 0),
-('19PR010', '3', 'school name3', 0, 0, 'exam passed3', 0),
-('19PR010', '4', 'school name4', 0, 0, 'exam passed4', 0),
-('19PR011', '1', 'school', 0, 0, 'school', 0),
-('19PR011', '2', 'school', 0, 0, 'school', 0),
-('19PR011', '3', 'school', 0, 0, 'school', 0),
-('19PR011', '4', 'school', 0, 0, 'school', 0);
+('19PR001', '1', 'MAHANAMA COLLEGE', '1880', '1893', 'GRADE 5 SCHOLARSHIP', '1885'),
+('19PR001', '2', 'MAHANAMA COLLEGE', '1880', '1893', 'GCE O/L EXAMINATION', '1890'),
+('19PR001', '3', 'MAHANAMA COLLEGE', '1880', '1893', 'GEC A/L EXAMINATION', '1893'),
+('19PR001', '4', '', '0', '0', '', '0'),
+('19SE000', '1', 'NALANDA COLLEGE', '2000', '2004', 'GRADE 5 SCHOLARSHIP EXAMINATION', '2004'),
+('19SE000', '2', 'ROYAL COLLEGE', '2005', '2009', 'GCE O/L EXAMINATION', '2009'),
+('19SE000', '3', 'ANANDA COLLEGE', '2010', '2013', 'GCE A/L EXAMINATION', '2013'),
+('19SE000', '4', '', '0', '0', '', '0'),
+('19PR002', '1', 'PRINCE OF WALES', '2001', '2005', 'GRADE 5 SCHOLARSHIP', '2005'),
+('19PR002', '2', 'RICHMOND COLLEGE', '2005', '2010', 'GCE OL EXAMINATION', '2010'),
+('19PR002', '3', 'ANANDA COLLEGE', '2010', '2013', 'GCE AL EXAMINATION', '2013'),
+('19PR002', '4', '', '0', '0', '', '0'),
+('19SE003', '1', 'NALANDA COLLEGE', '2000', '2004', 'GRADE 5 SCHOOLARSHIP', '2004'),
+('19SE003', '2', 'NALANDA COLLEGE', '2005', '2010', 'GCE OL EXAMINATION', '2010'),
+('19SE003', '3', 'NALANDA COLLEGE', '2010', '2013', 'GCE AL EXAMINATION', '2013'),
+('19SE003', '4', '', '', '', '', ''),
+('19PR004', '1', 'MAHANAMA COLLEGE', '2000', '2004', 'GRADE 5 SCHOLARSHIP', '2004'),
+('19PR004', '2', 'MAHANAMA COLLEGE', '2005', '2009', 'GCE OL EXAMINATION', '2010'),
+('19PR004', '3', 'MAHANAMA COLLEGE', '2011', '2013', 'GCE AL EXAMINATION', '2013'),
+('19PR004', '4', '', '', '', '', ''),
+('19SE005', '1', 'CENTRAL COLLEGE, MAHARA', '2000', '2004', 'GRADE 5 SCHOLARSHIP', '2004'),
+('19SE005', '2', 'CENTRAL COLLEGE, MAHARA', '2005', '2010', 'GCE OL EXAMINATION', '2010'),
+('19SE005', '3', 'CENTRAL COLLEGE, MAHARA', '2010', '2013', 'GCE AL EXAMINATION', '2013'),
+('19SE005', '4', '', '', '', '', ''),
+('19SE006', '1', 'WEERAKETIYA CENTRAL', '2000', '2013', 'GEADE 5 SCHOLARSHIP', '2005'),
+('19SE006', '2', 'WEERAKETIYA CENTRAL', '2000', '2013', 'GCE OL EXAMINATION', '2010'),
+('19SE006', '3', 'WEERAKETIYA CENTRAL', '2000', '2013', 'GCE AL EXAMINATION', '2013'),
+('19SE006', '4', '', '', '', '', ''),
+('19SE007', '1', 'ZAHIRA COLLEGE', '2001', '2005', 'GRADE 5 SCHOOLARSHIP', '2005'),
+('19SE007', '2', 'ZAHIRA COLLEGE', '2005', '2010', 'GCE OL EXAMINATION', '2010'),
+('19SE007', '3', 'ZAHIRA COLLEGE', '2010', '2013', 'GCE AL EXAMINATION', '2013'),
+('19SE007', '4', '', '', '', '', ''),
+('19SE008', '1', 'ZAHIRA COLLEGE', '2001', '2005', 'GRADE 5 SCHOOLARSHIP', '2005'),
+('19SE008', '2', 'ZAHIRA COLLEGE', '2005', '2010', 'GCE OL EXAMINATION', '2010'),
+('19SE008', '3', 'ZAHIRA COLLEGE', '2010', '2013', 'GCE AL EXAMINATION', '2013'),
+('19SE008', '4', '', '', '', '', ''),
+('19PR009', '1', 'RICHMOND COLLEGE', '2000', '2004', 'GRADE 5 SCHOOLARSHIP', '2004'),
+('19PR009', '2', 'RICHMOND COLLEGE', '2005', '2010', 'GCE OL EXAMINATION', '2010'),
+('19PR009', '3', 'RICHMOND COLLEGE', '2010', '2013', 'GCE AL EXAMINATION', '2013'),
+('19PR009', '4', '', '', '', '', ''),
+('19SE010', '1', 'RAHULA COLLEGE', '2000', '2004', 'GRADE 5 SCHOLARSHIP', '2004'),
+('19SE010', '2', 'RAHULA COLLEGE', '2005', '2010', 'GCE OL EXAMINATION', '2010'),
+('19SE010', '3', 'RAHULA COLLEGE', '2010', '2013', 'GCE AL EXAMINATION', '2013'),
+('19SE010', '4', '', '', '', '', ''),
+('19SE011', '1', 'KANNANGARA VIDYALAYA', '2000', '2013', 'GRADE 5 SCHOOLARSHIP', '2004'),
+('19SE011', '2', 'KANNANGARA VIDYALAYA', '2000', '2013', 'GCE OL EXAMINATION', '2010'),
+('19SE011', '3', 'KANNANGARA VIDYALAYA', '2000', '2013', 'OGE AL EXAMINATION', '2013'),
+('19SE011', '4', '', '', '', '', ''),
+('19SE012', '1', 'MAHINDA COLLEGE', '2001', '2014', 'GRADE 5 SCHOLARSHIP', '2014'),
+('19SE012', '2', 'MAHINDA COLLEGE', '2001', '2014', 'GCE OL EXAMINATION', '2014'),
+('19SE012', '3', 'MAHINDA COLLEGE', '2001', '2014', 'GCE AL EXAMINATION', '2014'),
+('19SE012', '4', '', '', '', '', ''),
+('19SE013', '1', 'BOMIRIYA CENTRAL', '2000', '2013', 'GRADE 5 EXAMINATION', '2004'),
+('19SE013', '2', 'BOMIRIYA CENTRAL', '2000', '2013', 'GCE OL EXAMINATION', '2010'),
+('19SE013', '3', 'BOMIRIYA CENTRAL', '2000', '2013', 'GCE AL EXAMINATION', '2013'),
+('19SE013', '4', '', '', '', '', '');
+
 
 -- --------------------------------------------------------
 
