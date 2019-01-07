@@ -283,25 +283,25 @@ if($checking=='1'){
             ?>
             <li class="treeview">
               <a href="<?= base_url('SAR/advertisement') ?>">
-                <i class="fa fa-users"></i>
+                <i class="fa fa-adn"></i>
                 <span>Advertisement</span>
               </a>
             </li>
             <li class="treeview">
               <a href="<?= base_url('applicants') ?>" >
-                <i class="fa fa-files-o"></i>
+                <i class="fa fa-users"></i>
                 <span>View Applicants</span>
               </a>
             </li>
              <li class="treeview">
               <a href="<?= base_url('SAR/candidateList') ?>" >
-                <i class="fa fa-files-o"></i>
+                <i class="fa fa-users"></i>
                 <span>View Candidates</span>
               </a>
             </li>
             <li class="treeview">
               <a href="<?= base_url('setDates') ?>"  >
-                <i class="fa fa-files-o"></i>
+                <i class="fa fa-envelope"></i>
                 <span>Send Emails To Panel</span>
               </a>
             </li>
@@ -315,7 +315,7 @@ if($checking=='1'){
 
              <li class="treeview">
               <a href="<?= base_url('reports') ?>" >
-                <i class="fa fa-files-o"></i>
+              <i class="fa fa-file"></i>
                 <span>Create Reports</span>
               </a>
             </li>
@@ -328,7 +328,7 @@ if($checking=='1'){
            
             <li class="treeview">
               <a href="<?= base_url('Panel/viewApplicants') ?>" >
-                <i class="fa fa-files-o"></i>
+                <i class="fa fa-users"></i>
                 <span>Candidates</span>
               </a>
             </li>

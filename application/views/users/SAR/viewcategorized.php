@@ -87,6 +87,7 @@
                       <th>Professional Qualifications</th>
                       <th>Other Qualifications</th>
                       <th>Specializations</th>
+                       <th>Change Category</th>
                       
                       <th class="text-center">Actions</th>
                     </tr>
@@ -101,8 +102,23 @@
                       <td><?=$a->pq?></td>
                       <td><?=$a->oq?></td>
                       <td><?=$a->spe?></td>
+
+                      <form method = "post" action = "<?= base_url().'OperatorIndex/selectLP/'.$a->index.'/'.$position;?>">
+                      <td>
+                        <select class="form-control" id="selectBox" name = <?php echo "category_$a->index"?>>
+
+                          
+                          <option value = "1" selected>Category 1</option>
+                          <option value = "2" >Category 2</option>
+                          <option value = "3" >Category 3</option>
+                          <option value = "0" >Not Selected</option>
+
+                          
+                        </select>
+
                       
                        <td class="text-center">
+                        <input type = "submit"  value="&#xf00c" class="btn btn-sm btn-success fa fa-check" >
                           <!-- <input type = "submit"  value="&#xf00c" class="btn btn-sm btn-success fa fa-check" >
                           <a class="btn btn-sm btn-danger " href="<?php echo base_url().'OperatorIndex/notSelectLP/'.$a->index; ?>" data-userid=""><i class="fa fa-trash"></i></a>   -->
                           <a class="btn btn-sm btn-info " href="<?php echo base_url().'OperatorIndex/viewApplicationForm/'.$a->index?>" data-userid=""><i class="fa fa-info"></i></a> 
