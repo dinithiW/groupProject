@@ -107,7 +107,7 @@
                       <td class="text-center">
                           <!-- <input type = "submit"  value="&#xf00c" class="btn btn-sm btn-success fa fa-check" >
                           <a class="btn btn-sm btn-danger " href="<?php echo base_url().'OperatorIndex/notSelectLP/'.$a->index; ?>" data-userid=""><i class="fa fa-trash"></i></a>   -->
-                          <a class="btn btn-sm btn-info " href="" data-userid=""><i class="fa fa-info"></i></a> 
+                          <a class="btn btn-sm btn-info " href="<?php echo base_url().'OperatorIndex/viewApplicationForm/'.$a->index?>" data-userid=""><i class="fa fa-info"></i></a> 
                       </td>
                     </tr>
                     <?php endforeach?> 

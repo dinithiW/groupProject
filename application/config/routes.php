@@ -143,6 +143,7 @@ $route['OperatorIndex/editFileUploadProcess/(:any)'] = "OperatorDashboard/editFi
 $route['OperatorIndex/sendApplicantEmails'] = "OperatorDashboard/sendEMailsToApplicants";
 $route['OperatorIndex/sendApplicntEmails'] = "OperatorDashboard/sendEMailsTApplicants";
 $route['OperatorIndex/interviewDateEmails'] = "OperatorDashboard/sendInterviewEmails";
+$route['OperatorIndex/viewApplicationForm/(:any)'] = "OperatorDashboard/applicantViewMore/$1";
 
 
 //SAR routes
