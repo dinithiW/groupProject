@@ -67,7 +67,7 @@ class applicantDetails extends CI_Model{
 
     //Get data about lecturer probationary who takes higher marks for interview
     function getMarks_l_p(){
-        $subquery = 'SELECT * FROM lp_category_marks';
+        $subquery = 'SELECT * FROM lp_category_marks ORDER BY marks DESC LIMIT 3';
         $query = $this->db->query($subquery);
 
         return $query->result();
@@ -75,7 +75,7 @@ class applicantDetails extends CI_Model{
 
     //Get data about senior lecturer grade I who takes higher marks for interview
     function getMarks_s_l_i(){
-        $subquery = 'SELECT * FROM sl_selected_gradei_marks';
+        $subquery = 'SELECT * FROM sl_selected_gradei_marks ORDER BY marks DESC LIMIT 3';
         $query = $this->db->query($subquery);
 
         return $query->result();
@@ -83,10 +83,110 @@ class applicantDetails extends CI_Model{
 
     //Get data about senior lecturer grade II who takes higher marks for interview
     function getMarks_s_l_ii(){
-        $subquery = 'SELECT * FROM sl_selected_gradeii_marks';
+        $subquery = 'SELECT * FROM sl_selected_gradeii_marks ORDER BY marks DESC LIMIT 3';
         $query = $this->db->query($subquery);
 
         return $query->result();
+    }
+
+    //Get all fields of created ad table
+    function getCreatedAd(){
+        $subquery = 'SELECT * FROM created_ad';
+        $query = $this->db->query($subquery);
+
+        return $query->result();
+    }
+
+    //When click the approve botton is_approved colomn will be 1
+    function setapprovel($id){
+        // echo "here $id";
+        // $subquery = 'UPDATE created_ad SET is_approved = 1 WHERE vacancy_id = "$id"';
+        // echo "running";
+        // $this->db->query($subquery);
+
+        $this->db->trans_start();
+        $this->db->set('is_approved', 1);
+        $this->db->where('vacancy_id', $id);
+        $this->db->update('created_ad'); //Change effect
+        $rows =  $this->db->affected_rows();
+         $this->db->trans_complete();
+        if($rows>0){
+            echo 'here...';
+            // return $rows;
+        }else{
+            echo 'this is else part';
+            // return FALSE;
+        }
+    }
+
+    //Director opinion about advertisment
+    function setopinion($id, $cmt){
+        $this->db->trans_start();
+        $this->db->set('reject_reason', $cmt);
+        $this->db->where('vacancy_id', $id);
+        $this->db->update('created_ad'); //Change effect
+        $rows =  $this->db->affected_rows();
+         $this->db->trans_complete();
+    }
+
+    //Select the not selected applicant
+    function setNotSelected($id){
+        $this->db->trans_start();
+        $this->db->set('CATEGORY', 4);
+        $this->db->where('INDEX_NUMBER', $id);
+        $this->db->update('lp_category'); //Change effect
+        $rows =  $this->db->affected_rows();
+         $this->db->trans_complete();
+    }
+
+    //Remove selected applicant
+    function setSelected($id){
+        $this->db->trans_start();
+        $this->db->set('CATEGORY', 0);
+        $this->db->where('INDEX_NUMBER', $id);
+        $this->db->update('lp_category'); //Change effect
+        $rows =  $this->db->affected_rows();
+         $this->db->trans_complete();
+    }
+
+    //Selected the not selected(Senior Lecturer I)
+    function setSelectedSEI($id){
+        $this->db->trans_start();
+        $this->db->set('SELECTED', 1);
+        $this->db->where('INDEX_NUMBER', $id);
+        $this->db->update('sl_selected_gradei'); //Change effect
+        $rows =  $this->db->affected_rows();
+         $this->db->trans_complete();
+    }
+
+    //Reject the selected applicants (Senior Lecturer I)
+    function rejectSelectedSEI($id){
+        $this->db->trans_start();
+        $this->db->set('SELECTED', 0);
+        $this->db->where('INDEX_NUMBER', $id);
+        $this->db->update('sl_selected_gradei'); //Change effect
+        $rows =  $this->db->affected_rows();
+         $this->db->trans_complete();
+    }
+
+    //Selected the not selected(Senior Lecturer II)
+    function setSelectedSEII($id){
+        $this->db->trans_start();
+        $this->db->set('SELECTED', 1);
+        $this->db->where('INDEX_NUMBER', $id);
+        $this->db->update('sl_selected'); //Change effect
+        $rows =  $this->db->affected_rows();
+         $this->db->trans_complete();
+    }
+
+    //Reject the selected applicants (Senior Lecturer II)
+    function rejectSelectedSEII($id){
+        $this->db->trans_start();
+        $this->db->set('SELECTED', 0);
+        $this->db->where('INDEX_NUMBER', $id);
+        $this->db->update('sl_selected'); //Change effect
+        $rows =  $this->db->affected_rows();
+         $this->db->trans_complete();
     }
 
     //

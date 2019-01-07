@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 06, 2019 at 10:32 AM
+-- Generation Time: Jan 07, 2019 at 09:49 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.23
 
@@ -210,7 +210,50 @@ INSERT INTO `basic_personal_details` (`INDEX_NUMBER`, `FIRST_NAME`, `LAST_NAME`,
 ('19SE005', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'last', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-15', 'SENIOR LECTURE GR. II'),
 ('19SE006', '/comma', '//finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'finalcut', 'MALE', 'MARRIED', 'BY DESCENT', '2019-01-24', 'SENIOR LECTURE GR. II'),
 ('19SE0068', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'FEMALE', 'UN MARRIED', 'BY DESCENT', '1996-12-04', 'SENIOR LECTURE GR. II'),
-('19SE008', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'FEMALE', 'UN MARRIED', 'BY DESCENT', '1996-12-04', 'SENIOR LECTURE GR. I');
+('19SE008', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'diniwick124@gmail.com', 'dinithi', 'dinithi', 'dinithi', 'dinithi', 'FEMALE', 'UN MARRIED', 'BY DESCENT', '1996-12-04', 'SENIOR LECTURE GR. I');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `candidates_interviews`
+--
+
+CREATE TABLE `candidates_interviews` (
+  `INDEX_NUMBER` varchar(100) NOT NULL,
+  `INTERVIEW_DATE` date NOT NULL,
+  `INTERVIEW_TIME` time NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `candidates_interviews`
+--
+
+INSERT INTO `candidates_interviews` (`INDEX_NUMBER`, `INTERVIEW_DATE`, `INTERVIEW_TIME`) VALUES
+('19SE008', '2019-01-17', '01:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `created_ad`
+--
+
+CREATE TABLE `created_ad` (
+  `id` int(11) NOT NULL,
+  `ad_ref` varchar(255) NOT NULL,
+  `vacancy_id` int(11) NOT NULL,
+  `ad_url` varchar(255) NOT NULL,
+  `is_approved` int(1) NOT NULL DEFAULT '0',
+  `reject_reason` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `created_ad`
+--
+
+INSERT INTO `created_ad` (`id`, `ad_ref`, `vacancy_id`, `ad_url`, `is_approved`, `reject_reason`) VALUES
+(1, 'ad_001', 2, 'https://michaeldykhoff.files.wordpress.com/2012/09/think-city-front.png', 1, 'my op'),
+(3, 'ad_002', 3, 'http://images.ucsc.cmb.ac.lk/index.php/Inauguration-Ceremony---2018/4', 0, 'comment'),
+(5, 'ad_004', 4, 'http://images.ucsc.cmb.ac.lk/index.php/Inauguration-Ceremony---2018/2', 0, '');
 
 -- --------------------------------------------------------
 
@@ -228,7 +271,7 @@ CREATE TABLE `file_upload_links` (
 --
 
 INSERT INTO `file_upload_links` (`LINK_ID`, `LINK_NAME`) VALUES
-(10, 'GCE A/L RESULT SHEET 1'),
+(10, 'GCE A/L RESULT SHEET 2'),
 (11, 'CURRICULUM VITAE'),
 (12, 'DEGREE CERTIFICATE'),
 (13, 'CERTIFIED NIC COPY');
@@ -334,9 +377,6 @@ CREATE TABLE `lp_category` (
 --
 
 INSERT INTO `lp_category` (`INDEX_NUMBER`, `CATEGORY`) VALUES
-('19PR002', 1),
-('19PR003', 0),
-('19PR010', 3),
 ('19PR011', 0);
 
 -- --------------------------------------------------------
@@ -568,8 +608,6 @@ CREATE TABLE `sl_selected` (
 INSERT INTO `sl_selected` (`INDEX_NUMBER`, `SELECTED`) VALUES
 ('19SE000', 1),
 ('19SE001', 0),
-('19SE004', 0),
-('19SE005', 1),
 ('19SE006', 1),
 ('19SE0068', 1);
 
@@ -748,7 +786,8 @@ INSERT INTO `temporary_index_number_for_applicants` (`INDEX_NUMBER`, `USERNAME`,
 ('19013', 'aaaa@gmail.com', 'aaa'),
 ('19014', 'aaaaa@gmail.com', 'aaa'),
 ('19015', 'aaaaaaaa@gmail.gom', 'aaaa'),
-('19016', 'dinithi@gmail.com', 'Dinithi Nisansa Wickramaratne');
+('19016', 'dinithi@gmail.com', 'Dinithi Nisansa Wickramaratne'),
+('19017', 'diniwick124123@gmail.com', 'Dinithi Nisansa Wickramaratne');
 
 -- --------------------------------------------------------
 
@@ -774,6 +813,7 @@ INSERT INTO `users` (`USERNAME`, `PASSWORD`, `USER_TYPE`, `NAME`) VALUES
 ('david@gmail.com', '698d51a19d8a121ce581499d7b701668', 'Applicant', 'david cameron'),
 ('dian@gmail.com', '202cb962ac59075b964b07152d234b70', 'Applicant', 'dian'),
 ('dinithi@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Applicant', 'Dinithi Nisansa Wickramaratne'),
+('diniwick124123@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Applicant', 'Dinithi Nisansa Wickramaratne'),
 ('diniwick124@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Dinithi Wickramaratne'),
 ('diniwicksdfsdfsfssdf124@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Dinithi Wickramaratne'),
 ('diniwiwerck124@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Panel', 'Dinithi Wickramaratne'),
@@ -820,15 +860,20 @@ INSERT INTO `users` (`USERNAME`, `PASSWORD`, `USER_TYPE`, `NAME`) VALUES
 CREATE TABLE `vacancies` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `dead_line` date NOT NULL
+  `dead_line` date NOT NULL,
+  `specialization_requirements` text NOT NULL,
+  `comments` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `vacancies`
 --
 
-INSERT INTO `vacancies` (`id`, `name`, `dead_line`) VALUES
-(1, 'test', '2019-01-02');
+INSERT INTO `vacancies` (`id`, `name`, `dead_line`, `specialization_requirements`, `comments`) VALUES
+(1, 'test', '2019-01-02', '', ''),
+(2, 'seniorLecOne', '2019-01-31', '', ''),
+(3, 'Senior Lecturer Grade I', '2019-01-30', '', 'Any notes here... '),
+(4, 'Probationary Lecture', '2019-02-01', '', 'Any notes here... ');
 
 --
 -- Indexes for dumped tables
@@ -851,6 +896,19 @@ ALTER TABLE `applicants`
 --
 ALTER TABLE `basic_personal_details`
   ADD PRIMARY KEY (`INDEX_NUMBER`);
+
+--
+-- Indexes for table `candidates_interviews`
+--
+ALTER TABLE `candidates_interviews`
+  ADD PRIMARY KEY (`INDEX_NUMBER`);
+
+--
+-- Indexes for table `created_ad`
+--
+ALTER TABLE `created_ad`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `vacancy_id` (`vacancy_id`);
 
 --
 -- Indexes for table `file_upload_links`
@@ -895,7 +953,7 @@ ALTER TABLE `marking_field_heading`
 -- Indexes for table `sl_selected`
 --
 ALTER TABLE `sl_selected`
-  ADD KEY `INDEX_NUMBER` (`INDEX_NUMBER`);
+  ADD PRIMARY KEY (`INDEX_NUMBER`);
 
 --
 -- Indexes for table `sl_selected_gradei`
@@ -945,6 +1003,11 @@ ALTER TABLE `vacancies`
 ALTER TABLE `advertisement`
   MODIFY `adid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
+-- AUTO_INCREMENT for table `created_ad`
+--
+ALTER TABLE `created_ad`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
 -- AUTO_INCREMENT for table `file_upload_links`
 --
 ALTER TABLE `file_upload_links`
@@ -988,10 +1051,22 @@ ALTER TABLE `specializationarea`
 -- AUTO_INCREMENT for table `vacancies`
 --
 ALTER TABLE `vacancies`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `candidates_interviews`
+--
+ALTER TABLE `candidates_interviews`
+  ADD CONSTRAINT `fk_int_can` FOREIGN KEY (`INDEX_NUMBER`) REFERENCES `basic_personal_details` (`INDEX_NUMBER`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `created_ad`
+--
+ALTER TABLE `created_ad`
+  ADD CONSTRAINT `created_ad_ibfk_1` FOREIGN KEY (`vacancy_id`) REFERENCES `vacancies` (`id`);
 
 --
 -- Constraints for table `interview_panel`

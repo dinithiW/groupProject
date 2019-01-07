@@ -11,7 +11,7 @@
     
         <div class="row">
             <!-- left column -->
-            <div class="col-md-8">
+            <div class="col-md-12">
               <!-- general form elements -->
                 
 
@@ -19,6 +19,44 @@
                     <div class="box-header">
                         <h3 class="box-title">Approve Selected Applicants</h3>
                     </div><!-- /.box-header -->
+
+                    <div>
+                        <center>
+                            <h3>Advertisement Details</h3>
+                        </center>
+                    </div>
+                    <br />
+                    <div class = "table-responsive">
+                        <table class = "table table-bordered">
+                            <tr>
+                                <th>Ad Reference</th>
+                                <th>Vacancy Id</th>
+                                <th>Ad URL</th>
+                                <th>Approval</th>
+                                <th>Director's Opinion</th>
+                            </tr>
+
+                        <?php 
+                        foreach($records as $rec){
+                        ?>
+                            <tr>
+                                <td><?php echo $rec->ad_ref; ?></td>
+                                <td><?php echo $rec->vacancy_id; ?></td>
+                                <td><?php echo $rec->ad_url; ?></td>
+                                <td class="text-center">
+                                    <a class="btn btn-sm btn-info " href="<?php echo base_url().'Director/approvelAd/'.$rec->vacancy_id ?>" data-userid=""><i class="fa fa-check"></i></a>
+                                </td>
+                                <td>
+                                    <form action="<?php echo base_url().'Director/adOpinion/'.$rec->vacancy_id ?>" method="post">
+                                        <input type = "text" name = "<?php echo $rec->vacancy_id; ?>" />
+                                    </form>
+                                </td>
+                            </tr>
+                        <?php
+                        } 
+                        ?>
+                        </table>
+                    </div>
                     
                 </div>
             </div>

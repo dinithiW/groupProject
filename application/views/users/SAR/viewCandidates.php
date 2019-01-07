@@ -43,7 +43,7 @@ $position = "";
         <label for="input-lg" class="input-lg"> Select Category</label>
       </div>
 
-      <form action = "<?= base_url().'OperatorIndex/searchCategorized'?>" method = "post">
+      <form action = "<?= base_url().'SAR/categorizedApplicants'?>" method = "post">
       <div class = "row">
         <div class="form-group  col-xs-8 ">
         

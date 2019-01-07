@@ -107,10 +107,6 @@ if($checking=='1'){
           </a>
           <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="label label-pill label-danger count" style="border-radius:10px;"></span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
-            <ul class="dropdown-menu"></ul>
-            </li>
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -311,7 +307,7 @@ if($checking=='1'){
             </li>
 
             <li class="treeview">
-              <a href="#" >
+              <a href="<?= base_url('SAR/ViewMarksUI') ?>" >
                 <i class="fa fa-files-o"></i>
                 <span>View Marks</span>
               </a>

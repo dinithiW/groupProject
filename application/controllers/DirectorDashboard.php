@@ -22,9 +22,26 @@ class DirectorDashboard extends CI_Controller{
 
 	public function approveAd(){
 		$this->load->view('includes/header');
-		$this->load->view('users/director/approveAd');
+		
+		$this->load->model('Director/applicantDetails');
+		$data['records'] = $this->applicantDetails->getCreatedAd();
+		
+		$this->load->view('users/director/approveAd', $data);
 		$this->load->view('includes/footer');
 		
+	}
+
+	public function approvelAd($id){
+		$this->load->model('Director/applicantDetails');
+		$this->applicantDetails->setapprovel($id);
+		redirect(base_url().'Director/approveAd');
+	}
+
+	public function adOpinion($id){
+		$cmt = $_POST["$id"];
+		$this->load->model('Director/applicantDetails');
+		$this->applicantDetails->setopinion($id, $cmt);
+		redirect(base_url().'Director/approveAd');
 	}
 
 	//Get data basic personal details
@@ -57,8 +74,45 @@ class DirectorDashboard extends CI_Controller{
 		
 	}
 
-	public function deleteApplicant($INDEX_NUMBER){
-		$this->load->view('messages/delSelectedApplicant');
+	//Approvel for not selected (Lecturer Probetionary)
+	public function approveNotSelected($id){
+		$this->load->model('Director/applicantDetails');
+		$this->applicantDetails->setNotSelected($id);
+		redirect(base_url().'Director/approveSelected');
+	}
+
+	//Approvel for not selected (Senior Lecturer I)
+	public function approveNotSelectedSEI($id){
+		$this->load->model('Director/applicantDetails');
+		$this->applicantDetails->setSelectedSEI($id);
+		redirect(base_url().'Director/approveSelected');
+	}
+
+	//Reject selected applicants (Senior Lecturer I)
+	public function rejectSelectedSEI($id){
+		$this->load->model('Director/applicantDetails');
+		$this->applicantDetails->rejectSelectedSEI($id);
+		redirect(base_url().'Director/approveSelected');
+	}
+
+	//Approvel for not selected (Senior Lecturer II)
+	public function approveNotSelectedSEII($id){
+		$this->load->model('Director/applicantDetails');
+		$this->applicantDetails->setSelectedSEII($id);
+		redirect(base_url().'Director/approveSelected');
+	}
+
+	//Reject selected applicants (Senior Lecturer II)
+	public function rejectSelectedSEII($id){
+		$this->load->model('Director/applicantDetails');
+		$this->applicantDetails->rejectSelectedSEII($id);
+		redirect(base_url().'Director/approveSelected');
+	}
+
+	public function deleteApplicant($id){
+		$this->load->model('Director/applicantDetails');
+		$this->applicantDetails->setSelected($id);
+		redirect(base_url().'Director/approveSelected');
 	}
 	
 	public function deleteApplicantModel($INDEX_NUMBER){
@@ -111,6 +165,28 @@ class DirectorDashboard extends CI_Controller{
 			$message = "Request sent successfully.";
 			echo "<script type='text/javascript'>alert('$message');</script>";
 			redirect('DirectorDashboard/adRequest');
+		} else{
+			$message = "Error. Something went wrong!";
+			echo "<script type='text/javascript'>alert('$message');</script>";
+		}
+
+		
+	}
+
+	//Send advertisment approval details to database
+	public function insertAdDetails(){
+		
+		$data = array(
+			'reject_reason' => $this->input->post('opinion', TRUE)
+		);
+
+		
+		$response = $this->db->insert('created_ad', $data);
+		
+		if($response){
+			$message = "Request sent successfully.";
+			echo "<script type='text/javascript'>alert('$message');</script>";
+			redirect('DirectorDashboard/approveAd');
 		} else{
 			$message = "Error. Something went wrong!";
 			echo "<script type='text/javascript'>alert('$message');</script>";

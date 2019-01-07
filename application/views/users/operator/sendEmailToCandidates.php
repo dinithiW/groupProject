@@ -1,4 +1,10 @@
-
+<?php
+$this->load->library('session');
+$confirmed = "";
+if (!empty($_GET["email"])) {
+    $confirmed = $_GET["email"];
+}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -16,9 +22,28 @@
 </head> 
 
 <body>
-
+ 
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
+    
+    
+    <section class="content">
+
+        <section>
+        <div>
+            <?php
+            if ($confirmed == "success") {
+                ?>
+                <div class="alert alert-success"
+                     style="margin-left: 10px;margin-right: 10px;text-align: center;color: #17630a;font-weight: bold">
+                    Email has been sent
+                </div>
+                <?php
+            }
+            ?>
+        </div>
+    </section>
+
     <section class="content-header">
       <h1>
         <i class="fa fa-users"></i> Send Emails For Interviews
@@ -26,8 +51,6 @@
       </h1>
 
     </section>
-    
-    <section class="content">
        <div class = "row">
         <label for="input-lg" class="input-lg"> Select Time Slot</label>
       </div>
@@ -61,6 +84,8 @@
                     <textarea class="tinymce" name = "content">
                       <!-- <p><span style="font-size: 18pt; font-family: 'indie flower', cursive;">some text here</span></p> -->
                     </textarea>
+
+
 
     <!-- javascript -->
 
