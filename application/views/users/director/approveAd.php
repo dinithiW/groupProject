@@ -1,3 +1,9 @@
+<?php $vacancyName = "";
+
+$this->load->model('applicantDetails');
+
+?>
+
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -31,8 +37,10 @@
                             <tr>
                                 <th>Ad Reference</th>
                                 <th>Vacancy Id</th>
+                                <!-- <th>Vacancy needed</th> -->
                                 <th>Ad URL</th>
-                                <th>Approval</th>
+                                <th>Approve</th>
+                                <th>Reject</th>
                                 <th>Director's Opinion</th>
                             </tr>
 
@@ -42,9 +50,16 @@
                             <tr>
                                 <td><?php echo $rec->ad_ref; ?></td>
                                 <td><?php echo $rec->vacancy_id; ?></td>
-                                <td><?php echo $rec->ad_url; ?></td>
+                                <?php
+                                $vacancyName= $this->applicantDetails->findVacancyNeeded($rec->vacancy_id)
+                                ?>
+                                <!-- <td><?php// echo $vacancyName; ?></td> -->
+                                <td><a href = "<?php echo $rec->ad_url; ?>" target = "_blank"><?php echo $rec->ad_url; ?></a></td>
                                 <td class="text-center">
                                     <a class="btn btn-sm btn-info " href="<?php echo base_url().'Director/approvelAd/'.$rec->vacancy_id ?>" data-userid=""><i class="fa fa-check"></i></a>
+                                </td>
+                                <td class="text-center">
+                                    <a class="btn btn-sm btn-danger " href="<?php echo base_url().'Director/rejectAd/'.$rec->vacancy_id; ?>" data-userid=""><i class="fa fa-times"></i></a> 
                                 </td>
                                 <td>
                                     <form action="<?php echo base_url().'Director/adOpinion/'.$rec->vacancy_id ?>" method="post">
