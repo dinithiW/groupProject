@@ -117,6 +117,15 @@ class applicantDetails extends CI_Model{
         }
     }
 
+    function setopinion($id, $cmt){
+        $this->db->trans_start();
+        $this->db->set('reject_reason', $cmt);
+        $this->db->where('vacancy_id', $id);
+        $this->db->update('created_ad'); //Change effect
+        $rows =  $this->db->affected_rows();
+         $this->db->trans_complete();
+    }
+
     //
     public function getApplicant($INDEX_NUMBER){
 
