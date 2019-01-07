@@ -119,6 +119,31 @@ class applicantDetails extends CI_Model{
         }
     }
 
+    //this will update is_approved colomn to 0 in created_ad table
+    function setRejectAd($id){
+        $this->db->trans_start();
+        $this->db->set('is_approved', 0);
+        $this->db->where('vacancy_id', $id);
+        $this->db->update('created_ad');
+        $rows =  $this->db->affected_rows();
+         $this->db->trans_complete();
+    }
+
+    function findVacancyNeeded($id){
+
+        // echo "Here";
+        $this->db->select('name');
+        $this->db->where('id',$id);
+        $this->db->from('vacancies');
+        //$subquery = 'SELECT name FROM vacancies WHERE id = $id';
+        
+        
+        
+        $query = $this->db->get();
+
+        return $query->result();
+    }
+
     //Director opinion about advertisment
     function setopinion($id, $cmt){
         $this->db->trans_start();

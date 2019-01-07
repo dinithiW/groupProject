@@ -25,7 +25,7 @@ class DirectorDashboard extends CI_Controller{
 		
 		$this->load->model('Director/applicantDetails');
 		$data['records'] = $this->applicantDetails->getCreatedAd();
-		
+		//$data['vacancy_name'] = $this->applicantDetails->findVacancyNeeded();
 		$this->load->view('users/director/approveAd', $data);
 		$this->load->view('includes/footer');
 		
@@ -34,6 +34,19 @@ class DirectorDashboard extends CI_Controller{
 	public function approvelAd($id){
 		$this->load->model('Director/applicantDetails');
 		$this->applicantDetails->setapprovel($id);
+		redirect(base_url().'Director/approveAd');
+	}
+
+	public function rejectAd($id){
+		$this->load->model('Director/applicantDetails');
+		$this->applicantDetails->setRejectAd($id);
+		redirect(base_url().'Director/approveAd');
+	}
+
+	//To find the 'vacancy needed'  to appropriate vacancy_id
+	public function findName($id){
+		$this->load->model('Director/applicantDetails');
+		$this->applicantDetails->findVacancyNeeded($id);
 		redirect(base_url().'Director/approveAd');
 	}
 
@@ -145,7 +158,12 @@ class DirectorDashboard extends CI_Controller{
 	public function sendmail(){
 		$email = new EmailController();
         $this->load->library('email');
-        $email->send_mail($this->email, $this->input->post('directormail'), $this->input->post('reportdetails'));
+		$email->send_mail($this->email, $this->input->post('sarmail'), 
+		$this->input->post('vacanciesneeded'),
+		$this->input->post('deadline'),
+		$this->input->post('notes')
+	
+		);
 	}
 
 
