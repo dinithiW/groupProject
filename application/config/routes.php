@@ -158,6 +158,7 @@ $route['SAR/advertisement']="SARDashboard/viewAdvertisement";
 $route['applicants']="SARDashboard/viewApplicants";
 $route['SAR/ViewMarks']="SARDashboard/viewMarks";
 $route['SAR/ViewMarksUI']="SARDashboard/viewMarksUI";
+$route['SAR/viewApplicationForm/(:any)'] = "SARDashboard/applicantViewMore/$1";
 
 //$route['SAR/candidates']="SARDashboard/viewCandidates';
 
