@@ -48,11 +48,13 @@
         <select class="form-control input-lg" id="selectBox" name = "vacancy">
            <!-- <select class="form-control input-lg" id="selectBox" onchange="changeFunc();"> -->
           <option value = "Senior Lecturer Grade I selected" >Senior Lecturer Grade I selected</option>
-          
+         
           <option value = "Senior Lecturer Grade II selected" >Senior Lecturer Grade II selected</option>
-          
+         
           <option value = "Lecturer Probationary Category 1" >Lecturer Probationary Category 1</option>
          
+          
+          
         </select>
       </div>
       </div>
@@ -70,7 +72,7 @@
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-                    <h3 class="box-title"><?php echo "$position"?></h3>
+                    <h3 class="box-title">Marks</h3>
                     <div class="box-tools">
                         
                     </div>
@@ -90,19 +92,7 @@
                     </tr>
 
                     
-                    <?php foreach($array as $a):?>
-                    <tr>
-                      <td><?=$a->index?></td>
-                      <td><?="$a->fname $a->lname"?></td>
-                      <td><?=$a->username?></td> 
-                      <td><?=$a->marks?></td>
-                      <td><?=$a->total?></td>
-                      <td><?=$a->comment?></td>
-                      
-                      
-                      
-                    </tr>
-                    <?php endforeach?> 
+                   
                     
                   </table> 
                   

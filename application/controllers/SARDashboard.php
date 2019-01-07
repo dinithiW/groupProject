@@ -106,8 +106,15 @@ class SARDashboard extends CI_Controller{
 		$this->load->view('includes/footer');
 
 	}
+	public function viewMarksUI(){
+
+		
+		$this->load->view('includes/header');
+		$this->load->view('users/SAR/viewMarksUI');
+		$this->load->view('includes/footer');
 
 
+}
 
 	public function getseniorLecturers(){
 		$data=[];

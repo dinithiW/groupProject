@@ -15,6 +15,9 @@
    public $marks;
    public $comment;
    public $username;
+   public $count;
+   public $total;
+   public $final;
 
  	public function __construct() {
 		parent::__construct();
@@ -127,13 +130,13 @@
 		$this->db->select('FIRST_NAME');
 		$this->db->select("LAST_NAME");
 		if($vacancy=="Senior Lecturer Grade I selected"){
-        	$this->db->where("INDEX_NUMBER IN(SELECT INDEX_NUMBER FROM sl_selected_gradei_marks");
+        	$this->db->where("INDEX_NUMBER IN(SELECT INDEX_NUMBER FROM sl_selected_gradei_marks)");
         }
         if($vacancy == "Senior Lecturer Grade II selected"){
-           $this->db->where("INDEX_NUMBER IN(SELECT INDEX_NUMBER FROM sl_selected_gradeii_marks");
+           $this->db->where("INDEX_NUMBER IN(SELECT INDEX_NUMBER FROM sl_selected_gradeii_marks)");
         }
         if($vacancy == "Lecturer Probationary Category 1"){
-           $this->db->where("INDEX_NUMBER IN(SELECT INDEX_NUMBER FROM lp_category_marks");
+           $this->db->where("INDEX_NUMBER IN(SELECT INDEX_NUMBER FROM lp_category_marks)");
         }
        	$this->db->from('basic_personal_details');
         $query=$this->db->get();
@@ -146,6 +149,8 @@
         	$this->db->select("USERNAME");
             $this->db->select("marks");
             $this->db->select("comment");
+            $this->db->where("INDEX_NUMBER",  $a->index);
+
             if($vacancy=="Senior Lecturer Grade I selected"){
             	$this->db->from("sl_selected_gradei_marks");
             }
@@ -155,18 +160,29 @@
             if($vacancy == "Lecturer Probationary Category 1"){
             	$this->db->from("lp_category_marks");
             }
-            $this->db->where("INDEX_NUMBER",  $a->index);
             $query2 = $this->db->get();
 
         	# code...
+        	$total=0;
+        	$count=1;
+        	$final=0;
         	foreach ($query2->result() as $row2) {
         		# code...
 
         		$a->marks.="$row2->marks<br> ";
         		$a->comment.="$row2->comment<br>";
         		$a->username.="$row2->USERNAME<br>";
+        		$total+=(int)$row2->marks;
+        		//echo "total equals $total   ";
+        		//$a->total=$this->total;
+        		$count++;
+        		//echo "in count is $count  ";
 
         	}
+        	//echo "out count is $count  ";
+        	$final=(int)$total/($count-1);
+        	//echo "final is $final ";
+        	$a->total=$final;
         array_push($array, $a);
         }
 
