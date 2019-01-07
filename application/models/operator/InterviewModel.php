@@ -58,6 +58,12 @@ class InterviewModel extends CI_Model{
             $this->db->where("INDEX_NUMBER",$row);
             $this->db->from('basic_personal_details');
 
+            $query2 = $this->db->get();
+
+            foreach ($query2->result() as $row) {
+                
+            }
+
         }
     }
 
