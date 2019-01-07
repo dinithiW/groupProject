@@ -537,14 +537,20 @@ CREATE TABLE `language_proficiency` (
 --
 
 INSERT INTO `language_proficiency` (`INDEX_NUMBER`, `WORK_SINHALA`, `WORK_ENGLISH`, `WORK_TAMIL`, `TEACH_SINHALA`, `TEACH_ENGLISH`, `TEACH_TAMIL`) VALUES
-('19SE002', 'No Knowledge', 'Good', 'Fair', 'Fair', 'Very Good', 'Good'),
-('19SE003', 'No Knowledge', 'Good', 'Fair', 'Fair', 'Very Good', 'Good'),
-('19SE006', 'Very Good', 'No Knowledge', 'Good', 'Very Good', 'No Knowledge', 'Good'),
-('19PR006', 'Very Good', 'No Knowledge', 'Good', 'Very Good', 'No Knowledge', 'Good'),
-('19SE008', 'Very Good', 'No Knowledge', 'Good', 'No Knowledge', 'Very Good', 'Fair'),
-('19SE0068', 'Very Good', 'No Knowledge', 'Good', 'No Knowledge', 'Very Good', 'Fair'),
-('19PR010', 'Very Good', 'No Knowledge', 'Good', 'No Knowledge', 'Very Good', 'Fair'),
-('19PR011', 'Good', 'Fair', 'Fair', 'Very Good', 'Very Good', 'No Knowledge');
+('19PR001', 'Very Good', 'Good', 'Good', 'Very Good', 'Good', 'Fair'),
+('19SE000', 'Very Good', 'Fair', 'Good', 'Good', 'No Knowledge', 'Good'),
+('19PR002', 'Very Good', 'Good', 'Good', 'Good', 'Very Good', 'Very Good'),
+('19SE003', 'Very Good', 'Good', 'Fair', 'Good', 'Good', 'No Knowledge'),
+('19PR004', 'Good', 'Very Good', 'Fair', 'Very Good', 'Good', 'No Knowledge'),
+('19SE005', 'Very Good', 'Good', 'Very Good', 'Good', 'Good', 'Very Good'),
+('19SE006', 'Very Good', 'Good', 'No Knowledge', 'Good', 'Good', 'Fair'),
+('19SE007', 'Very Good', 'Very Good', 'Good', 'Very Good', 'Good', 'Fair'),
+('19SE008', 'Very Good', 'Very Good', 'Good', 'Very Good', 'Good', 'Fair'),
+('19PR009', 'Very Good', 'Very Good', 'Good', 'Very Good', 'Good', 'Fair'),
+('19SE010', 'Very Good', 'Very Good', 'Good', 'Very Good', 'Very Good', 'Fair'),
+('19SE011', 'Very Good', 'Very Good', 'Good', 'Very Good', 'Very Good', 'Fair'),
+('19SE012', 'Very Good', 'Fair', 'Good', 'Good', 'Fair', 'No Knowledge'),
+('19SE013', 'Very Good', 'Very Good', 'Fair', 'Very Good', 'Very Good', 'No Knowledge');
 
 -- --------------------------------------------------------
 
