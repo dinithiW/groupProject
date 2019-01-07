@@ -119,7 +119,37 @@ class ApplicantsModel extends CI_model{
 		return $this->gender;
 	}
 	
-	
+	 public function updateSLi($applicantId,$final){
+	 	echo "hellow";
+        $this->load->database();
+        //$data = array('index'=>$applicantId,'selected'=>$final);
+        $this->db->set('SELECTED',$final);
+		$this->db->where('INDEX_NUMBER',$applicantId);
+		$this->db->update('sl_selected_gradei');
+       // $this->db->insert($tableName, $data);
+        
+   }
+
+   public function updateSLii($applicantId,$final){
+        $this->load->database();
+       // $data = array('INDEX_NUMBER'=>$applicantId,'SELECTED'=>$final);
+       // $this->db->insert($tableName, $data);
+       // $data = array('index'=>$applicantId,'selected'=>$final);
+        $this->db->set('SELECTED',$final);
+		$this->db->where('INDEX_NUMBER',$applicantId);
+		$this->db->update('sl_selected');
+        
+   }
+
+   public function updateLP($applicantId,$final){
+        $this->load->database();
+       // $data = array('index'=>$applicantId,'selected'=>$final);
+        $this->db->set('CATEGORY',$final);
+		$this->db->where('INDEX_NUMBER',$applicantId);
+		$this->db->update('lp_category');
+        
+        
+   }
 	
 
 

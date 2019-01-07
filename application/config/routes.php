@@ -159,6 +159,7 @@ $route['applicants']="SARDashboard/viewApplicants";
 $route['SAR/ViewMarks']="SARDashboard/viewMarks";
 $route['SAR/ViewMarksUI']="SARDashboard/viewMarksUI";
 $route['SAR/viewApplicationForm/(:any)'] = "SARDashboard/applicantViewMore/$1";
+$route['SAR/editCategorized/(:any)/(:any)']="SARDashboard/editCandidates/$1/$2";
 
 //$route['SAR/candidates']="SARDashboard/viewCandidates';
 
@@ -177,6 +178,8 @@ $route['Director/sendmail'] = 'Directordashboard/sendmail';
 $route['Director/insertData'] = 'Directordashboard/insertData';
 $route['Director/insertAdDetails'] = 'Directordashboard/insertAdDetails';
 $route['Director/approvelAd/(:any)'] = 'DirectorDashboard/approvelAd/$1';
+$route['Director/rejectAd/(:any)'] = 'DirectorDashboard/rejectAd/$1';
+$route['Director/findName/(:any)'] = 'DirectorDashboard/findName/$1';
 $route['Director/adOpinion/(:any)'] = 'DirectorDashboard/adOpinion/$1';
 $route['Director/approveNotSelected/(:any)'] = 'DirectorDashboard/approveNotSelected/$1';
 $route['Director/deleteApplicant/(:any)'] = 'DirectorDashboard/deleteApplicant/$1';
