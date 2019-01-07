@@ -43,7 +43,7 @@
                                 <td><?php echo $rec->ad_ref; ?></td>
                                 <td><?php echo $rec->vacancy_id; ?></td>
                                 <td><?php echo $rec->ad_url; ?></td>
-                                <td>
+                                <td class="text-center">
                                     <a class="btn btn-sm btn-info " href="<?php echo base_url().'Director/approvelAd/'.$rec->vacancy_id ?>" data-userid=""><i class="fa fa-check"></i></a>
                                 </td>
                                 <td>
