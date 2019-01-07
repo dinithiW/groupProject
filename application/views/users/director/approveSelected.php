@@ -50,7 +50,7 @@
                                 <td><?php echo $rec->MOBILE_NUMBER; ?></td>
                                 <td><?php echo $rec->POST_APPLY_FOR; ?></td>
                                 <td class="text-center">
-                                    <a class="btn btn-sm btn-danger " href="<?php echo base_url().'Director/deleteApplicant/'.$rec->INDEX_NUMBER; ?>" data-userid="<?php echo $rec->INDEX_NUMBER; ?>"><i class="fa fa-trash"></i></a> 
+                                    <a class="btn btn-sm btn-danger " href="<?php echo base_url().'Director/deleteApplicant/'.$rec->INDEX_NUMBER; ?>" data-userid="<?php echo $rec->INDEX_NUMBER; ?>"><i class="fa fa-times"></i></a> 
                                 </td>
                             </tr>
                         <?php
@@ -75,6 +75,7 @@
                                 <td><b>E-Mail</b></td>
                                 <td><b>Contact No</b></td>
                                 <td><b>Post</b></td>
+                                <th class="text-center">Actions</th>
                             </tr>
 
                         <?php 
@@ -87,6 +88,9 @@
                                 <td><?php echo $rec->PERSONAL_EMAIL; ?></td>
                                 <td><?php echo $rec->MOBILE_NUMBER; ?></td>
                                 <td><?php echo $rec->POST_APPLY_FOR; ?></td>
+                                <td class="text-center">
+                                    <a class="btn btn-sm btn-info " href="<?php echo base_url().'Director/approveNotSelected/'.$rec->INDEX_NUMBER ?>" data-userid=""><i class="fa fa-check"></i></a>
+                                </td>
                             </tr>
                         <?php
                         } 
@@ -124,7 +128,7 @@
                                 <td><?php echo $rec->MOBILE_NUMBER; ?></td>
                                 <td><?php echo $rec->POST_APPLY_FOR; ?></td>
                                 <td class="text-center">
-                                    <a class="btn btn-sm btn-danger " href="<?php echo base_url().'Director/deleteApplicant/'.$rec->INDEX_NUMBER; ?>" data-userid="<?php echo $rec->INDEX_NUMBER; ?>"><i class="fa fa-trash"></i></a> 
+                                    <a class="btn btn-sm btn-danger " href="<?php echo base_url().'Director/rejectSelectedSEI/'.$rec->INDEX_NUMBER; ?>" data-userid="<?php echo $rec->INDEX_NUMBER; ?>"><i class="fa fa-times"></i></a> 
                                 </td>
                             </tr>
                         <?php
@@ -149,6 +153,7 @@
                                 <td><b>E-Mail</b></td>
                                 <td><b>Contact No</b></td>
                                 <td><b>Post</b></td>
+                                <th class="text-center">Actions</th>
                             </tr>
 
                         <?php 
@@ -161,6 +166,9 @@
                                 <td><?php echo $rec->PERSONAL_EMAIL; ?></td>
                                 <td><?php echo $rec->MOBILE_NUMBER; ?></td>
                                 <td><?php echo $rec->POST_APPLY_FOR; ?></td>
+                                <td class="text-center">
+                                    <a class="btn btn-sm btn-info " href="<?php echo base_url().'Director/approveNotSelectedSEI/'.$rec->INDEX_NUMBER ?>" data-userid=""><i class="fa fa-check"></i></a>
+                                </td>
                             </tr>
                         <?php
                         } 
@@ -198,7 +206,7 @@
                                 <td><?php echo $rec->MOBILE_NUMBER; ?></td>
                                 <td><?php echo $rec->POST_APPLY_FOR; ?></td>
                                 <td class="text-center">
-                                    <a class="btn btn-sm btn-danger " href="<?php echo base_url().'Director/deleteApplicant/'.$rec->INDEX_NUMBER; ?>" data-userid="<?php echo $rec->INDEX_NUMBER; ?>"><i class="fa fa-trash"></i></a> 
+                                    <a class="btn btn-sm btn-danger " href="<?php echo base_url().'Director/rejectSelectedSEII/'.$rec->INDEX_NUMBER; ?>" data-userid="<?php echo $rec->INDEX_NUMBER; ?>"><i class="fa fa-times"></i></a> 
                                 </td>
                             </tr>
                         <?php
@@ -223,6 +231,7 @@
                                 <td><b>E-Mail</b></td>
                                 <td><b>Contact No</b></td>
                                 <td><b>Post</b></td>
+                                <th class="text-center">Actions</th>
                             </tr>
 
                         <?php 
@@ -235,6 +244,9 @@
                                 <td><?php echo $rec->PERSONAL_EMAIL; ?></td>
                                 <td><?php echo $rec->MOBILE_NUMBER; ?></td>
                                 <td><?php echo $rec->POST_APPLY_FOR; ?></td>
+                                <td class="text-center">
+                                    <a class="btn btn-sm btn-info " href="<?php echo base_url().'Director/approveNotSelectedSEII/'.$rec->INDEX_NUMBER ?>" data-userid=""><i class="fa fa-check"></i></a>
+                                </td>
                             </tr>
                         <?php
                         } 

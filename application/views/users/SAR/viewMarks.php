@@ -48,13 +48,11 @@
         <select class="form-control input-lg" id="selectBox" name = "vacancy">
            <!-- <select class="form-control input-lg" id="selectBox" onchange="changeFunc();"> -->
           <option value = "Senior Lecturer Grade I selected" >Senior Lecturer Grade I selected</option>
-          <option value = "Senior Lecturer Grade I not selected" >Senior Lecturer Grade I not selected</option>
+          
           <option value = "Senior Lecturer Grade II selected" >Senior Lecturer Grade II selected</option>
-          <option value = "Senior Lecturer Grade II not selected" >Senior Lecturer Grade II not selected</option>
+          
           <option value = "Lecturer Probationary Category 1" >Lecturer Probationary Category 1</option>
-          <option value = "Lecturer Probationary Category 2" >Lecturer Probationary Category 2</option>
-          <option value = "Lecturer Probationary Category 3" >Lecturer Probationary Category 3</option>
-          <option value = "Lecturer Probationary not selected" >Lecturer Probationary not selected</option>
+         
         </select>
       </div>
       </div>
@@ -98,15 +96,11 @@
                       <td><?="$a->fname $a->lname"?></td>
                       <td><?=$a->username?></td> 
                       <td><?=$a->marks?></td>
-                      <td><?=total?></td>
+                      <td><?=$a->total?></td>
                       <td><?=$a->comment?></td>
                       
                       
-                      <td class="text-center">
-                          <!-- <input type = "submit"  value="&#xf00c" class="btn btn-sm btn-success fa fa-check" >
-                          <a class="btn btn-sm btn-danger " href="<?php echo base_url().'OperatorIndex/notSelectLP/'.$a->index; ?>" data-userid=""><i class="fa fa-trash"></i></a>   -->
-                          <a class="btn btn-sm btn-info " href="" data-userid=""><i class="fa fa-info"></i></a> 
-                      </td>
+                      
                     </tr>
                     <?php endforeach?> 
                     

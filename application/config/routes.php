@@ -157,6 +157,8 @@ $route['SAR/categorizedApplicants']="SARDashboard/searchCandidates";
 $route['SAR/advertisement']="SARDashboard/viewAdvertisement";
 $route['applicants']="SARDashboard/viewApplicants";
 $route['SAR/ViewMarks']="SARDashboard/viewMarks";
+$route['SAR/ViewMarksUI']="SARDashboard/viewMarksUI";
+$route['SAR/viewApplicationForm/(:any)'] = "SARDashboard/applicantViewMore/$1";
 
 //$route['SAR/candidates']="SARDashboard/viewCandidates';
 
@@ -176,6 +178,12 @@ $route['Director/insertData'] = 'Directordashboard/insertData';
 $route['Director/insertAdDetails'] = 'Directordashboard/insertAdDetails';
 $route['Director/approvelAd/(:any)'] = 'DirectorDashboard/approvelAd/$1';
 $route['Director/adOpinion/(:any)'] = 'DirectorDashboard/adOpinion/$1';
+$route['Director/approveNotSelected/(:any)'] = 'DirectorDashboard/approveNotSelected/$1';
+$route['Director/deleteApplicant/(:any)'] = 'DirectorDashboard/deleteApplicant/$1';
+$route['Director/approveNotSelectedSEI/(:any)'] = 'DirectorDashboard/approveNotSelectedSEI/$1';
+$route['Director/rejectSelectedSEI/(:any)'] = 'DirectorDashboard/rejectSelectedSEI/$1';
+$route['Director/approveNotSelectedSEII/(:any)'] = 'DirectorDashboard/approveNotSelectedSEII/$1';
+$route['Director/rejectSelectedSEII/(:any)'] = 'DirectorDashboard/rejectSelectedSEII/$1';
 $route['Director/addMessage'] = 'DirectorDashboard/addNotification';
 $route['Director/viewMessage'] = 'DirectorDashboard/viewNotification';
 $route['Director/finalize'] = 'DirectorDashboard/finalize';

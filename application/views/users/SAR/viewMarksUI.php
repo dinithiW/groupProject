@@ -38,23 +38,23 @@
         </div> -->
     <section class="content">
        <div class = "row">
-        <label for="input-lg" class="input-lg"> Select Category</label>
+        <label for="input-lg" class="input-lg">Select Category</label>
       </div>
 
-      <form action = "<?= base_url().'SAR/categorizedApplicants'?>" method = "post">
+     <form action = "<?= base_url().'SAR/ViewMarks'?>" method = "post">
       <div class = "row">
         <div class="form-group  col-xs-8 ">
         
         <select class="form-control input-lg" id="selectBox" name = "vacancy">
            <!-- <select class="form-control input-lg" id="selectBox" onchange="changeFunc();"> -->
           <option value = "Senior Lecturer Grade I selected" >Senior Lecturer Grade I selected</option>
-          <option value = "Senior Lecturer Grade I not selected" >Senior Lecturer Grade I not selected</option>
+         
           <option value = "Senior Lecturer Grade II selected" >Senior Lecturer Grade II selected</option>
-          <option value = "Senior Lecturer Grade II not selected" >Senior Lecturer Grade II not selected</option>
+         
           <option value = "Lecturer Probationary Category 1" >Lecturer Probationary Category 1</option>
-          <option value = "Lecturer Probationary Category 2" >Lecturer Probationary Category 2</option>
-          <option value = "Lecturer Probationary Category 3" >Lecturer Probationary Category 3</option>
-          <option value = "Lecturer Probationary not selected" >Lecturer Probationary not selected</option>
+         
+          
+          
         </select>
       </div>
       </div>
@@ -72,9 +72,9 @@
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-                    <h3 class="box-title"><?php echo "$position"?></h3>
+                    <h3 class="box-title">Marks</h3>
                     <div class="box-tools">
-                       
+                        
                     </div>
                 </div><!-- /.box-header -->
                 <div class="box-body table-responsive no-padding">
@@ -82,33 +82,17 @@
                     <tr>
                       <th>Applicant ID</th>
                       <th>Name</th>
-                      <th>DOB
-                      <th>Educational Qualifications</th>
-                      <th>Professional Qualifications</th>
-                      <th>Other Qualifications</th>
-                      <th>Specializations</th>
                       
-                      <th class="text-center">Actions</th>
+                      <th>Panel</th>
+                      <th>Marks</th>
+                      <th>Total Marks</th>
+                      <th>Comments</th>
+                      
+                      
                     </tr>
 
                     
-                    <?php foreach($array as $a):?>
-                    <tr>
-                      <td><?=$a->index?></td>
-                      <td><?="$a->fname $a->lname"?></td>
-                      <td><?=$a->dob?></td> 
-                      <td><?=$a->eq?></td>
-                      <td><?=$a->pq?></td>
-                      <td><?=$a->oq?></td>
-                      <td><?=$a->spe?></td>
-                      
-                       <td class="text-center">
-                          <!-- <input type = "submit"  value="&#xf00c" class="btn btn-sm btn-success fa fa-check" >
-                          <a class="btn btn-sm btn-danger " href="<?php echo base_url().'OperatorIndex/notSelectLP/'.$a->index; ?>" data-userid=""><i class="fa fa-trash"></i></a>   -->
-                          <a class="btn btn-sm btn-info " href="<?php echo base_url().'OperatorIndex/viewApplicationForm/'.$a->index?>" data-userid=""><i class="fa fa-info"></i></a> 
-                      </td>
-                    </tr>
-                    <?php endforeach?> 
+                   
                     
                   </table> 
                   

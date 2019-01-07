@@ -129,6 +129,66 @@ class applicantDetails extends CI_Model{
          $this->db->trans_complete();
     }
 
+    //Select the not selected applicant
+    function setNotSelected($id){
+        $this->db->trans_start();
+        $this->db->set('CATEGORY', 4);
+        $this->db->where('INDEX_NUMBER', $id);
+        $this->db->update('lp_category'); //Change effect
+        $rows =  $this->db->affected_rows();
+         $this->db->trans_complete();
+    }
+
+    //Remove selected applicant
+    function setSelected($id){
+        $this->db->trans_start();
+        $this->db->set('CATEGORY', 0);
+        $this->db->where('INDEX_NUMBER', $id);
+        $this->db->update('lp_category'); //Change effect
+        $rows =  $this->db->affected_rows();
+         $this->db->trans_complete();
+    }
+
+    //Selected the not selected(Senior Lecturer I)
+    function setSelectedSEI($id){
+        $this->db->trans_start();
+        $this->db->set('SELECTED', 1);
+        $this->db->where('INDEX_NUMBER', $id);
+        $this->db->update('sl_selected_gradei'); //Change effect
+        $rows =  $this->db->affected_rows();
+         $this->db->trans_complete();
+    }
+
+    //Reject the selected applicants (Senior Lecturer I)
+    function rejectSelectedSEI($id){
+        $this->db->trans_start();
+        $this->db->set('SELECTED', 0);
+        $this->db->where('INDEX_NUMBER', $id);
+        $this->db->update('sl_selected_gradei'); //Change effect
+        $rows =  $this->db->affected_rows();
+         $this->db->trans_complete();
+    }
+
+    //Selected the not selected(Senior Lecturer II)
+    function setSelectedSEII($id){
+        $this->db->trans_start();
+        $this->db->set('SELECTED', 1);
+        $this->db->where('INDEX_NUMBER', $id);
+        $this->db->update('sl_selected'); //Change effect
+        $rows =  $this->db->affected_rows();
+         $this->db->trans_complete();
+    }
+
+    //Reject the selected applicants (Senior Lecturer II)
+    function rejectSelectedSEII($id){
+        $this->db->trans_start();
+        $this->db->set('SELECTED', 0);
+        $this->db->where('INDEX_NUMBER', $id);
+        $this->db->update('sl_selected'); //Change effect
+        $rows =  $this->db->affected_rows();
+         $this->db->trans_complete();
+    }
+
     //
     public function getApplicant($INDEX_NUMBER){
 
