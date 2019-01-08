@@ -3,7 +3,7 @@
 <h2 style="text-align: center;">VACANCIES</h2>
 <p>&nbsp;</p>
 <h3 style="text-align: center;">POSTS OF LECTURER(PROBATIONARY)/SENIOR LECTURER GR.II</h3>
-<p>The University of Colombo School of Computing(UCSC) a leading Higher Education Institute which provides Undergraduate and Postgraduate education in computing and related fields in sri lanka will entertain applications for the following posts from suitabiy qualified persons up to&nbsp;<strong>09th March 2018</strong></p>
+<p>The University of Colombo School of Computing(UCSC) a leading Higher Education Institute which provides Undergraduate and Postgraduate education in computing and related fields in sri lanka will entertain applications for the following posts from suitabiy qualified persons up to&nbsp;<strong>18th March 2018</strong></p>
 <p>Special consideration will be given for the candidates capable with following speciality/sub speciality with computing degrees;</p>
 <p>Software Engineering,Information System Security, Computer Networks, Grid Computing, Artificial Neural Networks, Human-Computer Interatction , Data Science, Embedded Systems, Operating Systems, Software Verification and Quality Assurence, Enterprise application development, IT Project Management, Computer Graphics and Vision, Computer Architecture &amp; Engineering.</p>
 <ol>

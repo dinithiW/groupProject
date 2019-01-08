@@ -60,6 +60,17 @@ if (!empty($_GET["confirmed"])) {
                         <?php
                     }
                     ?>
+                     <?php
+                    if ($confirmed == "failed") {
+                        ?>
+                        <div class="alert alert-danger"
+                             style="margin-left: 10px;margin-right: 10px;text-align: center;color: #17630a;font-weight: bold">
+                            Advertisement has been declined
+                        </div>
+                        <?php
+                    }
+                    ?>
+
                 </div>
                 <div style="margin-left: 10px;margin-right: 10px">
                     <form method="post" action="<?= base_url('SARDashboard/confirmAdvertisement') ?>">
@@ -72,6 +83,11 @@ if (!empty($_GET["confirmed"])) {
                                 style="left: 50%;transform: translateX(-50%);font-weight: bold;margin-top: 80px;position: relative"
                                 id="submitAdBtn">
                             Confirm Advertisement
+                        </button>
+                        <button type="submit" class="btn btn-danger"
+                                style="left: 50%;transform: translateX(-50%);font-weight: bold;margin-top: 80px;position: relative"
+                                id="submitAdBtn">
+                           Decline Advertisement
                         </button>
                     </form>
                 </div>

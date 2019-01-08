@@ -39,6 +39,7 @@ class SARDashboard extends CI_Controller{
 	}
 
 
+
 	public function viewAdvertisement(){
 		$this->load->model('SAR/AdvertisementModel');
 		//$this->load->setNotifyTo0();
@@ -207,9 +208,12 @@ class SARDashboard extends CI_Controller{
 		if(!isset($_POST['type'])){
 			$_POST['type'] = "";
 		}
+		$vacancy=$_POST['type'];
+		//	[por432\;lkjhg	$type=$_POST['type'];
 		$data=[];
 		$this->load->model('SAR/ApplicantsModel');
 		$data['array']=$this->ApplicantsModel->getAllApplicants($_POST['type']);
+		$data['position']=$vacancy;
 		$this->load->view('includes/header');
 		$this->load->view('users/SAR/applicants',$data);
 		$this->load->view('includes/footer');
@@ -247,6 +251,12 @@ class SARDashboard extends CI_Controller{
         
     }
 
+    /*public function viewFinalizedSelected(){
+    	$noofvacancies=$_POST['noofvacancies'];
+    	$this->load->model('SAR/');
+    	$data['array']=
+    }*/
+
 
 	public function sendBulkmails($arr){
 		$aDoor = $_POST['formdoor'];
@@ -260,7 +270,7 @@ class SARDashboard extends CI_Controller{
 		 		//echo($aDoor[$i] . " ");
  				$email = new EmailController();
 		        $this->load->library('email');
-		        $email->send_mail2($this->email, $aDoor[$i], "dsfs");
+		        $email->send_mail2($this->email, $aDoor[$i], $this->input->post('reportdetails'));
 
 		 	}
 
