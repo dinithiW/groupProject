@@ -260,7 +260,7 @@ class SARDashboard extends CI_Controller{
 		 		//echo($aDoor[$i] . " ");
  				$email = new EmailController();
 		        $this->load->library('email');
-		        $email->send_mail2($this->email, $aDoor[$i], "dsfs");
+		        $email->send_mail2($this->email, $aDoor[$i], $this->input->post('reportdetails'));
 
 		 	}
 

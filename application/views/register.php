@@ -58,14 +58,14 @@
 
           <div class="form-group">
             <!-- add labels here -->
-            <label for="lname">Name With Initials</label>
-            <input type="text" class="form-control" placeholder="Name with initials" name="fullname" required />
+            <label for="lname">Full Name</label>
+            <input type="text" class="form-control" placeholder="Enter your name" name="fullname" required />
            <!--  <span class="glyphicon glyphicon-envelope form-control-feedback"></span> -->
           </div>
 
           <div class="form-group">
             <label for="lname">Email</label>
-            <input type="email" class="form-control" placeholder="Email" name="email" required />
+            <input type="email" class="form-control" placeholder="Enter your email" name="email" required />
            <!--  <span class="glyphicon glyphicon-lock form-control-feedback"></span> -->
           </div>
 

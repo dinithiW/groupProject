@@ -71,7 +71,7 @@ $userId = "";
                                             <option value="male">Male</option>
                                             <option value="female">Female</option>
                                         </select> -->
-                                        <input required type="file" class = "form-control" name = "UploadFileName" >
+                                        <input required type="file" class = "form-control" name = "file" >
 
                                     </div>
                                 </div>
