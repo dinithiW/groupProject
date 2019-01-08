@@ -87,7 +87,7 @@ if (!empty($_GET["confirmed"])) {
                         <button type="submit" class="btn btn-danger"
                                 style="left: 50%;transform: translateX(-50%);font-weight: bold;margin-top: 80px;position: relative"
                                 id="submitAdBtn">
-                           Decline Advertisement
+
                         </button>
                     </form>
                 </div>

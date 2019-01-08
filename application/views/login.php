@@ -82,9 +82,9 @@
         </form>
       </div>
         <br>
-        <div class = "col-xs-8 text-center">
+        <!-- <div class = "col-xs-8 text-center">
         <a href="<?php echo base_url() ?>forgotPassword">Forgot Password</a><br>
-        </div>
+        </div> -->
       </div><!-- /.login-box-body -->
     </div><!-- /.login-box -->
 

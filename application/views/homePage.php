@@ -235,7 +235,7 @@
 </section>
 <!--/ Organisations-->
 <!--Cta-->
-<section id="cta-2">
+<!-- <section id="cta-2">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -251,7 +251,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!--/ Cta-->
 <!--work-shop-->
 <section id="work-shop" class="section-padding">
@@ -290,7 +290,7 @@
 
 <!--/ Faculity member-->
 <!--Testimonial-->
-<section id="testimonial" class="section-padding">
+<!-- <section id="testimonial" class="section-padding">
     <div class="container">
         <div class="row">
             <div class="header-section text-center">
@@ -315,7 +315,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!--/ Testimonial-->
 <!--Courses-->
 <section id="gallery" class="section-padding">

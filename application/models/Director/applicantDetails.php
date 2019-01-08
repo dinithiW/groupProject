@@ -91,7 +91,7 @@ class applicantDetails extends CI_Model{
 
     //Get all fields of created ad table
     function getCreatedAd(){
-        $subquery = 'SELECT * FROM created_ad';
+        $subquery = 'SELECT * FROM created_ad ORDER BY id DESC';
         $query = $this->db->query($subquery);
 
         return $query->result();
