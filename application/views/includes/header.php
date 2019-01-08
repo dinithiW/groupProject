@@ -284,7 +284,7 @@ if($checking=='1'){
             <li class="treeview">
               <a href="<?= base_url('SAR/advertisement') ?>">
                 <i class="fa fa-adn"></i>
-                <span>Advertisement</span>
+                <span>Approve Advertisement</span>
               </a>
             </li>
             <li class="treeview">
