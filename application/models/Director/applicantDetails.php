@@ -91,7 +91,7 @@ class applicantDetails extends CI_Model{
 
     //Get all fields of created ad table
     function getCreatedAd(){
-        $subquery = 'SELECT * FROM created_ad';
+        $subquery = 'SELECT * FROM created_ad ORDER BY id DESC';
         $query = $this->db->query($subquery);
 
         return $query->result();
@@ -117,6 +117,31 @@ class applicantDetails extends CI_Model{
             echo 'this is else part';
             // return FALSE;
         }
+    }
+
+    //this will update is_approved colomn to 0 in created_ad table
+    function setRejectAd($id){
+        $this->db->trans_start();
+        $this->db->set('is_approved', 0);
+        $this->db->where('vacancy_id', $id);
+        $this->db->update('created_ad');
+        $rows =  $this->db->affected_rows();
+         $this->db->trans_complete();
+    }
+
+    function findVacancyNeeded($id){
+
+        // echo "Here";
+        $this->db->select('name');
+        $this->db->where('id',$id);
+        $this->db->from('vacancies');
+        //$subquery = 'SELECT name FROM vacancies WHERE id = $id';
+        
+        
+        
+        $query = $this->db->get();
+
+        return $query->result();
     }
 
     //Director opinion about advertisment

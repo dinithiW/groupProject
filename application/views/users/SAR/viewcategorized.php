@@ -103,15 +103,16 @@
                       <td><?=$a->oq?></td>
                       <td><?=$a->spe?></td>
 
-                      <form method = "post" action = "<?= base_url().'OperatorIndex/selectLP/'.$a->index.'/'.$position;?>">
+                      <form method = "post" action = "<?= base_url().'SAR/editCategorized/'.$a->index.'/'.$position;?>">
                       <td>
-                        <select class="form-control" id="selectBox" name = <?php echo "category_$a->index"?>>
+                        <select class="form-control" id="selectBox" name = result>
 
                           
                           <option value = "1" selected>Category 1</option>
                           <option value = "2" >Category 2</option>
                           <option value = "3" >Category 3</option>
                           <option value = "0" >Not Selected</option>
+                           <option value = "1" >Selected</option>
 
                           
                         </select>
@@ -125,7 +126,7 @@
                       </td>
                     </tr>
                     <?php endforeach?> 
-                    
+                    </form>
                   </table> 
                   
                 </div><!-- /.box-body -->

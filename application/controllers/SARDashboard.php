@@ -29,6 +29,12 @@ class SARDashboard extends CI_Controller{
         $email->send_mail($this->email, $this->input->post('directormail'), $this->input->post('reportdetails'));
 	}
 
+	public function addsendtodirector(){
+		$email=new EmailController();
+		$this->load->library('email');
+		$email->send_mail($this->email,"dimuthi@gmail.com","hjhj");
+	}
+
 
 
 
@@ -37,6 +43,7 @@ class SARDashboard extends CI_Controller{
 		$this->AdvertisementModel->confirmAdvertisement();
 		redirect(base_url()."SAR/advertisement?confirmed=success");
 	}
+
 
 
 	public function viewAdvertisement(){
@@ -52,7 +59,7 @@ class SARDashboard extends CI_Controller{
         $this->load->view('includes/footer');
 	}
 
-
+	//to get all email addresses of the panel
 	public function setInterviewDates(){
 		$data=[];
 		$this->load->model('SAR/PanelDetails');
@@ -64,12 +71,11 @@ class SARDashboard extends CI_Controller{
 	}
 
 
+	//to get all email addresses of the panel
 	public function getAllmailAddresses(){
 		$data=[];
 		$this->load->model('SAR/PanelDetails');
 		$data['Members']=$this->load->PanelDetails->getAllEmailAddresses();
-		//var_dump($data['members']);
-		//exit();
 		$this->load->view('includes/header');
 		$this->load->view('users/SAR/setDates',$data);
 		$this->load->view('includes/footer');
@@ -77,14 +83,16 @@ class SARDashboard extends CI_Controller{
 
 
 	public function viewCandidates(){
-		//echo "haha";
+		
 		$this->load->view('includes/header');
         $this->load->view('users/SAR/viewCandidates');
         $this->load->view('includes/footer');
 	}
 
+	//to view categorized  applicants 
 	public function searchCandidates(){
 		$vacancy=$_POST['vacancy'];
+
 		$this->load->model('SAR/CandidatesModel');
 		$data['array']=$this->CandidatesModel->getAll($vacancy);
 		$data['position']=$vacancy;
@@ -94,10 +102,60 @@ class SARDashboard extends CI_Controller{
 
 	}
 
+	//to update categorized applicants
+	public function editCandidates($applicantID,$vacancy2){
+		$vacancy = str_replace("%20", " ", $vacancy2);
+		//$vacancy=$_POST['vacancy'];
+		$final=$_POST['result'];
+		//echo $vacancy;
+
+	//	echo $final;
+		//$aplicantID=$_POST['index'];
+		//echo $applicantID;
+		if ($vacancy=="Senior Lecturer Grade I selected" ||$vacancy=="Senior Lecturer Grade I not selected") {
+			
+
+			$this->load->model('SAR/ApplicantsModel');
+			$this->ApplicantsModel->updateSLi($applicantID,$final);
+
+			$this->load->model('SAR/CandidatesModel');
+			$data['array']=$this->CandidatesModel->getAll($vacancy);
+			$data['position']=$vacancy;
+			$this->load->view('includes/header');
+			$this->load->view('users/SAR/viewcategorized',$data);
+			$this->load->view('includes/footer');
+		}
+		if ($vacancy=="Senior Lecturer Grade II selected" ||$vacancy=="Senior Lecturer Grade II not selected") {
+			# code...
+			$this->load->model('SAR/ApplicantsModel');
+			$this->ApplicantsModel->updateSLii($applicantID,$final);
+
+			$this->load->model('SAR/CandidatesModel');
+			$data['array']=$this->CandidatesModel->getAll($vacancy);
+			$data['position']=$vacancy;
+			$this->load->view('includes/header');
+			$this->load->view('users/SAR/viewcategorized',$data);
+			$this->load->view('includes/footer');
+		}else{
+			$this->load->model('SAR/ApplicantsModel');
+			$this->ApplicantsModel->updateLP($applicantID,$final);
+		
+			$this->load->model('SAR/CandidatesModel');
+			$data['array']=$this->CandidatesModel->getAll($vacancy);
+			$data['position']=$vacancy;
+			$this->load->view('includes/header');
+			$this->load->view('users/SAR/viewcategorized',$data);
+			$this->load->view('includes/footer');
+		}
+
+	}
+
+	//to load marks to the table in the view 
+
 	public function viewMarks(){
 
 		$vacancy = $_POST['vacancy'];
-		echo "hey $vacancy";
+		//echo "hey $vacancy";
 		$this->load->model('SAR/CandidatesModel');
 		$data['array']=$this->CandidatesModel->getMarks($vacancy);
 		$data['position']=$vacancy;
@@ -106,6 +164,7 @@ class SARDashboard extends CI_Controller{
 		$this->load->view('includes/footer');
 
 	}
+	//to display marks table
 	public function viewMarksUI(){
 
 		
@@ -155,13 +214,17 @@ class SARDashboard extends CI_Controller{
 		$this->load->view('includes/footer');
 	}
 
+	//to view all applicants before categorization 
 	public function viewApplicants(){
 		if(!isset($_POST['type'])){
 			$_POST['type'] = "";
 		}
+		$vacancy=$_POST['type'];
+		
 		$data=[];
 		$this->load->model('SAR/ApplicantsModel');
 		$data['array']=$this->ApplicantsModel->getAllApplicants($_POST['type']);
+		$data['position']=$vacancy;
 		$this->load->view('includes/header');
 		$this->load->view('users/SAR/applicants',$data);
 		$this->load->view('includes/footer');
@@ -179,6 +242,7 @@ class SARDashboard extends CI_Controller{
 
 		}
 	}*/
+	//to view application form 
 
  public function applicantViewMore($index_number){
         //$index_number = $_SESSION['index_number'];
@@ -199,21 +263,36 @@ class SARDashboard extends CI_Controller{
         
     }
 
+    /*public function viewFinalizedSelected(){
+    	$noofvacancies=$_POST['noofvacancies'];
+    	$this->load->model('SAR/');
+    	$data['array']=
+    }*/
 
+    //send mails to multiple receipients
 	public function sendBulkmails($arr){
+		$count=0;
 		$aDoor = $_POST['formdoor'];
+		$email=new EmailController();
+		$this->load->library('email');
+
 		 if(empty($aDoor)){
 		 	echo("You didn't select any Email");
 
 		 }else{
-		 	$N = count($aDoor);
-		 	//echo("You selected $N door(s): ");
-		 	for($i=0; $i < $N; $i++){
-		 		//echo($aDoor[$i] . " ");
- 				$email = new EmailController();
-		        $this->load->library('email');
-		        $email->send_mail2($this->email, $aDoor[$i], "dsfs");
-
+		 	foreach ($aDoor as $row) {
+		 		$email = new EmailController();
+		 		$this->load->library('email');
+		 		 $res=$email->send_mail2($this->email, $row, $this->input->post('reportdetails'));
+		 		# code...
+		 		 if($res==true){
+		 		 	$count++;
+		 		 }
+		 	}
+		 	if(sizeof($aDoor)==$count){
+		 		redirect(base_url()."setDates?email==success&&sent=".$count);
+		 	}else{
+		 		redirect(base_url()."setDates?email==failed");
 		 	}
 
 		 }

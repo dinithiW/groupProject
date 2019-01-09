@@ -111,6 +111,7 @@
                                // $value++;
                             }
                             ?> -->
+                            <!-- Fill Applicants detail table   -->
                           <?php
                             $value = 0;
                             foreach ($applicants as $row) {
