@@ -69,8 +69,11 @@ $route['advertisement']='User/add';
 //Management Assistant routes
 $route['OperatorIndex'] = 'OperatorDashboard/index';
 
+//functionality: create Ad
+//loading the view with text editor
 $route['OperatorIndex/createAd'] = 'OperatorDashboard/ad';
 $route['OperatorIndex/emails'] = 'OperatorDashboard/showEmails';
+//loading the view corresponding to entering details of the email Addresses etc
 $route['OperatorIndex/sendEmail'] = 'OperatorDashboard/sendAdToSAR';
 
 $route['OperatorIndex/process'] = 'OperatorDashboard/sendEmail';
@@ -91,8 +94,10 @@ $route['OperatorIndex/checkEmailExists'] = "OperatorDashboard/checkEmailExists";
 $route['OperatorIndex/editMember/(:any)'] = "OperatorDashboard/editMemberView/$1";
 $route['OperatorIndex/deleteMember/(:any)'] = "OperatorDashboard/deleteMemberMsg/$1";
 $route['OperatorIndex/deleteMemberProcess/(:any)'] = "OperatorDashboard/deleteMemberModel/$1";
-//this is for loading the home page of the candidate selection process
+//functionality: view all candidates
+//shows all candidates
 $route['OperatorIndex/viewAll'] = "OperatorDashboard/viewAllCandidates";
+
 //this is for loading the home page of the interview date setting process
 $route['OperatorIndex/interviewDate'] = "OperatorDashboard/setInterviewDate";
 $route['OperatorIndex/intervewDate'] = "OperatorDashboard/setIntervewDate";

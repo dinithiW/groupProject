@@ -68,16 +68,20 @@ class OperatorDashboard extends CI_Controller{
     }
 */
     //loads the view related to creating an advertisement
+    //page with the text editor
+    //route: createAd
     public function ad(){
         $this->load->view('includes/header');
-        $this->load->view('users/operator/createAd');
+        $this->load->view('users/operator/createAd/createAd');
         $this->load->view('includes/footer');
     }
 
+    //loads the view corresponding to entering email address and sending it to SAR
+    //route: sendEmail
     public function sendAdToSAR(){
        
         $this->load->view('includes/header');
-        $this->load->view('users/operator/sendEmail');
+        $this->load->view('users/operator/createAd/sendEmail');
         $this->load->view('includes/footer');
     }
 
@@ -170,13 +174,17 @@ class OperatorDashboard extends CI_Controller{
         return $taskNum;
     }
 
+    //route: viewAll
+    //function: view All candidates
+    //gets details of all applicants
     public function viewAllCandidates(){
         $this->load->model("applicant_model");
         $data['array'] = $this->applicant_model->getAll();
         $this->load->view('includes/header');
-        $this->load->view('users/operator/allCandidates', $data);
+        $this->load->view('users/operator/viewAll/allCandidates', $data);
         $this->load->view('includes/footer');
     }
+    
     //interview date setting home
     public function setInterviewDate(){
         $this->load->model('applicant_model');
