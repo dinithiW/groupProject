@@ -29,6 +29,12 @@ class SARDashboard extends CI_Controller{
         $email->send_mail($this->email, $this->input->post('directormail'), $this->input->post('reportdetails'));
 	}
 
+	public function addsendtodirector(){
+		$email=new EmailController();
+		$this->load->library('email');
+		$email->send_mail($this->email,"dimuthi@gmail.com","hjhj");
+	}
+
 
 
 
@@ -37,6 +43,7 @@ class SARDashboard extends CI_Controller{
 		$this->AdvertisementModel->confirmAdvertisement();
 		redirect(base_url()."SAR/advertisement?confirmed=success");
 	}
+
 
 
 	public function viewAdvertisement(){
@@ -207,9 +214,12 @@ class SARDashboard extends CI_Controller{
 		if(!isset($_POST['type'])){
 			$_POST['type'] = "";
 		}
+		$vacancy=$_POST['type'];
+		//	[por432\;lkjhg	$type=$_POST['type'];
 		$data=[];
 		$this->load->model('SAR/ApplicantsModel');
 		$data['array']=$this->ApplicantsModel->getAllApplicants($_POST['type']);
+		$data['position']=$vacancy;
 		$this->load->view('includes/header');
 		$this->load->view('users/SAR/applicants',$data);
 		$this->load->view('includes/footer');
@@ -247,21 +257,36 @@ class SARDashboard extends CI_Controller{
         
     }
 
+    /*public function viewFinalizedSelected(){
+    	$noofvacancies=$_POST['noofvacancies'];
+    	$this->load->model('SAR/');
+    	$data['array']=
+    }*/
+
 
 	public function sendBulkmails($arr){
+		$count=0;
 		$aDoor = $_POST['formdoor'];
+		$email=new EmailController();
+		$this->load->library('email');
+
 		 if(empty($aDoor)){
 		 	echo("You didn't select any Email");
 
 		 }else{
-		 	$N = count($aDoor);
-		 	//echo("You selected $N door(s): ");
-		 	for($i=0; $i < $N; $i++){
-		 		//echo($aDoor[$i] . " ");
- 				$email = new EmailController();
-		        $this->load->library('email');
-		        $email->send_mail2($this->email, $aDoor[$i], $this->input->post('reportdetails'));
-
+		 	foreach ($aDoor as $row) {
+		 		$email = new EmailController();
+		 		$this->load->library('email');
+		 		 $res=$email->send_mail2($this->email, $row, $this->input->post('reportdetails'));
+		 		# code...
+		 		 if($res==true){
+		 		 	$count++;
+		 		 }
+		 	}
+		 	if(sizeof($aDoor)==$count){
+		 		redirect(base_url()."setDates?email==success&&sent=".$count);
+		 	}else{
+		 		redirect(base_url()."setDates?email==failed");
 		 	}
 
 		 }
