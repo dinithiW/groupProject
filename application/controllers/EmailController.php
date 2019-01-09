@@ -45,13 +45,15 @@ class EmailController
         $error = false;
         if ($emailOb->send()) {
              //$this->session->set_flashdata("email_sent", "Email sent successfully.");
-            redirect(base_url() . "setDates?email=success");
+           // redirect(base_url() . "setDates?email=success");
+            return true;
         } else {
 //            $this->session->set_flashdata("email_sent", "Error in sending Email.");
             //redirect(base_url() . "setDates?email=failed");
-            $error = true;
+           // $error = true;
            // $this->session->set_flashdata("email_sent", "Error in sending Email.");
-            redirect(base_url() . "setDates?email=failed");
+            //redirect(base_url() . "setDates?email=failed");
+            return false;
         }
 
 

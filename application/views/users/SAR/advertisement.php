@@ -73,7 +73,7 @@ if (!empty($_GET["confirmed"])) {
 
                 </div>
                 <div style="margin-left: 10px;margin-right: 10px">
-                    <form method="post" action="<?= base_url('SARDashboard/confirmAdvertisement') ?>">
+                    <form method="post" action="<?= base_url('SAR/addsendtodirector') ?>">
                         <div class="row" style="background-color: white;border: 2px solid #7a4d01;padding: 10px">
                             <?php
                                 $this->load->view('add');
@@ -87,8 +87,10 @@ if (!empty($_GET["confirmed"])) {
                         <button type="submit" class="btn btn-danger"
                                 style="left: 50%;transform: translateX(-50%);font-weight: bold;margin-top: 80px;position: relative"
                                 id="submitAdBtn">
-
+                                Decline Advertisement
                         </button>
+
+
                     </form>
                 </div>
             </div>

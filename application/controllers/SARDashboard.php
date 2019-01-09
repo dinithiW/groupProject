@@ -29,6 +29,12 @@ class SARDashboard extends CI_Controller{
         $email->send_mail($this->email, $this->input->post('directormail'), $this->input->post('reportdetails'));
 	}
 
+	public function addsendtodirector(){
+		$email=new EmailController();
+		$this->load->library('email');
+		$email->send_mail($this->email,"dimuthi@gmail.com","hjhj");
+	}
+
 
 
 
@@ -259,19 +265,28 @@ class SARDashboard extends CI_Controller{
 
 
 	public function sendBulkmails($arr){
+		$count=0;
 		$aDoor = $_POST['formdoor'];
+		$email=new EmailController();
+		$this->load->library('email');
+
 		 if(empty($aDoor)){
 		 	echo("You didn't select any Email");
 
 		 }else{
-		 	$N = count($aDoor);
-		 	//echo("You selected $N door(s): ");
-		 	for($i=0; $i < $N; $i++){
-		 		//echo($aDoor[$i] . " ");
- 				$email = new EmailController();
-		        $this->load->library('email');
-		        $email->send_mail2($this->email, $aDoor[$i], $this->input->post('reportdetails'));
-
+		 	foreach ($aDoor as $row) {
+		 		$email = new EmailController();
+		 		$this->load->library('email');
+		 		 $res=$email->send_mail2($this->email, $row, $this->input->post('reportdetails'));
+		 		# code...
+		 		 if($res==true){
+		 		 	$count++;
+		 		 }
+		 	}
+		 	if(sizeof($aDoor)==$count){
+		 		redirect(base_url()."setDates?email==success&&sent=".$count);
+		 	}else{
+		 		redirect(base_url()."setDates?email==failed");
 		 	}
 
 		 }
