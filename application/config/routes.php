@@ -69,14 +69,16 @@ $route['advertisement']='User/add';
 //Management Assistant routes
 $route['OperatorIndex'] = 'OperatorDashboard/index';
 
-//functionality: create Ad
+//----------------functionality: create Ad---------------------------
 //loading the view with text editor
 $route['OperatorIndex/createAd'] = 'OperatorDashboard/ad';
-$route['OperatorIndex/emails'] = 'OperatorDashboard/showEmails';
 //loading the view corresponding to entering details of the email Addresses etc
 $route['OperatorIndex/sendEmail'] = 'OperatorDashboard/sendAdToSAR';
-
+//calling the model for uploading the file
 $route['OperatorIndex/process'] = 'OperatorDashboard/sendEmail';
+/*$route['OperatorIndex/emails'] = 'OperatorDashboard/showEmails';*/
+
+//-----------------functionality: manage panel members-------------------
 //this directs to the home of adding a new member
 $route['OperatorIndex/addPanelMember'] = 'OperatorDashboard/addPanelMember';
 //actual adding
@@ -125,6 +127,9 @@ $route['OperatorIndex/selectLP/(:any)/(:any)'] = "OperatorDashboard/addToSelecte
 $route['OperatorIndex/notSelectLP/(:any)'] = "OperatorDashboard/addToNotSelectedLP/$1";
 $route['OperatorIndex/viewCategorized'] = "OperatorDashboard/viewCategorizedApplicants";
 $route['OperatorIndex/searchCategorized'] = "OperatorDashboard/searchCandidates";
+
+//-----------------functionality: edit application form-------------------------
+//loading the initial view to choose what aspect of the application form you want to change
 $route['OperatorIndex/editApplication'] = "OperatorDashboard/editForm";
 $route['OperatorIndex/directEditApplication'] = "OperatorDashboard/directEditApplication";
 

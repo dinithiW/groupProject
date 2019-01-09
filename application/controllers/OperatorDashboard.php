@@ -1,5 +1,6 @@
 <?php
 include 'EmailController.php';
+
 class OperatorDashboard extends CI_Controller{
 
 	public function __construct() {
@@ -14,59 +15,6 @@ class OperatorDashboard extends CI_Controller{
         $this->load->view('includes/footer');
     }
     
-    //this function for select areas of applicants 
-    /*public function categorizeApplications(){
-        $this->load->view('users/operator/header');
-        $this->load->model('operator/categorizeApplilcationsModel');
-        $data['fetch_data1'] = $this->categorizeApplilcationsModel->fetch_datas();
-        $data['fetch_data2'] = $this->categorizeApplilcationsModel->fetchFileUploadLinks();
-        $this->load->view('users/operator/categorizeApplications',$data);
-        $this->load->view('users/operator/footer');
-    }
-
-    //redirect to this file after execute thr sql query
-    public function reDirect(){  
-        $this->categorizeApplications();  
-    }
-
-    //for select data from database
-    public function selectDataFromDatabase(){
-        $this->load->model('operator/categorizeApplilcationsModel');
-        $data['fetch_data'] = $this->categorizeApplilcationsModel->fetch_datas();
-        $this->load->view('applicant/applicationForm/ApplicationFormSelectAreas',$data);
-    }
-
-    //for insert data into database
-    public function insesrtDataForDatabase(){
-        $this->load->model('operator/categorizeApplilcationsModel');
-        $data = array("AREA_NAME"=> $this->input->post('insertArea'));
-        $this->categorizeApplilcationsModel->insertAreas($data);
-        redirect(base_url()."OperatorDashboard/reDirect");
-    }
-
-    //for delete data from database
-    public function deleteDataFromDatabase(){
-        $this->load->model('operator/categorizeApplilcationsModel');
-        $this->categorizeApplilcationsModel->deleteAreas($this->input->post('deleteArea'));
-        redirect(base_url() . "OperatorDashboard/reDirect");
-    }
-
-    
-    public function insesrtFileUploadingLinkForDatabase(){
-        $this->load->model('operator/categorizeApplilcationsModel');
-        $data = array("LINK_NAME"=> $this->input->post('insertFileUploadLink'));
-        $this->categorizeApplilcationsModel->insertFileUploadLink($data);
-        redirect(base_url()."OperatorDashboard/reDirect");
-    }
-
-    //for delete fileupload data from database
-    public function deleteFileUploadLinkFromDatabase(){
-        $this->load->model('operator/categorizeApplilcationsModel');
-        $this->categorizeApplilcationsModel->deleteFileUploadLinkFromDatabase($this->input->post('deleteFileUploadLink'));
-        echo $this->input->post('deleteFileUploadLink');
-        redirect(base_url()."OperatorDashboard/reDirect");
-    }
-*/
     //loads the view related to creating an advertisement
     //page with the text editor
     //route: createAd
@@ -79,10 +27,20 @@ class OperatorDashboard extends CI_Controller{
     //loads the view corresponding to entering email address and sending it to SAR
     //route: sendEmail
     public function sendAdToSAR(){
-       
+        $this->load->model('operator/VacanciesModel');
+        $data['vacancies'] = $this->VacanciesModel->getVacancies();
         $this->load->view('includes/header');
-        $this->load->view('users/operator/createAd/sendEmail');
+        $this->load->view('users/operator/createAd/sendEmail',$data);
         $this->load->view('includes/footer');
+    }
+
+    //loads the model and uploads ad to the relevant folder
+    //database query to add the file
+    //send email to SAR
+    //route: process
+    public function sendEmail(){
+        $this->load->model('operator/EmailModel');
+        $this->EmailModel->uploadFile();
     }
 
     //displays all the panel members
@@ -110,20 +68,6 @@ class OperatorDashboard extends CI_Controller{
         $this->PanelMembers->addNewUser();
     }
 
-    public function sendEmail(){
-        $this->load->view('users/operator/header');
-        $this->load->view('users/operator/showEmails');
-        $this->load->view('includes/footer');
-        //redirect(base_url().'OperatorIndex/sendEmail');
-    }
-
-    public function emailSuccessMessage(){
-        $this->load->view('messages/emailSuccess');
-    }
-
-    public function emailErrorMessage(){
-        $this->load->view('messages/errorEmail'); 
-    }
 
     public function logout(){
         $this->load->view('users/loginPanelUsers');
@@ -168,11 +112,7 @@ class OperatorDashboard extends CI_Controller{
         redirect(base_url().'OperatorIndex/addPanelMember');
     }
 
-    public function showTaskCount($role){
-        $this->load->model('TasksModel');
-        $taskNum = $this->TaskModel->getTasks($role);
-        return $taskNum;
-    }
+    
 
     //route: viewAll
     //function: view All candidates
@@ -392,12 +332,15 @@ class OperatorDashboard extends CI_Controller{
 
     }
 
+    //loads the view corresponding to the home page when edit appication form is clicked
+    //route: editApplication
     public function editForm(){
         $this->load->view('includes/header');
-        $this->load->view('users/operator/editApplicationHome');
+        $this->load->view('users/operator/editApplicationForm/editApplicationHome');
         $this->load->view('includes/footer');
     }
 
+    //upon selecting a choice user will be directed to the relavant 
     public function directEditApplication(){
         $field = $_POST['editField'];
         if($field=="sa"){

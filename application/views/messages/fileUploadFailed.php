@@ -1,6 +1,3 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,15 +19,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 setTimeout(function () { 
 swal({
-  title: 'File Upload and Email sent Successfully',
-  text: '',
-  type: 'success',
+  title: 'An error occured while uploading the file',
+  text: 'Please make sure that you have selected a file',
+  type: 'warning',
   confirmButtonText: 'OK'
 },
 function(isConfirm){
   if (isConfirm) {
-    window.location.href = '../OperatorIndex/createAd';
-    swal.close()
+    window.location.href = 'sendAdToSAR';
   }
 }); }, 1);
 
