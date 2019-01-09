@@ -192,7 +192,7 @@
 
 	}
 
-    public function viewFinalizedSelected($vacancy){
+   public function viewFinalizedSelected($vacancy){
         $array=[];
         $this->load->database();
         $this->db->select('INDEX_NUMBER');

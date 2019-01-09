@@ -170,6 +170,7 @@ $route['SAR/ViewMarks']="SARDashboard/viewMarks";
 $route['SAR/ViewMarksUI']="SARDashboard/viewMarksUI";
 $route['SAR/viewApplicationForm/(:any)'] = "SARDashboard/applicantViewMore/$1";
 $route['SAR/editCategorized/(:any)/(:any)']="SARDashboard/editCandidates/$1/$2";
+$route['SAR/addsendtodirector']="SARDashboard/addsendtodirector";
 
 //$route['SAR/candidates']="SARDashboard/viewCandidates';
 
@@ -235,6 +236,7 @@ $route['application_form_fill'] = 'ApplicantDashboard/applicationFirstPage';
 $route['application_form_edit'] = 'ApplicationForm/editfileUpload';
 $route['application_form_documents'] = 'ApplicantDashboard/applicationFifththPage';
 $route['application_form_for_view'] = 'ApplicationForm/applicationFileViewFor';
+$route['testing'] = 'ApplicationForm/testPage';
 $route['LOGOUT']='User/out';
 //applicant end
 

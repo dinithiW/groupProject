@@ -331,7 +331,7 @@ INSERT INTO `higher_educational_details` (`INDEX_NUMBER`, `ROW_NUMBER`, `DEGREE_
 ('19PR001', '1', 'phd', 'INSTITUTION1', '2007', '2008', 'PHD-Informtion System', '10', '', '2008', '15000652'),
 ('19PR001', '2', 'phd', 'INSTITUTION2', '2009', '2010', 'PHD-Software Engineering', '11', '', '2009', '16000780'),
 ('19PR001', '3', 'phd', 'INSTITUTION3', '2010', '2011', 'PHD-Software Engineering', '12', '', '2011', '17000568'),
-('19PR001', '4', 'phd', 'INSTITUTION4', '2011', '2013', 'PHD-Computer Science', '0', '', '2013', '19333342'),
+('19PR001', '4', 'phd', 'INSTITUTION4', '2011', '2013', 'PHD-Computer Science', '', '', '2013', '19333342'),
 ('19SE000', '1', 'bachelor', 'INSTITUTE1', '2004', '2005', 'BSC Hons-Software Engineering', '12', 'Second Lower', '2005', '16000749'),
 ('19SE000', '2', 'bachelor', 'INSTITUTE2', '2005', '2005', 'BSC Hons-Information Technology', '6', 'Second Lower', '2005', '16000748'),
 ('19SE000', '3', 'bachelor', 'INSTITUTE3', '2006', '2007', 'BSC-Computer Science', '12', 'Fisrt Class', '2007', '160007497'),

@@ -54,9 +54,16 @@ class ValidateLogin extends CI_Model{
 						$email =$row->USERNAME;
 						
 
+						/**
+						 * this function is checked that the applicant if has 
+						 * already filled the application form
+						 * or not already filled the application
+						 * if findPermanentId($email) return TRUE, it means the applicant has already filled the application form
+						 * else will move the findTemporeryId();
+						 */
 						if($this->findPermanentId($email)){
 							$index_number = $this->findPermanentId($email);
-							$flag ="yes";
+							$flag ="yes";//the meaning of the "yes" is aplicant already filled the application form
 						}
 						else if($this->findTemporeryId($email)){
 							$index_number = $this->findTemporeryId($email);
@@ -77,16 +84,11 @@ class ValidateLogin extends CI_Model{
 				
 					$this->session->set_userdata($userdata);
 
-
-
 					$this->load->view('includes/header');
 					$this->load->view('MainDashboard');
-					
 					$this->load->view('includes/footer');
 					
-				//incorrect password
 				}else{
-					///////////////////////change these
 					redirect(base_url()."Login/errorPassword");
 				}
 			break;
@@ -118,12 +120,10 @@ class ValidateLogin extends CI_Model{
 		$this->db->where('USERNAME',$email);
 		$temporyId = $this->db->get()->row()->INDEX_NUMBER;
 		return $temporyId;
+
 	}
 
-	// ending eidted by ruwan
-
-
-	
+	// ending eidted by ruwan	
 	/**
 	 * this function is used for the get the temprorary id 
 	 * this return the temporary id

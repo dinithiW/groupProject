@@ -59,7 +59,7 @@ class SARDashboard extends CI_Controller{
         $this->load->view('includes/footer');
 	}
 
-
+	//to get all email addresses of the panel
 	public function setInterviewDates(){
 		$data=[];
 		$this->load->model('SAR/PanelDetails');
@@ -71,12 +71,11 @@ class SARDashboard extends CI_Controller{
 	}
 
 
+	//to get all email addresses of the panel
 	public function getAllmailAddresses(){
 		$data=[];
 		$this->load->model('SAR/PanelDetails');
 		$data['Members']=$this->load->PanelDetails->getAllEmailAddresses();
-		//var_dump($data['members']);
-		//exit();
 		$this->load->view('includes/header');
 		$this->load->view('users/SAR/setDates',$data);
 		$this->load->view('includes/footer');
@@ -84,12 +83,13 @@ class SARDashboard extends CI_Controller{
 
 
 	public function viewCandidates(){
-		//echo "haha";
+		
 		$this->load->view('includes/header');
         $this->load->view('users/SAR/viewCandidates');
         $this->load->view('includes/footer');
 	}
 
+	//to view categorized  applicants 
 	public function searchCandidates(){
 		$vacancy=$_POST['vacancy'];
 
@@ -101,6 +101,8 @@ class SARDashboard extends CI_Controller{
 		$this->load->view('includes/footer');
 
 	}
+
+	//to update categorized applicants
 	public function editCandidates($applicantID,$vacancy2){
 		$vacancy = str_replace("%20", " ", $vacancy2);
 		//$vacancy=$_POST['vacancy'];
@@ -111,8 +113,7 @@ class SARDashboard extends CI_Controller{
 		//$aplicantID=$_POST['index'];
 		//echo $applicantID;
 		if ($vacancy=="Senior Lecturer Grade I selected" ||$vacancy=="Senior Lecturer Grade I not selected") {
-			//echo "hello";
-			# code...
+			
 
 			$this->load->model('SAR/ApplicantsModel');
 			$this->ApplicantsModel->updateSLi($applicantID,$final);
@@ -149,10 +150,12 @@ class SARDashboard extends CI_Controller{
 
 	}
 
+	//to load marks to the table in the view 
+
 	public function viewMarks(){
 
 		$vacancy = $_POST['vacancy'];
-		echo "hey $vacancy";
+		//echo "hey $vacancy";
 		$this->load->model('SAR/CandidatesModel');
 		$data['array']=$this->CandidatesModel->getMarks($vacancy);
 		$data['position']=$vacancy;
@@ -161,6 +164,7 @@ class SARDashboard extends CI_Controller{
 		$this->load->view('includes/footer');
 
 	}
+	//to display marks table
 	public function viewMarksUI(){
 
 		
@@ -210,12 +214,13 @@ class SARDashboard extends CI_Controller{
 		$this->load->view('includes/footer');
 	}
 
+	//to view all applicants before categorization 
 	public function viewApplicants(){
 		if(!isset($_POST['type'])){
 			$_POST['type'] = "";
 		}
 		$vacancy=$_POST['type'];
-		//	[por432\;lkjhg	$type=$_POST['type'];
+		
 		$data=[];
 		$this->load->model('SAR/ApplicantsModel');
 		$data['array']=$this->ApplicantsModel->getAllApplicants($_POST['type']);
@@ -237,6 +242,7 @@ class SARDashboard extends CI_Controller{
 
 		}
 	}*/
+	//to view application form 
 
  public function applicantViewMore($index_number){
         //$index_number = $_SESSION['index_number'];
@@ -263,7 +269,7 @@ class SARDashboard extends CI_Controller{
     	$data['array']=
     }*/
 
-
+    //send mails to multiple receipients
 	public function sendBulkmails($arr){
 		$count=0;
 		$aDoor = $_POST['formdoor'];

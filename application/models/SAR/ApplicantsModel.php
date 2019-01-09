@@ -78,7 +78,7 @@ class ApplicantsModel extends CI_model{
 	}
 
 
-	public function setID($id){
+	/*public function setID($id){
 		$this->id=$id;
 	}
 	public function getId(){
@@ -117,7 +117,7 @@ class ApplicantsModel extends CI_model{
 	}
 	public function getGender(){
 		return $this->gender;
-	}
+	}*/
 	
 	 public function updateSLi($applicantId,$final){
 	 	//echo "hellow";
