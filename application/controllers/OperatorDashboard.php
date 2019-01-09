@@ -15,6 +15,7 @@ class OperatorDashboard extends CI_Controller{
         $this->load->view('includes/footer');
     }
     
+    //----------------------CREATE AD----------------------------------------
     //loads the view related to creating an advertisement
     //page with the text editor
     //route: createAd
@@ -56,10 +57,151 @@ class OperatorDashboard extends CI_Controller{
 
     }
 
+    //----------------------------EDIT APPLICATION FORM-----------------------------
+    //loads the view corresponding to the home page when edit appication form is clicked
+    //route: editApplication
+    public function editForm(){
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/editApplicationForm/editApplicationHome');
+        $this->load->view('includes/footer');
+    }
+
+    //upon selecting a choice user will be directed to the relavant 
+    //route: directEditApplication
+    public function directEditApplication(){
+        //post data from the selected option 
+        $field = $_POST['editField'];
+
+        if($field=="sa"){
+            redirect(base_url()."OperatorIndex/specialization");
+        }else{
+            redirect(base_url()."OperatorIndex/fileUploads");
+        }
+    }
+
+    //views all the specializations
+    //has the option to add new fields,edit or delete
+    //route: specialization
+    public function viewSpecializations(){
+        $this->load->model('operator/ApplicationFormModel');
+        $data['Specializations'] = $this->ApplicationFormModel->getAllSpecializations();
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/editApplicationForm/specialization',$data);
+        $this->load->view('includes/footer');
+    }
+
+    //views all the file Upload Links
+    //has the option to add new fields,edit or delete
+    //route: fileUploads
+    public function viewFileUploads(){
+        $this->load->model('operator/ApplicationFormModel');
+        $data['FileUploads'] = $this->ApplicationFormModel->getAllFileUploadsLinks();
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/editApplicationForm/fileUploadLinks',$data);
+        $this->load->view('includes/footer');
+    }
+
+    //loads the view corresponding to adding a new specialization Area
+    //route: addSpecialization
+    public function addSpecializationArea(){
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/editApplicationForm/addSpecialization');
+        $this->load->view('includes/footer');
+    }
+
+    //loads the view corresponding to adding a new upload link
+    //route: addUploadLink
+    public function addFileUploadLink(){
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/editApplicationForm/addFileUploadLink');
+        $this->load->view('includes/footer');
+    }
+
+    //view corresponding to editing a specialization area 
+    //route: editSpecialization/(:any)
+    public function editSpecializationArea($sid){
+        $this->load->model('operator/ApplicationFormModel');
+        $data['records']= $this->ApplicationFormModel->getSpecialization($sid);
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/editApplicationForm/editSpecialization',$data);
+        $this->load->view('includes/footer');
+    }
+
+    //view corresponding to editing a file upload link
+    //route: editUploadLink/(:any)
+    public function editFileUploadLink($sid){
+        $this->load->model('operator/ApplicationFormModel');
+        $data['records']= $this->ApplicationFormModel->getFileUpload($sid);
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/editApplicationForm/editFileUpload',$data);
+        $this->load->view('includes/footer');
+    }
+
+    //delete a specialization area
+    //route: deleteSpecialization/(:any)
+    public function deleteSpecializationArea($sid){
+        $this->load->model('operator/ApplicationFormModel');
+        $this->ApplicationFormModel->deleteSpecialization($sid);
+        redirect(base_url()."OperatorIndex/specialization");
+    }
+
+    //delete a file upload link
+    //route: deleteUploadLink/(:any)
+    public function deleteFileUploadLink($sid){
+        $this->load->model('operator/ApplicationFormModel');
+        $this->ApplicationFormModel->deleteFileUpload($sid);
+        redirect(base_url()."OperatorIndex/fileUploads");
+    }
+
+    //adds the specialization to database
+    //route: addSpecializationprocess
+    public function addSpecializationToDb(){
+        $sname = $_POST['sname'];
+        $this->load->model('operator/ApplicationFormModel');
+        $this->ApplicationFormModel->addNewSpecialization($sname);
+    }
+
+    //add a new file upload link to the database
+    //route: addFileUploadprocess
+    public function addFileUploadToDb(){
+        $fname = $_POST['fname'];
+        $this->load->model('operator/ApplicationFormModel');
+        $this->ApplicationFormModel->addNewFileUpload($fname);
+    }
+
+    //edit the field in the database
+    //route: editSpecializationProcess/(:any)
+    public function editSpecializationToDb($sid){
+        $fname = $_POST['fname'];
+        $this->load->model('operator/ApplicationFormModel');
+        $this->ApplicationFormModel->editSpecialization($sid,$fname);
+    }
+
+    //edit the fileds in the database
+    //route: editFileUploadProcess/(:any)
+    public function editFileUploadToDb($sid){
+        $fname = $_POST['fname'];
+        $this->load->model('operator/ApplicationFormModel');
+        $this->ApplicationFormModel->editFileUpload($sid,$fname);
+    }
+
+
+    //-----------------------------VIEW ALL CANDIDATES----------------------------------
+    //gets details of all applicants
+    //route: viewAll
+    public function viewAllCandidates(){
+        $this->load->model("applicant_model");
+        $data['array'] = $this->applicant_model->getAll();
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/viewAll/allCandidates', $data);
+        $this->load->view('includes/footer');
+    }
+
+    //----------------------------MANAGE INTERVIEW PANEL-------------------------------
     //adds the member: view
     public function addMember(){
         $this->load->view('includes/header');
-        $this->load->view('users/operator/addMember');
+        $this->load->view('users/operator/panelMembers/addMember');
         $this->load->view('includes/footer');
     }
 
@@ -92,7 +234,7 @@ class OperatorDashboard extends CI_Controller{
         $data['records'] = $this->PanelMembers->getMember($panelID);
         //$this->PanelMembers->edit();
         $this->load->view('includes/header');
-        $this->load->view('users/operator/editMember',$data);
+        $this->load->view('users/operator/panelMembers/editMember',$data);
         $this->load->view('includes/footer');
     }
 
@@ -102,6 +244,7 @@ class OperatorDashboard extends CI_Controller{
         $this->PanelMembers->editMemberDetails($panelID);
     }
 
+    //shows the delete member message
     public function deleteMemberMsg($panelID){
         $this->load->view('messages/deletePanelMsg');
     }
@@ -114,16 +257,8 @@ class OperatorDashboard extends CI_Controller{
 
     
 
-    //route: viewAll
-    //function: view All candidates
-    //gets details of all applicants
-    public function viewAllCandidates(){
-        $this->load->model("applicant_model");
-        $data['array'] = $this->applicant_model->getAll();
-        $this->load->view('includes/header');
-        $this->load->view('users/operator/viewAll/allCandidates', $data);
-        $this->load->view('includes/footer');
-    }
+    
+    
     
     //interview date setting home
     public function setInterviewDate(){
@@ -190,14 +325,19 @@ class OperatorDashboard extends CI_Controller{
         //}
     }
 
+    //----------------------------CATEGORIZE APPLICANTS-------------------------------
+    //loads the home page
+    //user selects which vacancy they want to categorize
+    //route: categorize
     public function categorizeHome(){
         $this->load->view('includes/header');
-        $this->load->view('users/operator/categorizeHome');
+        $this->load->view('users/operator/categorizeApplicants/categorizeHome');
         $this->load->view('includes/footer');
     }
 
+    //directs user to relevant page depending on the vacancy selected
+    //route: directCategorize
     public function directTo(){
-        
         $position = $_POST['vacancy'];
         if($position=="Lecturer Probationary"){
             redirect(base_url()."OperatorIndex/lpCategory");
@@ -208,46 +348,57 @@ class OperatorDashboard extends CI_Controller{
         }
     }
 
-    //route lpCategory
+    //initially this view is loaded showing all the applicants that fall to ccategory one
+    //user can select which category they want to see
+    //system categorized applicants will be shown here
+    //user can change the category if they are different
+    //route: lpCategory
     public function showLpCategories(){
-        //echo"am I here?";
         $this->load->model("applicant_model");
         $data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER","1");
         $data['category'] = " 1";
         $this->load->view('includes/header');
-        $this->load->view('users/operator/lpCategories',$data);
+        $this->load->view('users/operator/categorizeApplicants/lpCategories',$data);
         $this->load->view('includes/footer');
 
     }
 
-    //route lecturerProbationary
+    //user will see the applicants applied for the relevant category they chose
+    //in this case lecturer probationary
+    //route: lecturerProbationary
     public function showLpCandidates(){
         $category = $_POST['vacancy'];
         $this->load->model("applicant_model");
+        //get all who applied for lecturer probationary
         $data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER",$category);
         $data['category'] = $category;
         $this->load->view('includes/header');
-        $this->load->view('users/operator/lpCategories',$data);
+        $this->load->view('users/operator/categorizeApplicants/lpCategories',$data);
         $this->load->view('includes/footer');
 
     }
 
+    //user will see all applicants who applied for the position senior lecturer grade II
+    //route: seniorLecturerGradeII
     public function showSeniorLecturerGradeII(){
         $this->load->model("applicant_model");
         $data['array'] = $this->applicant_model->getAll("SENIOR LECTURE GR. II");
         $this->load->view('includes/header');
-        $this->load->view('users/operator/seniorLecturer',$data);
+        $this->load->view('users/operator/categorizeApplicants/seniorLecturer',$data);
         $this->load->view('includes/footer');
     }
 
+    //user will see all applicants who applied for the position senior lecturer grade II
+    //route: seniorLecturerGradeI
     public function showSeniorLecturerGradeI(){
         $this->load->model("applicant_model");
         $data['array'] = $this->applicant_model->getAll("SENIOR LECTURE GR. I");
         $this->load->view('includes/header');
-        $this->load->view('users/operator/seniorLecturerGradeI',$data);
+        $this->load->view('users/operator/categorizeApplicants/seniorLecturerGradeI',$data);
         $this->load->view('includes/footer');
     }
 
+    
     public function addToSelected($applicantId){
         $this->load->model("applicant_model");
         $this->applicant_model->selectedSL($applicantId,"sl_selected");
@@ -277,9 +428,6 @@ class OperatorDashboard extends CI_Controller{
         $category = $_POST["$temp"];
         $this->load->model("applicant_model");
         $this->applicant_model->selectedLP($applicantId,$category);
-
-       /* $data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER",$categoryFrom);
-        $data['category'] = $categoryFrom;*/
         redirect(base_url()."OperatorIndex/lectrerProbationary/$categoryFrom");
         
         
@@ -291,7 +439,7 @@ class OperatorDashboard extends CI_Controller{
         $data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER",$categoryFrom);
         $data['category'] = $categoryFrom;
         $this->load->view('includes/header');
-        $this->load->view('users/operator/lpCategories',$data);
+        $this->load->view('users/operator/categorizeApplicants/lpCategories',$data);
         $this->load->view('includes/footer');
 
     }
@@ -303,12 +451,8 @@ class OperatorDashboard extends CI_Controller{
         $data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER",$category);
         $data['category'] = $category;
         $this->load->view('includes/header');
-        $this->load->view('users/operator/lpCategories',$data);
+        $this->load->view('users/operator/categorizeApplicants/lpCategories',$data);
         $this->load->view('includes/footer');
-    }
-    //yet to implement
-    public function moreInfo($applicantID){
-
     }
 
     public function viewCategorizedApplicants(){
@@ -332,120 +476,7 @@ class OperatorDashboard extends CI_Controller{
 
     }
 
-    //----------------------------EDIT APPLICATION FORM-----------------------------
-    //loads the view corresponding to the home page when edit appication form is clicked
-    //route: editApplication
-    public function editForm(){
-        $this->load->view('includes/header');
-        $this->load->view('users/operator/editApplicationForm/editApplicationHome');
-        $this->load->view('includes/footer');
-    }
-
-    //upon selecting a choice user will be directed to the relavant 
-    //route: directEditApplication
-    public function directEditApplication(){
-        //post data from the selected option 
-        $field = $_POST['editField'];
-
-        if($field=="sa"){
-            redirect(base_url()."OperatorIndex/specialization");
-        }else{
-            redirect(base_url()."OperatorIndex/fileUploads");
-        }
-    }
-
-    //views all the specializations
-    //has the option to add new fields,edit or delete
-    //route: specialization
-    public function viewSpecializations(){
-        $this->load->model('operator/ApplicationFormModel');
-        $data['Specializations'] = $this->ApplicationFormModel->getAllSpecializations();
-        $this->load->view('includes/header');
-        $this->load->view('users/operator/editApplicationForm/specialization',$data);
-        $this->load->view('includes/footer');
-    }
-
-    //views all the file Upload Links
-    //has the option to add new fields,edit or delete
-    //route: fileUploads
-    public function viewFileUploads(){
-        $this->load->model('operator/ApplicationFormModel');
-        $data['FileUploads'] = $this->ApplicationFormModel->getAllFileUploadsLinks();
-        $this->load->view('includes/header');
-        $this->load->view('users/operator/editApplicationForm/fileUploadLinks',$data);
-        $this->load->view('includes/footer');
-    }
-
-    //loads the view corresponding to adding a new specialization Area
-    //route: addSpecialization
-    public function addSpecializationArea(){
-        $this->load->view('includes/header');
-        $this->load->view('users/operator/editApplicationForm/addSpecialization');
-        $this->load->view('includes/footer');
-    }
-
-    //loads the view corresponding to adding a new upload link
-    //route: addUploadLink
-    public function addFileUploadLink(){
-        $this->load->view('includes/header');
-        $this->load->view('users/operator/editApplicationForm/addFileUploadLink');
-        $this->load->view('includes/footer');
-    }
-
-    public function editSpecializationArea($sid){
-        $this->load->model('operator/ApplicationFormModel');
-        $data['records']= $this->ApplicationFormModel->getSpecialization($sid);
-        $this->load->view('includes/header');
-        $this->load->view('users/operator/editApplicationForm/editSpecialization',$data);
-        $this->load->view('includes/footer');
-    }
-
-    public function editFileUploadLink($sid){
-        $this->load->model('operator/ApplicationFormModel');
-        $data['records']= $this->ApplicationFormModel->getFileUpload($sid);
-        $this->load->view('includes/header');
-        $this->load->view('users/operator/editApplicationForm/editFileUpload',$data);
-        $this->load->view('includes/footer');
-    }
-
-    public function deleteSpecializationArea($sid){
-        //echo"$sid";
-        $this->load->model('operator/ApplicationFormModel');
-        $this->ApplicationFormModel->deleteSpecialization($sid);
-        redirect(base_url()."OperatorIndex/specialization");
-    }
-
-    public function deleteFileUploadLink($sid){
-        $this->load->model('operator/ApplicationFormModel');
-        $this->ApplicationFormModel->deleteFileUpload($sid);
-        redirect(base_url()."OperatorIndex/fileUploads");
-    }
-
-    public function addSpecializationToDb(){
-        $sname = $_POST['sname'];
-        $this->load->model('operator/ApplicationFormModel');
-        $this->ApplicationFormModel->addNewSpecialization($sname);
-        //redirect(base_url()."OperatorIndex/fileUploads");
-    }
-
-    public function addFileUploadToDb(){
-        $fname = $_POST['fname'];
-        $this->load->model('operator/ApplicationFormModel');
-        $this->ApplicationFormModel->addNewFileUpload($fname);
-    }
-
-    public function editSpecializationToDb($sid){
-        $fname = $_POST['fname'];
-        $this->load->model('operator/ApplicationFormModel');
-        $this->ApplicationFormModel->editSpecialization($sid,$fname);
-    }
-
-    public function editFileUploadToDb($sid){
-        $fname = $_POST['fname'];
-        $this->load->model('operator/ApplicationFormModel');
-        $this->ApplicationFormModel->editFileUpload($sid,$fname);
-    }
-
+    
     public function sendEMailsToApplicants(){
         $this->load->model('operator/InterviewModel');
         $data['array'] = $this->InterviewModel->getInterviewGroups();
@@ -471,17 +502,15 @@ class OperatorDashboard extends CI_Controller{
         $time = $time_date[1];
 
         $this->load->model('operator/InterviewModel');
-        $this->InterviewModel->getEmails($date,$time,$description,$content);
-
-        
-
+        $this->InterviewModel->getEmails($date,$time,$description,$content);   
     }
 
+    //this method is used to view the application form filled by the appicant
+    //route: viewApplicationForm/(:any)
     public function applicantViewMore($index_number){
         //$index_number = $_SESSION['index_number'];
         $this->load->model('operator/categorizeApplilcationsModel');
         $this->load->model('ApplicantApplicationFormModel');
-        
         $data['specification_area'] = $this->categorizeApplilcationsModel->fetch_datas();//for get specification_areas for second page
         $data['basic_personal_details'] = $this->ApplicantApplicationFormModel->editFileBasicPersonalDetails($index_number);//for basic personal details
         $data['secondary_educational_details'] = $this->ApplicantApplicationFormModel->editFileSecondaryEducationalDetails($index_number);//for secondary educational details            

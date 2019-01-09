@@ -78,55 +78,6 @@ $route['OperatorIndex/sendEmail'] = 'OperatorDashboard/sendAdToSAR';
 $route['OperatorIndex/process'] = 'OperatorDashboard/sendEmail';
 /*$route['OperatorIndex/emails'] = 'OperatorDashboard/showEmails';*/
 
-//-----------------functionality: manage panel members-------------------
-//this directs to the home of adding a new member
-$route['OperatorIndex/addPanelMember'] = 'OperatorDashboard/addPanelMember';
-//actual adding
-$route['OperatorIndex/addMember'] = 'OperatorDashboard/addMember';
-
-$route['OperatorIndex/addMemberprocess'] = 'OperatorDashboard/addingMember';
-//$route['OperatorIndex/editMemberprocess/(:any).*'] = 'OperatorDashboard/editMember/$1/$2';
-$route['OperatorIndex/editMemberprocess/(:any)'] = 'OperatorDashboard/editMember/$1';
-$route['OperatorIndex/add'] = 'OperatorDashboard/addMemberModel';
-$route['OperatorIndex/success'] = 'OperatorDashboard/memberSuccess';
-//this will be temporary
-$route['OperatorIndex/showTasks/(:any)'] = 'OperatorDashboard/showTaskCount/$1';
-
-$route['OperatorIndex/checkEmailExists'] = "OperatorDashboard/checkEmailExists";
-$route['OperatorIndex/editMember/(:any)'] = "OperatorDashboard/editMemberView/$1";
-$route['OperatorIndex/deleteMember/(:any)'] = "OperatorDashboard/deleteMemberMsg/$1";
-$route['OperatorIndex/deleteMemberProcess/(:any)'] = "OperatorDashboard/deleteMemberModel/$1";
-//functionality: view all candidates
-//shows all candidates
-$route['OperatorIndex/viewAll'] = "OperatorDashboard/viewAllCandidates";
-
-//this is for loading the home page of the interview date setting process
-$route['OperatorIndex/interviewDate'] = "OperatorDashboard/setInterviewDate";
-$route['OperatorIndex/intervewDate'] = "OperatorDashboard/setIntervewDate";
-$route['OperatorIndex/addInterviewDate/(:any)'] = "OperatorDashboard/addInterviewDateToDB/$1";
-//to select the vacancy sl or lp
-$route['OperatorIndex/categorize'] = "OperatorDashboard/categorizeHome";
-//
-$route['OperatorIndex/directCategorize'] = "OperatorDashboard/directTo";
-$route['OperatorIndex/lpCategory'] = "OperatorDashboard/showLpCategories";
-$route['OperatorIndex/lecturerProbationary'] = "OperatorDashboard/showLpCandidates";
-$route['OperatorIndex/lectrerProbationary/(:any)'] = "OperatorDashboard/showLps/$1";
-//show all senior lecturer applicants grade I and categorize them
-$route['OperatorIndex/seniorLecturerGradeI'] = "OperatorDashboard/showSeniorLecturerGradeI";
-$route['OperatorIndex/seniorLecturerGradeII'] = "OperatorDashboard/showSeniorLecturerGradeII";
-
-//insert into the sl_selected table (value 1)
-$route['OperatorIndex/selectSL/(:any)'] = "OperatorDashboard/addToSelected/$1";
-//insert into the sl_selected table (value 0)
-$route['OperatorIndex/notSelectSL/(:any)'] = "OperatorDashboard/addToNotSelected/$1";
-$route['OperatorIndex/selectSLGradeI/(:any)'] = "OperatorDashboard/addToSelectedGradeI/$1";
-//insert into the sl_selected table (value 0)
-$route['OperatorIndex/notSelectSLGradeI/(:any)'] = "OperatorDashboard/addToNotSelectedGradeI/$1";
-$route['OperatorIndex/selectLP/(:any)/(:any)'] = "OperatorDashboard/addToSelectedLP/$1/$2";
-//insert into the sl_selected table (value 0)
-$route['OperatorIndex/notSelectLP/(:any)'] = "OperatorDashboard/addToNotSelectedLP/$1";
-$route['OperatorIndex/viewCategorized'] = "OperatorDashboard/viewCategorizedApplicants";
-$route['OperatorIndex/searchCategorized'] = "OperatorDashboard/searchCandidates";
 
 //-----------------functionality: edit application form-------------------------
 //loading the initial view to choose what aspect of the application form you want to change
@@ -151,15 +102,81 @@ $route['OperatorIndex/editUploadLink/(:any)'] = "OperatorDashboard/editFileUploa
 $route['OperatorIndex/deleteSpecialization/(:any)'] = "OperatorDashboard/deleteSpecializationArea/$1";
 //delete an upload link
 $route['OperatorIndex/deleteUploadLink/(:any)'] = "OperatorDashboard/deleteFileUploadLink/$1";
-
+//add specialization to database
 $route['OperatorIndex/addSpecializationprocess'] = "OperatorDashboard/addSpecializationToDb";
+//add file upload link to database
 $route['OperatorIndex/addFileUploadprocess'] = "OperatorDashboard/addFileUploadToDb";
-
+//update edit values of specialization to database 
 $route['OperatorIndex/editSpecializationProcess/(:any)'] = "OperatorDashboard/editSpecializationToDb/$1";
+//update edit values of upload links to database
 $route['OperatorIndex/editFileUploadProcess/(:any)'] = "OperatorDashboard/editFileUploadToDb/$1";
+
+
+//--------------------functionality: view all candidates-----------------------------
+//shows all candidates
+$route['OperatorIndex/viewAll'] = "OperatorDashboard/viewAllCandidates";
+
+
+//-----------------functionality: manage panel members-------------------
+//this directs to the home of adding a new member
+$route['OperatorIndex/addPanelMember'] = 'OperatorDashboard/addPanelMember';
+//actual adding
+$route['OperatorIndex/addMember'] = 'OperatorDashboard/addMember';
+
+$route['OperatorIndex/addMemberprocess'] = 'OperatorDashboard/addingMember';
+//$route['OperatorIndex/editMemberprocess/(:any).*'] = 'OperatorDashboard/editMember/$1/$2';
+$route['OperatorIndex/editMemberprocess/(:any)'] = 'OperatorDashboard/editMember/$1';
+$route['OperatorIndex/add'] = 'OperatorDashboard/addMemberModel';
+$route['OperatorIndex/success'] = 'OperatorDashboard/memberSuccess';
+//this will be temporary
+$route['OperatorIndex/showTasks/(:any)'] = 'OperatorDashboard/showTaskCount/$1';
+
+$route['OperatorIndex/checkEmailExists'] = "OperatorDashboard/checkEmailExists";
+$route['OperatorIndex/editMember/(:any)'] = "OperatorDashboard/editMemberView/$1";
+$route['OperatorIndex/deleteMember/(:any)'] = "OperatorDashboard/deleteMemberMsg/$1";
+$route['OperatorIndex/deleteMemberProcess/(:any)'] = "OperatorDashboard/deleteMemberModel/$1";
+
+
+
+//this is for loading the home page of the interview date setting process
+$route['OperatorIndex/interviewDate'] = "OperatorDashboard/setInterviewDate";
+$route['OperatorIndex/intervewDate'] = "OperatorDashboard/setIntervewDate";
+$route['OperatorIndex/addInterviewDate/(:any)'] = "OperatorDashboard/addInterviewDateToDB/$1";
+
+//---------------------functionality: categorize applicants-----------------------------
+//to select the vacancy sl or lp
+$route['OperatorIndex/categorize'] = "OperatorDashboard/categorizeHome";
+//directs user to relevant page depending on the vacancy selected
+$route['OperatorIndex/directCategorize'] = "OperatorDashboard/directTo";
+//initial page seen when lecturer probationary is selected
+$route['OperatorIndex/lpCategory'] = "OperatorDashboard/showLpCategories";
+//
+$route['OperatorIndex/lecturerProbationary'] = "OperatorDashboard/showLpCandidates";
+$route['OperatorIndex/lectrerProbationary/(:any)'] = "OperatorDashboard/showLps/$1";
+//show all senior lecturer applicants grade I and categorize them
+$route['OperatorIndex/seniorLecturerGradeI'] = "OperatorDashboard/showSeniorLecturerGradeI";
+$route['OperatorIndex/seniorLecturerGradeII'] = "OperatorDashboard/showSeniorLecturerGradeII";
+
+//insert into the sl_selected table (value 1)
+$route['OperatorIndex/selectSL/(:any)'] = "OperatorDashboard/addToSelected/$1";
+//insert into the sl_selected table (value 0)
+$route['OperatorIndex/notSelectSL/(:any)'] = "OperatorDashboard/addToNotSelected/$1";
+$route['OperatorIndex/selectSLGradeI/(:any)'] = "OperatorDashboard/addToSelectedGradeI/$1";
+//insert into the sl_selected table (value 0)
+$route['OperatorIndex/notSelectSLGradeI/(:any)'] = "OperatorDashboard/addToNotSelectedGradeI/$1";
+$route['OperatorIndex/selectLP/(:any)/(:any)'] = "OperatorDashboard/addToSelectedLP/$1/$2";
+//insert into the sl_selected table (value 0)
+$route['OperatorIndex/notSelectLP/(:any)'] = "OperatorDashboard/addToNotSelectedLP/$1";
+$route['OperatorIndex/viewCategorized'] = "OperatorDashboard/viewCategorizedApplicants";
+$route['OperatorIndex/searchCategorized'] = "OperatorDashboard/searchCandidates";
+
+
+
 $route['OperatorIndex/sendApplicantEmails'] = "OperatorDashboard/sendEMailsToApplicants";
 $route['OperatorIndex/sendApplicntEmails'] = "OperatorDashboard/sendEMailsTApplicants";
 $route['OperatorIndex/interviewDateEmails'] = "OperatorDashboard/sendInterviewEmails";
+
+//view application form
 $route['OperatorIndex/viewApplicationForm/(:any)'] = "OperatorDashboard/applicantViewMore/$1";
 
 
