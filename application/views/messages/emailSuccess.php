@@ -22,7 +22,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 setTimeout(function () { 
 swal({
-  title: 'Email was sent Successfully',
+  title: 'File Upload and Email sent Successfully',
   text: '',
   type: 'success',
   confirmButtonText: 'OK'

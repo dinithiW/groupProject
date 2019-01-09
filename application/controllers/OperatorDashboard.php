@@ -1,5 +1,6 @@
 <?php
 include 'EmailController.php';
+
 class OperatorDashboard extends CI_Controller{
 
 	public function __construct() {
@@ -85,6 +86,19 @@ class OperatorDashboard extends CI_Controller{
         $this->load->view('includes/footer');
     }
 
+    //loads the model and uploads ad to the relevant folder
+    //database query to add the file
+    //send email to SAR
+    //route: emails
+    public function sendEmail(){
+        $this->load->model('operator/EmailModel');
+        $this->EmailModel->uploadFile();
+        /*$this->load->view('users/operator/header');
+        $this->load->view('users/operator/showEmails');
+        $this->load->view('includes/footer');*/
+        //redirect(base_url().'OperatorIndex/sendEmail');
+    }
+
     //displays all the panel members
     public function addPanelMember(){
        
@@ -110,12 +124,8 @@ class OperatorDashboard extends CI_Controller{
         $this->PanelMembers->addNewUser();
     }
 
-    public function sendEmail(){
-        $this->load->view('users/operator/header');
-        $this->load->view('users/operator/showEmails');
-        $this->load->view('includes/footer');
-        //redirect(base_url().'OperatorIndex/sendEmail');
-    }
+
+    
 
     public function emailSuccessMessage(){
         $this->load->view('messages/emailSuccess');

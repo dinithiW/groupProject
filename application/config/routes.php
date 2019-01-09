@@ -69,14 +69,16 @@ $route['advertisement']='User/add';
 //Management Assistant routes
 $route['OperatorIndex'] = 'OperatorDashboard/index';
 
-//functionality: create Ad
+//----------------functionality: create Ad---------------------------
 //loading the view with text editor
 $route['OperatorIndex/createAd'] = 'OperatorDashboard/ad';
-$route['OperatorIndex/emails'] = 'OperatorDashboard/showEmails';
 //loading the view corresponding to entering details of the email Addresses etc
 $route['OperatorIndex/sendEmail'] = 'OperatorDashboard/sendAdToSAR';
-
+//calling the model for uploading the file
 $route['OperatorIndex/process'] = 'OperatorDashboard/sendEmail';
+/*$route['OperatorIndex/emails'] = 'OperatorDashboard/showEmails';*/
+
+
 //this directs to the home of adding a new member
 $route['OperatorIndex/addPanelMember'] = 'OperatorDashboard/addPanelMember';
 //actual adding
