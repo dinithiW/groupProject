@@ -4,7 +4,8 @@ class ApplicantDashboard extends CI_Controller{
 
 	public function __construct() {
 		parent::__construct();
-		$this->load->helper('url');
+        $this->load->helper('url');
+        $this->load->library('form_validation');
     }
 
     public function index(){
@@ -14,23 +15,33 @@ class ApplicantDashboard extends CI_Controller{
     }
 
 /**
- * this function is used for the check that applicatn already filled the form or not
+ * this function is used for the view the application form 
+ * form will be filled appliaction form or empty application form
+ * it is decided by the session 
  */
-    public function applicationFirstPage(){
+public function applicationFirstPage(){
+    $this->load->library('form_validation');
+        $this->form_validation->set_rules($this->input->post('first_name'),'FIRST NAME','required|numeric');
 
-        if($_SESSION['application_form_filled'] == "not"){
-            $this->load->model('operator/categorizeApplilcationsModel');
-            $data['fetch_data'] = $this->categorizeApplilcationsModel->fetch_datas();
-            $this->load->view('applicant/applicationForm/ApplicationForm',$data);
+        if($this->form_validation->run()==TRUE){
+            echo "form validated";
         }
-        if($_SESSION['application_form_filled'] == "yes"){
-            redirect('ApplicationForm/editfileUpload');
+        else{
+            echo "not validate";
         }
-        
-    	
+
+    if($_SESSION['application_form_filled'] == "not"){
+        $this->load->model('operator/categorizeApplilcationsModel');
+        $data['fetch_data'] = $this->categorizeApplilcationsModel->fetch_datas();
+
+        $this->load->view('applicant/applicationForm/ApplicationForm',$data);
     }
+    if($_SESSION['application_form_filled'] == "yes"){
+        redirect('ApplicationForm/editfileUpload');
+    }
+}
 
-    /**
+/**
  * this function is used for the check that applicatn already filled the form or not
  */
 public function applicationSecondPage(){
@@ -42,9 +53,7 @@ public function applicationSecondPage(){
     }
     if($_SESSION['application_form_filled'] == "yes"){
         redirect('ApplicationForm/editfileUpload');
-    }
-    
-    
+    }    
 }
     
 

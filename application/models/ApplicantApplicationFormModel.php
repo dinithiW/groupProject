@@ -36,8 +36,6 @@ class ApplicantApplicationFormModel extends CI_Model{
         }
     }
 
-
-
     public function addDocumentForDatabase($path,$post){ 
         
         $data = array(
@@ -61,13 +59,9 @@ class ApplicantApplicationFormModel extends CI_Model{
 
     public function firlterFormInputs($input){
         $input = trim($input);
-        $input = stripslashes($input);
-        
+        $input = stripslashes($input);        
         return $input;
-    }
-
-
-    
+    }    
     /**
      * this function is use for 
      * insert the basic personal details to database
@@ -75,7 +69,20 @@ class ApplicantApplicationFormModel extends CI_Model{
      */
     public function insertBasicPersonalDetailsModel(){
         $this->load->database();
+
+        // $this->load->library('form_validation');
+        // $this->form_validation->set_rules($this->input->post('first_name'),'FIRST NAME','required|numeric');
+
+        // if($this->form_validatioin->run()==TRUE){
+        //     echo "form validated";
+        // }
+        // else{
+        //     echo validation_error();
+        // }
+
         $idNumber = $this->makeApplicationId();
+        
+
         $_SESSION['index_number'] = $idNumber;
         $name1 = $this->firlterFormInputs($this->input->post('first_name'));
         $name2 = $this->firlterFormInputs($this->input->post('last_name'));
@@ -186,7 +193,6 @@ class ApplicantApplicationFormModel extends CI_Model{
         return $query;
     }
 
-
     public function insertSpecificationAreas($idNumber){        
         $this->load->database();
         foreach($this->input->post('check_list') as $selected_area){
@@ -194,18 +200,15 @@ class ApplicantApplicationFormModel extends CI_Model{
                 'INDEX_NUMBER'            =>$idNumber, 
                 'SPECIFICATION_AREA_NAME' =>$selected_area
             );
-            $this->db->insert('specialization_area_for_applicant', $data);
-        
+            $this->db->insert('specialization_area_for_applicant', $data);    
         }
-
     }
-
-
     /**
      * this funciton is use for the 
      * insert secondary educational details
      * to the database
-     */
+    */
+
     public function insertSecondaryEducationalDetailsModel($idNumber){
         
         $this->load->database();
@@ -252,7 +255,6 @@ class ApplicantApplicationFormModel extends CI_Model{
             'YEAR'               =>$this->firlterFormInputs($this->input->post('secondary_educational_year4'))
         );
         $this->db->insert('secondary_educational_details', $secondary_educational_table_fourth_row);
-
     }
 
     public function insertHigherEducationalDetailsModel($idNumber){
@@ -715,7 +717,9 @@ class ApplicantApplicationFormModel extends CI_Model{
     /**
      * this function is use for get basic personal details for edit application form
      */
+
     public function editFileBasicPersonalDetails($index_number){
+        
         $this->load->database();
         $this->db->select("*");
         $this->db->from('basic_personal_details');
@@ -724,16 +728,19 @@ class ApplicantApplicationFormModel extends CI_Model{
         return $query;
     }
 
-    /**
-     * this function is use for get basic secondary educational details for edit application form
-     */
+    /*
+    *
+    * this function is use for get basic secondary educational details for edit application form
+    */
     public function editFileSecondaryEducationalDetails($index_number){
+        
         $this->load->database();
         $this->db->select("*");
         $this->db->from('secondary_educational_details');
         $this->db->where('INDEX_NUMBER',$index_number);
         $query = $this->db->get();
-        return $query;
+        return $query;   
+
     }
 
     /**
@@ -760,8 +767,6 @@ class ApplicantApplicationFormModel extends CI_Model{
         return $query;
     }
 
-    
-
     /**
      * this function is use for get professional qualificational details for edit application form
      */
@@ -785,8 +790,6 @@ class ApplicantApplicationFormModel extends CI_Model{
         $query = $this->db->get();
         return $query;
     }
-
-    
 
     /**
      * this function is use for get other applicats_more_details for edit application form
@@ -988,8 +991,6 @@ class ApplicantApplicationFormModel extends CI_Model{
         $this->insertSpecificationAreas($idNumber);
         
     }
-
-    
 
 }
 

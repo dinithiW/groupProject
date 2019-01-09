@@ -14,16 +14,11 @@ class Login extends CI_Controller {
 	}
 
 	//this method will validate the login credentials
-	public function process(){
-        
+	public function process(){    
         $this->load->model('ValidateLogin');
         $this->ValidateLogin->validate();  
-        
     }
 
-
-
-    //
     public function errorUsername(){
         $this->load->view('messages/invalidUsername');
     }
@@ -31,6 +26,7 @@ class Login extends CI_Controller {
     public function errorPassword(){
         $this->load->view('messages/wrongPassword');
     }
+
     public function register(){
     	$this->load->view('registerPanel');
     }
@@ -39,8 +35,6 @@ class Login extends CI_Controller {
     	$this->load->model('registerUser');
         $this->loginPanelValidation->checkValidity();  
     }
-	
-
 }
 
 ?>

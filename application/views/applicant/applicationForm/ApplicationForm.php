@@ -50,37 +50,37 @@ if(isset($this->session->userdata['logged_in'])){
 
                     <a href="https://youtu.be/w0I_3ZdIS9Q">CLICK HERE FOR SEE THE DEMOSTRATION FOR THIS </a>
                     <h6 class="lables">Full Name (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="first_name" placeholder="Full Name" required>
+                    <input type="text"   class="input-fields" name="first_name" placeholder="Full Name" >
 
                     <h6 class="lables">Surname (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="last_name" placeholder="Sur Name">
+                    <input type="text"   class="input-fields" name="last_name" placeholder="Sur Name">
 
                     <h6 class="lables">Postal Address (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="postal_address" placeholder="Postal Address"required>
+                    <input type="text"   class="input-fields" name="postal_address" placeholder="Postal Address">
 
                     <h6 class="lables">Permanent Address  (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="permanent_address" placeholder="Permanent Address" required>
+                    <input type="text"   class="input-fields" name="permanent_address" placeholder="Permanent Address" >
                     
                     <h6 class="lables">NIC/Driving Licence/Passport No (in capital blocks)</h6>
-                    <input type="text" required  class="input-fields" name="driving_licence" placeholder="NIC/Driving Licence/Passport No" required>
+                    <input type="text"   class="input-fields" name="driving_licence" placeholder="NIC/Driving Licence/Passport No" >
 
                     <h6 class="lables">Citizenship (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="applicant_citizenship" placeholder="Citizenship" required>
+                    <input type="text"   class="input-fields" name="applicant_citizenship" placeholder="Citizenship" >
 
                     <h6 class="lables">Personal-Email  (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="personalEmail" placeholder="Personal-Email" required>
+                    <input type="text"   class="input-fields" name="personalEmail" placeholder="Personal-Email" >
                     
                     <h6 class="lables">Office-Email (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="officeEmail" placeholder="Office-Email" required>
+                    <input type="text"   class="input-fields" name="officeEmail" placeholder="Office-Email" >
 
                     <h6 class="lables">Mobile Number (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="mobile_number" placeholder="Mobile Number" required>
+                    <input type="text"   class="input-fields" name="mobile_number" placeholder="Mobile Number" >
 
                     <h6 class="lables">Home Number (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="home_number" placeholder="Home Number" required>
+                    <input type="text"   class="input-fields" name="home_number" placeholder="Home Number" >
 
                     <h6 class="lables">Office Number (in capital blocks)</h6>
-                    <input type="text"  required class="input-fields" name="office_number" placeholder="Office Number" required>
+                    <input type="text"  class="input-fields" name="office_number" placeholder="Office Number" >
 
                 <!-- start gender -->
 
