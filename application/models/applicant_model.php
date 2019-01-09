@@ -13,6 +13,7 @@ class applicant_model extends CI_Model
    public $spe;
    public $email;
 
+   //called from: viewAll (opDash: viewAllCandidates)
    public function getAll($vacancy="",$category = ""){
 
         $array = [];
