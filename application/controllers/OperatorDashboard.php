@@ -332,6 +332,7 @@ class OperatorDashboard extends CI_Controller{
 
     }
 
+    //----------------------------EDIT APPLICATION FORM-----------------------------
     //loads the view corresponding to the home page when edit appication form is clicked
     //route: editApplication
     public function editForm(){
@@ -341,8 +342,11 @@ class OperatorDashboard extends CI_Controller{
     }
 
     //upon selecting a choice user will be directed to the relavant 
+    //route: directEditApplication
     public function directEditApplication(){
+        //post data from the selected option 
         $field = $_POST['editField'];
+
         if($field=="sa"){
             redirect(base_url()."OperatorIndex/specialization");
         }else{
@@ -350,31 +354,41 @@ class OperatorDashboard extends CI_Controller{
         }
     }
 
+    //views all the specializations
+    //has the option to add new fields,edit or delete
+    //route: specialization
     public function viewSpecializations(){
         $this->load->model('operator/ApplicationFormModel');
         $data['Specializations'] = $this->ApplicationFormModel->getAllSpecializations();
         $this->load->view('includes/header');
-        $this->load->view('users/operator/specialization',$data);
+        $this->load->view('users/operator/editApplicationForm/specialization',$data);
         $this->load->view('includes/footer');
     }
 
+    //views all the file Upload Links
+    //has the option to add new fields,edit or delete
+    //route: fileUploads
     public function viewFileUploads(){
         $this->load->model('operator/ApplicationFormModel');
         $data['FileUploads'] = $this->ApplicationFormModel->getAllFileUploadsLinks();
         $this->load->view('includes/header');
-        $this->load->view('users/operator/fileUploadLinks',$data);
+        $this->load->view('users/operator/editApplicationForm/fileUploadLinks',$data);
         $this->load->view('includes/footer');
     }
 
+    //loads the view corresponding to adding a new specialization Area
+    //route: addSpecialization
     public function addSpecializationArea(){
         $this->load->view('includes/header');
-        $this->load->view('users/operator/addSpecialization');
+        $this->load->view('users/operator/editApplicationForm/addSpecialization');
         $this->load->view('includes/footer');
     }
 
+    //loads the view corresponding to adding a new upload link
+    //route: addUploadLink
     public function addFileUploadLink(){
         $this->load->view('includes/header');
-        $this->load->view('users/operator/addFileUploadLink');
+        $this->load->view('users/operator/editApplicationForm/addFileUploadLink');
         $this->load->view('includes/footer');
     }
 
@@ -382,7 +396,7 @@ class OperatorDashboard extends CI_Controller{
         $this->load->model('operator/ApplicationFormModel');
         $data['records']= $this->ApplicationFormModel->getSpecialization($sid);
         $this->load->view('includes/header');
-        $this->load->view('users/operator/editSpecialization',$data);
+        $this->load->view('users/operator/editApplicationForm/editSpecialization',$data);
         $this->load->view('includes/footer');
     }
 
@@ -390,7 +404,7 @@ class OperatorDashboard extends CI_Controller{
         $this->load->model('operator/ApplicationFormModel');
         $data['records']= $this->ApplicationFormModel->getFileUpload($sid);
         $this->load->view('includes/header');
-        $this->load->view('users/operator/editFileUpload',$data);
+        $this->load->view('users/operator/editApplicationForm/editFileUpload',$data);
         $this->load->view('includes/footer');
     }
 

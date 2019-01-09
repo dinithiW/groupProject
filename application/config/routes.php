@@ -131,18 +131,25 @@ $route['OperatorIndex/searchCategorized'] = "OperatorDashboard/searchCandidates"
 //-----------------functionality: edit application form-------------------------
 //loading the initial view to choose what aspect of the application form you want to change
 $route['OperatorIndex/editApplication'] = "OperatorDashboard/editForm";
+//forwards the user according to what was chosen
 $route['OperatorIndex/directEditApplication'] = "OperatorDashboard/directEditApplication";
-
+//if user select specializations, forwards to home page of specialization
+//can edit,delete or add new fields
 $route['OperatorIndex/specialization'] = "OperatorDashboard/viewSpecializations";
+//if user select file upload links, forwards to home page of file uploads
+//can edit,delete or add new fields
 $route['OperatorIndex/fileUploads'] = "OperatorDashboard/viewFileUploads";
-
+//directs to the page where a user can add a new specialization
 $route['OperatorIndex/addSpecialization'] = "OperatorDashboard/addSpecializationArea";
+//directs to the page where a user can add a new file upload link
 $route['OperatorIndex/addUploadLink'] = "OperatorDashboard/addFileUploadLink";
-
+//directs to the page where a user can edit specialization Area
 $route['OperatorIndex/editSpecialization/(:any)'] = "OperatorDashboard/editSpecializationArea/$1";
+//directs to the page where a user can edit an upload link
 $route['OperatorIndex/editUploadLink/(:any)'] = "OperatorDashboard/editFileUploadLink/$1";
-
+//delete a specialization area
 $route['OperatorIndex/deleteSpecialization/(:any)'] = "OperatorDashboard/deleteSpecializationArea/$1";
+//delete an upload link
 $route['OperatorIndex/deleteUploadLink/(:any)'] = "OperatorDashboard/deleteFileUploadLink/$1";
 
 $route['OperatorIndex/addSpecializationprocess'] = "OperatorDashboard/addSpecializationToDb";
