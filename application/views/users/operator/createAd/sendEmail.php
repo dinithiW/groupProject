@@ -51,6 +51,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </div>
                             </div>
 
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label for="email">Vacancy Reference</label>
+                                        <select class = "form-control"name = "vacancy"  required>
+                                            <option value = "">Select Vacancy</option>
+                                        <?php foreach ($vacancies as $a):?>
+                                            <option value = <?= $a->vacancyId?>><?php echo "Vacancy: ".$a->vacancyName." ,Deadline ".$a->deadline?></option>
+                                        <?php endforeach ?>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="row">    
                                 <div class="col-md-6">
                                     <div class="form-group">
