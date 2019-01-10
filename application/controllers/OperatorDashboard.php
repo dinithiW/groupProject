@@ -284,7 +284,7 @@ class OperatorDashboard extends CI_Controller{
         $data['headerName'] = $temp;
         $data['showAlert'] = "false";
         $this->load->view('includes/header');
-        $this->load->view('users/operator/setInterviewDate',$data);
+        $this->load->view('users/operator/setInterviewDate/setInterviewDate',$data);
         $this->load->view('includes/footer');
     }
 
@@ -312,7 +312,7 @@ class OperatorDashboard extends CI_Controller{
                 $data['array'] = $this->applicant_model->getSelectedCandidates($vacancy);
                 $data['headerName'] = $temp;
                 $this->load->view('includes/header');
-                $this->load->view('users/operator/setInterviewDate',$data);
+                $this->load->view('users/operator/setInterviewDate/setInterviewDate',$data);
                 $this->load->view('includes/footer');
             }else{
                 //echo"hello";
@@ -321,7 +321,7 @@ class OperatorDashboard extends CI_Controller{
                 $data['headerName'] = $temp;
                 $data['showAlert'] = "true";
                 $this->load->view('includes/header');
-                $this->load->view('users/operator/setInterviewDate',$data);
+                $this->load->view('users/operator/setInterviewDate/setInterviewDate',$data);
                 $this->load->view('includes/footer');
             }
         //}

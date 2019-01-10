@@ -70,7 +70,7 @@ class ApplicationFormModel extends CI_Model{
     function addNewS()
     {
         $this->load->view("includes/header");
-        $this->load->view("users/operator/addSpecialization");
+        $this->load->view("users/operator/editApplicationForm/addSpecialization");
         $this->load->view("includes/footer");
         
     }
@@ -103,7 +103,7 @@ class ApplicationFormModel extends CI_Model{
     function addNewF()
     {
         $this->load->view("includes/header");
-        $this->load->view("users/operator/addFileUploadLink");
+        $this->load->view("users/operator/editApplicationForm/addFileUploadLink");
         $this->load->view("includes/footer");
         
     }
@@ -145,9 +145,9 @@ class ApplicationFormModel extends CI_Model{
         $rows =  $this->db->affected_rows();
          $this->db->trans_complete();
         if($rows>0){
-            $this->session->set_flashdata('success', 'User details updated successfully');
+            $this->session->set_flashdata('success', 'Specialization details updated successfully');
         }else{
-            $this->session->set_flashdata('error', 'User details update failed');
+            $this->session->set_flashdata('error', 'Specialization details update failed');
         }
 
         redirect('OperatorIndex/specialization');

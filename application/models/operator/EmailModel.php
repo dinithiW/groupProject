@@ -35,7 +35,7 @@ class EmailModel extends CI_Model{
             $mail->AddAddress((string)$e);
             $mail->Send();
         }
-            $this->load->view('messages/emailSuccess');
+            $this->load->view('messages/bulkEmailSuccess');
         }catch (phpmailerException $e) {
             $this->load->view('messages/errorBulkMails'); 
         } catch (Exception $e) {

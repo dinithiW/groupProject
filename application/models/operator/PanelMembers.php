@@ -173,7 +173,7 @@ class PanelMembers extends CI_Model{
     function addNew()
     {
         $this->load->view("includes/header");
-        $this->load->view("users/operator/addMember");
+        $this->load->view("users/operator/panelMembers/addMember");
         $this->load->view("includes/footer");
         
     }
@@ -291,7 +291,7 @@ class PanelMembers extends CI_Model{
     function edit()
     {
         $this->load->view("includes/header");
-        $this->load->view("users/operator/editMember");
+        $this->load->view("users/operator/panelMembers/editMember");
         $this->load->view("includes/footer");
         
     }
@@ -367,7 +367,7 @@ class PanelMembers extends CI_Model{
         }
     }
 
-    //add member to the table users
+    //edit member to the table users
     public function editUsers($userInfoUsers,$email){
 
         $this->db->trans_start();
