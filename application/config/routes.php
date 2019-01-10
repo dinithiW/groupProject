@@ -137,7 +137,7 @@ $route['OperatorIndex/deleteMember/(:any)'] = "OperatorDashboard/deleteMemberMsg
 $route['OperatorIndex/deleteMemberProcess/(:any)'] = "OperatorDashboard/deleteMemberModel/$1";
 
 
-
+//--------------------functionality: set interview date------------------------------
 //this is for loading the home page of the interview date setting process
 $route['OperatorIndex/interviewDate'] = "OperatorDashboard/setInterviewDate";
 $route['OperatorIndex/intervewDate'] = "OperatorDashboard/setIntervewDate";
@@ -150,33 +150,42 @@ $route['OperatorIndex/categorize'] = "OperatorDashboard/categorizeHome";
 $route['OperatorIndex/directCategorize'] = "OperatorDashboard/directTo";
 //initial page seen when lecturer probationary is selected
 $route['OperatorIndex/lpCategory'] = "OperatorDashboard/showLpCategories";
-//
+//to select the category requied
 $route['OperatorIndex/lecturerProbationary'] = "OperatorDashboard/showLpCandidates";
+//shows what is required based on the category
 $route['OperatorIndex/lectrerProbationary/(:any)'] = "OperatorDashboard/showLps/$1";
 //show all senior lecturer applicants grade I and categorize them
 $route['OperatorIndex/seniorLecturerGradeI'] = "OperatorDashboard/showSeniorLecturerGradeI";
+//show all senior lecturer grade II and categorize them
 $route['OperatorIndex/seniorLecturerGradeII'] = "OperatorDashboard/showSeniorLecturerGradeII";
-
 //insert into the sl_selected table (value 1)
 $route['OperatorIndex/selectSL/(:any)'] = "OperatorDashboard/addToSelected/$1";
 //insert into the sl_selected table (value 0)
 $route['OperatorIndex/notSelectSL/(:any)'] = "OperatorDashboard/addToNotSelected/$1";
+//insert into the sl_selected_gradei table (value 1)
 $route['OperatorIndex/selectSLGradeI/(:any)'] = "OperatorDashboard/addToSelectedGradeI/$1";
-//insert into the sl_selected table (value 0)
+//insert into the sl_selected_gradei table (value 0)
 $route['OperatorIndex/notSelectSLGradeI/(:any)'] = "OperatorDashboard/addToNotSelectedGradeI/$1";
+//insert into lp_category table 
 $route['OperatorIndex/selectLP/(:any)/(:any)'] = "OperatorDashboard/addToSelectedLP/$1/$2";
 //insert into the sl_selected table (value 0)
 $route['OperatorIndex/notSelectLP/(:any)'] = "OperatorDashboard/addToNotSelectedLP/$1";
+
+
+//------------------------functionality: view categorized applicants------------------
+//view categorized home
 $route['OperatorIndex/viewCategorized'] = "OperatorDashboard/viewCategorizedApplicants";
+
 $route['OperatorIndex/searchCategorized'] = "OperatorDashboard/searchCandidates";
 
 
-
+//----------------------------functionality: send emails to applicants------------------
+//loads the view with email sending
 $route['OperatorIndex/sendApplicantEmails'] = "OperatorDashboard/sendEMailsToApplicants";
-$route['OperatorIndex/sendApplicntEmails'] = "OperatorDashboard/sendEMailsTApplicants";
+//$route['OperatorIndex/sendApplicntEmails'] = "OperatorDashboard/sendEMailsTApplicants";
 $route['OperatorIndex/interviewDateEmails'] = "OperatorDashboard/sendInterviewEmails";
 
-//view application form
+//----------------------functionality: view application form-----------------------------
 $route['OperatorIndex/viewApplicationForm/(:any)'] = "OperatorDashboard/applicantViewMore/$1";
 
 

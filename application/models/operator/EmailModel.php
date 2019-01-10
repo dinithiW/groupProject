@@ -13,8 +13,9 @@ class EmailModel extends CI_Model{
 
     public function sendBulkEmail($emails){
         $mail = new PHPMailer\PHPMailer\PHPMailer(true);
+        $subject = "Call for interview";
         $mail->IsSMTP(); // enable SMTP
-
+        
         $email = (string)$_POST['semail'];
         $password = (string)$_POST['password'];
         $mail->SMTPAuth = true; // authentication enabled
@@ -25,19 +26,20 @@ class EmailModel extends CI_Model{
         $mail->Username = (string)$email;
         $mail->Password = (string)$password;
         $mail->SetFrom((string)$email,'Management Assistant');
-        $mail->Subject = (string)$_POST['subject'];
-        $mail->Body = (string)$_POST['description'];
-        foreach($emails as $e){
-            $mail->AddAddress((string)$e);
-        }
+        $mail->Subject = (string)$subject;
+        $mail->Body = (string)$_POST['content'];
+        
 
         try{
+            foreach($emails as $e){
+            $mail->AddAddress((string)$e);
             $mail->Send();
+        }
             $this->load->view('messages/emailSuccess');
         }catch (phpmailerException $e) {
-            $this->load->view('messages/errorEmail'); 
+            $this->load->view('messages/errorBulkMails'); 
         } catch (Exception $e) {
-            $this->load->view('messages/errorEmail'); 
+            $this->load->view('messages/errorBulkMails'); 
         }
 
     }

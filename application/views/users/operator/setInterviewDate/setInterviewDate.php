@@ -31,17 +31,17 @@
       <div class = "row">
         <div class="form-group  col-xs-8 ">
         
-        <select class="form-control input-lg" id="selectBox" name = "vacancy">
-           <!-- <select class="form-control input-lg" id="selectBox" onchange="changeFunc();"> -->
-          <option value = "Senior_Lecturer_Grade_I_selected" >Senior Lecturer Grade I selected</option>
-          <option value = "Senior_Lecturer_Grade_II_selected" >Senior Lecturer Grade II selected</option>
-          <option value = "Lecturer_Probationary_Category_1" >Lecturer Probationary Category 1</option>
-          <option value = "Lecturer_Probationary_Category_2" >Lecturer Probationary Category 2</option>
-          <option value = "Lecturer_Probationary_Category_3" >Lecturer Probationary Category 3</option>
-        </select>
+          <select class="form-control input-lg" id="selectBox" name = "vacancy">
+             <!-- <select class="form-control input-lg" id="selectBox" onchange="changeFunc();"> -->
+            <option value = "Senior_Lecturer_Grade_I_selected" >Senior Lecturer Grade I selected</option>
+            <option value = "Senior_Lecturer_Grade_II_selected" >Senior Lecturer Grade II selected</option>
+            <option value = "Lecturer_Probationary_Category_1" >Lecturer Probationary Category 1</option>
+            <option value = "Lecturer_Probationary_Category_2" >Lecturer Probationary Category 2</option>
+            <option value = "Lecturer_Probationary_Category_3" >Lecturer Probationary Category 3</option>
+          </select>
 
 
-      </div>
+        </div>
 
 
       </div>
@@ -51,124 +51,110 @@
       </div> 
 
       
-</form>
-<br>
-<br>
-<br>
-<div class="col-md-8">
-  <div class="box box-primary">
-    <?php $temp = str_replace(' ', '_', $headerName);?>
-    <form role="form" id="addUser" action="<?php echo base_url() ?>OperatorIndex/addInterviewDate/<?=$temp?>" method="post" role="form">
-    <div class="box-body">
-      <div class="row">
-        <div class="col-md-6">                                
-          <div class="form-group">
-            <label for="fname" class="col-md-6">Interview Date</label>
-              <input  type="date" class="form-control required" id="idate" name="idate" maxlength="128" required>
+    </form>
+    <br>
+    <br>
+    <br>
+    <div class="col-md-8">
+      <div class="box box-primary">
+        <?php $temp = str_replace(' ', '_', $headerName);?>
+        <form role="form" id="addUser" action="<?php echo base_url() ?>OperatorIndex/addInterviewDate/<?=$temp?>" method="post" role="form">
+        <div class="box-body">
+          <div class="row">
+            <div class="col-md-6">                                
+              <div class="form-group">
+                <label for="fname" class="col-md-6">Interview Date</label>
+                  <input  type="date" class="form-control required" id="idate" name="idate" maxlength="128" required>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="lname" class="col-md-6">Time</label>
+                <input  type="time" class="form-control required" name = "itime" required>
+              </div>
+            </div>
           </div>
         </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="lname" class="col-md-6">Time</label>
-                                        <input  type="time" class="form-control required" name = "itime" required>
-                                    
-                                    </div>
-                                </div>
-                            </div>
-                         
-                        </div>
+      </div>
+    </div>
+       
+    <div class="row">
 
-                    
-                </div>
-            </div>
-        <!-- <div class = "form-group row form-control ">
-          <label>Interview Date</label>
-          <input type="date" name="check_list[]" value="" class = "checkbox">
-        </div>  -->
-        <div class="row">
-
-            <div class="col-xs-12">
-              <div class="box box-primary">
-                <div class="box-header">
-                    <h3 class="box-title">Candidates List</h3>
-                    <div class="box-tools">
+      <div class="col-xs-12">
+        <div class="box box-primary">
+          <div class="box-header">
+            <h3 class="box-title">Candidates List</h3>
+              <div class="box-tools">
                       
-                    </div>
-                </div><!-- /.box-header -->
-                <div class="box-body table-responsive no-padding">
-                  <section class="content">
-        
-
-        <div class="row">
-
-            <div class="col-xs-12">
-              <div class="box">
-                <div class="box-header">
-                    <h3 class="box-title"><?= $headerName?></h3>
-                    <div class="box-tools">
-                        <!-- <form action="<?php echo base_url() ?>userListing" method="POST" id="searchList">
-                           
-                        </form> -->
-                    </div>
-                </div><!-- /.box-header -->
-                <div class="box-body table-responsive no-padding">
+              </div>
+            </div><!-- /.box-header -->
+            <div class="box-body table-responsive no-padding">
+              <section class="content">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="box">
+                      <div class="box-header">
+                        <h3 class="box-title"><?= $headerName?></h3>
+                        <div class="box-tools">
+                            <!-- <form action="<?php echo base_url() ?>userListing" method="POST" id="searchList">
+                               
+                            </form> -->
+                        </div>
+                      </div><!-- /.box-header -->
+                      <div class="box-body table-responsive no-padding">
                   <!-- <form method = "post" action = ""> -->
-                  <table class="table table-hover">
-                    <tr>
-                      <th>Applicant ID</th>
-                      <th>Name</th>
-                      <!-- <th>Email Address</th> -->
-                      <th >Selected</th>
-                      <!-- <th class="text-center">Actions</th> -->
-                    </tr>
-
-                    
-                    <?php foreach($array as $a):?>
-                    <tr>
-                      <td><?=$a->index?></td>
-                      <td><?="$a->fname $a->lname"?></td>
-                      <!-- <td><?=$a->email?></td> -->
-                      <td>
-                       <input type="checkbox" name="check_list[]" value="<?= $a->index?>" class = "checkbox"> 
-                      <!-- <input type="date" name="check_list[]" value="<?= $a->email?>" class = "checkbox"> -->
-                    </td>
+                        <table class="table table-hover">
+                          <tr>
+                            <th>Applicant ID</th>
+                            <th>Name</th>
+                            <!-- <th>Email Address</th> -->
+                            <th >Selected</th>
+                            <!-- <th class="text-center">Actions</th> -->
+                          </tr>
+                          <?php foreach($array as $a):?>
+                          <tr>
+                            <td><?=$a->index?></td>
+                            <td><?="$a->fname $a->lname"?></td>
+                            <!-- <td><?=$a->email?></td> -->
+                            <td>
+                             <input type="checkbox" name="check_list[]" value="<?= $a->index?>" class = "checkbox"> 
+                            <!-- <input type="date" name="check_list[]" value="<?= $a->email?>" class = "checkbox"> -->
+                          </td>
                      
-                    </tr>
-                    <?php endforeach?>
-                  </table> 
+                          </tr>
+                        <?php endforeach?>
+                        </table> 
                   <div class = "form-group col-xs-2 ">
-        <input type="submit" class="btn btn-primary float-right" value = "Confirm Interview Date">
+                    <input type="submit" class="btn btn-primary float-right" value = "Confirm Interview Date">
 
-      </div> 
-      <br>
-      <br>
+                  </div> 
+                <br>
+                <br>
       
-         </form>          
-                </div><!-- /.box-body -->
-                <div class="box-footer clearfix">
-                    <?php echo $this->pagination->create_links(); ?>
-                </div>
-              </div><!-- /.box -->
+              </form>          
+            </div><!-- /.box-body -->
+            <div class="box-footer clearfix">
+              <?php echo $this->pagination->create_links(); ?>
             </div>
+          </div><!-- /.box -->
         </div>
+      </div>
     </section>
                   
-                </div><!-- /.box-body -->
+  </div><!-- /.box-body -->
 <?php if($showAlert=="true"){?>
-    <div class="row">
+  <div class="row">
     <div class="alert alert-danger col-md-4 col-md-offset-4" align="center">
-<button type = "button" class="close" data-dismiss = "alert" aria-hidden="true">x</button>
+      <button type = "button" class="close" data-dismiss = "alert" aria-hidden="true">x</button>
     Atleast one option must be selected!
     </div>
-</div>
+  </div>
 <?php }?>
-                <div class="box-footer clearfix">
-                    <?php echo $this->pagination->create_links(); ?>
-                </div>
-              </div><!-- /.box -->
-            </div>
-        </div>
-    </section>
+  
+    </div><!-- /.box -->
+  </div>
+</div>
+</section>
 </div>
 
 

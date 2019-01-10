@@ -85,7 +85,21 @@ if (!empty($_GET["email"])) {
                       <!-- <p><span style="font-size: 18pt; font-family: 'indie flower', cursive;">some text here</span></p> -->
                     </textarea>
 
+<div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="mobile" class = "col-md-6">Your Email Address </label>
+                                        <input type="email" required class="form-control required email" placeholder=" Enter your email" maxlength="255" name = "semail">
+                                    </div>
+                                </div>
 
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="designation" class = "col-md-6">Your Email Password</label>
+                                        <input type="password" required class="form-control required"  maxlength="255" name='password'placeholder=" Enter your password" >
+                                    </div>
+                                </div>
+                            </div> 
 
     <!-- javascript -->
 

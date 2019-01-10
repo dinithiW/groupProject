@@ -38,21 +38,17 @@
                                     </div>
                                     
                                 
-                            </div>
+                                </div>
                             
-
-                            
-
-                            
-                        </div><!-- /.box-body -->
+                            </div><!-- /.box-body -->
     
-                        <div class="box-footer">
-                            <input type="submit" class="btn btn-primary" value="Submit" />
-                            <input type="reset" class="btn btn-default" value="Reset" />
-                        </div>
-                    </form>
+                            <div class="box-footer">
+                                <input type="submit" class="btn btn-primary" value="Submit" />
+                                <input type="reset" class="btn btn-default" value="Reset" />
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            </div>
             <div class="col-md-4">
                 <?php
                     $this->load->helper('form');

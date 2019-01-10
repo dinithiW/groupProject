@@ -12,6 +12,7 @@ class InterviewModel extends CI_Model{
 		parent::__construct();
 	}
 
+    //insert new interview groups
     public function insertInterview($selected,$idate,$itime){
         $userInfoUsers = array('INDEX_NUMBER'=>$selected,'INTERVIEW_DATE'=>$idate,
             'INTERVIEW_TIME'=>$itime);
@@ -21,11 +22,13 @@ class InterviewModel extends CI_Model{
         $this->db->trans_complete();
     }
 
+
     public function getInterviewGroups(){
         $interviews = [];
         $this->load->database();
         $this->db->select('INTERVIEW_DATE');
         $this->db->select('INTERVIEW_TIME');
+        $this->db->group_by('INTERVIEW_DATE','INTERVIEW_TIME'); 
         $this->db->from('candidates_interviews');
 
         $query = $this->db->get();
@@ -62,16 +65,20 @@ class InterviewModel extends CI_Model{
             
 
             $query2 = $this->db->get();
-
+            $i = 0;
+            $emails = [];
             foreach ($query2->result() as $row2) {
                 //echo $row2;
-                $email = new EmailController();
+                $emails[$i] = $row2->PERSONAL_EMAIL;
+                $i++;
+                /*$email = new EmailController();
                 $this->load->library('email');
-                $email->send_mail3($this->email, $row2->PERSONAL_EMAIL, $content);
+                $email->send_mail3($this->email, $row2->PERSONAL_EMAIL, $content);*/
                 //$this->EmailModel->singleEmail($row,$description,$content);
             }
 
         }
+        $this->EmailModel->sendBulkEmail($emails);
     }
 
     //returns the details of a single member

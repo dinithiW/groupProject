@@ -44,18 +44,7 @@ class OperatorDashboard extends CI_Controller{
         $this->EmailModel->uploadFile();
     }
 
-    //displays all the panel members
-    public function addPanelMember(){
-       
-        $data = [];
-        $this->load->model('operator/PanelMembers');
-        $data['Members'] = $this->PanelMembers->getAllMembers();
-
-        $this->load->view('includes/header');
-        $this->load->view('users/operator/addMemberHome',$data);
-        $this->load->view('includes/footer');
-
-    }
+    
 
     //----------------------------EDIT APPLICATION FORM-----------------------------
     //loads the view corresponding to the home page when edit appication form is clicked
@@ -198,13 +187,32 @@ class OperatorDashboard extends CI_Controller{
     }
 
     //----------------------------MANAGE INTERVIEW PANEL-------------------------------
+    
+    
+    //displays all the panel members
+    //route: addPanelMember
+    public function addPanelMember(){
+       
+        $data = [];
+        $this->load->model('operator/PanelMembers');
+        $data['Members'] = $this->PanelMembers->getAllMembers();
+
+        $this->load->view('includes/header');
+        $this->load->view('users/operator/panelMembers/addMemberHome',$data);
+        $this->load->view('includes/footer');
+
+    }
+
     //adds the member: view
+    //route: addMember
     public function addMember(){
         $this->load->view('includes/header');
         $this->load->view('users/operator/panelMembers/addMember');
         $this->load->view('includes/footer');
     }
 
+    //database query
+    //route: addMemberprocess
     public function addingMember(){
         $this->load->model('operator/PanelMembers');
         $this->PanelMembers->addNewUser();
@@ -255,11 +263,7 @@ class OperatorDashboard extends CI_Controller{
         redirect(base_url().'OperatorIndex/addPanelMember');
     }
 
-    
-
-    
-    
-    
+    //------------------------SET INTERVIEW DATE-----------------------------------
     //interview date setting home
     public function setInterviewDate(){
         $this->load->model('applicant_model');
@@ -267,7 +271,7 @@ class OperatorDashboard extends CI_Controller{
         $data['headerName'] = "Senior Lecturer Grade I selected";
         $data['showAlert'] = "false";
         $this->load->view('includes/header');
-        $this->load->view('users/operator/setInterviewDate',$data);
+        $this->load->view('users/operator/setInterviewDate/setInterviewDate',$data);
         $this->load->view('includes/footer');
     }
 
@@ -297,8 +301,6 @@ class OperatorDashboard extends CI_Controller{
             
             //echo"1$idate";
             if(!empty($_POST['check_list'])) {
-                //echo"hello";
-                //echo"2$iname";
                 // Counting number of checked checkboxes.
                 $checked_count = count($_POST['check_list']);
                 // Loop to store and display values of individual checked checkbox.
@@ -398,30 +400,38 @@ class OperatorDashboard extends CI_Controller{
         $this->load->view('includes/footer');
     }
 
-    
+    //add to selected senior lecturer grade II(value = 1)
+    //route: selectSL/(:any)
     public function addToSelected($applicantId){
         $this->load->model("applicant_model");
         $this->applicant_model->selectedSL($applicantId,"sl_selected");
         redirect(base_url()."OperatorIndex/seniorLecturerGradeII");
     }
 
+    //route: notSelectSL/(:any)
+    //add to not selected senior lecturer grade II(value = 0)
     public function addToNotSelected($applicantId){
         $this->load->model("applicant_model");
         $this->applicant_model->notSelectedSL($applicantId,"sl_selected");
         redirect(base_url()."OperatorIndex/seniorLecturerGradeII");
     }
 
+    //add to selected senior lecturer grade I(value = 1)
+    //route: selectSL/(:any)
     public function addToSelectedGradeI($applicantId){
         $this->load->model("applicant_model");
         $this->applicant_model->selectedSL($applicantId,"sl_selected_gradei");
         redirect(base_url()."OperatorIndex/seniorLecturerGradeI");
     }
 
+    //add to not selected senior lecturer grade I(value = 0)
+    //route: selectSL/(:any)
     public function addToNotSelectedGradeI($applicantId){
         $this->load->model("applicant_model");
         $this->applicant_model->notSelectedSL($applicantId,"sl_selected_gradei");
         redirect(base_url()."OperatorIndex/seniorLecturerGradeI");
     }
+
     //selectLP
     public function addToSelectedLP($applicantId,$categoryFrom){
         $temp = "category_".$applicantId;
@@ -434,7 +444,6 @@ class OperatorDashboard extends CI_Controller{
     }
 
     public function showLps($categoryFrom){
-        //echo"am I here?";
         $this->load->model("applicant_model");
         $data['array'] = $this->applicant_model->getAll("PROBATIONARY LECTURER",$categoryFrom);
         $data['category'] = $categoryFrom;
@@ -455,14 +464,19 @@ class OperatorDashboard extends CI_Controller{
         $this->load->view('includes/footer');
     }
 
+    //-----------------------------VIEW CATEGORIZED APPLICANTS----------------------------
+    //home page to view categorized applicants
+    //route: viewCategorized
     public function viewCategorizedApplicants(){
 
         $this->load->view('includes/header');
-        $this->load->view('users/operator/viewCategorizedHome');
+        $this->load->view('users/operator/viewCategorized/viewCategorizedHome');
         $this->load->view('includes/footer');
 
     }
 
+    //views categorized applicants based on the choice selected
+    //route: searchCategorized
     public function searchCandidates(){
 
         $vacancy = $_POST['vacancy'];
@@ -471,29 +485,34 @@ class OperatorDashboard extends CI_Controller{
         $data['array'] = $this->applicant_model->getAllCategorized($vacancy);
         $data['position'] = $vacancy;
         $this->load->view('includes/header');
-        $this->load->view('users/operator/viewCategorized',$data);
+        $this->load->view('users/operator/viewCategorized/viewCategorized',$data);
         $this->load->view('includes/footer');
 
     }
 
-    
+    //---------------------------------SEND EMAILS TO APPLICANTS-----------------------
+    //route: sendApplicantEmails
+    //view to send applicants emails
     public function sendEMailsToApplicants(){
         $this->load->model('operator/InterviewModel');
         $data['array'] = $this->InterviewModel->getInterviewGroups();
         $this->load->view('includes/header');
-        $this->load->view('users/operator/sendEmailToCandidates',$data);
+        $this->load->view('users/operator/sendEmailsToApplicants/sendEmailToCandidates',$data);
         $this->load->view('includes/footer');
     }
 
-    public function sendEMailsTApplicants(){
-        /*$position = $_POST['vacancy'];
+    /*public function sendEMailsTApplicants(){
+        $position = $_POST['vacancy'];
         $this->load->model('applicant_model');
         $data['array'] = $this->applicant_model->getSelectedCandidates($position);
         $this->load->view('includes/header');
         $this->load->view('users/operator/sendEmailToCandidates',$data);
-        $this->load->view('includes/footer');*/
-    }
+        $this->load->view('includes/footer');
+    }*/
 
+    //gets post data from the form 
+    //directs to the mail sending function
+    //route: interviewDateEmails
     public function sendInterviewEmails(){
         $description = "Interview Notification";
         $content = $_POST['content'];
@@ -505,6 +524,7 @@ class OperatorDashboard extends CI_Controller{
         $this->InterviewModel->getEmails($date,$time,$description,$content);   
     }
 
+    //--------------------------------VIEW APPLICATION FORM------------------------
     //this method is used to view the application form filled by the appicant
     //route: viewApplicationForm/(:any)
     public function applicantViewMore($index_number){

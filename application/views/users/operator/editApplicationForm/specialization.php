@@ -36,13 +36,6 @@
               <div class="box">
                 <div class="box-header">
                     <h3 class="box-title">Areas</h3>
-                    <!-- <div class="box-tools">
-                        <form action="<?php echo base_url() ?>userListing" method="POST" id="searchList">
-                            <div class="input-group">
-                              
-                            </div>
-                        </form>
-                    </div> -->
                 </div><!-- /.box-header -->
                 <div class="box-body table-responsive no-padding">
                    <table class="table table-hover">
