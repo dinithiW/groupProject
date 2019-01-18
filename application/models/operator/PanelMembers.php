@@ -288,10 +288,11 @@ class PanelMembers extends CI_Model{
 
     }
 
-    function edit()
+    function edit($panelID)
     {
+        $data['records'] = $this->PanelMembers->getMember($panelID);
         $this->load->view("includes/header");
-        $this->load->view("users/operator/panelMembers/editMember");
+        $this->load->view("users/operator/panelMembers/editMember",$data);
         $this->load->view("includes/footer");
         
     }
@@ -311,7 +312,7 @@ class PanelMembers extends CI_Model{
 
             if($this->form_validation->run() == FALSE)
             {
-                $this->edit();
+                $this->edit($panelID);
             }
             else
             {
